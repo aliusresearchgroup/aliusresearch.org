@@ -4,5 +4,6 @@
     "generated_utc":  "2026-02-22T15:52:32.9992695Z",
     "page_count":  145,
     "canonical_url_strategy":  "hierarchical+redirects",
-    "github_pages_project_base_path":  "/aliusresearch.org"
+    "github_pages_project_base_path":  "",
+    "github_pages_custom_domain":  "aliusresearch.org"
 }

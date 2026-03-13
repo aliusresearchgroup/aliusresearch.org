@@ -3,6 +3,7 @@
   font-family: 'Lora';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('./regular.eot'); /* IE9 Compat Modes */
   src: url('./regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('./regular.woff2') format('woff2'), /* Super Modern Browsers */
@@ -14,6 +15,7 @@
   font-family: 'Lora';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('./bold.eot'); /* IE9 Compat Modes */
   src: url('./bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('./bold.woff2') format('woff2'), /* Super Modern Browsers */
@@ -25,6 +27,7 @@
   font-family: 'Lora';
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src: url('./italic.eot'); /* IE9 Compat Modes */
   src: url('./italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('./italic.woff2') format('woff2'), /* Super Modern Browsers */
@@ -36,6 +39,7 @@
   font-family: 'Lora';
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
   src: url('./bolditalic.eot'); /* IE9 Compat Modes */
   src: url('./bolditalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('./bolditalic.woff2') format('woff2'), /* Super Modern Browsers */

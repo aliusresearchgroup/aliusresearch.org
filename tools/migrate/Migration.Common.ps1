@@ -233,6 +233,152 @@ function Get-LocalUrlCandidatesFromText {
   return $set
 }
 
+function Resolve-LocalUrlCandidate {
+  param(
+    [Parameter(Mandatory = $true)][string]$RawUrl,
+    [string]$DocumentRelativePath = "",
+    [AllowEmptyString()][string]$ProjectBasePath = ""
+  )
+
+  if ([string]::IsNullOrWhiteSpace($RawUrl)) { return $null }
+
+  $candidate = $RawUrl.Trim().Trim("'").Trim('"')
+  $candidate = $candidate.Replace("\", "/")
+  if ($candidate -match '^(?:https?:|//|data:|mailto:|tel:|javascript:|#)') { return $null }
+
+  $pathOnly = ($candidate -split '[?#]', 2)[0]
+  if ([string]::IsNullOrWhiteSpace($pathOnly)) { return $null }
+
+  $basePath = Normalize-ProjectBasePath -BasePath $ProjectBasePath
+  if (-not [string]::IsNullOrWhiteSpace($basePath)) {
+    if ($pathOnly -eq $basePath) {
+      $pathOnly = "/"
+    } elseif ($pathOnly.StartsWith($basePath + "/")) {
+      $pathOnly = $pathOnly.Substring($basePath.Length)
+    }
+  }
+
+  if ($pathOnly.StartsWith("/")) {
+    return $pathOnly.TrimStart("/")
+  }
+
+  $docRel = if ($null -eq $DocumentRelativePath) { "" } else { [string]$DocumentRelativePath }
+  $docPath = "/" + ($docRel -replace "\\", "/").TrimStart("/")
+  if (-not $docPath.StartsWith("/")) { $docPath = "/" + $docPath }
+  $docDir = if ($docPath.EndsWith("/")) { $docPath } else { [regex]::Replace($docPath, '/[^/]*$', '/') }
+  if ([string]::IsNullOrWhiteSpace($docDir)) { $docDir = "/" }
+
+  try {
+    $resolved = [System.Uri]::new([System.Uri]("https://local.test$docDir"), $pathOnly)
+    return $resolved.AbsolutePath.TrimStart("/")
+  } catch {
+    return $null
+  }
+}
+
+function Get-ResolvedLocalUrlCandidatesFromText {
+  param(
+    [Parameter(Mandatory = $true)][string]$Text,
+    [string]$DocumentRelativePath = "",
+    [AllowEmptyString()][string]$ProjectBasePath = ""
+  )
+
+  $set = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
+  $pattern = '(?is)(?:href|src|poster)\s*=\s*["'']([^"'']+)["'']|url\(([^)]+)\)'
+  foreach ($m in [regex]::Matches($Text, $pattern)) {
+    $raw = if ($m.Groups[1].Success) { $m.Groups[1].Value } else { $m.Groups[2].Value }
+    $resolved = Resolve-LocalUrlCandidate -RawUrl $raw -DocumentRelativePath $DocumentRelativePath -ProjectBasePath $ProjectBasePath
+    if ([string]::IsNullOrWhiteSpace($resolved)) { continue }
+    [void]$set.Add($resolved)
+    try {
+      [void]$set.Add([uri]::UnescapeDataString($resolved))
+    } catch {}
+  }
+  return $set
+}
+
+function Add-HtmlAttributeIfMissing {
+  param(
+    [Parameter(Mandatory = $true)][string]$TagHtml,
+    [Parameter(Mandatory = $true)][string]$AttributeName,
+    [Parameter(Mandatory = $true)][string]$AttributeValue
+  )
+
+  $attrPattern = '\b' + [regex]::Escape($AttributeName) + '\s*='
+  if ($TagHtml -match $attrPattern) { return $TagHtml }
+  return [regex]::Replace($TagHtml, '\s*/?>$', (' {0}="{1}"$0' -f $AttributeName, $AttributeValue), 1)
+}
+
+function Optimize-PublishedHtml {
+  param([Parameter(Mandatory = $true)][AllowEmptyString()][string]$Html)
+
+  $optimized = $Html
+
+  # Remove the legacy Weebly customer-account runtime, which adds a large
+  # commerce payload that this static site does not use.
+  $optimized = [regex]::Replace(
+    $optimized,
+    '(?is)\s*<script\b[^>]*>\s*function\s+initCustomerAccountsModels\s*\(\)\s*\{.*?</script>',
+    ''
+  )
+  $optimized = [regex]::Replace(
+    $optimized,
+    '(?is)\s*<div\s+id=["'']customer-accounts-app["'']\s*></div>\s*',
+    ''
+  )
+  $optimized = [regex]::Replace(
+    $optimized,
+    '(?is)\s*<script\b[^>]*src=["''][^"'']*main-customer-accounts-site\.js(?:\?[^"'']*)?["''][^>]*>\s*</script>\s*',
+    ''
+  )
+
+  $headMatch = [regex]::Match($optimized, '(?is)(<head\b[^>]*>)(.*?)(</head>)')
+  if ($headMatch.Success) {
+    $headPrefix = $headMatch.Groups[1].Value
+    $headInner = $headMatch.Groups[2].Value
+    $headSuffix = $headMatch.Groups[3].Value
+
+    $seenResources = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
+    $headInner = [regex]::Replace(
+      $headInner,
+      '(?is)<link\b[^>]*href\s*=\s*["'']([^"'']+)["''][^>]*>|<script\b[^>]*src\s*=\s*["'']([^"'']+)["''][^>]*>\s*</script>',
+      {
+        param($match)
+
+        $markup = $match.Value
+        $url = if ($match.Groups[1].Success) { $match.Groups[1].Value } else { $match.Groups[2].Value }
+        $tagName = if ($markup -match '^\s*<link\b') { 'link' } else { 'script' }
+        $key = $tagName + "::" + $url.Trim()
+
+        if ($seenResources.Add($key)) {
+          return $markup
+        }
+        return ''
+      }
+    )
+
+    $optimized = $optimized.Substring(0, $headMatch.Index) + $headPrefix + $headInner + $headSuffix + $optimized.Substring($headMatch.Index + $headMatch.Length)
+  }
+
+  # Non-hero content images can be lazily decoded without affecting layout.
+  $optimized = [regex]::Replace(
+    $optimized,
+    '(?is)<img\b[^>]*\bclass\s*=\s*["''][^"'']*(?:galleryImage|wsite-image)[^"'']*["''][^>]*>',
+    {
+      param($match)
+      $img = $match.Value
+      $img = Add-HtmlAttributeIfMissing -TagHtml $img -AttributeName 'loading' -AttributeValue 'lazy'
+      $img = Add-HtmlAttributeIfMissing -TagHtml $img -AttributeName 'decoding' -AttributeValue 'async'
+      return $img
+    }
+  )
+
+  $optimized = [regex]::Replace($optimized, "(?m)^[ \t]+\r?\n", "")
+  $optimized = [regex]::Replace($optimized, "(\r?\n){3,}", "`r`n`r`n")
+
+  return $optimized
+}
+
 function Get-AssetCategory {
   param(
     [Parameter(Mandatory = $true)][string]$RelativePath,

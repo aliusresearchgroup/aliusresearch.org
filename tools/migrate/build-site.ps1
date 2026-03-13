@@ -17,11 +17,13 @@ $migrationRoot = Join-Path $RepoRoot "migration"
 Ensure-Directory -Path $migrationRoot
 
 $projectBasePath = ""
+$customDomain = ""
 $siteConfigPath = Join-Path $dataRoot "site.json"
 if (Test-Path -LiteralPath $siteConfigPath) {
   try {
     $siteConfig = Get-Content -LiteralPath $siteConfigPath -Raw | ConvertFrom-Json
     $projectBasePath = [string]$siteConfig.github_pages_project_base_path
+    $customDomain = [string]$siteConfig.github_pages_custom_domain
   } catch {
     Write-Warning "Could not read site config for project base path: $_"
   }
@@ -70,6 +72,7 @@ foreach ($page in $pages) {
     continue
   }
   $html = Read-TextFileSafe -Path $sourceAbs
+  $html = Optimize-PublishedHtml -Html $html
   $html = Add-ProjectBasePathToRootRelativeUrls -Text $html -BasePath $projectBasePath
 
   if ($canonical -eq "/") {
@@ -85,6 +88,9 @@ foreach ($page in $pages) {
 }
 
 Write-TextFileUtf8NoBom -Path (Join-Path $docsRoot ".nojekyll") -Content ""
+if (-not [string]::IsNullOrWhiteSpace($customDomain)) {
+  Write-TextFileUtf8NoBom -Path (Join-Path $docsRoot "CNAME") -Content ($customDomain.Trim())
+}
 
 & (Join-Path $PSScriptRoot "generate-redirects.ps1") -RepoRoot $RepoRoot -DocsOut $DocsOut -SiteSrc $SiteSrc | Out-Null
 
@@ -109,7 +115,8 @@ $summary = @(
   "Canonical pages written: $pageCount",
   "Static root copied: $staticRoot",
   "Redirect stubs: $(if (Test-Path -LiteralPath (Join-Path $dataRoot 'redirects.json')) { (Get-Content -LiteralPath (Join-Path $dataRoot 'redirects.json') -Raw | ConvertFrom-Json).Count } else { 0 })",
-  "GitHub Pages project base path: $(if ([string]::IsNullOrWhiteSpace((Normalize-ProjectBasePath -BasePath $projectBasePath))) { '(none)' } else { Normalize-ProjectBasePath -BasePath $projectBasePath })"
+  "GitHub Pages project base path: $(if ([string]::IsNullOrWhiteSpace((Normalize-ProjectBasePath -BasePath $projectBasePath))) { '(none)' } else { Normalize-ProjectBasePath -BasePath $projectBasePath })",
+  "GitHub Pages custom domain: $(if ([string]::IsNullOrWhiteSpace($customDomain)) { '(none)' } else { $customDomain.Trim() })"
 )
 Write-LinesUtf8NoBom -Path (Join-Path $migrationRoot "build-summary.txt") -Lines $summary
 
