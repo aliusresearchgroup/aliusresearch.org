@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rho '\\\\\\(src\\\\|href\\\\|data-src\\\\|srcset\\\\\\)=\"[^\"]*\"' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(grep -rh 'href=\"[^\"]*\"' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(sed 's/.*\\\\.//')",
+      "Bash(grep -r \"style=\" /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs/*.html)",
+      "Bash(grep -rho '\\\\\\(src\\\\|data-src\\\\|srcset\\\\|style=\"background-image\\\\\\)=\"[^\"]*\"' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(grep -r \"<script[^>]*>\" /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs/*.html)",
+      "Bash(grep -rho 'href=\"[^\"]*\\\\.html' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(sed 's/href=\"//')",
+      "Bash(du -sh /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/archive/*)",
+      "Bash(grep -rho 'link.*href=\"[^\"]*\"' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(sed 's/.*href=\"//')",
+      "Bash(sed 's/\".*//')",
+      "Bash(grep -rho '\\\\\\(script\\\\|link\\\\\\)[^>]*\\\\\\(src\\\\|href\\\\\\)=\"https://[^\"]*\"' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(xargs basename:*)",
+      "Bash(grep -rho 'script[^>]*src=\"[^\"]*\"' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(sed 's/script[^s]*src=\"//')",
+      "Bash(grep -rho 'cdn[^/]*\\\\.editmysite\\\\.com/css/[^\"]*' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(grep -rho 'cdn[^/]*\\\\.editmysite\\\\.com/js/[^\"]*' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(grep -rho 'cdn2\\\\.editmysite\\\\.com/fonts/[^\"]*' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(grep -rho 'youtube\\\\.com/embed/[^?\"]*' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(grep -rho 'google\\\\.com/maps/embed' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(grep -rho 'feeds\\\\|podcast\\\\|acast' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(grep -rho 'uploads/9/1/6/0/91600416/[^\"]*\\\\.\\\\\\(png\\\\|jpg\\\\|jpeg\\\\|gif\\\\\\)' /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs-source/*.html)",
+      "Bash(sed 's/uploads//')",
+      "Bash(find /c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/docs -type f \\\\\\( -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.jpeg\" \\\\\\) -size +100k -exec ls -lh {} \\\\;)",
+      "Read(//c/Users/cogpsy-vrlab/Documents/GitHub/aliusresearch.org/**)",
+      "Bash(sort -t/ -k999)"
+    ]
+  }
+}
