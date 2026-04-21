@@ -103,8 +103,89 @@ var STYLE_PREFIX = 'wsite';
 	}
 //-->
 </script>
-	</head>
-	<body class="no-header  wsite-page-team-222796  full-width-on  wsite-theme-light"><div class="body-wrap">
+	<style>
+/* Team page redesign: circular avatars + sticky section nav + smooth scroll */
+html { scroll-behavior: smooth; }
+body.wsite-page-team .team-section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.9rem 1rem;
+  margin: 0;
+  list-style: none;
+  background: rgba(249, 249, 249, 0.96);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(66, 81, 76, 0.18);
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+body.wsite-page-team .team-section-nav a {
+  color: #42514c;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background 160ms ease, color 160ms ease;
+}
+body.wsite-page-team .team-section-nav a:hover,
+body.wsite-page-team .team-section-nav a:focus {
+  background: rgba(123, 140, 137, 0.15);
+  color: #2a3330;
+}
+body.wsite-page-team .team-anchor {
+  position: relative;
+  top: -72px;
+  visibility: hidden;
+  pointer-events: none;
+}
+body.wsite-page-team .team-avatar {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 0.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e8ece9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+body.wsite-page-team .team-avatar img,
+body.wsite-page-team .team-avatar picture,
+body.wsite-page-team .team-avatar source {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 50%;
+  max-width: none !important;
+}
+body.wsite-page-team .wsite-section-wrap { scroll-margin-top: 80px; }
+body.wsite-page-team .wsite-multicol-col:first-child {
+  text-align: center;
+  vertical-align: middle !important;
+}
+body.wsite-page-team .wsite-image {
+  text-align: center !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+}
+@media (max-width: 640px) {
+  body.wsite-page-team .team-section-nav {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 11px;
+    padding: 0.6rem 0.5rem;
+  }
+  body.wsite-page-team .team-avatar { width: 140px; height: 140px; }
+}
+</style>
+</head>
+	<body class="no-header  wsite-page-team  full-width-on  wsite-theme-light"><div class="body-wrap">
 
 	<div id="header">
 		<div class="nav-trigger hamburger">
@@ -401,6 +482,12 @@ var STYLE_PREFIX = 'wsite';
 </div>
 			<div id="content-wrapper">
 				<div id="wsite-content" class="wsite-elements wsite-not-footer">
+<ul class="team-section-nav">
+  <li><a href="#coordinators">Coordinators</a></li>
+  <li><a href="#research-members">Research Members</a></li>
+  <li><a href="#in-memoriam">In Memoriam</a></li>
+</ul>
+
 <div class="wsite-section-wrap">
 	<div class="wsite-section wsite-body-section wsite-custom-background">
 		<div class="wsite-section-content">
@@ -416,6 +503,7 @@ var STYLE_PREFIX = 'wsite';
 	</div>
 </div>
 
+<span id="coordinators" class="team-anchor"></span>
 <div class="wsite-section-wrap">
 	<div class="wsite-section wsite-body-section wsite-custom-background">
 		<div class="wsite-section-content">
@@ -450,7 +538,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<img src="/media/images/runway-2024-04-17t14-27-42-920z-expand-image-orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-runway-2024-04-17t14-27-42-920z-expand-image-orig-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-runway-2024-04-17t14-27-42-920z-expand-image-orig-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -469,6 +557,7 @@ var STYLE_PREFIX = 'wsite';
 
 	</div>
 </div>
+<span id="research-members" class="team-anchor"></span>
 <div class="wsite-section-wrap">
 	<div class="wsite-section wsite-body-section wsite-background-350 wsite-custom-background"  >
 		<div class="wsite-section-content">
@@ -482,7 +571,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<img src="/media/images/img-2388-3.jpeg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-img-2388-3-jpeg.webp" type="image/webp"><img src="/media/team-portraits/media-images-img-2388-3-jpeg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -514,7 +603,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/daf-headshot-6.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-daf-headshot-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-daf-headshot-6-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -686,7 +775,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/selen-3.jpg" alt="Picture" style="width:219;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-selen-3-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-selen-3-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -718,7 +807,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<picture><source srcset="/media/images/image-3-2.webp" type="image/webp"><img src="/media/images/image-3-2.png" alt="Picture" style="width:auto;max-width:100%" /></picture>
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-image-3-2-png.webp" type="image/webp"><img src="/media/team-portraits/media-images-image-3-2-png.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -750,7 +839,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/picture1-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-picture1-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-picture1-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -782,7 +871,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/berkovitch-lucie-paris-france-3.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-berkovitch-lucie-paris-france-3-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-berkovitch-lucie-paris-france-3-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -814,7 +903,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/img-0005-7.jpeg" alt="Picture" style="width:221;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-img-0005-7-jpeg.webp" type="image/webp"><img src="/media/team-portraits/media-images-img-0005-7-jpeg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -846,7 +935,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/screen-shot-2016-12-23-at-17-44-51-6.png" alt="Picture" style="width:222;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-screen-shot-2016-12-23-at-17-44-51-6-png.webp" type="image/webp"><img src="/media/team-portraits/media-images-screen-shot-2016-12-23-at-17-44-51-6-png.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -878,7 +967,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:right">
 <a>
-<img src="/media/images/img-1590-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-img-1590-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-img-1590-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -910,7 +999,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:right">
 <a>
-<img src="/media/images/cyril-costines-1.png" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-cyril-costines-1-png.webp" type="image/webp"><img src="/media/team-portraits/media-images-cyril-costines-1-png.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -942,7 +1031,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/squared-8.jpg" alt="Picture" style="width:221;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-squared-8-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-squared-8-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -974,7 +1063,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<picture><source srcset="/media/images/screen-shot-2018-07-16-at-10-26-47-2.webp" type="image/webp"><img src="/media/images/screen-shot-2018-07-16-at-10-26-47-2.png" alt="Picture" style="width:218;max-width:100%" /></picture>
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-screen-shot-2018-07-16-at-10-26-47-2-png.webp" type="image/webp"><img src="/media/team-portraits/media-images-screen-shot-2018-07-16-at-10-26-47-2-png.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1006,7 +1095,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/bf2219f7-6fae-4142-a471-48f13ae4193a-1-201-a-1.jpeg" alt="Picture" style="width:218;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-bf2219f7-6fae-4142-a471-48f13ae4193a-1-201-a-1-jpeg.webp" type="image/webp"><img src="/media/team-portraits/media-images-bf2219f7-6fae-4142-a471-48f13ae4193a-1-201-a-1-jpeg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1038,7 +1127,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/cordelia-erickson-davis-3.jpg" alt="Picture" style="width:220;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-cordelia-erickson-davis-3-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-cordelia-erickson-davis-3-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1070,7 +1159,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/marestaralles-1.jpeg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-marestaralles-1-jpeg.webp" type="image/webp"><img src="/media/team-portraits/media-images-marestaralles-1-jpeg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1102,7 +1191,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<img src="/media/images/george-3.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-george-3-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-george-3-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1134,7 +1223,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<img src="/media/images/img-2388-3.jpeg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-img-2388-3-jpeg.webp" type="image/webp"><img src="/media/team-portraits/media-images-img-2388-3-jpeg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1166,7 +1255,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<img src="/media/images/293757246-10217187236033323-3017171785644245039-n-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-293757246-10217187236033323-3017171785644245039-n-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-293757246-10217187236033323-3017171785644245039-n-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1198,7 +1287,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/mathieu-frerejouan-7.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-mathieu-frerejouan-7-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-mathieu-frerejouan-7-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1230,7 +1319,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/daf-headshot-6.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-daf-headshot-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-daf-headshot-6-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1262,7 +1351,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/tom-froese-6.jpg" alt="Picture" style="width:219;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-tom-froese-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-tom-froese-6-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1294,7 +1383,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/foto-juan-60-1.jpg" alt="Picture" style="width:222;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-foto-juan-60-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-foto-juan-60-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1326,7 +1415,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/aliceguyon-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-aliceguyon-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-aliceguyon-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1362,7 +1451,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:10px;text-align:center">
 <a>
-<img src="/media/images/arnaud-halloy-7.jpg" alt="Picture" style="width:211;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-arnaud-halloy-7-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-arnaud-halloy-7-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1394,7 +1483,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/matthieu-koroma-6.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-matthieu-koroma-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-matthieu-koroma-6-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1426,7 +1515,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/mike-6.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-mike-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-mike-6-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1458,7 +1547,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/romypic-website-crop-2.jpg" alt="Picture" style="width:221;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-romypic-website-crop-2-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-romypic-website-crop-2-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1490,7 +1579,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/240321-dm-charlottemartial-140-photoroom1-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-240321-dm-charlottemartial-140-photoroom1-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-240321-dm-charlottemartial-140-photoroom1-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1522,7 +1611,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:right">
 <a>
-<img src="/media/images/pxl-20220516-153551509-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-pxl-20220516-153551509-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-pxl-20220516-153551509-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1554,7 +1643,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/raph-7.jpg" alt="Picture" style="width:222;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-raph-7-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-raph-7-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1586,7 +1675,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/pozegp-color-document-photo-7.jpg" alt="Picture" style="width:217;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-pozegp-color-document-photo-7-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-pozegp-color-document-photo-7-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1618,7 +1707,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/xv1qsj6q-400x400-2.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-xv1qsj6q-400x400-2-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-xv1qsj6q-400x400-2-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1650,7 +1739,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/2016-05-26-a-scholar-7.jpg" alt="Picture" style="width:222;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-2016-05-26-a-scholar-7-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-2016-05-26-a-scholar-7-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1687,7 +1776,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/sacchet-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-sacchet-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-sacchet-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1719,7 +1808,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/rebeccaseligman-168-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-rebeccaseligman-168-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-rebeccaseligman-168-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1751,7 +1840,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/francoistadel-1.png" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-francoistadel-1-png.webp" type="image/webp"><img src="/media/team-portraits/media-images-francoistadel-1-png.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1787,7 +1876,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<picture><source srcset="/media/images/headshot-enzo-2.webp" type="image/webp"><img src="/media/images/headshot-enzo-2.png" alt="Picture" style="width:222;max-width:100%" /></picture>
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-headshot-enzo-2-png.webp" type="image/webp"><img src="/media/team-portraits/media-images-headshot-enzo-2-png.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1819,7 +1908,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/chris-headshot-crop-7.jpg" alt="Picture" style="width:219;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-chris-headshot-crop-7-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-chris-headshot-crop-7-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1851,7 +1940,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:right">
 <a>
-<img src="/media/images/timo-schmidt-2.jpg" alt="Picture" style="width:222;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-timo-schmidt-2-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-timo-schmidt-2-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1883,7 +1972,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/mve-2.png" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-mve-2-png.webp" type="image/webp"><img src="/media/team-portraits/media-images-mve-2-png.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1917,7 +2006,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/bucci-7-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-bucci-7-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-bucci-7-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1949,7 +2038,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:right">
 <a>
-<img src="/media/images/photo-lena-coutrot-orig-3.jpg" alt="Picture" style="width:200;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-photo-lena-coutrot-orig-3-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-photo-lena-coutrot-orig-3-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1981,7 +2070,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:right">
 <a>
-<img src="/media/images/1516895618013-2-2.jpeg" alt="Picture" style="width:200;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-1516895618013-2-2-jpeg.webp" type="image/webp"><img src="/media/team-portraits/media-images-1516895618013-2-2-jpeg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -2088,7 +2177,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/50720462-10156998651687436-9135200687594930176-n-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-50720462-10156998651687436-9135200687594930176-n-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-50720462-10156998651687436-9135200687594930176-n-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -2097,14 +2186,14 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/portrait-1-format-carre-4-jpg-1-orig-1.png" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-portrait-1-format-carre-4-jpg-1-orig-1-png.webp" type="image/webp"><img src="/media/team-portraits/media-images-portrait-1-format-carre-4-jpg-1-orig-1-png.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<img src="/media/images/94518046-542038530053425-7176690141715496960-n-1.jpg" alt="Picture" style="width:auto;max-width:100%" />
+<div class="team-avatar"><picture><source srcset="/media/team-portraits/media-images-94518046-542038530053425-7176690141715496960-n-1-jpg.webp" type="image/webp"><img src="/media/team-portraits/media-images-94518046-542038530053425-7176690141715496960-n-1-jpg.jpg" alt="Picture" /></picture></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -2239,6 +2328,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 	</div>
 </div>
+<span id="in-memoriam" class="team-anchor"></span>
 <div class="wsite-section-wrap">
 	<div class="wsite-section wsite-body-section wsite-custom-background">
 		<div class="wsite-section-content">
