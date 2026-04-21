@@ -131,6 +131,10 @@ body.wsite-page-membership #wsite-content {
   scroll-snap-align: center;
 }
 
+.section-nav {
+  /* Overridden by pretext-nav-fit.js to the largest size that fits */
+  --section-nav-font-size: 12px;
+}
 .section-nav a {
   display: inline-flex;
   align-items: center;
@@ -141,13 +145,16 @@ body.wsite-page-membership #wsite-content {
   text-decoration: none;
   white-space: nowrap;
   font-family: 'Raleway', sans-serif;
-  font-size: 12px;
+  font-size: var(--section-nav-font-size, 12px);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition: background 160ms ease, color 160ms ease;
+  transition: background 160ms ease, color 160ms ease,
+              font-size 200ms ease;
   -webkit-touch-callout: none;
   user-select: none;
 }
+/* When everything fits, disable horizontal scroll so flex can center perfectly */
+.section-nav:not(.is-overflow) ol { overflow-x: visible; }
 .section-nav a:hover,
 .section-nav a:focus,
 .section-nav a.is-active {
@@ -156,14 +163,15 @@ body.wsite-page-membership #wsite-content {
   outline: none;
 }
 
-/* Narrow-screen tuning */
+/* Narrow-screen tuning (pretext-nav-fit.js handles font-size — only tune padding/gap here) */
 @media (max-width: 640px) {
   .section-nav { padding-top: 0.45rem; padding-bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)); }
-  .section-nav ol { gap: 0.2rem; justify-content: flex-start; padding: 0 0.25rem; }
-  .section-nav a { font-size: 11px; padding: 0.4rem 0.7rem; letter-spacing: 0.06em; }
+  .section-nav ol { gap: 0.2rem; padding: 0 0.25rem; }
+  .section-nav.is-overflow ol { justify-content: flex-start; }
+  .section-nav a { padding: 0.4rem 0.7rem; letter-spacing: 0.06em; }
 }
 @media (max-width: 380px) {
-  .section-nav a { font-size: 10.5px; padding: 0.35rem 0.6rem; }
+  .section-nav a { padding: 0.35rem 0.6rem; }
 }
 
 /* Avatar styling (team page) - kept here for a single-source-of-truth */
@@ -215,6 +223,7 @@ def build_nav_html(anchors: list[tuple[str, str]]) -> str:
   {lis}
   </ol>
 </nav>
+<script src="/assets/js/pretext-nav-fit.js" defer></script>
 <script>
 (function() {{
   var links = document.querySelectorAll('.section-nav a');
@@ -252,9 +261,11 @@ OLD_NAV_RE = re.compile(
     re.DOTALL | re.IGNORECASE,
 )
 
-# Strip prior bottom navs (idempotency)
+# Strip prior bottom navs (idempotency) including the pretext-nav-fit script
 NEW_NAV_RE = re.compile(
-    r'<nav[^>]*class="section-nav"[^>]*>.*?</nav>\s*(?:<script>\(function\(\)[^<]*?</script>\s*)?',
+    r'<nav[^>]*class="section-nav"[^>]*>.*?</nav>\s*'
+    r'(?:<script[^>]*pretext-nav-fit\.js[^>]*></script>\s*)?'
+    r'(?:<script>\(function\(\)[^<]*?</script>\s*)?',
     re.DOTALL | re.IGNORECASE,
 )
 
