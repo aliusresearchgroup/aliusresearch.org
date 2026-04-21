@@ -82,7 +82,8 @@ body.wsite-page-team .team-avatar source {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  /* Bias crop upward so faces (usually in upper third of portraits) stay in frame */
+  object-position: center 25%;
   display: block;
   border-radius: 50%;
   max-width: none !important;
@@ -124,12 +125,9 @@ ANCHOR_MAP = {
 
 
 def rewrite_img_tags(html: str) -> str:
-    """Replace <img src="/media/images/X.jpg" ...> (in team sections) with
-    <div class="team-avatar"><img src="/media/team-portraits/<slug>.jpg" ...></div>.
-
-    Only applies to images inside a .wsite-multicol-col (portrait columns)
-    and skips the ALIUS logo, background images, and the Martin Fortier portrait
-    (which has a text-only section).
+    """Wrap each portrait <img> in a .team-avatar div so CSS can render it
+    as a uniform circle. Uses the ORIGINAL image — CSS object-fit handles
+    the crop. Skips logo and background images.
     """
     def repl(m: re.Match) -> str:
         whole = m.group(0)
@@ -137,23 +135,14 @@ def rewrite_img_tags(html: str) -> str:
         if not src_match:
             return whole
         src = src_match.group(1)
-        # Skip non-portrait images
         if any(x in src for x in ("1477332210.png", "background-images", "/logo")):
             return whole
-        # Only rewrite if it's a media path (images / uploads)
         if not (src.lstrip("/").startswith("media/images/") or "uploads/" in src):
             return whole
-        slug = slugify(src)
-        new_src = f"/media/team-portraits/{slug}.jpg"
-        new_webp = f"/media/team-portraits/{slug}.webp"
-        # Strip width/height/style constraints that'd interfere with object-fit
+        # Strip inline width/height/style so CSS (.team-avatar img { object-fit: cover })
+        # has full control over the rendered size and cropping.
         cleaned = re.sub(r'\s(width|height|style)="[^"]*"', "", whole)
-        cleaned = re.sub(r'src="[^"]+"', f'src="{new_src}"', cleaned)
-        return (
-            '<div class="team-avatar">'
-            f'<picture><source srcset="{new_webp}" type="image/webp">{cleaned}</picture>'
-            '</div>'
-        )
+        return f'<div class="team-avatar">{cleaned}</div>'
 
     return re.sub(r"<img[^>]+>", repl, html)
 

@@ -1,3 +1,148 @@
+<style>
+/* Consolidated-page design: minimalist section dividers + fixed bottom nav */
+html { scroll-behavior: smooth; }
+
+/* Keep section dividers clean */
+body.wsite-page-team .wsite-section-wrap,
+body.wsite-page-bulletin .wsite-section-wrap,
+body.wsite-page-events .wsite-section-wrap,
+body.wsite-page-membership .wsite-section-wrap {
+  scroll-margin-top: 16px;
+  scroll-margin-bottom: 100px;
+}
+
+/* Anchor targets (hidden offset spans sit above dividers) */
+.tab-anchor,
+.team-anchor {
+  position: relative;
+  top: -16px;
+  visibility: hidden;
+  pointer-events: none;
+  display: block;
+  height: 0;
+}
+
+/* Page bottom breathing room so last section isn't hidden under the fixed nav */
+body.wsite-page-team #wsite-content,
+body.wsite-page-bulletin #wsite-content,
+body.wsite-page-events #wsite-content,
+body.wsite-page-membership #wsite-content {
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Fixed bottom section navigation */
+.section-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  margin: 0;
+  padding: 0.55rem calc(0.75rem + env(safe-area-inset-right, 0px))
+           calc(0.55rem + env(safe-area-inset-bottom, 0px))
+           calc(0.75rem + env(safe-area-inset-left, 0px));
+  background: rgba(249, 249, 249, 0.94);
+  backdrop-filter: blur(10px) saturate(1.1);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
+  border-top: 1px solid rgba(66, 81, 76, 0.18);
+  box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.05);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.section-nav ol {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Horizontal scroll snap (browsers that don't support just scroll freely) */
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.section-nav ol::-webkit-scrollbar { display: none; }
+
+.section-nav li {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.section-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  color: #42514c;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 160ms ease, color 160ms ease;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.section-nav a:hover,
+.section-nav a:focus,
+.section-nav a.is-active {
+  background: rgba(123, 140, 137, 0.18);
+  color: #2a3330;
+  outline: none;
+}
+
+/* Narrow-screen tuning */
+@media (max-width: 640px) {
+  .section-nav { padding-top: 0.45rem; padding-bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)); }
+  .section-nav ol { gap: 0.2rem; justify-content: flex-start; padding: 0 0.25rem; }
+  .section-nav a { font-size: 11px; padding: 0.4rem 0.7rem; letter-spacing: 0.06em; }
+}
+@media (max-width: 380px) {
+  .section-nav a { font-size: 10.5px; padding: 0.35rem 0.6rem; }
+}
+
+/* Avatar styling (team page) - kept here for a single-source-of-truth */
+body.wsite-page-team .team-avatar {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 0.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e8ece9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+body.wsite-page-team .team-avatar img,
+body.wsite-page-team .team-avatar picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  border-radius: 50%;
+  max-width: none !important;
+}
+@media (max-width: 640px) {
+  body.wsite-page-team .team-avatar { width: 140px; height: 140px; }
+}
+
+/* Reduce visual noise on section dividers */
+body.wsite-page-team .styled-hr,
+body.wsite-page-bulletin .styled-hr,
+body.wsite-page-events .styled-hr,
+body.wsite-page-membership .styled-hr {
+  border: 0;
+  border-top: 1px solid rgba(66, 81, 76, 0.15);
+  max-width: 320px;
+  margin: 10px auto 0;
+}
+</style>
 <div class="body-wrap">
 
 	<div id="header">
@@ -107,7 +252,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-runway-2024-04-17t14-27-42-920z-expand-image-orig-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-runway-2024-04-17t14-27-42-920z-expand-image-orig-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/runway-2024-04-17t14-27-42-920z-expand-image_orig.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -148,7 +293,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-img-2388-6-jpeg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-img-2388-6-jpeg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/img-2388_6.jpeg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -188,7 +333,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-daf-headshot-10-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-daf-headshot-10-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/daf-headshot_10.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -380,7 +525,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-selen-12-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-selen-12-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/selen_12.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -420,7 +565,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-image-3-13-png.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-image-3-13-png.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/image-3_13.png" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -460,7 +605,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-picture1-7-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-picture1-7-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/picture1_7.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -500,7 +645,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-berkovitch-lucie-paris-france-13-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-berkovitch-lucie-paris-france-13-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/berkovitch-lucie-paris-france_13.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -540,7 +685,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-img-0005-16-jpeg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-img-0005-16-jpeg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/img-0005_16.jpeg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -580,7 +725,7 @@
 
 <div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-screen-shot-2016-12-23-at-17-44-51-16-png.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-screen-shot-2016-12-23-at-17-44-51-16-png.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/screen-shot-2016-12-23-at-17-44-51_16.png" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -620,7 +765,7 @@
 
 <div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:right">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-img-1590-9-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-img-1590-9-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/img-1590_9.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -660,7 +805,7 @@
 
 <div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:right">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-cyril-costines-2-png.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-cyril-costines-2-png.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/cyril-costines_2.png" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -700,7 +845,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-squared-17-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-squared-17-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/squared_17.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -740,7 +885,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-screen-shot-2018-07-16-at-10-26-47-12-png.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-screen-shot-2018-07-16-at-10-26-47-12-png.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/screen-shot-2018-07-16-at-10-26-47_12.png" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -780,7 +925,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-bf2219f7-6fae-4142-a471-48f13ae4193a-1-201-a-6-jpeg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-bf2219f7-6fae-4142-a471-48f13ae4193a-1-201-a-6-jpeg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/bf2219f7-6fae-4142-a471-48f13ae4193a-1-201-a_6.jpeg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -820,7 +965,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-cordelia-erickson-davis-12-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-cordelia-erickson-davis-12-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/cordelia-erickson-davis_12.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -860,7 +1005,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-marestaralles-2-jpeg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-marestaralles-2-jpeg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/marestaralles_2.jpeg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -900,7 +1045,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-george-11-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-george-11-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/george_11.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -940,7 +1085,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-img-2388-12-jpeg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-img-2388-12-jpeg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/img-2388_12.jpeg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -980,7 +1125,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-293757246-10217187236033323-3017171785644245039-n-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-293757246-10217187236033323-3017171785644245039-n-6-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/293757246-10217187236033323-3017171785644245039-n_6.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1020,7 +1165,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-mathieu-frerejouan-16-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-mathieu-frerejouan-16-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/mathieu-frerejouan_16.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1060,7 +1205,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-daf-headshot-16-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-daf-headshot-16-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/daf-headshot_16.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1100,7 +1245,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-tom-froese-15-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-tom-froese-15-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/tom-froese_15.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1140,7 +1285,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-foto-juan-60-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-foto-juan-60-6-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/foto-juan-60_6.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1180,7 +1325,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-aliceguyon-2-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-aliceguyon-2-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/aliceguyon_2.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1224,7 +1369,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:10px;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-arnaud-halloy-16-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-arnaud-halloy-16-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/arnaud-halloy_16.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1264,7 +1409,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-matthieu-koroma-16-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-matthieu-koroma-16-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/matthieu-koroma_16.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1304,7 +1449,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-mike-15-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-mike-15-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/mike_15.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1344,7 +1489,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-romypic-website-crop-11-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-romypic-website-crop-11-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/romypic-website-crop_11.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1384,7 +1529,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-240321-dm-charlottemartial-140-photoroom1-6-j.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-240321-dm-charlottemartial-140-photoroom1-6-j.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/240321-dm-charlottemartial-140-photoroom1_6.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1424,7 +1569,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:right">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-pxl-20220516-153551509-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-pxl-20220516-153551509-6-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/pxl-20220516-153551509_6.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1464,7 +1609,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-raph-16-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-raph-16-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/raph_16.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1504,7 +1649,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-pozegp-color-document-photo-16-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-pozegp-color-document-photo-16-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/pozegp-color-document-photo_16.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1544,7 +1689,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-xv1qsj6q-400x400-11-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-xv1qsj6q-400x400-11-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/xv1qsj6q-400x400_11.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1584,7 +1729,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-2016-05-26-a-scholar-16-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-2016-05-26-a-scholar-16-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/2016-05-26-a-scholar_16.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1631,7 +1776,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-sacchet-4-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-sacchet-4-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/sacchet_4.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1671,7 +1816,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-rebeccaseligman-168-11-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-rebeccaseligman-168-11-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/rebeccaseligman-168_11.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1711,7 +1856,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-francoistadel-2-png.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-francoistadel-2-png.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/francoistadel_2.png" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1755,7 +1900,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-headshot-enzo-13-png.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-headshot-enzo-13-png.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/headshot-enzo_13.png" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1795,7 +1940,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-chris-headshot-crop-17-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-chris-headshot-crop-17-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/chris-headshot-crop_17.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1835,7 +1980,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:right">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-timo-schmidt-10-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-timo-schmidt-10-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/timo-schmidt_10.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1875,7 +2020,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-mve-13-png.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-mve-13-png.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/mve_13.png" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1917,7 +2062,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-bucci-7-7-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-bucci-7-7-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/bucci-7_7.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1957,7 +2102,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:right">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-published-photo-lena-coutrot-orig-11-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-published-photo-lena-coutrot-orig-11-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/published/photo-lena-coutrot-orig_11.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -1997,7 +2142,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:40px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:right">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-1516895618013-2-10-jpeg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-1516895618013-2-10-jpeg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/1516895618013-2_10.jpeg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -2114,7 +2259,7 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-50720462-10156998651687436-9135200687594930176-n-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-50720462-10156998651687436-9135200687594930176-n-6-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/50720462-10156998651687436-9135200687594930176-n_6.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -2129,14 +2274,14 @@
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-portrait-1-format-carre-4-jpg-1-orig-6-png.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-portrait-1-format-carre-4-jpg-1-orig-6-png.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/portrait-1-format-carre-4-jpg-1-orig_6.png" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
 
 <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
 <a>
-<div class="team-avatar"><picture><source srcset="/media/team-portraits/uploads-9-1-6-0-91600416-94518046-542038530053425-7176690141715496960-n-6-jpg.webp" type="image/webp"><img src="/media/team-portraits/uploads-9-1-6-0-91600416-94518046-542038530053425-7176690141715496960-n-6-jpg.jpg" alt="Picture" /></picture></div>
+<div class="team-avatar"><img src="uploads/9/1/6/0/91600416/94518046-542038530053425-7176690141715496960-n_6.jpg" alt="Picture" /></div>
 </a>
 <div style="display:block;font-size:90%"></div>
 </div></div>
@@ -2482,3 +2627,39 @@ jQuery(document).ready(init);
 
 		
 	
+<nav class="section-nav" aria-label="Section navigation">
+  <ol>
+  <li><a href="#coordinators">Coordinators</a></li>
+  <li><a href="#research-members">Research Members</a></li>
+  <li><a href="#in-memoriam">In Memoriam</a></li>
+  </ol>
+</nav>
+<script>
+(function() {
+  var links = document.querySelectorAll('.section-nav a');
+  if (!links.length) return;
+  // Highlight active section as user scrolls; snap-center the active link
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      var id = e.target.id;
+      if (!id) return;
+      var link = document.querySelector('.section-nav a[href="#' + id + '"]');
+      if (!link) return;
+      if (e.isIntersecting) {
+        links.forEach(function(a) { a.classList.remove('is-active'); });
+        link.classList.add('is-active');
+        // Snap the active link horizontally into view on narrow screens
+        var nav = link.closest('ol');
+        if (nav && nav.scrollWidth > nav.clientWidth) {
+          var r = link.getBoundingClientRect(), nr = nav.getBoundingClientRect();
+          nav.scrollBy({
+            left: (r.left + r.width / 2) - (nr.left + nr.width / 2),
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+  document.querySelectorAll('[id^="bulletin-"],[id="coordinators"],[id="research-members"],[id="in-memoriam"],[id="assc-satellite"],[id="program"],[id="attendees"],[id="travel"],[id="music"],[id="active-roles"],[id="researcher-membership"]').forEach(function(el) { io.observe(el); });
+})();
+</script>
