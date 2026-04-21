@@ -1,0 +1,22 @@
+{
+    "id": "events",
+    "legacy_path": "events.html",
+    "legacy_name": "events",
+    "canonical_path": "/events/",
+    "title": "Events - Alius",
+    "description": "",
+    "section": "events",
+    "subcategory": "events",
+    "layout": "article",
+    "nav_group": "events",
+    "order": 0,
+    "body_fragment": "content/_consolidated/events/body.html",
+    "head_fragment": "content/_consolidated/events/head.raw.html",
+    "source_html": "content/_consolidated/events/original.html",
+    "page_css": "",
+    "page_js": "",
+    "html_tag_attributes": "lang=\"en\"",
+    "body_tag_attributes": "class=\"wsite-page-events  full-width-on  wsite-theme-light\"",
+    "status": "published",
+    "redirect_legacy": true
+}

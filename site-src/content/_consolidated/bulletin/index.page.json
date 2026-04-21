@@ -1,0 +1,22 @@
+{
+    "id": "bulletin",
+    "legacy_path": "bulletin.html",
+    "legacy_name": "bulletin",
+    "canonical_path": "/bulletin/",
+    "title": "Bulletin - Alius",
+    "description": "",
+    "section": "bulletin",
+    "subcategory": "",
+    "layout": "article",
+    "nav_group": "bulletin",
+    "order": 0,
+    "body_fragment": "content/_consolidated/bulletin/body.html",
+    "head_fragment": "content/_consolidated/bulletin/head.raw.html",
+    "source_html": "content/_consolidated/bulletin/original.html",
+    "page_css": "",
+    "page_js": "",
+    "html_tag_attributes": "lang=\"en\"",
+    "body_tag_attributes": "class=\"wsite-page-bulletin  full-width-on  wsite-theme-light\"",
+    "status": "published",
+    "redirect_legacy": true
+}

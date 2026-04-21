@@ -1,0 +1,22 @@
+{
+    "id": "membership",
+    "legacy_path": "membership-renewal-894351.html",
+    "legacy_name": "membership",
+    "canonical_path": "/membership/",
+    "title": "Membership - Alius",
+    "description": "",
+    "section": "community",
+    "subcategory": "membership-renewal-894351",
+    "layout": "page",
+    "nav_group": "community",
+    "order": 0,
+    "body_fragment": "content/_consolidated/membership/body.html",
+    "head_fragment": "content/_consolidated/membership/head.raw.html",
+    "source_html": "content/_consolidated/membership/original.html",
+    "page_css": "",
+    "page_js": "",
+    "html_tag_attributes": "lang=\"en\"",
+    "body_tag_attributes": "class=\"wsite-page-membership  full-width-on  wsite-theme-light\"",
+    "status": "published",
+    "redirect_legacy": true
+}
