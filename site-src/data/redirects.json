@@ -451,7 +451,7 @@
     },
     {
         "from":  "/martinfortier.html",
-        "to":  "/pages/martinfortier/",
+        "to":  "/team/",
         "type":  "legacy-html-page"
     },
     {
@@ -616,12 +616,12 @@
     },
     {
         "from":  "/team.html",
-        "to":  "/about/team/team/",
+        "to":  "/team/",
         "type":  "legacy-html-page"
     },
     {
         "from":  "/team-222796.html",
-        "to":  "/about/team/team-222796/",
+        "to":  "/team/",
         "type":  "legacy-html-page"
     },
     {
@@ -646,7 +646,7 @@
     },
     {
         "from":  "/team-955042.html",
-        "to":  "/about/team/team-955042/",
+        "to":  "/team/",
         "type":  "legacy-html-page"
     },
     {
