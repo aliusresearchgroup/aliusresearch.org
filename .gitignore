@@ -1,2 +1,20 @@
 docs-prev-*/
 site-src/static/*.prev-*/
+
+# Migration artifacts regenerated on build (keep only build-summary.txt and rewritten-page-sources.csv)
+migration/*.csv
+!migration/rewritten-page-sources.csv
+migration/*.png
+migration/*.log
+migration/*.md
+migration/*.gif
+migration/_*.ps1
+
+# Retired formats (keep sources out of the site)
+site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/**/*.eot
+# TTF retired except for Gentium Basic which has no WOFF alternative
+site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Raleway/*.ttf
+site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Lora/*.ttf
+site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Playfair_Display/*.ttf
+site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Montserrat/*.ttf
+site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/EB_Garamond/*.ttf

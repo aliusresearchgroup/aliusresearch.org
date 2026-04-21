@@ -109,6 +109,16 @@ if (-not [string]::IsNullOrWhiteSpace((Normalize-ProjectBasePath -BasePath $proj
   }
 }
 
+# Post-process: wrap <img> in <picture> with webp <source> when sibling exists.
+$wrapScript = Join-Path $RepoRoot "tools\minify\wrap-images-in-picture.py"
+if (Test-Path -LiteralPath $wrapScript) {
+  try {
+    & python $wrapScript | Out-Null
+  } catch {
+    Write-Warning "Picture-element post-processing failed: $_"
+  }
+}
+
 $summary = @(
   "Generated UTC: $([DateTime]::UtcNow.ToString('o'))",
   "Docs output: $docsRoot",
