@@ -261,11 +261,11 @@ body.wsite-page-team .team-grid {
    #ffffff  — white (background)
 */
 
-/* Card */
+/* Card (viscereality pattern: left-accent colored border) */
 body.wsite-page-team .team-card {
   background: #ffffff;
-  border: 1px solid rgba(26, 77, 46, 0.15);
-  border-top: 3px solid #3d8b3d;  /* leaf green top accent */
+  border: 1px solid rgba(26, 77, 46, 0.12);
+  border-left: 3px solid #3d8b3d;  /* leaf-green left accent */
   border-radius: 10px;
   padding: 24px 20px 20px;
   display: flex;
@@ -273,17 +273,21 @@ body.wsite-page-team .team-card {
   align-items: center;
   text-align: center;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  text-shadow: 0 0 2px rgba(26, 77, 46, 0.02);
 }
 body.wsite-page-team .team-card--coord {
-  border-top-color: #8fbf4d;  /* brighter leaf green for coordinators */
+  border-left-color: #8fbf4d;  /* brighter leaf green for coordinators */
+  border-left-width: 4px;
 }
 body.wsite-page-team .team-card:hover {
-  border-color: rgba(26, 77, 46, 0.3);
-  box-shadow: 0 4px 20px -6px rgba(26, 77, 46, 0.22), 0 0 0 1px rgba(61, 139, 61, 0.1);
-  transform: translateY(-2px);
+  border-color: rgba(26, 77, 46, 0.25);
+  border-left-color: #3d8b3d;
+  box-shadow: 0 6px 22px -6px rgba(26, 77, 46, 0.25), 0 0 0 1px rgba(61, 139, 61, 0.1);
+  transform: translateY(-3px);
 }
 body.wsite-page-team .team-card--coord:hover {
-  box-shadow: 0 4px 20px -6px rgba(143, 191, 77, 0.35), 0 0 0 1px rgba(143, 191, 77, 0.2);
+  border-left-color: #8fbf4d;
+  box-shadow: 0 6px 22px -6px rgba(143, 191, 77, 0.4), 0 0 0 1px rgba(143, 191, 77, 0.2);
 }
 
 body.wsite-page-team .team-card__avatar {
