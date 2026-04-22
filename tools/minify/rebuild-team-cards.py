@@ -345,6 +345,15 @@ def render_memoriam(m: dict) -> str:
     a proper page-sized memorial rather than a single card.
     """
     img = m.get("image") or ""
+    # Filter out non-portrait junk (the ALIUS logo leaked through as "image" earlier)
+    if img and "1477332210" in img:
+        img = ""
+
+    photo_html = (
+        f'<div class="memoriam__photo"><img src="{img}" alt="Martin Fortier" loading="lazy" decoding="async"></div>'
+        if img else ""
+    )
+    hero_class = "memoriam__hero" + ("" if img else " memoriam__hero--no-photo")
 
     return f'''<section class="memoriam" id="martinfortier" aria-labelledby="memoriam-heading">
   <div class="memoriam__divider"></div>
@@ -352,8 +361,8 @@ def render_memoriam(m: dict) -> str:
   <h2 class="memoriam__name" id="memoriam-heading">Martin Fortier</h2>
   <p class="memoriam__role">Co-Founder of ALIUS (2016) · 1990–2020</p>
 
-  <div class="memoriam__hero">
-    <div class="memoriam__photo"><img src="{img}" alt="Martin Fortier" loading="lazy" decoding="async"></div>
+  <div class="{hero_class}">
+    {photo_html}
     <div class="memoriam__lede">
       <p>On April 11th, 2020, Martin Fortier tragically passed away after a long and harrowing battle with cancer. He was thirty years old. We mourn the loss of a wonderful friend and a brilliant colleague, gone far too soon to realize his extraordinary potential despite his many precocious achievements.</p>
       <p><a class="memoriam__primary" href="/bulletin/interviews/bulletin04-martintribute/">Read ALIUS' full scientific tribute to the work of Martin Fortier →</a></p>
@@ -556,6 +565,15 @@ body.wsite-page-team .memoriam__hero {
   align-items: start;
   margin: 0 auto 56px;
   max-width: 820px;
+}
+/* No-photo variant: collapse to single column so the lede is centered */
+body.wsite-page-team .memoriam__hero--no-photo {
+  grid-template-columns: 1fr;
+  max-width: 68ch;
+}
+body.wsite-page-team .memoriam__hero--no-photo .memoriam__lede p:first-child {
+  font-size: 17px !important;
+  line-height: 1.75 !important;
 }
 body.wsite-page-team .memoriam__photo {
   width: 220px;
