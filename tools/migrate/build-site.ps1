@@ -52,7 +52,8 @@ if (Test-Path -LiteralPath $staticRoot) {
   }
 }
 
-$pages = Get-Content -LiteralPath (Join-Path $dataRoot "pages.json") -Raw | ConvertFrom-Json
+$pages = Get-Content -LiteralPath (Join-Path $dataRoot "pages.json") -Raw | ConvertFrom-Json |
+  Where-Object { [string]::IsNullOrWhiteSpace([string]$_.status) -or [string]$_.status -eq "published" }
 $rewrittenIndexPath = Join-Path $migrationRoot "rewritten-page-sources.csv"
 $rewrittenLookup = @{}
 if (Test-Path -LiteralPath $rewrittenIndexPath) {

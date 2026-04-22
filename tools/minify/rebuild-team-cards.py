@@ -777,10 +777,10 @@ body.wsite-page-team .team-section-heading h2 {
   text-align: left !important;
 }
 
-/* Grid — static layout, uniform cell sizes; the clicked card animates via
-   GPU-composited `transform: scale()` on top of its static grid cell, so
-   no grid-template reflow happens during the animation (which was the
-   source of jitter). Borders snap because all default cells are uniform. */
+/* Grid — real grid-track animation on click. Columns redistribute width
+   (clicked column widens, others narrow) via grid-template-columns
+   transition, so every card's 4 sides stay locked to its neighbours and
+   boxes visibly resize in unison. */
 body.wsite-page-team .team-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
@@ -789,8 +789,21 @@ body.wsite-page-team .team-grid {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
-  /* Allow the scaled card to render outside its cell without being clipped */
-  overflow: visible;
+  transition: grid-template-columns 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: grid-template-columns;
+}
+@media (max-width: 1024px) {
+  body.wsite-page-team .team-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  body.wsite-page-team .team-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+@media (max-width: 420px) {
+  body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 1024px) {
   body.wsite-page-team .team-grid {
@@ -1212,30 +1225,23 @@ body.wsite-page-team .team-card.is-filtered-out {
 body.wsite-page-team .team-card {
   cursor: pointer;
   min-width: 0;
-  transform-origin: center center;
-  will-change: transform;
-  transition: transform 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              opacity 1800ms ease,
-              border-color 1800ms ease,
-              box-shadow 1800ms ease;
+  transition: opacity 2400ms ease,
+              border-color 2400ms ease,
+              box-shadow 2400ms ease;
 }
 
-/* Clicked card: GPU-smooth scale up. --expand-scale is JS-set from pretext-
-   computed target square size / current card width. Everything inside
-   scales uniformly (pretext-driven dynamic font scaling — as the user
-   requested). No grid track animation; no layout reflow. */
+/* Clicked card: takes 2 rows (taller) + gets visual emphasis. Its column
+   also widens via the inline grid-template-columns the JS sets on the grid. */
 body.wsite-page-team .team-card--expanded {
-  z-index: 10;
-  transform: scale(var(--expand-scale, 1.6));
+  grid-row: span 2;
+  z-index: 2;
   border-color: rgba(26, 77, 46, 0.45);
-  box-shadow: 0 24px 60px -14px rgba(26, 77, 46, 0.35),
-              0 0 0 1px rgba(61, 139, 61, 0.2);
+  box-shadow: 0 14px 40px -10px rgba(26, 77, 46, 0.28);
 }
 
-/* Non-expanded siblings while any card is expanded: soft recede */
+/* Non-expanded siblings while any card is expanded: soft dim */
 body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
-  opacity: 0.55;
-  filter: saturate(0.75);
+  opacity: 0.65;
 }
 
 /* Siblings dim slightly. Their cells are now narrower/shorter (grid-track

@@ -32,8 +32,15 @@ foreach ($r in $redirects) {
   if ([string]::IsNullOrWhiteSpace($from)) { continue }
   $target = [string]$r.to
   $fromTrim = $from.TrimStart("/")
-  $outPath = Join-Path $docsRoot ($fromTrim -replace "/", "\")
+  $relativeTarget = $fromTrim -replace "/", "\"
+  $hasFileExtension = -not [string]::IsNullOrWhiteSpace([System.IO.Path]::GetExtension($fromTrim))
+  if ($from.EndsWith("/") -or -not $hasFileExtension) {
+    $outPath = Join-Path (Join-Path $docsRoot $relativeTarget) "index.html"
+  } else {
+    $outPath = Join-Path $docsRoot $relativeTarget
+  }
   $html = New-RedirectHtml -TargetPath $target -LegacyPath $from -ProjectBasePath $projectBasePath
+  Ensure-Directory -Path (Split-Path -Parent $outPath)
   Write-TextFileUtf8NoBom -Path $outPath -Content $html
   $count++
 }
