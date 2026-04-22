@@ -1018,51 +1018,56 @@ body.wsite-page-team #wsite-content > .wsite-section-wrap { display: none !impor
 body.wsite-page-team #wsite-content .wsite-background,
 body.wsite-page-team #wsite-content .wsite-custom-background { background: transparent !important; }
 
-/* --- Accordion click-to-expand (pretext-measured, container height only) --- */
+/* --- Click-to-expand (slower, grows into a symmetrical square) --- */
+
 body.wsite-page-team .team-card {
   cursor: pointer;
+  transition: border-color 900ms ease, box-shadow 900ms ease,
+              min-height 900ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              aspect-ratio 900ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 900ms ease;
 }
 
-/* Bio: animatable via max-height. Retain line-clamp for the default 6-line
-   ellipsis appearance, but also cap via max-height so the transition has a
-   real interpolable property. */
+/* Bio uses max-height for animatable clamping (line-clamp isn't animatable) */
 body.wsite-page-team .team-card__bio {
-  max-height: 10.2em;  /* ~6 lines at line-height 1.5, matches -webkit-line-clamp */
+  max-height: 10.2em;  /* ~6 lines default */
   overflow: hidden;
-  transition: max-height 520ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: max-height 900ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-/* When a card in the grid is expanded, OTHER cards shrink their bio to
-   2 lines so the clicked one visibly dominates (accordion pattern).
-   Nothing inside any card is transformed or scaled — only the bio's
-   max-height changes, and the card's own height follows naturally. */
+/* Non-expanded siblings: their bio shrinks to 2 lines so the expanded card
+   visibly dominates, accordion-style. All inner elements keep their sizes. */
 body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) .team-card__bio {
-  max-height: 3em;  /* about 2 lines */
+  max-height: 3em;  /* ~2 lines */
   -webkit-line-clamp: 2 !important;
 }
+body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
+  opacity: 0.72;
+}
 
-/* Clicked card: bio grows to the pretext-measured target height.
-   No transforms, no grid-column changes, no scaling of inner elements —
-   only the bio container grows, and the card's box grows with it. */
+/* Clicked card: grid-column spans 2 (doubles width) + aspect-ratio: 1
+   forces the outer box into a symmetrical square. Inner elements keep
+   their natural size; only the bio grows into the new space. */
+body.wsite-page-team .team-card--expanded {
+  grid-column: span 2;
+  aspect-ratio: 1 / 1;
+  border-color: rgba(26, 77, 46, 0.35);
+  box-shadow: 0 12px 34px -8px rgba(26, 77, 46, 0.2);
+  padding: 28px;
+  justify-content: flex-start;
+}
 body.wsite-page-team .team-card--expanded .team-card__bio {
-  max-height: var(--expanded-bio-height, 120em);
+  max-height: var(--expanded-bio-height, 100em);
   -webkit-line-clamp: unset !important;
   display: block !important;
 }
-
-/* Subtle visual lift on the expanded card so the eye finds it without any
-   geometric trickery — a slightly stronger border + a soft shadow. */
-body.wsite-page-team .team-card--expanded {
-  border-color: rgba(26, 77, 46, 0.35);
-  box-shadow: 0 10px 28px -8px rgba(26, 77, 46, 0.18);
-  transition: border-color 520ms ease, box-shadow 520ms ease;
-}
-
-/* Non-expanded siblings: a small saturation dip so their shrunk bios don't
-   fight for attention. No scale/transform. */
-body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
-  opacity: 0.72;
-  transition: opacity 520ms ease;
+/* On narrow viewports we can't fit two columns — fall back to natural width,
+   still animating the height growth accordion-style */
+@media (max-width: 520px) {
+  body.wsite-page-team .team-card--expanded {
+    grid-column: auto;
+    aspect-ratio: auto;
+  }
 }
 </style>
 <script src="/assets/js/team-card-expand.js" defer></script>
