@@ -21,10 +21,11 @@
 (function () {
   'use strict';
 
-  var ANIM_MS = 1800;
-  var MIN_SQUARE = 320;          // never smaller than this
-  var MAX_SQUARE_FRAC = 0.55;    // don't exceed 55% of grid width
-  var MAX_SQUARE_ABS = 620;      // hard cap (readability)
+  var ANIM_MS = 2400;
+  var DEFAULT_ROW_PX = 240;      // matches CSS grid-auto-rows default
+  var MIN_SQUARE = 320;
+  var MAX_SQUARE_FRAC = 0.6;     // up to 60% of grid width
+  var MAX_SQUARE_ABS = 640;      // hard cap (readability)
   var state = { expanded: null, measure: null };
 
   function init() {
@@ -110,23 +111,25 @@
    * (the "chrome") plus the bio text at width (S - paddingX).
    */
   function computeSquareSize(card, bioEl, grid) {
-    var cardRect = card.getBoundingClientRect();
-    var bioRect = bioEl.getBoundingClientRect();
-    // Chrome height = everything in the card except the bio
-    var chromeHeight = cardRect.height - bioRect.height;
+    // Chrome = photo + name + role + icons + paddings, as rendered WITH the
+    // bio hidden (default state). getBoundingClientRect gives us that.
+    var chromeHeight = card.getBoundingClientRect().height;
     var cs = getComputedStyle(card);
     var paddingX = (parseFloat(cs.paddingLeft) || 0) + (parseFloat(cs.paddingRight) || 0);
 
     var gridWidth = grid.getBoundingClientRect().width;
     var hardMax = Math.min(MAX_SQUARE_ABS, gridWidth * MAX_SQUARE_FRAC);
 
-    // Iterate: start at a readable width, converge
+    // Iterate to find smallest square S where S >= chrome + bio margin-top +
+    // bio_height_at_width(S - paddingX) + bottom breathing room.
+    var BIO_MARGIN_TOP = 16;
+    var BOTTOM_SLACK = 24;
     var S = 440;
-    for (var i = 0; i < 6; i++) {
-      var bioWidth = Math.max(80, S - paddingX);
+    for (var i = 0; i < 8; i++) {
+      var bioWidth = Math.max(100, S - paddingX);
       var bioH = measureBioHeightAtWidth(bioEl, bioWidth);
-      var neededH = chromeHeight + bioH + 24; // 24 px breathing room
-      if (Math.abs(S - neededH) < 10) {
+      var neededH = chromeHeight + BIO_MARGIN_TOP + bioH + BOTTOM_SLACK;
+      if (Math.abs(S - neededH) < 8) {
         S = Math.max(S, neededH);
         break;
       }
@@ -205,9 +208,11 @@
     for (var c = 0; c < dims.cols; c++) {
       colParts.push(c === col ? (S + 'px') : 'minmax(0, 1fr)');
     }
+    // Explicit per-row template so every non-expanded row stays at the
+    // same uniform height — borders snap cleanly at row boundaries.
     var rowParts = [];
     for (var r = 0; r < totalRows; r++) {
-      rowParts.push(r === row ? (S + 'px') : 'minmax(280px, auto)');
+      rowParts.push(r === row ? (S + 'px') : (DEFAULT_ROW_PX + 'px'));
     }
 
     grid.style.gridTemplateColumns = colParts.join(' ');

@@ -313,19 +313,19 @@ body.wsite-page-team .team-section-heading h2 {
   text-align: left !important;
 }
 
-/* Grid — explicit track counts + explicit minmax() row heights so that
-   grid-template-columns / grid-template-rows can be natively animated
-   from fr-sized defaults to pixel-sized emphasis when we expand a cell. */
+/* Grid — explicit column count + fixed-height rows so every default-state
+   card is the same size and borders snap perfectly. Grid template tracks
+   animate natively when the click handler writes per-cell pixel sizes. */
 body.wsite-page-team .team-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  grid-auto-rows: minmax(280px, auto);
+  grid-auto-rows: 240px;         /* uniform default row height (no bio visible) */
   gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
-  transition: grid-template-columns 1800ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              grid-template-rows 1800ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: grid-template-columns 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              grid-template-rows 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 @media (max-width: 1024px) {
   body.wsite-page-team .team-grid {
@@ -429,19 +429,25 @@ body.wsite-page-team .team-card__role--muted {
 }
 
 body.wsite-page-team .team-card__bio {
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-  color: #4a5350 !important;
-  margin: 0 0 14px !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #2a3330 !important;
+  margin: 0 !important;
   font-weight: 400 !important;
-  flex: 1;
-  /* Clamp to 6 lines with ellipsis for consistent card heights */
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
+  /* Hidden by default — revealed only on click */
+  max-height: 0 !important;
   overflow: hidden;
+  opacity: 0;
   text-align: left;
   width: 100%;
+  transition: max-height 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 1400ms ease 800ms,
+              margin 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+body.wsite-page-team .team-card--expanded .team-card__bio {
+  max-height: var(--expanded-bio-height, 100em) !important;
+  opacity: 1;
+  margin: 16px 0 0 !important;
 }
 
 body.wsite-page-team .team-card__links {
@@ -701,30 +707,18 @@ body.wsite-page-team .team-card.is-filtered-out {
 
 body.wsite-page-team .team-card {
   cursor: pointer;
-  transition: border-color 1600ms ease,
-              box-shadow 1600ms ease,
-              opacity 1600ms ease,
-              max-height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: border-color 2400ms ease,
+              box-shadow 2400ms ease,
+              opacity 2400ms ease;
   min-width: 0;  /* allow shrinking inside a narrower column */
 }
 
-body.wsite-page-team .team-card__bio {
-  max-height: 10.2em;
-  overflow: hidden;
-  transition: max-height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-/* Clicked card: only cosmetic cues (border, shadow). The actual geometric
-   growth happens at the grid-track level via inline styles from JS. */
+/* Clicked card: visual emphasis. The actual geometric growth happens at
+   the grid-track level via inline styles from JS (perfect square Spx×Spx). */
 body.wsite-page-team .team-card--expanded {
   z-index: 2;
-  border-color: rgba(26, 77, 46, 0.35);
-  box-shadow: 0 14px 40px -10px rgba(26, 77, 46, 0.25);
-}
-body.wsite-page-team .team-card--expanded .team-card__bio {
-  max-height: var(--expanded-bio-height, 100em);
-  -webkit-line-clamp: unset !important;
-  display: block !important;
+  border-color: rgba(26, 77, 46, 0.45);
+  box-shadow: 0 18px 44px -12px rgba(26, 77, 46, 0.3);
 }
 
 /* Siblings dim slightly. Their cells are now narrower/shorter (grid-track
