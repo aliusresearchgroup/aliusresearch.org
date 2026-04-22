@@ -55,13 +55,26 @@ EXTRA_MEMBERS = [
     },
     {
         "name": "France Lerner",
-        "image": "/media/images/flerner-orig.png",
+        "image": "/media/images/france-lerner.png",
         "bio": (
-            "France Lerner is a member of the ALIUS research community "
-            "contributing to the group's interdisciplinary work on altered "
-            "states of consciousness."
+            "France Lerner is an interdisciplinary artist and researcher at "
+            "the intersection of neuroaesthetics, consciousness studies, and "
+            "immersive technologies. She received her PhD in Art and Science "
+            "from the Royal Academy of Arts and the Université de Liège, "
+            "in collaboration with the Coma Science Group under Prof. Steven "
+            "Laureys. Following postdoctoral research at the Weizmann Institute "
+            "of Science (Laboratory for Robotics and Virtual Reality) and an "
+            "Assistant Professorship at BIMSA in Beijing, she is currently "
+            "Research Fellow at the University of Haifa in the laboratory of "
+            "Aviva Berkovitch-Ohana. Her work investigates the spatial and "
+            "perceptual organization of Near-Death Experiences — developing "
+            "visual methodologies that combine participant drawings, "
+            "neurophenomenological analysis, and generative AI to reconstruct "
+            "subjective experiences across altered states of consciousness."
         ),
-        "links": [],
+        "links": [
+            {"href": "/library/pdfs/france-lerner-biography.pdf", "text": "Biography (PDF)"},
+        ],
         "email": None,
     },
 ]
