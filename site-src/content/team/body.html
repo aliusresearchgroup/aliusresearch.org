@@ -431,50 +431,63 @@ body.wsite-page-team .team-card__role--muted {
   color: #6b7571 !important;
 }
 
-/* Note on specificity: Weebly's baseline stylesheet declares
-   `#wsite-content p { font-size: 16px !important }` inside a media query —
-   specificity (1,0,1) with `!important`. To beat it we prefix our own
-   rules with #wsite-content (→ spec 1,2,2) and `p.team-card__bio`
-   (type selector bumps spec). Same for role (also a <p>). */
+/* Specificity note: Weebly declares `#wsite-content p { font-size:16px !important }`
+   at spec (1,0,1) — we prefix our rules with #wsite-content to match that ID
+   selector and add the type qualifier (`p.team-card__bio`) for clean override.
+
+   Motion design: `font-size` stays CONSTANT at its natural value for each
+   element. The VISUAL growth/shrink is driven entirely by the card's
+   `transform: scale()` — so the text and the card scale as one single
+   transform operation and are mechanically in lockstep (no compounding of
+   two independent animations). Text REVEAL in the dormant → expanded
+   transition uses `max-height` + `opacity` on the same 2400ms curve so
+   the content fades in as the box grows. */
+
 body.wsite-page-team #wsite-content p.team-card__bio {
-  /* Always present in the DOM — but shrunk to font-size:0 in default state.
-     No max-height / display toggling — the text gradually grows (font-size
-     animation is GPU-smooth) and the bio element's height grows with it. */
-  font-size: 0 !important;
+  font-size: 14px !important;          /* constant — scales WITH the card */
   line-height: 1.55 !important;
   color: #2a3330 !important;
-  margin: 0 !important;
   font-weight: 400 !important;
   overflow: hidden;
   text-align: left;
   width: 100%;
-  transition: font-size 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              margin 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  /* Dormant: collapsed + invisible */
+  max-height: 0;
+  margin: 0 !important;
+  opacity: 0;
+  transition: max-height 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              margin 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-body.wsite-page-team .team-card--expanded #wsite-content p.team-card__bio,
-body.wsite-page-team #wsite-content .team-card--expanded p.team-card__bio {
-  font-size: 14px !important;
+body.wsite-page-team .team-card--expanded #wsite-content p.team-card__bio {
+  max-height: var(--expanded-bio-height, 30em);
   margin: 16px 0 0 !important;
+  opacity: 1;
 }
 
-/* Dormant state: hide name + role too — only photo + icons visible.
-   Same specificity trick since role is a <p>. Name is an <h3> and
-   Weebly has no direct h3 override, but we add the prefix anyway for
-   consistency and to make cascade order unambiguous. */
+/* Name + role — same technique; hidden in dormant, revealed with bio. */
 body.wsite-page-team #wsite-content h3.team-card__name,
 body.wsite-page-team #wsite-content p.team-card__role {
-  font-size: 0 !important;
+  max-height: 0;
   margin: 0 !important;
-  transition: font-size 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              margin 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              margin 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
+/* Natural font sizes stay at their declared values (15px for name,
+   11.5px for role) — those class selectors are defined earlier in this
+   CSS block and continue to apply. */
 body.wsite-page-team .team-card--expanded #wsite-content h3.team-card__name {
-  font-size: 15px !important;
+  max-height: 3em;
   margin: 0 0 4px !important;
+  opacity: 1;
 }
 body.wsite-page-team .team-card--expanded #wsite-content p.team-card__role {
-  font-size: 11.5px !important;
+  max-height: 2em;
   margin: 0 0 12px !important;
+  opacity: 1;
 }
 
 body.wsite-page-team .team-card__links {

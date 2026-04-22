@@ -99,7 +99,7 @@ var STYLE_PREFIX = 'wsite';
 		
 		
 	<style>
-/* Site refresh — palette lock (A13) + reading-column (A14) */
+/* Site refresh â€” palette lock (A13) + reading-column (A14) */
 .wsite-page-bulletin #wsite-content h2,
 .wsite-page-bulletin #wsite-content h2 *,
 .wsite-page-events #wsite-content h2,
@@ -120,7 +120,7 @@ var STYLE_PREFIX = 'wsite';
   color: #3d8b3d !important;
 }
 
-/* ---- A14 · Bulletin-interview reading column ---- */
+/* ---- A14 Â· Bulletin-interview reading column ---- */
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table-wrap,
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table,
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-tbody,
@@ -147,7 +147,7 @@ body[class*="wsite-page-bulletin"] #wsite-content img {
   max-width: 100% !important;
   height: auto !important;
 }
-/* Keep existing styling on the consolidated /bulletin/ landing — only the
+/* Keep existing styling on the consolidated /bulletin/ landing â€” only the
    interior interview pages should pick up the 72ch column; the landing has
    its own section-nav and grid */
 body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
@@ -261,7 +261,7 @@ body.wsite-page-membership #wsite-content {
   outline: none;
 }
 
-/* Narrow-screen tuning (pretext-nav-fit.js handles font-size — only tune padding/gap here) */
+/* Narrow-screen tuning (pretext-nav-fit.js handles font-size â€” only tune padding/gap here) */
 @media (max-width: 640px) {
   .section-nav { padding-top: 0.45rem; padding-bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)); }
   .section-nav ol { gap: 0.2rem; padding: 0 0.25rem; }
@@ -306,6 +306,63 @@ body.wsite-page-membership .styled-hr {
   border-top: 1px solid rgba(66, 81, 76, 0.15);
   max-width: 320px;
   margin: 10px auto 0;
+}
+</style>
+<style>
+/* Site refresh — palette lock (A13) + reading-column (A14) */
+.wsite-page-bulletin #wsite-content h2,
+.wsite-page-bulletin #wsite-content h2 *,
+.wsite-page-events #wsite-content h2,
+.wsite-page-events #wsite-content h2 *,
+.wsite-page-membership #wsite-content h2,
+.wsite-page-membership #wsite-content h2 * {
+  color: #1a4d2e !important;
+}
+.wsite-page-bulletin #wsite-content .wsite-content-title font,
+.wsite-page-events #wsite-content .wsite-content-title font,
+.wsite-page-membership #wsite-content .wsite-content-title font {
+  color: inherit !important;
+}
+/* Section-divider sub-headings */
+.wsite-page-bulletin #wsite-content .wsite-section-wrap + .wsite-section-wrap h2 strong,
+.wsite-page-events #wsite-content .wsite-section-wrap + .wsite-section-wrap h2 strong,
+.wsite-page-membership #wsite-content .wsite-section-wrap + .wsite-section-wrap h2 strong {
+  color: #3d8b3d !important;
+}
+
+/* ---- A14 · Bulletin-interview reading column ---- */
+body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table-wrap,
+body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table,
+body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-tbody,
+body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-tr {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-col {
+  display: block !important;
+  width: auto !important;
+  max-width: 72ch !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+  text-align: left !important;
+}
+body[class*="wsite-page-bulletin"] #wsite-content .paragraph,
+body[class*="wsite-page-bulletin"] #wsite-content p {
+  text-align: left !important;
+  line-height: 1.68 !important;
+  font-size: 16px !important;
+}
+body[class*="wsite-page-bulletin"] #wsite-content img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+/* Keep existing styling on the consolidated /bulletin/ landing — only the
+   interior interview pages should pick up the 72ch column; the landing has
+   its own section-nav and grid */
+body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
+  max-width: none !important;
+  padding: 0 !important;
 }
 </style>
 </head>
@@ -520,7 +577,7 @@ body.wsite-page-membership .styled-hr {
 		<div class="wsite-section-content">
 			<div class="container">
 				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue n°7</font></strong></h2>
+					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue nÂ°7</font></strong></h2>
 					<hr class="styled-hr" style="width:100%;"></hr>
 				</div>
 			</div>
@@ -560,7 +617,7 @@ body.wsite-page-membership .styled-hr {
 		<div class="wsite-section-content">
 			<div class="container">
 				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue n°6</font></strong></h2>
+					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue nÂ°6</font></strong></h2>
 					<hr class="styled-hr" style="width:100%;"></hr>
 				</div>
 			</div>
@@ -623,7 +680,7 @@ body.wsite-page-membership .styled-hr {
 		<div class="wsite-section-content">
 			<div class="container">
 				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue n°5</font></strong></h2>
+					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue nÂ°5</font></strong></h2>
 					<hr class="styled-hr" style="width:100%;"></hr>
 				</div>
 			</div>
@@ -671,7 +728,7 @@ body.wsite-page-membership .styled-hr {
 <div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin n&deg;5 (2021)</strong></font><br /><font size="4">edited by George Fejer, Daniel A. Friedman&nbsp;</font><span style="color:rgb(81, 81, 81)">&amp;</span><font size="4"><br />&#8203;Matthieu Koroma</font></div>
 
 <div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin-n-5.pdf" target="_blank">
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf" target="_blank">
 <span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
 </a>
 <div style="height: 10px; overflow: hidden;"></div></div>
@@ -725,7 +782,7 @@ body.wsite-page-membership .styled-hr {
 		<div class="wsite-section-content">
 			<div class="container">
 				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue n°4</font></strong></h2>
+					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue nÂ°4</font></strong></h2>
 					<hr class="styled-hr" style="width:100%;"></hr>
 				</div>
 			</div>
@@ -773,7 +830,7 @@ body.wsite-page-membership .styled-hr {
 <div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin n&deg;4 (2020)</strong></font><br /><font size="4">edited by Martin Fortier, Daniel A. Friedman,<br />&#8203;Matthieu Koroma &amp; Rapha&euml;l Milli&egrave;re</font></div>
 
 <div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin-n-4.pdf" target="_blank">
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf" target="_blank">
 <span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
 </a>
 <div style="height: 10px; overflow: hidden;"></div></div>
@@ -827,7 +884,7 @@ body.wsite-page-membership .styled-hr {
 		<div class="wsite-section-content">
 			<div class="container">
 				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue n°3</font></strong></h2>
+					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue nÂ°3</font></strong></h2>
 					<hr class="styled-hr" style="width:100%;"></hr>
 				</div>
 			</div>
@@ -875,7 +932,7 @@ body.wsite-page-membership .styled-hr {
 <div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin n&deg;3 (2019)</strong></font><br /><font size="4">edited by Martin E. Fortier, Matthieu Koroma &amp; Rojwan F. Lemoine</font></div>
 
 <div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin-3-v-29e-08-2019.pdf" target="_blank">
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf" target="_blank">
 <span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
 </a>
 <div style="height: 10px; overflow: hidden;"></div></div>
@@ -931,7 +988,7 @@ body.wsite-page-membership .styled-hr {
 		<div class="wsite-section-content">
 			<div class="container">
 				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue n°2</font></strong></h2>
+					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue nÂ°2</font></strong></h2>
 					<hr class="styled-hr" style="width:100%;"></hr>
 				</div>
 			</div>
@@ -979,7 +1036,7 @@ body.wsite-page-membership .styled-hr {
 <div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin n&deg;2 (2018)</strong></font><br /><font size="4">edited by Martin Fortier, Matthieu Koroma &amp; Rapha&euml;l Milli&egrave;re</font></div>
 
 <div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin-n-2-2018.pdf" >
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf" >
 <span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
 </a>
 <div style="height: 10px; overflow: hidden;"></div></div>
@@ -1035,7 +1092,7 @@ body.wsite-page-membership .styled-hr {
 		<div class="wsite-section-content">
 			<div class="container">
 				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue n°1</font></strong></h2>
+					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue nÂ°1</font></strong></h2>
 					<hr class="styled-hr" style="width:100%;"></hr>
 				</div>
 			</div>
@@ -1083,7 +1140,7 @@ body.wsite-page-membership .styled-hr {
 <div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin n&deg;1 (2017)</strong></font><br /><font size="4">edited by Martin E. Fortier, R. Fran&ccedil;ois Lemoine &amp; Rapha&euml;l Milli&egrave;re</font></div>
 
 <div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin-n-1.pdf" target="_blank">
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf" target="_blank">
 <span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
 </a>
 <div style="height: 10px; overflow: hidden;"></div></div>
@@ -1322,13 +1379,13 @@ body.wsite-page-membership .styled-hr {
 
     <nav class="section-nav" aria-label="Section navigation">
   <ol>
-  <li><a href="#bulletin-07">Issue n°7</a></li>
-  <li><a href="#bulletin-06">Issue n°6</a></li>
-  <li><a href="#bulletin-05">Issue n°5</a></li>
-  <li><a href="#bulletin-04">Issue n°4</a></li>
-  <li><a href="#bulletin-03">Issue n°3</a></li>
-  <li><a href="#bulletin-02">Issue n°2</a></li>
-  <li><a href="#bulletin-01">Issue n°1</a></li>
+  <li><a href="#bulletin-07">Issue nÂ°7</a></li>
+  <li><a href="#bulletin-06">Issue nÂ°6</a></li>
+  <li><a href="#bulletin-05">Issue nÂ°5</a></li>
+  <li><a href="#bulletin-04">Issue nÂ°4</a></li>
+  <li><a href="#bulletin-03">Issue nÂ°3</a></li>
+  <li><a href="#bulletin-02">Issue nÂ°2</a></li>
+  <li><a href="#bulletin-01">Issue nÂ°1</a></li>
   </ol>
 </nav>
 <script src="/assets/js/pretext-nav-fit.js" defer></script>
