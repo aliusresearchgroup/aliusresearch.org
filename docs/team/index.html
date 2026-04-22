@@ -764,7 +764,118 @@ body.wsite-page-team .team-card {
 body.wsite-page-team #wsite-content > .wsite-section-wrap { display: none !important; }
 body.wsite-page-team #wsite-content .wsite-background,
 body.wsite-page-team #wsite-content .wsite-custom-background { background: transparent !important; }
+
+/* --- Click-to-expand interaction (driven by team-card-expand.js) --- */
+body.wsite-page-team .team-card {
+  cursor: pointer;
+  will-change: transform, opacity;
+  transition: transform 320ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 220ms ease,
+              border-color 180ms ease,
+              box-shadow 220ms ease,
+              padding 280ms ease;
+}
+
+/* Dim + shrink neighbouring cards when any card is expanded */
+body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
+  opacity: 0.38;
+  transform: scale(0.95);
+  pointer-events: none;
+  filter: saturate(0.7);
+}
+
+/* Expanded card: spans full grid row, wider padding, side-by-side layout */
+body.wsite-page-team .team-card--expanded {
+  grid-column: 1 / -1;
+  cursor: default;
+  padding: 32px 36px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: start;
+  border-left-width: 6px;
+  box-shadow: 0 12px 40px -8px rgba(26, 77, 46, 0.25),
+              0 0 0 1px rgba(61, 139, 61, 0.2);
+  transform: none !important;
+  z-index: 2;
+  position: relative;
+}
+body.wsite-page-team .team-card--expanded .team-card__avatar {
+  width: 180px;
+  height: 180px;
+  margin: 0;
+  box-shadow: 0 0 0 4px #3d8b3d, 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+body.wsite-page-team .team-card--coord.team-card--expanded .team-card__avatar {
+  box-shadow: 0 0 0 4px #8fbf4d, 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+body.wsite-page-team .team-card--expanded .team-card__name {
+  font-size: 22px !important;
+  text-align: left !important;
+  margin-bottom: 6px !important;
+}
+body.wsite-page-team .team-card--expanded .team-card__role {
+  font-size: 12px !important;
+  text-align: left !important;
+  margin-bottom: 14px !important;
+}
+body.wsite-page-team .team-card--expanded .team-card__bio {
+  -webkit-line-clamp: unset !important;
+  display: block !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  /* Animate from clamped height to pre-measured expanded height */
+  max-height: var(--expanded-bio-height, 80ex);
+  transition: max-height 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  text-align: left !important;
+}
+body.wsite-page-team .team-card--expanded .team-card__links {
+  justify-content: flex-start;
+  padding-top: 14px;
+  margin-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+body.wsite-page-team .team-card--expanded .team-card__links::before {
+  content: "Esc to close";
+  margin-left: auto;
+  font-size: 11px;
+  color: #7b8c89;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+/* Full-screen backdrop so clicks outside any card collapse (and dims the rest of the page subtly) */
+.team-card-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  z-index: 1;
+  transition: background 220ms ease;
+}
+body.team-card-backdrop--active .team-card-backdrop {
+  background: rgba(15, 26, 17, 0.1);
+  pointer-events: auto;
+}
+
+@media (max-width: 640px) {
+  body.wsite-page-team .team-card--expanded {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 24px;
+  }
+  body.wsite-page-team .team-card--expanded .team-card__avatar { margin: 0 auto; }
+  body.wsite-page-team .team-card--expanded .team-card__name,
+  body.wsite-page-team .team-card--expanded .team-card__role,
+  body.wsite-page-team .team-card--expanded .team-card__bio {
+    text-align: center !important;
+  }
+  body.wsite-page-team .team-card--expanded .team-card__links { justify-content: center; }
+}
 </style>
+<script src="/assets/js/team-card-expand.js" defer></script>
 
 <div class="team-page-title"><h1>The ALIUS Team</h1><p>All members listed alphabetically. <span class="team-legend">Coordinators marked with *</span></p></div>
 <div class="team-grid">
