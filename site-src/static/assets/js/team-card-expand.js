@@ -1,31 +1,29 @@
-/* Team-card click-to-expand using FLIP (First-Last-Invert-Play).
+/* Team-card click-to-expand: GRID-TRACK animation.
  *
- * Goal: the clicked card genuinely occupies 2×2 grid cells (a real square),
- * siblings physically reflow to new grid positions, and every card's
- * motion between old and new positions is animated simultaneously on the
- * same curve. This is a true layout animation, not a cosmetic scale.
+ * Conceptual model (user's words):
+ *   "The boxes are inside a grid. What changes is only the size of the
+ *    boxes in the grid — the grid lines dynamically get bigger or smaller."
  *
- * How FLIP works here:
- *   1. FIRST — capture every .team-card's getBoundingClientRect()
- *   2. Toggle classes so the grid reflows (clicked card becomes 2×2,
- *      siblings relocate)
- *   3. LAST — capture the new rects
- *   4. INVERT — apply transform: translate+scale that puts each card
- *      VISUALLY back at its FIRST position, with transition disabled
- *   5. Force reflow
- *   6. PLAY — remove the transforms with transition enabled; the browser
- *      animates from inverted (FIRST) to identity (LAST) for all cards
- *      simultaneously on the shared 1600ms cubic-bezier
+ * Implementation: CSS can natively animate `grid-template-columns` and
+ * `grid-template-rows`. We compute the clicked card's column + row index
+ * and write an inline grid-template with that column + row weighted up
+ * (more fr) and the other tracks weighted down. The browser smoothly
+ * slides the grid lines; cards sit inside their cells unchanged.
  *
- * Bio un-clamp also animates via max-height (pretext-measured target)
- * on the same curve, so the clicked card's full bio reveals in lockstep
- * with the geometric growth.
+ * Nothing inside any card scales — photos, names, icon buttons all keep
+ * their natural sizes. Bios just have more or less horizontal space to
+ * wrap into, clipped by CSS max-height.
+ *
+ * Pretext: on expand, we read the final (post-transition) width of the
+ * clicked card's cell and measure the bio's natural pixel height at that
+ * width so `--expanded-bio-height` is exact before the animation begins.
  */
 (function () {
   'use strict';
 
   var ANIM_MS = 1600;
-  var EASE = 'cubic-bezier(0.22, 0.61, 0.36, 1)';
+  var EXPANDED_WEIGHT = 2.4;
+  var SHRUNK_WEIGHT = 0.6;
   var state = { expanded: null, measure: null };
 
   function init() {
@@ -34,8 +32,15 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') collapse();
     });
+    window.addEventListener('resize', function () {
+      // Column count may have changed → re-run expand math if something is open
+      if (state.expanded) {
+        var c = state.expanded;
+        collapse(true);
+        expand(c);
+      }
+    }, { passive: true });
 
-    // Best-effort pretext import for precise bio text measurement
     try {
       import(/* @vite-ignore */ 'https://esm.sh/@chenglou/pretext@0.0.4')
         .then(function (mod) {
@@ -76,19 +81,18 @@
            s.fontSize + ' / ' + s.lineHeight + ' ' + s.fontFamily;
   }
 
-  function measureBioHeightAtWidth(card, widthPx) {
-    var bio = card.querySelector('.team-card__bio');
-    if (!bio) return 0;
-    var text = (bio.textContent || '').trim();
-    var cs = getComputedStyle(bio);
+  function measureBioHeightAtWidth(bioEl, widthPx) {
+    if (!bioEl || widthPx <= 0) return 0;
+    var text = (bioEl.textContent || '').trim();
+    var cs = getComputedStyle(bioEl);
     var lineHeight = parseFloat(cs.lineHeight);
     if (!lineHeight || !isFinite(lineHeight)) lineHeight = parseFloat(cs.fontSize) * 1.7;
-    if (state.measure && text && widthPx > 0) {
-      var h = state.measure(text, getComputedFont(bio), widthPx, lineHeight);
-      if (h) return h + 8;
+    if (state.measure && text) {
+      var h = state.measure(text, getComputedFont(bioEl), widthPx, lineHeight);
+      if (h) return h + 10;
     }
-    // Fallback: offscreen clone at the target width
-    var clone = bio.cloneNode(true);
+    // Offscreen fallback
+    var clone = bioEl.cloneNode(true);
     clone.style.cssText = (
       'position:absolute; left:-9999px; top:0; ' +
       'width:' + widthPx + 'px; max-height:none; ' +
@@ -97,7 +101,7 @@
     document.body.appendChild(clone);
     var h2 = clone.scrollHeight;
     document.body.removeChild(clone);
-    return h2 + 8;
+    return h2 + 10;
   }
 
   function onDocClick(e) {
@@ -112,116 +116,101 @@
     }
   }
 
-  function rectsMap(cards) {
-    var m = new Map();
-    for (var i = 0; i < cards.length; i++) m.set(cards[i], cards[i].getBoundingClientRect());
-    return m;
+  function getGridDimensions(grid) {
+    var cs = getComputedStyle(grid);
+    var colTracks = cs.gridTemplateColumns.split(/\s+/).filter(Boolean);
+    var rowTracks = cs.gridTemplateRows.split(/\s+/).filter(Boolean);
+    return { cols: colTracks.length || 1, rows: rowTracks.length || 1 };
   }
 
-  function flipAnimate(cards, firstRects, lastRects) {
-    // INVERT: disable transition, apply inverse transform per card
-    for (var i = 0; i < cards.length; i++) {
-      var c = cards[i];
-      var f = firstRects.get(c), l = lastRects.get(c);
-      if (!f || !l) continue;
-      var dx = f.left - l.left;
-      var dy = f.top - l.top;
-      var sx = l.width === 0 ? 1 : (f.width / l.width);
-      var sy = l.height === 0 ? 1 : (f.height / l.height);
-      // Skip if nothing changed
-      if (Math.abs(dx) < 0.5 && Math.abs(dy) < 0.5 && Math.abs(sx - 1) < 0.001 && Math.abs(sy - 1) < 0.001) {
-        continue;
-      }
-      c.style.transition = 'none';
-      c.style.transformOrigin = 'top left';
-      c.style.transform = 'translate(' + dx + 'px, ' + dy + 'px) scale(' + sx + ', ' + sy + ')';
+  function buildWeightedTemplate(count, highlightIndex) {
+    var parts = [];
+    for (var i = 0; i < count; i++) {
+      parts.push(i === highlightIndex ?
+        'minmax(0, ' + EXPANDED_WEIGHT + 'fr)' :
+        'minmax(0, ' + SHRUNK_WEIGHT + 'fr)'
+      );
     }
-    // Force reflow so the browser records the inverted state as the starting point
-    // eslint-disable-next-line no-unused-expressions
-    cards[0] && cards[0].offsetWidth;
-
-    // PLAY: re-enable transition, remove transform → animates to LAST
-    requestAnimationFrame(function () {
-      for (var j = 0; j < cards.length; j++) {
-        var c2 = cards[j];
-        c2.style.transition = 'transform ' + ANIM_MS + 'ms ' + EASE + ', max-height ' + ANIM_MS + 'ms ' + EASE + ', opacity ' + ANIM_MS + 'ms ease';
-        c2.style.transform = '';
-      }
-    });
-
-    // Clean up inline transition overrides after the animation
-    setTimeout(function () {
-      for (var k = 0; k < cards.length; k++) {
-        cards[k].style.transition = '';
-        cards[k].style.transform = '';
-        cards[k].style.transformOrigin = '';
-      }
-    }, ANIM_MS + 40);
+    return parts.join(' ');
   }
 
   function expand(card) {
     var grid = card.closest('.team-grid');
     if (!grid) return;
     var cards = Array.from(grid.querySelectorAll('.team-card'));
-    var previous = state.expanded;
+    var idx = cards.indexOf(card);
+    if (idx < 0) return;
 
-    // STEP 1 · FIRST — record current positions/sizes
-    var first = rectsMap(cards);
+    var dims = getGridDimensions(grid);
+    if (dims.cols <= 1) {
+      // Single-column (narrow mobile) — accordion via bio max-height only
+      var bioEl1 = card.querySelector('.team-card__bio');
+      if (bioEl1) {
+        var w1 = bioEl1.getBoundingClientRect().width - 4;
+        var h1 = measureBioHeightAtWidth(bioEl1, w1);
+        card.style.setProperty('--expanded-bio-height', h1 + 'px');
+      }
+      if (state.expanded && state.expanded !== card) {
+        state.expanded.classList.remove('team-card--expanded');
+        state.expanded.style.removeProperty('--expanded-bio-height');
+      }
+      card.classList.add('team-card--expanded');
+      grid.classList.add('team-grid--has-expanded');
+      state.expanded = card;
+      return;
+    }
 
-    // STEP 2 · Toggle classes (and uncollapse any previous expand)
-    if (previous && previous !== card) previous.classList.remove('team-card--expanded');
-    card.classList.add('team-card--expanded');
-    grid.classList.add('team-grid--has-expanded');
+    var col = idx % dims.cols;
+    var row = Math.floor(idx / dims.cols);
+    var totalRows = Math.ceil(cards.length / dims.cols);
 
-    // Force a synchronous layout with the new classes applied
-    // eslint-disable-next-line no-unused-expressions
-    grid.offsetWidth;
+    // Estimate the clicked card's final cell width so pretext can measure
+    // the bio wrap at the right width.
+    var gridRect = grid.getBoundingClientRect();
+    var csGrid = getComputedStyle(grid);
+    var gapPx = parseFloat(csGrid.columnGap) || 0;
+    var padL = parseFloat(csGrid.paddingLeft) || 0;
+    var padR = parseFloat(csGrid.paddingRight) || 0;
+    var availableWidth = gridRect.width - padL - padR - (dims.cols - 1) * gapPx;
+    var totalFr = EXPANDED_WEIGHT + (dims.cols - 1) * SHRUNK_WEIGHT;
+    var targetCellWidth = availableWidth * (EXPANDED_WEIGHT / totalFr);
+    // Subtract card padding (from rebuild-team-cards.py: padding: 24px 20px)
+    var targetBioWidth = targetCellWidth - 40;
 
-    // STEP 3 · Now the clicked card has its new (wider) width — pretext-
-    // measure the bio's natural height at this exact width and feed it
-    // into the CSS var so the max-height transition has a real target.
+    // Pre-measure bio height at the target width
     var bioEl = card.querySelector('.team-card__bio');
-    var bioWidth = bioEl ? (bioEl.getBoundingClientRect().width - 2) : 0;
-    if (bioWidth > 0) {
-      var h = measureBioHeightAtWidth(card, bioWidth);
+    if (bioEl) {
+      var h = measureBioHeightAtWidth(bioEl, targetBioWidth);
       card.style.setProperty('--expanded-bio-height', h + 'px');
     }
 
-    // Another layout pass so the LAST rect includes the final bio height
-    // eslint-disable-next-line no-unused-expressions
-    grid.offsetWidth;
+    // Collapse previous card's classes silently
+    if (state.expanded && state.expanded !== card) {
+      state.expanded.classList.remove('team-card--expanded');
+      state.expanded.style.removeProperty('--expanded-bio-height');
+    }
 
-    // STEP 4 · LAST — record new positions/sizes after reflow
-    var last = rectsMap(cards);
-
-    // STEP 5-6 · INVERT + PLAY
-    flipAnimate(cards, first, last);
+    // Write the weighted grid templates — this is the whole animation trigger
+    grid.style.gridTemplateColumns = buildWeightedTemplate(dims.cols, col);
+    grid.style.gridTemplateRows = buildWeightedTemplate(totalRows, row);
+    card.classList.add('team-card--expanded');
+    grid.classList.add('team-grid--has-expanded');
 
     state.expanded = card;
   }
 
-  function collapse() {
+  function collapse(skipState) {
     if (!state.expanded) return;
     var prev = state.expanded;
     var grid = prev.closest('.team-grid');
-    if (!grid) {
-      prev.classList.remove('team-card--expanded');
-      state.expanded = null;
-      return;
+    if (grid) {
+      grid.style.removeProperty('grid-template-columns');
+      grid.style.removeProperty('grid-template-rows');
+      grid.classList.remove('team-grid--has-expanded');
     }
-    var cards = Array.from(grid.querySelectorAll('.team-card'));
-
-    var first = rectsMap(cards);
     prev.classList.remove('team-card--expanded');
-    grid.classList.remove('team-grid--has-expanded');
     prev.style.removeProperty('--expanded-bio-height');
-
-    // eslint-disable-next-line no-unused-expressions
-    grid.offsetWidth;
-    var last = rectsMap(cards);
-    flipAnimate(cards, first, last);
-
-    state.expanded = null;
+    if (!skipState) state.expanded = null;
   }
 
   if (document.readyState === 'loading') {

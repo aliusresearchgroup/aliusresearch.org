@@ -313,14 +313,28 @@ body.wsite-page-team .team-section-heading h2 {
   text-align: left !important;
 }
 
-/* Grid */
+/* Grid — explicit track counts (not auto-fill) so grid-template-columns /
+   grid-template-rows can be natively animated when we emphasise one cell. */
 body.wsite-page-team .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(280px, auto);
   gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
+  transition: grid-template-columns 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              grid-template-rows 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              gap 600ms ease;
+}
+@media (max-width: 1024px) {
+  body.wsite-page-team .team-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  body.wsite-page-team .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
 }
 
 /* --- ALIUS palette (sampled from the leaf logo) ---
@@ -615,41 +629,32 @@ body.wsite-page-team #wsite-content > .wsite-section-wrap { display: none !impor
 body.wsite-page-team #wsite-content .wsite-background,
 body.wsite-page-team #wsite-content .wsite-custom-background { background: transparent !important; }
 
-/* --- Click-to-expand: FLIP-based genuine grid reflow ---
-   Clicked card takes 2x2 grid cells (real layout change → it's a square
-   if rows are equal to columns). Siblings actually reflow around it.
-   JS applies FLIP (First-Last-Invert-Play) inverse transforms so the
-   transition between the two grid states is smooth and synchronized. */
+/* --- Click-to-expand: the GRID LINES move, not the cards themselves ---
+   Cards never scale. Their photos, names, icons, paddings all stay at
+   their natural sizes. What changes is the track sizes of the grid
+   (grid-template-columns / grid-template-rows) — the clicked card's
+   column + row become larger (more fr), other tracks become smaller.
+   CSS animates grid-template-* natively. The bio un-clamps on the
+   same curve so the expanded card fills its now-bigger cell. */
 
 body.wsite-page-team .team-card {
   cursor: pointer;
-  transform-origin: top left;
-  will-change: transform, max-height;
-  /* Base transition for max-height + opacity. FLIP injects its own
-     transform transition inline so it can enable/disable per phase. */
-  transition: transform 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              max-height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
+  transition: border-color 1600ms ease,
+              box-shadow 1600ms ease,
               opacity 1600ms ease,
-              border-color 1600ms ease,
-              box-shadow 1600ms ease;
-}
-
-/* Equal row heights so a 2×2 span produces a symmetrical square
-   (column width ≈ row height). */
-body.wsite-page-team .team-grid {
-  grid-auto-rows: 1fr;
+              max-height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  min-width: 0;  /* allow shrinking inside a narrower column */
 }
 
 body.wsite-page-team .team-card__bio {
   max-height: 10.2em;
   overflow: hidden;
+  transition: max-height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-/* Clicked card: real 2×2 grid occupation + enforced 1:1 aspect ratio */
+/* Clicked card: only cosmetic cues (border, shadow). The actual geometric
+   growth happens at the grid-track level via inline styles from JS. */
 body.wsite-page-team .team-card--expanded {
-  grid-column: span 2;
-  grid-row: span 2;
-  aspect-ratio: 1 / 1;
   z-index: 2;
   border-color: rgba(26, 77, 46, 0.35);
   box-shadow: 0 14px 40px -10px rgba(26, 77, 46, 0.25);
@@ -660,20 +665,11 @@ body.wsite-page-team .team-card--expanded .team-card__bio {
   display: block !important;
 }
 
-/* Siblings: they reflow naturally — FLIP handles the motion. Just a
-   subtle opacity dim as an affordance. */
+/* Siblings dim slightly. Their cells are now narrower/shorter (grid-track
+   animation) — the cards fill their cells naturally, inner elements keep
+   their natural size, clipped bios just show less text. */
 body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
   opacity: 0.7;
-}
-
-@media (max-width: 520px) {
-  /* Two columns won't fit comfortably — fall back to natural single-column
-     accordion: card stays 1×1 in the grid, bio still un-clamps via max-height */
-  body.wsite-page-team .team-card--expanded {
-    grid-column: auto;
-    grid-row: auto;
-    aspect-ratio: auto;
-  }
 }
 </style>
 <script src="/assets/js/team-card-expand.js" defer></script>
