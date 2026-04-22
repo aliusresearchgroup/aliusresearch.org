@@ -151,7 +151,7 @@
     },
     {
         "from": "/bulletin02-ratcliffeinterview-496999-868603-823482-372692.html",
-        "to": "/bulletin/interviews/bulletin02-ratcliffeinterview-496999-868603-823482-372692/",
+        "to": "/bulletin/interviews/bulletin02-ratcliffeinterview/",
         "type": "legacy-html-page"
     },
     {
@@ -276,7 +276,7 @@
     },
     {
         "from": "/bulletin06-dossinterview-532533.html",
-        "to": "/bulletin/interviews/bulletin06-dossinterview-532533/",
+        "to": "/bulletin/",
         "type": "legacy-html-page"
     },
     {
@@ -286,7 +286,7 @@
     },
     {
         "from": "/bulletin06-gonzalez-interview-193094.html",
-        "to": "/bulletin/interviews/bulletin06-gonzalez-interview-193094/",
+        "to": "/bulletin/interviews/bulletin06-gonzalez-interview/",
         "type": "legacy-html-page"
     },
     {
@@ -301,7 +301,7 @@
     },
     {
         "from": "/bulletin06-koroma-podcast-348367.html",
-        "to": "/bulletin/interviews/bulletin06-koroma-podcast-348367/",
+        "to": "/bulletin/interviews/bulletin06-koroma-podcast/",
         "type": "legacy-html-page"
     },
     {
@@ -416,17 +416,17 @@
     },
     {
         "from": "/journal-club-228113.html",
-        "to": "/events/journal-club-228113/",
+        "to": "/journal-club/",
         "type": "legacy-html-page"
     },
     {
         "from": "/journalclub-868968.html",
-        "to": "/events/journalclub-868968/",
+        "to": "/journal-club/",
         "type": "legacy-html-page"
     },
     {
         "from": "/journal-club-995321.html",
-        "to": "/events/journal-club-995321/",
+        "to": "/journal-club/",
         "type": "legacy-html-page"
     },
     {
@@ -626,22 +626,22 @@
     },
     {
         "from": "/team-639772.html",
-        "to": "/about/team/team-639772/",
+        "to": "/team/",
         "type": "legacy-html-page"
     },
     {
         "from": "/team-743740.html",
-        "to": "/about/team/team-743740/",
+        "to": "/team/",
         "type": "legacy-html-page"
     },
     {
         "from": "/team-814948.html",
-        "to": "/about/team/team-814948/",
+        "to": "/team/",
         "type": "legacy-html-page"
     },
     {
         "from": "/team-912849.html",
-        "to": "/about/team/team-912849/",
+        "to": "/team/",
         "type": "legacy-html-page"
     },
     {
@@ -651,27 +651,27 @@
     },
     {
         "from": "/team-955042-710461.html",
-        "to": "/about/team/team-955042-710461/",
+        "to": "/team/",
         "type": "legacy-html-page"
     },
     {
         "from": "/teamtemplate-956529.html",
-        "to": "/pages/teamtemplate-956529/",
+        "to": "/team/",
         "type": "legacy-html-page"
     },
     {
         "from": "/teamtest.html",
-        "to": "/archive/misc/teamtest/",
+        "to": "/team/",
         "type": "legacy-html-page"
     },
     {
         "from": "/teamtest1.html",
-        "to": "/archive/misc/teamtest1/",
+        "to": "/team/",
         "type": "legacy-html-page"
     },
     {
         "from": "/teamtest2.html",
-        "to": "/archive/misc/teamtest2/",
+        "to": "/team/",
         "type": "legacy-html-page"
     },
     {
