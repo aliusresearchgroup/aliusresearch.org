@@ -207,10 +207,18 @@ def classify_link(href: str) -> str:
 
 # ---- card rendering ----
 
-def render_card(m: dict) -> str:
+def slug_name(name: str) -> str:
+    import html as _html
+    plain = _html.unescape(re.sub(r"<[^>]+>", "", name or ""))
+    s = re.sub(r"[^a-z0-9]+", "-", plain.lower()).strip("-")
+    return f"member-{s}" if s else "member"
+
+
+def render_card(m: dict, is_coordinator: bool = False) -> str:
     img = m.get("image") or ""
     name = m.get("name") or ""
     bio = m.get("bio") or ""
+    slug = slug_name(name)
     # Group links by icon type; keep only one per type (dedupe)
     link_by_type: dict[str, str] = {}
     for l in m.get("links") or []:
@@ -220,7 +228,6 @@ def render_card(m: dict) -> str:
         link_by_type.setdefault("email", f'mailto:{m["email"]}')
 
     icons_html = ""
-    # Preferred order
     for key in ("linkedin", "twitter", "scholar", "researchgate", "orcid", "academia", "github", "site", "pdf", "email"):
         if key in link_by_type:
             label, svg = ICON_DEFS[key]
@@ -234,12 +241,54 @@ def render_card(m: dict) -> str:
     if img:
         img_html = f'<div class="team-card__avatar"><img src="{img}" alt="{name}" loading="lazy" decoding="async"></div>'
 
-    return f'''<article class="team-card">
+    coord_badge = ' <span class="team-card__coord" title="Team Coordinator">*</span>' if is_coordinator else ''
+    return f'''<article class="team-card" id="{slug}">
   {img_html}
-  <h3 class="team-card__name">{name}</h3>
+  <h3 class="team-card__name">{name}{coord_badge}</h3>
   <p class="team-card__bio">{bio}</p>
   <div class="team-card__links">{icons_html}</div>
 </article>'''
+
+
+def render_names_index(all_members: list[tuple[str, dict]]) -> str:
+    """Render an alphabetical, multi-column clickable index.
+
+    all_members is a list of (section, member) tuples so we know who's a
+    coordinator. Coordinators get a trailing asterisk.
+    """
+    coord_keys = {
+        re.sub(r"[^a-z0-9]+", "", (m.get("name") or "").lower())
+        for section, m in all_members if section == "Coordinators"
+    }
+    unique: list[dict] = []
+    seen = set()
+    for _section, m in all_members:
+        key = re.sub(r"[^a-z0-9]+", "", (m.get("name") or "").lower())
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        unique.append(m)
+    # Sort by family name (last word, case-insensitive) then first name
+    def sort_key(m):
+        import html as _html
+        name = _html.unescape(re.sub(r"<[^>]+>", "", m.get("name") or ""))
+        parts = name.strip().split()
+        return (parts[-1].lower() if parts else "", name.lower())
+    unique.sort(key=sort_key)
+    items = []
+    for m in unique:
+        name = m.get("name") or ""
+        slug = slug_name(name)
+        key = re.sub(r"[^a-z0-9]+", "", name.lower())
+        star = " *" if key in coord_keys else ""
+        items.append(f'<li><a href="#{slug}">{name}{star}</a></li>')
+    items_html = "\n    ".join(items)
+    return f'''<nav class="team-index" aria-label="Team members">
+  <p class="team-index__legend">* Team Coordinators</p>
+  <ol class="team-index__list">
+    {items_html}
+  </ol>
+</nav>'''
 
 
 CSS = """<style>
@@ -402,6 +451,68 @@ body.wsite-page-team .team-card__icon svg {
   height: 16px;
 }
 
+/* Coordinator asterisk on card name */
+body.wsite-page-team .team-card__coord {
+  color: #7b8c89;
+  font-weight: 500;
+  font-size: 13px;
+  margin-left: 2px;
+}
+
+/* Alphabetical names-index (multi-column) — click to jump to that member's card */
+body.wsite-page-team .team-index {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  padding: 0 24px;
+}
+body.wsite-page-team .team-index__legend {
+  font-size: 12px !important;
+  color: #6b7571 !important;
+  margin: 0 0 12px !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+}
+body.wsite-page-team .team-index__list {
+  columns: 3;
+  column-gap: 32px;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+body.wsite-page-team .team-index__list li {
+  break-inside: avoid;
+  padding: 4px 0;
+  text-align: center;
+  list-style: none !important;
+  margin: 0 !important;
+}
+body.wsite-page-team .team-index__list a {
+  color: #2a3330;
+  text-decoration: none;
+  font-size: 13.5px;
+  line-height: 1.7;
+  transition: color 120ms ease;
+  border-bottom: 1px solid transparent;
+}
+body.wsite-page-team .team-index__list a:hover,
+body.wsite-page-team .team-index__list a:focus-visible {
+  color: #111a18;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+@media (max-width: 720px) {
+  body.wsite-page-team .team-index__list { columns: 2; column-gap: 20px; }
+}
+@media (max-width: 420px) {
+  body.wsite-page-team .team-index__list { columns: 1; }
+}
+
+/* Scroll anchor offset so jumps don't land under sticky bottom nav */
+body.wsite-page-team .team-card {
+  scroll-margin-top: 16px;
+  scroll-margin-bottom: 96px;
+}
+
 @media (max-width: 640px) {
   body.wsite-page-team .team-page-title { margin-top: 32px; padding: 0 16px; }
   body.wsite-page-team .team-page-title h1 { font-size: 24px !important; }
@@ -501,14 +612,18 @@ def build_content() -> str:
     parts: list[str] = []
     parts.append(CSS)
     parts.append('<div class="team-page-title"><h1>The ALIUS Team</h1><p>Coordinators, research members, and colleagues in memoriam.</p></div>')
+
+    # First pass: gather all members per section (dedup by normalized name,
+    # keeping earliest section appearance).
     seen_names: set[str] = set()
+    sections_data: list[tuple[str, str, list[dict]]] = []
+    coord_keys: set[str] = set()
+    all_for_index: list[tuple[str, dict]] = []
     for label, anchor, source_dir in SOURCES:
         mode = "single" if anchor == "in-memoriam" else "members"
         members = parse_source(source_dir, mode=mode)
         if not members:
             continue
-        # Dedupe by normalized name — a person listed as both Coordinator and
-        # Research Member only renders in the first section they appear in.
         deduped = []
         for m in members:
             key = re.sub(r"[^a-z0-9]+", "", (m.get("name") or "").lower())
@@ -516,13 +631,23 @@ def build_content() -> str:
                 continue
             seen_names.add(key)
             deduped.append(m)
-        if not deduped:
-            continue
+            if label == "Coordinators":
+                coord_keys.add(key)
+            all_for_index.append((label, m))
+        sections_data.append((label, anchor, deduped))
+
+    # Alphabetical names index at the top (includes every unique member,
+    # coordinators marked with *; clicking jumps to that member's card).
+    parts.append(render_names_index(all_for_index))
+
+    # Second pass: render the full card grid per section.
+    for label, anchor, deduped in sections_data:
         parts.append(f'<span id="{anchor}" class="team-anchor"></span>')
         parts.append(f'<div class="team-section-heading"><h2>{label}</h2></div>')
         parts.append('<div class="team-grid">')
         for m in deduped:
-            parts.append(render_card(m))
+            key = re.sub(r"[^a-z0-9]+", "", (m.get("name") or "").lower())
+            parts.append(render_card(m, is_coordinator=(key in coord_keys)))
         parts.append('</div>')
     return "\n".join(parts)
 
