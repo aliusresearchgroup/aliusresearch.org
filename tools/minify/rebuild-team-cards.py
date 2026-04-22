@@ -77,6 +77,61 @@ EXTRA_MEMBERS = [
     },
 ]
 
+# ---- tag taxonomy ----
+
+# Ordered list of (tag_label, keywords). A bio is tagged with a label if
+# ANY of its keywords appears (case-insensitive) in the bio text.
+# Keywords are chosen to minimise false positives; broad meta-tags like
+# "consciousness" are skipped because ~everyone on this team is in that
+# general space and a filter that includes everyone is useless.
+TAG_TAXONOMY = [
+    ("Psychedelics",          ["psychedelic", "psychedelics", "psilocybin", "lsd", "ayahuasca",
+                                "ketamine", "mdma", "serotonergic hallucinogen", "5-ht2a"]),
+    ("DMT",                   ["dmt", "dimethyltryptamine", "n,n-dmt", "5-meo-dmt"]),
+    ("Near-death experiences", ["near-death", "near death", "nde", "coma science"]),
+    ("Mystical experiences",  ["mystical", "religious experience", "spiritual", "sacred",
+                                "transcendence", "transcendent", "ego dissolution",
+                                "oceanic boundlessness", "shaman", "shamanism"]),
+    ("Meditation",            ["meditation", "meditative", "mindfulness", "contemplative",
+                                "jhana", "samadhi", "vipassana", "zazen"]),
+    ("Dreams & sleep",        ["dream", "dreaming", "rem sleep", "sleep paralysis",
+                                "hypnagogic", "hypnopompic", "lucid"]),
+    ("Anthropology",          ["anthropolog", "ethnographic", "ethnography", "cultural",
+                                "ritual", "tribal", "indigenous", "neuroanthropolog"]),
+    ("Philosophy",            ["philosoph", "phenomenolog", "metaphysics", "epistemolog"]),
+    ("Neuroscience",          ["neuroscien", "neural", "cortex", "cortical", "brain",
+                                "fmri", "eeg", "meg", "mri", "electrophysiolog",
+                                "neuroimaging", "connectome"]),
+    ("Virtual reality",       ["virtual reality", " vr ", "vr-", "vr/xr", "immersive",
+                                "xr"]),
+    ("Hallucinations",        ["hallucinat", "vision", "visionary", "perceptual alteration"]),
+    ("Psychiatry",            ["psychiatr", "schizophren", "depression", "ptsd",
+                                "depersonali", "derealization"]),
+    ("Computation",           ["computational", "machine learn", "active inference",
+                                "bayesian", "predictive coding", "generative"]),
+    ("Interoception",         ["interocept", "interoceptive", "bodily", "embodied",
+                                "embodiment", "heart-rate"]),
+    ("Art & science",         ["interdisciplinary artist", "art and science",
+                                "generative ai", "neurophenomenolog"]),
+]
+
+
+def tags_for_bio(bio: str, name: str, is_coordinator: bool, is_memoriam: bool) -> list[str]:
+    """Return the list of category labels that apply to this member."""
+    text = " " + (bio or "").lower() + " "
+    hits: list[str] = []
+    for label, keywords in TAG_TAXONOMY:
+        for kw in keywords:
+            if kw.lower() in text:
+                hits.append(label)
+                break
+    if is_coordinator:
+        hits.insert(0, "Coordinators")
+    if is_memoriam:
+        hits.insert(0, "In Memoriam")
+    return hits
+
+
 # ---- helpers ----
 
 def read(path: Path) -> str:
@@ -287,7 +342,7 @@ def obfuscate_email(email: str) -> str:
     return f"{user} [at] {'.'.join(parts[:-1]) if len(parts) > 1 else rest} [dot] {parts[-1] if len(parts) > 1 else ''}".strip()
 
 
-def render_card(m: dict, is_coordinator: bool = False) -> str:
+def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False) -> str:
     img = m.get("image") or ""
     name = m.get("name") or ""
     bio = m.get("bio") or ""
@@ -330,7 +385,13 @@ def render_card(m: dict, is_coordinator: bool = False) -> str:
         if is_coordinator else
         '<p class="team-card__role team-card__role--muted">Research Member</p>'
     )
-    return f'''<article class="team-card{coord_class}" id="{slug}">
+
+    # Tag attribute so the filter can match without text parsing
+    tag_list = tags_for_bio(bio, name, is_coordinator, is_memoriam)
+    tag_slugs = [re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-") for t in tag_list]
+    tags_attr = f' data-tags="{" ".join(tag_slugs)}"' if tag_slugs else ''
+
+    return f'''<article class="team-card{coord_class}" id="{slug}"{tags_attr}>
   {img_html}
   <h3 class="team-card__name">{name}</h3>
   {role_html}
@@ -763,6 +824,9 @@ body.wsite-page-team .team-card {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 100%;             /* fills its grid cell — borders snap at row/col edges */
+  min-height: 320px;
+  box-sizing: border-box;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
   text-shadow: 0 0 2px rgba(26, 77, 46, 0.02);
 }
@@ -1036,6 +1100,61 @@ body.wsite-page-team #wsite-content > .wsite-section-wrap { display: none !impor
 body.wsite-page-team #wsite-content .wsite-background,
 body.wsite-page-team #wsite-content .wsite-custom-background { background: transparent !important; }
 
+/* --- Filter bar (topic pills above the grid) --- */
+body.wsite-page-team .team-filters {
+  max-width: 1200px;
+  margin: 8px auto 0;
+  padding: 12px 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-family: 'Raleway', sans-serif;
+}
+body.wsite-page-team .team-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid rgba(26, 77, 46, 0.2);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2a3330;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0;
+  cursor: pointer;
+  line-height: 1.4;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+body.wsite-page-team .team-filter:hover {
+  border-color: rgba(26, 77, 46, 0.45);
+  background: rgba(143, 191, 77, 0.08);
+}
+body.wsite-page-team .team-filter.is-active {
+  background: #1a4d2e;
+  color: #ffffff;
+  border-color: #1a4d2e;
+}
+body.wsite-page-team .team-filter__count {
+  font-size: 11px;
+  opacity: 0.7;
+  font-variant-numeric: tabular-nums;
+}
+body.wsite-page-team .team-filter.is-active .team-filter__count { opacity: 0.85; }
+body.wsite-page-team .team-filter--all {
+  font-weight: 600;
+}
+
+/* Hidden by active filter */
+body.wsite-page-team .team-card.is-filtered-out {
+  display: none;
+}
+@media (max-width: 640px) {
+  body.wsite-page-team .team-filters { padding: 8px 16px 0; }
+  body.wsite-page-team .team-filter { font-size: 11.5px; padding: 5px 10px; }
+}
+
 /* --- Click-to-expand: the GRID LINES move, not the cards themselves ---
    Cards never scale. Their photos, names, icons, paddings all stay at
    their natural sizes. What changes is the track sizes of the grid
@@ -1080,6 +1199,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 }
 </style>
 <script src="/assets/js/team-card-expand.js" defer></script>
+<script src="/assets/js/team-filter.js" defer></script>
 """
 
 
@@ -1167,7 +1287,7 @@ def build_content() -> str:
 
     parts: list[str] = []
     parts.append(CSS)
-    parts.append('<div class="team-page-title"><h1>The ALIUS Team</h1><p>All members listed alphabetically. <span class="team-legend">Coordinators marked with *</span></p></div>')
+    parts.append('<div class="team-page-title"><h1>The ALIUS Team</h1></div>')
 
     # Gather every unique member from Coordinators + Research Members into one
     # list; flag coordinators so we can mark them inline on their cards.
@@ -1209,11 +1329,42 @@ def build_content() -> str:
         return (parts_[-1].lower() if parts_ else "", name.lower())
     all_members.sort(key=sort_key)
 
-    # Single grid of all members
-    parts.append('<div class="team-grid">')
+    # Collect the set of all tags actually used, for the filter bar
+    tag_usage: dict[str, int] = {}
+    members_with_tags: list[tuple[dict, bool, bool, list[str]]] = []
     for m in all_members:
         key = re.sub(r"[^a-z0-9]+", "", (m.get("name") or "").lower())
-        parts.append(render_card(m, is_coordinator=(key in coord_keys)))
+        is_coord = key in coord_keys
+        tlist = tags_for_bio(m.get("bio") or "", m.get("name") or "", is_coord, False)
+        members_with_tags.append((m, is_coord, False, tlist))
+        for t in tlist:
+            tag_usage[t] = tag_usage.get(t, 0) + 1
+    # Also count Martin Fortier's In Memoriam tag
+    if in_memoriam:
+        mf = in_memoriam[0]
+        mf_tags = tags_for_bio(mf.get("bio") or "", mf.get("name") or "", False, True)
+        for t in mf_tags:
+            tag_usage[t] = tag_usage.get(t, 0) + 1
+
+    # Order: Coordinators first, In Memoriam second, then taxonomy order
+    taxonomy_order = {lbl: i + 2 for i, (lbl, _) in enumerate(TAG_TAXONOMY)}
+    taxonomy_order["Coordinators"] = 0
+    taxonomy_order["In Memoriam"] = 1
+    sorted_tags = sorted(tag_usage.keys(), key=lambda t: taxonomy_order.get(t, 99))
+
+    # Render filter bar
+    parts.append('<div class="team-filters" role="group" aria-label="Filter team members by topic">')
+    parts.append('<button type="button" class="team-filter team-filter--all is-active" data-filter="*">All <span class="team-filter__count">' + str(len(all_members) + (1 if in_memoriam else 0)) + '</span></button>')
+    for tag in sorted_tags:
+        slug = re.sub(r"[^a-z0-9]+", "-", tag.lower()).strip("-")
+        count = tag_usage[tag]
+        parts.append(f'<button type="button" class="team-filter" data-filter="{slug}">{tag} <span class="team-filter__count">{count}</span></button>')
+    parts.append('</div>')
+
+    # Single grid of all members
+    parts.append('<div class="team-grid">')
+    for m, is_coord, _mem, _tags in members_with_tags:
+        parts.append(render_card(m, is_coordinator=is_coord))
     parts.append('</div>')
 
     # In Memoriam section (Martin Fortier) — dedicated bottom segment
