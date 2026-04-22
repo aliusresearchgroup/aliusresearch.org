@@ -18,3 +18,5 @@ site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Lora/*.ttf
 site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Playfair_Display/*.ttf
 site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Montserrat/*.ttf
 site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/EB_Garamond/*.ttf
+internal_documents/
+longpath_scan.cs

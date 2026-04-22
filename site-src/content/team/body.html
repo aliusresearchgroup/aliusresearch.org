@@ -313,25 +313,29 @@ body.wsite-page-team .team-section-heading h2 {
   text-align: left !important;
 }
 
-/* Grid — explicit track counts (not auto-fill) so grid-template-columns /
-   grid-template-rows can be natively animated when we emphasise one cell. */
+/* Grid — explicit track counts + explicit minmax() row heights so that
+   grid-template-columns / grid-template-rows can be natively animated
+   from fr-sized defaults to pixel-sized emphasis when we expand a cell. */
 body.wsite-page-team .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   grid-auto-rows: minmax(280px, auto);
   gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
-  transition: grid-template-columns 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              grid-template-rows 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              gap 600ms ease;
+  transition: grid-template-columns 1800ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              grid-template-rows 1800ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 @media (max-width: 1024px) {
-  body.wsite-page-team .team-grid { grid-template-columns: repeat(3, 1fr); }
+  body.wsite-page-team .team-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 @media (max-width: 700px) {
-  body.wsite-page-team .team-grid { grid-template-columns: repeat(2, 1fr); }
+  body.wsite-page-team .team-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 @media (max-width: 420px) {
   body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
