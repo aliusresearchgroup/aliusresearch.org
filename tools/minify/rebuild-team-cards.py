@@ -195,13 +195,15 @@ def parse_member(wrap: str) -> dict | None:
             email = f"{m2.group(1)}@{m2.group(2)}.{m2.group(3)}"
     if email and email in bio_trimmed:
         bio_trimmed = bio_trimmed.replace(email, "").strip()
-    # Strip obfuscated "user [at] sub [dot] domain [dot] tld" — with any number
-    # of [dot] pieces in the domain (the earlier regex only handled one).
+    # Strip obfuscated "user [at] sub.sub.domain [dot] tld" — allow dots
+    # inside domain labels AND multiple [dot] pieces in the domain.
     bio_trimmed = re.sub(
-        r'[\w._+\-]+\s*\[at\]\s*(?:[\w\-]+\s*\[dot\]\s*)+\w+',
+        r'[\w.+\-]+\s*\[at\]\s*(?:[\w.\-]+\s*\[dot\]\s*)+[\w.\-]+',
         '',
         bio_trimmed,
     ).strip()
+    # Also plain "user@host.tld" addresses that leaked through as literal text
+    bio_trimmed = re.sub(r'\b[\w.+\-]+@[\w.\-]+\.[A-Za-z]{2,}\b', '', bio_trimmed).strip()
     # Catch orphan fragments left when a leading mailto> text got stripped but
     # its visible partial remained (e.g. "neuro [dot] ", "ac [dot] il").
     # Remove any leading "<word> [dot] [<word> [dot] ...]" at the START of the
