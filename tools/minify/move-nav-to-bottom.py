@@ -257,12 +257,22 @@ OLD_NAV_RE = re.compile(
     re.DOTALL | re.IGNORECASE,
 )
 
-# Strip prior bottom navs (idempotency) including the pretext-nav-fit script
+# Strip prior bottom navs (idempotency) including any trailing pretext-nav-fit
+# <script src> tag AND any inline <script>(function()…IntersectionObserver…)</script>
+# block even when multiple copies follow. Looped subst later handles stragglers.
 NEW_NAV_RE = re.compile(
-    r'<nav[^>]*class="section-nav"[^>]*>.*?</nav>\s*'
-    r'(?:<script[^>]*pretext-nav-fit\.js[^>]*></script>\s*)?'
-    r'(?:<script>\(function\(\)[^<]*?</script>\s*)?',
-    re.DOTALL | re.IGNORECASE,
+    r'<nav[^>]*class="section-nav"[^>]*>[\s\S]*?</nav>\s*',
+    re.IGNORECASE,
+)
+# Standalone stripper patterns (used to remove duplicated scripts left behind
+# by earlier script versions before re-inserting the canonical copy).
+STRAY_PRETEXT_SCRIPT_RE = re.compile(
+    r'<script[^>]*\bsrc\s*=\s*["\'][^"\']*pretext-nav-fit\.js[^"\']*["\'][^>]*>\s*</script>\s*',
+    re.IGNORECASE,
+)
+STRAY_IO_IIFE_RE = re.compile(
+    r'<script>\s*\(function\s*\(\)\s*\{[\s\S]*?IntersectionObserver[\s\S]*?\}\)\(\);?\s*</script>\s*',
+    re.IGNORECASE,
 )
 
 # Strip prior style blocks we injected (detect by a stable marker)
@@ -277,6 +287,10 @@ def process_page(path: Path, anchors: list[tuple[str, str]], body_class: str, is
     # Remove prior nav injections (idempotency)
     text = OLD_NAV_RE.sub("", text)
     text = NEW_NAV_RE.sub("", text)
+    # Strip any orphan pretext-nav-fit <script src> tags AND IntersectionObserver
+    # IIFE blocks left by earlier runs (bug: previous regex missed multiple copies)
+    text = STRAY_PRETEXT_SCRIPT_RE.sub("", text)
+    text = STRAY_IO_IIFE_RE.sub("", text)
     text = OLD_STYLE_RE.sub("", text)
 
     # Inject style block
