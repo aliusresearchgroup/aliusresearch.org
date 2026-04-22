@@ -36,6 +36,16 @@ EMPTY_WCUSTOM_RE = re.compile(
     r'<div><div\s+id="\d+"[^>]*class="wcustomhtml"[^>]*>\s*</div></div>\s*',
     re.IGNORECASE | re.DOTALL,
 )
+# 4) Ko-fi iframe widgets
+KOFI_IFRAME_RE = re.compile(
+    r'<iframe\b[^>]*(?:id\s*=\s*["\']kofiframe["\']|src\s*=\s*["\'][^"\']*ko-?fi\.com[^"\']*["\'])[^>]*>\s*</iframe>\s*',
+    re.IGNORECASE | re.DOTALL,
+)
+# 5) wcustomhtml wrappers that contain a Ko-fi iframe (strip the wrapper too)
+KOFI_WRAPPER_RE = re.compile(
+    r'<div\s*>\s*<div\s+id="\d+"[^>]*class="wcustomhtml"[^>]*>\s*<iframe\b[^>]*ko-?fi\.com[^>]*>\s*</iframe>\s*</div>\s*</div>\s*',
+    re.IGNORECASE | re.DOTALL,
+)
 # 4) Double-wrapped empty paragraph wrappers
 EMPTY_PARA_DIV_RE = re.compile(
     r'<div>\s*<div\s+class="paragraph"[^>]*>\s*</div>\s*</div>\s*',
@@ -45,10 +55,12 @@ EMPTY_PARA_DIV_RE = re.compile(
 
 def process(text: str) -> tuple[str, int]:
     count = 0
-    new, n = EXT_SCRIPT_RE.subn("", text); count += n
+    # Strip ko-fi iframe wrappers (wrapper+iframe as one unit) first so we don't
+    # leave orphaned empty wcustomhtml divs behind.
+    new, n = KOFI_WRAPPER_RE.subn("", text); count += n
+    new, n = KOFI_IFRAME_RE.subn("", new); count += n
+    new, n = EXT_SCRIPT_RE.subn("", new); count += n
     new, n = INLINE_SCRIPT_RE.subn("", new); count += n
-    # Only strip empty wrappers if we removed scripts from this file (they
-    # might be pre-existing empty wrappers we'd rather leave alone)
     if count > 0:
         new, _ = EMPTY_WCUSTOM_RE.subn("", new)
     return new, count

@@ -152,5 +152,111 @@ next checkpoint.
 
 ---
 
-*Audit written 2026-04-22 against commit 960a8b0. A second-opinion audit from
-a background agent is in progress; findings will be merged once it returns.*
+## Second-opinion audit (deep crawl, 2026-04-22)
+
+Independent findings from a deeper file-by-file crawl. Numbered A-n to avoid
+collisions with the list above.
+
+### HIGH impact
+
+**A1 · Ko-fi iframes still live in Bulletin** — my earlier purge caught
+`<script src=...ko-fi...>` but not `<iframe id='kofiframe' src='https://ko-fi.com/…'>`.
+Two widgets still render between bulletin issues (lines 388 and 457 of
+`_consolidated/bulletin/body.html`).
+
+**A2 · Each consolidated page bundles the IntersectionObserver
+active-section script 7 times**, observing IDs that only exist on OTHER pages.
+Keep one, scope the selector to the current page.
+
+**A3 · `pretext-nav-fit.js` loaded 3 times per consolidated page** → 3 resize
+listeners, 3 esm.sh fetches. Load once.
+
+**A4 · Team card bios start with orphan email fragments** (`"neuro [dot] "`,
+`"alessio [dot] "`, etc.) in ~11 cards. An HTML sanitiser stripped the
+`<a mailto>` but left its visible text mid-sentence. Trim bio until the first
+capitalised word OR re-extract bios from the original rewritten source.
+
+**A5 · About-page half-linkified** — my regex missed Jackendoff, Baars,
+Marti, Maupertuis, Moreau, Corlett/Frith, Studerus/Gamma, Hobson. It also
+linkified *journal names* instead of paper titles, and double-encoded
+apostrophes (`%26rsquo%3B`). Plus a leftover Weebly `<span>Jac</span><font>kendoff`
+splits the name.
+
+**A6 · Legacy partials still present** — `site-src/partials/nav-desktop.raw.html`
+(1727 lines) and `nav-mobile.raw.html` (342 lines) hold the pre-consolidation
+dropdown tree. Bodies already inline their own nav; these partials are dead
+weight, risk being re-included.
+
+**A7 · Orphan content directories with byte-identical duplicates**:
+`events/journal-club-228113`, `events/journal-club-995321`,
+`events/journalclub-868968` are all byte-identical 9711-line copies of
+`events/journal-club`. Same for bulletin duplicates with long numeric
+suffixes and for `teamtest*`/`teamtemplate-956529`.
+
+**A8 · Broken Weebly newsletter form on `/journal-club/`** — posts to
+`//www.weebly.com/weebly/apps/formSubmit.php` (dead endpoint). Visitors
+think they subscribed; their email goes nowhere.
+
+**A9 · `/journal-club/` and `/events/journal-club/` both build with
+diverging HTML** — SEO dup content. Pick one canonical URL (top nav goes to
+`/journal-club/`) and 301 the other.
+
+### MEDIUM impact
+
+**A10 · Team page’s `.team-section-heading` CSS is defined but never used.**
+Current layout interleaves coordinators alphabetically and relies on a
+legend ("*Coordinators marked with *") that… doesn't render an asterisk on
+the card itself. Either split into coord/member rows or add the asterisk
+inside `.team-card__name`.
+
+**A11 · Dead CSS rules** — `body.wsite-page-team .team-avatar` (old class
+name, replaced by `team-card__avatar`) still styled in every consolidated
+body.html.
+
+**A12 · Three different page-title typographies** — Home uses
+`<h2> + <font size=6>` in Playfair 34 px; About uses Playfair 48 px centered;
+Team uses Raleway 30 px left-aligned dark green. Pick one.
+
+**A13 · 4-colour H2 palette** on consolidated pages — `#156138`,
+`rgb(81,81,81)`, `rgb(123,140,137)`, `#42514c` all compete. Lock to
+`#1a4d2e` / `#3d8b3d` / `#6b7571`.
+
+**A14 · Interior bulletin interview pages render in a ~60% column** inside a
+14-col Weebly table with Gentium justified — worst-readability combo.
+Replace with `<article style="max-width:72ch; margin:0 auto">`.
+
+**A15 · pretext-nav-fit.js dynamically imports from esm.sh** — on strict CSP
+or blocked CDN this silently falls back to the canvas shim. The canvas
+version is fine on its own. Drop the import or self-host pretext.
+
+**A16 · Every page still ships Weebly customer-accounts runtime** — inline
+`_W.CustomerAccounts.RPC` + `main-customer-accounts-site.js`. ~35 KB of
+third-party JS per pageview with a beacon to Weebly on every load. No
+customer/store on this site.
+
+**A17 · `wsite-spacer` divs and `style="height:50px"` noise** — fixed-height
+spacers fighting responsive CSS.
+
+### LOW impact
+
+**A18 · Bulletin nav labels on <380px** — all 7 say "Issue n°X"; drop the
+"Issue" prefix.
+
+**A19 · Home + About + Membership have three different copies of the
+"What is ALIUS" paragraph** — will drift out of sync. Single include via
+a partial.
+
+**A20 · `.team-card__coord` CSS exists but no markup uses the class.**
+
+**A21 · `<h2>` used for non-headings** (newsletter label on journal-club,
+long descriptive paragraph on membership).
+
+**A22 · Mobile hamburger still Weebly-grey** — not themed in ALIUS green.
+
+**A23 · Every page has `<a href=""><img ... sitename logo></a>`** with an
+EMPTY href — clicking reloads the current page. Should be `href="/"`.
+
+---
+
+*First pass written against commit 960a8b0. Agent findings appended
+against commit 22570f3. Fixes shipping in subsequent checkpoints.*
