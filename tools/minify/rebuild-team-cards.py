@@ -1433,6 +1433,7 @@ def build_content() -> str:
 
 def main():
     content_html = build_content()
+    rewritten_out = None
     for fname, shell_path in [
         ("body.html", SHELL_BODY),
         ("original.rewritten.html", SHELL_REWRITTEN),
@@ -1442,6 +1443,19 @@ def main():
         out = _assemble(shell, content_html)
         (TEAM_DIR / fname).write_text(out, encoding="utf-8")
         print(f"  wrote {fname}")
+        if fname == "original.rewritten.html":
+            rewritten_out = out
+
+    # Also emit directly to docs/team/index.html so the rebuild survives
+    # even if the main build-site.ps1 pipeline is mid-restructure and
+    # skips the team page. This is safe: if build-site later rewrites this
+    # file, it'll use the same assembled source.
+    if rewritten_out is not None:
+        docs_team = REPO / "docs" / "team"
+        docs_team.mkdir(parents=True, exist_ok=True)
+        (docs_team / "index.html").write_text(rewritten_out, encoding="utf-8")
+        print("  wrote docs/team/index.html (direct)")
+
 
 if __name__ == "__main__":
     main()

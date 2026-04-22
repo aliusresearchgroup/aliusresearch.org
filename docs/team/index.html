@@ -3,9 +3,11 @@
 	<head>
 		<title>Team - Alius</title>
 
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+		
 		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="/assets/vendor/editmysite/cdn11.editmysite.com/css/sites.css" />
 <link rel="stylesheet" type="text/css" href="/assets/vendor/editmysite/cdn11.editmysite.com/css/old/fancybox.css" />
 <link rel="stylesheet" type="text/css" href="/assets/vendor/editmysite/cdn11.editmysite.com/css/social-icons.css" media="screen,projection" />
@@ -17,7 +19,7 @@
 <link href='/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Playfair_Display/font.css' rel='stylesheet' type='text/css' />
 <link href='/assets/vendor/editmysite/cdn2.editmysite.com/fonts/EB_Garamond/font.css' rel='stylesheet' type='text/css' />
 <link href='/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Montserrat/font.css' rel='stylesheet' type='text/css' />
-
+<link href='/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Raleway/font.css' rel='stylesheet' type='text/css' />
 <style type='text/css'>
 .wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Gentium Basic" !important;}
 #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#515151 !important;}
@@ -78,8 +80,9 @@ var STYLE_PREFIX = 'wsite';
 <script src='/assets/vendor/editmysite/cdn11.editmysite.com/js/jquery-1.8.3.min.js'></script>
 
 <script type="text/javascript" src="/assets/vendor/editmysite/cdn2.editmysite.com/js/lang/en/stl.js"></script>
-<script src="/assets/vendor/editmysite/cdn11.editmysite.com/js/site/main.js"></script><script type="text/javascript"><!--
+<script src="/assets/vendor/editmysite/cdn11.editmysite.com/js/site/main.js"></script><script type="text/javascript" src="/assets/vendor/editmysite/cdn2.editmysite.com/js/lang/en/stl.js"></script><script type="text/javascript"><!--
 	var IS_ARCHIVE = 1;
+	
 	function initFlyouts(){
 		initPublishedFlyoutMenus(
 			[{"id":"107949373199368931","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"997275329911096269","title":"About","url":"about.html","target":"","nav_menu":false,"nonclickable":false},{"id":"714570715415488939","title":"Team","url":"team.html","target":"","nav_menu":false,"nonclickable":false},{"id":"388209027172883656","title":"Bulletin","url":"bulletin.html","target":"","nav_menu":false,"nonclickable":false},{"id":"226786205107534455","title":"Journal Clubs","url":"journal-club.html","target":"","nav_menu":false,"nonclickable":false},{"id":"649956180932632823","title":"Events","url":"events.html","target":"","nav_menu":false,"nonclickable":false},{"id":"662395399792559095","title":"Membership","url":"membership-renewal-894351.html","target":"","nav_menu":false,"nonclickable":false}],
@@ -93,6 +96,8 @@ var STYLE_PREFIX = 'wsite';
 	}
 //-->
 </script>
+		
+		
 	<style>
 /* Site refresh — palette lock (A13) + reading-column (A14) */
 .wsite-page-bulletin #wsite-content h2,
@@ -180,6 +185,7 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 				>
 				Home
 			</a>
+			
 		</li>
 		<li id="pg997275329911096269" class="wsite-menu-item-wrap">
 			<a
@@ -188,6 +194,7 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 				>
 				About
 			</a>
+			
 		</li>
 		<li id="pg714570715415488939" class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
 		<li id="pg388209027172883656" class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
@@ -198,6 +205,7 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 				>
 				Journal Clubs
 			</a>
+			
 		</li>
 		<li id="pg649956180932632823" class="wsite-menu-item-wrap"><a href="/events/" class="wsite-menu-item">Events</a></li>
 		<li id="pg662395399792559095" class="wsite-menu-item-wrap"><a href="/membership/" class="wsite-menu-item">Membership</a></li>
@@ -463,10 +471,10 @@ body.wsite-page-team .team-section-heading h2 {
   text-align: left !important;
 }
 
-/* Grid — static layout, uniform cell sizes; the clicked card animates via
-   GPU-composited `transform: scale()` on top of its static grid cell, so
-   no grid-template reflow happens during the animation (which was the
-   source of jitter). Borders snap because all default cells are uniform. */
+/* Grid — real grid-track animation on click. Columns redistribute width
+   (clicked column widens, others narrow) via grid-template-columns
+   transition, so every card's 4 sides stay locked to its neighbours and
+   boxes visibly resize in unison. */
 body.wsite-page-team .team-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
@@ -475,8 +483,21 @@ body.wsite-page-team .team-grid {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
-  /* Allow the scaled card to render outside its cell without being clipped */
-  overflow: visible;
+  transition: grid-template-columns 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: grid-template-columns;
+}
+@media (max-width: 1024px) {
+  body.wsite-page-team .team-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  body.wsite-page-team .team-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+@media (max-width: 420px) {
+  body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 1024px) {
   body.wsite-page-team .team-grid {
@@ -898,30 +919,23 @@ body.wsite-page-team .team-card.is-filtered-out {
 body.wsite-page-team .team-card {
   cursor: pointer;
   min-width: 0;
-  transform-origin: center center;
-  will-change: transform;
-  transition: transform 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              opacity 1800ms ease,
-              border-color 1800ms ease,
-              box-shadow 1800ms ease;
+  transition: opacity 2400ms ease,
+              border-color 2400ms ease,
+              box-shadow 2400ms ease;
 }
 
-/* Clicked card: GPU-smooth scale up. --expand-scale is JS-set from pretext-
-   computed target square size / current card width. Everything inside
-   scales uniformly (pretext-driven dynamic font scaling — as the user
-   requested). No grid track animation; no layout reflow. */
+/* Clicked card: takes 2 rows (taller) + gets visual emphasis. Its column
+   also widens via the inline grid-template-columns the JS sets on the grid. */
 body.wsite-page-team .team-card--expanded {
-  z-index: 10;
-  transform: scale(var(--expand-scale, 1.6));
+  grid-row: span 2;
+  z-index: 2;
   border-color: rgba(26, 77, 46, 0.45);
-  box-shadow: 0 24px 60px -14px rgba(26, 77, 46, 0.35),
-              0 0 0 1px rgba(61, 139, 61, 0.2);
+  box-shadow: 0 14px 40px -10px rgba(26, 77, 46, 0.28);
 }
 
-/* Non-expanded siblings while any card is expanded: soft recede */
+/* Non-expanded siblings while any card is expanded: soft dim */
 body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
-  opacity: 0.55;
-  filter: saturate(0.75);
+  opacity: 0.65;
 }
 
 /* Siblings dim slightly. Their cells are now narrower/shorter (grid-track
@@ -964,7 +978,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://www.selenatasoy.com" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email" data-email="selen.atasoy [at] psych.ox.ac [dot] uk" title="selen.atasoy [at] psych.ox.ac [dot] uk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip">selen.atasoy [at] psych.ox.ac [dot] uk</span></span></div>
 </article>
 <article class="team-card" id="member-edvard-aviles" data-tags="near-death-experiences philosophy neuroscience hallucinations">
-  <div class="team-card__avatar"><picture><source srcset="/media/images/image-3-2.webp" type="image/webp"><img src="/media/images/image-3-2.png" alt="Edvard Aviles" loading="lazy" decoding="async"></picture></div>
+  <div class="team-card__avatar"><img src="/media/images/image-3-2.png" alt="Edvard Aviles" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Edvard Aviles</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
   <p class="team-card__bio">I am a philosopher and a psychologist interested in the nature of the mind and cognition. I'm currently a Ph.D. student of Philosophy at Cornell University Before that, I did my B.A in psychology and completed two masters, one in neuroscience (UNMSM), and another one in philosophy at Central European University (CEU), where I worked under the supervision of Tim Crane. My areas of interest are the philosophy of mind, philosophy of perception, and epistemology. My work is currently focused on the relationship between perception and imagination and how their link might bear significant consequences for debates about mental representation and con</p>
@@ -1041,7 +1055,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://www.extrospection.eu" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email" data-email="dumas [at] ppsp [dot] team" title="dumas [at] ppsp [dot] team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip">dumas [at] ppsp [dot] team</span></span></div>
 </article>
 <article class="team-card" id="member-david-dupuis" data-tags="psychedelics anthropology hallucinations">
-  <div class="team-card__avatar"><picture><source srcset="/media/images/screen-shot-2018-07-16-at-10-26-47-2.webp" type="image/webp"><img src="/media/images/screen-shot-2018-07-16-at-10-26-47-2.png" alt="David Dupuis" loading="lazy" decoding="async"></picture></div>
+  <div class="team-card__avatar"><img src="/media/images/screen-shot-2018-07-16-at-10-26-47-2.png" alt="David Dupuis" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">David Dupuis</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
   <p class="team-card__bio">I am a Research Fellow at the French Institute of Health and Medical Research (INSERM), affiliated to the Institut de recherche interdisciplinaire sur les enjeux sociaux (IRIS/EHESS, Paris). My research interests lie mainly within the contemporary reconfigurations of the status of so-called “hallucinogenic” (or “psychedelic”) substances and “hallucinatory” experiences. I explore the anthropological, political, clinical and ethical implications of these dynamics within Euro-American societies. My work is based on ethnographic fieldworks conducted since 2008 in Latin America (Peruvian Amazon, Mexico) and Europe (United Kingdom, France).</p>
@@ -1244,7 +1258,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__links"><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email" data-email="francois.tadel [at] posteo [dot] net" title="francois.tadel [at] posteo [dot] net"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip">francois.tadel [at] posteo [dot] net</span></span></div>
 </article>
 <article class="team-card" id="member-enzo-tagliazucchi" data-tags="neuroscience">
-  <div class="team-card__avatar"><picture><source srcset="/media/images/headshot-enzo-2.webp" type="image/webp"><img src="/media/images/headshot-enzo-2.png" alt="Enzo Tagliazucchi" loading="lazy" decoding="async"></picture></div>
+  <div class="team-card__avatar"><img src="/media/images/headshot-enzo-2.png" alt="Enzo Tagliazucchi" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Enzo Tagliazucchi</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
   <p class="team-card__bio">I studied physics and mathematics at the University of Buenos Aires and obtained a PhD in physics at the Goethe University Frankfurt. Currently, I lead the Consciousness, Culture and Complexity Group (www.cocuco.org) at the Buenos Aires University. I am a Professor of Neuroscience at the Favaloro University, and a Marie Curie fellow at the Brain and Spine Institute in Paris. My main interest is the study of human consciousness as embedded within society and culture. The members of my research group represent different disciplines, including physics, engineering, biochemistry, psychology, computer science and ethnobotany. Our ongoing projects</p>
@@ -1265,6 +1279,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <p class="memoriam__role">Co-Founder of ALIUS (2016) · 1990–2020</p>
 
   <div class="memoriam__hero memoriam__hero--no-photo">
+    
     <div class="memoriam__lede">
       <p>On April 11th, 2020, Martin Fortier tragically passed away after a long and harrowing battle with cancer. He was thirty years old. We mourn the loss of a wonderful friend and a brilliant colleague, gone far too soon to realize his extraordinary potential despite his many precocious achievements.</p>
       <p><a class="memoriam__primary" href="/bulletin/interviews/bulletin04-martintribute/">Read ALIUS' full scientific tribute to the work of Martin Fortier →</a></p>
@@ -1363,6 +1378,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 				>
 				Home
 			</a>
+			
 		</li>
 		<li id="pg997275329911096269" class="wsite-menu-item-wrap">
 			<a
@@ -1371,6 +1387,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 				>
 				About
 			</a>
+			
 		</li>
 		<li id="pg714570715415488939" class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
 		<li id="pg388209027172883656" class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
@@ -1381,6 +1398,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 				>
 				Journal Clubs
 			</a>
+			
 		</li>
 		<li id="pg649956180932632823" class="wsite-menu-item-wrap"><a href="/events/" class="wsite-menu-item">Events</a></li>
 		<li id="pg662395399792559095" class="wsite-menu-item-wrap"><a href="/membership/" class="wsite-menu-item">Membership</a></li>
@@ -1389,6 +1407,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 	</div>
 
 </div>
+
 
 <script language="javascript" src="/assets/vendor/weebly-site/files/theme/files/plugins.js"></script>
 <script language="javascript" src="/assets/vendor/weebly-site/files/theme/files/custom.js"></script>
