@@ -32,6 +32,45 @@ PATTERNS = [
         r'<script\b(?![^>]*src=)[^>]*>\s*function\s+initCustomerAccountsModels\s*\(\)\s*\{.*?</script>\s*',
         re.IGNORECASE | re.DOTALL,
     ), ""),
+    # A16 · Inline _W.CustomerAccounts.RPC setup blobs (`<script> (function()
+    # { _W.setup_rpc({...}); _W.setup_model_rpc({...}) })(); </script>` and
+    # similar). These were the JSON payloads feeding the customer-accounts
+    # runtime we already removed.
+    (re.compile(
+        r'<script\b(?![^>]*src=)[^>]*>\s*\(function\s*\(\)\s*\{\s*_W\.setup_rpc\b[\s\S]*?</script>\s*',
+        re.IGNORECASE,
+    ), ""),
+    # A16 · Store-config blobs: <script>_W = _W || {}; _W.customerLocale = …;
+    #                                   com_currentSite = "…"; com_userID = "…";</script>
+    (re.compile(
+        r'<script\b(?![^>]*src=)[^>]*>\s*_W\s*=\s*_W\s*\|\|\s*\{\};[\s\S]*?com_userID\s*=\s*"[^"]*";?\s*</script>\s*',
+        re.IGNORECASE,
+    ), ""),
+    # A16 · The trivial `<script> _W = _W || {}; _W.securePrefix='UNSET';</script>`
+    (re.compile(
+        r'<script\b(?![^>]*src=)[^>]*>\s*_W\s*=\s*_W\s*\|\|\s*\{\};\s*_W\.securePrefix\s*=\s*["\'][^"\']*["\']\s*;\s*</script>\s*',
+        re.IGNORECASE,
+    ), ""),
+    # A16 · Pair of Weebly globals sometimes on their own line:
+    # `<script> _W.themePlugins = [];</script>` and `_W.recaptchaUrl = …`
+    (re.compile(
+        r'<script\b(?![^>]*src=)[^>]*>\s*_W\.themePlugins\s*=\s*\[\];\s*</script>\s*',
+        re.IGNORECASE,
+    ), ""),
+    (re.compile(
+        r'<script\b(?![^>]*src=)[^>]*>\s*_W\.recaptchaUrl\s*=\s*["\'][^"\']*["\']\s*;\s*</script>\s*',
+        re.IGNORECASE,
+    ), ""),
+    # A16 · `<script>_W.relinquish && _W.relinquish()</script>`
+    (re.compile(
+        r'<script\b(?![^>]*src=)[^>]*>\s*_W\.relinquish\s*&&\s*_W\.relinquish\(\)\s*;?\s*</script>\s*',
+        re.IGNORECASE,
+    ), ""),
+    # A16 · Remaining `<script>_W.configDomain = "www.weebly.com";</script>`
+    (re.compile(
+        r'<script\b(?![^>]*src=)[^>]*>\s*_W\.configDomain\s*=\s*["\']www\.weebly\.com["\']\s*;\s*</script>\s*',
+        re.IGNORECASE,
+    ), ""),
     # Empty sitename href — <a href=""><img ... 1477332210 ..>
     (re.compile(
         r'<a\s+href\s*=\s*""\s*>(\s*<img[^>]*1477332210[^>]*>\s*)</a>',
