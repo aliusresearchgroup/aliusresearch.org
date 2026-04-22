@@ -340,58 +340,51 @@ def render_card(m: dict, is_coordinator: bool = False) -> str:
 
 
 def render_memoriam(m: dict) -> str:
-    """Dedicated In Memoriam section for Martin Fortier.
-    Clean two-column layout on desktop, stacked on mobile, linking to the
-    full scientific tribute on the bulletin.
+    """Full-width dedicated In Memoriam section for Martin Fortier at the
+    bottom of /team/. Pulls from the original tribute text to give him
+    a proper page-sized memorial rather than a single card.
     """
     img = m.get("image") or ""
-    # Curated copy (stable, not parsed — the auto-parsed text looked bad).
-    tribute_copy = (
-        'On April 11th, 2020, Martin Fortier — Co-Founder of ALIUS in 2016 — '
-        'passed away after a long battle with cancer. He was thirty years old. '
-        'ALIUS continues to honour his contributions to the scientific study '
-        'of consciousness and the cultural anthropology of hallucinogenic '
-        'experience.'
-    )
-    tribute_link = "/bulletin/interviews/bulletin04-martintribute/"
-    img_html = (
-        f'<div class="memoriam__photo"><img src="{img}" alt="Martin Fortier" loading="lazy" decoding="async"></div>'
-        if img else ''
-    )
-    # Collect up to 3 external reference links
-    ref_links_html = ""
-    seen_ref = set()
-    for l in (m.get("links") or [])[:6]:
-        href = l.get("href") or ""
-        txt = (l.get("text") or "").strip()
-        if not href or href in seen_ref:
-            continue
-        if "aliusresearch.org" in href or href.startswith("#"):
-            continue
-        seen_ref.add(href)
-        if not txt or len(txt) > 60:
-            # Use domain as fallback label
-            from urllib.parse import urlparse
-            txt = urlparse(href).netloc.replace("www.", "") or "Reference"
-        ref_links_html += f'<li><a href="{href}" target="_blank" rel="noopener">{txt}</a></li>'
-        if ref_links_html.count("<li>") >= 3:
-            break
-    refs_block = (
-        f'<ul class="memoriam__refs">{ref_links_html}</ul>' if ref_links_html else ''
-    )
+
     return f'''<section class="memoriam" id="martinfortier" aria-labelledby="memoriam-heading">
-  <div class="memoriam__inner">
-    {img_html}
-    <div class="memoriam__body">
-      <p class="memoriam__eyebrow">In Memoriam</p>
-      <h2 class="memoriam__name" id="memoriam-heading">Martin Fortier</h2>
-      <p class="memoriam__role">Co-Founder of ALIUS (2016) · 1990–2020</p>
-      <p class="memoriam__text">{tribute_copy}</p>
-      <div class="memoriam__cta">
-        <a class="memoriam__primary" href="{tribute_link}">Read the scientific tribute →</a>
-      </div>
-      {refs_block}
+  <div class="memoriam__divider"></div>
+  <p class="memoriam__eyebrow">In Memoriam</p>
+  <h2 class="memoriam__name" id="memoriam-heading">Martin Fortier</h2>
+  <p class="memoriam__role">Co-Founder of ALIUS (2016) · 1990–2020</p>
+
+  <div class="memoriam__hero">
+    <div class="memoriam__photo"><img src="{img}" alt="Martin Fortier" loading="lazy" decoding="async"></div>
+    <div class="memoriam__lede">
+      <p>On April 11th, 2020, Martin Fortier tragically passed away after a long and harrowing battle with cancer. He was thirty years old. We mourn the loss of a wonderful friend and a brilliant colleague, gone far too soon to realize his extraordinary potential despite his many precocious achievements.</p>
+      <p><a class="memoriam__primary" href="/bulletin/interviews/bulletin04-martintribute/">Read ALIUS' full scientific tribute to the work of Martin Fortier →</a></p>
     </div>
+  </div>
+
+  <div class="memoriam__col">
+    <h3 class="memoriam__subhead">The Neuroanthropology of Hallucinogenic Experiences</h3>
+    <p>Martin's research sat at the intersection of philosophy of mind, cognitive anthropology and the cognitive science of religion. He argued that the phenomenology of so-called psychedelic states could not be understood through nativist neuropharmacology alone and that cultural priors, ritual context, expectation and attentional scaffolding shaped the experience in deep and tractable ways. His preferred term was <em>serotonergic hallucinogen</em> rather than "psychedelic" — a deliberately non-commital label designed to keep experimental work free of 20th-century counter-cultural framing.</p>
+    <p>He developed a dimensional model of altered states organized around attention, somatosensory integration and cultural priors, and he was a relentless reader — capable of synthesising neuroscience, Tibetan Buddhist phenomenology, cognitive science of religion and French-tradition philosophy of mind in a single argument. He believed ALIUS should be a space where philosophers, anthropologists and neuroscientists argued with each other as peers.</p>
+  </div>
+
+  <div class="memoriam__col">
+    <h3 class="memoriam__subhead">Bulletin interviews co-edited by Martin</h3>
+    <p>Martin co-founded and edited the ALIUS Bulletin, leading many of its landmark interviews. A selection of his contributions:</p>
+    <ul class="memoriam__works">
+      <li>Tanya Luhrmann — <em>The anthropology of mind: exploring unusual sensations and spiritual experiences across cultures</em>.</li>
+      <li>Robin Carhart-Harris — <em>Consciousness and psychedelics</em> (with Raphaël Millière).</li>
+      <li>Karl Friston — <em>Of woodlice and men: a Bayesian account of cognition, life and consciousness</em> (with Daniel A. Friedman).</li>
+      <li>Karl Friston — <em>Am I autistic? An intellectual autobiography</em>.</li>
+      <li>Ann Taves — <em>Conceptual, anthropological and cognitive issues surrounding religious experience</em> (with Maddalena Canna).</li>
+    </ul>
+  </div>
+
+  <div class="memoriam__col memoriam__tribute">
+    <h3 class="memoriam__subhead">A personal tribute</h3>
+    <blockquote>
+      <p>It is with grief and sorrow that I share this post, in remembrance of Martin Fortier — one of the dearest friends and contributors within our scientific community. His passing came too soon and will have left a deep absence in our hearts. I derived a deep sense of belonging to the academic community by knowing Martin, and rarely have I encountered somebody so generous with his knowledge, so willing to collaborate across disciplines, so dedicated to a vision of science as a societal project.</p>
+      <p>Martin's openness to collaborate with other people served as a role model to value science as a societal project — in contrast to the publish-or-perish mentality ripe with instances of appropriation and intellectual territoriality. He sought out conversations; he disagreed well; he left every room more curious than he found it.</p>
+      <footer>— George Fejer, on behalf of ALIUS</footer>
+    </blockquote>
   </div>
 </section>'''
 
@@ -514,27 +507,63 @@ body.wsite-page-team .team-names-nav a {
   font-weight: 500;
 }
 
-/* In Memoriam — dedicated bottom segment for Martin Fortier */
+/* In Memoriam — dedicated full-page segment for Martin Fortier */
 body.wsite-page-team .memoriam {
   max-width: 960px;
-  margin: 72px auto 40px;
-  padding: 32px 24px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  scroll-margin-top: 16px;
-  scroll-margin-bottom: 96px;
+  margin: 96px auto 64px;
+  padding: 0 24px;
+  scroll-margin-top: 24px;
+  scroll-margin-bottom: 120px;
 }
-body.wsite-page-team .memoriam__inner {
+body.wsite-page-team .memoriam__divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(26, 77, 46, 0.25), transparent);
+  margin: 0 auto 48px;
+  max-width: 320px;
+}
+body.wsite-page-team .memoriam__eyebrow {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: #7b8c89 !important;
+  margin: 0 0 8px !important;
+  text-align: center !important;
+}
+body.wsite-page-team .memoriam__name {
+  font-size: 38px !important;
+  font-weight: 700 !important;
+  color: #1a4d2e !important;
+  margin: 0 0 4px !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+  text-align: center !important;
+  line-height: 1.1 !important;
+}
+body.wsite-page-team .memoriam__role {
+  font-size: 14px !important;
+  color: #6b7571 !important;
+  margin: 0 0 48px !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+}
+
+/* Hero block with photo + opening tribute */
+body.wsite-page-team .memoriam__hero {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 32px;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
   align-items: start;
+  margin: 0 auto 56px;
+  max-width: 820px;
 }
 body.wsite-page-team .memoriam__photo {
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   overflow: hidden;
   background: #f2f4f3;
+  box-shadow: 0 0 0 4px #8fbf4d, 0 10px 30px rgba(26, 77, 46, 0.15);
 }
 body.wsite-page-team .memoriam__photo img {
   width: 100%;
@@ -545,86 +574,111 @@ body.wsite-page-team .memoriam__photo img {
   max-width: none !important;
   border-radius: 50%;
 }
-body.wsite-page-team .memoriam__eyebrow {
-  font-size: 11px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.12em !important;
-  text-transform: uppercase !important;
-  color: #7b8c89 !important;
-  margin: 0 0 4px !important;
-}
-body.wsite-page-team .memoriam__name {
-  font-size: 26px !important;
-  font-weight: 600 !important;
+body.wsite-page-team .memoriam__lede p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
   color: #1f2826 !important;
-  margin: 0 0 4px !important;
-  letter-spacing: -0.01em !important;
-  text-transform: none !important;
+  margin: 0 0 18px !important;
   text-align: left !important;
 }
-body.wsite-page-team .memoriam__role {
+body.wsite-page-team .memoriam__primary {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #3d8b3d;
+  border-radius: 6px;
+  color: #1a4d2e !important;
+  text-decoration: none !important;
   font-size: 13px !important;
-  color: #6b7571 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+  transition: background 120ms ease, color 120ms ease;
+}
+body.wsite-page-team .memoriam__primary:hover {
+  background: #3d8b3d;
+  color: #ffffff !important;
+}
+
+/* Body columns under the hero */
+body.wsite-page-team .memoriam__col {
+  max-width: 68ch;
+  margin: 0 auto 40px;
+}
+body.wsite-page-team .memoriam__subhead {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #1a4d2e !important;
+  margin: 0 0 12px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+body.wsite-page-team .memoriam__col p {
+  font-size: 15px !important;
+  line-height: 1.72 !important;
+  color: #2a3330 !important;
   margin: 0 0 14px !important;
+  text-align: left !important;
   font-weight: 400 !important;
 }
-body.wsite-page-team .memoriam__text {
-  font-size: 14px !important;
+body.wsite-page-team .memoriam__works {
+  list-style: disc !important;
+  padding-left: 24px !important;
+  margin: 0 !important;
+}
+body.wsite-page-team .memoriam__works li {
+  font-size: 14.5px !important;
   line-height: 1.65 !important;
   color: #2a3330 !important;
-  margin: 0 0 18px !important;
-  font-weight: 400 !important;
-  max-width: 62ch;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  list-style: disc !important;
 }
-body.wsite-page-team .memoriam__cta a {
-  display: inline-block;
-  padding: 8px 14px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+body.wsite-page-team .memoriam__works em {
+  color: #1a4d2e;
+  font-style: italic;
+}
+
+/* Personal tribute — blockquote */
+body.wsite-page-team .memoriam__tribute {
+  background: rgba(143, 191, 77, 0.06);
+  border-left: 3px solid #8fbf4d;
   border-radius: 6px;
-  color: #1f2826;
-  text-decoration: none;
+  padding: 28px 32px;
+  max-width: 68ch;
+}
+body.wsite-page-team .memoriam__tribute .memoriam__subhead {
+  margin-top: 0 !important;
+}
+body.wsite-page-team .memoriam__tribute blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body.wsite-page-team .memoriam__tribute blockquote p {
+  font-style: italic;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: #2a3330 !important;
+  margin: 0 0 14px !important;
+}
+body.wsite-page-team .memoriam__tribute footer {
   font-size: 13px;
-  font-weight: 500;
-  transition: background 120ms ease, border-color 120ms ease;
-}
-body.wsite-page-team .memoriam__cta a:hover,
-body.wsite-page-team .memoriam__cta a:focus-visible {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.25);
-  outline: none;
-}
-body.wsite-page-team .memoriam__refs {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 16px 0 0 !important;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 16px;
-}
-body.wsite-page-team .memoriam__refs li {
-  padding: 0 !important;
-  margin: 0 !important;
-  list-style: none !important;
-}
-body.wsite-page-team .memoriam__refs a {
-  font-size: 12px;
   color: #6b7571;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  padding-bottom: 1px;
+  margin-top: 8px;
+  font-style: normal;
 }
-body.wsite-page-team .memoriam__refs a:hover {
-  color: #1f2826;
-  border-bottom-color: rgba(0, 0, 0, 0.3);
-}
-@media (max-width: 640px) {
-  body.wsite-page-team .memoriam { padding: 24px 16px; margin-top: 48px; }
-  body.wsite-page-team .memoriam__inner { grid-template-columns: 1fr; gap: 20px; justify-items: center; text-align: center; }
-  body.wsite-page-team .memoriam__name,
-  body.wsite-page-team .memoriam__text,
-  body.wsite-page-team .memoriam__role,
-  body.wsite-page-team .memoriam__eyebrow { text-align: center !important; }
-  body.wsite-page-team .memoriam__photo { width: 140px; height: 140px; }
+
+@media (max-width: 700px) {
+  body.wsite-page-team .memoriam { margin: 56px auto 48px; padding: 0 16px; }
+  body.wsite-page-team .memoriam__name { font-size: 30px !important; }
+  body.wsite-page-team .memoriam__hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 24px;
+  }
+  body.wsite-page-team .memoriam__photo { width: 180px; height: 180px; }
+  body.wsite-page-team .memoriam__lede p { text-align: left !important; }
+  body.wsite-page-team .memoriam__tribute { padding: 22px 20px; }
 }
 
 /* Section break (Coordinators / Research Members / In Memoriam) */
