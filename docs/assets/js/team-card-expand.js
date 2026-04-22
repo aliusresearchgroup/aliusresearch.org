@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  var ANIM_MS = 900;
+  var ANIM_MS = 1600;
   var state = { expanded: null, measure: null };
 
   function init() {
