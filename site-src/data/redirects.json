@@ -36,7 +36,7 @@
     },
     {
         "from": "/anima.html",
-        "to": "/research/projects/anima/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -316,7 +316,7 @@
     },
     {
         "from": "/cardiac_sleep.html",
-        "to": "/research/projects/cardiac_sleep/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -336,22 +336,22 @@
     },
     {
         "from": "/commentaries.html",
-        "to": "/research/commentaries/commentaries/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/commentaries2.html",
-        "to": "/research/commentaries/commentaries2/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/cultural-shaping-of-consciousness.html",
-        "to": "/research/projects/cultural-shaping-of-consciousness/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/depersonalisation.html",
-        "to": "/research/projects/depersonalisation/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -441,7 +441,7 @@
     },
     {
         "from": "/mapping-dmt.html",
-        "to": "/research/projects/mapping-dmt/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -461,7 +461,7 @@
     },
     {
         "from": "/meditation-psychedelics-self.html",
-        "to": "/research/projects/meditation-psychedelics-self/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -496,7 +496,7 @@
     },
     {
         "from": "/nichols-nichols-endogenous-dmt.html",
-        "to": "/research/projects/nichols-nichols-endogenous-dmt/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -506,12 +506,12 @@
     },
     {
         "from": "/peripersonal.html",
-        "to": "/research/projects/peripersonal/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/physiopheno.html",
-        "to": "/research/projects/physiopheno/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -536,47 +536,47 @@
     },
     {
         "from": "/projects.html",
-        "to": "/research/projects/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/psychedelic-pharmacology.html",
-        "to": "/research/projects/psychedelic-pharmacology/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/psychedelics-challenging-experiences.html",
-        "to": "/research/projects/psychedelics-challenging-experiences/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/psychedelics-extrended-difficulties.html",
-        "to": "/research/projects/psychedelics-extrended-difficulties/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/psychedelic-therapy.html",
-        "to": "/research/projects/psychedelic-therapy/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/qualius.html",
-        "to": "/events/",
+        "to": "/events/#assc-satellite",
         "type": "legacy-html-page"
     },
     {
         "from": "/qualius-program.html",
-        "to": "/events/",
+        "to": "/events/#program",
         "type": "legacy-html-page"
     },
     {
         "from": "/research.html",
-        "to": "/research/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
         "from": "/research1.html",
-        "to": "/research/research1/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -591,7 +591,7 @@
     },
     {
         "from": "/self-other.html",
-        "to": "/research/projects/self-other/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -601,7 +601,7 @@
     },
     {
         "from": "/somatic-cultures-ad-consciousness.html",
-        "to": "/research/projects/somatic-cultures-ad-consciousness/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -611,7 +611,7 @@
     },
     {
         "from": "/tagliazucchi_effects_psychedelics.html",
-        "to": "/research/projects/tagliazucchi_effects_psychedelics/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -676,7 +676,7 @@
     },
     {
         "from": "/torus.html",
-        "to": "/research/projects/torus/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -686,7 +686,7 @@
     },
     {
         "from": "/trauma_under_psychedelics.html",
-        "to": "/research/projects/trauma_under_psychedelics/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -701,7 +701,7 @@
     },
     {
         "from": "/viscereality.html",
-        "to": "/research/projects/viscereality/",
+        "to": "/",
         "type": "legacy-html-page"
     },
     {
@@ -781,12 +781,12 @@
     },
     {
         "from": "/research/projects/qualius/",
-        "to": "/events/",
+        "to": "/events/#assc-satellite",
         "type": "legacy-html-page"
     },
     {
         "from": "/research/projects/qualius-program/",
-        "to": "/events/",
+        "to": "/events/#program",
         "type": "legacy-html-page"
     },
     {
@@ -823,5 +823,125 @@
         "from": "/team/martinfortier/",
         "to": "/team/#martinfortier",
         "type": "anchor-shortcut"
+    },
+    {
+        "from": "/research/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/research1/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/anima/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/cardiac_sleep/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/commentaries/commentaries/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/commentaries/commentaries2/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/cultural-shaping-of-consciousness/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/depersonalisation/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/mapping-dmt/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/meditation-psychedelics-self/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/nichols-nichols-endogenous-dmt/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/peripersonal/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/physiopheno/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/psychedelic-pharmacology/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/psychedelics-challenging-experiences/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/psychedelics-extrended-difficulties/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/psychedelic-therapy/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/self-other/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/somatic-cultures-ad-consciousness/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/tagliazucchi_effects_psychedelics/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/torus/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/trauma_under_psychedelics/",
+        "to": "/",
+        "type": "archived-research-canonical"
+    },
+    {
+        "from": "/research/projects/viscereality/",
+        "to": "/",
+        "type": "archived-research-canonical"
     }
 ]
