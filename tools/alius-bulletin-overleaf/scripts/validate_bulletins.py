@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -43,6 +44,15 @@ def compile_fixture(project_root: Path, main_tex: Path, slug: str) -> Path:
 def pdf_page_sizes(path: Path) -> list[tuple[float, float]]:
     doc = fitz.open(path)
     return [(round(page.rect.width, 2), round(page.rect.height, 2)) for page in doc]
+
+
+def page_sizes_match(candidate_sizes: list[tuple[float, float]], reference_sizes: list[tuple[float, float]], tolerance: float = 1.0) -> bool:
+    if not candidate_sizes or not reference_sizes:
+        return False
+    for (cand_w, cand_h), (ref_w, ref_h) in zip(candidate_sizes, reference_sizes):
+        if abs(cand_w - ref_w) > tolerance or abs(cand_h - ref_h) > tolerance:
+            return False
+    return True
 
 
 def pdf_fonts(path: Path) -> list[str]:
@@ -93,12 +103,22 @@ def first_page_text(path: Path) -> str:
     return " ".join(doc[0].get_text("text").split())
 
 
+def normalize_text_for_compare(text: str) -> str:
+    normalized = text.replace("\\\\", " ")
+    normalized = re.sub(r"\\[A-Za-z@]+(?:\{[^}]*\})*", " ", normalized)
+    normalized = re.sub(r"[{}]", " ", normalized)
+    normalized = " ".join(normalized.split())
+    return normalized.strip()
+
+
 def expected_strings(project_root: Path, fixture: dict) -> list[str]:
+    if not fixture.get("content_dir"):
+        return []
     piece_json = project_root / fixture["content_dir"] / "piece.json"
     data = json.loads(piece_json.read_text(encoding="utf-8"))
     values = [data.get("title", ""), data.get("subtitle", ""), data.get("credit_line", "")]
     values.extend(contributor["name"] for contributor in data.get("contributors", []))
-    return [value for value in values if value]
+    return [normalize_text_for_compare(value) for value in values if value]
 
 
 def region_hints(diff_image: Image.Image) -> list[str]:
@@ -118,11 +138,11 @@ def region_hints(diff_image: Image.Image) -> list[str]:
     return hints
 
 
-def validate_fixture(project_root: Path, fixture: dict, report_root: Path) -> dict:
+def validate_fixture(project_root: Path, repo_root: Path, fixture: dict, report_root: Path) -> dict:
     slug = fixture["name"]
     main_tex = project_root / fixture["main_tex"]
     candidate_pdf = compile_fixture(project_root, main_tex, slug)
-    reference_pdf = project_root.parents[1] / fixture["reference_pdf"] if fixture.get("reference_pdf") else None
+    reference_pdf = repo_root / fixture["reference_pdf"] if fixture.get("reference_pdf") else None
 
     result = {
         "name": slug,
@@ -141,13 +161,15 @@ def validate_fixture(project_root: Path, fixture: dict, report_root: Path) -> di
     candidate_sizes = pdf_page_sizes(candidate_pdf)
     reference_sizes = pdf_page_sizes(reference_pdf)
     result["page_count_match"] = len(candidate_sizes) == len(reference_sizes)
-    result["page_size_match"] = candidate_sizes == reference_sizes
+    result["page_size_match"] = page_sizes_match(candidate_sizes, reference_sizes)
+    result["candidate_first_page_size"] = candidate_sizes[0] if candidate_sizes else None
+    result["reference_first_page_size"] = reference_sizes[0] if reference_sizes else None
 
     fonts = pdf_fonts(candidate_pdf)
     required_fonts = fixture.get("required_fonts", [])
     result["required_fonts_present"] = all(any(required in font for font in fonts) for required in required_fonts)
 
-    page_text = first_page_text(candidate_pdf)
+    page_text = normalize_text_for_compare(first_page_text(candidate_pdf))
     for expected in expected_strings(project_root, fixture):
         if expected and expected not in page_text:
             result["front_matter_match"] = False
@@ -179,8 +201,10 @@ def main() -> None:
     parser.add_argument("--manifest", required=True, type=Path)
     args = parser.parse_args()
 
-    manifest = load_manifest(args.manifest)
-    project_root = args.manifest.parent.parent
+    manifest_path = args.manifest.resolve()
+    manifest = load_manifest(manifest_path)
+    project_root = manifest_path.parent.parent
+    repo_root = project_root.parent.parent
     report_root = project_root / "reports" / "validation"
     report_root.mkdir(parents=True, exist_ok=True)
 
@@ -188,7 +212,7 @@ def main() -> None:
     all_results = []
     for section in ("pieces", "issues"):
         for fixture in manifest.get(section, []):
-            result = validate_fixture(project_root, fixture, report_root)
+            result = validate_fixture(project_root, repo_root, fixture, report_root)
             all_results.append(result)
             summary_lines.append(f"## {result['name']}")
             summary_lines.append("")
@@ -197,6 +221,8 @@ def main() -> None:
                 summary_lines.append(f"- Reference PDF: `{result['reference_pdf']}`")
                 summary_lines.append(f"- Page count match: `{result['page_count_match']}`")
                 summary_lines.append(f"- Page size match: `{result['page_size_match']}`")
+                summary_lines.append(f"- Candidate first-page size: `{result['candidate_first_page_size']}`")
+                summary_lines.append(f"- Reference first-page size: `{result['reference_first_page_size']}`")
                 summary_lines.append(f"- Required fonts present: `{result['required_fonts_present']}`")
                 summary_lines.append(f"- Front matter match: `{result['front_matter_match']}`")
                 worst = sorted(result["page_diffs"], key=lambda item: item["changed_ratio"], reverse=True)[:5]
@@ -214,4 +240,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

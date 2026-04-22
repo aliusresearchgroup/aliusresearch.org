@@ -849,6 +849,8 @@ body.wsite-page-team .team-card--coord:hover {
 body.wsite-page-team .team-card__avatar {
   width: 96px;
   height: 96px;
+  flex-shrink: 0;           /* don't let the flex column compress us */
+  aspect-ratio: 1 / 1;      /* belt-and-braces: stay perfectly square */
   border-radius: 50%;
   overflow: hidden;
   background: #f2f4f3;
@@ -893,7 +895,12 @@ body.wsite-page-team .team-card__role--muted {
   color: #6b7571 !important;
 }
 
-body.wsite-page-team .team-card__bio {
+/* Note on specificity: Weebly's baseline stylesheet declares
+   `#wsite-content p { font-size: 16px !important }` inside a media query —
+   specificity (1,0,1) with `!important`. To beat it we prefix our own
+   rules with #wsite-content (→ spec 1,2,2) and `p.team-card__bio`
+   (type selector bumps spec). Same for role (also a <p>). */
+body.wsite-page-team #wsite-content p.team-card__bio {
   /* Always present in the DOM — but shrunk to font-size:0 in default state.
      No max-height / display toggling — the text gradually grows (font-size
      animation is GPU-smooth) and the bio element's height grows with it. */
@@ -908,9 +915,30 @@ body.wsite-page-team .team-card__bio {
   transition: font-size 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
               margin 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-body.wsite-page-team .team-card--expanded .team-card__bio {
+body.wsite-page-team .team-card--expanded #wsite-content p.team-card__bio,
+body.wsite-page-team #wsite-content .team-card--expanded p.team-card__bio {
   font-size: 14px !important;
   margin: 16px 0 0 !important;
+}
+
+/* Dormant state: hide name + role too — only photo + icons visible.
+   Same specificity trick since role is a <p>. Name is an <h3> and
+   Weebly has no direct h3 override, but we add the prefix anyway for
+   consistency and to make cascade order unambiguous. */
+body.wsite-page-team #wsite-content h3.team-card__name,
+body.wsite-page-team #wsite-content p.team-card__role {
+  font-size: 0 !important;
+  margin: 0 !important;
+  transition: font-size 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              margin 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+body.wsite-page-team .team-card--expanded #wsite-content h3.team-card__name {
+  font-size: 15px !important;
+  margin: 0 0 4px !important;
+}
+body.wsite-page-team .team-card--expanded #wsite-content p.team-card__role {
+  font-size: 11.5px !important;
+  margin: 0 0 12px !important;
 }
 
 body.wsite-page-team .team-card__links {

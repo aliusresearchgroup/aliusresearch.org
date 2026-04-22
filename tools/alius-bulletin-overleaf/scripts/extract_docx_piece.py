@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Iterable
 
 from docx import Document
+from ftfy import fix_text
 
 
 GREEN_HEX = {"1F8135", "008000", "00B050"}
@@ -49,7 +50,9 @@ def tex_escape(text: str) -> str:
 
 
 def normalize_space(text: str) -> str:
+    text = fix_text(text)
     text = text.replace("\u200b", "")
+    text = text.replace("\xa0", " ")
     text = re.sub(r"[ \t]+", " ", text)
     return text.strip()
 
@@ -152,10 +155,27 @@ def is_question(chunk: Chunk) -> bool:
 
 
 def split_speaker(text: str) -> tuple[str | None, str]:
-    match = re.match(r"^([A-Z][^:]{0,40}:)\s*(.+)$", text)
+    match = re.match(
+        r"^(((?:[A-Z]\.){1,3}\s+[A-Z][A-Za-z'’.-]+)|(?:[A-Z][A-Za-z'’.-]+(?:\s+[A-Z][A-Za-z'’.-]+){0,2})):\s+(.+)$",
+        text,
+    )
     if not match:
         return None, text
-    return match.group(1).strip(), match.group(2).strip()
+    return match.group(1).strip() + ":", match.group(3).strip()
+
+
+def coalesce_items(items: list[dict]) -> list[dict]:
+    coalesced: list[dict] = []
+    for item in items:
+        if (
+            coalesced
+            and item["kind"] == "pullquote"
+            and coalesced[-1]["kind"] == "pullquote"
+        ):
+            coalesced[-1]["text"] += r"\\" + item["text"]
+            continue
+        coalesced.append(item)
+    return coalesced
 
 
 def classify_body(chunks: list[Chunk], piece_type: str, start_index: int) -> list[dict]:
@@ -213,9 +233,17 @@ def write_body_tex(items: list[dict], output_path: Path) -> None:
     output_path.write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
 
 
+def decode_cli_markup(text: str) -> str:
+    repaired = fix_text(text)
+    return repaired.replace("[[BR]]", r"\\").replace("[[NBSP]]", "~")
+
+
 def contributor_arg_to_json(raw: str) -> dict:
     name, details = raw.split("::", 1)
-    return {"name": name.strip(), "details": [part.strip() for part in details.split("|") if part.strip()]}
+    return {
+        "name": fix_text(name.strip()),
+        "details": [fix_text(part.strip()) for part in details.split("|") if part.strip()],
+    }
 
 
 def contributor_tex(details: list[str]) -> str:
@@ -303,7 +331,7 @@ def main() -> None:
     doc = Document(str(args.source))
     chunks = flatten_chunks(doc)
     abstract, keywords, start_index = extract_abstract_and_keywords(chunks)
-    items = classify_body(chunks, args.piece_type, start_index)
+    items = coalesce_items(classify_body(chunks, args.piece_type, start_index))
 
     content_dir = args.project_root / "content" / "pieces" / args.slug
     fixture_dir = args.project_root / "fixtures" / "pieces"
@@ -315,22 +343,22 @@ def main() -> None:
         "piece_type": args.piece_type,
         "issue_number": args.issue_number,
         "year": args.year,
-        "title": args.title,
-        "subtitle": args.subtitle,
-        "credit_line": args.credit_line,
-        "running_title": args.running_title,
+        "title": decode_cli_markup(args.title),
+        "subtitle": decode_cli_markup(args.subtitle),
+        "credit_line": decode_cli_markup(args.credit_line),
+        "running_title": decode_cli_markup(args.running_title),
         "citation_label": args.citation_label,
-        "standalone_citation": args.standalone_citation,
-        "bundle_citation": args.bundle_citation,
+        "standalone_citation": decode_cli_markup(args.standalone_citation),
+        "bundle_citation": decode_cli_markup(args.bundle_citation),
         "keywords_label": args.keywords_label,
         "abstract": abstract,
         "keywords": keywords,
         "contributors": [contributor_arg_to_json(raw) for raw in args.contributor],
-        "title_tex": args.title,
-        "subtitle_tex": args.subtitle,
-        "credit_line_tex": args.credit_line,
-        "standalone_citation_tex": tex_escape(args.standalone_citation),
-        "bundle_citation_tex": tex_escape(args.bundle_citation) if args.bundle_citation else "",
+        "title_tex": decode_cli_markup(args.title),
+        "subtitle_tex": decode_cli_markup(args.subtitle),
+        "credit_line_tex": decode_cli_markup(args.credit_line),
+        "standalone_citation_tex": tex_escape(decode_cli_markup(args.standalone_citation)),
+        "bundle_citation_tex": tex_escape(decode_cli_markup(args.bundle_citation)) if args.bundle_citation else "",
         "title_size": args.title_size,
         "subtitle_size": args.subtitle_size,
         "credit_size": args.credit_size,
@@ -346,4 +374,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

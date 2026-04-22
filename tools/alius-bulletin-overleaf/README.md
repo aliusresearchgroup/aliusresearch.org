@@ -74,10 +74,12 @@ The validator:
 
 - `issue-05` full bundle
 - `gonzalez` interview
-- `froese` interview
 - `sleep` podcast
 - `martial` commentary
 - `olson-yaden` conversation
+- `canna-seligman` interview
+- `chadha` interview
+- `schmidt` interview
+- `froese` interview
 
 This is the baseline set used for the first reconstruction and calibration loop.
-

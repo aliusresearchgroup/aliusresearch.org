@@ -220,6 +220,12 @@
   \pagestyle{aliuspiece}%
 }
 
+\newcommand{\AliusStartPieceHere}{%
+  \label{\AliusPieceSlug:start}%
+  \AliusRenderFrontMatter
+  \pagestyle{aliuspiece}%
+}
+
 \newcommand{\AliusFinishPiece}{%
   \par
   \label{\AliusPieceSlug:end}%
@@ -300,4 +306,3 @@
 }
 
 \makeatother
-

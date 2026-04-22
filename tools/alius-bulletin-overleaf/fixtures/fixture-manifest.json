@@ -1,5 +1,95 @@
 {
-  "pieces": [],
-  "issues": []
+  "pieces": [
+    {
+      "name": "gonzalez",
+      "main_tex": "fixtures/pieces/gonzalez.tex",
+      "content_dir": "content/pieces/gonzalez",
+      "reference_pdf": "docs/library/pdfs/gonz-lez-alius-bulletin-n-6.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ]
+    },
+    {
+      "name": "sleep",
+      "main_tex": "fixtures/pieces/sleep.tex",
+      "content_dir": "content/pieces/sleep",
+      "reference_pdf": "docs/library/pdfs/what-is-it-like-to-be-asleep-matthieu-koroma-alius-bulletin-6.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ]
+    },
+    {
+      "name": "martial",
+      "main_tex": "fixtures/pieces/martial.tex",
+      "content_dir": "content/pieces/martial",
+      "reference_pdf": "docs/library/pdfs/near-death-experience-in-the-public-debate.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ]
+    },
+    {
+      "name": "olson-yaden",
+      "main_tex": "fixtures/pieces/olson-yaden.tex",
+      "content_dir": "content/pieces/olson-yaden",
+      "reference_pdf": "docs/library/pdfs/are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring-therapeutic-effects.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ]
+    },
+    {
+      "name": "canna-seligman",
+      "main_tex": "fixtures/pieces/canna-seligman.tex",
+      "content_dir": "content/pieces/canna-seligman",
+      "reference_pdf": "docs/library/pdfs/how-culture-breaks-down-the-mind-body-divide.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ]
+    },
+    {
+      "name": "chadha",
+      "main_tex": "fixtures/pieces/chadha.tex",
+      "content_dir": "content/pieces/chadha",
+      "reference_pdf": "docs/library/pdfs/indian-philosophy-and-the-value-of-transformative-experiences.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ]
+    },
+    {
+      "name": "schmidt",
+      "main_tex": "fixtures/pieces/schmidt.tex",
+      "content_dir": "content/pieces/schmidt",
+      "reference_pdf": "docs/library/pdfs/phenomenoconnectomics-and-the-neural-correlates-of-altered-consciousness.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ]
+    },
+    {
+      "name": "froese",
+      "main_tex": "fixtures/pieces/froese.tex",
+      "content_dir": "content/pieces/froese",
+      "reference_pdf": "internal_documents/ALIUS Bulletin/ALIUS Bulletin #7/Interview Tom Froese - ALIUS Bulletin (2024).pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "name": "issue-05",
+      "main_tex": "fixtures/issues/issue-05.tex",
+      "reference_pdf": "internal_documents/ALIUS Bulletin/Bulletins_fin/alius-bulletin-issue-05.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ]
+    }
+  ]
 }
-
