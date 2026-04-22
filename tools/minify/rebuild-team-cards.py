@@ -72,9 +72,7 @@ EXTRA_MEMBERS = [
             "neurophenomenological analysis, and generative AI to reconstruct "
             "subjective experiences across altered states of consciousness."
         ),
-        "links": [
-            {"href": "/library/pdfs/france-lerner-biography.pdf", "text": "Biography (PDF)"},
-        ],
+        "links": [],
         "email": None,
     },
 ]
