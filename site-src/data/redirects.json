@@ -813,5 +813,15 @@
         "from": "/events/journal-club/",
         "to": "/journal-club/",
         "type": "legacy-html-page"
+    },
+    {
+        "from": "/team/martinfortier",
+        "to": "/team/#martinfortier",
+        "type": "anchor-shortcut"
+    },
+    {
+        "from": "/team/martinfortier/",
+        "to": "/team/#martinfortier",
+        "type": "anchor-shortcut"
     }
 ]

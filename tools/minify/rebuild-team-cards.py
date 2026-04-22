@@ -33,6 +33,39 @@ SOURCES = [
     ("In Memoriam", "in-memoriam",          REPO / "site-src" / "content" / "pages" / "martinfortier"),
 ]
 
+# Members whose profile data lives on other pages — curated manually to
+# guarantee accurate name/bio/image.
+EXTRA_MEMBERS = [
+    {
+        "name": "Paweł Motyka",
+        "image": "/media/images/pawel-4.png",
+        "bio": (
+            "Dr. Paweł Motyka is a researcher in psychology specializing in "
+            "consciousness studies, altered states of consciousness, and "
+            "multisensory integration. He is currently affiliated with the "
+            "Institute of Psychology at the Polish Academy of Sciences. His "
+            "research explores the interplay between interoception and "
+            "exteroception, time perception, and the role of bodily processes "
+            "in conscious awareness."
+        ),
+        "links": [
+            {"href": "https://scholar.google.com/citations?user=gKMKYegAAAAJ", "text": "Google Scholar"},
+        ],
+        "email": None,
+    },
+    {
+        "name": "France Lerner",
+        "image": "/media/images/flerner-orig.png",
+        "bio": (
+            "France Lerner is a member of the ALIUS research community "
+            "contributing to the group's interdisciplinary work on altered "
+            "states of consciousness."
+        ),
+        "links": [],
+        "email": None,
+    },
+]
+
 # ---- helpers ----
 
 def read(path: Path) -> str:
@@ -214,6 +247,15 @@ def slug_name(name: str) -> str:
     return f"member-{s}" if s else "member"
 
 
+def obfuscate_email(email: str) -> str:
+    """Produce 'user [at] domain [dot] tld' form for scraper-hostile display."""
+    if "@" not in email:
+        return email
+    user, _, rest = email.partition("@")
+    parts = rest.split(".")
+    return f"{user} [at] {'.'.join(parts[:-1]) if len(parts) > 1 else rest} [dot] {parts[-1] if len(parts) > 1 else ''}".strip()
+
+
 def render_card(m: dict, is_coordinator: bool = False) -> str:
     img = m.get("image") or ""
     name = m.get("name") or ""
@@ -224,30 +266,122 @@ def render_card(m: dict, is_coordinator: bool = False) -> str:
     for l in m.get("links") or []:
         t = classify_link(l["href"])
         link_by_type.setdefault(t, l["href"])
-    if m.get("email"):
-        link_by_type.setdefault("email", f'mailto:{m["email"]}')
 
     icons_html = ""
-    for key in ("linkedin", "twitter", "scholar", "researchgate", "orcid", "academia", "github", "site", "pdf", "email"):
+    for key in ("linkedin", "twitter", "scholar", "researchgate", "orcid", "academia", "github", "site", "pdf"):
         if key in link_by_type:
             label, svg = ICON_DEFS[key]
             href = link_by_type[key]
-            target = '' if href.startswith('mailto:') else ' target="_blank" rel="noopener"'
             icons_html += (
-                f'<a class="team-card__icon" href="{href}" aria-label="{label}"{target}>{svg}</a>'
+                f'<a class="team-card__icon team-card__icon--{key}" href="{href}" '
+                f'aria-label="{label}" title="{label}" target="_blank" rel="noopener">{svg}</a>'
             )
+
+    # Email: no mailto — render as a hoverable badge that reveals the obfuscated
+    # address via a CSS tooltip, so scrapers don't get a raw address.
+    if m.get("email"):
+        _, svg = ICON_DEFS["email"]
+        obf = obfuscate_email(m["email"])
+        icons_html += (
+            f'<span class="team-card__icon team-card__icon--email" '
+            f'role="button" tabindex="0" aria-label="Email" '
+            f'data-email="{obf}" title="{obf}">{svg}'
+            f'<span class="team-card__email-tooltip">{obf}</span></span>'
+        )
 
     img_html = ''
     if img:
         img_html = f'<div class="team-card__avatar"><img src="{img}" alt="{name}" loading="lazy" decoding="async"></div>'
 
-    coord_badge = ' <span class="team-card__coord" title="Team Coordinator">*</span>' if is_coordinator else ''
-    return f'''<article class="team-card" id="{slug}">
+    coord_class = ' team-card--coord' if is_coordinator else ''
+    role_html = (
+        '<p class="team-card__role">Team Coordinator</p>'
+        if is_coordinator else
+        '<p class="team-card__role team-card__role--muted">Research Member</p>'
+    )
+    return f'''<article class="team-card{coord_class}" id="{slug}">
   {img_html}
-  <h3 class="team-card__name">{name}{coord_badge}</h3>
+  <h3 class="team-card__name">{name}</h3>
+  {role_html}
   <p class="team-card__bio">{bio}</p>
   <div class="team-card__links">{icons_html}</div>
 </article>'''
+
+
+def render_memoriam(m: dict) -> str:
+    """Dedicated In Memoriam section for Martin Fortier.
+    Clean two-column layout on desktop, stacked on mobile, linking to the
+    full scientific tribute on the bulletin.
+    """
+    img = m.get("image") or ""
+    # Curated copy (stable, not parsed — the auto-parsed text looked bad).
+    tribute_copy = (
+        'On April 11th, 2020, Martin Fortier — Co-Founder of ALIUS in 2016 — '
+        'passed away after a long battle with cancer. He was thirty years old. '
+        'ALIUS continues to honour his contributions to the scientific study '
+        'of consciousness and the cultural anthropology of hallucinogenic '
+        'experience.'
+    )
+    tribute_link = "/bulletin/interviews/bulletin04-martintribute/"
+    img_html = (
+        f'<div class="memoriam__photo"><img src="{img}" alt="Martin Fortier" loading="lazy" decoding="async"></div>'
+        if img else ''
+    )
+    # Collect up to 3 external reference links
+    ref_links_html = ""
+    seen_ref = set()
+    for l in (m.get("links") or [])[:6]:
+        href = l.get("href") or ""
+        txt = (l.get("text") or "").strip()
+        if not href or href in seen_ref:
+            continue
+        if "aliusresearch.org" in href or href.startswith("#"):
+            continue
+        seen_ref.add(href)
+        if not txt or len(txt) > 60:
+            # Use domain as fallback label
+            from urllib.parse import urlparse
+            txt = urlparse(href).netloc.replace("www.", "") or "Reference"
+        ref_links_html += f'<li><a href="{href}" target="_blank" rel="noopener">{txt}</a></li>'
+        if ref_links_html.count("<li>") >= 3:
+            break
+    refs_block = (
+        f'<ul class="memoriam__refs">{ref_links_html}</ul>' if ref_links_html else ''
+    )
+    return f'''<section class="memoriam" id="martinfortier" aria-labelledby="memoriam-heading">
+  <div class="memoriam__inner">
+    {img_html}
+    <div class="memoriam__body">
+      <p class="memoriam__eyebrow">In Memoriam</p>
+      <h2 class="memoriam__name" id="memoriam-heading">Martin Fortier</h2>
+      <p class="memoriam__role">Co-Founder of ALIUS (2016) · 1990–2020</p>
+      <p class="memoriam__text">{tribute_copy}</p>
+      <div class="memoriam__cta">
+        <a class="memoriam__primary" href="{tribute_link}">Read the scientific tribute →</a>
+      </div>
+      {refs_block}
+    </div>
+  </div>
+</section>'''
+
+
+def render_bottom_names_nav(members: list[dict], coord_keys: set[str]) -> str:
+    """Fixed-bottom alphabetical names nav. Horizontally scrolls on narrow
+    viewports (scroll-snap applies via .section-nav CSS already in use)."""
+    items = []
+    for m in members:
+        name = m.get("name") or ""
+        slug = slug_name(name)
+        key = re.sub(r"[^a-z0-9]+", "", name.lower())
+        mark = ' *' if key in coord_keys else ''
+        items.append(f'<li><a href="#{slug}">{name}{mark}</a></li>')
+    items_html = "\n  ".join(items)
+    return f'''<nav class="section-nav team-names-nav" aria-label="All team members">
+  <ol>
+  {items_html}
+  </ol>
+</nav>
+<script src="/assets/js/pretext-nav-fit.js" defer></script>'''
 
 
 def render_names_index(all_members: list[tuple[str, dict]]) -> str:
@@ -316,10 +450,10 @@ body.wsite-page-team .team-page-title {
   padding: 0 24px;
 }
 body.wsite-page-team .team-page-title h1 {
-  font-size: 28px !important;
-  font-weight: 600 !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
   margin: 0 !important;
-  color: #1f2826 !important;
+  color: #1a4d2e !important;
   letter-spacing: -0.01em !important;
   text-transform: none !important;
   text-align: left !important;
@@ -330,6 +464,136 @@ body.wsite-page-team .team-page-title p {
   font-size: 14px !important;
   line-height: 1.5 !important;
   font-weight: 400 !important;
+}
+body.wsite-page-team .team-legend {
+  color: #6b7571;
+  font-size: 13px;
+  margin-left: 4px;
+}
+
+/* Bottom names nav customisations (builds on .section-nav base styles) */
+body.wsite-page-team .team-names-nav ol {
+  justify-content: flex-start;
+}
+body.wsite-page-team .team-names-nav a {
+  font-family: 'Raleway', -apple-system, sans-serif !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 12px !important;
+  font-weight: 500;
+}
+
+/* In Memoriam — dedicated bottom segment for Martin Fortier */
+body.wsite-page-team .memoriam {
+  max-width: 960px;
+  margin: 72px auto 40px;
+  padding: 32px 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  scroll-margin-top: 16px;
+  scroll-margin-bottom: 96px;
+}
+body.wsite-page-team .memoriam__inner {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+body.wsite-page-team .memoriam__photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f2f4f3;
+}
+body.wsite-page-team .memoriam__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  max-width: none !important;
+  border-radius: 50%;
+}
+body.wsite-page-team .memoriam__eyebrow {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #7b8c89 !important;
+  margin: 0 0 4px !important;
+}
+body.wsite-page-team .memoriam__name {
+  font-size: 26px !important;
+  font-weight: 600 !important;
+  color: #1f2826 !important;
+  margin: 0 0 4px !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+  text-align: left !important;
+}
+body.wsite-page-team .memoriam__role {
+  font-size: 13px !important;
+  color: #6b7571 !important;
+  margin: 0 0 14px !important;
+  font-weight: 400 !important;
+}
+body.wsite-page-team .memoriam__text {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: #2a3330 !important;
+  margin: 0 0 18px !important;
+  font-weight: 400 !important;
+  max-width: 62ch;
+}
+body.wsite-page-team .memoriam__cta a {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  color: #1f2826;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+body.wsite-page-team .memoriam__cta a:hover,
+body.wsite-page-team .memoriam__cta a:focus-visible {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+body.wsite-page-team .memoriam__refs {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 16px 0 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+body.wsite-page-team .memoriam__refs li {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+body.wsite-page-team .memoriam__refs a {
+  font-size: 12px;
+  color: #6b7571;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 1px;
+}
+body.wsite-page-team .memoriam__refs a:hover {
+  color: #1f2826;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 640px) {
+  body.wsite-page-team .memoriam { padding: 24px 16px; margin-top: 48px; }
+  body.wsite-page-team .memoriam__inner { grid-template-columns: 1fr; gap: 20px; justify-items: center; text-align: center; }
+  body.wsite-page-team .memoriam__name,
+  body.wsite-page-team .memoriam__text,
+  body.wsite-page-team .memoriam__role,
+  body.wsite-page-team .memoriam__eyebrow { text-align: center !important; }
+  body.wsite-page-team .memoriam__photo { width: 140px; height: 140px; }
 }
 
 /* Section break (Coordinators / Research Members / In Memoriam) */
@@ -359,30 +623,51 @@ body.wsite-page-team .team-grid {
   padding: 24px;
 }
 
+/* --- ALIUS palette (sampled from the leaf logo) ---
+   #1a4d2e  — dark forest green (ALIUS wordmark, darker leaf)
+   #3d8b3d  — medium leaf green
+   #8fbf4d  — bright leaf green (highlight)
+   #0f1a11  — near black
+   #ffffff  — white (background)
+*/
+
 /* Card */
 body.wsite-page-team .team-card {
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  padding: 20px;
+  border: 1px solid rgba(26, 77, 46, 0.15);
+  border-top: 3px solid #3d8b3d;  /* leaf green top accent */
+  border-radius: 10px;
+  padding: 24px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: border-color 150ms ease, box-shadow 150ms ease;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+body.wsite-page-team .team-card--coord {
+  border-top-color: #8fbf4d;  /* brighter leaf green for coordinators */
 }
 body.wsite-page-team .team-card:hover {
-  border-color: rgba(0, 0, 0, 0.18);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-color: rgba(26, 77, 46, 0.3);
+  box-shadow: 0 4px 20px -6px rgba(26, 77, 46, 0.22), 0 0 0 1px rgba(61, 139, 61, 0.1);
+  transform: translateY(-2px);
+}
+body.wsite-page-team .team-card--coord:hover {
+  box-shadow: 0 4px 20px -6px rgba(143, 191, 77, 0.35), 0 0 0 1px rgba(143, 191, 77, 0.2);
 }
 
 body.wsite-page-team .team-card__avatar {
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   overflow: hidden;
   background: #f2f4f3;
   margin-bottom: 14px;
+  /* Ring matches card accent (leaf green) */
+  box-shadow: 0 0 0 3px #3d8b3d, 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+body.wsite-page-team .team-card--coord .team-card__avatar {
+  box-shadow: 0 0 0 3px #8fbf4d, 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 body.wsite-page-team .team-card__avatar img {
   width: 100%;
@@ -395,13 +680,27 @@ body.wsite-page-team .team-card__avatar img {
 }
 
 body.wsite-page-team .team-card__name {
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  color: #1f2826 !important;
-  margin: 0 0 8px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #0f1a11 !important;
+  margin: 0 0 4px !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
   line-height: 1.3 !important;
+}
+body.wsite-page-team .team-card__role {
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #3d8b3d !important;
+  margin: 0 0 12px !important;
+}
+body.wsite-page-team .team-card--coord .team-card__role {
+  color: #6b9b1f !important;
+}
+body.wsite-page-team .team-card__role--muted {
+  color: #6b7571 !important;
 }
 
 body.wsite-page-team .team-card__bio {
@@ -431,24 +730,107 @@ body.wsite-page-team .team-card__links {
   width: 100%;
 }
 body.wsite-page-team .team-card__icon {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 32px;
   height: 32px;
-  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
   color: #6b7571;
-  transition: color 120ms ease, background 120ms ease;
+  background: #ffffff;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease,
+              background 120ms ease, box-shadow 120ms ease;
 }
 body.wsite-page-team .team-card__icon:hover,
 body.wsite-page-team .team-card__icon:focus-visible {
   color: #1f2826;
-  background: rgba(0, 0, 0, 0.04);
   outline: none;
 }
 body.wsite-page-team .team-card__icon svg {
   width: 16px;
   height: 16px;
+}
+
+/* Brand-coloured hover glow per platform (matches viscereality.org pattern) */
+body.wsite-page-team .team-card__icon--linkedin:hover {
+  border-color: rgba(0, 119, 181, 0.8);
+  color: #0077b5;
+  box-shadow: 0 0 0 3px rgba(0, 119, 181, 0.15);
+}
+body.wsite-page-team .team-card__icon--scholar:hover {
+  border-color: rgba(66, 133, 244, 0.8);
+  color: #4285f4;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.15);
+}
+body.wsite-page-team .team-card__icon--orcid:hover {
+  border-color: rgba(166, 206, 57, 0.8);
+  color: #a6ce39;
+  box-shadow: 0 0 0 3px rgba(166, 206, 57, 0.15);
+}
+body.wsite-page-team .team-card__icon--researchgate:hover {
+  border-color: rgba(0, 204, 187, 0.8);
+  color: #00ccbb;
+  box-shadow: 0 0 0 3px rgba(0, 204, 187, 0.15);
+}
+body.wsite-page-team .team-card__icon--twitter:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+  color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+body.wsite-page-team .team-card__icon--github:hover {
+  border-color: rgba(36, 41, 46, 0.8);
+  color: #24292e;
+  box-shadow: 0 0 0 3px rgba(36, 41, 46, 0.12);
+}
+body.wsite-page-team .team-card__icon--academia:hover {
+  border-color: rgba(65, 69, 74, 0.7);
+  color: #41454a;
+}
+body.wsite-page-team .team-card__icon--site:hover,
+body.wsite-page-team .team-card__icon--pdf:hover {
+  border-color: rgba(92, 120, 114, 0.7);
+  color: #5c7872;
+}
+body.wsite-page-team .team-card__icon--email:hover {
+  border-color: rgba(92, 120, 114, 0.7);
+  color: #5c7872;
+}
+
+/* Email hover-reveal tooltip (anti-scraper: no mailto, no raw address in href) */
+body.wsite-page-team .team-card__icon--email {
+  cursor: help;
+}
+body.wsite-page-team .team-card__email-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  background: #1f2826;
+  color: #ffffff;
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+  z-index: 5;
+}
+body.wsite-page-team .team-card__email-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #1f2826;
+}
+body.wsite-page-team .team-card__icon--email:hover .team-card__email-tooltip,
+body.wsite-page-team .team-card__icon--email:focus-visible .team-card__email-tooltip {
+  opacity: 1;
 }
 
 /* Coordinator asterisk on card name */
@@ -609,46 +991,70 @@ def _assemble(shell_text: str, content_html: str) -> str:
 
 
 def build_content() -> str:
+    """Produce the team page body: one alphabetical grid of all members
+    (coordinators flagged inline), plus a separate In Memoriam section for
+    Martin Fortier. No top names index — the bottom nav carries names."""
+    import html as _html
+
     parts: list[str] = []
     parts.append(CSS)
-    parts.append('<div class="team-page-title"><h1>The ALIUS Team</h1><p>Coordinators, research members, and colleagues in memoriam.</p></div>')
+    parts.append('<div class="team-page-title"><h1>The ALIUS Team</h1><p>All members listed alphabetically. <span class="team-legend">Coordinators marked with *</span></p></div>')
 
-    # First pass: gather all members per section (dedup by normalized name,
-    # keeping earliest section appearance).
+    # Gather every unique member from Coordinators + Research Members into one
+    # list; flag coordinators so we can mark them inline on their cards.
     seen_names: set[str] = set()
-    sections_data: list[tuple[str, str, list[dict]]] = []
+    all_members: list[dict] = []
     coord_keys: set[str] = set()
-    all_for_index: list[tuple[str, dict]] = []
+    in_memoriam: list[dict] = []
     for label, anchor, source_dir in SOURCES:
         mode = "single" if anchor == "in-memoriam" else "members"
         members = parse_source(source_dir, mode=mode)
         if not members:
             continue
-        deduped = []
         for m in members:
             key = re.sub(r"[^a-z0-9]+", "", (m.get("name") or "").lower())
-            if not key or key in seen_names:
+            if not key:
                 continue
-            seen_names.add(key)
-            deduped.append(m)
+            if anchor == "in-memoriam":
+                in_memoriam.append(m)
+                continue
             if label == "Coordinators":
                 coord_keys.add(key)
-            all_for_index.append((label, m))
-        sections_data.append((label, anchor, deduped))
+            if key in seen_names:
+                continue
+            seen_names.add(key)
+            all_members.append(m)
 
-    # Alphabetical names index at the top (includes every unique member,
-    # coordinators marked with *; clicking jumps to that member's card).
-    parts.append(render_names_index(all_for_index))
+    # Fold in the extras (Paweł Motyka, France Lerner, ...) if not already present
+    for em in EXTRA_MEMBERS:
+        key = re.sub(r"[^a-z0-9]+", "", em["name"].lower())
+        if key in seen_names:
+            continue
+        seen_names.add(key)
+        all_members.append(em)
 
-    # Second pass: render the full card grid per section.
-    for label, anchor, deduped in sections_data:
-        parts.append(f'<span id="{anchor}" class="team-anchor"></span>')
-        parts.append(f'<div class="team-section-heading"><h2>{label}</h2></div>')
-        parts.append('<div class="team-grid">')
-        for m in deduped:
-            key = re.sub(r"[^a-z0-9]+", "", (m.get("name") or "").lower())
-            parts.append(render_card(m, is_coordinator=(key in coord_keys)))
-        parts.append('</div>')
+    # Sort by family name (last word) case-insensitively
+    def sort_key(m):
+        name = _html.unescape(re.sub(r"<[^>]+>", "", m.get("name") or ""))
+        parts_ = name.strip().split()
+        return (parts_[-1].lower() if parts_ else "", name.lower())
+    all_members.sort(key=sort_key)
+
+    # Single grid of all members
+    parts.append('<div class="team-grid">')
+    for m in all_members:
+        key = re.sub(r"[^a-z0-9]+", "", (m.get("name") or "").lower())
+        parts.append(render_card(m, is_coordinator=(key in coord_keys)))
+    parts.append('</div>')
+
+    # In Memoriam section (Martin Fortier) — dedicated bottom segment
+    if in_memoriam:
+        parts.append(render_memoriam(in_memoriam[0]))
+
+    # Bottom pane: alphabetical names nav (one link per member; jumps to card)
+    # Build here so it gets embedded inline; the CSS positions it fixed-bottom.
+    parts.append(render_bottom_names_nav(all_members, coord_keys))
+
     return "\n".join(parts)
 
 

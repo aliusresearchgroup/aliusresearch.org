@@ -30,11 +30,7 @@ CONTENT = REPO / "site-src" / "content"
 
 # (page_id, relative_dir_under_CONTENT, anchor_list, body_class)
 PAGES = [
-    ("team", "team", [
-        ("Coordinators", "coordinators"),
-        ("Research Members", "research-members"),
-        ("In Memoriam", "in-memoriam"),
-    ], "wsite-page-team"),
+    # /team/ ships its own bottom names-nav (rebuild-team-cards.py), so skip here.
     ("bulletin", "_consolidated/bulletin", [
         ("Issue n°7", "bulletin-07"),
         ("Issue n°6", "bulletin-06"),

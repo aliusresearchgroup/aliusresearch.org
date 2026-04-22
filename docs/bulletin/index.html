@@ -484,15 +484,7 @@ body.wsite-page-membership .styled-hr {
 
 </div>
 
-<div><div id="158547682655468865" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('aliusresearchgroup', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support Us',
-    'floating-chat.donateButton.background-color': '#5cb85c',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script></div>
+<div><div id="158547682655468865" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"></div>
 
 </div>
 			</div>
@@ -549,15 +541,7 @@ body.wsite-page-membership .styled-hr {
 
 </div>
 
-<div><div id="773151519380768756" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('aliusresearchgroup', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support Us',
-    'floating-chat.donateButton.background-color': '#5cb85c',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script></div>
+<div><div id="773151519380768756" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"></div>
 
 </div>
 			</div>
@@ -1136,6 +1120,35 @@ body.wsite-page-membership .styled-hr {
 <script language="javascript" src="/assets/vendor/weebly-site/files/theme/files/plugins.js"></script>
 <script language="javascript" src="/assets/vendor/weebly-site/files/theme/files/custom.js"></script>
 <script language="javascript" src="/assets/vendor/weebly-site/files/theme/files/mobile.js"></script><script>
+(function() {
+  var links = document.querySelectorAll('.section-nav a');
+  if (!links.length) return;
+  // Highlight active section as user scrolls; snap-center the active link
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      var id = e.target.id;
+      if (!id) return;
+      var link = document.querySelector('.section-nav a[href="#' + id + '"]');
+      if (!link) return;
+      if (e.isIntersecting) {
+        links.forEach(function(a) { a.classList.remove('is-active'); });
+        link.classList.add('is-active');
+        // Snap the active link horizontally into view on narrow screens
+        var nav = link.closest('ol');
+        if (nav && nav.scrollWidth > nav.clientWidth) {
+          var r = link.getBoundingClientRect(), nr = nav.getBoundingClientRect();
+          nav.scrollBy({
+            left: (r.left + r.width / 2) - (nr.left + nr.width / 2),
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+  document.querySelectorAll('[id^="bulletin-"],[id="coordinators"],[id="research-members"],[id="in-memoriam"],[id="assc-satellite"],[id="program"],[id="attendees"],[id="travel"],[id="music"],[id="active-roles"],[id="researcher-membership"]').forEach(function(el) { io.observe(el); });
+})();
+</script>
+<script>
 (function() {
   var links = document.querySelectorAll('.section-nav a');
   if (!links.length) return;
