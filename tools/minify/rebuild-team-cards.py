@@ -195,8 +195,26 @@ def parse_member(wrap: str) -> dict | None:
             email = f"{m2.group(1)}@{m2.group(2)}.{m2.group(3)}"
     if email and email in bio_trimmed:
         bio_trimmed = bio_trimmed.replace(email, "").strip()
-        # Also remove "[at] ... [dot] ..." style
-    bio_trimmed = re.sub(r'[\w._-]+\s*\[at\]\s*[\w.-]+\s*\[dot\]\s*\w+', '', bio_trimmed).strip()
+    # Strip obfuscated "user [at] sub [dot] domain [dot] tld" — with any number
+    # of [dot] pieces in the domain (the earlier regex only handled one).
+    bio_trimmed = re.sub(
+        r'[\w._+\-]+\s*\[at\]\s*(?:[\w\-]+\s*\[dot\]\s*)+\w+',
+        '',
+        bio_trimmed,
+    ).strip()
+    # Catch orphan fragments left when a leading mailto> text got stripped but
+    # its visible partial remained (e.g. "neuro [dot] ", "ac [dot] il").
+    # Remove any leading "<word> [dot] [<word> [dot] ...]" at the START of the
+    # bio until the first capitalised sentence word, but keep sensible content.
+    bio_trimmed = re.sub(
+        r'^\s*(?:[\w\-]+\s*\[(?:at|dot)\]\s*)+',
+        '',
+        bio_trimmed,
+    ).strip()
+    # Remove any dangling " [dot] <tld>" that may still lead the bio
+    bio_trimmed = re.sub(r'^\s*\[dot\]\s*\w+\s*', '', bio_trimmed).strip()
+    # Remove lone punctuation / empty-bracket leftovers
+    bio_trimmed = re.sub(r'^[\s,.;:\-—–()]+', '', bio_trimmed).strip()
 
     return {
         "image": image,
