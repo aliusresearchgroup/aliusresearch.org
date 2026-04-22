@@ -1018,98 +1018,67 @@ body.wsite-page-team #wsite-content > .wsite-section-wrap { display: none !impor
 body.wsite-page-team #wsite-content .wsite-background,
 body.wsite-page-team #wsite-content .wsite-custom-background { background: transparent !important; }
 
-/* --- Click-to-expand (1600ms, square, sibling fonts shrink) --- */
+/* --- Click-to-expand: uniform transform-based scale for everything ---
+   One property (transform: scale) drives the whole motion, so the clicked
+   card smoothly inflates and neighbouring cards smoothly deflate at
+   EXACTLY the same rate. Every element inside each card scales together,
+   preserving each card's internal proportions as a single unit.
+   The bio's max-height animates on the same curve + duration, so the
+   clicked card reveals its full bio in sync with the zoom. */
 
 body.wsite-page-team .team-card {
   cursor: pointer;
-  transition: border-color 1600ms ease, box-shadow 1600ms ease,
-              min-height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              aspect-ratio 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
+  transform-origin: center center;
+  will-change: transform, max-height;
+  transition: transform 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
               opacity 1600ms ease,
-              padding 1600ms ease;
+              border-color 1600ms ease,
+              box-shadow 1600ms ease;
 }
 
-/* Bio uses max-height for animatable clamping */
+/* Bio: single animatable property on the clamp */
 body.wsite-page-team .team-card__bio {
-  max-height: 10.2em;  /* ~6 lines default */
+  max-height: 10.2em;  /* default ~6 lines */
   overflow: hidden;
-  transition: max-height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              font-size 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              line-height 1600ms ease;
-}
-body.wsite-page-team .team-card__name {
-  transition: font-size 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-body.wsite-page-team .team-card__role {
-  transition: font-size 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-body.wsite-page-team .team-card__avatar {
-  transition: width 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-body.wsite-page-team .team-card__icon {
-  transition: width 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              color 180ms ease,
-              border-color 180ms ease,
-              background 180ms ease,
-              box-shadow 180ms ease;
-}
-body.wsite-page-team .team-card__icon svg {
-  transition: width 1600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: max-height 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-/* Non-expanded siblings: shrink everything — bio, names, roles, avatar, icons.
-   This is the "proportional" shrink the user asked for: the whole mini-card
-   gets smaller, fonts included. */
+/* Non-expanded siblings: a uniform scale-down. Every element inside
+   (photo, name, role, bio, icons) shrinks together at the same rate,
+   preserving the card's internal layout and proportions. */
 body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
-  opacity: 0.62;
-}
-body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) .team-card__bio {
-  max-height: 2.4em;
-  -webkit-line-clamp: 2 !important;
-  font-size: 11px !important;
-  line-height: 1.35 !important;
-}
-body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) .team-card__name {
-  font-size: 12px !important;
-}
-body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) .team-card__role {
-  font-size: 9.5px !important;
-}
-body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) .team-card__avatar {
-  width: 56px;
-  height: 56px;
-}
-body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) .team-card__icon {
-  width: 24px;
-  height: 24px;
-}
-body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) .team-card__icon svg {
-  width: 12px;
-  height: 12px;
+  transform: scale(0.78);
+  opacity: 0.6;
+  filter: saturate(0.8);
 }
 
-/* Clicked card: grid-column spans 2 + aspect-ratio: 1 = symmetrical square */
+/* Clicked card: uniform scale-up + bio grows to its pretext-measured
+   height. z-index higher so if it crosses into sibling cells it paints
+   cleanly on top. */
 body.wsite-page-team .team-card--expanded {
-  grid-column: span 2;
-  aspect-ratio: 1 / 1;
+  transform: scale(1.35);
+  z-index: 5;
   border-color: rgba(26, 77, 46, 0.35);
-  box-shadow: 0 12px 34px -8px rgba(26, 77, 46, 0.2);
-  padding: 32px;
-  justify-content: flex-start;
+  box-shadow: 0 18px 48px -10px rgba(26, 77, 46, 0.28);
 }
 body.wsite-page-team .team-card--expanded .team-card__bio {
   max-height: var(--expanded-bio-height, 100em);
   -webkit-line-clamp: unset !important;
   display: block !important;
 }
-/* On narrow viewports we can't fit two columns — fall back to natural width */
+/* When the grid has an expanded card, give a touch more padding to all
+   grid cells so the scaled-up card doesn't clip its neighbours' borders */
+body.wsite-page-team .team-grid--has-expanded {
+  gap: 28px;
+  transition: gap 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+body.wsite-page-team .team-grid {
+  transition: gap 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
 @media (max-width: 520px) {
-  body.wsite-page-team .team-card--expanded {
-    grid-column: auto;
-    aspect-ratio: auto;
+  body.wsite-page-team .team-card--expanded { transform: scale(1.08); }
+  body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
+    transform: scale(0.88);
   }
 }
 </style>
