@@ -83,7 +83,7 @@ body {
 .alius-anchor-nav {
   position: fixed;
   top: 310px;
-  left: max(18px, calc((100vw - 1280px) / 2 + 18px));
+  left: 0;
   z-index: 850;
   width: 188px;
   max-height: calc(100vh - 340px);
@@ -91,6 +91,7 @@ body {
   padding: 12px 0;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid var(--alius-line);
+  border-left: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
