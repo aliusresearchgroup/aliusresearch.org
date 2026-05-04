@@ -213,6 +213,75 @@ body.wsite-page-team .team-card__email-label {
   height: auto;
 }
 
+body.wsite-page-bulletin #wsite-content {
+  color: #34423c;
+}
+
+body.wsite-page-bulletin #wsite-content .wsite-content-title,
+body.wsite-page-bulletin #wsite-content .wsite-content-title * {
+  font-family: "EB Garamond", Lora, Georgia, serif !important;
+  font-weight: 600 !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0 !important;
+  color: var(--alius-green) !important;
+}
+
+body.wsite-page-bulletin #wsite-content .wsite-section-wrap:first-child .wsite-content-title font {
+  font-size: clamp(38px, 5vw, 56px) !important;
+}
+
+body.wsite-page-bulletin #wsite-content .wsite-content-title font {
+  font-size: clamp(28px, 3.4vw, 42px) !important;
+}
+
+body.wsite-page-bulletin #wsite-content .paragraph,
+body.wsite-page-bulletin #wsite-content p {
+  font-family: Lora, Georgia, serif !important;
+  font-size: 16px !important;
+  line-height: 1.72 !important;
+  color: #3f4d49 !important;
+}
+
+body.wsite-page-bulletin #wsite-content .paragraph * {
+  font-family: inherit !important;
+}
+
+body.wsite-page-bulletin #wsite-content .paragraph font[size="5"],
+body.wsite-page-bulletin #wsite-content .paragraph font[size="5"] * {
+  font-size: 22px !important;
+  line-height: 1.25 !important;
+  color: #2c3b35 !important;
+}
+
+body.wsite-page-bulletin #wsite-content .paragraph font[size="4"],
+body.wsite-page-bulletin #wsite-content .paragraph font[size="4"] * {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+body.wsite-page-bulletin #wsite-content a {
+  color: #24713d !important;
+  text-decoration-color: rgba(36, 113, 61, 0.32) !important;
+  text-underline-offset: 3px;
+}
+
+body.wsite-page-bulletin #wsite-content .styled-hr {
+  max-width: 320px;
+  margin: 18px auto 0 !important;
+}
+
+body.wsite-page-bulletin #wsite-content .wsite-section-content {
+  min-height: 0 !important;
+}
+
+body.wsite-page-bulletin #wsite-content > .wsite-section-wrap .wsite-body-section:not([class*="wsite-background-"]) {
+  height: 156px !important;
+}
+
+body.wsite-page-bulletin #wsite-content > .wsite-section-wrap:first-child .wsite-body-section {
+  height: 190px !important;
+}
+
 @media (min-width: 1181px) {
   body.no-header #wsite-content {
     box-sizing: border-box;
