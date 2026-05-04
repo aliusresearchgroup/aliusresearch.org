@@ -244,8 +244,12 @@
                 }
 
                 body.wsite-page-events .event-theme {
+                  display: grid;
+                  grid-template-columns: 88px minmax(0, 1fr);
+                  gap: 16px;
+                  align-items: center;
                   min-height: 154px;
-                  padding: 20px;
+                  padding: 18px;
                   border: 1px solid var(--events-line);
                   border-left: 4px solid var(--events-leaf);
                   border-radius: 8px;
@@ -264,10 +268,102 @@
                   border-left-color: #63745a;
                 }
 
+                body.wsite-page-events .event-theme__visual {
+                  width: 84px;
+                  height: 84px;
+                  border: 1px solid rgba(66, 81, 76, 0.16);
+                  border-radius: 8px;
+                  background: #f8faf8;
+                  overflow: hidden;
+                }
+
+                body.wsite-page-events .event-theme__visual svg {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                }
+
+                body.wsite-page-events .event-theme h3 {
+                  margin: 0;
+                }
+
                 body.wsite-page-events .event-theme p {
                   margin: 9px 0 0;
                   font-size: 15.5px !important;
                   line-height: 1.48 !important;
+                }
+
+                body.wsite-page-events .theme-ring,
+                body.wsite-page-events .theme-aura {
+                  transform-origin: center;
+                  animation: themePulse 4s ease-in-out infinite;
+                }
+
+                body.wsite-page-events .theme-ring--delay {
+                  animation-delay: 1.25s;
+                }
+
+                body.wsite-page-events .theme-dot {
+                  animation: themeDrift 3.4s ease-in-out infinite alternate;
+                }
+
+                body.wsite-page-events .theme-scan {
+                  animation: themeScan 3s ease-in-out infinite;
+                }
+
+                body.wsite-page-events .theme-headset-glow {
+                  animation: themeGlow 4s ease-in-out infinite;
+                }
+
+                body.wsite-page-events .theme-figure {
+                  animation: themeSway 5s ease-in-out infinite;
+                  transform-origin: 42px 56px;
+                }
+
+                body.wsite-page-events .theme-node {
+                  animation: themeNode 3.2s ease-in-out infinite;
+                  transform-origin: center;
+                }
+
+                body.wsite-page-events .theme-node:nth-of-type(2n) {
+                  animation-delay: 0.8s;
+                }
+
+                @keyframes themePulse {
+                  0%, 100% { transform: scale(0.9); opacity: 0.38; }
+                  50% { transform: scale(1.08); opacity: 0.78; }
+                }
+
+                @keyframes themeDrift {
+                  from { transform: translateY(-3px); opacity: 0.55; }
+                  to { transform: translateY(4px); opacity: 1; }
+                }
+
+                @keyframes themeScan {
+                  0%, 100% { transform: translateY(-18px); opacity: 0; }
+                  45%, 55% { opacity: 0.8; }
+                  100% { transform: translateY(20px); }
+                }
+
+                @keyframes themeGlow {
+                  0%, 100% { opacity: 0.25; }
+                  50% { opacity: 0.72; }
+                }
+
+                @keyframes themeSway {
+                  0%, 100% { transform: rotate(-2deg); }
+                  50% { transform: rotate(2deg); }
+                }
+
+                @keyframes themeNode {
+                  0%, 100% { transform: scale(0.92); opacity: 0.62; }
+                  50% { transform: scale(1.15); opacity: 1; }
+                }
+
+                body.wsite-page-events .events-hero__copy > p,
+                body.wsite-page-events .event-partner p,
+                body.wsite-page-events .timeline-note {
+                  max-width: var(--alius-prose-measure, 72ch);
                 }
 
                 body.wsite-page-events .timeline-note {
@@ -479,6 +575,16 @@
                     padding: 12px;
                   }
 
+                  body.wsite-page-events .event-theme {
+                    grid-template-columns: 68px minmax(0, 1fr);
+                    gap: 12px;
+                  }
+
+                  body.wsite-page-events .event-theme__visual {
+                    width: 64px;
+                    height: 64px;
+                  }
+
                   body.wsite-page-events .event-speaker-card img {
                     width: 48px;
                     height: 48px;
@@ -487,8 +593,16 @@
 
                 @media (prefers-reduced-motion: reduce) {
                   body.wsite-page-events .event-speaker-card,
-                  body.wsite-page-events .event-speaker-card__bio {
+                  body.wsite-page-events .event-speaker-card__bio,
+                  body.wsite-page-events .theme-ring,
+                  body.wsite-page-events .theme-aura,
+                  body.wsite-page-events .theme-dot,
+                  body.wsite-page-events .theme-scan,
+                  body.wsite-page-events .theme-headset-glow,
+                  body.wsite-page-events .theme-figure,
+                  body.wsite-page-events .theme-node {
                     transition: none !important;
+                    animation: none !important;
                   }
                 }
               </style>
@@ -548,32 +662,90 @@
                   <h2>Four Themes</h2>
                   <div class="event-themes">
                     <article class="event-theme">
-                      <h3>Measuring Subjective Effects</h3>
-                      <p>
-                        Open-science methods, validated questionnaires, psychometrics, and state-space mapping for
-                        comparing altered-state reports without flattening phenomenological detail.
-                      </p>
+                      <div class="event-theme__visual event-theme__visual--measure" aria-hidden="true">
+                        <svg viewBox="0 0 84 84" focusable="false">
+                          <rect width="84" height="84" fill="#f8faf8"/>
+                          <circle class="theme-ring" cx="42" cy="42" r="28" fill="none" stroke="#3d8b3d" stroke-width="2"/>
+                          <circle class="theme-ring theme-ring--delay" cx="42" cy="42" r="18" fill="none" stroke="#7ea85f" stroke-width="2"/>
+                          <path d="M18 60 C29 43, 39 47, 49 31 S63 28, 68 18" fill="none" stroke="#1a4d2e" stroke-width="2.5" stroke-linecap="round"/>
+                          <circle class="theme-dot" cx="26" cy="55" r="3" fill="#1a4d2e"/>
+                          <circle class="theme-dot" cx="43" cy="43" r="3" fill="#4d9b36"/>
+                          <circle class="theme-dot" cx="60" cy="28" r="3" fill="#7ea85f"/>
+                        </svg>
+                      </div>
+                      <div class="event-theme__copy">
+                        <h3>Measuring Subjective Effects</h3>
+                        <p>
+                          Open-science methods, validated questionnaires, psychometrics, and state-space mapping for
+                          comparing altered-state reports without flattening phenomenological detail.
+                        </p>
+                      </div>
                     </article>
                     <article class="event-theme">
-                      <h3>Virtual Reality Approaches</h3>
-                      <p>
-                        VR, bioresponsive systems, hallucination simulations, and immersive tools for eliciting,
-                        modeling, and studying changes in self-representation and perception.
-                      </p>
+                      <div class="event-theme__visual event-theme__visual--vr" aria-hidden="true">
+                        <svg viewBox="0 0 84 84" focusable="false">
+                          <rect width="84" height="84" fill="#f8faf8"/>
+                          <rect x="18" y="28" width="48" height="28" rx="8" fill="#ffffff" stroke="#2d7f7b" stroke-width="3"/>
+                          <path d="M18 41 H10 M66 41 H74" stroke="#2d7f7b" stroke-width="3" stroke-linecap="round"/>
+                          <circle cx="32" cy="42" r="7" fill="none" stroke="#1a4d2e" stroke-width="2"/>
+                          <circle cx="52" cy="42" r="7" fill="none" stroke="#1a4d2e" stroke-width="2"/>
+                          <rect class="theme-headset-glow" x="22" y="32" width="40" height="20" rx="6" fill="#2d7f7b" opacity="0.24"/>
+                          <line class="theme-scan" x1="24" y1="42" x2="60" y2="42" stroke="#7ea85f" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M30 62 C38 66, 46 66, 54 62" fill="none" stroke="#6f8a68" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                      </div>
+                      <div class="event-theme__copy">
+                        <h3>Virtual Reality Approaches</h3>
+                        <p>
+                          VR, bioresponsive systems, hallucination simulations, and immersive tools for eliciting,
+                          modeling, and studying changes in self-representation and perception.
+                        </p>
+                      </div>
                     </article>
                     <article class="event-theme">
-                      <h3>Lived Experience</h3>
-                      <p>
-                        Micro-phenomenology, contemplative practice, sound and art sessions, and first-person methods
-                        that make subjective structure part of the research process.
-                      </p>
+                      <div class="event-theme__visual event-theme__visual--lived" aria-hidden="true">
+                        <svg viewBox="0 0 84 84" focusable="false">
+                          <rect width="84" height="84" fill="#f8faf8"/>
+                          <circle class="theme-aura" cx="42" cy="43" r="29" fill="none" stroke="#a56f2f" stroke-width="2"/>
+                          <circle class="theme-aura theme-ring--delay" cx="42" cy="43" r="19" fill="none" stroke="#8fbf4d" stroke-width="2"/>
+                          <g class="theme-figure">
+                            <circle cx="42" cy="30" r="8" fill="#1a4d2e"/>
+                            <path d="M42 39 C32 45, 29 56, 27 66 M42 39 C52 45, 55 56, 57 66 M33 52 H51" fill="none" stroke="#1a4d2e" stroke-width="4" stroke-linecap="round"/>
+                          </g>
+                          <path d="M18 22 C25 16, 32 16, 38 22" fill="none" stroke="#6f8a68" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M46 20 C55 14, 64 17, 68 26" fill="none" stroke="#a56f2f" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                      </div>
+                      <div class="event-theme__copy">
+                        <h3>Lived Experience</h3>
+                        <p>
+                          Micro-phenomenology, contemplative practice, sound and art sessions, and first-person methods
+                          that make subjective structure part of the research process.
+                        </p>
+                      </div>
                     </article>
                     <article class="event-theme">
-                      <h3>Formal State Spaces</h3>
-                      <p>
-                        QRI-led work on computational phenomenology, valence, coupling dynamics, visual-state
-                        classifications, and mathematical models of non-ordinary experience.
-                      </p>
+                      <div class="event-theme__visual event-theme__visual--formal" aria-hidden="true">
+                        <svg viewBox="0 0 84 84" focusable="false">
+                          <rect width="84" height="84" fill="#f8faf8"/>
+                          <path d="M42 14 L66 28 V56 L42 70 L18 56 V28 Z" fill="none" stroke="#63745a" stroke-width="2"/>
+                          <path d="M22 30 L42 42 L62 30 M22 54 L42 42 L62 54 M42 18 V66" fill="none" stroke="#9aa68e" stroke-width="1.5"/>
+                          <circle class="theme-node" cx="42" cy="18" r="4" fill="#1a4d2e"/>
+                          <circle class="theme-node" cx="64" cy="30" r="4" fill="#63745a"/>
+                          <circle class="theme-node" cx="62" cy="55" r="4" fill="#4d9b36"/>
+                          <circle class="theme-node" cx="42" cy="66" r="4" fill="#1a4d2e"/>
+                          <circle class="theme-node" cx="20" cy="55" r="4" fill="#63745a"/>
+                          <circle class="theme-node" cx="20" cy="30" r="4" fill="#4d9b36"/>
+                          <circle cx="42" cy="42" r="5" fill="#ffffff" stroke="#1a4d2e" stroke-width="2"/>
+                        </svg>
+                      </div>
+                      <div class="event-theme__copy">
+                        <h3>Formal State Spaces</h3>
+                        <p>
+                          QRI-led work on computational phenomenology, valence, coupling dynamics, visual-state
+                          classifications, and mathematical models of non-ordinary experience.
+                        </p>
+                      </div>
                     </article>
                   </div>
                 </section>

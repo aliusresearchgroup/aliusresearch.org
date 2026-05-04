@@ -9,6 +9,9 @@ body {
   --alius-muted: #6b7571;
   --alius-line: rgba(66, 81, 76, 0.18);
   --alius-paper: #ffffff;
+  --alius-anchor-width: 188px;
+  --alius-page-gutter: 48px;
+  --alius-prose-measure: 72ch;
 }
 
 #header {
@@ -85,7 +88,7 @@ body {
   top: 310px;
   left: 0;
   z-index: 850;
-  width: 188px;
+  width: var(--alius-anchor-width);
   max-height: calc(100vh - 340px);
   overflow: auto;
   padding: 12px 0;
@@ -241,6 +244,9 @@ body.wsite-page-bulletin #wsite-content p {
   font-size: 16px !important;
   line-height: 1.72 !important;
   color: #3f4d49 !important;
+  max-width: var(--alius-prose-measure);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 body.wsite-page-bulletin #wsite-content .paragraph * {
@@ -275,6 +281,84 @@ body.wsite-page-bulletin #wsite-content .wsite-section-content {
   min-height: 0 !important;
 }
 
+body.wsite-page-bulletin #wsite-content > .wsite-section-wrap.bulletin-pdf-section .wsite-body-section {
+  height: auto !important;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-embed {
+  max-width: min(920px, 100%);
+  margin: 0 auto 58px;
+  padding: 0 24px;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-embed__header {
+  max-width: var(--alius-prose-measure);
+  margin: 0 auto 18px;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-embed__header h3 {
+  margin: 0 0 6px;
+  color: var(--alius-green);
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-embed__header p {
+  margin: 0;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-card {
+  border: 1px solid var(--alius-line);
+  border-left: 3px solid var(--alius-leaf);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-card__title {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--alius-line);
+  font-family: Raleway, sans-serif;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-card__title h4 {
+  margin: 0;
+  color: #2c3b35;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-card__title a {
+  flex: 0 0 auto;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-frame {
+  display: block;
+  width: 100%;
+  height: min(72vh, 680px);
+  min-height: 420px;
+  border: 0;
+  background: #f6f8f7;
+}
+
+body.wsite-page-bulletin .bulletin-pdf-grid--compact .bulletin-pdf-frame {
+  height: 460px;
+  min-height: 360px;
+}
+
 body.wsite-page-bulletin #wsite-content > .wsite-section-wrap .wsite-body-section:not([class*="wsite-background-"]) {
   height: 156px !important;
 }
@@ -287,7 +371,7 @@ body.wsite-page-bulletin #wsite-content > .wsite-section-wrap:first-child .wsite
   body.no-header #wsite-content {
     box-sizing: border-box;
     padding-right: 32px !important;
-    padding-left: 235px !important;
+    padding-left: calc(var(--alius-anchor-width) + var(--alius-page-gutter)) !important;
   }
 }
 
@@ -304,6 +388,7 @@ body.wsite-page-team .team-card:focus-visible {
     left: 0;
     width: auto;
     max-height: none;
+    overflow-x: hidden;
     padding: 7px max(12px, env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
     border-right: 0;
     border-bottom: 0;
@@ -317,6 +402,7 @@ body.wsite-page-team .team-card:focus-visible {
   .alius-anchor-nav ol {
     display: flex;
     gap: 6px;
+    max-width: 100%;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -348,6 +434,27 @@ body.wsite-page-team .team-card:focus-visible {
 
   #wsite-content {
     padding-bottom: calc(76px + env(safe-area-inset-bottom)) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  body.wsite-page-bulletin .bulletin-pdf-embed {
+    padding: 0 16px;
+  }
+
+  body.wsite-page-bulletin .bulletin-pdf-card__title {
+    display: block;
+  }
+
+  body.wsite-page-bulletin .bulletin-pdf-card__title a {
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  body.wsite-page-bulletin .bulletin-pdf-frame,
+  body.wsite-page-bulletin .bulletin-pdf-grid--compact .bulletin-pdf-frame {
+    height: 420px;
+    min-height: 320px;
   }
 }
 
