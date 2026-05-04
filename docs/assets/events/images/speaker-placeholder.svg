@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="135" height="135" viewBox="0 0 135 135" role="img" aria-labelledby="title">
+  <title id="title">ALIUS speaker placeholder</title>
+  <rect width="135" height="135" fill="#ffffff"/>
+  <circle cx="67.5" cy="67.5" r="49" fill="#f7faf6" stroke="#1a7f46" stroke-width="2"/>
+  <path d="M51 76c4-13 10-23 18-31 8 8 13 18 16 31-7-4-13-6-17-6-5 0-11 2-17 6z" fill="#1a7f46"/>
+  <path d="M62 47c-5 9-7 19-5 30-8-6-12-14-12-25 6 1 12-1 17-5z" fill="#72b52d"/>
+  <text x="67.5" y="104" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#24543a">ALIUS</text>
+</svg>

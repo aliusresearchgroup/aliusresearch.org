@@ -31,6 +31,10 @@ foreach ($r in $redirects) {
   $from = [string]$r.from
   if ([string]::IsNullOrWhiteSpace($from)) { continue }
   $target = [string]$r.to
+  $fromNormalized = "/" + $from.TrimStart("/")
+  if (($fromNormalized -eq "/index.html" -or $fromNormalized -eq "/") -and $target -eq "/") {
+    continue
+  }
   $fromTrim = $from.TrimStart("/")
   $relativeTarget = $fromTrim -replace "/", "\"
   $hasFileExtension = -not [string]::IsNullOrWhiteSpace([System.IO.Path]::GetExtension($fromTrim))

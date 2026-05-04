@@ -52,8 +52,34 @@ if (Test-Path -LiteralPath $staticRoot) {
   }
 }
 
-$pages = Get-Content -LiteralPath (Join-Path $dataRoot "pages.json") -Raw | ConvertFrom-Json |
-  Where-Object { [string]::IsNullOrWhiteSpace([string]$_.status) -or [string]$_.status -eq "published" }
+# Copy human-facing page assets from the top-level source folders into clean
+# public asset folders. These folders mirror the live navigation structure while
+# docs/ remains generated GitHub Pages output.
+$sectionAssetRoots = @(
+  @{ Source = "Shared\assets"; Destination = "assets\shared" },
+  @{ Source = "Home\assets"; Destination = "assets\home" },
+  @{ Source = "About\assets"; Destination = "assets\about" },
+  @{ Source = "Team\assets"; Destination = "assets\team" },
+  @{ Source = "Bulletin\assets"; Destination = "assets\bulletin" },
+  @{ Source = "Journal Clubs\assets"; Destination = "assets\journal-clubs" },
+  @{ Source = "Events\assets"; Destination = "assets\events" },
+  @{ Source = "Membership\assets"; Destination = "assets\membership" }
+)
+
+foreach ($assetRoot in $sectionAssetRoots) {
+  $sourcePath = Join-Path $RepoRoot $assetRoot.Source
+  if (-not (Test-Path -LiteralPath $sourcePath)) {
+    continue
+  }
+  Get-ChildItem -LiteralPath $sourcePath -Recurse -File | ForEach-Object {
+    $rel = Get-RelativePathUnix -Root $sourcePath -Path $_.FullName
+    $dest = Join-Path $docsRoot (($assetRoot.Destination + "/" + $rel) -replace "/", "\")
+    Copy-FilePreserveTimestamp -SourcePath $_.FullName -DestinationPath $dest
+  }
+}
+
+$pages = Get-Content -LiteralPath (Join-Path $dataRoot "pages.json") -Raw | ConvertFrom-Json
+$pages = @($pages) | Where-Object { [string]::IsNullOrWhiteSpace([string]$_.status) -or [string]$_.status -eq "published" }
 $rewrittenIndexPath = Join-Path $migrationRoot "rewritten-page-sources.csv"
 $rewrittenLookup = @{}
 if (Test-Path -LiteralPath $rewrittenIndexPath) {
@@ -66,7 +92,14 @@ $pageCount = 0
 foreach ($page in $pages) {
   $legacy = [string]$page.legacy_path
   $canonical = [string]$page.canonical_path
-  $sourceRel = if ($rewrittenLookup.ContainsKey($legacy)) { $rewrittenLookup[$legacy] } else { [string]$page.source_html }
+  $declaredSource = [string]$page.source_html
+  $sourceRel = if (-not [string]::IsNullOrWhiteSpace($declaredSource)) {
+    $declaredSource
+  } elseif ($rewrittenLookup.ContainsKey($legacy)) {
+    $rewrittenLookup[$legacy]
+  } else {
+    ""
+  }
   $sourceAbs = Join-Path $siteSrcPath ($sourceRel -replace "/", "\")
   if (-not (Test-Path -LiteralPath $sourceAbs)) {
     Write-Warning "Missing source for page ${legacy}: $sourceAbs"
