@@ -111,7 +111,12 @@
       list.appendChild(li);
     });
     if (!list.children.length) return;
-    document.body.appendChild(nav);
+    var mount = document.getElementById('content-wrapper') || document.getElementById('wsite-content');
+    if (mount && mount.parentNode) {
+      mount.parentNode.insertBefore(nav, mount);
+    } else {
+      document.body.appendChild(nav);
+    }
   }
 
   function wireSmoothScroll() {

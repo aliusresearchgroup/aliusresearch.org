@@ -382,17 +382,18 @@ body.wsite-page-team .team-card:focus-visible {
 
 @media (max-width: 1180px) {
   .alius-anchor-nav {
-    top: auto;
+    position: sticky;
+    top: 52px;
     right: 0;
-    bottom: 0;
+    bottom: auto;
     left: 0;
     width: auto;
     max-height: none;
     overflow-x: hidden;
     padding: 7px max(12px, env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
     border-right: 0;
-    border-bottom: 0;
     border-left: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   }
 
   .alius-anchor-nav__title {
@@ -433,7 +434,7 @@ body.wsite-page-team .team-card:focus-visible {
   }
 
   #wsite-content {
-    padding-bottom: calc(76px + env(safe-area-inset-bottom)) !important;
+    padding-bottom: calc(28px + env(safe-area-inset-bottom)) !important;
   }
 }
 
