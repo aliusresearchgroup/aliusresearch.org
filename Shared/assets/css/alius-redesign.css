@@ -494,6 +494,16 @@ body.wsite-page-team .team-card:focus-visible {
     font-size: 10.5px;
   }
 
+  .alius-anchor-nav {
+    top: 136px;
+    z-index: 840;
+  }
+
+  .alius-anchor-target,
+  [id] {
+    scroll-margin-top: 224px;
+  }
+
   #navigation li,
   #navigation .wsite-menu-item-wrap {
     display: block !important;

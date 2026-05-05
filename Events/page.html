@@ -293,31 +293,93 @@
                   line-height: 1.48 !important;
                 }
 
-                body.wsite-page-events .theme-ring,
-                body.wsite-page-events .theme-aura {
+                body.wsite-page-events .event-theme__visual--measure,
+                body.wsite-page-events .event-theme__visual--vr,
+                body.wsite-page-events .event-theme__visual--lived {
+                  background: #f8faf8;
+                }
+
+                body.wsite-page-events .theme-measure-liquid {
+                  transform-box: fill-box;
+                  transform-origin: left center;
+                  animation: themeMeasureFill 5.8s ease-in-out infinite;
+                }
+
+                body.wsite-page-events .theme-measure-liquid--second {
+                  animation-delay: 0.9s;
+                }
+
+                body.wsite-page-events .theme-measure-liquid--third {
+                  animation-delay: 1.7s;
+                }
+
+                body.wsite-page-events .theme-measure-orbit {
+                  transform-box: fill-box;
                   transform-origin: center;
-                  animation: themePulse 4s ease-in-out infinite;
+                  animation: themeMeasureOrbit 9s linear infinite;
                 }
 
-                body.wsite-page-events .theme-ring--delay {
-                  animation-delay: 1.25s;
+                body.wsite-page-events .theme-measure-orbit--reverse {
+                  animation-direction: reverse;
+                  animation-duration: 7s;
                 }
 
-                body.wsite-page-events .theme-dot {
-                  animation: themeDrift 3.4s ease-in-out infinite alternate;
+                body.wsite-page-events .theme-measure-core {
+                  transform-box: fill-box;
+                  transform-origin: center;
+                  animation: themeMeasureCore 3.8s ease-in-out infinite;
                 }
 
-                body.wsite-page-events .theme-scan {
-                  animation: themeScan 3s ease-in-out infinite;
+                body.wsite-page-events .theme-vr-kernel {
+                  transform-box: fill-box;
+                  transform-origin: center;
+                  animation: themeVrDrift 10s linear infinite;
                 }
 
-                body.wsite-page-events .theme-headset-glow {
-                  animation: themeGlow 4s ease-in-out infinite;
+                body.wsite-page-events .theme-vr-ring,
+                body.wsite-page-events .theme-vr-node {
+                  transform-box: fill-box;
+                  transform-origin: center;
+                  animation: themeVrPulse 4.4s ease-in-out infinite;
                 }
 
-                body.wsite-page-events .theme-figure {
-                  animation: themeSway 5s ease-in-out infinite;
-                  transform-origin: 42px 56px;
+                body.wsite-page-events .theme-vr-ring--delay,
+                body.wsite-page-events .theme-vr-node:nth-of-type(2n) {
+                  animation-delay: 1.1s;
+                }
+
+                body.wsite-page-events .theme-lived-wave {
+                  transform-box: fill-box;
+                  transform-origin: center;
+                  animation: themeLivedWave 7.5s ease-in-out infinite;
+                }
+
+                body.wsite-page-events .theme-lived-wave--delay {
+                  animation-delay: 1.2s;
+                }
+
+                body.wsite-page-events .theme-lived-body {
+                  animation: themeLivedHue 18s linear infinite;
+                }
+
+                body.wsite-page-events .theme-lived-ring {
+                  transform-box: fill-box;
+                  transform-origin: center;
+                  animation: themeLivedRipple 4.8s ease-out infinite;
+                }
+
+                body.wsite-page-events .theme-lived-ring--delay {
+                  animation-delay: 1.6s;
+                }
+
+                body.wsite-page-events .theme-lived-profile {
+                  transform-box: fill-box;
+                  transform-origin: center;
+                  animation: themeLivedFloat 5.5s ease-in-out infinite;
+                }
+
+                body.wsite-page-events .theme-lived-profile--right {
+                  animation-delay: 0.8s;
                 }
 
                 body.wsite-page-events .theme-node {
@@ -329,30 +391,50 @@
                   animation-delay: 0.8s;
                 }
 
-                @keyframes themePulse {
-                  0%, 100% { transform: scale(0.9); opacity: 0.38; }
-                  50% { transform: scale(1.08); opacity: 0.78; }
+                @keyframes themeMeasureFill {
+                  0%, 100% { transform: scaleX(0.28); opacity: 0.72; }
+                  48% { transform: scaleX(1); opacity: 1; }
+                  72% { transform: scaleX(0.62); opacity: 0.9; }
                 }
 
-                @keyframes themeDrift {
-                  from { transform: translateY(-3px); opacity: 0.55; }
-                  to { transform: translateY(4px); opacity: 1; }
+                @keyframes themeMeasureOrbit {
+                  from { transform: rotate(0deg); }
+                  to { transform: rotate(360deg); }
                 }
 
-                @keyframes themeScan {
-                  0%, 100% { transform: translateY(-18px); opacity: 0; }
-                  45%, 55% { opacity: 0.8; }
-                  100% { transform: translateY(20px); }
+                @keyframes themeMeasureCore {
+                  0%, 100% { transform: scale(0.86); opacity: 0.72; }
+                  50% { transform: scale(1.12); opacity: 1; }
                 }
 
-                @keyframes themeGlow {
-                  0%, 100% { opacity: 0.25; }
-                  50% { opacity: 0.72; }
+                @keyframes themeVrDrift {
+                  from { transform: translate(-4px, -3px); }
+                  to { transform: translate(4px, 3px); }
                 }
 
-                @keyframes themeSway {
-                  0%, 100% { transform: rotate(-2deg); }
-                  50% { transform: rotate(2deg); }
+                @keyframes themeVrPulse {
+                  0%, 100% { transform: scale(0.82); opacity: 0.55; }
+                  50% { transform: scale(1.16); opacity: 1; }
+                }
+
+                @keyframes themeLivedWave {
+                  0%, 100% { transform: translateY(-3px); opacity: 0.54; }
+                  50% { transform: translateY(4px); opacity: 0.9; }
+                }
+
+                @keyframes themeLivedHue {
+                  from { filter: hue-rotate(0deg); }
+                  to { filter: hue-rotate(360deg); }
+                }
+
+                @keyframes themeLivedRipple {
+                  0% { transform: scale(0.68); opacity: 0.72; }
+                  70%, 100% { transform: scale(1.26); opacity: 0; }
+                }
+
+                @keyframes themeLivedFloat {
+                  0%, 100% { transform: translateY(-2px); }
+                  50% { transform: translateY(3px); }
                 }
 
                 @keyframes themeNode {
@@ -529,7 +611,7 @@
                 @media (max-width: 860px) {
                   body.wsite-page-events .event-section,
                   body.wsite-page-events .event-timeline {
-                    scroll-margin-top: 156px;
+                    scroll-margin-top: 224px;
                   }
 
                   body.wsite-page-events .events-page {
@@ -594,12 +676,16 @@
                 @media (prefers-reduced-motion: reduce) {
                   body.wsite-page-events .event-speaker-card,
                   body.wsite-page-events .event-speaker-card__bio,
-                  body.wsite-page-events .theme-ring,
-                  body.wsite-page-events .theme-aura,
-                  body.wsite-page-events .theme-dot,
-                  body.wsite-page-events .theme-scan,
-                  body.wsite-page-events .theme-headset-glow,
-                  body.wsite-page-events .theme-figure,
+                  body.wsite-page-events .theme-measure-liquid,
+                  body.wsite-page-events .theme-measure-orbit,
+                  body.wsite-page-events .theme-measure-core,
+                  body.wsite-page-events .theme-vr-kernel,
+                  body.wsite-page-events .theme-vr-ring,
+                  body.wsite-page-events .theme-vr-node,
+                  body.wsite-page-events .theme-lived-wave,
+                  body.wsite-page-events .theme-lived-body,
+                  body.wsite-page-events .theme-lived-ring,
+                  body.wsite-page-events .theme-lived-profile,
                   body.wsite-page-events .theme-node {
                     transition: none !important;
                     animation: none !important;
@@ -663,14 +749,32 @@
                   <div class="event-themes">
                     <article class="event-theme">
                       <div class="event-theme__visual event-theme__visual--measure" aria-hidden="true">
-                        <svg viewBox="0 0 84 84" focusable="false">
-                          <rect width="84" height="84" fill="#f8faf8"/>
-                          <circle class="theme-ring" cx="42" cy="42" r="28" fill="none" stroke="#3d8b3d" stroke-width="2"/>
-                          <circle class="theme-ring theme-ring--delay" cx="42" cy="42" r="18" fill="none" stroke="#7ea85f" stroke-width="2"/>
-                          <path d="M18 60 C29 43, 39 47, 49 31 S63 28, 68 18" fill="none" stroke="#1a4d2e" stroke-width="2.5" stroke-linecap="round"/>
-                          <circle class="theme-dot" cx="26" cy="55" r="3" fill="#1a4d2e"/>
-                          <circle class="theme-dot" cx="43" cy="43" r="3" fill="#4d9b36"/>
-                          <circle class="theme-dot" cx="60" cy="28" r="3" fill="#7ea85f"/>
+                        <svg viewBox="0 0 84 84" focusable="false" data-original-theme-animation="track-1-thermometers-torus">
+                          <rect width="84" height="84" fill="#fbfdfb"/>
+                          <g font-family="Georgia, serif" font-size="5.2" font-weight="700" fill="#42514c">
+                            <text x="9" y="15">Unity</text>
+                            <text x="9" y="34">Bliss</text>
+                            <text x="9" y="53">Vision</text>
+                          </g>
+                          <g>
+                            <circle cx="10" cy="21" r="4.4" fill="#cfe5bf" stroke="#d7ded7" stroke-width="1"/>
+                            <rect x="10" y="17" width="31" height="8" rx="4" fill="#eef3ee" stroke="#d7ded7" stroke-width="1"/>
+                            <rect class="theme-measure-liquid" x="11.5" y="18.5" width="28" height="5" rx="2.5" fill="#8bc34a"/>
+                            <circle cx="10" cy="40" r="4.4" fill="#cfe5bf" stroke="#d7ded7" stroke-width="1"/>
+                            <rect x="10" y="36" width="31" height="8" rx="4" fill="#eef3ee" stroke="#d7ded7" stroke-width="1"/>
+                            <rect class="theme-measure-liquid theme-measure-liquid--second" x="11.5" y="37.5" width="28" height="5" rx="2.5" fill="#4d9b36"/>
+                            <circle cx="10" cy="59" r="4.4" fill="#cfe5bf" stroke="#d7ded7" stroke-width="1"/>
+                            <rect x="10" y="55" width="31" height="8" rx="4" fill="#eef3ee" stroke="#d7ded7" stroke-width="1"/>
+                            <rect class="theme-measure-liquid theme-measure-liquid--third" x="11.5" y="56.5" width="28" height="5" rx="2.5" fill="#1a4d2e"/>
+                          </g>
+                          <g transform="translate(56 46)">
+                            <ellipse class="theme-measure-orbit" cx="0" cy="0" rx="20" ry="8" fill="none" stroke="#1a4d2e" stroke-width="1.6" opacity="0.72"/>
+                            <ellipse class="theme-measure-orbit theme-measure-orbit--reverse" cx="0" cy="0" rx="20" ry="8" fill="none" stroke="#8bc34a" stroke-width="1.4" opacity="0.64" transform="rotate(60)"/>
+                            <ellipse class="theme-measure-orbit" cx="0" cy="0" rx="20" ry="8" fill="none" stroke="#2d7f7b" stroke-width="1.2" opacity="0.46" transform="rotate(120)"/>
+                            <circle class="theme-measure-core" cx="0" cy="0" r="5" fill="#ffffff" stroke="#1a4d2e" stroke-width="1.5"/>
+                            <circle cx="-15" cy="-10" r="4" fill="#ffffff" stroke="#7ea85f" stroke-width="1"/>
+                            <circle cx="14" cy="11" r="4" fill="#ffffff" stroke="#1a4d2e" stroke-width="1"/>
+                          </g>
                         </svg>
                       </div>
                       <div class="event-theme__copy">
@@ -683,15 +787,34 @@
                     </article>
                     <article class="event-theme">
                       <div class="event-theme__visual event-theme__visual--vr" aria-hidden="true">
-                        <svg viewBox="0 0 84 84" focusable="false">
-                          <rect width="84" height="84" fill="#f8faf8"/>
-                          <rect x="18" y="28" width="48" height="28" rx="8" fill="#ffffff" stroke="#2d7f7b" stroke-width="3"/>
-                          <path d="M18 41 H10 M66 41 H74" stroke="#2d7f7b" stroke-width="3" stroke-linecap="round"/>
-                          <circle cx="32" cy="42" r="7" fill="none" stroke="#1a4d2e" stroke-width="2"/>
-                          <circle cx="52" cy="42" r="7" fill="none" stroke="#1a4d2e" stroke-width="2"/>
-                          <rect class="theme-headset-glow" x="22" y="32" width="40" height="20" rx="6" fill="#2d7f7b" opacity="0.24"/>
-                          <line class="theme-scan" x1="24" y1="42" x2="60" y2="42" stroke="#7ea85f" stroke-width="2" stroke-linecap="round"/>
-                          <path d="M30 62 C38 66, 46 66, 54 62" fill="none" stroke="#6f8a68" stroke-width="2" stroke-linecap="round"/>
+                        <svg viewBox="0 0 100 100" focusable="false" data-original-theme-animation="track-2-vr-headset-kernel">
+                          <defs>
+                            <clipPath id="assc-vr-screen">
+                              <path d="m85.14,70.02c-2.5,0-5.99-.52-10.11-1.14-2.58-.39-5.25-.79-8.02-1.11-.97-.11-1.93-.22-2.86-.32-7.62-.82-13.65-1.46-17.69-7.41-4.77-7.01-4.04-15.04-1.78-20.22,2.39-5.45,8.15-6.41,8.79-6.5h.1c2.65-.26,5.82-.22,9.36.11,1.41.13,2.89.31,4.39.53,11.98,1.76,17.14,3.11,20.46,5.32,3.45,2.3,7.47,7.92,7.47,16.21,0,7.84-2.09,11.71-7.71,14.27-.65.18-1.46.26-2.43.26Z"/>
+                            </clipPath>
+                          </defs>
+                          <rect width="100" height="100" fill="#f5f7f5"/>
+                          <g clip-path="url(#assc-vr-screen)">
+                            <rect width="100" height="100" fill="#050606"/>
+                            <g class="theme-vr-kernel">
+                              <line x1="50" y1="50" x2="35" y2="40" stroke="#ff5252" stroke-width="0.7" stroke-opacity="0.55"/>
+                              <line x1="50" y1="50" x2="65" y2="40" stroke="#ffeb3b" stroke-width="0.7" stroke-opacity="0.55"/>
+                              <line x1="50" y1="50" x2="65" y2="60" stroke="#4caf50" stroke-width="0.7" stroke-opacity="0.55"/>
+                              <line x1="50" y1="50" x2="35" y2="60" stroke="#2196f3" stroke-width="0.7" stroke-opacity="0.55"/>
+                              <circle class="theme-vr-ring" cx="50" cy="50" r="15" fill="none" stroke="#4834d4" stroke-width="1.4" stroke-opacity="0.8"/>
+                              <circle class="theme-vr-ring theme-vr-ring--delay" cx="50" cy="50" r="9" fill="none" stroke="#4caf50" stroke-width="1.2" stroke-opacity="0.8"/>
+                              <circle class="theme-vr-node" cx="35" cy="40" r="6" fill="none" stroke="#9c27b0" stroke-width="1.1" stroke-opacity="0.88"/>
+                              <circle class="theme-vr-node" cx="65" cy="40" r="6" fill="none" stroke="#ff9800" stroke-width="1.1" stroke-opacity="0.88"/>
+                              <circle class="theme-vr-node" cx="35" cy="60" r="6" fill="none" stroke="#e91e63" stroke-width="1.1" stroke-opacity="0.88"/>
+                              <circle class="theme-vr-node" cx="65" cy="60" r="6" fill="none" stroke="#03a9f4" stroke-width="1.1" stroke-opacity="0.88"/>
+                              <circle cx="50" cy="50" r="2.5" fill="#ffeb3b" opacity="0.85"/>
+                            </g>
+                          </g>
+                          <path d="m75.22,73.47c-1.43,0-4-.64-4-1.92,0-.51.15-.75.29-.95.07-.09.09-.12.09-.35,0-.21-.92-1.05-5.2-1.05-1.87,0-3.61.25-5.46.51-2.17.31-4.64.66-7.75.66-5.22,0-15.48-1.42-20.81-6.75-2.59-2.59-3.9-5.84-3.9-9.67,0-.3.03-.64.1-1l.04-.26,1.91-.88c2.29-1.05,4.1-1.89,4.96-2.32,1.12-.56,2.21-2.34,2.77-4.53.46-1.8.44-3.43-.06-4.15l-.3-.43.44-.28c.45-.28.91-.56,1.39-.82,2.5-1.37,4.4-2.4,5.84-3.16,2.15-1.14,3.25-1.69,3.72-1.92.31-.15.64-.27.97-.36.61-.15,1.66-.36,3.2-.51l.12.99c-.59.08-5.85.96-8.02,5.91-2.16,4.93-2.85,12.58,1.69,19.26,3.78,5.56,9.6,6.19,16.97,6.97.93.1,1.89.2,2.87.32,2.78.33,5.46.73,8.05,1.12,5.36.8,10,1.5,12.05.93l.34.94c-.63.29-1.33.57-2.08.83-5.44,1.91-7.79,2.62-9.29,2.82-.36.04-.67.06-.97.06Z" fill="#333"/>
+                          <path d="m85.14,70.02c-2.5,0-5.99-.52-10.11-1.14-2.58-.39-5.25-.79-8.02-1.11-.97-.11-1.93-.22-2.86-.32-7.62-.82-13.65-1.46-17.69-7.41-4.77-7.01-4.04-15.04-1.78-20.22,2.39-5.45,8.15-6.41,8.79-6.5h.1c2.65-.26,5.82-.22,9.36.11,1.41.13,2.89.31,4.39.53,11.98,1.76,17.14,3.11,20.46,5.32,3.45,2.3,7.47,7.92,7.47,16.21,0,7.84-2.09,11.71-7.71,14.27-.65.18-1.46.26-2.43.26Z" fill="none" stroke="#1b211e" stroke-width="1.4"/>
+                          <path d="m76.13,72.91v2.26c-1.04,1.04-2.33,1.42-3.62,1.42s-3.5-.52-4.27-1.55-.65-4.92-.65-4.92c-2.85,0-7.77.52-12.56,1.94-.9.27-1.97.46-3.14.59-5.05.55-11.93-.06-14.97-.59-2.98-.51-7.68-2.42-10.4-6.75-.7-1.12-1.27-2.4-1.64-3.86-.54-2.13-.76-4.18-.66-6.16,1.69-.79,3.35-1.56,4.89-2.27-.06.34-.09.65-.09.92,0,2.72.65,6.21,3.75,9.32,5.05,5.05,14.76,6.6,20.45,6.6s9.06-1.17,13.2-1.17,5.7.78,5.7,1.55-.39.52-.39,1.29,2.07,1.42,3.5,1.42c.28,0,.57-.02.91-.06Z" fill="#222"/>
+                          <path d="m5.08,67.42l-.36-10.91.02-.08c.71-2.47,4.73-5.28,13.02-9.12,1.03-.48,2.13-.97,3.27-1.47,2.75-1.21,5.64-2.47,8.15-3.5h0l1.14-.47c5.64-2.29,7.3-2.55,8.05-2.25.3.16.5.35.67.6.67.98.75,2.83.2,4.97-.5,1.96-1.63,4.35-3.29,5.18h0c-.87.44-2.69,1.27-4.99,2.33l-1.67.77c-1.53.71-3.2,1.48-4.88,2.27-3.32,1.56-5.95,2.83-8.03,3.89-.94.48-1.8.93-2.55,1.35-.53.29-1.02.57-1.49.84-4.28,2.49-6.28,4.26-6.28,5.58l-1,.02Z" fill="#444"/>
+                          <path d="m45.85,36.54c-1.43.76-3.34,1.79-5.83,3.16-.47.26-.93.53-1.37.81-.12-.18-.27-.32-.45-.42-.8-.32-3.5.55-7.68,2.25,5.4-5.13,15.33-5.79,15.33-5.79Z" fill="#555"/>
                         </svg>
                       </div>
                       <div class="event-theme__copy">
@@ -704,16 +827,34 @@
                     </article>
                     <article class="event-theme">
                       <div class="event-theme__visual event-theme__visual--lived" aria-hidden="true">
-                        <svg viewBox="0 0 84 84" focusable="false">
-                          <rect width="84" height="84" fill="#f8faf8"/>
-                          <circle class="theme-aura" cx="42" cy="43" r="29" fill="none" stroke="#a56f2f" stroke-width="2"/>
-                          <circle class="theme-aura theme-ring--delay" cx="42" cy="43" r="19" fill="none" stroke="#8fbf4d" stroke-width="2"/>
-                          <g class="theme-figure">
-                            <circle cx="42" cy="30" r="8" fill="#1a4d2e"/>
-                            <path d="M42 39 C32 45, 29 56, 27 66 M42 39 C52 45, 55 56, 57 66 M33 52 H51" fill="none" stroke="#1a4d2e" stroke-width="4" stroke-linecap="round"/>
+                        <svg viewBox="0 0 84 84" focusable="false" data-original-theme-animation="track-3-lived-waves-profiles">
+                          <defs>
+                            <clipPath id="assc-lived-body">
+                              <path d="M42 10c-8.2 0-13.8 6.2-13.8 15.2 0 5.1 1.8 9.2 5.1 12.2-2.6 5-4.3 12-4.7 19.8-.3 5.4-.1 10.9.5 16.2h25.8c.6-5.3.8-10.8.5-16.2-.4-7.8-2.1-14.8-4.7-19.8 3.3-3 5.1-7.1 5.1-12.2C55.8 16.2 50.2 10 42 10Z"/>
+                            </clipPath>
+                          </defs>
+                          <rect width="84" height="84" fill="#0f211d"/>
+                          <g clip-path="url(#assc-lived-body)" class="theme-lived-body">
+                            <rect width="84" height="84" fill="#0f211d"/>
+                            <path class="theme-lived-wave" d="M-4 18 Q17 10 38 18 T88 18" fill="none" stroke="#0d7377" stroke-width="3" opacity="0.78"/>
+                            <path class="theme-lived-wave theme-lived-wave--delay" d="M-4 30 Q17 22 38 30 T88 30" fill="none" stroke="#13475f" stroke-width="2.4" opacity="0.72"/>
+                            <path class="theme-lived-wave" d="M-4 42 Q17 34 38 42 T88 42" fill="none" stroke="#00897b" stroke-width="2.2" opacity="0.68"/>
+                            <path class="theme-lived-wave theme-lived-wave--delay" d="M-4 54 Q17 46 38 54 T88 54" fill="none" stroke="#43a047" stroke-width="2" opacity="0.62"/>
+                            <path class="theme-lived-wave" d="M-4 66 Q17 58 38 66 T88 66" fill="none" stroke="#0d7377" stroke-width="1.8" opacity="0.58"/>
                           </g>
-                          <path d="M18 22 C25 16, 32 16, 38 22" fill="none" stroke="#6f8a68" stroke-width="2" stroke-linecap="round"/>
-                          <path d="M46 20 C55 14, 64 17, 68 26" fill="none" stroke="#a56f2f" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M42 10c-8.2 0-13.8 6.2-13.8 15.2 0 5.1 1.8 9.2 5.1 12.2-2.6 5-4.3 12-4.7 19.8-.3 5.4-.1 10.9.5 16.2h25.8c.6-5.3.8-10.8.5-16.2-.4-7.8-2.1-14.8-4.7-19.8 3.3-3 5.1-7.1 5.1-12.2C55.8 16.2 50.2 10 42 10Z" fill="none" stroke="#d8e6dd" stroke-width="1.2" opacity="0.78"/>
+                          <circle class="theme-lived-ring" cx="21" cy="43" r="12" fill="none" stroke="#0d7377" stroke-width="1.4"/>
+                          <circle class="theme-lived-ring theme-lived-ring--delay" cx="63" cy="43" r="12" fill="none" stroke="#43a047" stroke-width="1.4"/>
+                          <g class="theme-lived-profile">
+                            <circle cx="21" cy="43" r="8" fill="#eef5ee" stroke="#0d7377" stroke-width="1.5"/>
+                            <path d="M16.5 44.5c2.6-5.2 6.4-5.2 9 0" fill="none" stroke="#0f211d" stroke-width="1.4" stroke-linecap="round"/>
+                            <circle cx="21" cy="39.5" r="2.3" fill="#0f211d"/>
+                          </g>
+                          <g class="theme-lived-profile theme-lived-profile--right">
+                            <circle cx="63" cy="43" r="8" fill="#eef5ee" stroke="#43a047" stroke-width="1.5"/>
+                            <path d="M58.5 44.5c2.6-5.2 6.4-5.2 9 0" fill="none" stroke="#0f211d" stroke-width="1.4" stroke-linecap="round"/>
+                            <circle cx="63" cy="39.5" r="2.3" fill="#0f211d"/>
+                          </g>
                         </svg>
                       </div>
                       <div class="event-theme__copy">
