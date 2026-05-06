@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Bulletin - Alius</title>
@@ -94,7 +94,7 @@ var STYLE_PREFIX = 'wsite';
 //-->
 </script>
 	<style>
-/* Site refresh — palette lock (A13) + reading-column (A14) */
+/* Site refresh â€” palette lock (A13) + reading-column (A14) */
 .wsite-page-bulletin #wsite-content h2,
 .wsite-page-bulletin #wsite-content h2 *,
 .wsite-page-events #wsite-content h2,
@@ -115,7 +115,7 @@ var STYLE_PREFIX = 'wsite';
   color: #3d8b3d !important;
 }
 
-/* ---- A14 · Bulletin-interview reading column ---- */
+/* ---- A14 Â· Bulletin-interview reading column ---- */
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table-wrap,
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table,
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-tbody,
@@ -142,7 +142,7 @@ body[class*="wsite-page-bulletin"] #wsite-content img {
   max-width: 100% !important;
   height: auto !important;
 }
-/* Keep existing styling on the consolidated /bulletin/ landing — only the
+/* Keep existing styling on the consolidated /bulletin/ landing â€” only the
    interior interview pages should pick up the 72ch column; the landing has
    its own section-nav and grid */
 body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
@@ -256,7 +256,7 @@ body.wsite-page-membership #wsite-content {
   outline: none;
 }
 
-/* Narrow-screen tuning (pretext-nav-fit.js handles font-size — only tune padding/gap here) */
+/* Narrow-screen tuning (pretext-nav-fit.js handles font-size â€” only tune padding/gap here) */
 @media (max-width: 640px) {
   .section-nav { padding-top: 0.45rem; padding-bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)); }
   .section-nav ol { gap: 0.2rem; padding: 0 0.25rem; }
@@ -304,7 +304,7 @@ body.wsite-page-membership .styled-hr {
 }
 </style>
 <style>
-/* Site refresh — palette lock (A13) + reading-column (A14) */
+/* Site refresh â€” palette lock (A13) + reading-column (A14) */
 .wsite-page-bulletin #wsite-content h2,
 .wsite-page-bulletin #wsite-content h2 *,
 .wsite-page-events #wsite-content h2,
@@ -325,7 +325,7 @@ body.wsite-page-membership .styled-hr {
   color: #3d8b3d !important;
 }
 
-/* ---- A14 · Bulletin-interview reading column ---- */
+/* ---- A14 Â· Bulletin-interview reading column ---- */
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table-wrap,
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table,
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-tbody,
@@ -352,7 +352,7 @@ body[class*="wsite-page-bulletin"] #wsite-content img {
   max-width: 100% !important;
   height: auto !important;
 }
-/* Keep existing styling on the consolidated /bulletin/ landing — only the
+/* Keep existing styling on the consolidated /bulletin/ landing â€” only the
    interior interview pages should pick up the 72ch column; the landing has
    its own section-nav and grid */
 body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
@@ -361,6 +361,216 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 }
 </style>
 <link rel="stylesheet" href="/assets/shared/css/alius-redesign.css">
+<style>
+/* Bulletin filter index */
+body.wsite-page-bulletin #wsite-content .bulletin-index-section .container {
+  max-width: 1180px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-index,
+body.wsite-page-bulletin #wsite-content .bulletin-index :where(p, ul, ol) {
+  max-width: none;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-index {
+  color: #303633;
+  margin: 0 auto;
+  padding: 0 20px 72px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-index__intro {
+  max-width: 880px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-index__intro h2 {
+  color: #515151 !important;
+  font-size: 31px !important;
+  line-height: 1.18;
+  margin: 0 0 12px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-index__intro p {
+  color: #626262;
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-filters {
+  display: grid;
+  gap: 14px;
+  margin: 0 auto 18px;
+  max-width: 1060px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-filter-group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-filter-group h3 {
+  color: #65706a;
+  flex: 0 0 100%;
+  font: 700 12px/1.2 Raleway, Arial, sans-serif;
+  letter-spacing: 0;
+  margin: 0 0 1px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-filter {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(26, 77, 46, 0.2);
+  border-radius: 999px;
+  color: #2a3330;
+  cursor: pointer;
+  display: inline-flex;
+  font: 600 12.5px/1.35 Raleway, Arial, sans-serif;
+  gap: 6px;
+  letter-spacing: 0;
+  padding: 7px 12px;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-filter:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-filter:focus-visible {
+  background: rgba(143, 191, 77, 0.08);
+  border-color: rgba(26, 77, 46, 0.45);
+  outline: none;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-filter.is-active {
+  background: #1a4d2e;
+  border-color: #1a4d2e;
+  color: #fff;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-filter__count {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.72;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-result-count,
+body.wsite-page-bulletin #wsite-content .bulletin-empty {
+  color: #65706a;
+  font: 600 13px/1.4 Raleway, Arial, sans-serif;
+  margin: 18px auto 4px;
+  max-width: 1060px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-list {
+  display: grid;
+  gap: 0;
+  margin: 0 auto;
+  max-width: 1060px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card {
+  border-bottom: 1px solid #dbe4dc;
+  padding: 28px 0 32px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card.is-filtered-out {
+  display: none;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__header {
+  max-width: 920px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__meta {
+  color: #68736d;
+  display: flex;
+  flex-wrap: wrap;
+  font: 600 12px/1.3 Raleway, Arial, sans-serif;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__meta span + span::before {
+  color: #9aa59f;
+  content: "/";
+  padding-right: 8px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card h3 {
+  color: #2f382f;
+  font-size: 21px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__people {
+  color: #515151;
+  font: 600 14px/1.45 Raleway, Arial, sans-serif;
+  margin: 0 0 10px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 16px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__tags span {
+  background: rgba(47, 127, 123, 0.06);
+  border: 1px solid rgba(47, 127, 123, 0.2);
+  border-radius: 999px;
+  color: #2f7f7b;
+  font: 600 11.5px/1.2 Raleway, Arial, sans-serif;
+  padding: 4px 8px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__copy {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__copy h4,
+body.wsite-page-bulletin #wsite-content .bulletin-card__media p {
+  color: #1a4d2e;
+  font: 700 13px/1.3 Raleway, Arial, sans-serif;
+  margin: 0 0 7px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__copy p {
+  color: #40504a;
+  font-size: 15px;
+  line-height: 1.64;
+  margin: 0;
+  text-align: left;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__links a {
+  border: 1px solid #b8c9b4;
+  border-radius: 6px;
+  color: #3f6f25;
+  display: inline-flex;
+  font: 700 13px/1 Raleway, Arial, sans-serif;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__links a:first-child {
+  background: #4f7f2f;
+  border-color: #4f7f2f;
+  color: #fff;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__links a:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-card__links a:focus {
+  background: #edf4ea;
+  color: #2f5e1e;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__links a:first-child:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-card__links a:first-child:focus {
+  background: #3f6f25;
+  color: #fff;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__media {
+  border-top: 1px solid #e6ece7;
+  margin-top: 18px;
+  padding-top: 16px;
+  max-width: 720px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+  height: auto;
+  min-height: 260px;
+  width: 100%;
+}
+@media (max-width: 860px) {
+  body.wsite-page-bulletin #wsite-content .bulletin-index { padding-left: 0; padding-right: 0; }
+  body.wsite-page-bulletin #wsite-content .bulletin-index__intro h2 { font-size: 25px !important; }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__copy { grid-template-columns: 1fr; }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe { min-height: 190px; }
+}
+</style>
 </head>
 	<body class="wsite-page-bulletin no-header full-width-on wsite-theme-light"><div class="body-wrap">
 
@@ -393,134 +603,7 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 			</a>
 		</li>
 		<li id="pg714570715415488939" class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
-		<li id="active" class="wsite-menu-item-wrap">
-			<a
-						href="/bulletin/"
-				class="wsite-menu-item"
-				>
-				Bulletin
-			</a>
-			<div class="wsite-menu-wrap" style="display:none">
-	<ul class="wsite-menu">
-		<li id="wsite-nav-425940006608584181"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="#bulletin-07"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 7
-		</span><span class="wsite-menu-arrow">&gt;</span>
-	</a>
-	<div class="wsite-menu-wrap" style="display:none">
-	<ul class="wsite-menu">
-		<li id="wsite-nav-677879715142621932"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Froese - Alius Bulletin No. 7
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-677822843502417825"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Changeux - Alius Bulletin No. 7
-		</span>
-	</a>
-</li>
-
-	</ul>
-</div>
-
-</li>
-<li id="wsite-nav-553869271147933325"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="#bulletin-06"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 6
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-826876812964610940"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 5
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-274291659105754795"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 4
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-124316841902636796"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 3
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-693884761376184660"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 2
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-483743533676403712"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 1
-		</span>
-	</a>
-</li>
-
-	</ul>
-</div>
-
-		</li>
+		<li id="active" class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
         <li id="pg-newsletter" class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
 		<li id="pg226786205107534455" class="wsite-menu-item-wrap">
 			<a
@@ -549,716 +632,1060 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 	</div>
 </div>
 
-<span id="bulletin-07" class="tab-anchor"></span>
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue No. 7</font></strong></h2>
-					<hr class="styled-hr" style="width:100%;"></hr>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-background-482 wsite-custom-background"  >
-		<div class="wsite-section-content">
-					<div class="container">
-			<div class="wsite-section-elements">
-				<div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin No. 7 (2024-2025)&nbsp;</strong></font><br /><font size="4">edited by</font><font size="4">&nbsp;George Fejer, Larry Fort&nbsp;</font><span style="color:rgb(81, 81, 81)">&amp; </span><font size="4">&#8203;Matthieu Koroma</font></div>
-
-<div class="wsite-spacer" style="height:21px;"></div>
-
-<div class="paragraph" style="text-align:center;"><br /><strong><font size="5">Contents&nbsp;</font></strong><br /><strong style="color:rgb(81, 81, 81)">&#8203;</strong><br /><span style="color:rgb(81, 81, 81)"><strong>Tom Froese</strong>&nbsp;(interviewed by Matthieu Koroma)</span><br /><strong><span><a href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf"><font color="#508d24">The irruption theory: How mind and matter meet along the route to consciousness</font></a></span></strong><span style="color:rgb(81, 81, 81)">, 11 pp.</span><br /><br /><strong><span><span style="color:rgb(0, 0, 0)">Jean-Pierre Changeux</span></span></strong><span style="color:rgb(81, 81, 81)">&nbsp;(interviewed by Guillaume Dumas)</span><br /><strong><span><a href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf"><font color="#508d24">Consciousness : from molecular to social scales</font></a></span></strong><span style="color:rgb(81, 81, 81)">, 15 pp.</span><br /><br /><br /><br /><br /></div>
-
-<div class="wsite-spacer" style="height:16px;"></div>
-
-<div class="paragraph" style="text-align:center;"><strong><a href="/bulletin/">Back to Bulletin page</a></strong></div>
-
-<div><div id="158547682655468865" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"></div>
-
-</div>
-			</div>
-		</div>
-				</div>
-
-	</div>
-</div>
-<div class="wsite-section-wrap bulletin-pdf-section">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<section class="bulletin-pdf-embed" aria-label="Embedded PDFs for ALIUS Bulletin Issue No. 7">
-						<div class="bulletin-pdf-embed__header">
-							<h3>Issue No. 7 PDFs</h3>
-							<p>The two issue articles are embedded here for direct reading.</p>
-						</div>
-						<div class="bulletin-pdf-grid bulletin-pdf-grid--compact">
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>Tom Froese - The irruption theory</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 7, Tom Froese PDF" src="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf#view=FitH"></iframe>
-							</article>
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>Jean-Pierre Changeux - Consciousness from molecular to social scales</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 7, Jean-Pierre Changeux PDF" src="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf#view=FitH"></iframe>
-							</article>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<span id="bulletin-06" class="tab-anchor"></span>
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue No. 6</font></strong></h2>
-					<hr class="styled-hr" style="width:100%;"></hr>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-background-316 wsite-custom-background"  >
-		<div class="wsite-section-content">
-					<div class="container">
-			<div class="wsite-section-elements">
-				<div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin No. 6 (2022-2024)&nbsp;</strong></font><br /><font size="4">edited by</font><span style="color:rgb(81, 81, 81)">&nbsp;</span><font size="4">Alessio Bucci, Lena Coutrot, George Fejer,<br />Daniel A. Friedman&nbsp;</font><span style="color:rgb(81, 81, 81)">&amp; </span><font size="4">&#8203;Matthieu Koroma</font></div>
-
-<div class="wsite-spacer" style="height:21px;"></div>
-
-<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:16.348195329087%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:83.651804670913%; padding:0 15px;">
-
-<div class="paragraph"><br /><strong><font size="5">Contents&nbsp;</font></strong><br /><strong style="color:rgb(81, 81, 81)">&#8203;</strong><br /><span style="color:rgb(81, 81, 81)"><strong>Anna Ciaunica</strong>&nbsp;(recorded by Daniel Friedman and&nbsp;edited by Lena Coutrot and&nbsp;Matthieu Koroma)</span><br /><a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-ciaunica-what-is-like-to-be-in-early-sensory-life.pdf">What is like to be in&nbsp;early sensory life</a><span style="color:rgb(81, 81, 81)">, 3 pp.</span><br /><br /><strong style="color:rgb(81, 81, 81)">Steven Jillings</strong><span style="color:rgb(81, 81, 81)">&nbsp;(recorded by Daniel Friedman and&nbsp;edited by Lena Coutrot and Matthieu Koroma)</span><br /><span style="color:rgb(81, 81, 81)"><a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightlessness.pdf">What is like to be in weightlessness</a></span><span style="color:rgb(81, 81, 81)">, 5 pp.</span><br /><br /><strong style="color:rgb(81, 81, 81)">Matthieu Koroma</strong>&nbsp;(recorded by Daniel Friedman and&nbsp;edited by Lena Coutrot and Matthieu Koroma)<br /><span style="color:rgb(81, 81, 81)"><a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf">What is like to be asleep</a>, 5 pp.</span><br /><br /><span style="color:rgb(81, 81, 81)"><strong>Juan Gonz&aacute;lez</strong>&nbsp;(interviewed by Matthieu Koroma)</span><br /><a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-research.pdf">An interdisciplinary journey into consciousness research</a><span style="color:rgb(81, 81, 81)">, 18 pp.<br />&#8203;<br /><strong>Robert Sapolsky</strong> (interviewed by Daniel Friedman &amp;&nbsp;</span>Alexandra Mikhailova<span style="color:rgb(81, 81, 81)">)</span><br /><span><a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf">On free will or the lack thereof</a></span>, 11 pp.<br /><br /><span style="color:rgb(81, 81, 81)"><strong>Manoj Doss</strong>&nbsp;(interviewed by George Fejer</span><span style="color:rgb(81, 81, 81)">)</span><br /><span style="color:rgb(81, 81, 81)"><a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf">On the Cinco Sins of Psychedelic Research</a>, 27 pp.<br /><br /><strong>Jeremy I. Skipper</strong>&nbsp;(interviewed by Leor Roseman, edited by Matthieu Koroma &amp; George Fejer&nbsp;)</span><br /><a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf">The intimacy of psychedelics, language, and consciousness</a>, 30 pp.<br /><br /><br /></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-
-<div class="wsite-spacer" style="height:16px;"></div>
-
-<div class="paragraph" style="text-align:center;"><strong><a href="/bulletin/">Back to Bulletin page</a></strong></div>
-
-<div><div id="773151519380768756" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"></div>
-
-</div>
-			</div>
-		</div>
-				</div>
-
-	</div>
-</div>
-<div class="wsite-section-wrap bulletin-pdf-section">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<section class="bulletin-pdf-embed" aria-label="Embedded PDFs for ALIUS Bulletin Issue No. 6">
-						<div class="bulletin-pdf-embed__header">
-							<h3>Issue No. 6 PDFs</h3>
-							<p>This issue is available as individual article PDFs, embedded in contents order.</p>
-						</div>
-						<div class="bulletin-pdf-grid bulletin-pdf-grid--compact">
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>Anna Ciaunica - What is like to be in early sensory life</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-ciaunica-what-is-like-to-be-in-early-sensory-life.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 6, Anna Ciaunica PDF" src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-ciaunica-what-is-like-to-be-in-early-sensory-life.pdf#view=FitH"></iframe>
-							</article>
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>Steven Jillings - What is like to be in weightlessness</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightlessness.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 6, Steven Jillings PDF" src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightlessness.pdf#view=FitH"></iframe>
-							</article>
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>Matthieu Koroma - What is like to be asleep</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 6, Matthieu Koroma PDF" src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf#view=FitH"></iframe>
-							</article>
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>Juan Gonzalez - An interdisciplinary journey into consciousness research</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-research.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 6, Juan Gonzalez PDF" src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-research.pdf#view=FitH"></iframe>
-							</article>
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>Robert Sapolsky - On free will or the lack thereof</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 6, Robert Sapolsky PDF" src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf#view=FitH"></iframe>
-							</article>
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>Manoj Doss - On the Cinco Sins of Psychedelic Research</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 6, Manoj Doss PDF" src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf#view=FitH"></iframe>
-							</article>
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>Jeremy I. Skipper - The intimacy of psychedelics, language, and consciousness</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 6, Jeremy I. Skipper PDF" src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf#view=FitH"></iframe>
-							</article>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<span id="bulletin-05" class="tab-anchor"></span>
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue No. 5</font></strong></h2>
-					<hr class="styled-hr" style="width:100%;"></hr>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-background-258 wsite-custom-background"  >
-		<div class="wsite-section-content">
-					<div class="container">
-			<div class="wsite-section-elements">
-				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:10.828004600737%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:78.768425624972%; padding:0 15px;">
-
-<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:9.973045764007%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:79.514824849156%; padding:0 15px;">
-
-<div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin No. 5 (2021)</strong></font><br /><font size="4">edited by George Fejer, Daniel A. Friedman&nbsp;</font><span style="color:rgb(81, 81, 81)">&amp;</span><font size="4"><br />&#8203;Matthieu Koroma</font></div>
-
-<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf" target="_blank">
-<span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
-</a>
-<div style="height: 10px; overflow: hidden;"></div></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:10.512129386838%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-
-<div class="wsite-spacer" style="height:21px;"></div>
-
-<div class="paragraph"><strong><font size="5">Contents</font></strong><br /><strong style="color:rgb(81, 81, 81)">&#8203;</strong><br /><strong style="color:rgb(81, 81, 81)">Charlotte Martial</strong>&nbsp;(commentary on "Surviving Death", 2021)<br /><a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-debate-near-death-experiences-in-the-public-debate-a-scientific-perspective.pdf">Near-death experiences in the&nbsp;public debate: A scientific perspective</a><span style="color:rgb(81, 81, 81)">, 10 pp.</span><br /><br /><span style="color:rgb(81, 81, 81)"><strong>Maddalena Canna &amp; Rebecca Seligman</strong> (interviewed by Matthieu Koroma)<br /><a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.pdf">How culture breaks down the mind-body divide</a>, 16 pp.</span><br /><br /><strong style="color:rgb(81, 81, 81)">Monima Chadha</strong><span style="color:rgb(81, 81, 81)">&nbsp;(interviewed by Edvard Avil&eacute;s &amp; Matthieu Koroma)</span><br /><a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of-transformative-experiences.pdf">Indian philosophy and the value of transformative experiences</a><span style="color:rgb(81, 81, 81)">, 10 pp.</span><br /><br /><strong style="color:rgb(81, 81, 81)">David E. Olson &amp;&nbsp;David B. Yaden&nbsp;</strong><span style="color:rgb(81, 81, 81)">(a conversation hosted by George Fejer)&nbsp;</span><br /><span style="color:rgb(81, 81, 81)"><a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf">Are the subjective effects of psychedelics necessary for their enduring therapeutic effects?</a>, 18 pp.</span><br /><br /><strong style="color:rgb(81, 81, 81)">Timo T. Schmidt&nbsp;</strong><span style="color:rgb(81, 81, 81)">(interviewed by George Fejer)<br />&#8203;<a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-database-for-consciousness.pdf">Phenomenoconnectomics and the Altered States Database for Consciousness Research</a>, 16 pp.</span></div>
-
-<div class="wsite-spacer" style="height:16px;"></div>
-
-<div class="paragraph" style="text-align:center;"><strong><a href="/bulletin/">Back to Bulletin page</a></strong></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:10.40356977429%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-			</div>
-		</div>
-				</div>
-
-	</div>
-</div>
-<div class="wsite-section-wrap bulletin-pdf-section">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<section class="bulletin-pdf-embed" aria-label="Embedded PDF for ALIUS Bulletin Issue No. 5">
-						<div class="bulletin-pdf-embed__header">
-							<h3>Issue No. 5 PDF</h3>
-							<p>The complete bulletin is embedded here for direct reading.</p>
-						</div>
-						<div class="bulletin-pdf-grid">
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>ALIUS Bulletin No. 5 (2021)</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 5 full PDF" src="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf#view=FitH"></iframe>
-							</article>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<span id="bulletin-04" class="tab-anchor"></span>
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue No. 4</font></strong></h2>
-					<hr class="styled-hr" style="width:100%;"></hr>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-background-118 wsite-custom-background"  >
-		<div class="wsite-section-content">
-					<div class="container">
-			<div class="wsite-section-elements">
-				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:10.828004600737%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:78.768425624972%; padding:0 15px;">
-
-<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:9.973045764007%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:79.514824849156%; padding:0 15px;">
-
-<div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin No. 4 (2020)</strong></font><br /><font size="4">edited by Martin Fortier, Daniel A. Friedman,<br />&#8203;Matthieu Koroma &amp; Rapha&euml;l Milli&egrave;re</font></div>
-
-<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf" target="_blank">
-<span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
-</a>
-<div style="height: 10px; overflow: hidden;"></div></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:10.512129386838%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-
-<div class="wsite-spacer" style="height:21px;"></div>
-
-<div class="paragraph"><strong><font size="5">Contents</font></strong><br /><br /><span style="color:rgb(81, 81, 81)"><strong>Editorial Note</strong></span><br /><a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf">Tribute to Martin Fortier</a><span style="color:rgb(81, 81, 81)">, 14 pp.</span><br /><br /><strong style="color:rgb(81, 81, 81)">Charles D. Nichols &amp; David E. Nichols</strong><span style="color:rgb(81, 81, 81)">&nbsp;(commentary on Dean et al., 2019)</span><br /><span style="color:rgb(81, 81, 81)"><a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-nichols-and-nichols-dmt-in-the-mammalian-brain-a-critical-appraisal.pdf">DMT in the mammalian brain: A critical appraisal</a></span><span style="color:rgb(81, 81, 81)">, 7 pp.</span><br /><br /><strong>Benjamin Baird</strong> (interviewed by Matthieu Koroma)<br /><a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-baird-internally-generated-conscious-activity-reflections-upon-lucid-dreaming.pdf">Internally generated conscious activity: Reflections upon (lucid) dreaming, mind-wandering and meditation</a>,&nbsp;15 pp.<br /><br /><strong>Olivia Carter</strong>&nbsp;(interviewed by Katrin H. Preller)<br /><a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-carter-dimensions-of-consciousness-from-perceptual-illusions-to-psychedelics.pdf">The dimensions of consciousness: From perceptual illusions to psychedelics</a>, 9 pp.<br /><br /><strong>Olivia Gosseries</strong> (interviewed by Charlotte Martial)<br /><a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-treatment-of-disorders-of-consciousness.pdf">The use of psychedelics in the treatment of disorders of consciousness</a>&nbsp;, 17 pp.<br /><br /><strong>Timothy Hanks</strong> (interviewed by Alexandra Mikhailova &amp; Daniel A. Friedman)<br /><a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-hanks-neuroscience-of-decision-making.pdf">The neuroscience of decision making</a><span style="color:rgb(81, 81, 81)">, 13 pp.</span><br /><br /><strong>Bigna Lenggenhager</strong> (interviewed by Jasmine T. Ho &amp; Rapha&euml;l Milli&egrave;re)<br /><a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-lenggenhager-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf">Bodily boundaries and beyond: Exploring the malleability of bodily self-consciousness</a><span style="color:rgb(81, 81, 81)">, 24 pp.</span><br /><br /><strong style="color:rgb(81, 81, 81)">Fr&eacute;d&eacute;rique de Vignemont</strong><span style="color:rgb(81, 81, 81)">&nbsp;(interviewed by Rapha&euml;l Milli&egrave;re &amp; Carlota Serrahima)</span><br /><a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf">Body meets self</a><span style="color:rgb(81, 81, 81)">, 27 pp.</span></div>
-
-<div class="wsite-spacer" style="height:16px;"></div>
-
-<div class="paragraph" style="text-align:center;"><strong><a href="/bulletin/">Back to Bulletin page</a></strong></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:10.40356977429%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-			</div>
-		</div>
-				</div>
-
-	</div>
-</div>
-<div class="wsite-section-wrap bulletin-pdf-section">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<section class="bulletin-pdf-embed" aria-label="Embedded PDF for ALIUS Bulletin Issue No. 4">
-						<div class="bulletin-pdf-embed__header">
-							<h3>Issue No. 4 PDF</h3>
-							<p>The complete bulletin is embedded here for direct reading.</p>
-						</div>
-						<div class="bulletin-pdf-grid">
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>ALIUS Bulletin No. 4 (2020)</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 4 full PDF" src="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf#view=FitH"></iframe>
-							</article>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<span id="bulletin-03" class="tab-anchor"></span>
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue No. 3</font></strong></h2>
-					<hr class="styled-hr" style="width:100%;"></hr>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-background-81 wsite-custom-background"  >
-		<div class="wsite-section-content">
-					<div class="container">
-			<div class="wsite-section-elements">
-				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:10.828004600737%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:78.768425624972%; padding:0 15px;">
-
-<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:9.973045764007%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:79.514824849156%; padding:0 15px;">
-
-<div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin No. 3 (2019)</strong></font><br /><font size="4">edited by Martin E. Fortier, Matthieu Koroma &amp; Rojwan F. Lemoine</font></div>
-
-<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf" target="_blank">
-<span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
-</a>
-<div style="height: 10px; overflow: hidden;"></div></div>
-
-<div class="paragraph" style="text-align:center;"><em><font color="#3387a2"><a href="https://docdro.id/vXiS8Vz" target="_blank">alternate link</a></font></em></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:10.512129386838%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-
-<div class="wsite-spacer" style="height:21px;"></div>
-
-<div class="paragraph"><strong><font size="5">Contents</font></strong><br /><br /><strong>Tim Bayne</strong> (interviewed by Alessio Bucci and Matthieu Koroma)<br /><a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-bayne-how-to-study-consciousness-as-a-natural-phenomenon.pdf">How to study consciousness as a natural phenomenon</a>, 9 pp.<br /><br /><strong>Daniel Dennett</strong> (interviewed by Brendan Fleig-Goldstein and Daniel A. Friedman)<br /><a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-dennett-explained.pdf">Dennett Explained</a>, 15 pp.<br /><br /><strong>Zoltan Dienes</strong> (interviewed by Jean-R&eacute;my Martin)<br /><a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-dienes-role-of-hypnosis-and-meditation-in-consciousness-research.pdf">The role of hypnosis and meditation in consciousness research</a>, 9 pp.<br /><br /><strong>Katrin Preller</strong> (interviewed by Guillaume Dumas)<br /><a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-preller-psychedelics-and-sociality-probing-the-diversity-of-cognition-beyond.pdf">Psychedelics and Sociality: Probing the diversity of cognition beyond individuals</a><span style="color:rgb(81, 81, 81)">, 8 pp.</span><br /><br /><strong>Michael Winkelman</strong> (interviewed by Martin E. Fortier)<br /><a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf">The evolutionary neuroanthropology of consciousness: Exploring the diversity of conscious states across cultures</a><span style="color:rgb(81, 81, 81)">, 53 pp.</span></div>
-
-<div class="wsite-spacer" style="height:16px;"></div>
-
-<div class="paragraph" style="text-align:center;"><strong><a href="/bulletin/">Back to Bulletin page</a></strong></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:10.40356977429%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-			</div>
-		</div>
-				</div>
-
-	</div>
-</div>
-<div class="wsite-section-wrap bulletin-pdf-section">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<section class="bulletin-pdf-embed" aria-label="Embedded PDF for ALIUS Bulletin Issue No. 3">
-						<div class="bulletin-pdf-embed__header">
-							<h3>Issue No. 3 PDF</h3>
-							<p>The complete bulletin is embedded here for direct reading.</p>
-						</div>
-						<div class="bulletin-pdf-grid">
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>ALIUS Bulletin No. 3 (2019)</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 3 full PDF" src="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf#view=FitH"></iframe>
-							</article>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<span id="bulletin-02" class="tab-anchor"></span>
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue No. 2</font></strong></h2>
-					<hr class="styled-hr" style="width:100%;"></hr>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-background-61 wsite-custom-background"  >
-		<div class="wsite-section-content">
-					<div class="container">
-			<div class="wsite-section-elements">
-				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:10.828004600737%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:78.768425624972%; padding:0 15px;">
-
-<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:15.768193978227%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:68.059298794912%; padding:0 15px;">
-
-<div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin No. 2 (2018)</strong></font><br /><font size="4">edited by Martin Fortier, Matthieu Koroma &amp; Rapha&euml;l Milli&egrave;re</font></div>
-
-<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf" >
-<span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
-</a>
-<div style="height: 10px; overflow: hidden;"></div></div>
-
-<div class="paragraph" style="text-align:center;"><em><a href="http://docdro.id/eFcIdfS" target="_blank"><font color="#3387a2">alternate link</font></a></em></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:16.17250722686%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-
-<div class="wsite-spacer" style="height:21px;"></div>
-
-<div class="paragraph"><strong><font size="5">Contents</font></strong><br /><br /><strong>Kieran Fox</strong> (interviewed by Matthieu Koroma)<br /><a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf">Wandering along the spectrum of spontaneous thinking:<br />&#8203;Dreaming, meditation, mind-wandering, and well-being</a>, 15 pp.<br /><br /><strong>Karl Friston</strong> (interviewed by Martin Fortier &amp; Daniel A. Friedman)<br /><a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf">Of woodlice and men: A Bayesian account of cognition, life and consciousness</a>, 27 pp.<br /><br /><strong>Karl Friston</strong><br /><a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-biography-am-i-autistic-an-intellectual-autobiography.pdf">Am I autistic? An intellectual autobiography</a>, 8 pp.<br /><br /><strong>Thomas Metzinger</strong> (interviewed by Jakub Limanowski &amp; Raphae&#776;l Millie&#768;re)<br /><a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf">Splendor and misery of self-models:<br />Conceptual and empirical issues regarding consciousness and self-consciousness</a>, 21 pp.<br /><br /><strong>David Nichols</strong> (interviewed by Leor Roseman &amp; Christopher Timmermann)<br /><a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-nichols-psychedelics-from-pharmacology-to-phenomenology.pdf">Psychedelics: From pharmacology to phenomenology</a>, 11 pp.<br /><br /><strong>Kevin O&rsquo;Regan</strong> (interviewed by Cordelia Erickson-Davis)<br /><a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-o-regan-on-the-feel-of-things-the-sensorimotor-theory-of-consciousness.pdf">On the &ldquo;feel&rdquo; of things: The sensorimotor theory of consciousness</a>, 8 pp.<br /><br /><strong>Matthew Ratcliffe</strong> (interviewed by Mathieu Frerejouan)<br /><a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-intentionality-and-interpersonal-experience.pdf">Verbal hallucinations, intentionality, and interpersonal experience</a>, 13 pp.<br /><br /><strong>Ann Taves</strong> (interviewed by Martin Fortier &amp; Maddalena Canna)<br /><a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-religious.pdf">Conceptual, anthropological and cognitive issues surrounding religious experience</a>, 20 pp.<br /><br /></div>
-
-<div class="wsite-spacer" style="height:16px;"></div>
-
-<div class="paragraph" style="text-align:center;"><strong><a href="/bulletin/">Back to Bulletin page</a></strong></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:10.40356977429%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-			</div>
-		</div>
-				</div>
-
-	</div>
-</div>
-<div class="wsite-section-wrap bulletin-pdf-section">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<section class="bulletin-pdf-embed" aria-label="Embedded PDF for ALIUS Bulletin Issue No. 2">
-						<div class="bulletin-pdf-embed__header">
-							<h3>Issue No. 2 PDF</h3>
-							<p>The complete bulletin is embedded here for direct reading.</p>
-						</div>
-						<div class="bulletin-pdf-grid">
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>ALIUS Bulletin No. 2 (2018)</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 2 full PDF" src="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf#view=FitH"></iframe>
-							</article>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<span id="bulletin-01" class="tab-anchor"></span>
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title" style="text-align:center;"><strong style="color:rgb(123, 140, 137)"><font size="6">Bulletin Issue No. 1</font></strong></h2>
-					<hr class="styled-hr" style="width:100%;"></hr>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-background-60 wsite-custom-background"  >
-		<div class="wsite-section-content">
-					<div class="container">
-			<div class="wsite-section-elements">
-				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:10.828004600737%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:78.768425624972%; padding:0 15px;">
-
-<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
-				<td class="wsite-multicol-col" style="width:9.973045764007%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:79.514824849156%; padding:0 15px;">
-
-<div class="paragraph" style="text-align:center;"><font size="5"><strong>ALIUS Bulletin No. 1 (2017)</strong></font><br /><font size="4">edited by Martin E. Fortier, R. Fran&ccedil;ois Lemoine &amp; Rapha&euml;l Milli&egrave;re</font></div>
-
-<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf" target="_blank">
-<span class="wsite-button-inner">DOWNLOAD THE BULLETIN</span>
-</a>
-<div style="height: 10px; overflow: hidden;"></div></div>
-
-<div class="paragraph" style="text-align:center;"><em><a href="http://docdro.id/VPpZ4qw" target="_blank"><font color="#3387a2">alternate link</font></a></em></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:10.512129386838%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-
-<div class="wsite-spacer" style="height:21px;"></div>
-
-<div class="paragraph"><strong><font size="5">Contents</font></strong><br />&#8203;<br /><strong>Robin Carhart-Harris&nbsp;</strong>(interviewed by Martin Fortier &amp; Rapha&euml;l Milli&egrave;re)<br /><a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.pdf">Consciousness and psychedelics</a>, 16 pp.<br />&nbsp;<br /><strong>Jakob Hohwy</strong>&nbsp;(interviewed by Matthieu Koroma)<br /><a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-hohwy-on-different-ways-of-being-conscious-modes-of-consciousness-and-the.pdf">On different ways of being conscious:<br />modes of consciousness and the predictive mind</a>,&nbsp;7 pp.<br />&nbsp;<br /><strong>Tanya Luhrmann</strong>&nbsp;(interviewed by Martin Fortier)<br /><a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf">The anthropology of mind:<br />exploring unusual sensations and spiritual experiences across cultures</a>, 12 pp.<br />&nbsp;<br /><strong>Simon McCarthy-Jones</strong>&nbsp;(interviewed by Mathieu Frerejouan)<br /><a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-mccarthy-jones-phenomenon-of-voice-hearing-an-interdisciplinary-approach.pdf">The phenomenon of voice-hearing: an interdisciplinary approach</a>, 9 pp.&nbsp;<br />&nbsp;<br /><strong>Rebecca Seligman</strong>&nbsp;(interviewed by Arnaud Halloy)<br /><a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-seligman-towards-a-biocultural-approach-to-dissociative-consciousness.pdf">Towards a biocultural approach to dissociative consciousness</a>, 6 pp.<br />&nbsp;<br /><strong>Jennifer Windt</strong>&nbsp;(interviewed by Alessio Bucci &amp; Rapha&euml;l Milli&egrave;re)<br /><a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf">Relocating dreams on the conceptual map:<br />how the analysis of sleep and dreaming challenges our taxonomy of mental states</a>, 26 pp.<br /><br /></div>
-
-<div class="wsite-spacer" style="height:16px;"></div>
-
-<div class="paragraph" style="text-align:center;"><strong><a href="/bulletin/">Back to Bulletin page</a></strong></div>
-
-				</td>				<td class="wsite-multicol-col" style="width:10.40356977429%; padding:0 15px;">
-
-<div class="wsite-spacer" style="height:50px;"></div>
-
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-			</div>
-		</div>
-				</div>
-
-	</div>
-</div>
-<div class="wsite-section-wrap bulletin-pdf-section">
-	<div class="wsite-section wsite-body-section wsite-custom-background">
-		<div class="wsite-section-content">
-			<div class="container">
-				<div class="wsite-section-elements">
-					<section class="bulletin-pdf-embed" aria-label="Embedded PDF for ALIUS Bulletin Issue No. 1">
-						<div class="bulletin-pdf-embed__header">
-							<h3>Issue No. 1 PDF</h3>
-							<p>The complete bulletin is embedded here for direct reading.</p>
-						</div>
-						<div class="bulletin-pdf-grid">
-							<article class="bulletin-pdf-card">
-								<div class="bulletin-pdf-card__title">
-									<h4>ALIUS Bulletin No. 1 (2017)</h4>
-									<a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf" target="_blank" rel="noopener">Open PDF</a>
-								</div>
-								<iframe class="bulletin-pdf-frame" loading="lazy" title="ALIUS Bulletin Issue No. 1 full PDF" src="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf#view=FitH"></iframe>
-							</article>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="wsite-section-wrap bulletin-index-section">
+  <div class="wsite-section wsite-body-section wsite-custom-background">
+    <div class="wsite-section-content">
+      <div class="container">
+        <div class="wsite-section-elements">
+          <nav class="alius-anchor-nav bulletin-anchor-nav-disabled" hidden aria-hidden="true"></nav>
+          <main class="bulletin-index" aria-label="ALIUS Bulletin index">
+            <header class="bulletin-index__intro">
+              <h2>Bulletin interviews, podcasts and essays</h2>
+              <p>Filter the ALIUS Bulletin by issue, featured person, or recurring topic. Each entry includes its abstract, speaker biography, PDF link, and any matching podcast or lecture recording.</p>
+            </header>
+            <div class="bulletin-filters" role="group" aria-label="Filter bulletin entries">
+                            <button type="button" class="bulletin-filter bulletin-filter--all is-active" data-filter="*" aria-pressed="true">All <span class="bulletin-filter__count">41</span></button>
+            <section class="bulletin-filter-group" aria-label="Issues">
+              <h3>Issues</h3>
+              <button type="button" class="bulletin-filter" data-filter="issue-07" aria-pressed="false">Issue 7 <span class="bulletin-filter__count">2</span></button>
+              <button type="button" class="bulletin-filter" data-filter="issue-06" aria-pressed="false">Issue 6 <span class="bulletin-filter__count">7</span></button>
+              <button type="button" class="bulletin-filter" data-filter="issue-05" aria-pressed="false">Issue 5 <span class="bulletin-filter__count">5</span></button>
+              <button type="button" class="bulletin-filter" data-filter="issue-04" aria-pressed="false">Issue 4 <span class="bulletin-filter__count">8</span></button>
+              <button type="button" class="bulletin-filter" data-filter="issue-03" aria-pressed="false">Issue 3 <span class="bulletin-filter__count">5</span></button>
+              <button type="button" class="bulletin-filter" data-filter="issue-02" aria-pressed="false">Issue 2 <span class="bulletin-filter__count">8</span></button>
+              <button type="button" class="bulletin-filter" data-filter="issue-01" aria-pressed="false">Issue 1 <span class="bulletin-filter__count">6</span></button>
+            </section>
+            <section class="bulletin-filter-group" aria-label="Interviewees and authors">
+              <h3>Interviewees and authors</h3>
+              <button type="button" class="bulletin-filter" data-filter="anna-ciaunica" aria-pressed="false">Anna Ciaunica <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="ann-taves" aria-pressed="false">Ann Taves <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="benjamin-baird" aria-pressed="false">Benjamin Baird <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="bigna-lenggenhager" aria-pressed="false">Bigna Lenggenhager <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="charles-nichols" aria-pressed="false">Charles D. Nichols <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="charlotte-martial" aria-pressed="false">Charlotte Martial <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="daniel-dennett" aria-pressed="false">Daniel Dennett <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="david-e-nichols" aria-pressed="false">David E. Nichols <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="david-nichols" aria-pressed="false">David Nichols <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="david-olson" aria-pressed="false">David E. Olson <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="david-yaden" aria-pressed="false">David B. Yaden <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="frederique-de-vignemont" aria-pressed="false">Fr&eacute;d&eacute;rique de Vignemont <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="jakob-hohwy" aria-pressed="false">Jakob Hohwy <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="jean-pierre-changeux" aria-pressed="false">Jean-Pierre Changeux <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="jennifer-windt" aria-pressed="false">Jennifer Windt <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="jeremy-skipper" aria-pressed="false">Jeremy I. Skipper <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="juan-gonzalez" aria-pressed="false">Juan Gonz&aacute;lez <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="karl-friston" aria-pressed="false">Karl Friston <span class="bulletin-filter__count">2</span></button>
+              <button type="button" class="bulletin-filter" data-filter="katrin-preller" aria-pressed="false">Katrin Preller <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="kevin-oregan" aria-pressed="false">Kevin O'Regan <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="kieran-fox" aria-pressed="false">Kieran Fox <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="maddalena-canna" aria-pressed="false">Maddalena Canna <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="manoj-doss" aria-pressed="false">Manoj Doss <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="martin-fortier" aria-pressed="false">Martin Fortier <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="matthieu-koroma" aria-pressed="false">Matthieu Koroma <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="matthew-ratcliffe" aria-pressed="false">Matthew Ratcliffe <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="michael-winkelman" aria-pressed="false">Michael Winkelman <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="monima-chadha" aria-pressed="false">Monima Chadha <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="olivia-carter" aria-pressed="false">Olivia Carter <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="olivia-gosseries" aria-pressed="false">Olivia Gosseries <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="rebecca-seligman" aria-pressed="false">Rebecca Seligman <span class="bulletin-filter__count">2</span></button>
+              <button type="button" class="bulletin-filter" data-filter="robert-sapolsky" aria-pressed="false">Robert Sapolsky <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="robin-carhart-harris" aria-pressed="false">Robin Carhart-Harris <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="simon-mccarthy-jones" aria-pressed="false">Simon McCarthy-Jones <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="steven-jillings" aria-pressed="false">Steven Jillings <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="tanya-luhrmann" aria-pressed="false">Tanya Luhrmann <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="thomas-metzinger" aria-pressed="false">Thomas Metzinger <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="tim-bayne" aria-pressed="false">Tim Bayne <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="timothy-hanks" aria-pressed="false">Timothy Hanks <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="timo-torsten-schmidt" aria-pressed="false">Timo Torsten Schmidt <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="tom-froese" aria-pressed="false">Tom Froese <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="zoltan-dienes" aria-pressed="false">Zoltan Dienes <span class="bulletin-filter__count">1</span></button>
+            </section>
+            <section class="bulletin-filter-group" aria-label="Recurring themes">
+              <h3>Recurring themes</h3>
+              <button type="button" class="bulletin-filter" data-filter="consciousness" aria-pressed="false">Consciousness <span class="bulletin-filter__count">27</span></button>
+              <button type="button" class="bulletin-filter" data-filter="psychedelics" aria-pressed="false">Psychedelics <span class="bulletin-filter__count">16</span></button>
+              <button type="button" class="bulletin-filter" data-filter="neuroscience" aria-pressed="false">Neuroscience <span class="bulletin-filter__count">22</span></button>
+              <button type="button" class="bulletin-filter" data-filter="philosophy" aria-pressed="false">Philosophy <span class="bulletin-filter__count">12</span></button>
+              <button type="button" class="bulletin-filter" data-filter="phenomenology" aria-pressed="false">Phenomenology <span class="bulletin-filter__count">15</span></button>
+              <button type="button" class="bulletin-filter" data-filter="anthropology" aria-pressed="false">Anthropology <span class="bulletin-filter__count">6</span></button>
+              <button type="button" class="bulletin-filter" data-filter="sleep-dreaming" aria-pressed="false">Sleep &amp; dreaming <span class="bulletin-filter__count">4</span></button>
+              <button type="button" class="bulletin-filter" data-filter="body-self" aria-pressed="false">Body &amp; self <span class="bulletin-filter__count">11</span></button>
+              <button type="button" class="bulletin-filter" data-filter="meditation-hypnosis" aria-pressed="false">Meditation &amp; hypnosis <span class="bulletin-filter__count">4</span></button>
+              <button type="button" class="bulletin-filter" data-filter="hallucinations" aria-pressed="false">Hallucinations <span class="bulletin-filter__count">3</span></button>
+              <button type="button" class="bulletin-filter" data-filter="near-death-experiences" aria-pressed="false">Near-death experiences <span class="bulletin-filter__count">2</span></button>
+              <button type="button" class="bulletin-filter" data-filter="free-will-agency" aria-pressed="false">Free will &amp; agency <span class="bulletin-filter__count">2</span></button>
+              <button type="button" class="bulletin-filter" data-filter="computation" aria-pressed="false">Computation <span class="bulletin-filter__count">10</span></button>
+              <button type="button" class="bulletin-filter" data-filter="methods" aria-pressed="false">Methods <span class="bulletin-filter__count">13</span></button>
+              <button type="button" class="bulletin-filter" data-filter="classification" aria-pressed="false">Classification <span class="bulletin-filter__count">4</span></button>
+              <button type="button" class="bulletin-filter" data-filter="religious-experience" aria-pressed="false">Religious experience <span class="bulletin-filter__count">3</span></button>
+              <button type="button" class="bulletin-filter" data-filter="disorders-of-consciousness" aria-pressed="false">Disorders of consciousness <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="language" aria-pressed="false">Language <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="pharmacology" aria-pressed="false">Pharmacology <span class="bulletin-filter__count">4</span></button>
+              <button type="button" class="bulletin-filter" data-filter="psychiatry" aria-pressed="false">Psychiatry <span class="bulletin-filter__count">7</span></button>
+              <button type="button" class="bulletin-filter" data-filter="cognition" aria-pressed="false">Cognition <span class="bulletin-filter__count">9</span></button>
+              <button type="button" class="bulletin-filter" data-filter="culture" aria-pressed="false">Culture <span class="bulletin-filter__count">8</span></button>
+              <button type="button" class="bulletin-filter" data-filter="therapy" aria-pressed="false">Therapy <span class="bulletin-filter__count">4</span></button>
+              <button type="button" class="bulletin-filter" data-filter="interoception" aria-pressed="false">Interoception <span class="bulletin-filter__count">2</span></button>
+              <button type="button" class="bulletin-filter" data-filter="ethics" aria-pressed="false">Ethics <span class="bulletin-filter__count">2</span></button>
+              <button type="button" class="bulletin-filter" data-filter="art-science" aria-pressed="false">Art &amp; science <span class="bulletin-filter__count">1</span></button>
+              <button type="button" class="bulletin-filter" data-filter="behavior" aria-pressed="false">Behavior <span class="bulletin-filter__count">2</span></button>
+            </section>
+            </div>
+            <p class="bulletin-result-count" aria-live="polite"><span id="bulletin-visible-count">41</span> entries shown</p>
+            <div class="bulletin-list">
+              <article id="bulletin-froese-irruption" class="bulletin-card" data-tags="issue-07 tom-froese consciousness agency psychedelics neuroscience methods">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 7</span><span>Interview</span> <span>11 pp.</span></p>
+                  <h3>The irruption theory: How mind and matter meet along the route to consciousness</h3>
+                  <p class="bulletin-card__people">Tom Froese, interviewed by Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 7</span><span>Tom Froese</span><span>Consciousness</span><span>Psychedelics</span><span>Neuroscience</span><span>Methods</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>In this interview, Tom Froese and Matthieu Koroma address the irruption theory, an account of how mental actions manifest themselves as unexplained variability in brain and bodily activity. The discussion considers how this approach can trace consciousness in physiological signatures such as scale-free activity and informational complexity, and how altered states can help disentangle the physiological correlates of consciousness from agency.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Tom Froese is a cognitive scientist whose work connects embodied cognition, complex systems, agency, consciousness, and altered states.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.5281/zenodo.13907364" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-changeux-molecular-social" class="bulletin-card" data-tags="issue-07 jean-pierre-changeux consciousness neuroscience art-science psychedelics computation">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 7</span><span>Interview</span> <span>15 pp.</span></p>
+                  <h3>Consciousness: from molecular to social scales</h3>
+                  <p class="bulletin-card__people">Jean-Pierre Changeux, interviewed by Guillaume Dumas</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 7</span><span>Jean-Pierre Changeux</span><span>Consciousness</span><span>Neuroscience</span><span>Art &amp; science</span><span>Psychedelics</span><span>Computation</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>In this interview, Guillaume Dumas reaches out to Jean-Pierre Changeux to offer a wide-ranging view on consciousness, spanning its fundamental molecular mechanisms up to its social dimension. They discuss altered states of consciousness, artistic practice, artificial intelligence, and the importance of multidisciplinary research for advancing consciousness studies.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Jean-Pierre Changeux is a neuroscientist whose work spans molecular neuroscience, neural models of consciousness, and the global neuronal workspace tradition.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.5281/zenodo.13907411" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-ciaunica-early-sensory-life" class="bulletin-card" data-tags="issue-06 anna-ciaunica consciousness body-self interoception phenomenology">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 6</span><span>Podcast</span> <span>3 pp.</span></p>
+                  <h3>What is it like to be in early sensory life?</h3>
+                  <p class="bulletin-card__people">Anna Ciaunica, recorded by Daniel Friedman; edited by Lena Coutrot, Daniel Friedman and Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 6</span><span>Anna Ciaunica</span><span>Consciousness</span><span>Body &amp; self</span><span>Interoception</span><span>Phenomenology</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>In this episode, Anna Ciaunica reviews recent progress on the scientific study of conscious experiences in early sensory life.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Anna Ciaunica works in philosophy of mind and cognitive science on embodiment, self-consciousness, social interaction, and early forms of experience.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-ciaunica-what-is-like-to-be-in-early-sensory-life.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.5281/zenodo.7457394" target="_blank" rel="noopener">DOI</a>
+                </div>
+            <div class="bulletin-card__media">
+              <p>Podcast episode</p>
+              <iframe src="https://www.youtube.com/embed/n6HQrGJTC34?wmode=opaque" title="What is it like to be in early sensory life?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+              </article>
+              <article id="bulletin-jillings-weightlessness" class="bulletin-card" data-tags="issue-06 steven-jillings consciousness body-self neuroscience phenomenology">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 6</span><span>Podcast</span> <span>5 pp.</span></p>
+                  <h3>What is it like to be in weightlessness?</h3>
+                  <p class="bulletin-card__people">Steven Jillings, recorded by Daniel Friedman; edited by Lena Coutrot and Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 6</span><span>Steven Jillings</span><span>Consciousness</span><span>Body &amp; self</span><span>Neuroscience</span><span>Phenomenology</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>In this episode, Steven Jillings reviews recent progress on the scientific study of conscious experiences in weightlessness.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Steven Jillings studies human perception and physiology in altered gravity, including vestibular and body-orientation experience during weightlessness.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightlessness.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.5281/zenodo.7457656" target="_blank" rel="noopener">DOI</a>
+                </div>
+            <div class="bulletin-card__media">
+              <p>Podcast episode</p>
+              <iframe src="https://www.youtube.com/embed/xUI4urgaZRk?wmode=opaque" title="What is it like to be in weightlessness?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+              </article>
+              <article id="bulletin-koroma-asleep" class="bulletin-card" data-tags="issue-06 matthieu-koroma consciousness sleep-dreaming body-self neuroscience phenomenology">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 6</span><span>Podcast</span> <span>5 pp.</span></p>
+                  <h3>What is it like to be asleep?</h3>
+                  <p class="bulletin-card__people">Matthieu Koroma, recorded by Daniel Friedman; edited by Lena Coutrot and Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 6</span><span>Matthieu Koroma</span><span>Consciousness</span><span>Sleep &amp; dreaming</span><span>Body &amp; self</span><span>Neuroscience</span><span>Phenomenology</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>In this episode, Matthieu Koroma reviews recent progress on the scientific study of conscious experiences during sleep.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Matthieu Koroma is a consciousness researcher and ALIUS editor whose work addresses sleep, dreaming, and the phenomenology of conscious states.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.5281/zenodo.7419360" target="_blank" rel="noopener">DOI</a>
+                </div>
+            <div class="bulletin-card__media">
+              <p>Podcast episode</p>
+              <iframe src="https://www.youtube.com/embed/OB8YskNJC40?wmode=opaque" title="What is it like to be asleep?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+              </article>
+              <article id="bulletin-gonzalez-interdisciplinary" class="bulletin-card" data-tags="issue-06 juan-gonzalez consciousness philosophy psychedelics phenomenology methods">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 6</span><span>Interview</span> <span>18 pp.</span></p>
+                  <h3>An interdisciplinary journey into consciousness research</h3>
+                  <p class="bulletin-card__people">Juan Gonz&aacute;lez, interviewed by Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 6</span><span>Juan Gonz&aacute;lez</span><span>Consciousness</span><span>Philosophy</span><span>Psychedelics</span><span>Phenomenology</span><span>Methods</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Pr. Gonz&aacute;lez and Dr. Koroma discuss the purpose and challenges of interdisciplinary consciousness research, tracing the history of ALIUS and considering how multiple disciplines, contexts, and methodologies can shape models of consciousness, sentience, subjective experience, empirical data, and the spiritual realm.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Juan Gonz&aacute;lez is a philosopher at Morelos State University whose work helped shape ALIUS's interdisciplinary approach to consciousness and altered states.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-research.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.5281/zenodo.7674054" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-sapolsky-free-will" class="bulletin-card" data-tags="issue-06 robert-sapolsky free-will-agency neuroscience philosophy behavior">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 6</span><span>Interview</span> <span>11 pp.</span></p>
+                  <h3>On free will or the lack thereof</h3>
+                  <p class="bulletin-card__people">Robert Sapolsky, interviewed by Alexandra Mikhailova and Daniel Friedman</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 6</span><span>Robert Sapolsky</span><span>Free will &amp; agency</span><span>Neuroscience</span><span>Philosophy</span><span>Behavior</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Robert Sapolsky outlines his view on free will and related topics, anticipating his book Determined: The Science of Life Without Free Will. The discussion moves across neuroscience, philosophy, education, and the criminal justice system.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Robert Sapolsky is a neuroscientist and primatologist known for work on stress, behavior, biology, and the scientific debate around free will.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.5281/zenodo.7394901" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-doss-cinco-sins" class="bulletin-card" data-tags="issue-06 manoj-doss psychedelics methods cognition pharmacology neuroscience">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 6</span><span>Interview and lecture</span> <span>27 pp.</span></p>
+                  <h3>On the Cinco Sins of Psychedelic Research</h3>
+                  <p class="bulletin-card__people">Manoj Doss, interviewed by George Fejer</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 6</span><span>Manoj Doss</span><span>Psychedelics</span><span>Methods</span><span>Cognition</span><span>Pharmacology</span><span>Neuroscience</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Manoj Doss addresses the Cinco Sins of Psychedelic Research, highlighting methodological concerns and biases, including those stemming from self-experimentation and researchers' personal drug experiences. He argues for closer integration of cognitive psychology and neuropharmacology, with stronger behavioral measures for studying psychedelics' effects on cognition and memory.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Manoj Doss is a cognitive neuropsychopharmacologist studying psychoactive drugs, memory, cognition, and methodological issues in psychedelic science.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.5281/zenodo.10797875" target="_blank" rel="noopener">DOI</a>
+                </div>
+            <div class="bulletin-card__media">
+              <p>Accompanying lecture</p>
+              <iframe src="https://www.youtube.com/embed/yWWdMe7FC9k" title="On the Cinco Sins of Psychedelic Research" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+              </article>
+              <article id="bulletin-skipper-language" class="bulletin-card" data-tags="issue-06 jeremy-skipper consciousness psychedelics language neuroscience phenomenology">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 6</span><span>Interview</span> <span>30 pp.</span></p>
+                  <h3>The intimacy of psychedelics, language, and consciousness</h3>
+                  <p class="bulletin-card__people">Jeremy I. Skipper, interviewed by Leor Roseman; edited by Matthieu Koroma and George Fejer</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 6</span><span>Jeremy I. Skipper</span><span>Consciousness</span><span>Psychedelics</span><span>Language</span><span>Neuroscience</span><span>Phenomenology</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>This interview explores the intimate relationship between language and consciousness, drawing insights from aphasia phenomenology, psychedelic experiences, and neuroscientific theories. Skipper argues that language is not merely a tool for reporting conscious experiences but plays a generative role in shaping and sustaining consciousness itself.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Jeremy I. Skipper is a cognitive neuroscientist of language whose work examines how language, context, and brain dynamics shape conscious experience.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-martial-near-death" class="bulletin-card" data-tags="issue-05 charlotte-martial near-death-experiences consciousness neuroscience methods">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 5</span><span>Commentary</span> <span>10 pp.</span></p>
+                  <h3>Near-death experiences in the public debate: A scientific perspective</h3>
+                  <p class="bulletin-card__people">Charlotte Martial, commentary on Surviving Death</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 5</span><span>Charlotte Martial</span><span>Near-death experiences</span><span>Consciousness</span><span>Neuroscience</span><span>Methods</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Charlotte Martial responds to the first episode of Netflix's Surviving Death, dedicated to near-death experiences. She welcomes public attention to this growing area of research while raising scientific concerns and outlining points that can move the debate about NDEs forward.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Charlotte Martial is a neuropsychologist and near-death experience researcher working on consciousness in life-threatening and unresponsive conditions.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-debate-near-death-experiences-in-the-public-debate-a-scientific-perspective.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/0bzc-fc94" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-canna-seligman-culture" class="bulletin-card" data-tags="issue-05 maddalena-canna rebecca-seligman anthropology culture body-self interoception psychiatry">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 5</span><span>Interview</span> <span>16 pp.</span></p>
+                  <h3>How culture breaks down the mind-body divide</h3>
+                  <p class="bulletin-card__people">Maddalena Canna and Rebecca Seligman, interviewed by Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 5</span><span>Maddalena Canna</span><span>Rebecca Seligman</span><span>Anthropology</span><span>Culture</span><span>Body &amp; self</span><span>Interoception</span><span>Psychiatry</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Anthropologists Maddalena Canna and Rebecca Seligman discuss how culture shapes the relationship between body and mind. Their work on Functional Neurological Disorder uses anthropological and psychophysiological methods to examine interoceptive affordance, cultural expectations, symptom meaning, and the social dimensions of care.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Maddalena Canna and Rebecca Seligman are anthropologists whose collaborative work examines culture, embodiment, trance, and functional neurological disorder.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/mfzk-ve81" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-chadha-indian-philosophy" class="bulletin-card" data-tags="issue-05 monima-chadha philosophy consciousness meditation-hypnosis psychedelics body-self">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 5</span><span>Interview</span> <span>10 pp.</span></p>
+                  <h3>Indian philosophy and the value of transformative experiences</h3>
+                  <p class="bulletin-card__people">Monima Chadha, interviewed by Edvard Avil&eacute;s and Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 5</span><span>Monima Chadha</span><span>Philosophy</span><span>Consciousness</span><span>Meditation &amp; hypnosis</span><span>Psychedelics</span><span>Body &amp; self</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Monima Chadha discusses Indian philosophy and the diversity of consciousness, explaining how translating concepts and practices into Western debates requires attention to traditions oriented toward liberation. The conversation highlights transformative experiences, meditation, no-self, and cross-cultural philosophy of mind.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Monima Chadha is a philosopher whose work brings Indian philosophical traditions into contemporary debates about mind, consciousness, and transformative experience.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of-transformative-experiences.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/rn10-az29" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-olson-yaden-therapeutic-effects" class="bulletin-card" data-tags="issue-05 david-olson david-yaden psychedelics pharmacology phenomenology therapy consciousness">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 5</span><span>Conversation and video</span> <span>18 pp.</span></p>
+                  <h3>Are the subjective effects of psychedelics necessary for their enduring therapeutic effects?</h3>
+                  <p class="bulletin-card__people">David E. Olson and David B. Yaden, hosted by George Fejer</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 5</span><span>David E. Olson</span><span>David B. Yaden</span><span>Psychedelics</span><span>Pharmacology</span><span>Phenomenology</span><span>Therapy</span><span>Consciousness</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>This discussion asks whether the subjective effects of psychedelics are necessary for enduring therapeutic benefit. Yaden and Griffiths emphasized mystical and other acute experiences, while Olson emphasized psychoplastogenic mechanisms that may produce benefit independently of subjective effects. The transcript clarifies the two positions and points of disagreement.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>David E. Olson studies psychedelics and psychoplastogens; David B. Yaden studies transformative, mystical, and psychedelic experiences and their therapeutic relevance.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/0v21-5n82" target="_blank" rel="noopener">DOI</a>
+                </div>
+            <div class="bulletin-card__media">
+              <p>Accompanying discussion</p>
+              <iframe src="https://www.youtube.com/embed/SY9814V1svs" title="Are the subjective effects of psychedelics necessary for their enduring therapeutic effects?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+              </article>
+              <article id="bulletin-schmidt-phenomenoconnectomics" class="bulletin-card" data-tags="issue-05 timo-torsten-schmidt consciousness neuroscience phenomenology methods classification">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 5</span><span>Interview</span> <span>16 pp.</span></p>
+                  <h3>Phenomenoconnectomics and the Neural Correlates of Altered Consciousness</h3>
+                  <p class="bulletin-card__people">Timo Torsten Schmidt, interviewed by George Fejer</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 5</span><span>Timo Torsten Schmidt</span><span>Consciousness</span><span>Neuroscience</span><span>Phenomenology</span><span>Methods</span><span>Classification</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Timo Torsten Schmidt discusses efforts to compile psychometric measures from controlled experiments on altered states of consciousness and introduces phenomenoconnectomics, a program linking phenomenology and functional connectivity to identify commonalities and differences across altered states.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Timo Torsten Schmidt is a neuroscientist studying the phenomenology and neural dynamics of altered states of consciousness, including through the Altered States Database.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-database-for-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/wb76-w666" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-fortier-tribute" class="bulletin-card" data-tags="issue-04 martin-fortier consciousness anthropology psychedelics culture methods">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 4</span><span>Tribute</span></p>
+                  <h3>Tribute to Martin Fortier</h3>
+                  <p class="bulletin-card__people">ALIUS contributors</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 4</span><span>Martin Fortier</span><span>Consciousness</span><span>Anthropology</span><span>Psychedelics</span><span>Culture</span><span>Methods</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Martin Fortier is remembered as a brilliant colleague and friend whose commitment to interdisciplinarity shaped ALIUS and influenced many researchers. The text adapts Martin's own summary of his wide-ranging research to provide a faithful and accurate representation of his work.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Martin Fortier was a philosopher and anthropologist whose work connected consciousness studies, anthropology, psychedelics, and altered states.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-nichols-dmt" class="bulletin-card" data-tags="issue-04 charles-nichols david-e-nichols psychedelics pharmacology neuroscience near-death-experiences methods">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 4</span><span>Commentary</span></p>
+                  <h3>DMT in the mammalian brain: A critical appraisal</h3>
+                  <p class="bulletin-card__people">Charles D. Nichols and David E. Nichols, commentary on Dean et al., 2019</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 4</span><span>Charles D. Nichols</span><span>David E. Nichols</span><span>Psychedelics</span><span>Pharmacology</span><span>Neuroscience</span><span>Near-death experiences</span><span>Methods</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Charles D. Nichols and David E. Nichols critically assess claims that DMT is synthesized in rat brain cortex at neurotransmitter-like levels and increases at death. They argue that while the findings are interesting, they do not support claims that DMT functions like serotonin in cortex or causes near-death experiences.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Charles D. Nichols and David E. Nichols are pharmacologists whose work has shaped contemporary psychedelic and serotonin receptor research.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-nichols-and-nichols-dmt-in-the-mammalian-brain-a-critical-appraisal.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/a5hm-fs14" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-baird-lucid-dreaming" class="bulletin-card" data-tags="issue-04 benjamin-baird consciousness sleep-dreaming meditation-hypnosis neuroscience phenomenology">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
+                  <h3>Internally generated conscious activity: reflections upon lucid dreaming</h3>
+                  <p class="bulletin-card__people">Benjamin Baird, interviewed by Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 4</span><span>Benjamin Baird</span><span>Consciousness</span><span>Sleep &amp; dreaming</span><span>Meditation &amp; hypnosis</span><span>Neuroscience</span><span>Phenomenology</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Benjamin Baird discusses conscious activity that is internally generated rather than driven by sensory stimuli, including dreaming, mind-wandering, meditation, and lucid dreaming. Lucid dreaming is highlighted as a way to gain experimental control over internally generated conscious activity during sleep.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Benjamin Baird is a psychologist and neuroscientist studying dreaming, lucid dreaming, mind-wandering, meditation, and internally generated conscious activity.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-baird-internally-generated-conscious-activity-reflections-upon-lucid-dreaming.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-carter-dimensions" class="bulletin-card" data-tags="issue-04 olivia-carter consciousness psychedelics neuroscience classification computation">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
+                  <h3>Dimensions of consciousness: from perceptual illusions to psychedelics</h3>
+                  <p class="bulletin-card__people">Olivia Carter, interviewed by George Fejer</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 4</span><span>Olivia Carter</span><span>Consciousness</span><span>Psychedelics</span><span>Neuroscience</span><span>Classification</span><span>Computation</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Olivia Carter explains how visual perception research led her to study psychedelics and inspired a multidimensional model of consciousness. The conversation addresses higher states, artificial intelligence, and the questions consciousness research needs to ask next.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Olivia Carter is a psychologist and neuroscientist whose work links visual perception, psychedelics, and multidimensional models of consciousness.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-carter-dimensions-of-consciousness-from-perceptual-illusions-to-psychedelics.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-gosseries-disorders" class="bulletin-card" data-tags="issue-04 olivia-gosseries disorders-of-consciousness psychedelics therapy neuroscience ethics">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
+                  <h3>Use of psychedelics in the treatment of disorders of consciousness</h3>
+                  <p class="bulletin-card__people">Olivia Gosseries, interviewed by George Fejer</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 4</span><span>Olivia Gosseries</span><span>Disorders of consciousness</span><span>Psychedelics</span><span>Therapy</span><span>Neuroscience</span><span>Ethics</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Olivia Gosseries discusses the possibility of using psychedelics to treat disorders of consciousness. Building on research on residual awareness and recovery, the conversation considers clinical trials, efficacy, ethics, legal issues, and related non-pathological altered states.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Olivia Gosseries studies disorders of consciousness and clinical approaches to residual awareness, recovery, and altered conscious states.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-treatment-of-disorders-of-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-hanks-decision-making" class="bulletin-card" data-tags="issue-04 timothy-hanks neuroscience free-will-agency computation behavior psychiatry">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
+                  <h3>Neuroscience of decision making</h3>
+                  <p class="bulletin-card__people">Timothy Hanks, interviewed by George Fejer</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 4</span><span>Timothy Hanks</span><span>Neuroscience</span><span>Free will &amp; agency</span><span>Computation</span><span>Behavior</span><span>Psychiatry</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Tim Hanks discusses neuroscience, decision making, philosophy, and science as a career. He explains how computational neuroscience shapes his research agenda and how decision making connects to free will, conscious awareness, mental health, experimental approaches, and clinical deployment.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Timothy Hanks is a neuroscientist studying decision making, computational neuroscience, and the links between choice, awareness, and behavior.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-hanks-neuroscience-of-decision-making.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-lenggenhager-bodily-self" class="bulletin-card" data-tags="issue-04 bigna-lenggenhager body-self consciousness neuroscience therapy phenomenology">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
+                  <h3>Bodily boundaries and beyond: exploring the malleability of bodily self-consciousness</h3>
+                  <p class="bulletin-card__people">Bigna Lenggenhager, interviewed by George Fejer</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 4</span><span>Bigna Lenggenhager</span><span>Body &amp; self</span><span>Consciousness</span><span>Neuroscience</span><span>Therapy</span><span>Phenomenology</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Bigna Lenggenhager discusses bodily self-consciousness, bodily disorders, and bodily illusions. The exchange covers the rubber hand illusion, full-body illusion, self-consciousness and bodily awareness, disembodiment, and the use of virtual reality as a therapeutic tool.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Bigna Lenggenhager studies bodily self-consciousness, bodily illusions, virtual reality, and disorders of embodiment.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-lenggenhager-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-vignemont-body-self" class="bulletin-card" data-tags="issue-04 frederique-de-vignemont body-self philosophy phenomenology neuroscience">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
+                  <h3>Body meets self</h3>
+                  <p class="bulletin-card__people">Fr&eacute;d&eacute;rique de Vignemont, interviewed by Rapha&euml;l Milli&egrave;re and Carlota Serrahima</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 4</span><span>Fr&eacute;d&eacute;rique de Vignemont</span><span>Body &amp; self</span><span>Philosophy</span><span>Phenomenology</span><span>Neuroscience</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Fr&eacute;d&eacute;rique de Vignemont discusses bodily awareness, body ownership, pain, touch, peripersonal space, and methodological questions about empirical evidence in philosophy. The exchange also addresses somatoparaphrenia, depersonalization, deafferentation, and experimental bodily illusions.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Fr&eacute;d&eacute;rique de Vignemont is a philosopher of mind and cognitive science known for work on bodily awareness, ownership, touch, pain, and self-consciousness.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/gza7-yy49" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-bayne-natural-phenomenon" class="bulletin-card" data-tags="issue-03 tim-bayne consciousness philosophy methods classification phenomenology">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
+                  <h3>How to study consciousness as a natural phenomenon</h3>
+                  <p class="bulletin-card__people">Tim Bayne, interviewed by Alessio Bucci and Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 3</span><span>Tim Bayne</span><span>Consciousness</span><span>Philosophy</span><span>Methods</span><span>Classification</span><span>Phenomenology</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Tim Bayne discusses how consciousness should be studied as a natural phenomenon. He argues for a natural-kind approach in which consciousness properties are empirically informed rather than defined a priori, and defends a cautious, integrative, multidimensional model of conscious states.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Tim Bayne is a philosopher of mind whose work focuses on consciousness, psychiatric phenomena, and natural-kind approaches to conscious states.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-bayne-how-to-study-consciousness-as-a-natural-phenomenon.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-dennett-explained" class="bulletin-card" data-tags="issue-03 daniel-dennett consciousness philosophy psychedelics computation culture">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
+                  <h3>Dennett explained</h3>
+                  <p class="bulletin-card__people">Daniel Dennett, interviewed by Daniel A. Friedman</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 3</span><span>Daniel Dennett</span><span>Consciousness</span><span>Philosophy</span><span>Psychedelics</span><span>Computation</span><span>Culture</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Daniel Dennett discusses his philosophical roots and reflections on Freud, predictive processing, psychedelics, consciousness, and ancient Athens. The interview highlights his interest in cross-disciplinary exchange and the role of philosophy in criticizing and contributing to mind science.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Daniel Dennett was a philosopher whose work connected philosophy of mind, cognitive science, evolution, artificial intelligence, and consciousness studies.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-dennett-explained.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-dienes-hypnosis-meditation" class="bulletin-card" data-tags="issue-03 zoltan-dienes consciousness meditation-hypnosis methods cognition phenomenology">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
+                  <h3>Role of hypnosis and meditation in consciousness research</h3>
+                  <p class="bulletin-card__people">Zoltan Dienes, interviewed by Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 3</span><span>Zoltan Dienes</span><span>Consciousness</span><span>Meditation &amp; hypnosis</span><span>Methods</span><span>Cognition</span><span>Phenomenology</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Zoltan Dienes answers questions about hypnosis and meditation as topics for consciousness research. He considers whether altered-state concepts are useful in these contexts, what is known about neurocognitive mechanisms, and how hypnosis and mindfulness may relate through metacognitive processes.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Zoltan Dienes is a psychologist known for research on unconscious knowledge, hypnosis, metacognition, and meditation.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-dienes-role-of-hypnosis-and-meditation-in-consciousness-research.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-preller-sociality" class="bulletin-card" data-tags="issue-03 katrin-preller psychedelics neuroscience therapy cognition methods">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
+                  <h3>Psychedelics and sociality: probing the diversity of cognition beyond the individual mind</h3>
+                  <p class="bulletin-card__people">Katrin Preller, interviewed by Leor Roseman and Christopher Timmermann</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 3</span><span>Katrin Preller</span><span>Psychedelics</span><span>Neuroscience</span><span>Therapy</span><span>Cognition</span><span>Methods</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Katrin Preller discusses psychedelics as tools for investigating social cognition and clinical mechanisms. The exchange emphasizes scientific rigor, psychedelic-assisted therapy, VR, hyperscanning, thalamic gating, cortico-striato-thalamo-cortical loops, and future challenges around funding, sample size, and ethics.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Katrin Preller is a neuroscientist and psychologist studying psychedelics, social cognition, neuropharmacology, and altered states.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-preller-psychedelics-and-sociality-probing-the-diversity-of-cognition-beyond.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-winkelman-neuroanthropology" class="bulletin-card" data-tags="issue-03 michael-winkelman consciousness anthropology culture religious-experience psychedelics">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
+                  <h3>Evolutionary neuroanthropology of consciousness: exploring the diversity of conscious modes across cultures</h3>
+                  <p class="bulletin-card__people">Michael Winkelman, interviewed by Martin Fortier</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 3</span><span>Michael Winkelman</span><span>Consciousness</span><span>Anthropology</span><span>Culture</span><span>Religious experience</span><span>Psychedelics</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Michael Winkelman and Martin Fortier discuss how consciousness is grounded in evolutionary mechanisms and enculturated. Topics include neuroanthropology, evolutionary psychology, shamanism, big data in religious studies, taxonomy of conscious modes, psychointegrators, constructivism, perennialism, and visionary plants.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Michael Winkelman is an anthropologist whose work connects shamanism, neuroanthropology, religion, and evolutionary accounts of consciousness.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf" target="_blank" rel="noopener">Read PDF</a>
+                </div>
+
+              </article>
+              <article id="bulletin-fox-spontaneous-thinking" class="bulletin-card" data-tags="issue-02 kieran-fox sleep-dreaming meditation-hypnosis cognition neuroscience psychiatry">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
+                  <h3>Wandering along the spectrum of spontaneous thinking: dreaming, meditation, mind-wandering, and well-being</h3>
+                  <p class="bulletin-card__people">Kieran Fox, interviewed by Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 2</span><span>Kieran Fox</span><span>Sleep &amp; dreaming</span><span>Meditation &amp; hypnosis</span><span>Cognition</span><span>Neuroscience</span><span>Psychiatry</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Kieran Fox discusses spontaneous thought, which occupies much conscious activity but has long been experimentally difficult to study. The interview relates mind-wandering to dreaming and meditation, and considers creativity, mental illness, well-being, and the importance of spontaneous thinking for mental life.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Kieran Fox is a neuroscientist and psychologist studying spontaneous thought, dreaming, meditation, creativity, and mental health.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/m6kp-c494" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-friston-woodlice" class="bulletin-card" data-tags="issue-02 karl-friston computation neuroscience consciousness psychiatry philosophy">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
+                  <h3>Of woodlice and men: A Bayesian account of cognition, life and consciousness</h3>
+                  <p class="bulletin-card__people">Karl Friston, interviewed by Martin Fortier and Daniel A. Friedman</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 2</span><span>Karl Friston</span><span>Computation</span><span>Neuroscience</span><span>Consciousness</span><span>Psychiatry</span><span>Philosophy</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Karl Friston discusses the Free Energy Principle, predictive coding, Bayesian brain hypotheses, David Marr, Karl Popper, phenomenology, schizophrenia, psychosis, active inference, representation, action-perception distinctions, and self-awareness in non-human systems.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Karl Friston is a neuroscientist known for statistical parametric mapping, dynamic causal modeling, the free-energy principle, and active inference.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/h460-nz89" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-friston-autobiography" class="bulletin-card" data-tags="issue-02 karl-friston computation neuroscience cognition autobiography">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 2</span><span>Autobiography</span></p>
+                  <h3>Am I autistic? An intellectual autobiography</h3>
+                  <p class="bulletin-card__people">Karl Friston</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 2</span><span>Karl Friston</span><span>Computation</span><span>Neuroscience</span><span>Cognition</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>These personal notes were inspired by Friston's answer to the first question for the ALIUS Bulletin interview and expand that response into an intellectual autobiography.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Karl Friston is a neuroscientist known for statistical parametric mapping, dynamic causal modeling, the free-energy principle, and active inference.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-biography-am-i-autistic-an-intellectual-autobiography.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/q2qt-2y52" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-metzinger-self-models" class="bulletin-card" data-tags="issue-02 thomas-metzinger consciousness body-self philosophy ethics computation">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
+                  <h3>Splendor and misery of self-models: conceptual and empirical issues regarding consciousness and self-consciousness</h3>
+                  <p class="bulletin-card__people">Thomas Metzinger, interviewed by Jakub Limanowski and Rapha&euml;l Milli&egrave;re</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 2</span><span>Thomas Metzinger</span><span>Consciousness</span><span>Body &amp; self</span><span>Philosophy</span><span>Ethics</span><span>Computation</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Thomas Metzinger discusses empirical evidence in philosophy of mind, the indeterminacy of selfhood, phenomenal transparency, disagreements among theories of mental representation, ethical issues in artificial consciousness, and the role of first-person methods in cognitive science.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Thomas Metzinger is a philosopher of mind known for work on self-consciousness, phenomenal transparency, mental representation, and neuroethics.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/epgh-at59" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-david-nichols-pharmacology" class="bulletin-card" data-tags="issue-02 david-nichols psychedelics pharmacology consciousness methods">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
+                  <h3>Psychedelics: from pharmacology to phenomenology</h3>
+                  <p class="bulletin-card__people">David Nichols, interviewed by Leor Roseman and Christopher Timmermann</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 2</span><span>David Nichols</span><span>Psychedelics</span><span>Pharmacology</span><span>Consciousness</span><span>Methods</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>David Nichols discusses psychedelic pharmacology, receptor mechanisms, functional selectivity, receptor-lid structures, and why slightly different psychedelic molecules can produce diverging experiences. He also criticizes speculative claims in psychedelic research and calls for scientific responsibility.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>David Nichols is a pharmacologist whose work on psychedelics and serotonin receptors has strongly influenced modern psychedelic science.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-nichols-psychedelics-from-pharmacology-to-phenomenology.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/ezb7-sq10" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-oregan-sensorimotor" class="bulletin-card" data-tags="issue-02 kevin-oregan consciousness body-self philosophy computation phenomenology">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
+                  <h3>On the feel of things: the sensorimotor theory of consciousness</h3>
+                  <p class="bulletin-card__people">Kevin O'Regan, interviewed by Cordelia Erickson-Davis</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 2</span><span>Kevin O'Regan</span><span>Consciousness</span><span>Body &amp; self</span><span>Philosophy</span><span>Computation</span><span>Phenomenology</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Kevin O'Regan explains how the sensorimotor theory reframes perceptual experience as ways of interacting with the world. The interview considers qualia, sensory substitution, robots that feel, AI ethics, dreaming, hallucination, and phenomenological reflection.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Kevin O'Regan is a cognitive scientist known for the sensorimotor theory of consciousness and work on perception and visual experience.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-o-regan-on-the-feel-of-things-the-sensorimotor-theory-of-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/zam3-yk89" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-ratcliffe-hallucinations" class="bulletin-card" data-tags="issue-02 matthew-ratcliffe hallucinations phenomenology philosophy psychiatry">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
+                  <h3>Verbal hallucinations, intentionality, and interpersonal experience</h3>
+                  <p class="bulletin-card__people">Matthew Ratcliffe, interviewed by Mathieu Frerejouan</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 2</span><span>Matthew Ratcliffe</span><span>Hallucinations</span><span>Phenomenology</span><span>Philosophy</span><span>Psychiatry</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Matthew Ratcliffe discusses hallucinations within phenomenological psychopathology. The interview considers how hallucinatory experiences can illuminate the structure of human experience as vulnerable and interpersonal, extending work beyond schizophrenia, autism, and depression.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Matthew Ratcliffe is a philosopher of phenomenology and psychopathology known for work on depression, hallucination, and interpersonal experience.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-intentionality-and-interpersonal-experience.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/913r-wa92" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-taves-religious-experience" class="bulletin-card" data-tags="issue-02 ann-taves religious-experience anthropology culture computation cognition">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
+                  <h3>Conceptual, anthropological and cognitive issues surrounding religious experience</h3>
+                  <p class="bulletin-card__people">Ann Taves, interviewed by Martin Fortier and Maddalena Canna</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 2</span><span>Ann Taves</span><span>Religious experience</span><span>Anthropology</span><span>Culture</span><span>Computation</span><span>Cognition</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Ann Taves discusses the building-block approach to religious experience, predictive coding, inherentist and attributionist theories, paradox, non-ordinary experiences, spiritual visions, attribution of reality, enlightenment, epiphany, mystical insight, and empirical examples from multiple traditions.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Ann Taves is a scholar of religion whose work examines religious experience, specialness, cognition, and building-block approaches to culture and consciousness.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-religious.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/3qja-m432" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-carhart-harris-psychedelics" class="bulletin-card" data-tags="issue-01 robin-carhart-harris consciousness psychedelics neuroscience methods body-self">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
+                  <h3>Consciousness and psychedelics</h3>
+                  <p class="bulletin-card__people">Robin Carhart-Harris, interviewed by Martin Fortier and Rapha&euml;l Milli&egrave;re</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 1</span><span>Robin Carhart-Harris</span><span>Consciousness</span><span>Psychedelics</span><span>Neuroscience</span><span>Methods</span><span>Body &amp; self</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Robin Carhart-Harris discusses empirical and theoretical issues in the renaissance of scientific research on psychedelic states, including neuroimaging limits, self-report reliability, ego dissolution, the default mode network, psychoanalysis and neuroscience, and the entropic brain hypothesis.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Robin Carhart-Harris is a neuroscientist known for empirical and theoretical work on psychedelics, the entropic brain hypothesis, and altered consciousness.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/m5ky-6w96" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-hohwy-conscious-modes" class="bulletin-card" data-tags="issue-01 jakob-hohwy consciousness philosophy computation classification cognition">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
+                  <h3>On different ways of being conscious: modes of consciousness and the predictive mind</h3>
+                  <p class="bulletin-card__people">Jakob Hohwy, interviewed by Matthieu Koroma</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 1</span><span>Jakob Hohwy</span><span>Consciousness</span><span>Philosophy</span><span>Computation</span><span>Classification</span><span>Cognition</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Jakob Hohwy argues that global states of consciousness are better understood as modes rather than degrees or levels. Capturing conscious-state diversity requires multidimensional modeling that identifies relevant dimensions, such as attention, and their variation across states.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Jakob Hohwy is a philosopher and cognitive scientist known for predictive processing accounts of consciousness, self, and perception.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-hohwy-on-different-ways-of-being-conscious-modes-of-consciousness-and-the.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/8yq5-pv76" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-luhrmann-anthropology-mind" class="bulletin-card" data-tags="issue-01 tanya-luhrmann anthropology culture religious-experience hallucinations cognition">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
+                  <h3>The anthropology of mind: exploring unusual sensations and spiritual experiences across cultures</h3>
+                  <p class="bulletin-card__people">Tanya Luhrmann, interviewed by Martin Fortier</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 1</span><span>Tanya Luhrmann</span><span>Anthropology</span><span>Culture</span><span>Religious experience</span><span>Hallucinations</span><span>Cognition</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Tanya Luhrmann discusses anthropology of mind, methodological commitments, shifts from imagination-like to perception-like mental representations, absorption in religious practice, and cognitive penetrability: whether folk models of mind shape the mental events people experience.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Tanya Luhrmann is an anthropologist whose work examines unusual experiences, voice hearing, spiritual practice, absorption, and the anthropology of mind.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/7ppf-h459" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-mccarthy-jones-voice-hearing" class="bulletin-card" data-tags="issue-01 simon-mccarthy-jones hallucinations psychiatry culture neuroscience cognition">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
+                  <h3>The phenomenon of voice-hearing: an interdisciplinary approach</h3>
+                  <p class="bulletin-card__people">Simon McCarthy-Jones, interviewed by Mathieu Frerejouan</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 1</span><span>Simon McCarthy-Jones</span><span>Hallucinations</span><span>Psychiatry</span><span>Culture</span><span>Neuroscience</span><span>Cognition</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Simon McCarthy-Jones discusses voice hearing beyond narrow psychiatric framings of auditory verbal hallucination. The interview approaches voice hearing through neuroscientific and psychological theories, historical context, politics, gender, and religion.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Simon McCarthy-Jones is a psychologist and writer whose work examines voice hearing, auditory verbal hallucinations, and their social and historical contexts.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-mccarthy-jones-phenomenon-of-voice-hearing-an-interdisciplinary-approach.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/pmnr-8325" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-seligman-dissociative" class="bulletin-card" data-tags="issue-01 rebecca-seligman anthropology culture consciousness psychiatry body-self">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
+                  <h3>Towards a biocultural approach to dissociative consciousness</h3>
+                  <p class="bulletin-card__people">Rebecca Seligman, interviewed by Arnaud Halloy</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 1</span><span>Rebecca Seligman</span><span>Anthropology</span><span>Culture</span><span>Consciousness</span><span>Psychiatry</span><span>Body &amp; self</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Rebecca Seligman discusses dissociative states and possession in Candombl&eacute; through a biocultural approach. The interview emphasizes the normative dimension of altered states, critiques bio-cultural dualism, and considers ethnographic, psychological, and psychophysiological methods.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Rebecca Seligman is an anthropologist studying dissociation, possession, embodiment, and biocultural approaches to consciousness.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-seligman-towards-a-biocultural-approach-to-dissociative-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/x80s-k850" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+              <article id="bulletin-windt-dreams" class="bulletin-card" data-tags="issue-01 jennifer-windt sleep-dreaming consciousness phenomenology philosophy methods">
+                <header class="bulletin-card__header">
+                  <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
+                  <h3>Relocating dreams on the conceptual map: how the analysis of sleep and dreaming challenges our taxonomy of mental states</h3>
+                  <p class="bulletin-card__people">Jennifer Windt, interviewed by Alessio Bucci and Rapha&euml;l Milli&egrave;re</p>
+                  <p class="bulletin-card__tags" aria-label="Bulletin metadata"><span>Issue 1</span><span>Jennifer Windt</span><span>Sleep &amp; dreaming</span><span>Consciousness</span><span>Phenomenology</span><span>Philosophy</span><span>Methods</span></p>
+                </header>
+                <div class="bulletin-card__copy">
+                  <section aria-label="Abstract">
+                    <h4>Abstract</h4>
+                    <p>Jennifer Windt discusses why dreaming matters for consciousness research, how dream theories have evolved, the role of neuroimaging, the taxonomy of sleep-related conscious phenomena, first-person reports, the Immersive Spatiotemporal Hallucination model, and future challenges.</p>
+                  </section>
+                  <section aria-label="Speaker biography">
+                    <h4>Speaker biography</h4>
+                    <p>Jennifer Windt is a philosopher of mind known for work on dreaming, sleep, mind-wandering, and first-person reports.</p>
+                  </section>
+                </div>
+                <div class="bulletin-card__links">
+                  <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf" target="_blank" rel="noopener">Read PDF</a>
+              <a href="https://doi.org/10.34700/xhfg-wq83" target="_blank" rel="noopener">DOI</a>
+                </div>
+
+              </article>
+            </div>
+            <p class="bulletin-empty" hidden>No bulletin entries match those filters.</p>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 </div>
@@ -1280,134 +1707,7 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 			</a>
 		</li>
 		<li id="pg714570715415488939" class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
-		<li id="active" class="wsite-menu-item-wrap">
-			<a
-						href="/bulletin/"
-				class="wsite-menu-item"
-				>
-				Bulletin
-			</a>
-			<div class="wsite-menu-wrap" style="display:none">
-	<ul class="wsite-menu">
-		<li id="wsite-nav-425940006608584181"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="#bulletin-07"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 7
-		</span><span class="wsite-menu-arrow">&gt;</span>
-	</a>
-	<div class="wsite-menu-wrap" style="display:none">
-	<ul class="wsite-menu">
-		<li id="wsite-nav-677879715142621932"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Froese - Alius Bulletin No. 7
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-677822843502417825"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Changeux - Alius Bulletin No. 7
-		</span>
-	</a>
-</li>
-
-	</ul>
-</div>
-
-</li>
-<li id="wsite-nav-553869271147933325"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="#bulletin-06"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 6
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-826876812964610940"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 5
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-274291659105754795"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 4
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-124316841902636796"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 3
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-693884761376184660"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 2
-		</span>
-	</a>
-</li>
-<li id="wsite-nav-483743533676403712"
-	class="wsite-menu-subitem-wrap "
-	>
-	<a
-				href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf"
-		class="wsite-menu-subitem"
-		>
-		<span class="wsite-menu-title">
-			Bulletin Issue No. 1
-		</span>
-	</a>
-</li>
-
-	</ul>
-</div>
-
-		</li>
+		<li id="active" class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
         <li id="pg-newsletter" class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
 		<li id="pg226786205107534455" class="wsite-menu-item-wrap">
 			<a
@@ -1428,49 +1728,54 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 <script language="javascript" src="/assets/vendor/weebly-site/files/theme/files/plugins.js"></script>
 <script language="javascript" src="/assets/vendor/weebly-site/files/theme/files/custom.js"></script>
 <script language="javascript" src="/assets/vendor/weebly-site/files/theme/files/mobile.js"></script>
-
-    <nav class="section-nav" aria-label="Section navigation">
-  <ol>
-  <li><a href="#bulletin-07">Issue No. 7</a></li>
-  <li><a href="#bulletin-06">Issue No. 6</a></li>
-  <li><a href="#bulletin-05">Issue No. 5</a></li>
-  <li><a href="#bulletin-04">Issue No. 4</a></li>
-  <li><a href="#bulletin-03">Issue No. 3</a></li>
-  <li><a href="#bulletin-02">Issue No. 2</a></li>
-  <li><a href="#bulletin-01">Issue No. 1</a></li>
-  </ol>
-</nav>
-
 <script>
 (function() {
-  var links = document.querySelectorAll('.section-nav a');
-  if (!links.length) return;
-  // Highlight active section as user scrolls; snap-center the active link
-  var io = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      var id = e.target.id;
-      if (!id) return;
-      var link = document.querySelector('.section-nav a[href="#' + id + '"]');
-      if (!link) return;
-      if (e.isIntersecting) {
-        links.forEach(function(a) { a.classList.remove('is-active'); });
-        link.classList.add('is-active');
-        // Snap the active link horizontally into view on narrow screens
-        var nav = link.closest('ol');
-        if (nav && nav.scrollWidth > nav.clientWidth) {
-          var r = link.getBoundingClientRect(), nr = nav.getBoundingClientRect();
-          nav.scrollBy({
-            left: (r.left + r.width / 2) - (nr.left + nr.width / 2),
-            behavior: 'smooth'
-          });
-        }
-      }
+  var filters = Array.prototype.slice.call(document.querySelectorAll('.bulletin-filter'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.bulletin-card'));
+  var count = document.getElementById('bulletin-visible-count');
+  var empty = document.querySelector('.bulletin-empty');
+  if (!filters.length || !cards.length) return;
+  var active = new Set();
+
+  function cardMatches(card, showAll) {
+    if (showAll) return true;
+    var tags = (card.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
+    var selected = [];
+    active.forEach(function(tag) { selected.push(tag); });
+    return selected.every(function(tag) { return tags.indexOf(tag) !== -1; });
+  }
+
+  function applyFilters() {
+    var showAll = active.size === 0;
+    var visible = 0;
+    filters.forEach(function(button) {
+      var filter = button.getAttribute('data-filter');
+      var isActive = showAll ? filter === '*' : active.has(filter);
+      button.classList.toggle('is-active', isActive);
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
-  }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
-  document.querySelectorAll('[id^="bulletin-"],[id="coordinators"],[id="research-members"],[id="in-memoriam"],[id="assc-satellite"],[id="program"],[id="attendees"],[id="travel"],[id="music"],[id="active-roles"],[id="researcher-membership"]').forEach(function(el) { io.observe(el); });
+    cards.forEach(function(card) {
+      var match = cardMatches(card, showAll);
+      card.classList.toggle('is-filtered-out', !match);
+      if (match) visible += 1;
+    });
+    if (count) count.textContent = String(visible);
+    if (empty) empty.hidden = visible !== 0;
+  }
+
+  filters.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var filter = button.getAttribute('data-filter');
+      if (filter === '*') active.clear();
+      else if (active.has(filter)) active.delete(filter);
+      else active.add(filter);
+      applyFilters();
+    });
+  });
+
+  applyFilters();
 })();
 </script>
 <script src="/assets/shared/js/alius-redesign.js" defer></script>
 </body>
 </html>
-
