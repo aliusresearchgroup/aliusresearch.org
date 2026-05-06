@@ -703,11 +703,11 @@ body.wsite-page-team .team-card:focus-visible {
   }
 
   body.wsite-page-events .event-section {
-    padding-top: 84px;
+    padding-top: 72px !important;
   }
 
   body.wsite-page-events .event-section:first-child {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
 
   body.wsite-page-events .event-info-card,
