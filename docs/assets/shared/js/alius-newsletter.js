@@ -45,7 +45,7 @@
     data.forEach(function (value, key) {
       if (key === 'website') return;
       if (key === 'email_confirm') return;
-      var normalized = typeof value === 'string' ? value.trim() : value;
+      var normalized = typeof value === 'string' ? safeDiscordText(value) : value;
       if (normalized === '') return;
       if (payload[key]) {
         payload[key] = [].concat(payload[key], normalized);
@@ -53,8 +53,6 @@
         payload[key] = normalized;
       }
     });
-    payload.submitted_at = new Date().toISOString();
-    payload.source_url = window.location.href;
     return payload;
   }
 
@@ -69,40 +67,29 @@
     return false;
   }
 
-  function addDiscordMessage(form, payload) {
+  function formatForFormBeeDiscord(form, payload) {
     var payloadKind = form.getAttribute('data-discord-payload');
 
     if (payloadKind === 'newsletter-signup') {
-      var signupName = safeDiscordText(payload.name || 'Anonymous');
-      var signupEmail = safeDiscordText(payload.email || 'not provided');
-      payload.content = [
-        '**Newsletter email signup**',
-        '**Name:** ' + signupName,
-        '**Email:** ' + signupEmail
-      ].join('\n').slice(0, 1900);
-      payload.allowed_mentions = { parse: [] };
-      return payload;
+      return {
+        Message: 'Please sign me up to the newsletter!',
+        Name: payload.name || 'Anonymous',
+        Email: payload.email || 'not provided'
+      };
     }
 
     if (payloadKind !== 'news-item') return payload;
 
-    var title = safeDiscordText(payload.news_title || 'Untitled news item');
-    var submitter = safeDiscordText(payload.submitter_name || 'Anonymous');
-    var email = safeDiscordText(payload.submitter_email || 'not provided');
-    var itemUrl = safeDiscordText(payload.news_url || 'not provided');
-    var summary = safeDiscordText(payload.news_summary || 'No summary provided');
-    var relevance = safeDiscordText(payload.relevance || 'No relevance note provided');
-
-    payload.content = [
-      '**Newsletter news item submission**',
-      '**Title:** ' + title,
-      '**Submitted by:** ' + submitter + ' (' + email + ')',
-      '**Link:** ' + itemUrl,
-      '**Summary:** ' + summary,
-      '**Why it matters:** ' + relevance
-    ].join('\n').slice(0, 1900);
-    payload.allowed_mentions = { parse: [] };
-    return payload;
+    return {
+      Message: 'Please consider this item for the newsletter!',
+      Title: payload.news_title || 'Untitled news item',
+      'Item type': payload.news_type || 'not provided',
+      Link: payload.news_url || 'not provided',
+      'Submitted by': payload.submitter_name || 'Anonymous',
+      'Submitter email': payload.submitter_email || 'not provided',
+      Summary: payload.news_summary || 'No summary provided',
+      'Why it matters': payload.relevance || 'No relevance note provided'
+    };
   }
 
   async function submitForm(form) {
@@ -124,7 +111,7 @@
     setStatus(form, '', '');
 
     try {
-      var payload = addDiscordMessage(form, collectPayload(form));
+      var payload = formatForFormBeeDiscord(form, collectPayload(form));
       var response = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
