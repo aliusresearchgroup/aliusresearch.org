@@ -139,10 +139,13 @@
       setStatus(form, form.getAttribute('data-formbee-success') || 'Thank you. Your submission was received.', 'success');
     } catch (error) {
       var setupError = error && /^(404|405)$/.test(error.message || '');
+      var rejectionError = error && /^(401|403)$/.test(error.message || '');
       setStatus(
         form,
         setupError
           ? 'This form still needs its FormBee webhook endpoint to be connected.'
+          : rejectionError
+            ? 'FormBee is rejecting this form. Check the API key and allowed domains.'
           : 'The submission could not be sent. Please try again later.',
         'error'
       );
