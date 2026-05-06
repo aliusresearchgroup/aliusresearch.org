@@ -53,6 +53,10 @@ body {
   display: block;
 }
 
+#navigation .wsite-nav-more {
+  display: none !important;
+}
+
 #navigation a {
   padding: 9px 12px;
   color: #4f5c57;
