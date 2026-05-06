@@ -1,0 +1,21 @@
+{
+  "repository": {
+    "owner": "aliusresearchgroup",
+    "name": "aliusresearch.org",
+    "remote": "https://github.com/aliusresearchgroup/aliusresearch.org.git",
+    "default_branch_from_repository_settings": "redesign-v2",
+    "default_branch_verified_from_user_screenshot_on": "2026-05-06"
+  },
+  "public_site": {
+    "custom_domain": "aliusresearch.org",
+    "cname_file": "docs/CNAME",
+    "published_directory": "docs",
+    "github_pages_environment": "github-pages"
+  },
+  "deployment_notes": [
+    "Treat redesign-v2 as the current website/default branch unless GitHub repository settings are changed.",
+    "The public site is static GitHub Pages content served from the docs directory with docs/CNAME set to aliusresearch.org.",
+    "On 2026-05-06, unauthenticated GitHub API deployment history still showed recent GitHub Pages deployments from optimized-v1; verify the GitHub Pages source settings before forcing branch changes."
+  ],
+  "last_updated": "2026-05-06"
+}
