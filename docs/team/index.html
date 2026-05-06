@@ -94,7 +94,7 @@ var STYLE_PREFIX = 'wsite';
 //-->
 </script>
 	<style>
-/* Site refresh Ã¢â‚¬â€ palette lock (A13) + reading-column (A14) */
+/* Site refresh — palette lock (A13) + reading-column (A14) */
 .wsite-page-bulletin #wsite-content h2,
 .wsite-page-bulletin #wsite-content h2 *,
 .wsite-page-events #wsite-content h2,
@@ -115,7 +115,7 @@ var STYLE_PREFIX = 'wsite';
   color: #3d8b3d !important;
 }
 
-/* ---- A14 Ã‚Â· Bulletin-interview reading column ---- */
+/* ---- A14 · Bulletin-interview reading column ---- */
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table-wrap,
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-table,
 body[class*="wsite-page-bulletin"] #wsite-content .wsite-multicol-tbody,
@@ -142,7 +142,7 @@ body[class*="wsite-page-bulletin"] #wsite-content img {
   max-width: 100% !important;
   height: auto !important;
 }
-/* Keep existing styling on the consolidated /bulletin/ landing Ã¢â‚¬â€ only the
+/* Keep existing styling on the consolidated /bulletin/ landing — only the
    interior interview pages should pick up the 72ch column; the landing has
    its own section-nav and grid */
 body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
@@ -184,6 +184,7 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 		</li>
 		<li id="pg714570715415488939" class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
 		<li id="pg388209027172883656" class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
+        <li id="pg-newsletter" class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
 		<li id="pg226786205107534455" class="wsite-menu-item-wrap">
 			<a
 						href="/journal-club/"
@@ -194,13 +195,12 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 		</li>
 		<li id="pg649956180932632823" class="wsite-menu-item-wrap"><a href="/events/" class="wsite-menu-item">Events</a></li>
 		<li id="pg662395399792559095" class="wsite-menu-item-wrap"><a href="/membership/" class="wsite-menu-item">Membership</a></li>
-        <li id="pg-newsletter" class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
 </ul>
 </div>
 			<div id="content-wrapper">
 				<div id="wsite-content" class="wsite-elements wsite-not-footer">
 <style>
-/* Team page Ã¢â‚¬â€ normal card grid, uniform typography (Uncodixify aesthetic) */
+/* Team page — normal card grid, uniform typography (Uncodixify aesthetic) */
 
 body.wsite-page-team #wsite-content {
   padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
@@ -228,7 +228,7 @@ body.wsite-page-team .team-page-title h1 {
   font-weight: 700 !important;
   margin: 0 !important;
   color: #1a4d2e !important;
-  letter-spacing: -0.01em !important;
+  letter-spacing: 0 !important;
   text-transform: none !important;
   text-align: left !important;
 }
@@ -257,7 +257,7 @@ body.wsite-page-team .team-names-nav a {
   font-weight: 500;
 }
 
-/* In Memoriam Ã¢â‚¬â€ dedicated full-page segment for Martin Fortier */
+/* In Memoriam — dedicated full-page segment for Martin Fortier */
 body.wsite-page-team .memoriam {
   max-width: 960px;
   margin: 96px auto 64px;
@@ -285,7 +285,7 @@ body.wsite-page-team .memoriam__name {
   font-weight: 700 !important;
   color: #1a4d2e !important;
   margin: 0 0 4px !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: 0 !important;
   text-transform: none !important;
   text-align: center !important;
   line-height: 1.1 !important;
@@ -333,12 +333,49 @@ body.wsite-page-team .memoriam__photo img {
   max-width: none !important;
   border-radius: 50%;
 }
+body.wsite-page-team .memoriam__gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) repeat(2, minmax(0, 0.78fr));
+  gap: 14px;
+  max-width: 900px;
+  margin: -22px auto 56px;
+}
+body.wsite-page-team .memoriam__gallery figure {
+  margin: 0;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(66, 81, 76, 0.18);
+  border-radius: 8px;
+  background: #f6f8f7;
+}
+body.wsite-page-team .memoriam__gallery figure:first-child {
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+body.wsite-page-team .memoriam__gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 body.wsite-page-team .memoriam__lede p {
   font-size: 16px !important;
   line-height: 1.7 !important;
   color: #1f2826 !important;
   margin: 0 0 18px !important;
-  text-align: left !important;
+  text-align: justify !important;
+  text-align-last: left !important;
+}
+body.wsite-page-team .memoriam__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 8px 0 0;
 }
 body.wsite-page-team .memoriam__primary {
   display: inline-block;
@@ -376,8 +413,46 @@ body.wsite-page-team .memoriam__col p {
   line-height: 1.72 !important;
   color: #2a3330 !important;
   margin: 0 0 14px !important;
-  text-align: left !important;
+  text-align: justify !important;
+  text-align-last: left !important;
   font-weight: 400 !important;
+}
+body.wsite-page-team .memoriam__video,
+body.wsite-page-team .memoriam__pdf {
+  max-width: 860px;
+  margin: 0 auto 48px;
+}
+body.wsite-page-team .memoriam__pdf {
+  max-width: 920px;
+}
+body.wsite-page-team .memoriam__video-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  border: 1px solid rgba(66, 81, 76, 0.18);
+  background: #0f1714;
+}
+body.wsite-page-team .memoriam__video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+body.wsite-page-team .memoriam__pdf-frame {
+  height: min(72vh, 760px);
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(66, 81, 76, 0.18);
+  background: #f6f8f7;
+}
+body.wsite-page-team .memoriam__pdf-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 body.wsite-page-team .memoriam__works {
   list-style: disc !important;
@@ -396,8 +471,37 @@ body.wsite-page-team .memoriam__works em {
   color: #1a4d2e;
   font-style: italic;
 }
+body.wsite-page-team .memoriam__works a,
+body.wsite-page-team .memoriam__resources a {
+  color: #1a4d2e !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+body.wsite-page-team .memoriam__resources {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 6px 0 0 !important;
+}
+body.wsite-page-team .memoriam__resources li {
+  margin: 0 !important;
+  padding: 14px 0 13px !important;
+  border-top: 1px solid rgba(66, 81, 76, 0.14);
+  color: #2a3330 !important;
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+}
+body.wsite-page-team .memoriam__resources li:last-child {
+  border-bottom: 1px solid rgba(66, 81, 76, 0.14);
+}
+body.wsite-page-team .memoriam__resources strong {
+  display: block;
+  color: #1a4d2e;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
 
-/* Personal tribute Ã¢â‚¬â€ blockquote */
+/* Personal tribute — blockquote */
 body.wsite-page-team .memoriam__tribute {
   background: rgba(143, 191, 77, 0.06);
   border-left: 3px solid #8fbf4d;
@@ -419,6 +523,8 @@ body.wsite-page-team .memoriam__tribute blockquote p {
   line-height: 1.7 !important;
   color: #2a3330 !important;
   margin: 0 0 14px !important;
+  text-align: justify !important;
+  text-align-last: left !important;
 }
 body.wsite-page-team .memoriam__tribute footer {
   font-size: 13px;
@@ -436,7 +542,20 @@ body.wsite-page-team .memoriam__tribute footer {
     gap: 24px;
   }
   body.wsite-page-team .memoriam__photo { width: 180px; height: 180px; }
-  body.wsite-page-team .memoriam__lede p { text-align: left !important; }
+  body.wsite-page-team .memoriam__gallery {
+    grid-template-columns: 1fr;
+    margin: 4px auto 42px;
+  }
+  body.wsite-page-team .memoriam__gallery figure,
+  body.wsite-page-team .memoriam__gallery figure:first-child {
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+  }
+  body.wsite-page-team .memoriam__actions { justify-content: center; }
+  body.wsite-page-team .memoriam__pdf-frame {
+    min-height: 420px;
+    height: 62vh;
+  }
   body.wsite-page-team .memoriam__tribute { padding: 22px 20px; }
 }
 
@@ -457,7 +576,7 @@ body.wsite-page-team .team-section-heading h2 {
   text-align: left !important;
 }
 
-/* Grid Ã¢â‚¬â€ static layout, uniform cell sizes; the clicked card animates via
+/* Grid — static layout, uniform cell sizes; the clicked card animates via
    GPU-composited `transform: scale()` on top of its static grid cell, so
    no grid-template reflow happens during the animation (which was the
    source of jitter). Borders snap because all default cells are uniform. */
@@ -488,11 +607,11 @@ body.wsite-page-team .team-grid {
 }
 
 /* --- ALIUS palette (sampled from the leaf logo) ---
-   #1a4d2e  Ã¢â‚¬â€ dark forest green (ALIUS wordmark, darker leaf)
-   #3d8b3d  Ã¢â‚¬â€ medium leaf green
-   #8fbf4d  Ã¢â‚¬â€ bright leaf green (highlight)
-   #0f1a11  Ã¢â‚¬â€ near black
-   #ffffff  Ã¢â‚¬â€ white (background)
+   #1a4d2e  — dark forest green (ALIUS wordmark, darker leaf)
+   #3d8b3d  — medium leaf green
+   #8fbf4d  — bright leaf green (highlight)
+   #0f1a11  — near black
+   #ffffff  — white (background)
 */
 
 /* Card (viscereality pattern: left-accent colored border) */
@@ -506,7 +625,7 @@ body.wsite-page-team .team-card {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 100%;             /* fills its grid cell Ã¢â‚¬â€ borders snap at row/col edges */
+  height: 100%;             /* fills its grid cell — borders snap at row/col edges */
   min-height: 0;
   box-sizing: border-box;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
@@ -577,19 +696,19 @@ body.wsite-page-team .team-card__role--muted {
 }
 
 /* Specificity note: Weebly declares `#wsite-content p { font-size:16px !important }`
-   at spec (1,0,1) Ã¢â‚¬â€ we prefix our rules with #wsite-content to match that ID
+   at spec (1,0,1) — we prefix our rules with #wsite-content to match that ID
    selector and add the type qualifier (`p.team-card__bio`) for clean override.
 
    Motion design: `font-size` stays CONSTANT at its natural value for each
    element. The VISUAL growth/shrink is driven entirely by the card's
-   `transform: scale()` Ã¢â‚¬â€ so the text and the card scale as one single
+   `transform: scale()` — so the text and the card scale as one single
    transform operation and are mechanically in lockstep (no compounding of
-   two independent animations). Text REVEAL in the dormant Ã¢â€ â€™ expanded
+   two independent animations). Text REVEAL in the dormant → expanded
    transition uses `max-height` + `opacity` on the same 2400ms curve so
    the content fades in as the box grows. */
 
 body.wsite-page-team #wsite-content p.team-card__bio {
-  font-size: 14px !important;          /* constant Ã¢â‚¬â€ scales WITH the card */
+  font-size: 14px !important;          /* constant — scales WITH the card */
   line-height: 1.55 !important;
   color: #2a3330 !important;
   font-weight: 400 !important;
@@ -621,7 +740,7 @@ body.wsite-page-team #wsite-content p.team-card__role {
               opacity 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 /* Natural font sizes stay at their declared values (15px for name,
-   11.5px for role) Ã¢â‚¬â€ those class selectors are defined earlier in this
+   11.5px for role) — those class selectors are defined earlier in this
    CSS block and continue to apply. */
 body.wsite-page-team .team-card--expanded #wsite-content h3.team-card__name {
   max-height: 3em;
@@ -762,7 +881,7 @@ body.wsite-page-team .team-card__coord {
   margin-left: 2px;
 }
 
-/* Alphabetical names-index (multi-column) Ã¢â‚¬â€ click to jump to that member's card */
+/* Alphabetical names-index (multi-column) — click to jump to that member's card */
 body.wsite-page-team .team-index {
   max-width: 1200px;
   margin: 24px auto 0;
@@ -827,7 +946,7 @@ body.wsite-page-team .team-card {
   body.wsite-page-team .team-card { padding: 18px; }
 }
 
-/* Hide the original Weebly section-wraps on this page Ã¢â‚¬â€ the grid is our render path */
+/* Hide the original Weebly section-wraps on this page — the grid is our render path */
 body.wsite-page-team #wsite-content > .wsite-section-wrap { display: none !important; }
 body.wsite-page-team #wsite-content .wsite-background,
 body.wsite-page-team #wsite-content .wsite-custom-background { background: transparent !important; }
@@ -890,7 +1009,7 @@ body.wsite-page-team .team-card.is-filtered-out {
 /* --- Click-to-expand: the GRID LINES move, not the cards themselves ---
    Cards never scale. Their photos, names, icons, paddings all stay at
    their natural sizes. What changes is the track sizes of the grid
-   (grid-template-columns / grid-template-rows) Ã¢â‚¬â€ the clicked card's
+   (grid-template-columns / grid-template-rows) — the clicked card's
    column + row become larger (more fr), other tracks become smaller.
    CSS animates grid-template-* natively. The bio un-clamps on the
    same curve so the expanded card fills its now-bigger cell. */
@@ -924,7 +1043,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 }
 
 /* Siblings dim slightly. Their cells are now narrower/shorter (grid-track
-   animation) Ã¢â‚¬â€ the cards fill their cells naturally, inner elements keep
+   animation) — the cards fill their cells naturally, inner elements keep
    their natural size, clipped bios just show less text. */
 body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
   opacity: 0.7;
@@ -971,7 +1090,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__avatar"><img src="/media/images/berkovitch-lucie-paris-france-3.jpg" alt="Lucie Berkovitch" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Lucie Berkovitch</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I am a French psychiatrist working in Paris. I am part time in charge of an inpatient unit specialized in resistant psychiatric affections (Service Hospitalo-Universitaire de lÃ¢â‚¬â„¢HÃƒÂ´pital Sainte Anne) and part time doing research on consciousness in the Picnic Lab (Physiological Investigations of Clinically Normal & Impaired Cognition, Institut du Cerveau et de la MoÃƒÂ«lle). I finished my neuroscience PhD in 2018. I worked on conscious and unconscious processing in healthy controls and patients with schizophrenia under the supervision of Professor Stanislas Dehaene and Professor Raphael Gaillard. I am currently working on behavioural and electroen</p>
+  <p class="team-card__bio">I am a French psychiatrist working in Paris. I am part time in charge of an inpatient unit specialized in resistant psychiatric affections (Service Hospitalo-Universitaire de l’Hôpital Sainte Anne) and part time doing research on consciousness in the Picnic Lab (Physiological Investigations of Clinically Normal & Impaired Cognition, Institut du Cerveau et de la Moëlle). I finished my neuroscience PhD in 2018. I worked on conscious and unconscious processing in healthy controls and patients with schizophrenia under the supervision of Professor Stanislas Dehaene and Professor Raphael Gaillard. I am currently working on behavioural and electroen</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--scholar" href="https://scholar.google.com/citations?user=7ShQRx8AAAAJ&amp;hl=fr" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-lucie-berkovitch.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-aviva-berkovitch-ohana" data-tags="psychedelics meditation dreams-sleep philosophy neuroscience art-science">
@@ -979,27 +1098,27 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <h3 class="team-card__name">Aviva Berkovitch-Ohana</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
   <p class="team-card__bio">I am a Professor of neuroscience at the University of Haifa, Israel, interested in altered states of consciousness and sense of self. I am mostly studying neurophenomenology of altered states (meditation, psychedelics and channeling, lucid dreaming).</p>
-  <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://avivabo.edu.haifa.ac.il/" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-aviva-berkovitch-ohana.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
+  <div class="team-card__links"><a class="team-card__icon team-card__icon--scholar" href="https://scholar.google.com/citations?user=NUykoqQAAAAJ" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></a><a class="team-card__icon team-card__icon--site" href="http://avivabo.edu.haifa.ac.il/" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-aviva-berkovitch-ohana.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-alexandre-billon" data-tags="philosophy psychiatry">
   <div class="team-card__avatar"><img src="/media/images/img-0005-7.jpeg" alt="Alexandre Billon" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Alexandre Billon</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹I am an associate professor at the University of Lille (Udl3/STL). My research centers on philosophical psychopathology, viz., the use of psychopathology to solve philosophical riddles and of philosophy to make sense of intriguing psychopathological conditions. Ã¢â‚¬â€¹In the last couple of years I have focused, more specifically, on the altered sense of the self and reality affecting patients suffering from depersonalization and Cotard's syndrome.</p>
+  <p class="team-card__bio">​I am an associate professor at the University of Lille (Udl3/STL). My research centers on philosophical psychopathology, viz., the use of psychopathology to solve philosophical riddles and of philosophy to make sense of intriguing psychopathological conditions. ​In the last couple of years I have focused, more specifically, on the altered sense of the self and reality affecting patients suffering from depersonalization and Cotard's syndrome.</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--academia" href="https://univ-lille3.academia.edu/AlexandreBillon" aria-label="Academia" title="Academia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-alexandre-billon.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-alessio-bucci" data-tags="meditation dreams-sleep philosophy">
   <div class="team-card__avatar"><img src="/media/images/bucci-7-1.jpg" alt="Alessio Bucci" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Alessio Bucci</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹ I studied philosophy at the University of Turin and at the University of Edinburgh. Ã¢â‚¬â€¹I am currently a PhD student in philosophy at the University of Turin, Italy. My research aims to provide a clarification of the notion of Ã¢â‚¬Å“altered states of consciousnessÃ¢â‚¬Â, from both a philosophical and scientific perspective. My focus is on dreaming and sleep related phenomena, hallucinogenic drugs, and meditative states, analysed within the broad framework of philosophy of mind and cognitive science.</p>
+  <p class="team-card__bio">​ I studied philosophy at the University of Turin and at the University of Edinburgh. ​I am currently a PhD student in philosophy at the University of Turin, Italy. My research aims to provide a clarification of the notion of “altered states of consciousness”, from both a philosophical and scientific perspective. My focus is on dreaming and sleep related phenomena, hallucinogenic drugs, and meditative states, analysed within the broad framework of philosophy of mind and cognitive science.</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--academia" href="https://cardiogroup.academia.edu/AlessioBucci" aria-label="Academia" title="Academia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-alessio-bucci.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-maddalena-canna" data-tags="anthropology hallucinations">
   <div class="team-card__avatar"><img src="/media/images/screen-shot-2016-12-23-at-17-44-51-6.png" alt="Maddalena Canna" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Maddalena Canna</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I am a Postdoctoral Fellow in Anthropology at Northwestern University (Evanston/Chicago), Fyssen Foundation. I hold a PhD in Social Anthropology and Ethnology (EHESS) and I am affiliated to the Laboratoire dÃ¢â‚¬â„¢Anthropologie Sociale (LAS) of the Ãƒâ€°cole des Hautes Ãƒâ€°tudes en Sciences Sociales (EHESS/CollÃƒÂ¨ge de France). Laureate of the Martine Aublet Foundation (MusÃƒÂ©e du Quai Branly) since 2012, in my thesis (Martine Aublet Award 2018) and recent works I focus on grisi siknis, a family of hallucinatory, dissociative seizures diffused in the Caribbean Moskitia. My current interests include: the interplay between imagination, metacognition and physiol</p>
+  <p class="team-card__bio">I am a Postdoctoral Fellow in Anthropology at Northwestern University (Evanston/Chicago), Fyssen Foundation. I hold a PhD in Social Anthropology and Ethnology (EHESS) and I am affiliated to the Laboratoire d’Anthropologie Sociale (LAS) of the École des Hautes Études en Sciences Sociales (EHESS/Collège de France). Laureate of the Martine Aublet Foundation (Musée du Quai Branly) since 2012, in my thesis (Martine Aublet Award 2018) and recent works I focus on grisi siknis, a family of hallucinatory, dissociative seizures diffused in the Caribbean Moskitia. My current interests include: the interplay between imagination, metacognition and physiol</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--academia" href="https://ehess.academia.edu/MaddalenaCanna" aria-label="Academia" title="Academia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-maddalena-canna.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-anna-ciaunica" data-tags="philosophy psychiatry interoception">
@@ -1013,42 +1132,42 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__avatar"><img src="/media/images/cyril-costines-1.png" alt="Cyriel Costines" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Cyriel Costines</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Cyril Costines is a doctoral researcher at the Medical Center Ã¢â‚¬â€œ University of Freiburg, Germany, and the Institute for Frontier Areas of Psychology and Mental Health (IGPP) in Freiburg, Germany. His research focuses on the neurophenomenological study of consciousness as such, with particular emphasis on altered states induced by meditation, psychedelics, and sensory deprivation. As a member of the MPE research network, he works on the theoretical and empirical investigation of pure awareness in the context of "nondual floating." He is a co-founder of the Collaboration for Interdisciplinary Research on Conscious Experience (CIRCE), where he co</p>
+  <p class="team-card__bio">Cyril Costines is a doctoral researcher at the Medical Center – University of Freiburg, Germany, and the Institute for Frontier Areas of Psychology and Mental Health (IGPP) in Freiburg, Germany. His research focuses on the neurophenomenological study of consciousness as such, with particular emphasis on altered states induced by meditation, psychedelics, and sensory deprivation. As a member of the MPE research network, he works on the theoretical and empirical investigation of pure awareness in the context of "nondual floating." He is a co-founder of the Collaboration for Interdisciplinary Research on Conscious Experience (CIRCE), where he co</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="https://www.costines.info/" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-cyriel-costines.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-l-na-coutrot">
   <div class="team-card__avatar"><img src="/media/images/photo-lena-coutrot-orig-3.jpg" alt="L&eacute;na Coutrot" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">L&eacute;na Coutrot</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">LÃƒÂ©na Coutrot  Former student researcher in cognitive sciences, I am now a scientific journalist at Tempo SantÃƒÂ© (Bayard Presse). I write feature stories and news articles about psychology, well-being, medicine, society, and I am interested in any subject related to human and environmental health. I also produce podcasts on a freelance basis and I am supervising an ongoing podcast project for ALIUS.</p>
+  <p class="team-card__bio">Léna Coutrot  Former student researcher in cognitive sciences, I am now a scientific journalist at Tempo Santé (Bayard Presse). I write feature stories and news articles about psychology, well-being, medicine, society, and I am interested in any subject related to human and environmental health. I also produce podcasts on a freelance basis and I am supervising an ongoing podcast project for ALIUS.</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="https://lenacoutrot.wordpress.com/" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-l-na-coutrot.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-larry-d" data-tags="near-death-experiences">
   <div class="team-card__avatar"><img src="/media/images/293757246-10217187236033323-3017171785644245039-n-1.jpg" alt="Larry D." loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Larry D.</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Fort ld [dot]  I am a PhD student at the University of LiÃƒÂ¨ge where I work in the Physiology of Cognition lab as part of the GIGA-Cyclotron Research Center (CRC). My background is in general psychology (B.S.) and Experimental Psychology (M.A.) where I took interests in altered states of consciousness (ASCs). My research focuses on understanding non-pharmacologically induced ASCs such as ganzfeld and flicker light stimulations through phenomenonogical and neurobiological investigation. Furthermore, my work aims at testing if we can ground our mental experience through engaging our physiological processes as a way to de-induce from ASCs.</p>
+  <p class="team-card__bio">Fort ld [dot]  I am a PhD student at the University of Liège where I work in the Physiology of Cognition lab as part of the GIGA-Cyclotron Research Center (CRC). My background is in general psychology (B.S.) and Experimental Psychology (M.A.) where I took interests in altered states of consciousness (ASCs). My research focuses on understanding non-pharmacologically induced ASCs such as ganzfeld and flicker light stimulations through phenomenonogical and neurobiological investigation. Furthermore, my work aims at testing if we can ground our mental experience through engaging our physiological processes as a way to de-induce from ASCs.</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://www.hps.pitt.edu/people/brendan-fleig-goldstein" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-larry-d.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-guillaume-dumas" data-tags="near-death-experiences neuroscience psychiatry computation">
   <div class="team-card__avatar"><img src="/media/images/squared-8.jpg" alt="Guillaume Dumas" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Guillaume Dumas</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I am the IVADO Professor of Computational Psychiatry at the Faculty of Medicine of the UniversitÃƒÂ© de MontrÃƒÂ©al, the Director of the Precision Psychiatry and Social Physiology laboratory at the CHU Sainte Justine Research Center, and an Academic Member of the Mila - Quebec AI Institute. In parallel, I am also associated to the "Culture, Mind, and BrainÃ¢â‚¬Â program of McGill University and the Ã¢â‚¬Å“Center for Complex Systems and Brain SciencesÃ¢â‚¬Â of Florida Atlantic University. I co-founded ARTEMOC, the French research group dedicated to the study of ASCs that later gave birth to ALIUS. In this context, I am now focusing on the relationship between ASCs</p>
+  <p class="team-card__bio">I am the IVADO Professor of Computational Psychiatry at the Faculty of Medicine of the Université de Montréal, the Director of the Precision Psychiatry and Social Physiology laboratory at the CHU Sainte Justine Research Center, and an Academic Member of the Mila - Quebec AI Institute. In parallel, I am also associated to the "Culture, Mind, and Brain” program of McGill University and the “Center for Complex Systems and Brain Sciences” of Florida Atlantic University. I co-founded ARTEMOC, the French research group dedicated to the study of ASCs that later gave birth to ALIUS. In this context, I am now focusing on the relationship between ASCs</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://www.extrospection.eu" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-guillaume-dumas.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-david-dupuis" data-tags="psychedelics anthropology hallucinations">
   <div class="team-card__avatar"><picture><source srcset="/media/images/screen-shot-2018-07-16-at-10-26-47-2.webp" type="image/webp"><img src="/media/images/screen-shot-2018-07-16-at-10-26-47-2.png" alt="David Dupuis" loading="lazy" decoding="async"></picture></div>
   <h3 class="team-card__name">David Dupuis</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I am a Research Fellow at the French Institute of Health and Medical Research (INSERM), affiliated to the Institut de recherche interdisciplinaire sur les enjeux sociaux (IRIS/EHESS, Paris). My research interests lie mainly within the contemporary reconfigurations of the status of so-called Ã¢â‚¬Å“hallucinogenicÃ¢â‚¬Â (or Ã¢â‚¬Å“psychedelicÃ¢â‚¬Â) substances and Ã¢â‚¬Å“hallucinatoryÃ¢â‚¬Â experiences. I explore the anthropological, political, clinical and ethical implications of these dynamics within Euro-American societies. My work is based on ethnographic fieldworks conducted since 2008 in Latin America (Peruvian Amazon, Mexico) and Europe (United Kingdom, France).</p>
+  <p class="team-card__bio">I am a Research Fellow at the French Institute of Health and Medical Research (INSERM), affiliated to the Institut de recherche interdisciplinaire sur les enjeux sociaux (IRIS/EHESS, Paris). My research interests lie mainly within the contemporary reconfigurations of the status of so-called “hallucinogenic” (or “psychedelic”) substances and “hallucinatory” experiences. I explore the anthropological, political, clinical and ethical implications of these dynamics within Euro-American societies. My work is based on ethnographic fieldworks conducted since 2008 in Latin America (Peruvian Amazon, Mexico) and Europe (United Kingdom, France).</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://las.ehess.fr/index.php?2509" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-david-dupuis.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-sebastian-ehmann" data-tags="psychedelics near-death-experiences meditation philosophy">
   <div class="team-card__avatar"><img src="/media/images/bf2219f7-6fae-4142-a471-48f13ae4193a-1-201-a-1.jpeg" alt="Sebastian Ehmann" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Sebastian Ehmann</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I am a MasterÃ¢â‚¬â„¢s student in General Psychology with the intention to pursue a Ph.D. in Clinical Psychology. My background is interdisciplinary in Nutritional Sciences (B.S.) and Exercise Science (M.S.), but I ended up growing a significant interest in the field of psychology and philosophy. My research centers around the intersection of psychedelic experiences and mindfulness practices from the east. Specifically, how altered states of consciousness influence the perception of self and how the phenomenology of these experiences improves mental health outcomes. In the future, I am interested in additional formal training in philosophy and cogni</p>
+  <p class="team-card__bio">I am a Master’s student in General Psychology with the intention to pursue a Ph.D. in Clinical Psychology. My background is interdisciplinary in Nutritional Sciences (B.S.) and Exercise Science (M.S.), but I ended up growing a significant interest in the field of psychology and philosophy. My research centers around the intersection of psychedelic experiences and mindfulness practices from the east. Specifically, how altered states of consciousness influence the perception of self and how the phenomenology of these experiences improves mental health outcomes. In the future, I am interested in additional formal training in philosophy and cogni</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://las.ehess.fr/index.php?2509" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-sebastian-ehmann.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-michiel-van-elk" data-tags="mystical-experiences anthropology computation">
@@ -1062,14 +1181,14 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__avatar"><img src="/media/images/cordelia-erickson-davis-3.jpg" alt="Cordelia Erickson-Davis" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Cordelia Erickson-Davis</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I am an MD/PhD candidate at Stanford University in the cultural anthropology department. I draw together theory and methods from the neurosciences and the social sciences in order to explore the links between the political and perceptual; the social and subjective. Ã¢â‚¬â€¹My research focuses on brain machine interfaces devices Ã¢â‚¬â€œ in particular, the artificial eye. I am interested in how certain assumptions that inform device design and implementation manifest in the phenomenological experience of device users. What does the subject Ã¢â‚¬Å“seeÃ¢â‚¬Â when the device is turned on? What does it mean for it to Ã¢â‚¬Å“workÃ¢â‚¬Â? How might we use the discrepancies that arise b</p>
+  <p class="team-card__bio">I am an MD/PhD candidate at Stanford University in the cultural anthropology department. I draw together theory and methods from the neurosciences and the social sciences in order to explore the links between the political and perceptual; the social and subjective. ​My research focuses on brain machine interfaces devices – in particular, the artificial eye. I am interested in how certain assumptions that inform device design and implementation manifest in the phenomenological experience of device users. What does the subject “see” when the device is turned on? What does it mean for it to “work”? How might we use the discrepancies that arise b</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--researchgate" href="https://www.researchgate.net/profile/Cordelia_Erickson-Davis2" aria-label="ResearchGate" title="ResearchGate" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3v14H7zM14 5h3v14h-3zM7 11h10v2H7z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-cordelia-erickson-davis.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-mar-estarellas" data-tags="neuroscience computation">
   <div class="team-card__avatar"><img src="/media/images/marestaralles-1.jpeg" alt="Mar Estarellas" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Mar Estarellas</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Mar Estarellas is a postdoctoral researcher whose work bridges neuroscience, computational methods, and the humanities to explore consciousness and cognition across diverse populations and states, including dementia. Her research focuses on identifying neural features linked to consciousness using techniques such as information theory, while also developing biomarkers for the early detection and prognosis of dementia. During her PhD at University College London, she integrated medical imaging and artificial intelligence to create data-driven models of AlzheimerÃ¢â‚¬â„¢s disease progression, which deepened her interest in the subjective experiences a</p>
+  <p class="team-card__bio">Mar Estarellas is a postdoctoral researcher whose work bridges neuroscience, computational methods, and the humanities to explore consciousness and cognition across diverse populations and states, including dementia. Her research focuses on identifying neural features linked to consciousness using techniques such as information theory, while also developing biomarkers for the early detection and prognosis of dementia. During her PhD at University College London, she integrated medical imaging and artificial intelligence to create data-driven models of Alzheimer’s disease progression, which deepened her interest in the subjective experiences a</p>
   <div class="team-card__links"><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-mar-estarellas.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card team-card--coord" id="member-george-fejer" data-tags="coordinators neuroscience virtual-reality">
@@ -1083,14 +1202,14 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__avatar"><img src="/media/images/img-2388-3.jpeg" alt="Brendan Fleig-Goldstein" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Brendan Fleig-Goldstein</h3>
   <p class="team-card__role">Team Coordinator</p>
-  <p class="team-card__bio">I am a philosopher, cognitive scientist, and historian of science and religion, completing my PhD in the History & Philosophy of Science department at the University of Pittsburgh. Previously, I studied these subjects at Tufts University and Stanford University. My primary research focuses on the philosophical foundations of cognitive science, with particular emphasis on how to provide evidence for cognitive models. I also work on traditional topics in the philosophy of mind, consciousness, and the self.Ã¢â‚¬â€¹</p>
+  <p class="team-card__bio">I am a philosopher, cognitive scientist, and historian of science and religion, completing my PhD in the History & Philosophy of Science department at the University of Pittsburgh. Previously, I studied these subjects at Tufts University and Stanford University. My primary research focuses on the philosophical foundations of cognitive science, with particular emphasis on how to provide evidence for cognitive models. I also work on traditional topics in the philosophy of mind, consciousness, and the self.​</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://www.hps.pitt.edu/people/brendan-fleig-goldstein" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-brendan-fleig-goldstein.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-mathieu-frerejouan" data-tags="near-death-experiences philosophy hallucinations psychiatry">
   <div class="team-card__avatar"><img src="/media/images/mathieu-frerejouan-7.jpg" alt="Mathieu Frerejouan" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Mathieu Frerejouan</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I studied Psychology at Paris 8, as well as Philosophy at Paris 1 PanthÃƒÂ©on-Sorbonne, where I am currently a Maitre de ConfÃƒÂ©rences. My PhD research deals with the concept of hallucination from an historical and epistemological point of view. My aim is to show that the meaning of this concept, from its emergence in early psychiatry to nowadays, is linked to medical practices and cannot be understood apart from its pathological implications.</p>
+  <p class="team-card__bio">I studied Psychology at Paris 8, as well as Philosophy at Paris 1 Panthéon-Sorbonne, where I am currently a Maitre de Conférences. My PhD research deals with the concept of hallucination from an historical and epistemological point of view. My aim is to show that the meaning of this concept, from its emergence in early psychiatry to nowadays, is linked to medical practices and cannot be understood apart from its pathological implications.</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--academia" href="https://univ-paris1.academia.edu/MathieuFrerejouan" aria-label="Academia" title="Academia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-mathieu-frerejouan.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card team-card--coord" id="member-daniel-friedman" data-tags="coordinators near-death-experiences computation">
@@ -1104,14 +1223,14 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__avatar"><img src="/media/images/tom-froese-6.jpg" alt="Tom Froese" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Tom Froese</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹I am a faculty member of the Research Institute for Applied Mathematics and Systems and a member of the Centre for the Sciences of Complexity, both at the National Autonomous University of Mexico, where I am the coordinator of the 4E Cognition Group. I received a D.Phil. in Cognitive Science from the University of Sussex. My research is concerned with understanding the complexities of the human mind in its biological, psychological, and social manifestations. The overarching methodology is to use a dynamical systems approach to interrelate objective and qualitative aspects of subjectivity. I am exploring the idea that ritualized alteration o</p>
+  <p class="team-card__bio">​I am a faculty member of the Research Institute for Applied Mathematics and Systems and a member of the Centre for the Sciences of Complexity, both at the National Autonomous University of Mexico, where I am the coordinator of the 4E Cognition Group. I received a D.Phil. in Cognitive Science from the University of Sussex. My research is concerned with understanding the complexities of the human mind in its biological, psychological, and social manifestations. The overarching methodology is to use a dynamical systems approach to interrelate objective and qualitative aspects of subjectivity. I am exploring the idea that ritualized alteration o</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://froese.wordpress.com/" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-tom-froese.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-juan-gonz-lez" data-tags="near-death-experiences philosophy hallucinations">
-  <div class="team-card__avatar"><img src="/media/images/foto-juan-60-1.jpg" alt="Juan GonzÃƒÂ¡lez" loading="lazy" decoding="async"></div>
-  <h3 class="team-card__name">Juan GonzÃƒÂ¡lez</h3>
+  <div class="team-card__avatar"><img src="/media/images/foto-juan-60-1.jpg" alt="Juan González" loading="lazy" decoding="async"></div>
+  <h3 class="team-card__name">Juan González</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I am Professor of Philosophy and Cognitive Sciences at Morelos State University (UAEM), in Cuernavaca, Mexico. I obtained my Ph.D. at the Ãƒâ€°cole Polytechnique (CREA; Paris, 1998) under the supervision of the late Francisco Varela. I am a member of MexicoÃ¢â‚¬â„¢s National Council for Scientific Research (SNI), level II, and currently the Director of the Center for Research in Cognitive Sciences (CINCCO), at UAEM . My primary research interests are in epistemology, philosophy of mind and perception theory, combining conceptual analysis, empirical research and phenomenology to tackle problems concerning perception, hallucinations, consciousness, ASCs a</p>
+  <p class="team-card__bio">I am Professor of Philosophy and Cognitive Sciences at Morelos State University (UAEM), in Cuernavaca, Mexico. I obtained my Ph.D. at the École Polytechnique (CREA; Paris, 1998) under the supervision of the late Francisco Varela. I am a member of Mexico’s National Council for Scientific Research (SNI), level II, and currently the Director of the Center for Research in Cognitive Sciences (CINCCO), at UAEM . My primary research interests are in epistemology, philosophy of mind and perception theory, combining conceptual analysis, empirical research and phenomenology to tackle problems concerning perception, hallucinations, consciousness, ASCs a</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://www.cienciascognitivas.org/" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-juan-gonz-lez.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-alice-guyon" data-tags="meditation neuroscience">
@@ -1125,40 +1244,40 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__avatar"><img src="/media/images/arnaud-halloy-7.jpg" alt="Arnaud Halloy" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Arnaud Halloy</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I am a Belgian anthropologist, assistant professor at the University of Nice Sophia Antipolis since 2007. After studying an Afro-Brazilian cult in Belgium during my graduation, I traveled to Brazil where I conducted extensive fieldwork in the Afro-Brazilian XangÃƒÂ´ Possession Cult of Recife, in the North-East Region of Brazil. Ã¢â‚¬â€¹My main interest goes to the mutual influence between contextual and cognitive dimensions of religious transmission. My research on ASC focuses on emotions and the senses, and their specific role in possession learning process.</p>
+  <p class="team-card__bio">I am a Belgian anthropologist, assistant professor at the University of Nice Sophia Antipolis since 2007. After studying an Afro-Brazilian cult in Belgium during my graduation, I traveled to Brazil where I conducted extensive fieldwork in the Afro-Brazilian Xangô Possession Cult of Recife, in the North-East Region of Brazil. ​My main interest goes to the mutual influence between contextual and cognitive dimensions of religious transmission. My research on ASC focuses on emotions and the senses, and their specific role in possession learning process.</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://arnaudhalloy.blogspot.fr" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-arnaud-halloy.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-matthieu-koroma" data-tags="near-death-experiences dreams-sleep neuroscience">
   <div class="team-card__avatar"><img src="/media/images/matthieu-koroma-6.jpg" alt="Matthieu Koroma" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Matthieu Koroma</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹ I am a Postdoctoral researcher at University of Liege studying body-brain interactions during sleep. During my PhD in Neuroscience under the direction of Pr. Sid Kouider (Ecole Normale SupÃƒÂ©rieure, PSL Research University), I focused on understanding whether the sleeping brain disconnects from its environment and to what extent sensory processing depends on internal brain activity, such as dreams and slow-waves. This study adds further understanding on the cognitive ability preserved during sleep such as memory and attention, both when conscious abilities are diminished (deep or slow-wave sleep), or when the sleeper is vividly conscious but</p>
+  <p class="team-card__bio">​ I am a Postdoctoral researcher at University of Liege studying body-brain interactions during sleep. During my PhD in Neuroscience under the direction of Pr. Sid Kouider (Ecole Normale Supérieure, PSL Research University), I focused on understanding whether the sleeping brain disconnects from its environment and to what extent sensory processing depends on internal brain activity, such as dreams and slow-waves. This study adds further understanding on the cognitive ability preserved during sleep such as memory and attention, both when conscious abilities are diminished (deep or slow-wave sleep), or when the sleeper is vividly conscious but</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--linkedin" href="https://www.linkedin.com/in/matthieu-koroma-49096994" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-matthieu-koroma.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-france-lerner" data-tags="near-death-experiences philosophy virtual-reality computation art-science">
   <div class="team-card__avatar"><img src="/media/images/france-lerner.png" alt="France Lerner" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">France Lerner</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">France Lerner is an interdisciplinary artist and researcher at the intersection of neuroaesthetics, consciousness studies, and immersive technologies. She received her PhD in Art and Science from the Royal Academy of Arts and the UniversitÃƒÂ© de LiÃƒÂ¨ge, in collaboration with the Coma Science Group under Prof. Steven Laureys. Following postdoctoral research at the Weizmann Institute of Science (Laboratory for Robotics and Virtual Reality) and an Assistant Professorship at BIMSA in Beijing, she is currently Research Fellow at the University of Haifa in the laboratory of Aviva Berkovitch-Ohana. Her work investigates the spatial and perceptual organization of Near-Death Experiences Ã¢â‚¬â€ developing visual methodologies that combine participant drawings, neurophenomenological analysis, and generative AI to reconstruct subjective experiences across altered states of consciousness.</p>
+  <p class="team-card__bio">France Lerner is an interdisciplinary artist and researcher at the intersection of neuroaesthetics, consciousness studies, and immersive technologies. She received her PhD in Art and Science from the Royal Academy of Arts and the Université de Liège, in collaboration with the Coma Science Group under Prof. Steven Laureys. Following postdoctoral research at the Weizmann Institute of Science (Laboratory for Robotics and Virtual Reality) and an Assistant Professorship at BIMSA in Beijing, she is currently Research Fellow at the University of Haifa in the laboratory of Aviva Berkovitch-Ohana. Her work investigates the spatial and perceptual organization of Near-Death Experiences — developing visual methodologies that combine participant drawings, neurophenomenological analysis, and generative AI to reconstruct subjective experiences across altered states of consciousness.</p>
   <div class="team-card__links"></div>
 </article>
 <article class="team-card" id="member-michael-lifshitz" data-tags="near-death-experiences meditation anthropology philosophy neuroscience hallucinations psychiatry">
   <div class="team-card__avatar"><img src="/media/images/mike-6.jpg" alt="Michael Lifshitz" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Michael Lifshitz</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹ Michael Lifshitz is an Assistant Professor in the Division of Social and Transcultural Psychiatry at McGill University and the Lady Davis Institute in Montreal. He did his PhD in Neuroscience at McGill and then worked as a postdoctoral fellow with T. M. Luhrmann in the Stanford Department of Anthropology. Ã¢â‚¬â€¹Before his doctorate, he completed a master's in neuroscience and an undergraduate in psychology, philosophy, and world religions, all at McGill. His work combines phenomenology, neuroscience and ethnography to shed light on the plasticity of consciousness. He studies practices that aim to transform subjective experienceÃ¢â‚¬â€from meditation a</p>
+  <p class="team-card__bio">​ Michael Lifshitz is an Assistant Professor in the Division of Social and Transcultural Psychiatry at McGill University and the Lady Davis Institute in Montreal. He did his PhD in Neuroscience at McGill and then worked as a postdoctoral fellow with T. M. Luhrmann in the Stanford Department of Anthropology. ​Before his doctorate, he completed a master's in neuroscience and an undergraduate in psychology, philosophy, and world religions, all at McGill. His work combines phenomenology, neuroscience and ethnography to shed light on the plasticity of consciousness. He studies practices that aim to transform subjective experience—from meditation a</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--academia" href="https://mcgill.academia.edu/MichaelLifshitz" aria-label="Academia" title="Academia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-michael-lifshitz.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-romy-lorenz" data-tags="neuroscience hallucinations">
   <div class="team-card__avatar"><img src="/media/images/romypic-website-crop-2.jpg" alt="Romy Lorenz" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Romy Lorenz</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹romy.lorenz [at] mrc-cbu.cam [dot ]ac.uk I am a cognitive neuroscientist with a multidisciplinary background in psychology and biomedical engineering. I received My PhD from Imperial College London in 2017, for which I have developed an Ã¢â‚¬Å“Artificial IntelligenceÃ¢â‚¬Â neuroscientist Ã¢â‚¬â€œ a novel brain-computer interface for optimizing experimental design by combining real-time neuroimaging with machine-learning. Currently, I am a Sir Henry Wellcome Postdoctoral Fellow at the University of Cambridge and Max Planck Institute for Human Cognitive & Brain Sciences. My research vision lies in revisiting the classic taxonomy of cognitive processes and bring</p>
+  <p class="team-card__bio">​romy.lorenz [at] mrc-cbu.cam [dot ]ac.uk I am a cognitive neuroscientist with a multidisciplinary background in psychology and biomedical engineering. I received My PhD from Imperial College London in 2017, for which I have developed an “Artificial Intelligence” neuroscientist – a novel brain-computer interface for optimizing experimental design by combining real-time neuroimaging with machine-learning. Currently, I am a Sir Henry Wellcome Postdoctoral Fellow at the University of Cambridge and Max Planck Institute for Human Cognitive & Brain Sciences. My research vision lies in revisiting the classic taxonomy of cognitive processes and bring</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://www.romylorenz.com/" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a></div>
 </article>
 <article class="team-card" id="member-c-cile-manhich">
-  <div class="team-card__avatar"><img src="/media/images/1516895618013-2-2.jpeg" alt="CÃƒÂ©cile Manhich" loading="lazy" decoding="async"></div>
-  <h3 class="team-card__name">CÃƒÂ©cile Manhich</h3>
+  <div class="team-card__avatar"><img src="/media/images/1516895618013-2-2.jpeg" alt="Cécile Manhich" loading="lazy" decoding="async"></div>
+  <h3 class="team-card__name">Cécile Manhich</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
   <p class="team-card__bio">I am research engineer at San Diego State University. My contributions involve the edition of the forthcoming ALIUS newsletter and the creation of a new website.</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--linkedin" href="https://www.linkedin.com/in/cecile-mahnich-3bb23740/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-c-cile-manhich.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
@@ -1167,42 +1286,42 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__avatar"><img src="/media/images/240321-dm-charlottemartial-140-photoroom1-1.jpg" alt="Charlotte Martial" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Charlotte Martial</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹ I studied Psychology and Neurosciences, and obtained a Ph.D. in Biomedical Sciences at the University of LiÃƒÂ¨ge (BE). At present, IÃ¢â‚¬â„¢m leading the projects aiming to study the phenomenon of near-death experiences at the Coma Science Group (GIGA-Consciousness). More broadly, I mainly investigate the episodes of disconnected consciousness (being conscious without experiencing the external world) and ofconnected consciousness (the subjective experience of the external environment) in unresponsive conditions such as during general anesthesia or cardiac arrest. I also explore the neural correlates of other altered or modified states of consciousne</p>
+  <p class="team-card__bio">​ I studied Psychology and Neurosciences, and obtained a Ph.D. in Biomedical Sciences at the University of Liège (BE). At present, I’m leading the projects aiming to study the phenomenon of near-death experiences at the Coma Science Group (GIGA-Consciousness). More broadly, I mainly investigate the episodes of disconnected consciousness (being conscious without experiencing the external world) and ofconnected consciousness (the subjective experience of the external environment) in unresponsive conditions such as during general anesthesia or cardiac arrest. I also explore the neural correlates of other altered or modified states of consciousne</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://www.coma.ulg.ac.be/home/martial.html" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-charlotte-martial.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-audrey-mazancieux" data-tags="neuroscience">
   <div class="team-card__avatar"><img src="/media/images/pxl-20220516-153551509-1.jpg" alt="Audrey Mazancieux" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Audrey Mazancieux</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹audrey [dot]  I am currently a postdoc at the Cognitive Neuroimaging Unit at Neurospin in Paris. My research deals with metacognition, epistemic feelings, and self-awareness. During my PhD (Grenoble Alpes University), I investigated the domain-generality of metacognition, with a particular focus on confidence in memory and perceptual decisions. I also explored low level metacognitive cues (cues that do not depend on self-reflection but rather on subjective feelings such as fluency) in several metacognitive judgements. I worked with populations with neurological diseases such as Multiple Sclerosis and Alzheimer's disease to investigate self-a</p>
+  <p class="team-card__bio">​audrey [dot]  I am currently a postdoc at the Cognitive Neuroimaging Unit at Neurospin in Paris. My research deals with metacognition, epistemic feelings, and self-awareness. During my PhD (Grenoble Alpes University), I investigated the domain-generality of metacognition, with a particular focus on confidence in memory and perceptual decisions. I also explored low level metacognitive cues (cues that do not depend on self-reflection but rather on subjective feelings such as fluency) in several metacognitive judgements. I worked with populations with neurological diseases such as Multiple Sclerosis and Alzheimer's disease to investigate self-a</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="https://www.unicog.org/audrey_mazancieux/" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-audrey-mazancieux.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-rapha-l-milli-re" data-tags="mystical-experiences philosophy">
   <div class="team-card__avatar"><img src="/media/images/raph-7.jpg" alt="Rapha&euml;l Milli&egrave;re" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Rapha&euml;l Milli&egrave;re</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">RaphaÃƒÂ«l MilliÃƒÂ¨re raphael [dot]  [dot] Ã¢â‚¬â€¹ac [dot] uk I am a D.Phil student in philosophy and an Ertegun Scholar at the University of Oxford. My research lies mainly at the crossroads between philosophy of mind, phenomenology and cognitive science. In my doctoral thesis, I discuss the claim that a minimal kind of self-awareness is necessary for phenomenal consciousness, through the study of a variety of empirical cases which appear to challenge it (including drug-induced ego dissolution). Ã¢â‚¬â€¹In recent works, I have also focused on the nature of perceptual error, the philosophical significance of autoscopy and full-body illusions, methodological is</p>
+  <p class="team-card__bio">Raphaël Millière raphael [dot]  [dot] ​ac [dot] uk I am a D.Phil student in philosophy and an Ertegun Scholar at the University of Oxford. My research lies mainly at the crossroads between philosophy of mind, phenomenology and cognitive science. In my doctoral thesis, I discuss the claim that a minimal kind of self-awareness is necessary for phenomenal consciousness, through the study of a variety of empirical cases which appear to challenge it (including drug-induced ego dissolution). ​In recent works, I have also focused on the nature of perceptual error, the philosophical significance of autoscopy and full-body illusions, methodological is</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://www.raphaelmilliere.com/" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-rapha-l-milli-re.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-pawe-motyka" data-tags="interoception">
-  <div class="team-card__avatar"><img src="/media/images/pawel-4.png" alt="PaweÃ…â€š Motyka" loading="lazy" decoding="async"></div>
-  <h3 class="team-card__name">PaweÃ…â€š Motyka</h3>
+  <div class="team-card__avatar"><img src="/media/images/pawel-4.png" alt="Paweł Motyka" loading="lazy" decoding="async"></div>
+  <h3 class="team-card__name">Paweł Motyka</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Dr. PaweÃ…â€š Motyka is a researcher in psychology specializing in consciousness studies, altered states of consciousness, and multisensory integration. He is currently affiliated with the Institute of Psychology at the Polish Academy of Sciences. His research explores the interplay between interoception and exteroception, time perception, and the role of bodily processes in conscious awareness.</p>
+  <p class="team-card__bio">Dr. Paweł Motyka is a researcher in psychology specializing in consciousness studies, altered states of consciousness, and multisensory integration. He is currently affiliated with the Institute of Psychology at the Polish Academy of Sciences. His research explores the interplay between interoception and exteroception, time perception, and the role of bodily processes in conscious awareness.</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--scholar" href="https://scholar.google.com/citations?user=gKMKYegAAAAJ" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></a></div>
 </article>
 <article class="team-card" id="member-polona-pozeg" data-tags="near-death-experiences neuroscience hallucinations psychiatry">
   <div class="team-card__avatar"><img src="/media/images/pozegp-color-document-photo-7.jpg" alt="Polona Pozeg" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Polona Pozeg</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I have obtained a MSc in Neuropsychology (Maastricht University, The Netherlands) and PhD in Cognitive Neuroscience (Ãƒâ€°cole Polytechnique FÃƒÂ©dÃƒÂ©rale de Lausanne, Switzerland). In the recent years I have been conducting behavioral studies to scientifically investigate how the sense of oneÃ¢â‚¬â„¢s own body is constructed and represented in the brain. Intrigued by illusions, hallucinations, and delusions, I am strongly interested in the neuro-cognitive processes underlying the representations of oneÃ¢â‚¬â„¢s self, and its disorders, observed in certain neurological and psychiatric conditions.</p>
+  <p class="team-card__bio">I have obtained a MSc in Neuropsychology (Maastricht University, The Netherlands) and PhD in Cognitive Neuroscience (École Polytechnique Fédérale de Lausanne, Switzerland). In the recent years I have been conducting behavioral studies to scientifically investigate how the sense of one’s own body is constructed and represented in the brain. Intrigued by illusions, hallucinations, and delusions, I am strongly interested in the neuro-cognitive processes underlying the representations of one’s self, and its disorders, observed in certain neurological and psychiatric conditions.</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--linkedin" href="https://ch.linkedin.com/in/polona-pozeg-332b08127" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-polona-pozeg.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-katrin-preller" data-tags="psychedelics neuroscience psychiatry">
   <div class="team-card__avatar"><img src="/media/images/xv1qsj6q-400x400-2.jpg" alt="Katrin Preller" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Katrin Preller</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹ I obtained my M.Sc. (Neuropsychology) from University of Konstanz, Germany. As a PhD student, I went to University of Zurich, Switzerland, where I run several studies investigating the neurobiological and social-cognitive long-term effects of cocaine, MDMA, and heroin use. After completing my PhD, I joined the Neuropsychopharmacology and Brain Imaging lab at the Psychiatric University Hospital Zurich and Heffter Research Center ZÃƒÂ¼rich, investigating the effects of psilocybin and LSD on self-perception, social cognition, and multimodal processing using different brain imaging techniques. After working as a postdoc at the Wellcome Trust Centr</p>
+  <p class="team-card__bio">​ I obtained my M.Sc. (Neuropsychology) from University of Konstanz, Germany. As a PhD student, I went to University of Zurich, Switzerland, where I run several studies investigating the neurobiological and social-cognitive long-term effects of cocaine, MDMA, and heroin use. After completing my PhD, I joined the Neuropsychopharmacology and Brain Imaging lab at the Psychiatric University Hospital Zurich and Heffter Research Center Zürich, investigating the effects of psilocybin and LSD on self-perception, social cognition, and multimodal processing using different brain imaging techniques. After working as a postdoc at the Wellcome Trust Centr</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="https://www.dppp.uzh.ch/en/researchgroups/juniorresearchgroups/pharmaco-neuroimaging-and-cognitive-emotional-processing/team/preller.html" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-katrin-preller.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-leor-roseman" data-tags="psychedelics near-death-experiences neuroscience hallucinations psychiatry">
@@ -1223,21 +1342,21 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="team-card__avatar"><img src="/media/images/timo-schmidt-2.jpg" alt="Timo Torsten Schmidt" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Timo Torsten Schmidt</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">I am a postdoctoral researcher at the Freie UniversitÃƒÂ¤t Berlin. As a neuroscientist interested in the neuronal underpinnings of human consciousness, I work with methods from the field of computational cognitive neuroscience with a focus on functional neuroimaging. My research focuses on the mental representation of consciousness content (working memory and mental imagery) and mechanisms underlying altered states of consciousness (ASC). The latter entails a meta-analytical approach aimed at identifying common Ã¢â‚¬Ëœphenomenological patternsÃ¢â‚¬â„¢ across diversely induced ASCs. For this purpose, we created the Altered States Database accessible on www.as</p>
+  <p class="team-card__bio">I am a postdoctoral researcher at the Freie Universität Berlin. As a neuroscientist interested in the neuronal underpinnings of human consciousness, I work with methods from the field of computational cognitive neuroscience with a focus on functional neuroimaging. My research focuses on the mental representation of consciousness content (working memory and mental imagery) and mechanisms underlying altered states of consciousness (ASC). The latter entails a meta-analytical approach aimed at identifying common ‘phenomenological patterns’ across diversely induced ASCs. For this purpose, we created the Altered States Database accessible on www.as</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="http://titoschmi.de" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-timo-torsten-schmidt.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-rebecca-seligman" data-tags="anthropology psychiatry interoception">
   <div class="team-card__avatar"><img src="/media/images/rebeccaseligman-168-1.jpg" alt="Rebecca Seligman" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Rebecca Seligman</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">Ã¢â‚¬â€¹ I am a medical and psychological anthropologist who focuses on transcultural psychiatry, or the study of mental health in cross-cultural perspective. My research interests involve critical examination of the social and political-economic forces that affect the experience and distribution of mental and physical illness, with an emphasis on the physical processes and mechanisms through which such forces become embodied. I am interested in the relationships of stress, social disadvantage, and cultural models of selfhood to outcomes such as post-traumatic stress disorder (PTSD), dissociation, somatization, diabetes, and depression. I am also ex</p>
+  <p class="team-card__bio">​ I am a medical and psychological anthropologist who focuses on transcultural psychiatry, or the study of mental health in cross-cultural perspective. My research interests involve critical examination of the social and political-economic forces that affect the experience and distribution of mental and physical illness, with an emphasis on the physical processes and mechanisms through which such forces become embodied. I am interested in the relationships of stress, social disadvantage, and cultural models of selfhood to outcomes such as post-traumatic stress disorder (PTSD), dissociation, somatization, diabetes, and depression. I am also ex</p>
   <div class="team-card__links"><a class="team-card__icon team-card__icon--site" href="https://www.anthropology.northwestern.edu/people/faculty/seligman.html" aria-label="Website" title="Website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-rebecca-seligman.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-fran-ois-tadel" data-tags="psychedelics neuroscience psychiatry">
   <div class="team-card__avatar"><img src="/media/images/francoistadel-1.png" alt="Fran&ccedil;ois Tadel" loading="lazy" decoding="async"></div>
   <h3 class="team-card__name">Fran&ccedil;ois Tadel</h3>
   <p class="team-card__role team-card__role--muted">Research Member</p>
-  <p class="team-card__bio">FranÃƒÂ§ois Tadel  FranÃƒÂ§ois Tadel is a research engineer specializing in functional neuroimaging, with 18 years of experience leading projects at institutions including Geneva University Hospital, Neurospin (Paris), USC (Los Angeles), McGill University, and the Grenoble Institut des Neurosciences. He holds an engineering degree from UTC (CompiÃƒÂ¨gne, France) with a focus on human-machine interface design and cognitive sciences. Currently, he is training in medical hypnosis and developing a clinical trial at Grenoble University Hospital to evaluate the combined use of hypnosis and ketamine for resistant depression. His research interests include no</p>
+  <p class="team-card__bio">François Tadel  François Tadel is a research engineer specializing in functional neuroimaging, with 18 years of experience leading projects at institutions including Geneva University Hospital, Neurospin (Paris), USC (Los Angeles), McGill University, and the Grenoble Institut des Neurosciences. He holds an engineering degree from UTC (Compiègne, France) with a focus on human-machine interface design and cognitive sciences. Currently, he is training in medical hypnosis and developing a clinical trial at Grenoble University Hospital to evaluate the combined use of hypnosis and ketamine for resistant depression. His research interests include no</p>
   <div class="team-card__links"><span class="team-card__icon team-card__icon--email" role="button" tabindex="0" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="team-card__email-tooltip"><img class="team-card__email-label" src="/assets/team/email-labels/member-fran-ois-tadel.png" alt="Obfuscated email address" loading="lazy" decoding="async"></span></span></div>
 </article>
 <article class="team-card" id="member-enzo-tagliazucchi" data-tags="neuroscience">
@@ -1259,39 +1378,83 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <div class="memoriam__divider"></div>
   <p class="memoriam__eyebrow">In Memoriam</p>
   <h2 class="memoriam__name" id="memoriam-heading">Martin Fortier</h2>
-  <p class="memoriam__role">Co-Founder of ALIUS (2016) Ã‚Â· 1990Ã¢â‚¬â€œ2020</p>
+  <p class="memoriam__role">Co-Founder of ALIUS (2016) &middot; 1990&ndash;2020</p>
 
-  <div class="memoriam__hero memoriam__hero--no-photo">
+  <div class="memoriam__hero">
+    <div class="memoriam__photo">
+      <img src="/media/images/portrait-1-format-carre-4-jpg-1-orig-1.png" alt="Martin Fortier" loading="lazy" decoding="async">
+    </div>
     <div class="memoriam__lede">
       <p>On April 11th, 2020, Martin Fortier tragically passed away after a long and harrowing battle with cancer. He was thirty years old. We mourn the loss of a wonderful friend and a brilliant colleague, gone far too soon to realize his extraordinary potential despite his many precocious achievements.</p>
-      <p><a class="memoriam__primary" href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf">Read ALIUS' full scientific tribute to the work of Martin Fortier Ã¢â€ â€™</a></p>
+    </div>
+  </div>
+
+  <div class="memoriam__gallery" aria-label="Photos of Martin Fortier">
+    <figure><img src="/media/images/50720462-10156998651687436-9135200687594930176-n-1.jpg" alt="Martin Fortier smiling outdoors in the snow" loading="lazy" decoding="async"></figure>
+    <figure><img src="/media/images/93323004-705489493528867-2621767016662433792-n-1.jpg" alt="Martin Fortier smiling in a woven cap and sunglasses" loading="lazy" decoding="async"></figure>
+    <figure><img src="/media/images/94518046-542038530053425-7176690141715496960-n-1.jpg" alt="Martin Fortier seated indoors" loading="lazy" decoding="async"></figure>
+    <figure><img src="/media/images/portrait-1-format-carre-4-jpg-1-orig-1.png" alt="Portrait of Martin Fortier" loading="lazy" decoding="async"></figure>
+  </div>
+
+  <div class="memoriam__col">
+    <h3 class="memoriam__subhead">The neuroanthropology of hallucinogenic experiences</h3>
+    <p>Martin's work sat at the intersection of philosophy of mind, cognitive anthropology and the cognitive science of religion. The Institut Jean Nicod tribute workshop described him as an EHESS doctoral researcher attached to the Jean Nicod Institute, trained in philosophy and anthropology, and on the verge of defending a nearly 600-page thesis. His published work ranged across the epistemic and ontological status of hallucinations, feelings of reality and hyper-reality, spiritual experiences, shamanism, altered states of consciousness and the diversity of consciousness more generally.</p>
+    <p>He argued that hallucinogenic experience cannot be understood through nativist neuropharmacology alone: culture, ritual context, expectation, attention and social learning shape what altered states become for the person undergoing them. His preferred term was <em>serotonergic hallucinogen</em> rather than "psychedelic", a deliberately non-committal label designed to keep experimental work free of twentieth-century counter-cultural framing.</p>
+    <p>He also insisted on distinctions that often disappear in popular psychedelic discourse, especially the contrast between serotonergic hallucinogens and anticholinergic deliriants, and the need to treat hallucinations as experiences with sensory content, a feeling of reality, and culturally variable modes of interpretation. That combination of technical caution and intellectual breadth made his work central to ALIUS' interdisciplinary identity.</p>
+  </div>
+
+  <div class="memoriam__pdf" aria-labelledby="memoriam-pdf-heading">
+    <h3 class="memoriam__subhead" id="memoriam-pdf-heading">ALIUS scientific tribute</h3>
+    <div class="memoriam__pdf-frame">
+      <iframe src="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf#view=FitH" title="ALIUS scientific tribute to Martin Fortier PDF" loading="lazy"></iframe>
+    </div>
+    <div class="memoriam__actions">
+      <a class="memoriam__primary" href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf">Open the PDF full screen</a>
+    </div>
+  </div>
+
+  <div class="memoriam__video" aria-labelledby="memoriam-video-heading">
+    <h3 class="memoriam__subhead" id="memoriam-video-heading">Recorded lecture</h3>
+    <div class="memoriam__video-frame">
+      <iframe src="https://www.youtube.com/embed/Mtw-n2LEhdk" title="Martin Fortier - The Neuroanthropology of Hallucinogenic Experiences" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <p>Martin's lecture, <em>The Neuroanthropology of Hallucinogenic Experiences</em>, has been restored from the archived ALIUS memorial page. The recording is hosted by the Amsterdam Psychedelic Research Association.</p>
+    <div class="memoriam__actions">
+      <a class="memoriam__primary" href="https://www.youtube.com/watch?v=Mtw-n2LEhdk" target="_blank" rel="noopener">Open the lecture on YouTube</a>
     </div>
   </div>
 
   <div class="memoriam__col">
-    <h3 class="memoriam__subhead">The Neuroanthropology of Hallucinogenic Experiences</h3>
-    <p>Martin's research sat at the intersection of philosophy of mind, cognitive anthropology and the cognitive science of religion. He argued that the phenomenology of so-called psychedelic states could not be understood through nativist neuropharmacology alone and that cultural priors, ritual context, expectation and attentional scaffolding shaped the experience in deep and tractable ways. His preferred term was <em>serotonergic hallucinogen</em> rather than "psychedelic" Ã¢â‚¬â€ a deliberately non-commital label designed to keep experimental work free of 20th-century counter-cultural framing.</p>
-    <p>He developed a dimensional model of altered states organized around attention, somatosensory integration and cultural priors, and he was a relentless reader Ã¢â‚¬â€ capable of synthesising neuroscience, Tibetan Buddhist phenomenology, cognitive science of religion and French-tradition philosophy of mind in a single argument. He believed ALIUS should be a space where philosophers, anthropologists and neuroscientists argued with each other as peers.</p>
+    <h3 class="memoriam__subhead">Contributions and intellectual legacy</h3>
+    <ul class="memoriam__resources">
+      <li><strong>ALIUS co-founder.</strong> Martin co-founded ALIUS in 2016 and helped make it a place where anthropology, neuroscience, philosophy, psychology and psychiatry could meet around the study of non-ordinary conscious states.</li>
+      <li><strong>Metacognitive diversity.</strong> With Jo&euml;lle Proust, he organized the first international conference on metacognitive diversity and co-edited <a href="https://academic.oup.com/book/4847" target="_blank" rel="noopener"><em>Metacognitive Diversity: An Interdisciplinary Approach</em></a>, published by Oxford University Press in 2018.</li>
+      <li><strong>Hallucinations, reality and culture.</strong> His OUP chapter <a href="https://academic.oup.com/book/4847/chapter/147192475" target="_blank" rel="noopener"><em>Sense of reality, metacognition, and culture in schizophrenic and drug-induced hallucinations</em></a> examined how the feeling that a hallucination is real varies across clinical, pharmacological and cultural contexts.</li>
+      <li><strong>Dimensions of consciousness.</strong> His open-access article with Rapha&euml;l Milli&egrave;re, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7167214/" target="_blank" rel="noopener"><em>The multi-dimensional approach to drug-induced states</em></a>, advanced the idea that global states of consciousness should be compared across multiple dimensions rather than ranked on a single scale.</li>
+      <li><strong>Research community.</strong> The 2021 <a href="/pages/journee-etudes-martin-fortier/">Institut Jean Nicod workshop in tribute to Martin Fortier</a> gathered talks on metacognitive diversity, psychedelic hallucinations, cultural evolution, dimensions of consciousness and feelings of reality, all themes that his work helped bring into conversation.</li>
+      <li><strong>Generosity as practice.</strong> ALIUS' memorial materials remember Martin as a colleague who shared references freely, invited younger researchers into projects, connected collaborators and treated science as a shared social project.</li>
+    </ul>
   </div>
 
   <div class="memoriam__col">
     <h3 class="memoriam__subhead">Bulletin interviews co-edited by Martin</h3>
-    <p>Martin co-founded and edited the ALIUS Bulletin, leading many of its landmark interviews. A selection of his contributions:</p>
+    <p>Martin helped shape many of the Bulletin's early conversations. These pieces remain part of the ALIUS library:</p>
     <ul class="memoriam__works">
-      <li>Tanya Luhrmann Ã¢â‚¬â€ <em>The anthropology of mind: exploring unusual sensations and spiritual experiences across cultures</em>.</li>
-      <li>Robin Carhart-Harris Ã¢â‚¬â€ <em>Consciousness and psychedelics</em> (with RaphaÃƒÂ«l MilliÃƒÂ¨re).</li>
-      <li>Karl Friston Ã¢â‚¬â€ <em>Of woodlice and men: a Bayesian account of cognition, life and consciousness</em> (with Daniel A. Friedman).</li>
-      <li>Karl Friston Ã¢â‚¬â€ <em>Am I autistic? An intellectual autobiography</em>.</li>
-      <li>Ann Taves Ã¢â‚¬â€ <em>Conceptual, anthropological and cognitive issues surrounding religious experience</em> (with Maddalena Canna).</li>
+      <li>Tanya Luhrmann &mdash; <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf"><em>The anthropology of mind: exploring unusual sensations and spiritual experiences across cultures</em></a>.</li>
+      <li>Robin Carhart-Harris &mdash; <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.pdf"><em>Consciousness and psychedelics</em></a>, with Rapha&euml;l Milli&egrave;re.</li>
+      <li>Karl Friston &mdash; <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf"><em>Of woodlice and men: a Bayesian account of cognition, life and consciousness</em></a>, with Daniel A. Friedman.</li>
+      <li>Karl Friston &mdash; <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-biography-am-i-autistic-an-intellectual-autobiography.pdf"><em>Am I autistic? An intellectual autobiography</em></a>.</li>
+      <li>Ann Taves &mdash; <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-religious.pdf"><em>Conceptual, anthropological and cognitive issues surrounding religious experience</em></a>, with Maddalena Canna.</li>
+      <li>Michael Winkelman &mdash; <a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf"><em>The evolutionary neuroanthropology of consciousness: exploring the diversity of conscious states across cultures</em></a>.</li>
     </ul>
   </div>
 
   <div class="memoriam__col memoriam__tribute">
     <h3 class="memoriam__subhead">A personal tribute</h3>
     <blockquote>
-      <p>It is with grief and sorrow that I share this post, in remembrance of Martin Fortier Ã¢â‚¬â€ one of the dearest friends and contributors within our scientific community. His passing came too soon and will have left a deep absence in our hearts. I derived a deep sense of belonging to the academic community by knowing Martin, and rarely have I encountered somebody so generous with his knowledge, so willing to collaborate across disciplines, so dedicated to a vision of science as a societal project.</p>
-      <p>Martin's openness to collaborate with other people served as a role model to value science as a societal project Ã¢â‚¬â€ in contrast to the publish-or-perish mentality ripe with instances of appropriation and intellectual territoriality. He sought out conversations; he disagreed well; he left every room more curious than he found it.</p>
-      <footer>Ã¢â‚¬â€ George Fejer, on behalf of ALIUS</footer>
+      <p>It is with grief and sorrow that I share this post, in remembrance of Martin Fortier — one of the dearest friends and contributors within our scientific community. His passing came too soon and will have left a deep absence in our hearts. I derived a deep sense of belonging to the academic community by knowing Martin, and rarely have I encountered somebody so generous with his knowledge, so willing to collaborate across disciplines, so dedicated to a vision of science as a societal project.</p>
+      <p>Martin's openness to collaborate with other people served as a role model to value science as a societal project. He sought out conversations, gave younger colleagues his time and references, disagreed carefully, and left every room more curious than he found it.</p>
+      <footer>— George Fejer, on behalf of ALIUS</footer>
     </blockquote>
   </div>
 </section>
@@ -1319,18 +1482,18 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
   <li><a href="#member-mathieu-frerejouan">Mathieu Frerejouan</a></li>
   <li><a href="#member-daniel-friedman">Daniel Friedman *</a></li>
   <li><a href="#member-tom-froese">Tom Froese</a></li>
-  <li><a href="#member-juan-gonz-lez">Juan GonzÃƒÂ¡lez</a></li>
+  <li><a href="#member-juan-gonz-lez">Juan González</a></li>
   <li><a href="#member-alice-guyon">Alice Guyon</a></li>
   <li><a href="#member-arnaud-halloy">Arnaud Halloy</a></li>
   <li><a href="#member-matthieu-koroma">Matthieu Koroma</a></li>
   <li><a href="#member-france-lerner">France Lerner</a></li>
   <li><a href="#member-michael-lifshitz">Michael Lifshitz</a></li>
   <li><a href="#member-romy-lorenz">Romy Lorenz</a></li>
-  <li><a href="#member-c-cile-manhich">CÃƒÂ©cile Manhich</a></li>
+  <li><a href="#member-c-cile-manhich">Cécile Manhich</a></li>
   <li><a href="#member-charlotte-martial">Charlotte Martial</a></li>
   <li><a href="#member-audrey-mazancieux">Audrey Mazancieux</a></li>
   <li><a href="#member-rapha-l-milli-re">Rapha&euml;l Milli&egrave;re</a></li>
-  <li><a href="#member-pawe-motyka">PaweÃ…â€š Motyka</a></li>
+  <li><a href="#member-pawe-motyka">Paweł Motyka</a></li>
   <li><a href="#member-polona-pozeg">Polona Pozeg</a></li>
   <li><a href="#member-katrin-preller">Katrin Preller</a></li>
   <li><a href="#member-leor-roseman">Leor Roseman</a></li>
@@ -1363,6 +1526,7 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 		</li>
 		<li id="pg714570715415488939" class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
 		<li id="pg388209027172883656" class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
+        <li id="pg-newsletter" class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
 		<li id="pg226786205107534455" class="wsite-menu-item-wrap">
 			<a
 						href="/journal-club/"
@@ -1373,7 +1537,6 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 		</li>
 		<li id="pg649956180932632823" class="wsite-menu-item-wrap"><a href="/events/" class="wsite-menu-item">Events</a></li>
 		<li id="pg662395399792559095" class="wsite-menu-item-wrap"><a href="/membership/" class="wsite-menu-item">Membership</a></li>
-        <li id="pg-newsletter" class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
 </ul>
 </div>
 	</div>
@@ -1388,4 +1551,3 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 <script type="module" src="/assets/team/js/team-pretext-grid.js"></script>
 </body>
 </html>
-

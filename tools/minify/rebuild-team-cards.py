@@ -405,46 +405,80 @@ def render_memoriam(m: dict) -> str:
     bottom of /team/. Pulls from the original tribute text to give him
     a proper page-sized memorial rather than a single card.
     """
-    img = m.get("image") or ""
-    # Filter out non-portrait junk (the ALIUS logo leaked through as "image" earlier)
-    if img and "1477332210" in img:
-        img = ""
-
-    photo_html = (
-        f'<div class="memoriam__photo"><img src="{img}" alt="Martin Fortier" loading="lazy" decoding="async"></div>'
-        if img else ""
-    )
-    hero_class = "memoriam__hero" + ("" if img else " memoriam__hero--no-photo")
+    img = "/media/images/portrait-1-format-carre-4-jpg-1-orig-1.png"
 
     return f'''<section class="memoriam" id="martinfortier" aria-labelledby="memoriam-heading">
   <div class="memoriam__divider"></div>
   <p class="memoriam__eyebrow">In Memoriam</p>
   <h2 class="memoriam__name" id="memoriam-heading">Martin Fortier</h2>
-  <p class="memoriam__role">Co-Founder of ALIUS (2016) · 1990–2020</p>
+  <p class="memoriam__role">Co-Founder of ALIUS (2016) &middot; 1990&ndash;2020</p>
 
-  <div class="{hero_class}">
-    {photo_html}
+  <div class="memoriam__hero">
+    <div class="memoriam__photo">
+      <img src="{img}" alt="Martin Fortier" loading="lazy" decoding="async">
+    </div>
     <div class="memoriam__lede">
       <p>On April 11th, 2020, Martin Fortier tragically passed away after a long and harrowing battle with cancer. He was thirty years old. We mourn the loss of a wonderful friend and a brilliant colleague, gone far too soon to realize his extraordinary potential despite his many precocious achievements.</p>
-      <p><a class="memoriam__primary" href="/bulletin/interviews/bulletin04-martintribute/">Read ALIUS' full scientific tribute to the work of Martin Fortier →</a></p>
+    </div>
+  </div>
+
+  <div class="memoriam__gallery" aria-label="Photos of Martin Fortier">
+    <figure><img src="/media/images/50720462-10156998651687436-9135200687594930176-n-1.jpg" alt="Martin Fortier smiling outdoors in the snow" loading="lazy" decoding="async"></figure>
+    <figure><img src="/media/images/93323004-705489493528867-2621767016662433792-n-1.jpg" alt="Martin Fortier smiling in a woven cap and sunglasses" loading="lazy" decoding="async"></figure>
+    <figure><img src="/media/images/94518046-542038530053425-7176690141715496960-n-1.jpg" alt="Martin Fortier seated indoors" loading="lazy" decoding="async"></figure>
+    <figure><img src="/media/images/portrait-1-format-carre-4-jpg-1-orig-1.png" alt="Portrait of Martin Fortier" loading="lazy" decoding="async"></figure>
+  </div>
+
+  <div class="memoriam__col">
+    <h3 class="memoriam__subhead">The neuroanthropology of hallucinogenic experiences</h3>
+    <p>Martin's work sat at the intersection of philosophy of mind, cognitive anthropology and the cognitive science of religion. The Institut Jean Nicod tribute workshop described him as an EHESS doctoral researcher attached to the Jean Nicod Institute, trained in philosophy and anthropology, and on the verge of defending a nearly 600-page thesis. His published work ranged across the epistemic and ontological status of hallucinations, feelings of reality and hyper-reality, spiritual experiences, shamanism, altered states of consciousness and the diversity of consciousness more generally.</p>
+    <p>He argued that hallucinogenic experience cannot be understood through nativist neuropharmacology alone: culture, ritual context, expectation, attention and social learning shape what altered states become for the person undergoing them. His preferred term was <em>serotonergic hallucinogen</em> rather than "psychedelic", a deliberately non-committal label designed to keep experimental work free of twentieth-century counter-cultural framing.</p>
+    <p>He also insisted on distinctions that often disappear in popular psychedelic discourse, especially the contrast between serotonergic hallucinogens and anticholinergic deliriants, and the need to treat hallucinations as experiences with sensory content, a feeling of reality, and culturally variable modes of interpretation. That combination of technical caution and intellectual breadth made his work central to ALIUS' interdisciplinary identity.</p>
+  </div>
+
+  <div class="memoriam__pdf" aria-labelledby="memoriam-pdf-heading">
+    <h3 class="memoriam__subhead" id="memoriam-pdf-heading">ALIUS scientific tribute</h3>
+    <div class="memoriam__pdf-frame">
+      <iframe src="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf#view=FitH" title="ALIUS scientific tribute to Martin Fortier PDF" loading="lazy"></iframe>
+    </div>
+    <div class="memoriam__actions">
+      <a class="memoriam__primary" href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf">Open the PDF full screen</a>
+    </div>
+  </div>
+
+  <div class="memoriam__video" aria-labelledby="memoriam-video-heading">
+    <h3 class="memoriam__subhead" id="memoriam-video-heading">Recorded lecture</h3>
+    <div class="memoriam__video-frame">
+      <iframe src="https://www.youtube.com/embed/Mtw-n2LEhdk" title="Martin Fortier - The Neuroanthropology of Hallucinogenic Experiences" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <p>Martin's lecture, <em>The Neuroanthropology of Hallucinogenic Experiences</em>, has been restored from the archived ALIUS memorial page. The recording is hosted by the Amsterdam Psychedelic Research Association.</p>
+    <div class="memoriam__actions">
+      <a class="memoriam__primary" href="https://www.youtube.com/watch?v=Mtw-n2LEhdk" target="_blank" rel="noopener">Open the lecture on YouTube</a>
     </div>
   </div>
 
   <div class="memoriam__col">
-    <h3 class="memoriam__subhead">The Neuroanthropology of Hallucinogenic Experiences</h3>
-    <p>Martin's research sat at the intersection of philosophy of mind, cognitive anthropology and the cognitive science of religion. He argued that the phenomenology of so-called psychedelic states could not be understood through nativist neuropharmacology alone and that cultural priors, ritual context, expectation and attentional scaffolding shaped the experience in deep and tractable ways. His preferred term was <em>serotonergic hallucinogen</em> rather than "psychedelic" — a deliberately non-commital label designed to keep experimental work free of 20th-century counter-cultural framing.</p>
-    <p>He developed a dimensional model of altered states organized around attention, somatosensory integration and cultural priors, and he was a relentless reader — capable of synthesising neuroscience, Tibetan Buddhist phenomenology, cognitive science of religion and French-tradition philosophy of mind in a single argument. He believed ALIUS should be a space where philosophers, anthropologists and neuroscientists argued with each other as peers.</p>
+    <h3 class="memoriam__subhead">Contributions and intellectual legacy</h3>
+    <ul class="memoriam__resources">
+      <li><strong>ALIUS co-founder.</strong> Martin co-founded ALIUS in 2016 and helped make it a place where anthropology, neuroscience, philosophy, psychology and psychiatry could meet around the study of non-ordinary conscious states.</li>
+      <li><strong>Metacognitive diversity.</strong> With Jo&euml;lle Proust, he organized the first international conference on metacognitive diversity and co-edited <a href="https://academic.oup.com/book/4847" target="_blank" rel="noopener"><em>Metacognitive Diversity: An Interdisciplinary Approach</em></a>, published by Oxford University Press in 2018.</li>
+      <li><strong>Hallucinations, reality and culture.</strong> His OUP chapter <a href="https://academic.oup.com/book/4847/chapter/147192475" target="_blank" rel="noopener"><em>Sense of reality, metacognition, and culture in schizophrenic and drug-induced hallucinations</em></a> examined how the feeling that a hallucination is real varies across clinical, pharmacological and cultural contexts.</li>
+      <li><strong>Dimensions of consciousness.</strong> His open-access article with Rapha&euml;l Milli&egrave;re, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7167214/" target="_blank" rel="noopener"><em>The multi-dimensional approach to drug-induced states</em></a>, advanced the idea that global states of consciousness should be compared across multiple dimensions rather than ranked on a single scale.</li>
+      <li><strong>Research community.</strong> The 2021 <a href="/pages/journee-etudes-martin-fortier/">Institut Jean Nicod workshop in tribute to Martin Fortier</a> gathered talks on metacognitive diversity, psychedelic hallucinations, cultural evolution, dimensions of consciousness and feelings of reality, all themes that his work helped bring into conversation.</li>
+      <li><strong>Generosity as practice.</strong> ALIUS' memorial materials remember Martin as a colleague who shared references freely, invited younger researchers into projects, connected collaborators and treated science as a shared social project.</li>
+    </ul>
   </div>
 
   <div class="memoriam__col">
     <h3 class="memoriam__subhead">Bulletin interviews co-edited by Martin</h3>
-    <p>Martin co-founded and edited the ALIUS Bulletin, leading many of its landmark interviews. A selection of his contributions:</p>
+    <p>Martin helped shape many of the Bulletin's early conversations. These pieces remain part of the ALIUS library:</p>
     <ul class="memoriam__works">
-      <li>Tanya Luhrmann — <em>The anthropology of mind: exploring unusual sensations and spiritual experiences across cultures</em>.</li>
-      <li>Robin Carhart-Harris — <em>Consciousness and psychedelics</em> (with Raphaël Millière).</li>
-      <li>Karl Friston — <em>Of woodlice and men: a Bayesian account of cognition, life and consciousness</em> (with Daniel A. Friedman).</li>
-      <li>Karl Friston — <em>Am I autistic? An intellectual autobiography</em>.</li>
-      <li>Ann Taves — <em>Conceptual, anthropological and cognitive issues surrounding religious experience</em> (with Maddalena Canna).</li>
+      <li>Tanya Luhrmann &mdash; <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf"><em>The anthropology of mind: exploring unusual sensations and spiritual experiences across cultures</em></a>.</li>
+      <li>Robin Carhart-Harris &mdash; <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.pdf"><em>Consciousness and psychedelics</em></a>, with Rapha&euml;l Milli&egrave;re.</li>
+      <li>Karl Friston &mdash; <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf"><em>Of woodlice and men: a Bayesian account of cognition, life and consciousness</em></a>, with Daniel A. Friedman.</li>
+      <li>Karl Friston &mdash; <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-biography-am-i-autistic-an-intellectual-autobiography.pdf"><em>Am I autistic? An intellectual autobiography</em></a>.</li>
+      <li>Ann Taves &mdash; <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-religious.pdf"><em>Conceptual, anthropological and cognitive issues surrounding religious experience</em></a>, with Maddalena Canna.</li>
+      <li>Michael Winkelman &mdash; <a href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf"><em>The evolutionary neuroanthropology of consciousness: exploring the diversity of conscious states across cultures</em></a>.</li>
     </ul>
   </div>
 
@@ -452,7 +486,7 @@ def render_memoriam(m: dict) -> str:
     <h3 class="memoriam__subhead">A personal tribute</h3>
     <blockquote>
       <p>It is with grief and sorrow that I share this post, in remembrance of Martin Fortier — one of the dearest friends and contributors within our scientific community. His passing came too soon and will have left a deep absence in our hearts. I derived a deep sense of belonging to the academic community by knowing Martin, and rarely have I encountered somebody so generous with his knowledge, so willing to collaborate across disciplines, so dedicated to a vision of science as a societal project.</p>
-      <p>Martin's openness to collaborate with other people served as a role model to value science as a societal project — in contrast to the publish-or-perish mentality ripe with instances of appropriation and intellectual territoriality. He sought out conversations; he disagreed well; he left every room more curious than he found it.</p>
+      <p>Martin's openness to collaborate with other people served as a role model to value science as a societal project. He sought out conversations, gave younger colleagues his time and references, disagreed carefully, and left every room more curious than he found it.</p>
       <footer>— George Fejer, on behalf of ALIUS</footer>
     </blockquote>
   </div>
@@ -548,7 +582,7 @@ body.wsite-page-team .team-page-title h1 {
   font-weight: 700 !important;
   margin: 0 !important;
   color: #1a4d2e !important;
-  letter-spacing: -0.01em !important;
+  letter-spacing: 0 !important;
   text-transform: none !important;
   text-align: left !important;
 }
@@ -605,7 +639,7 @@ body.wsite-page-team .memoriam__name {
   font-weight: 700 !important;
   color: #1a4d2e !important;
   margin: 0 0 4px !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: 0 !important;
   text-transform: none !important;
   text-align: center !important;
   line-height: 1.1 !important;
@@ -653,12 +687,49 @@ body.wsite-page-team .memoriam__photo img {
   max-width: none !important;
   border-radius: 50%;
 }
+body.wsite-page-team .memoriam__gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) repeat(2, minmax(0, 0.78fr));
+  gap: 14px;
+  max-width: 900px;
+  margin: -22px auto 56px;
+}
+body.wsite-page-team .memoriam__gallery figure {
+  margin: 0;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(66, 81, 76, 0.18);
+  border-radius: 8px;
+  background: #f6f8f7;
+}
+body.wsite-page-team .memoriam__gallery figure:first-child {
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+body.wsite-page-team .memoriam__gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 body.wsite-page-team .memoriam__lede p {
   font-size: 16px !important;
   line-height: 1.7 !important;
   color: #1f2826 !important;
   margin: 0 0 18px !important;
-  text-align: left !important;
+  text-align: justify !important;
+  text-align-last: left !important;
+}
+body.wsite-page-team .memoriam__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 8px 0 0;
 }
 body.wsite-page-team .memoriam__primary {
   display: inline-block;
@@ -696,8 +767,46 @@ body.wsite-page-team .memoriam__col p {
   line-height: 1.72 !important;
   color: #2a3330 !important;
   margin: 0 0 14px !important;
-  text-align: left !important;
+  text-align: justify !important;
+  text-align-last: left !important;
   font-weight: 400 !important;
+}
+body.wsite-page-team .memoriam__video,
+body.wsite-page-team .memoriam__pdf {
+  max-width: 860px;
+  margin: 0 auto 48px;
+}
+body.wsite-page-team .memoriam__pdf {
+  max-width: 920px;
+}
+body.wsite-page-team .memoriam__video-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  border: 1px solid rgba(66, 81, 76, 0.18);
+  background: #0f1714;
+}
+body.wsite-page-team .memoriam__video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+body.wsite-page-team .memoriam__pdf-frame {
+  height: min(72vh, 760px);
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(66, 81, 76, 0.18);
+  background: #f6f8f7;
+}
+body.wsite-page-team .memoriam__pdf-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 body.wsite-page-team .memoriam__works {
   list-style: disc !important;
@@ -715,6 +824,35 @@ body.wsite-page-team .memoriam__works li {
 body.wsite-page-team .memoriam__works em {
   color: #1a4d2e;
   font-style: italic;
+}
+body.wsite-page-team .memoriam__works a,
+body.wsite-page-team .memoriam__resources a {
+  color: #1a4d2e !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+body.wsite-page-team .memoriam__resources {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 6px 0 0 !important;
+}
+body.wsite-page-team .memoriam__resources li {
+  margin: 0 !important;
+  padding: 14px 0 13px !important;
+  border-top: 1px solid rgba(66, 81, 76, 0.14);
+  color: #2a3330 !important;
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+}
+body.wsite-page-team .memoriam__resources li:last-child {
+  border-bottom: 1px solid rgba(66, 81, 76, 0.14);
+}
+body.wsite-page-team .memoriam__resources strong {
+  display: block;
+  color: #1a4d2e;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  margin-bottom: 3px;
 }
 
 /* Personal tribute — blockquote */
@@ -739,6 +877,8 @@ body.wsite-page-team .memoriam__tribute blockquote p {
   line-height: 1.7 !important;
   color: #2a3330 !important;
   margin: 0 0 14px !important;
+  text-align: justify !important;
+  text-align-last: left !important;
 }
 body.wsite-page-team .memoriam__tribute footer {
   font-size: 13px;
@@ -756,7 +896,20 @@ body.wsite-page-team .memoriam__tribute footer {
     gap: 24px;
   }
   body.wsite-page-team .memoriam__photo { width: 180px; height: 180px; }
-  body.wsite-page-team .memoriam__lede p { text-align: left !important; }
+  body.wsite-page-team .memoriam__gallery {
+    grid-template-columns: 1fr;
+    margin: 4px auto 42px;
+  }
+  body.wsite-page-team .memoriam__gallery figure,
+  body.wsite-page-team .memoriam__gallery figure:first-child {
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+  }
+  body.wsite-page-team .memoriam__actions { justify-content: center; }
+  body.wsite-page-team .memoriam__pdf-frame {
+    min-height: 420px;
+    height: 62vh;
+  }
   body.wsite-page-team .memoriam__tribute { padding: 22px 20px; }
 }
 
