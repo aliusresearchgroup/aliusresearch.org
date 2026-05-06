@@ -11,7 +11,52 @@ body {
   --alius-paper: #ffffff;
   --alius-anchor-width: 188px;
   --alius-page-gutter: 48px;
-  --alius-prose-measure: 72ch;
+  --alius-prose-measure: 68ch;
+  --alius-prose-gutter: clamp(18px, 5vw, 48px);
+  --alius-prose-line: 1.72;
+}
+
+#wsite-content .wsite-section-elements > .wsite-content-title,
+#wsite-content .team-page-title h1,
+#wsite-content .memoriam__name,
+#wsite-content .memoriam__subhead,
+#wsite-content .home-about-title,
+#wsite-content .newsletter-page h1,
+#wsite-content .newsletter-page h2,
+#wsite-content .journal-page h1,
+#wsite-content .journal-page h2,
+#wsite-content .membership-page h2,
+#wsite-content .membership-page h3 {
+  max-width: min(760px, calc(100vw - var(--alius-prose-gutter) - var(--alius-prose-gutter))) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  text-align: center !important;
+}
+
+body:not(.wsite-page-team) #wsite-content :where(.paragraph, p),
+body.wsite-page-team #wsite-content .memoriam :where(p, li) {
+  box-sizing: border-box;
+  max-width: min(var(--alius-prose-measure), calc(100vw - var(--alius-prose-gutter) - var(--alius-prose-gutter)));
+  margin-right: auto !important;
+  margin-left: auto !important;
+  line-height: var(--alius-prose-line) !important;
+  text-align: justify !important;
+  text-align-last: left;
+  text-wrap: pretty;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+body:not(.wsite-page-team) #wsite-content :where(.paragraph, p) + :where(.paragraph, p),
+body.wsite-page-team #wsite-content .memoriam :where(p, li) + :where(p, li) {
+  margin-top: 0.85em !important;
+}
+
+body:not(.wsite-page-team) #wsite-content :where(ul, ol):not(.wsite-menu-default):not(.tab-section-nav):not(.section-nav ol),
+body.wsite-page-team #wsite-content .memoriam :where(ul, ol) {
+  max-width: min(var(--alius-prose-measure), calc(100vw - var(--alius-prose-gutter) - var(--alius-prose-gutter)));
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 #header {
