@@ -20,11 +20,6 @@
       ['Overview', 'newsletter-overview'],
       ['Sign Up', 'newsletter-signup'],
       ['Submit News', 'newsletter-submit-news']
-    ],
-    '/newsletter/': [
-      ['Overview', 'newsletter-overview'],
-      ['Sign Up', 'newsletter-signup'],
-      ['Submit News', 'newsletter-submit-news']
     ]
   };
 
@@ -175,7 +170,9 @@
     function talkMatches(talk, showAll) {
       if (showAll) return true;
       var tags = (talk.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
-      return tags.some(function (tag) { return active.has(tag); });
+      var selected = [];
+      active.forEach(function (tag) { selected.push(tag); });
+      return selected.every(function (tag) { return tags.indexOf(tag) !== -1; });
     }
 
     function syncAnchorNav(showAll) {

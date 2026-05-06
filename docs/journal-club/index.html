@@ -59,7 +59,6 @@
               <li class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
               <li class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
               <li class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
-              <li class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
               <li id="active" class="wsite-menu-item-wrap"><a href="/journal-club/" class="wsite-menu-item">Journal Clubs</a></li>
               <li class="wsite-menu-item-wrap"><a href="/events/" class="wsite-menu-item">Events</a></li>
               <li class="wsite-menu-item-wrap"><a href="/membership/" class="wsite-menu-item">Membership</a></li>
@@ -69,7 +68,6 @@
           <div id="content-wrapper">
             <div id="wsite-content" class="wsite-elements wsite-not-footer">
           <nav class="section-nav" aria-label="Journal Club sections">
-            <a href="#journal-overview">Overview</a>
             <a href="#journal-koroma">Sleep &amp; cardiac response | Matthieu Koroma</a>
             <a href="#journal-suseelan">Psychedelic difficulties | Shayam Suseelan</a>
             <a href="#journal-aicher">Psychedelics &amp; therapy | Helena Aicher</a>
@@ -115,12 +113,6 @@
               box-sizing: border-box;
             }
 
-            body.wsite-page-journal-club .journal-hero {
-              margin: 0 0 28px;
-              padding: 0 0 32px;
-              border-bottom: 1px solid var(--journal-line);
-            }
-
             body.wsite-page-journal-club .journal-page h1,
             body.wsite-page-journal-club .journal-page h2,
             body.wsite-page-journal-club .journal-page h3 {
@@ -161,11 +153,6 @@
 
             body.wsite-page-journal-club .journal-page p + p {
               margin-top: 12px;
-            }
-
-            body.wsite-page-journal-club .journal-intro {
-              max-width: 72ch;
-              margin-top: 18px;
             }
 
             body.wsite-page-journal-club .journal-filters {
@@ -303,13 +290,6 @@
               padding: 0;
             }
 
-            body.wsite-page-journal-club .journal-note {
-              margin-top: 18px;
-              max-width: 72ch;
-              color: var(--journal-muted);
-              font: 500 14px/1.55 Raleway, Arial, sans-serif;
-            }
-
             @media (max-width: 920px) {
               body.wsite-page-journal-club .journal-page {
                 padding: 118px 22px 70px;
@@ -349,18 +329,6 @@
           </style>
 
           <main class="journal-page" aria-label="ALIUS Journal Club recordings">
-            <section id="journal-overview" class="journal-hero">
-              <h1>Journal Clubs</h1>
-              <p class="journal-intro">
-                ALIUS Journal Clubs gather recorded talks on consciousness, altered states, and cognitive science. Each
-                entry below keeps the video, abstract, and speaker biography together so the page can be browsed as a single
-                archive instead of a set of hidden dropdowns.
-              </p>
-              <p class="journal-note">
-                Videos are embedded from the ALIUS YouTube channel. Use the left navigation to move directly between talks.
-              </p>
-            </section>
-
             <div class="journal-filters" role="group" aria-label="Filter Journal Club videos by topic">
               <button type="button" class="journal-filter journal-filter--all is-active" data-filter="*">All <span class="journal-filter__count">13</span></button>
               <button type="button" class="journal-filter" data-filter="psychedelics">Psychedelics <span class="journal-filter__count">8</span></button>
