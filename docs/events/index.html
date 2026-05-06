@@ -39,7 +39,6 @@
           <div id="navigation">
             <ul class="wsite-menu-default">
               <li class="wsite-menu-item-wrap"><a href="/" class="wsite-menu-item">Home</a></li>
-              <li class="wsite-menu-item-wrap"><a href="/about/" class="wsite-menu-item">About</a></li>
               <li class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
               <li class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
               <li class="wsite-menu-item-wrap"><a href="/journal-club/" class="wsite-menu-item">Journal Clubs</a></li>
@@ -143,6 +142,14 @@
                   align-items: stretch;
                 }
 
+                body.wsite-page-events .events-hero--text-only {
+                  display: block;
+                }
+
+                body.wsite-page-events .events-hero--text-only .events-hero__copy {
+                  max-width: min(860px, 100%);
+                }
+
                 body.wsite-page-events .events-hero__copy {
                   display: flex;
                   flex-direction: column;
@@ -186,32 +193,6 @@
                   font-family: Raleway, sans-serif;
                   font-size: 14px;
                   line-height: 1.35;
-                }
-
-                body.wsite-page-events .events-hero__media {
-                  overflow: hidden;
-                  border: 1px solid var(--events-line);
-                  border-radius: 8px;
-                  background: var(--events-wash);
-                }
-
-                body.wsite-page-events .events-hero__media img {
-                  display: block;
-                  width: 100%;
-                  height: 100%;
-                  min-height: 410px;
-                  object-fit: cover;
-                }
-
-                body.wsite-page-events .events-hero__caption {
-                  margin: 0;
-                  padding: 10px 14px 12px;
-                  color: var(--events-muted) !important;
-                  font-family: Raleway, sans-serif !important;
-                  font-size: 12px !important;
-                  line-height: 1.35 !important;
-                  background: #fff;
-                  border-top: 1px solid var(--events-line);
                 }
 
                 body.wsite-page-events .event-partner {
@@ -630,11 +611,6 @@
                     padding: 0;
                   }
 
-                  body.wsite-page-events .events-hero__media img {
-                    min-height: 260px;
-                    max-height: 360px;
-                  }
-
                   body.wsite-page-events .event-meta,
                   body.wsite-page-events .event-timeline-row {
                     grid-template-columns: 1fr;
@@ -708,7 +684,7 @@
               </nav>
 
               <main class="events-page">
-                <section id="event-assc-2025" class="event-section events-hero">
+                <section id="event-assc-2025" class="event-section events-hero events-hero--text-only">
                   <div class="events-hero__copy">
                     <h1>ASSC Satellite Event on Non-Ordinary States of Consciousness</h1>
                     <p>
@@ -746,10 +722,6 @@
                       </p>
                     </div>
                   </div>
-                  <figure class="events-hero__media">
-                    <img src="/uploads/9/1/6/0/91600416/sunset_orig.png" alt="Sunset near the Crete retreat location" />
-                    <figcaption class="events-hero__caption">Crete retreat setting for the post-ASSC satellite gathering.</figcaption>
-                  </figure>
                 </section>
 
                 <section id="assc-themes" class="event-section">
@@ -1505,3 +1477,4 @@
     <script type="module" src="/assets/events/js/events-pretext.js"></script>
   </body>
 </html>
+
