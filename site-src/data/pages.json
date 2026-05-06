@@ -88,6 +88,28 @@
     "redirect_legacy": true
   },
   {
+    "id": "newsletter",
+    "legacy_path": "newsletter.html",
+    "legacy_name": "newsletter",
+    "canonical_path": "/newsletter/",
+    "title": "Newsletter - Alius",
+    "description": "Sign up for the ALIUS newsletter and submit news items on research into altered states of consciousness.",
+    "section": "newsletter",
+    "subcategory": "",
+    "layout": "page",
+    "nav_group": "newsletter",
+    "order": 0,
+    "body_fragment": "",
+    "head_fragment": "",
+    "source_html": "../Newsletter/page.html",
+    "page_css": "",
+    "page_js": "",
+    "html_tag_attributes": "lang=\"en\"",
+    "body_tag_attributes": "class=\"no-header wsite-page-newsletter full-width-on wsite-theme-light\"",
+    "status": "published",
+    "redirect_legacy": true
+  },
+  {
     "id": "journal-club",
     "legacy_path": "journal-club.html",
     "legacy_name": "journal-club",

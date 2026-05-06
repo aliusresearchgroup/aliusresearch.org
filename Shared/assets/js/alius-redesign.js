@@ -20,6 +20,11 @@
       ['Overview', 'newsletter-overview'],
       ['Sign Up', 'newsletter-signup'],
       ['Submit News', 'newsletter-submit-news']
+    ],
+    '/newsletter/': [
+      ['Overview', 'newsletter-overview'],
+      ['Sign Up', 'newsletter-signup'],
+      ['Submit News', 'newsletter-submit-news']
     ]
   };
 
