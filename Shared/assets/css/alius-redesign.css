@@ -98,7 +98,8 @@ body.wsite-page-team #wsite-content .memoriam :where(ul, ol) {
   display: block;
 }
 
-#navigation .wsite-nav-more {
+#navigation li.wsite-nav-more,
+#navigation .wsite-menu-item-wrap.wsite-nav-more {
   display: none !important;
 }
 
