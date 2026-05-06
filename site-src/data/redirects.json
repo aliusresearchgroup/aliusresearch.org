@@ -56,7 +56,7 @@
     },
     {
         "from": "/bicycle-day-workshop.html",
-        "to": "/events/bicycle-day-workshop/",
+        "to": "/events/#event-bicycle-day-2017",
         "type": "legacy-html-page"
     },
     {
@@ -346,7 +346,7 @@
     },
     {
         "from": "/cultural-shaping-of-consciousness.html",
-        "to": "/",
+        "to": "/events/#event-cultural-shaping-2019",
         "type": "legacy-html-page"
     },
     {
@@ -376,7 +376,7 @@
     },
     {
         "from": "/images-visionnaires.html",
-        "to": "/media/images-visionnaires/",
+        "to": "/events/#event-hallucinations-2017",
         "type": "legacy-html-page"
     },
     {
@@ -431,7 +431,7 @@
     },
     {
         "from": "/journee-etudes-martin-fortier.html",
-        "to": "/pages/journee-etudes-martin-fortier/",
+        "to": "/events/#event-fortier-2021",
         "type": "legacy-html-page"
     },
     {
@@ -601,12 +601,12 @@
     },
     {
         "from": "/somatic-cultures-ad-consciousness.html",
-        "to": "/",
+        "to": "/events/#event-somatic-2021",
         "type": "legacy-html-page"
     },
     {
         "from": "/symposium.html",
-        "to": "/events/symposium/",
+        "to": "/events/",
         "type": "legacy-html-page"
     },
     {
@@ -706,17 +706,17 @@
     },
     {
         "from": "/voix-et-visions.html",
-        "to": "/pages/voix-et-visions/",
+        "to": "/events/#event-voix-visions-2019",
         "type": "legacy-html-page"
     },
     {
         "from": "/workshop-2017.html",
-        "to": "/events/workshops/workshop-2017/",
+        "to": "/events/#event-workshop-2017",
         "type": "legacy-html-page"
     },
     {
         "from": "/workshop-2018.html",
-        "to": "/events/workshops/workshop-2018/",
+        "to": "/events/#event-workshop-2018",
         "type": "legacy-html-page"
     },
     {
@@ -861,7 +861,7 @@
     },
     {
         "from": "/research/projects/cultural-shaping-of-consciousness/",
-        "to": "/",
+        "to": "/events/#event-cultural-shaping-2019",
         "type": "archived-research-canonical"
     },
     {
@@ -921,7 +921,7 @@
     },
     {
         "from": "/research/projects/somatic-cultures-ad-consciousness/",
-        "to": "/",
+        "to": "/events/#event-somatic-2021",
         "type": "archived-research-canonical"
     },
     {
@@ -943,5 +943,35 @@
         "from": "/research/projects/viscereality/",
         "to": "/",
         "type": "archived-research-canonical"
+    },
+    {
+        "from": "/events/bicycle-day-workshop/",
+        "to": "/events/#event-bicycle-day-2017",
+        "type": "legacy-event-section"
+    },
+    {
+        "from": "/events/workshops/workshop-2017/",
+        "to": "/events/#event-workshop-2017",
+        "type": "legacy-event-section"
+    },
+    {
+        "from": "/events/workshops/workshop-2018/",
+        "to": "/events/#event-workshop-2018",
+        "type": "legacy-event-section"
+    },
+    {
+        "from": "/media/images-visionnaires/",
+        "to": "/events/#event-hallucinations-2017",
+        "type": "legacy-event-section"
+    },
+    {
+        "from": "/pages/journee-etudes-martin-fortier/",
+        "to": "/events/#event-fortier-2021",
+        "type": "legacy-event-section"
+    },
+    {
+        "from": "/pages/voix-et-visions/",
+        "to": "/events/#event-voix-visions-2019",
+        "type": "legacy-event-section"
     }
 ]

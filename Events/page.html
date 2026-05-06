@@ -61,6 +61,7 @@
                   --events-wash: #f6f8f5;
                   --events-warm: #9a6a2d;
                   --events-bluegreen: #2f6f6a;
+                  overflow-x: hidden;
                 }
 
                 body.wsite-page-events #wsite-content {
@@ -69,9 +70,9 @@
 
                 body.wsite-page-events .events-page {
                   box-sizing: border-box;
-                  width: min(1120px, 100%);
+                  width: min(1064px, calc(100vw - 40px));
                   margin: 0 auto;
-                  padding: 44px 28px 80px;
+                  padding: 48px 0 82px;
                   color: var(--events-ink);
                   font-family: Raleway, sans-serif;
                 }
@@ -85,6 +86,8 @@
                 body.wsite-page-events .events-page h1,
                 body.wsite-page-events .events-page h2,
                 body.wsite-page-events .events-page h3 {
+                  width: 100%;
+                  min-width: 0;
                   margin: 0;
                   color: var(--events-green) !important;
                   font-family: Raleway, sans-serif !important;
@@ -94,19 +97,25 @@
                 }
 
                 body.wsite-page-events .events-page h1 {
-                  max-width: 760px;
+                  max-width: 880px;
+                  margin: 0 auto;
                   font-size: clamp(32px, 4.2vw, 52px);
                   line-height: 1.06;
+                  text-align: center !important;
                 }
 
                 body.wsite-page-events .events-page h2 {
+                  max-width: min(760px, 100%);
+                  margin: 0 auto;
                   font-size: 25px !important;
                   line-height: 1.18 !important;
+                  text-align: center !important;
                 }
 
                 body.wsite-page-events .events-page h3 {
                   font-size: 17px !important;
                   line-height: 1.3 !important;
+                  text-align: center !important;
                 }
 
                 body.wsite-page-events .events-page p,
@@ -115,6 +124,16 @@
                   font-family: "Gentium Basic", Georgia, serif !important;
                   font-size: 17px !important;
                   line-height: 1.58 !important;
+                }
+
+                body.wsite-page-events #wsite-content .events-page :where(p, li) {
+                  max-width: none !important;
+                  margin-right: 0 !important;
+                  margin-left: 0 !important;
+                  text-align: left !important;
+                  text-align-last: auto !important;
+                  hyphens: none;
+                  overflow-wrap: break-word;
                 }
 
                 body.wsite-page-events .events-page a {
@@ -148,20 +167,25 @@
                 }
 
                 body.wsite-page-events .events-hero--text-only .events-hero__copy {
-                  max-width: min(860px, 100%);
+                  max-width: min(940px, 100%);
+                  margin: 0 auto;
                 }
 
                 body.wsite-page-events .events-hero__copy {
                   display: flex;
                   flex-direction: column;
                   justify-content: center;
-                  min-height: 410px;
-                  padding: 26px 0;
+                  align-items: center;
+                  width: 100%;
+                  min-width: 0;
+                  min-height: 0;
+                  padding: 34px 0 26px;
                 }
 
                 body.wsite-page-events .events-hero__copy p {
-                  max-width: 700px;
-                  margin: 20px 0 0;
+                  width: 100%;
+                  max-width: 740px !important;
+                  margin: 20px auto 0 !important;
                   font-size: 18px !important;
                 }
 
@@ -221,17 +245,19 @@
                 body.wsite-page-events .event-themes {
                   display: grid;
                   grid-template-columns: repeat(2, minmax(0, 1fr));
-                  gap: 14px;
-                  margin-top: 22px;
+                  gap: 16px;
+                  align-items: stretch;
+                  margin-top: 26px;
                 }
 
                 body.wsite-page-events .event-theme {
                   display: grid;
-                  grid-template-columns: 88px minmax(0, 1fr);
-                  gap: 16px;
+                  grid-template-columns: 92px minmax(0, 1fr);
+                  gap: 18px;
                   align-items: center;
-                  min-height: 154px;
-                  padding: 18px;
+                  min-height: 168px;
+                  height: 100%;
+                  padding: 20px;
                   border: 1px solid var(--events-line);
                   border-left: 4px solid var(--events-leaf);
                   border-radius: 8px;
@@ -251,8 +277,8 @@
                 }
 
                 body.wsite-page-events .event-theme__visual {
-                  width: 84px;
-                  height: 84px;
+                  width: 88px;
+                  height: 88px;
                   border: 1px solid rgba(66, 81, 76, 0.16);
                   border-radius: 8px;
                   background: #f8faf8;
@@ -269,8 +295,13 @@
                   margin: 0;
                 }
 
+                body.wsite-page-events .event-theme__copy {
+                  width: 100%;
+                  min-width: 0;
+                }
+
                 body.wsite-page-events .event-theme p {
-                  margin: 9px 0 0;
+                  margin: 10px 0 0 !important;
                   font-size: 15.5px !important;
                   line-height: 1.48 !important;
                 }
@@ -279,6 +310,12 @@
                 body.wsite-page-events .event-theme__visual--vr,
                 body.wsite-page-events .event-theme__visual--lived {
                   background: #f8faf8;
+                }
+
+                body.wsite-page-events .event-theme__visual--vr svg,
+                body.wsite-page-events .event-theme__visual--lived svg {
+                  transform: scale(0.84);
+                  transform-origin: center;
                 }
 
                 body.wsite-page-events .theme-measure-liquid {
@@ -431,8 +468,9 @@
                 }
 
                 body.wsite-page-events .timeline-note {
-                  max-width: 760px;
-                  margin: 12px 0 0;
+                  width: 100%;
+                  max-width: 700px !important;
+                  margin: 12px auto 0 !important;
                 }
 
                 body.wsite-page-events .event-timeline {
@@ -472,6 +510,7 @@
                   grid-template-columns: 62px minmax(0, 1fr);
                   gap: 14px;
                   width: 100%;
+                  height: 100%;
                   min-height: 92px;
                   padding: 14px;
                   border: 1px solid var(--events-line);
@@ -489,9 +528,18 @@
                   outline: none;
                 }
 
+                body.wsite-page-events .event-speaker-card picture,
                 body.wsite-page-events .event-speaker-card img {
                   width: 62px;
                   height: 62px;
+                }
+
+                body.wsite-page-events .event-speaker-card picture {
+                  display: block;
+                }
+
+                body.wsite-page-events .event-speaker-card img {
+                  display: block;
                   border-radius: 50%;
                   object-fit: cover;
                   background: var(--events-wash);
@@ -590,6 +638,86 @@
                   line-height: 1.48 !important;
                 }
 
+                body.wsite-page-events .archive-event__media {
+                  margin: 18px auto 0;
+                  max-width: min(720px, 100%);
+                }
+
+                body.wsite-page-events .archive-event__media img {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                  border: 1px solid var(--events-line);
+                  border-radius: 8px;
+                  background: var(--events-wash);
+                }
+
+                body.wsite-page-events .archive-event__links {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  gap: 8px;
+                  margin: 16px 0 0;
+                }
+
+                body.wsite-page-events .archive-event__links a {
+                  display: inline-flex;
+                  align-items: center;
+                  min-height: 34px;
+                  padding: 7px 11px;
+                  border: 1px solid var(--events-line);
+                  border-radius: 999px;
+                  background: #fff;
+                  color: var(--events-green);
+                  font-family: Raleway, sans-serif;
+                  font-size: 12px;
+                  font-weight: 700;
+                  line-height: 1.2;
+                  text-decoration: none;
+                }
+
+                body.wsite-page-events .archive-event__more {
+                  margin-top: 18px;
+                  padding-top: 16px;
+                  border-top: 1px solid var(--events-line);
+                }
+
+                body.wsite-page-events .archive-event__more summary {
+                  cursor: pointer;
+                  color: var(--events-green);
+                  font-family: Raleway, sans-serif;
+                  font-size: 13px;
+                  font-weight: 700;
+                  text-align: center;
+                }
+
+                body.wsite-page-events .archive-event__more :where(h3, h4) {
+                  margin: 16px 0 6px;
+                  color: var(--events-ink);
+                  font-family: Raleway, sans-serif;
+                  font-size: 14px;
+                  line-height: 1.35;
+                  text-align: left !important;
+                }
+
+                body.wsite-page-events .archive-event__more :where(ul, ol) {
+                  display: grid;
+                  gap: 7px;
+                  margin: 10px 0 0;
+                  padding-left: 18px;
+                  max-width: none !important;
+                }
+
+                body.wsite-page-events .archive-event__more li {
+                  font-size: 14.5px !important;
+                  line-height: 1.45 !important;
+                }
+
+                body.wsite-page-events .archive-event__more p {
+                  font-size: 14.5px !important;
+                  line-height: 1.5 !important;
+                }
+
                 @media (max-width: 860px) {
                   body.wsite-page-events .event-section,
                   body.wsite-page-events .event-timeline {
@@ -597,7 +725,8 @@
                   }
 
                   body.wsite-page-events .events-page {
-                    padding: 32px 18px 84px;
+                    width: min(100%, calc(100vw - 32px));
+                    padding: 32px 0 84px;
                   }
 
                   body.wsite-page-events .events-hero,
@@ -635,15 +764,18 @@
                   }
 
                   body.wsite-page-events .event-theme {
-                    grid-template-columns: 68px minmax(0, 1fr);
-                    gap: 12px;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    gap: 14px;
+                    padding: 16px;
                   }
 
                   body.wsite-page-events .event-theme__visual {
-                    width: 64px;
-                    height: 64px;
+                    width: 72px;
+                    height: 72px;
                   }
 
+                  body.wsite-page-events .event-speaker-card picture,
                   body.wsite-page-events .event-speaker-card img {
                     width: 48px;
                     height: 48px;
@@ -681,7 +813,6 @@
                 <a href="#event-hallucinations-2017">Hallucinations</a>
                 <a href="#event-sense-self-2017">Sense of Self</a>
                 <a href="#event-bicycle-day-2017">Bicycle Day</a>
-                <a href="#event-symposium-berlin">Berlin Symposium</a>
               </nav>
 
               <main class="events-page">
@@ -884,7 +1015,7 @@
                       <div class="event-day-card__items">
 <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/stratos-3.png" alt="Stratos Bichakis" />
+                        <picture><source srcset="/media/images/stratos-3.webp" type="image/webp"><img src="/media/images/stratos-3.png" alt="Stratos Bichakis" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Opening / music</span>
                           <span class="event-speaker-card__title">Listen, Gather, Begin</span>
@@ -974,7 +1105,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/me-green-vince-polito-circle-1.png" alt="Vince Polito" />
+                        <picture><source srcset="/media/images/me-green-vince-polito-circle-1.webp" type="image/webp"><img src="/media/images/me-green-vince-polito-circle-1.png" alt="Vince Polito" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Track 1 / methods keynote</span>
                           <span class="event-speaker-card__title">Altered States Lab Methods</span>
@@ -1042,7 +1173,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/taylorh-color-headshot-hector-taylor-circle-1.png" alt="Hector Taylor" />
+                        <picture><source srcset="/media/images/taylorh-color-headshot-hector-taylor-circle-1.webp" type="image/webp"><img src="/media/images/taylorh-color-headshot-hector-taylor-circle-1.png" alt="Hector Taylor" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Track 2 / VR treatment design</span>
                           <span class="event-speaker-card__title">VR and Psychoplastogens</span>
@@ -1059,7 +1190,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/member1-antoine-bellemare-circle-1.png" alt="Antoine Bellemare" />
+                        <picture><source srcset="/media/images/member1-antoine-bellemare-circle-1.webp" type="image/webp"><img src="/media/images/member1-antoine-bellemare-circle-1.png" alt="Antoine Bellemare" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Track 2 / live systems</span>
                           <span class="event-speaker-card__title">Goofi-Pipe Demo</span>
@@ -1094,7 +1225,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/makino-2-yutaka-makino-circle-1.png" alt="Yutaka Makino" />
+                        <picture><source srcset="/media/images/makino-2-yutaka-makino-circle-1.webp" type="image/webp"><img src="/media/images/makino-2-yutaka-makino-circle-1.png" alt="Yutaka Makino" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Track 2 / art and uncertainty</span>
                           <span class="event-speaker-card__title">Towards Uncertainty and CONFABULATION</span>
@@ -1111,7 +1242,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/stratos-3.png" alt="Stratos Bichakis" />
+                        <picture><source srcset="/media/images/stratos-3.webp" type="image/webp"><img src="/media/images/stratos-3.png" alt="Stratos Bichakis" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Cultural performance</span>
                           <span class="event-speaker-card__title">Stratoscapes</span>
@@ -1149,7 +1280,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/andres-3.png" alt="Andres Gomez Emilsson" />
+                        <picture><source srcset="/media/images/andres-3.webp" type="image/webp"><img src="/media/images/andres-3.png" alt="Andres Gomez Emilsson" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Track 4 / QRI keynote</span>
                           <span class="event-speaker-card__title">Parametrizing Psychedelic States with Dynamic Systems and Coupling Dynamics</span>
@@ -1199,7 +1330,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/174299951787553162-2-orig.png" alt="Till Holzapfel" />
+                        <picture><source srcset="/media/images/174299951787553162-2-orig.webp" type="image/webp"><img src="/media/images/174299951787553162-2-orig.png" alt="Till Holzapfel" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Parallel session A</span>
                           <span class="event-speaker-card__title">Phenomenological Playground</span>
@@ -1217,7 +1348,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/makino-2-yutaka-makino-circle-1.png" alt="Yutaka Makino" />
+                        <picture><source srcset="/media/images/makino-2-yutaka-makino-circle-1.webp" type="image/webp"><img src="/media/images/makino-2-yutaka-makino-circle-1.png" alt="Yutaka Makino" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Parallel session B</span>
                           <span class="event-speaker-card__title">FOLDINGS</span>
@@ -1255,7 +1386,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/michael-lifshitz-headshot-michael-lifshitz-circle-2.png" alt="Michael Lifshitz" />
+                        <picture><source srcset="/media/images/michael-lifshitz-headshot-michael-lifshitz-circle-2.webp" type="image/webp"><img src="/media/images/michael-lifshitz-headshot-michael-lifshitz-circle-2.png" alt="Michael Lifshitz" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Special keynote</span>
                           <span class="event-speaker-card__title">Tulpamancy</span>
@@ -1272,7 +1403,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/175320762717901005-orig.png" alt="Marc Antonio" />
+                        <picture><source srcset="/media/images/175320762717901005-orig.webp" type="image/webp"><img src="/media/images/175320762717901005-orig.png" alt="Marc Antonio" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Debate</span>
                           <span class="event-speaker-card__title">The Great Tulpa Consciousness Debate</span>
@@ -1306,7 +1437,7 @@
                     </div>
                     <div class="event-program-item">
                       <article class="event-speaker-card" tabindex="0" role="button" aria-expanded="false">
-                        <img src="/media/images/tobias-orig.png" alt="Tobias Buchborn" />
+                        <picture><source srcset="/media/images/tobias-orig.webp" type="image/webp"><img src="/media/images/tobias-orig.png" alt="Tobias Buchborn" /></picture>
                         <div>
                           <span class="event-speaker-card__eyebrow">Super special keynote</span>
                           <span class="event-speaker-card__title">Introduction to the Psychodynamics of the Psychedelic Experience</span>
@@ -1331,24 +1462,60 @@
                     <span class="archive-event__kicker">Previous Events</span>
                     <time datetime="2021-12-17">17 December 2021</time>
                     <h2>Workshop in Tribute to Martin Fortier</h2>
-                    <p>Partner event at Institut Jean Nicod, Paris, honoring Martin Fortier's work on anthropology, altered states, and the comparative study of consciousness.</p>
+                    <p>Partner event at Institut Jean Nicod, Paris, honoring Martin Fortier's work on anthropology, hallucinations, altered states, feelings of reality, spiritual experience, shamanism, and the diversity of consciousness.</p>
                     <ul class="archive-event__details">
-                      <li><strong>Place:</strong> Institut Jean Nicod, Paris</li>
-                      <li><strong>Format:</strong> Tribute workshop</li>
+                      <li><strong>Organizers:</strong> J&eacute;r&ocirc;me Dokic and Rapha&euml;l Milli&egrave;re</li>
+                      <li><strong>Place:</strong> Institut Jean Nicod, ENS, Paris</li>
+                      <li><strong>Time:</strong> 10:00-18:15</li>
+                      <li><strong>Format:</strong> English talks; French and English round table</li>
                     </ul>
+                    <div class="archive-event__links">
+                      <a href="http://www.institutnicod.org/seminaires-colloques/colloques-et-conferences/colloques-et-workshops/article/journee-d-etude-en-hommage-a-martin-fortier?lang=fr" target="_blank" rel="noopener">Official event page</a>
+                      <a href="/team/#martinfortier">Martin Fortier memoriam</a>
+                      <a href="/events/legacy/fortier-tribute-2021/">Complete legacy page snapshot</a>
+                    </div>
+                    <details class="archive-event__more">
+                      <summary>Legacy program and abstracts</summary>
+                      <h3>Program</h3>
+                      <ul>
+                        <li>10:00 - Introduction.</li>
+                        <li>10:15-11:15 - Jo&euml;lle Proust, "From socio-cognitive habits to metacognitive diversity".</li>
+                        <li>11:15-12:15 - Juan C. Gonz&aacute;lez, "Classification, reality and epistemic value of psychedelic hallucinations".</li>
+                        <li>14:00-15:00 - David Dupuis, "Can really psychedelics change the world? Hallucinogenic substances and cultural evolution".</li>
+                        <li>15:00-16:00 - Rapha&euml;l Milli&egrave;re, "Dimensions of Consciousness".</li>
+                        <li>16:15-17:15 - J&eacute;r&ocirc;me Dokic, "The varieties of feelings of reality".</li>
+                        <li>17:15-18:15 - Round table.</li>
+                      </ul>
+                      <h3>Presentation</h3>
+                      <p>In 2020, Martin Fortier, a doctoral student at EHESS attached to the Jean-Nicod Institute, died prematurely, on the verge of defending a thesis of nearly 600 pages. With his dual training in philosophy and anthropology, his research crossed social sciences and cognitive sciences. His published works focus on the epistemic and ontological status of hallucinations, feelings of reality and hyper-reality, spiritual experiences and shamanism, altered states of consciousness, and the diversity of consciousness. This workshop honored his memory by addressing some of his favorite themes.</p>
+                      <h3>Abstract themes retained from the legacy page</h3>
+                      <p>Jo&euml;lle Proust discussed Martin Fortier's contribution to metacognitive diversity and the anthropological evidence he collected around social metacognition. Juan C. Gonz&aacute;lez examined Martin's idea that psychedelic hallucination phenomenology can be linked with neuropharmacological bases, and questioned the real/unreal divide for psychedelic experience. David Dupuis revisited debates with Martin Fortier about psychedelics, cultural transmission, and extrapharmacological factors. Rapha&euml;l Milli&egrave;re developed questions around multidimensional global states of consciousness. J&eacute;r&ocirc;me Dokic argued that the feeling of presence is affective and has bodily, interactive, and self-presence aspects that can vary independently of sensory perception.</p>
+                    </details>
                   </article>
                 </section>
 
                 <section id="event-somatic-2021" class="event-section past-event-section">
                   <article class="archive-event archive-event--wide">
                     <span class="archive-event__kicker">Previous Events</span>
-                    <span>March 2021 archive entry</span>
+                    <span>March 2021 archive entry / AAA Meeting 2019</span>
                     <h2>Somatic Cultures and Consciousness</h2>
-                    <p>From event cognition to self-transformation, linked to the AAA Meeting 2019 in Vancouver. The project kept somatic practices, cultural techniques, and conscious self-transformation in the same research frame.</p>
+                    <p>From Event Cognition to Self-Transformation. This legacy project page framed somatic cultures as communities where bodily practices, embodied episodes, and shared meanings shape distinctive forms of self-consciousness and social belonging.</p>
                     <ul class="archive-event__details">
-                      <li><strong>Theme:</strong> Somatic culture, event cognition, and self-transformation</li>
-                      <li><strong>Documentation:</strong> Consolidated from the legacy ALIUS project archive</li>
+                      <li><strong>Organizers:</strong> Maddalena Canna and Rebecca Seligman</li>
+                      <li><strong>Discussant:</strong> Rebecca Seligman, Northwestern University</li>
+                      <li><strong>Place:</strong> Vancouver CC WEST, Room 212, Vancouver, Canada</li>
+                      <li><strong>Time:</strong> Saturday 23 November, 4:15 PM-6:00 PM</li>
                     </ul>
+                    <div class="archive-event__links">
+                      <a href="/library/pdfs/aaa-2019-panel-abstract-canna-seligman-somatic-cultures.pdf" target="_blank" rel="noopener">Panel abstract PDF</a>
+                      <a href="/events/legacy/somatic-cultures-2019/">Complete legacy page snapshot</a>
+                    </div>
+                    <details class="archive-event__more">
+                      <summary>Legacy abstract</summary>
+                      <p>Recent scholarly explorations of embodiment have explored the multiple ways in which cultural meaning and somatic experiences are intermingled through complex loops of influence between mind and body. The panel focused on somatic cultures: contexts where shaping, conditioning and transforming participants' bodies is pivotal for developing a distinctive sense of Self integrated into a specific community.</p>
+                      <p>The legacy page described religious groups, sports practitioners, meditators, communities defined by sexual orientations, shared trauma, pathology, practices of consumption, and ascetic practices as places where transforming one's body can forge distinctive self-consciousnesses and selective socialities. The panel proposed to explore somatic enculturation by integrating anthropology, transcultural psychiatry, neurocognitive science, and biological science.</p>
+                      <p>Its central distinction was between somatic events - discrete episodes marking integration into a community - and self-transformation, the broader dynamics of personal reconfiguration and re-socialization. The page retained examples including initiation, desired but unpredictable enlightenment, boxing careers, circumcision, ritual shaving, and enslavement piercings in BDSM practices. It argued for a bio-looping approach in which bottom-up bodily processes and top-down meaningful experiences co-dependently shape selves, biology, and social worlds.</p>
+                    </details>
                   </article>
                 </section>
 
@@ -1357,11 +1524,37 @@
                     <span class="archive-event__kicker">Previous Events</span>
                     <time datetime="2019-10-24">24-26 October 2019</time>
                     <h2>Voix et visions</h2>
-                    <p>Regards crois&eacute;s sur les hallucinations, hosted at &Eacute;cole Normale Sup&eacute;rieure.</p>
+                    <p>Regards crois&eacute;s sur les hallucinations. Journ&eacute;es d'&eacute;tudes organized by David Dupuis and Mathieu Fr&egrave;rejouan at &Eacute;cole Normale Sup&eacute;rieure, 45 rue d'Ulm, Paris.</p>
                     <ul class="archive-event__details">
-                      <li><strong>Place:</strong> &Eacute;cole Normale Sup&eacute;rieure</li>
-                      <li><strong>Theme:</strong> Interdisciplinary perspectives on voices, visions, and hallucination</li>
+                      <li><strong>Organizers:</strong> David Dupuis and Mathieu Fr&egrave;rejouan</li>
+                      <li><strong>Place:</strong> ENS, Salle Dussane and Salle des actes</li>
+                      <li><strong>Theme:</strong> Voices, visions, hallucinations, psychiatry, religion, art, and psychedelics</li>
+                      <li><strong>Language:</strong> French program retained from the legacy page</li>
                     </ul>
+                    <figure class="archive-event__media">
+                      <img src="/uploads/9/1/6/0/91600416/published/screenshot-2019-10-03-at-09-22-47.png" alt="Voix et visions event poster" loading="lazy" />
+                    </figure>
+                    <div class="archive-event__links">
+                      <a href="/library/pdfs/voix-et-vision-programme.pdf" target="_blank" rel="noopener">Event program PDF</a>
+                      <a href="/events/legacy/voix-et-visions-2019/">Complete legacy page snapshot</a>
+                    </div>
+                    <details class="archive-event__more">
+                      <summary>Legacy three-day program</summary>
+                      <h3>Jeudi 24 octobre</h3>
+                      <ul>
+                        <li>Matin&eacute;e - Les voix aux marges de la psychiatrie: Mathieu Fr&egrave;rejouan; Magali Molini&eacute;; Ekaterina Od&eacute;.</li>
+                        <li>Apr&egrave;s-midi - Voix et visions dans les Am&eacute;riques: David Dupuis; Marion Aubr&eacute;e; Katerina Kerestetzi; Vincent Basset.</li>
+                      </ul>
+                      <h3>Vendredi 25 octobre</h3>
+                      <ul>
+                        <li>Matin&eacute;e - Voix et visions en Asie: Mary Picone; Florence Galmiche; B&eacute;n&eacute;dicte Brac de la Perri&egrave;re.</li>
+                        <li>Apr&egrave;s-midi - Substances hallucinog&egrave;nes, exp&eacute;riences cliniques et psych&eacute;d&eacute;liques: Elise Grandgeorges; Jelena Martinovic; Vincent Verroust; Vittorio Biancardi.</li>
+                      </ul>
+                      <h3>Samedi 26 octobre</h3>
+                      <ul>
+                        <li>Les voix en Occident: perspectives religieuses: Pierre-Antoine Fabre; Sylvain Piron; Claude Langlois.</li>
+                      </ul>
+                    </details>
                   </article>
                 </section>
 
@@ -1370,11 +1563,29 @@
                     <span class="archive-event__kicker">Previous Events</span>
                     <time datetime="2019-06-28">28 June 2019</time>
                     <h2>The Cultural Shaping of Consciousness</h2>
-                    <p>Partner event at Western Ontario University, London, Ontario, focused on how culture shapes conscious experience and its interpretation.</p>
+                    <p>Partner event at the 23rd Annual Meeting of the Association for the Scientific Study of Consciousness, Western Ontario University, London, Ontario, Canada.</p>
                     <ul class="archive-event__details">
+                      <li><strong>Organizer:</strong> Martin Fortier</li>
                       <li><strong>Place:</strong> Western Ontario University, London, Ontario</li>
-                      <li><strong>Format:</strong> Partner event</li>
+                      <li><strong>Format:</strong> Partner symposium at ASSC</li>
+                      <li><strong>Focus:</strong> Ordinary enculturation, non-ordinary techniques, and culture-dependent altered states</li>
                     </ul>
+                    <div class="archive-event__links">
+                      <a href="https://theassc.org" target="_blank" rel="noopener">ASSC website</a>
+                      <a href="/events/legacy/cultural-shaping-2019/">Complete legacy page snapshot</a>
+                    </div>
+                    <details class="archive-event__more">
+                      <summary>Legacy symposium description</summary>
+                      <p>The legacy page argued that consciousness studies had paid too little attention to cultural variables, despite evidence that susceptibility to visual illusions, sensory integration, binocular rivalry, and the cultivation of non-ordinary states vary across cultures. It contrasted monophasic cultures, reluctant to induce contents and modes beyond ordinary consciousness, with polyphasic cultures that explore a larger repertoire of conscious states.</p>
+                      <h3>Retained talk structure</h3>
+                      <ul>
+                        <li>Martin E. Fortier, "The cultural shaping of consciousness: A general introduction".</li>
+                        <li>Xiao-Fei Yang, "Cultural influences on the neural correlates of emotional experiences: Implications for consciousness?"</li>
+                        <li>Michael Lifshitz, "Learning to hear voices: The phenomenology and cognitive mechanisms of tulpamancy".</li>
+                        <li>Rebecca Seligman, "The biology and culture of spirit possession: An integrative model of dissociation and altered states of consciousness".</li>
+                      </ul>
+                      <p>The old page preserved three routes by which consciousness can be encultured: ordinary conscious processes shaped by ordinary practices; cultures using non-ordinary techniques such as hallucinogens, fasting, or sleep deprivation; and culture-dependent forms within techniques for altering consciousness such as trance. The talks connected neuroimaging of emotion, tulpamancy, spirit possession, dissociation, and altered states.</p>
+                    </details>
                   </article>
                 </section>
 
@@ -1383,11 +1594,15 @@
                     <span class="archive-event__kicker">Previous Events</span>
                     <time datetime="2018-12-04">4 December 2018</time>
                     <h2>Recherches en Neurosciences et Engagement Social</h2>
-                    <p>Partner event at the Italian Embassy in Paris, connecting neuroscience research with public and social engagement.</p>
+                    <p>Partner event at the Italian Embassy in Paris, retained from the old Events list as a program PDF for the Tiziana Zalla tribute.</p>
                     <ul class="archive-event__details">
-                      <li><strong>Place:</strong> Italian Embassy in Paris</li>
+                      <li><strong>Place:</strong> Italian Embassy, Paris</li>
                       <li><strong>Format:</strong> Partner event</li>
+                      <li><strong>Documentation:</strong> Legacy program PDF retained</li>
                     </ul>
+                    <div class="archive-event__links">
+                      <a href="/library/pdfs/programme-neurosciences-et-engagement-hommage-a-tiziana-zalla.pdf" target="_blank" rel="noopener">Program PDF</a>
+                    </div>
                   </article>
                 </section>
 
@@ -1396,24 +1611,87 @@
                     <span class="archive-event__kicker">Previous Events</span>
                     <time datetime="2018-10-26">26-27 October 2018</time>
                     <h2>ALIUS Workshop 2018</h2>
-                    <p>Methodological Issues in Consciousness Research at &Eacute;cole Normale Sup&eacute;rieure.</p>
+                    <p>Methodological Issues in Consciousness Research at &Eacute;cole Normale Sup&eacute;rieure. Organized by David Dupuis, Matthieu Koroma, and Rapha&euml;l Milli&egrave;re.</p>
                     <ul class="archive-event__details">
-                      <li><strong>Place:</strong> &Eacute;cole Normale Sup&eacute;rieure</li>
-                      <li><strong>Theme:</strong> Methods for consciousness research</li>
+                      <li><strong>Place:</strong> ENS, 45 rue d'Ulm, Paris</li>
+                      <li><strong>Theme:</strong> Neuroscientific, anthropological, and first-person/third-person methods</li>
+                      <li><strong>Sessions:</strong> Neuroscience, anthropology, and bridging approaches</li>
                     </ul>
+                    <figure class="archive-event__media">
+                      <img src="/media/images/alius-flyer.png" alt="ALIUS Workshop 2018 flyer" loading="lazy" />
+                    </figure>
+                    <div class="archive-event__links">
+                      <a href="/media/images/alius-flyer.png" target="_blank" rel="noopener">Flyer image</a>
+                      <a href="http://www.cocuco.org/" target="_blank" rel="noopener">COCUCO research group</a>
+                      <a href="/events/legacy/workshop-2018/">Complete legacy page snapshot</a>
+                    </div>
+                    <details class="archive-event__more">
+                      <summary>Legacy workshop description and program</summary>
+                      <p>The old page framed ALIUS as an interdisciplinary research group investigating non-ordinary and understudied conscious states, connecting anthropology, neuroscience, psychology, philosophy of mind, and psychiatry. The workshop asked which methodological approaches allow fruitful dialogue between disciplines in the investigation of consciousness.</p>
+                      <h3>Friday 26 October - Neuroscientific perspectives</h3>
+                      <ul>
+                        <li>Matthieu Koroma, "Constructed consciousness".</li>
+                        <li>Oussama Abdoun, "New theoretical frameworks for meditation research".</li>
+                        <li>Jean-Arthur Micoulaud-Franchi and Guillaume Dumas, "Psychiatry: a Crash Test for Integrative Neuroscience".</li>
+                      </ul>
+                      <h3>Friday 26 October - Anthropological perspectives</h3>
+                      <ul>
+                        <li>Arnaud Halloy, "Ethnographic immersion: an added value in the study of the diversity of states of consciousness?"</li>
+                        <li>David Dupuis, "Ethnographizing the hallucinated consciousness".</li>
+                        <li>Samuel Veissi&egrave;re, "Thinking through other minds: a variational approach to consciousness, cognition, and cultural affordances".</li>
+                        <li>Maddalena Canna, "How to integrate anthropology and neuroscience in a natural context?"</li>
+                      </ul>
+                      <h3>Saturday 27 October - Bridging first-person and third-person approaches</h3>
+                      <ul>
+                        <li>Rapha&euml;l Milli&egrave;re, "Multidimensional approaches to consciousness".</li>
+                        <li>Chris Timmermann, "Novel approaches in the bridging of first person reports and neuronal activity in transitions of conscious states".</li>
+                        <li>Enzo Tagliazucchi, "From molecules to consciousness: towards an integrative neuroscience of psychedelics".</li>
+                      </ul>
+                    </details>
                   </article>
                 </section>
 
                 <section id="event-workshop-2017" class="event-section past-event-section">
                   <article class="archive-event archive-event--wide">
                     <span class="archive-event__kicker">Previous Events</span>
-                    <time datetime="2017-12-08">8 December 2017</time>
+                    <time datetime="2017-12-08">8-9 December 2017</time>
                     <h2>ALIUS Workshop 2017</h2>
-                    <p>Exploring the diversity of consciousness at &Eacute;cole Normale Sup&eacute;rieure.</p>
+                    <p>Exploring the diversity of consciousness at &Eacute;cole Normale Sup&eacute;rieure. Organized by Martin Fortier, Maddalena Canna, David Dupuis, and Matthieu Koroma.</p>
                     <ul class="archive-event__details">
-                      <li><strong>Place:</strong> &Eacute;cole Normale Sup&eacute;rieure</li>
-                      <li><strong>Theme:</strong> Diversity of conscious states</li>
+                      <li><strong>Place:</strong> ENS, 46 rue d'Ulm and 24 rue Lhomond, Paris</li>
+                      <li><strong>Registration:</strong> No registration required</li>
+                      <li><strong>Legacy livestream:</strong> facebook.com/aliusresearch</li>
                     </ul>
+                    <figure class="archive-event__media">
+                      <img src="/uploads/9/1/6/0/91600416/editor/descartes.png" alt="ALIUS Workshop 2017 legacy illustration" loading="lazy" />
+                    </figure>
+                    <div class="archive-event__links">
+                      <a href="/library/pdfs/alius-workshop-2017-flyer.pdf" target="_blank" rel="noopener">Workshop flyer PDF</a>
+                      <a href="http://www.facebook.com/aliusresearch" target="_blank" rel="noopener">Legacy Facebook livestream page</a>
+                      <a href="/events/legacy/workshop-2017/">Complete legacy page snapshot</a>
+                    </div>
+                    <details class="archive-event__more">
+                      <summary>Legacy two-day program</summary>
+                      <h3>Friday, December 8</h3>
+                      <ul>
+                        <li>Stephen Whitmarsh, "Worlds of difference: Attempts to study subjective experiences through art and science".</li>
+                        <li>Maddalena Canna, "Interactional models of Altered States of Consciousness and the role of mental practices in inducing dissociative states".</li>
+                        <li>Alexandre Billon, "The sense of existence".</li>
+                        <li>Mathieu Frerejouan, "Making sense of hallucinations: The principle of charity and its limits".</li>
+                        <li>Keynote: J&eacute;r&ocirc;me Dokic, "Are hallucinations metacognitive errors".</li>
+                      </ul>
+                      <h3>Saturday, December 9</h3>
+                      <ul>
+                        <li>Matthieu Koroma, "Dreams and fiction: Neuroscientific and philosophical views".</li>
+                        <li>Michiel van Elk, "The power of suggestibility using expectations and placebo cognitive enhancement devices to manipulate subjective experience".</li>
+                        <li>David Dupuis, "The whispers of the selva".</li>
+                        <li>Keynote: Renaud Jardri, "Advances in fMRI capture of hallucinations".</li>
+                        <li>Martin Fortier, "How the sense of reality and religious systems are uniquely shaped by serotoninergic and anticholinergic hallucinogens".</li>
+                        <li>Christopher Timmermann, "EEG correlates and phenomenology of the DMT state".</li>
+                        <li>Guillaume Dumas, "Normative modelling and patients stratifications".</li>
+                      </ul>
+                      <p>The legacy page also retained a participant list with affiliations from Universit&eacute; de Lille, EHESS, Institut Jean Nicod, Institut Pasteur, Durham University, ENS, Imperial College London, University of Amsterdam, and related laboratories.</p>
+                    </details>
                   </article>
                 </section>
 
@@ -1422,11 +1700,33 @@
                     <span class="archive-event__kicker">Previous Events</span>
                     <time datetime="2017-10-03">3 October 2017</time>
                     <h2>Anthropologie de l'art visuel des hallucinations</h2>
-                    <p>Event at Coll&egrave;ge de France on visual art, anthropology, and hallucination.</p>
+                    <p>Images Visionnaires: a study day at Coll&egrave;ge de France on visual hallucinations, visionary art, anthropology, and neuropharmacology.</p>
                     <ul class="archive-event__details">
-                      <li><strong>Place:</strong> Coll&egrave;ge de France</li>
-                      <li><strong>Theme:</strong> Visual hallucinations and anthropology of art</li>
+                      <li><strong>Place:</strong> Coll&egrave;ge de France, Salle 2, Paris</li>
+                      <li><strong>Organizers:</strong> David Dupuis and Maddalena Canna</li>
+                      <li><strong>Theme:</strong> Visionary images, hallucination, ritual, and art</li>
                     </ul>
+                    <figure class="archive-event__media">
+                      <img src="/media/images/je-visionnaire-2.png" alt="Images Visionnaires event poster" loading="lazy" />
+                    </figure>
+                    <div class="archive-event__links">
+                      <a href="/library/pdfs/flyer-je-images-visionnaires-cdf-2.pdf" target="_blank" rel="noopener">Flyer PDF</a>
+                      <a href="/library/pdfs/je-images-visionnaires-programme-complet-cdf-2.pdf" target="_blank" rel="noopener">Full program PDF</a>
+                      <a href="/events/legacy/images-visionnaires-2017/">Complete legacy page snapshot</a>
+                    </div>
+                    <details class="archive-event__more">
+                      <summary>Legacy program</summary>
+                      <ul>
+                        <li>Claire Vidal, "Voir Guanyin au Putuoshan".</li>
+                        <li>Andrea-Luz Gutierrez Choquevilca, "Chamanismes en s&eacute;rie".</li>
+                        <li>Charles St&eacute;panoff, "Les r&eacute;gimes d'imagination dans l'&eacute;volution biosociale humaine".</li>
+                        <li>Esteban Arias, "L'&eacute;criture des invisibles".</li>
+                        <li>Martin Fortier, "Anthropologie et neuropharmacologie des visions".</li>
+                        <li>Maddalena Canna, "L'art hallucinatoire comme dispositif de recognition de l'exp&eacute;rience".</li>
+                        <li>David Dupuis, "Apprendre &agrave; voir l'invisible".</li>
+                        <li>Round tables with Samir Boumedienne, Jean-Pierre Changeux, Patrick Deshayes, and Paolo Fortis.</li>
+                      </ul>
+                    </details>
                   </article>
                 </section>
 
@@ -1435,11 +1735,14 @@
                     <span class="archive-event__kicker">Previous Events</span>
                     <time datetime="2017-05-29">29-31 May 2017</time>
                     <h2>The Sense of Self</h2>
-                    <p>Partner event at the University of Oxford on selfhood, conscious experience, and altered states.</p>
+                    <p>Partner event at the University of Oxford on selfhood, conscious experience, and altered states, retained with the external legacy event site.</p>
                     <ul class="archive-event__details">
                       <li><strong>Place:</strong> University of Oxford</li>
                       <li><strong>Format:</strong> Partner event</li>
                     </ul>
+                    <div class="archive-event__links">
+                      <a href="https://senseofselfoxford.wordpress.com/" target="_blank" rel="noopener">External event site</a>
+                    </div>
                   </article>
                 </section>
 
@@ -1448,26 +1751,36 @@
                     <span class="archive-event__kicker">Previous Events</span>
                     <time datetime="2017-04-19">19 April 2017</time>
                     <h2>Bicycle Day Workshop</h2>
-                    <p>Neuroscientific and socio-cultural approaches to hallucinogenic experiences at Stanford University.</p>
+                    <p>Neuroscientific and socio-cultural approaches to hallucinogenic experiences at Stanford University, organized by Martin Fortier.</p>
                     <ul class="archive-event__details">
                       <li><strong>Place:</strong> Stanford University</li>
-                      <li><strong>Theme:</strong> Hallucinogenic experience across neuroscience and culture</li>
+                      <li><strong>Rooms:</strong> Building 260, Room 252; Building 50, Room 51A</li>
+                      <li><strong>Registration:</strong> Free, no registration required</li>
+                      <li><strong>Contact retained from legacy page:</strong> mfortier@stanford.edu</li>
                     </ul>
+                    <figure class="archive-event__media">
+                      <img src="/media/images/dsc-0244-orig.jpg" alt="Bicycle Day Workshop event photo" loading="lazy" />
+                    </figure>
+                    <div class="archive-event__links">
+                      <a href="/library/pdfs/workshop-flyer.pdf" target="_blank" rel="noopener">Event flyer PDF</a>
+                      <a href="https://www.facebook.com/events/1863358317023776/" target="_blank" rel="noopener">Facebook event</a>
+                      <a href="https://campus-map.stanford.edu/" target="_blank" rel="noopener">Stanford campus map</a>
+                      <a href="/events/legacy/bicycle-day-2017/">Complete legacy page snapshot</a>
+                    </div>
+                    <details class="archive-event__more">
+                      <summary>Legacy schedule</summary>
+                      <ul>
+                        <li>14:00 - Michiel van Elk, "The deselfing brain: Reduced default mode network activity in psychedelic experience and experience of awe".</li>
+                        <li>14:35 - Leor Roseman, "Psilocybin-assisted therapy: Neural changes and the relationship between the acute peak experience and clinical outcomes".</li>
+                        <li>15:30 - Coffee break.</li>
+                        <li>16:00 - Christopher Timmermann, "Studying dynamic transitions of consciousness using DMT".</li>
+                        <li>16:50 - Martin Fortier, "Hallucinogenic experiences and the evolution of religious representations".</li>
+                        <li>17:40 - Olivia Marcus, "Integrating ayahuasca experiences into western paradigms of mental health".</li>
+                      </ul>
+                    </details>
                   </article>
                 </section>
 
-                <section id="event-symposium-berlin" class="event-section past-event-section">
-                  <article class="archive-event archive-event--wide">
-                    <span class="archive-event__kicker">Previous Events</span>
-                    <span>Planned / archive listing</span>
-                    <h2>ALIUS Symposium on Non-Ordinary States of Consciousness</h2>
-                    <p>Berlin symposium listing retained from the legacy Events area as part of the consolidated ALIUS event history.</p>
-                    <ul class="archive-event__details">
-                      <li><strong>Place:</strong> Berlin</li>
-                      <li><strong>Theme:</strong> Non-ordinary states of consciousness</li>
-                    </ul>
-                  </article>
-                </section>
               </main>
             </div>
           </div>

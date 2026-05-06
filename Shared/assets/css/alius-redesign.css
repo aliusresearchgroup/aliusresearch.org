@@ -477,10 +477,13 @@ body.wsite-page-about #wsite-content .about-essay a {
 
 body.wsite-page-events .event-info-card {
   display: grid;
-  grid-template-columns: 132px minmax(0, 1fr);
-  gap: 18px;
-  margin-top: 26px;
-  padding: 16px;
+  grid-template-columns: 156px minmax(0, 1fr);
+  gap: 0 22px;
+  width: 100%;
+  max-width: min(900px, 100%);
+  margin: 28px auto 0;
+  padding: 18px;
+  align-items: center;
   border: 1px solid var(--alius-line);
   border-left: 3px solid var(--alius-leaf);
   border-radius: 8px;
@@ -492,14 +495,14 @@ body.wsite-page-events .event-info-card__mark {
   align-items: center;
   justify-content: center;
   grid-row: span 2;
-  min-height: 92px;
+  min-height: 126px;
   padding: 8px;
   border-right: 1px solid rgba(66, 81, 76, 0.12);
 }
 
 body.wsite-page-events .event-info-card__mark img {
   display: block;
-  max-width: 112px;
+  max-width: 126px;
   height: auto;
 }
 
@@ -528,76 +531,193 @@ body.wsite-page-events .event-info-list dd {
 }
 
 body.wsite-page-events .event-info-card p {
-  margin: 2px 0 0 !important;
-  max-width: var(--alius-prose-measure);
+  margin: 10px 0 0 !important;
+  max-width: none !important;
   font-size: 15.5px !important;
+  text-align: left !important;
 }
 
 body.wsite-page-events .event-day-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 18px;
   align-items: start;
-  margin-top: 24px;
+  max-width: min(1000px, 100%);
+  margin: 28px auto 0;
 }
 
 body.wsite-page-events .event-day-card {
   min-width: 0;
-  padding: 16px;
+  padding: 18px;
   border: 1px solid var(--alius-line);
   border-radius: 8px;
   background: #fff;
 }
 
 body.wsite-page-events .event-day-card h3 {
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   border-bottom: 1px solid rgba(66, 81, 76, 0.14);
+  text-align: center !important;
 }
 
 body.wsite-page-events .event-day-card__items {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 12px;
+  gap: 12px;
+  align-items: stretch;
+  margin-top: 14px;
 }
 
 body.wsite-page-events .event-program-item {
+  display: flex;
   min-width: 0;
+}
+
+body.wsite-page-events .event-day-card__items > .event-program-item:only-child,
+body.wsite-page-events .event-day-card__items > .event-program-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: min(560px, 100%);
 }
 
 body.wsite-page-events .event-program-item .event-speaker-card {
   grid-template-columns: 52px minmax(0, 1fr);
+  height: 100%;
   min-height: 82px;
   padding: 12px;
 }
 
+body.wsite-page-events .event-program-item .event-speaker-card picture,
 body.wsite-page-events .event-program-item .event-speaker-card img {
   width: 52px;
   height: 52px;
 }
 
+body.wsite-page-events .event-program-item .event-speaker-card picture img {
+  width: 100%;
+  height: 100%;
+}
+
+body.wsite-page-events .past-event-section {
+  max-width: min(900px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 body.wsite-page-events .archive-event--wide {
-  max-width: min(860px, 100%);
+  width: 100%;
+  max-width: min(900px, 100%);
   margin: 0 auto;
 }
 
 body.wsite-page-events .archive-event__kicker {
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  text-align: center;
+}
+
+body.wsite-page-events .archive-event--wide time,
+body.wsite-page-events .archive-event--wide > span,
+body.wsite-page-events .archive-event--wide h2 {
+  text-align: center !important;
+}
+
+body.wsite-page-events .archive-event--wide p {
+  max-width: none !important;
+  text-align: left !important;
 }
 
 body.wsite-page-events .archive-event__details {
   display: grid;
-  gap: 5px;
-  margin: 12px 0 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+  margin: 14px 0 0;
   padding: 0;
   list-style: none;
+  max-width: none !important;
 }
 
 body.wsite-page-events .archive-event__details li {
   font-family: Raleway, sans-serif !important;
   font-size: 13.5px !important;
   line-height: 1.45 !important;
+}
+
+body.wsite-page-events .archive-event__media {
+  margin: 18px auto 0;
+  max-width: min(720px, 100%);
+}
+
+body.wsite-page-events .archive-event__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--alius-line);
+  border-radius: 8px;
+  background: #f6f8f5;
+}
+
+body.wsite-page-events .archive-event__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 0;
+}
+
+body.wsite-page-events .archive-event__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid var(--alius-line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--alius-green);
+  font-family: Raleway, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+body.wsite-page-events .archive-event__more {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--alius-line);
+}
+
+body.wsite-page-events .archive-event__more summary {
+  cursor: pointer;
+  color: var(--alius-green);
+  font-family: Raleway, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+body.wsite-page-events .archive-event__more :where(h3, h4) {
+  margin: 16px 0 6px;
+  color: var(--alius-ink);
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: left !important;
+}
+
+body.wsite-page-events .archive-event__more :where(ul, ol) {
+  display: grid;
+  gap: 7px;
+  margin: 10px 0 0;
+  padding-left: 18px;
+  max-width: none !important;
+}
+
+body.wsite-page-events .archive-event__more li,
+body.wsite-page-events .archive-event__more p {
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
 }
 
 body.wsite-page-membership .membership-body-section {
@@ -764,6 +884,7 @@ body.wsite-page-team .team-card:focus-visible {
   body.wsite-page-events .event-info-list,
   body.wsite-page-events .event-day-grid,
   body.wsite-page-events .event-day-card__items,
+  body.wsite-page-events .archive-event__details,
   body.wsite-page-membership .membership-role-grid,
   body.wsite-page-membership .membership-columns {
     grid-template-columns: 1fr;
@@ -771,7 +892,7 @@ body.wsite-page-team .team-card:focus-visible {
 
   body.wsite-page-events .event-info-card__mark {
     grid-row: auto;
-    justify-content: flex-start;
+    justify-content: center;
     border-right: 0;
     border-bottom: 1px solid rgba(66, 81, 76, 0.12);
   }
