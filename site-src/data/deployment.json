@@ -3,7 +3,12 @@
     "owner": "aliusresearchgroup",
     "name": "aliusresearch.org",
     "remote": "https://github.com/aliusresearchgroup/aliusresearch.org.git",
-    "default_branch_from_repository_settings": "redesign-v2",
+    "default_branch_from_repository_settings": "current-deployment",
+    "current_deployment_branch": "current-deployment",
+    "previous_deployment_branch_names": [
+      "redesign-v2",
+      "optimized-v1"
+    ],
     "default_branch_verified_from_user_screenshot_on": "2026-05-06"
   },
   "public_site": {
@@ -11,12 +16,14 @@
     "cname_file": "docs/CNAME",
     "published_directory": "docs",
     "github_pages_environment": "github-pages",
+    "github_pages_source_branch": "current-deployment",
     "public_metadata_file": "docs/deployment.json"
   },
   "deployment_notes": [
-    "Treat redesign-v2 as the current website/default branch unless GitHub repository settings are changed.",
+    "Treat current-deployment as the current website/default branch unless GitHub repository settings are changed.",
+    "The deployment branch was renamed to current-deployment on 2026-05-06.",
     "The public site is static GitHub Pages content served from the docs directory with docs/CNAME set to aliusresearch.org.",
-    "On 2026-05-06, unauthenticated GitHub API deployment history still showed recent GitHub Pages deployments from optimized-v1; verify the GitHub Pages source settings before forcing branch changes."
+    "Older GitHub Pages deployment history may mention optimized-v1 or redesign-v2 from before the branch rename; do not assume those are still canonical without checking repository settings."
   ],
   "last_updated": "2026-05-06"
 }
