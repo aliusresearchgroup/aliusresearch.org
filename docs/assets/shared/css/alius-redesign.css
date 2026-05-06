@@ -637,8 +637,8 @@ body.wsite-page-team .team-card:focus-visible {
 
 @media (max-width: 1180px) {
   .alius-anchor-nav {
-    position: sticky;
-    top: 52px;
+    position: static;
+    top: auto;
     right: 0;
     bottom: auto;
     left: 0;
