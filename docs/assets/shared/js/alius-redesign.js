@@ -97,6 +97,7 @@
     var path = currentPath();
     if (path === '/') return homeAnchors();
     if (path === '/team/') return teamAnchors();
+    if (path === '/journal-club/' || path === '/journal-club/index.html/') return [];
     var legacy = harvestLegacySectionNav();
     if (legacy.length) return legacy;
     if (PRESETS[path]) return PRESETS[path];
@@ -170,7 +171,9 @@
     function talkMatches(talk, showAll) {
       if (showAll) return true;
       var tags = (talk.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
-      return tags.some(function (tag) { return active.has(tag); });
+      var selected = [];
+      active.forEach(function (tag) { selected.push(tag); });
+      return selected.every(function (tag) { return tags.indexOf(tag) !== -1; });
     }
 
     function syncAnchorNav(showAll) {

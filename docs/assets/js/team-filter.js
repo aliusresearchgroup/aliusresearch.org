@@ -2,8 +2,8 @@
  *
  * Filter pills above the grid let the user narrow the list by topic
  * (e.g. "Neuroscience", "Psychedelics", "VR"). Multiple pills can be
- * active at once — a member matches if ANY active filter is in their
- * `data-tags` attribute (OR logic).
+ * active at once — a member matches only if EVERY active filter is in
+ * their `data-tags` attribute (AND/intersection logic).
  *
  * The "All" pill clears every filter and shows everyone.
  *
@@ -29,10 +29,14 @@
       document.querySelectorAll('.team-filter').forEach(function (b) {
         b.classList.toggle('is-active', active.has(b.getAttribute('data-filter')));
       });
+      var selected = [];
+      active.forEach(function (tag) { selected.push(tag); });
       cards.forEach(function (c) {
         var tags = (c.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
-        var match = false;
-        for (var t = 0; t < tags.length; t++) if (active.has(tags[t])) { match = true; break; }
+        var match = true;
+        for (var t = 0; t < selected.length; t++) {
+          if (tags.indexOf(selected[t]) === -1) { match = false; break; }
+        }
         c.classList.toggle('is-filtered-out', !match);
       });
     }
