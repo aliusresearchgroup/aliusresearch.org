@@ -58,6 +58,7 @@
               <li class="wsite-menu-item-wrap"><a href="/" class="wsite-menu-item">Home</a></li>
               <li class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
               <li class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
+              <li class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
               <li id="active" class="wsite-menu-item-wrap"><a href="/journal-club/" class="wsite-menu-item">Journal Clubs</a></li>
               <li class="wsite-menu-item-wrap"><a href="/events/" class="wsite-menu-item">Events</a></li>
               <li class="wsite-menu-item-wrap"><a href="/membership/" class="wsite-menu-item">Membership</a></li>
@@ -68,17 +69,19 @@
             <div id="wsite-content" class="wsite-elements wsite-not-footer">
           <nav class="section-nav" aria-label="Journal Club sections">
             <a href="#journal-overview">Overview</a>
-            <a href="#journal-koroma">Koroma</a>
-            <a href="#journal-suseelan">Suseelan</a>
-            <a href="#journal-aicher">Aicher</a>
-            <a href="#journal-doss">Doss</a>
-            <a href="#journal-lewis-healy">Lewis-Healy</a>
-            <a href="#journal-popov">Popov</a>
-            <a href="#journal-buchborn">Buchborn</a>
-            <a href="#journal-berkovich-ohana">Berkovich-Ohana</a>
-            <a href="#journal-serino">Serino</a>
-            <a href="#journal-balaet">Balaet</a>
-            <a href="#journal-lifshitz">Lifshitz</a>
+            <a href="#journal-koroma">Sleep &amp; cardiac response | Matthieu Koroma</a>
+            <a href="#journal-suseelan">Psychedelic difficulties | Shayam Suseelan</a>
+            <a href="#journal-aicher">Psychedelics &amp; therapy | Helena Aicher</a>
+            <a href="#journal-doss">Psychedelic methods | Manoj Doss</a>
+            <a href="#journal-lewis-healy">DMT dynamics | Evan Lewis-Healy</a>
+            <a href="#journal-popov">Alpha waves | Tzvetan Popov</a>
+            <a href="#journal-buchborn">Psychedelic pharmacology | Tobias Buchborn</a>
+            <a href="#journal-berkovich-ohana">Meditation &amp; self | Aviva Berkovich-Ohana</a>
+            <a href="#journal-serino">Peripersonal space | Andrea Serino</a>
+            <a href="#journal-balaet">Naturalistic psychedelics | Maria Balaet</a>
+            <a href="#journal-lifshitz">Tulpamancy &amp; self | Michael Lifshitz</a>
+            <a href="#journal-fort-schmidt">ASC classification | Larry Fort &amp; Timo Schmidt</a>
+            <a href="#journal-tagliazucchi">Studying psychedelics | Enzo Tagliazucchi</a>
           </nav>
 
           <style>
@@ -164,6 +167,49 @@
               margin-top: 18px;
             }
 
+            body.wsite-page-journal-club .journal-filters {
+              max-width: 920px;
+              margin: 0 0 18px;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 7px;
+              font-family: Raleway, Arial, sans-serif;
+            }
+
+            body.wsite-page-journal-club .journal-filter {
+              display: inline-flex;
+              align-items: center;
+              gap: 6px;
+              padding: 7px 12px;
+              border: 1px solid rgba(23, 76, 46, 0.2);
+              border-radius: 999px;
+              background: #fff;
+              color: var(--journal-ink);
+              font: 600 12.5px/1.35 Raleway, Arial, sans-serif;
+              letter-spacing: 0;
+              cursor: pointer;
+              transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+            }
+
+            body.wsite-page-journal-club .journal-filter:hover,
+            body.wsite-page-journal-club .journal-filter:focus-visible {
+              border-color: rgba(23, 76, 46, 0.46);
+              background: rgba(61, 146, 55, 0.08);
+              outline: none;
+            }
+
+            body.wsite-page-journal-club .journal-filter.is-active {
+              border-color: var(--journal-green);
+              background: var(--journal-green);
+              color: #fff;
+            }
+
+            body.wsite-page-journal-club .journal-filter__count {
+              font-size: 11px;
+              opacity: 0.72;
+              font-variant-numeric: tabular-nums;
+            }
+
             body.wsite-page-journal-club .journal-list {
               display: grid;
               gap: 0;
@@ -178,6 +224,10 @@
               scroll-margin-top: 110px;
             }
 
+            body.wsite-page-journal-club .journal-talk.is-filtered-out {
+              display: none;
+            }
+
             body.wsite-page-journal-club .journal-talk__header {
               grid-column: 1 / -1;
               max-width: 920px;
@@ -187,6 +237,22 @@
               margin-top: 8px;
               color: var(--journal-muted);
               font: 500 14px/1.45 Raleway, Arial, sans-serif;
+            }
+
+            body.wsite-page-journal-club .journal-tags {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 6px;
+              margin-top: 11px;
+            }
+
+            body.wsite-page-journal-club .journal-tags span {
+              padding: 4px 8px;
+              border: 1px solid rgba(47, 127, 123, 0.2);
+              border-radius: 999px;
+              color: var(--journal-teal);
+              background: rgba(47, 127, 123, 0.06);
+              font: 600 11.5px/1.2 Raleway, Arial, sans-serif;
             }
 
             body.wsite-page-journal-club .journal-video-wrap {
@@ -294,11 +360,34 @@
               </p>
             </section>
 
+            <div class="journal-filters" role="group" aria-label="Filter Journal Club videos by topic">
+              <button type="button" class="journal-filter journal-filter--all is-active" data-filter="*">All <span class="journal-filter__count">13</span></button>
+              <button type="button" class="journal-filter" data-filter="psychedelics">Psychedelics <span class="journal-filter__count">8</span></button>
+              <button type="button" class="journal-filter" data-filter="neuroscience">Neuroscience <span class="journal-filter__count">9</span></button>
+              <button type="button" class="journal-filter" data-filter="methods">Methods <span class="journal-filter__count">6</span></button>
+              <button type="button" class="journal-filter" data-filter="phenomenology">Phenomenology <span class="journal-filter__count">5</span></button>
+              <button type="button" class="journal-filter" data-filter="therapy">Therapy <span class="journal-filter__count">2</span></button>
+              <button type="button" class="journal-filter" data-filter="mental-health">Mental health <span class="journal-filter__count">1</span></button>
+              <button type="button" class="journal-filter" data-filter="sleep">Sleep <span class="journal-filter__count">1</span></button>
+              <button type="button" class="journal-filter" data-filter="self">Self <span class="journal-filter__count">3</span></button>
+              <button type="button" class="journal-filter" data-filter="body">Body <span class="journal-filter__count">2</span></button>
+              <button type="button" class="journal-filter" data-filter="pharmacology">Pharmacology <span class="journal-filter__count">2</span></button>
+              <button type="button" class="journal-filter" data-filter="meditation">Meditation <span class="journal-filter__count">2</span></button>
+              <button type="button" class="journal-filter" data-filter="computation">Computation <span class="journal-filter__count">2</span></button>
+              <button type="button" class="journal-filter" data-filter="cognition">Cognition <span class="journal-filter__count">2</span></button>
+              <button type="button" class="journal-filter" data-filter="dmt">DMT <span class="journal-filter__count">1</span></button>
+              <button type="button" class="journal-filter" data-filter="policy">Policy <span class="journal-filter__count">1</span></button>
+              <button type="button" class="journal-filter" data-filter="naturalistic">Naturalistic <span class="journal-filter__count">1</span></button>
+              <button type="button" class="journal-filter" data-filter="anthropology">Anthropology <span class="journal-filter__count">1</span></button>
+              <button type="button" class="journal-filter" data-filter="classification">Classification <span class="journal-filter__count">1</span></button>
+            </div>
+
             <div class="journal-list">
-              <article id="journal-koroma" class="journal-talk">
+              <article id="journal-koroma" class="journal-talk" data-tags="sleep body neuroscience">
                 <header class="journal-talk__header">
                   <h2>Cardiac responses to sounds: insights on the embodiment of sleep functions</h2>
                   <p class="journal-speaker">Matthieu Koroma</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Sleep</span><span>Body</span><span>Neuroscience</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -332,10 +421,11 @@
                 </div>
               </article>
 
-              <article id="journal-suseelan" class="journal-talk">
+              <article id="journal-suseelan" class="journal-talk" data-tags="psychedelics therapy mental-health phenomenology">
                 <header class="journal-talk__header">
                   <h2>Extended difficulties following the use of psychedelic drugs</h2>
                   <p class="journal-speaker">Shayam Suseelan</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Psychedelics</span><span>Therapy</span><span>Mental health</span><span>Phenomenology</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -375,10 +465,11 @@
                 </div>
               </article>
 
-              <article id="journal-aicher" class="journal-talk">
+              <article id="journal-aicher" class="journal-talk" data-tags="psychedelics therapy policy">
                 <header class="journal-talk__header">
                   <h2>Psychedelic-assisted therapy: from research to policy implementation</h2>
                   <p class="journal-speaker">Helena Aicher</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Psychedelics</span><span>Therapy</span><span>Policy</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -414,10 +505,11 @@
                 </div>
               </article>
 
-              <article id="journal-doss" class="journal-talk">
+              <article id="journal-doss" class="journal-talk" data-tags="psychedelics methods cognition pharmacology">
                 <header class="journal-talk__header">
                   <h2>Cinco sins of psychedelic research</h2>
                   <p class="journal-speaker">Manoj Doss</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Psychedelics</span><span>Methods</span><span>Cognition</span><span>Pharmacology</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -453,10 +545,11 @@
                 </div>
               </article>
 
-              <article id="journal-lewis-healy" class="journal-talk">
+              <article id="journal-lewis-healy" class="journal-talk" data-tags="psychedelics dmt neuroscience phenomenology methods">
                 <header class="journal-talk__header">
                   <h2>Mapping neural dynamics to experience dynamics in a dose-response study of DMT</h2>
                   <p class="journal-speaker">Evan Lewis-Healy</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Psychedelics</span><span>DMT</span><span>Neuroscience</span><span>Phenomenology</span><span>Methods</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -491,10 +584,11 @@
                 </div>
               </article>
 
-              <article id="journal-popov" class="journal-talk">
+              <article id="journal-popov" class="journal-talk" data-tags="neuroscience methods cognition">
                 <header class="journal-talk__header">
                   <h2>Waves beyond waveforms: (mis)interpretation of alpha waves in cognitive neuroscience</h2>
                   <p class="journal-speaker">Tzvetan Popov</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Neuroscience</span><span>Methods</span><span>Cognition</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -529,10 +623,11 @@
                 </div>
               </article>
 
-              <article id="journal-buchborn" class="journal-talk">
+              <article id="journal-buchborn" class="journal-talk" data-tags="psychedelics pharmacology neuroscience">
                 <header class="journal-talk__header">
                   <h2>What pharmacological principles teach us about psychedelic drug action</h2>
                   <p class="journal-speaker">Tobias Buchborn</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Psychedelics</span><span>Pharmacology</span><span>Neuroscience</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -567,10 +662,11 @@
                 </div>
               </article>
 
-              <article id="journal-berkovich-ohana" class="journal-talk">
+              <article id="journal-berkovich-ohana" class="journal-talk" data-tags="meditation psychedelics self neuroscience phenomenology">
                 <header class="journal-talk__header">
                   <h2>Meditation, psychedelics, and the self: a neurophenomenological approach</h2>
                   <p class="journal-speaker">Aviva Berkovich-Ohana</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Meditation</span><span>Psychedelics</span><span>Self</span><span>Neuroscience</span><span>Phenomenology</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -606,10 +702,11 @@
                 </div>
               </article>
 
-              <article id="journal-serino" class="journal-talk">
+              <article id="journal-serino" class="journal-talk" data-tags="body self neuroscience computation">
                 <header class="journal-talk__header">
                   <h2>Peripersonal space as an interface for self-environment interactions</h2>
                   <p class="journal-speaker">Andrea Serino</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Body</span><span>Self</span><span>Neuroscience</span><span>Computation</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -644,10 +741,11 @@
                 </div>
               </article>
 
-              <article id="journal-balaet" class="journal-talk">
+              <article id="journal-balaet" class="journal-talk" data-tags="psychedelics naturalistic methods neuroscience">
                 <header class="journal-talk__header">
                   <h2>Making sense of psychedelics action on brain and behavior in naturalistic settings</h2>
                   <p class="journal-speaker">Maria Balaet</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Psychedelics</span><span>Naturalistic</span><span>Methods</span><span>Neuroscience</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -682,10 +780,11 @@
                 </div>
               </article>
 
-              <article id="journal-lifshitz" class="journal-talk">
+              <article id="journal-lifshitz" class="journal-talk" data-tags="self anthropology phenomenology meditation">
                 <header class="journal-talk__header">
                   <h2>Making invisible friends: tulpamancy, prayer, and the fluidity of self</h2>
                   <p class="journal-speaker">Michael Lifshitz</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Self</span><span>Anthropology</span><span>Phenomenology</span><span>Meditation</span></p>
                 </header>
                 <div class="journal-video-wrap">
                   <div class="journal-video">
@@ -715,6 +814,94 @@
                       Michael Lifshitz is an assistant professor in Social and Transcultural Psychiatry at McGill University
                       and the Jewish General Hospital. His work combines phenomenology, neuroscience, and ethnography to
                       study meditation, hypnosis, placebo effects, prayer, psychedelics, and agency.
+                    </p>
+                  </section>
+                </div>
+              </article>
+
+              <article id="journal-fort-schmidt" class="journal-talk" data-tags="classification phenomenology methods neuroscience">
+                <header class="journal-talk__header">
+                  <h2>Classification schemes of altered states of consciousness</h2>
+                  <p class="journal-speaker">Larry Fort and Timo Torsten Schmidt</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Classification</span><span>Phenomenology</span><span>Methods</span><span>Neuroscience</span></p>
+                </header>
+                <div class="journal-video-wrap">
+                  <div class="journal-video">
+                    <iframe
+                      src="https://www.youtube.com/embed/QfJOkY4YJhs"
+                      title="Classification schemes of altered states of consciousness - Larry Fort and Timo Torsten Schmidt"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <a class="journal-youtube-link" href="https://www.youtube.com/watch?v=QfJOkY4YJhs">Open on YouTube</a>
+                </div>
+                <div class="journal-copy">
+                  <section class="journal-copy-block" aria-labelledby="abstract-fort-schmidt">
+                    <h3 id="abstract-fort-schmidt">Abstract</h3>
+                    <p>
+                      This review surveys classification schemes for altered states of consciousness, grouping them by
+                      whether they organize ASCs through subjective experience, induction method, or neurophysiological
+                      mechanism. It compares these approaches as tools for linking ASC induction, phenomenology, and neural
+                      correlates, and proposes clusters of state-based concepts for future basic and clinical research.
+                    </p>
+                    <p>
+                      Read the paper:
+                      <a href="https://doi.org/10.31234/osf.io/pmuqt" target="_blank" rel="noopener">https://doi.org/10.31234/osf.io/pmuqt</a>
+                    </p>
+                  </section>
+                  <section class="journal-copy-block" aria-labelledby="bio-fort-schmidt">
+                    <h3 id="bio-fort-schmidt">Speaker biography</h3>
+                    <p>
+                      Larry Fort is a PhD student at the University of Li&egrave;ge, where he works in the Physiology of
+                      Cognition lab as part of the GIGA-Cyclotron Research Center. His research examines the
+                      phenomenological, neurobiological, and physiological underpinnings of altered states of consciousness.
+                    </p>
+                    <p>
+                      Timo Torsten Schmidt is a postdoctoral researcher at the Freie Universit&auml;t Berlin. His work uses
+                      computational cognitive neuroscience and functional neuroimaging to study consciousness content,
+                      mental imagery, and altered states, including meta-analytic work with the Altered States Database.
+                    </p>
+                  </section>
+                </div>
+              </article>
+
+              <article id="journal-tagliazucchi" class="journal-talk" data-tags="psychedelics methods neuroscience computation">
+                <header class="journal-talk__header">
+                  <h2>How should we study the effects of psychedelic drugs?</h2>
+                  <p class="journal-speaker">Enzo Tagliazucchi</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Psychedelics</span><span>Methods</span><span>Neuroscience</span><span>Computation</span></p>
+                </header>
+                <div class="journal-video-wrap">
+                  <div class="journal-video">
+                    <iframe
+                      src="https://www.youtube.com/embed/kKUEVW77opg"
+                      title="How should we study the effects of psychedelic drugs? - Enzo Tagliazucchi"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <a class="journal-youtube-link" href="https://www.youtube.com/watch?v=kKUEVW77opg">Open on YouTube</a>
+                </div>
+                <div class="journal-copy">
+                  <section class="journal-copy-block" aria-labelledby="abstract-tagliazucchi">
+                    <h3 id="abstract-tagliazucchi">Abstract</h3>
+                    <p>
+                      This lecture asks whether psychedelic drug effects can be studied within the standard paradigm of
+                      cognitive neuroscience. It considers links between neuroimaging and subjective reports, the scientific
+                      use of microdosing, natural language processing for psychedelic experience reports, and new quantitative
+                      methods for characterizing complex human behavior under psychedelics.
+                    </p>
+                  </section>
+                  <section class="journal-copy-block" aria-labelledby="bio-tagliazucchi">
+                    <h3 id="bio-tagliazucchi">Speaker biography</h3>
+                    <p>
+                      Enzo Tagliazucchi studied physics and mathematics at the University of Buenos Aires and obtained a PhD
+                      in physics at Goethe University Frankfurt. He leads the Consciousness, Culture and Complexity Group at
+                      the University of Buenos Aires, is a Professor of Neuroscience at Favaloro University, and studies human
+                      consciousness as embedded within society and culture.
                     </p>
                   </section>
                 </div>

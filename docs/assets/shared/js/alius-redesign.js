@@ -15,6 +15,11 @@
       ['Coordinators', 'coordinators'],
       ['Research Members', 'research-members'],
       ['Martin Fortier', 'martinfortier']
+    ],
+    '/newsletter/': [
+      ['Overview', 'newsletter-overview'],
+      ['Sign Up', 'newsletter-signup'],
+      ['Submit News', 'newsletter-submit-news']
     ]
   };
 
@@ -156,10 +161,59 @@
     targets.forEach(function (target) { observer.observe(target); });
   }
 
+  function initJournalFilters() {
+    var filters = Array.prototype.slice.call(document.querySelectorAll('.journal-filter'));
+    var talks = Array.prototype.slice.call(document.querySelectorAll('.journal-talk'));
+    if (!filters.length || !talks.length) return;
+    var active = new Set();
+
+    function talkMatches(talk, showAll) {
+      if (showAll) return true;
+      var tags = (talk.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
+      return tags.some(function (tag) { return active.has(tag); });
+    }
+
+    function syncAnchorNav(showAll) {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.alius-anchor-nav a[href^="#"]'));
+      links.forEach(function (link) {
+        var id = link.getAttribute('href').slice(1);
+        var talk = document.getElementById(id);
+        var item = link.closest && link.closest('li');
+        if (!item || !talk || !talk.classList.contains('journal-talk')) return;
+        item.hidden = !talkMatches(talk, showAll);
+      });
+    }
+
+    function apply() {
+      var showAll = active.size === 0;
+      filters.forEach(function (button) {
+        var filter = button.getAttribute('data-filter');
+        button.classList.toggle('is-active', showAll ? filter === '*' : active.has(filter));
+      });
+      talks.forEach(function (talk) {
+        talk.classList.toggle('is-filtered-out', !talkMatches(talk, showAll));
+      });
+      syncAnchorNav(showAll);
+    }
+
+    filters.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var filter = button.getAttribute('data-filter');
+        if (filter === '*') active.clear();
+        else if (active.has(filter)) active.delete(filter);
+        else active.add(filter);
+        apply();
+      });
+    });
+
+    apply();
+  }
+
   function init() {
     buildAnchorNav(anchorsForPage());
     wireSmoothScroll();
     wireActiveState();
+    initJournalFilters();
   }
 
   if (document.readyState === 'loading') {
