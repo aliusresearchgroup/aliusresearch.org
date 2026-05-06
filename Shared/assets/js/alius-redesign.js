@@ -4,7 +4,12 @@
   var PRESETS = {
     '/': [
       ['Welcome', 'home-welcome'],
-      ['News', 'wsite-content']
+      ['Overview', 'alius-overview'],
+      ['Scientific Study', 'scientific-study'],
+      ['Redefining ASCs', 'redefining-asc'],
+      ['Models', 'models'],
+      ['Scope', 'scope'],
+      ['References', 'references']
     ],
     '/team/': [
       ['Coordinators', 'coordinators'],
