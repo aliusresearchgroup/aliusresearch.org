@@ -25,7 +25,7 @@ Hosted FormBee is the simplest setup if the free plan includes the Discord integ
 </script>
 ```
 
-Until those two endpoint URLs are configured, submissions from the static GitHub Pages site will not reach Discord.
+The site currently points both newsletter forms at the same hosted FormBee endpoint. If you want signup and news submissions to route through separate FormBee forms, create a second FormBee API key and replace one endpoint in `Newsletter/page.html`.
 
 ## Self-Hosted FormBee Webhooks
 
