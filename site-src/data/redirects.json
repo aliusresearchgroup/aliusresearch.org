@@ -491,7 +491,7 @@
     },
     {
         "from": "/newsletter.html",
-        "to": "/community/newsletter/",
+        "to": "/newsletter/",
         "type": "legacy-html-page"
     },
     {

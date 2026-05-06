@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Newsletter - Alius</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sign up for the ALIUS newsletter and submit news items on research into altered states of consciousness."
+    />
+    <link id="wsite-base-style" rel="stylesheet" type="text/css" href="/assets/vendor/editmysite/cdn11.editmysite.com/css/sites.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/weebly-site/files/main_style.css?1771702559" title="wsite-theme-css" />
+    <link href="/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Raleway/font.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Gentium_Basic/font.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Playfair_Display/font.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/assets/shared/css/alius-redesign.css" />
+    <script>
+      window.ALIUS_FORMBEE_ENDPOINTS = {
+        newsletterSignup: '/webhook/newsletter-signup',
+        newsletterNews: '/webhook/newsletter-news-item'
+      };
+    </script>
+  </head>
+  <body class="no-header wsite-page-newsletter full-width-on wsite-theme-light">
+    <div class="body-wrap">
+      <div id="header">
+        <div class="nav-trigger hamburger">
+          <div class="open-btn">
+            <span class="mobile"></span>
+            <span class="mobile"></span>
+            <span class="mobile"></span>
+          </div>
+        </div>
+        <div id="sitename">
+          <span class="wsite-logo">
+            <a href="/" aria-label="ALIUS home">
+              <img src="/uploads/9/1/6/0/91600416/1477332210.png" alt="Alius" />
+            </a>
+          </span>
+        </div>
+      </div>
+
+      <div id="wrapper">
+        <div class="bg-wrapper">
+          <div id="navigation">
+            <ul class="wsite-menu-default">
+              <li class="wsite-menu-item-wrap"><a href="/" class="wsite-menu-item">Home</a></li>
+              <li class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
+              <li class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
+              <li id="active" class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
+              <li class="wsite-menu-item-wrap"><a href="/journal-club/" class="wsite-menu-item">Journal Clubs</a></li>
+              <li class="wsite-menu-item-wrap"><a href="/events/" class="wsite-menu-item">Events</a></li>
+              <li class="wsite-menu-item-wrap"><a href="/membership/" class="wsite-menu-item">Membership</a></li>
+            </ul>
+          </div>
+
+          <div id="content-wrapper">
+            <div id="wsite-content" class="wsite-elements wsite-not-footer">
+              <style>
+                body.wsite-page-newsletter {
+                  --newsletter-green: #1a4d2e;
+                  --newsletter-leaf: #4d9b36;
+                  --newsletter-ink: #24302b;
+                  --newsletter-soft-ink: #4c5953;
+                  --newsletter-muted: #6f7773;
+                  --newsletter-line: rgba(36, 48, 43, 0.16);
+                  --newsletter-wash: #f6f8f5;
+                  --newsletter-accent: #9a6a2d;
+                }
+
+                body.wsite-page-newsletter .newsletter-page {
+                  box-sizing: border-box;
+                  width: min(980px, 100%);
+                  margin: 0 auto;
+                  padding: 46px 28px 88px;
+                  color: var(--newsletter-ink);
+                  font-family: Raleway, sans-serif;
+                }
+
+                body.wsite-page-newsletter .newsletter-page *,
+                body.wsite-page-newsletter .newsletter-page *::before,
+                body.wsite-page-newsletter .newsletter-page *::after {
+                  box-sizing: border-box;
+                }
+
+                body.wsite-page-newsletter .newsletter-page h1,
+                body.wsite-page-newsletter .newsletter-page h2,
+                body.wsite-page-newsletter .newsletter-page h3 {
+                  margin: 0;
+                  color: var(--newsletter-green) !important;
+                  font-family: Raleway, sans-serif !important;
+                  font-weight: 700;
+                  letter-spacing: 0;
+                  text-transform: none;
+                }
+
+                body.wsite-page-newsletter .newsletter-page h1 {
+                  max-width: 740px;
+                  font-size: 44px;
+                  line-height: 1.08;
+                }
+
+                body.wsite-page-newsletter .newsletter-page h2 {
+                  font-size: 25px !important;
+                  line-height: 1.18 !important;
+                }
+
+                body.wsite-page-newsletter .newsletter-page p,
+                body.wsite-page-newsletter .newsletter-page li {
+                  color: var(--newsletter-soft-ink) !important;
+                  font-family: "Gentium Basic", Georgia, serif !important;
+                  font-size: 17px !important;
+                  line-height: 1.58 !important;
+                }
+
+                body.wsite-page-newsletter .newsletter-page a {
+                  color: var(--newsletter-green);
+                }
+
+                body.wsite-page-newsletter .newsletter-lead {
+                  display: grid;
+                  grid-template-columns: minmax(0, 1fr) 164px;
+                  gap: 30px;
+                  align-items: center;
+                  padding-bottom: 30px;
+                  border-bottom: 1px solid var(--newsletter-line);
+                }
+
+                body.wsite-page-newsletter .newsletter-lead p {
+                  max-width: 700px;
+                  margin: 18px 0 0 !important;
+                  font-size: 18px !important;
+                }
+
+                body.wsite-page-newsletter .newsletter-mark {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  min-height: 164px;
+                  border: 1px solid var(--newsletter-line);
+                  border-radius: 8px;
+                  background: var(--newsletter-wash);
+                }
+
+                body.wsite-page-newsletter .newsletter-mark img {
+                  display: block;
+                  width: 118px;
+                  height: auto;
+                }
+
+                body.wsite-page-newsletter .newsletter-section {
+                  display: grid;
+                  grid-template-columns: 240px minmax(0, 1fr);
+                  gap: 28px;
+                  padding: 34px 0;
+                  border-bottom: 1px solid var(--newsletter-line);
+                }
+
+                body.wsite-page-newsletter .newsletter-section__copy p {
+                  margin: 10px 0 0 !important;
+                  font-size: 16px !important;
+                }
+
+                body.wsite-page-newsletter .newsletter-form {
+                  display: grid;
+                  gap: 16px;
+                  min-width: 0;
+                  padding: 20px;
+                  border: 1px solid var(--newsletter-line);
+                  border-radius: 8px;
+                  background: #fff;
+                }
+
+                body.wsite-page-newsletter .newsletter-field {
+                  display: grid;
+                  gap: 7px;
+                  min-width: 0;
+                  color: var(--newsletter-ink);
+                  font-family: Raleway, sans-serif;
+                  font-size: 13px;
+                  font-weight: 700;
+                }
+
+                body.wsite-page-newsletter .newsletter-field input,
+                body.wsite-page-newsletter .newsletter-field select,
+                body.wsite-page-newsletter .newsletter-field textarea {
+                  width: 100%;
+                  min-width: 0;
+                  border: 1px solid rgba(36, 48, 43, 0.24);
+                  border-radius: 7px;
+                  padding: 11px 12px;
+                  background: #fff;
+                  color: var(--newsletter-ink);
+                  font-family: Raleway, sans-serif;
+                  font-size: 15px;
+                  line-height: 1.4;
+                }
+
+                body.wsite-page-newsletter .newsletter-field textarea {
+                  min-height: 132px;
+                  resize: vertical;
+                }
+
+                body.wsite-page-newsletter .newsletter-field input:focus,
+                body.wsite-page-newsletter .newsletter-field select:focus,
+                body.wsite-page-newsletter .newsletter-field textarea:focus {
+                  border-color: rgba(26, 77, 46, 0.58);
+                  outline: 3px solid rgba(77, 155, 54, 0.16);
+                }
+
+                body.wsite-page-newsletter .newsletter-field--span {
+                  grid-column: 1 / -1;
+                }
+
+                body.wsite-page-newsletter .newsletter-grid {
+                  display: grid;
+                  grid-template-columns: repeat(2, minmax(0, 1fr));
+                  gap: 16px;
+                }
+
+                body.wsite-page-newsletter .newsletter-consent {
+                  display: grid;
+                  grid-template-columns: 18px minmax(0, 1fr);
+                  gap: 10px;
+                  align-items: start;
+                  color: var(--newsletter-soft-ink);
+                  font-family: "Gentium Basic", Georgia, serif;
+                  font-size: 15.5px;
+                  line-height: 1.45;
+                }
+
+                body.wsite-page-newsletter .newsletter-consent input {
+                  width: 16px;
+                  height: 16px;
+                  margin: 3px 0 0;
+                  accent-color: var(--newsletter-green);
+                }
+
+                body.wsite-page-newsletter .newsletter-actions {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 12px;
+                  align-items: center;
+                }
+
+                body.wsite-page-newsletter .newsletter-actions button {
+                  min-height: 42px;
+                  border: 1px solid var(--newsletter-green);
+                  border-radius: 8px;
+                  padding: 0 17px;
+                  background: var(--newsletter-green);
+                  color: #fff;
+                  cursor: pointer;
+                  font-family: Raleway, sans-serif;
+                  font-size: 13px;
+                  font-weight: 700;
+                  letter-spacing: 0;
+                }
+
+                body.wsite-page-newsletter .newsletter-actions button:disabled {
+                  cursor: wait;
+                  opacity: 0.68;
+                }
+
+                body.wsite-page-newsletter .newsletter-status {
+                  min-height: 22px;
+                  margin: 0 !important;
+                  color: var(--newsletter-muted) !important;
+                  font-size: 15px !important;
+                }
+
+                body.wsite-page-newsletter .newsletter-status[data-tone="success"] {
+                  color: var(--newsletter-green) !important;
+                }
+
+                body.wsite-page-newsletter .newsletter-status[data-tone="error"] {
+                  color: #8a3d2a !important;
+                }
+
+                body.wsite-page-newsletter .newsletter-honeypot {
+                  position: absolute;
+                  left: -9999px;
+                  width: 1px;
+                  height: 1px;
+                  opacity: 0;
+                }
+
+                body.wsite-page-newsletter .newsletter-note {
+                  margin-top: 28px;
+                  padding-top: 18px;
+                  border-top: 1px solid var(--newsletter-line);
+                }
+
+                body.wsite-page-newsletter .newsletter-note p {
+                  max-width: 760px;
+                  margin: 0 !important;
+                  color: var(--newsletter-muted) !important;
+                  font-size: 15.5px !important;
+                }
+
+                @media (max-width: 820px) {
+                  body.wsite-page-newsletter .newsletter-page {
+                    padding: 34px 20px 72px;
+                  }
+
+                  body.wsite-page-newsletter .newsletter-lead,
+                  body.wsite-page-newsletter .newsletter-section,
+                  body.wsite-page-newsletter .newsletter-grid {
+                    grid-template-columns: 1fr;
+                  }
+
+                  body.wsite-page-newsletter .newsletter-mark {
+                    justify-content: flex-start;
+                    min-height: 0;
+                    padding: 18px;
+                  }
+                }
+
+                @media (max-width: 520px) {
+                  body.wsite-page-newsletter .newsletter-page h1 {
+                    font-size: 34px;
+                  }
+
+                  body.wsite-page-newsletter .newsletter-form {
+                    padding: 16px;
+                  }
+                }
+              </style>
+
+              <main class="newsletter-page" aria-labelledby="newsletter-title">
+                <section class="newsletter-lead" id="newsletter-overview">
+                  <div>
+                    <h1 id="newsletter-title">Newsletter</h1>
+                    <p>
+                      Receive ALIUS updates on research into altered states of consciousness, Bulletin activity,
+                      calls for contributions, events, and journal club announcements.
+                    </p>
+                  </div>
+                  <div class="newsletter-mark" aria-hidden="true">
+                    <img src="/uploads/9/1/6/0/91600416/1477332210.png" alt="" />
+                  </div>
+                </section>
+
+                <section class="newsletter-section" id="newsletter-signup">
+                  <div class="newsletter-section__copy">
+                    <h2>Sign Up</h2>
+                    <p>Add your name and email to receive newsletter updates from ALIUS.</p>
+                  </div>
+                  <form
+                    class="newsletter-form"
+                    action="/webhook/send"
+                    method="post"
+                    data-formbee-form
+                    data-formbee-key="newsletterSignup"
+                    data-discord-payload="newsletter-signup"
+                    data-formbee-success="Thank you. You have been added to the newsletter list."
+                  >
+                    <input type="hidden" name="form_kind" value="newsletter_signup" />
+                    <label class="newsletter-field">
+                      Name
+                      <input type="text" name="name" autocomplete="name" required />
+                    </label>
+                    <label class="newsletter-field">
+                      Email
+                      <input type="email" name="email" autocomplete="email" data-no-paste required />
+                    </label>
+                    <label class="newsletter-field">
+                      Confirm Email
+                      <input type="email" name="email_confirm" autocomplete="off" data-no-paste required />
+                    </label>
+                    <label class="newsletter-consent newsletter-field--span">
+                      <input type="checkbox" name="updates_consent" value="yes" required />
+                      <span>I agree to receive ALIUS newsletter updates by email.</span>
+                    </label>
+                    <label class="newsletter-honeypot" aria-hidden="true">
+                      Website
+                      <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                    </label>
+                    <div class="newsletter-actions">
+                      <button type="submit">Subscribe</button>
+                      <p class="newsletter-status" data-form-status aria-live="polite"></p>
+                    </div>
+                  </form>
+                </section>
+
+                <section class="newsletter-section" id="newsletter-submit-news">
+                  <div class="newsletter-section__copy">
+                    <h2>Submit a News Item</h2>
+                    <p>Share a paper, event, call, resource, or announcement for possible inclusion in the newsletter.</p>
+                  </div>
+                  <form
+                    class="newsletter-form"
+                    action="/webhook/send"
+                    method="post"
+                    data-formbee-form
+                    data-formbee-key="newsletterNews"
+                    data-discord-payload="news-item"
+                    data-formbee-success="Thank you. Your news item was sent to the newsletter editors."
+                  >
+                    <input type="hidden" name="form_kind" value="newsletter_news_item" />
+                    <div class="newsletter-grid">
+                      <label class="newsletter-field">
+                        Your Name
+                        <input type="text" name="submitter_name" autocomplete="name" required />
+                      </label>
+                      <label class="newsletter-field">
+                        Your Email
+                        <input type="email" name="submitter_email" autocomplete="email" required />
+                      </label>
+                    </div>
+                    <div class="newsletter-grid">
+                      <label class="newsletter-field">
+                        Item Type
+                        <select name="news_type" required>
+                          <option value="">Select one</option>
+                          <option value="paper">Paper</option>
+                          <option value="event">Event</option>
+                          <option value="call">Call or opportunity</option>
+                          <option value="resource">Resource</option>
+                          <option value="announcement">Announcement</option>
+                        </select>
+                      </label>
+                      <label class="newsletter-field">
+                        Link
+                        <input type="url" name="news_url" inputmode="url" placeholder="https://" />
+                      </label>
+                    </div>
+                    <label class="newsletter-field">
+                      Title
+                      <input type="text" name="news_title" required />
+                    </label>
+                    <label class="newsletter-field">
+                      Summary
+                      <textarea name="news_summary" required></textarea>
+                    </label>
+                    <label class="newsletter-field">
+                      Why It Matters for Altered States Research
+                      <textarea name="relevance" required></textarea>
+                    </label>
+                    <label class="newsletter-honeypot" aria-hidden="true">
+                      Website
+                      <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                    </label>
+                    <div class="newsletter-actions">
+                      <button type="submit">Submit News Item</button>
+                      <p class="newsletter-status" data-form-status aria-live="polite"></p>
+                    </div>
+                  </form>
+                </section>
+
+                <div class="newsletter-note">
+                  <p>
+                    News item submissions are forwarded through FormBee to the newsletter review channel. Editors
+                    review submissions before inclusion.
+                  </p>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/shared/js/alius-redesign.js"></script>
+    <script src="/assets/shared/js/alius-newsletter.js"></script>
+  </body>
+</html>
