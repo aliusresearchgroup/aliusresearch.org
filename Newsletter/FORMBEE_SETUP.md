@@ -6,6 +6,8 @@ Discord webhook URLs are secrets. Do not paste them into `Newsletter/page.html`,
 
 ## Hosted FormBee
 
+Hosted FormBee is the simplest setup if the free plan includes the Discord integration for your account. The site can safely expose a FormBee API key as long as the form is restricted to `aliusresearch.org` in FormBee's allowed-domain settings; the Discord webhook URL stays inside FormBee.
+
 1. Create two FormBee forms:
    - `newsletterSignup`
    - `newsletterNews`
@@ -23,9 +25,11 @@ Discord webhook URLs are secrets. Do not paste them into `Newsletter/page.html`,
 </script>
 ```
 
+Until those two endpoint URLs are configured, submissions from the static GitHub Pages site will not reach Discord.
+
 ## Self-Hosted FormBee Webhooks
 
-For self-hosted FormBee webhooks-only forwarding, run two FormBee webhook services so each form can reach a different Discord channel. Store the Discord URLs in environment variables, not in the repository.
+For a fully free software path, self-host FormBee's webhooks-only service. Run two FormBee webhook services so each form can reach a different Discord channel. Store the Discord URLs in environment variables, not in the repository. Hosting may still cost money depending on where you run the containers.
 
 ```powershell
 $env:NEWSLETTER_SIGNUP_DISCORD_WEBHOOK = "https://discord.com/api/webhooks/..."
