@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="/assets/shared/css/alius-redesign.css" />
     <script>
       window.ALIUS_FORMBEE_ENDPOINTS = {
-        newsletterSignup: '/webhook/newsletter-signup',
-        newsletterNews: '/webhook/newsletter-news-item'
+        newsletterSignup: 'FORMBEE_SIGNUP_ENDPOINT_PENDING',
+        newsletterNews: 'FORMBEE_NEWS_ENDPOINT_PENDING'
       };
     </script>
   </head>
@@ -348,7 +348,7 @@
                   </div>
                   <form
                     class="newsletter-form"
-                    action="/webhook/send"
+                    action="https://api.formbee.dev/formbee/FORMBEE_SIGNUP_API_KEY"
                     method="post"
                     data-formbee-form
                     data-formbee-key="newsletterSignup"
@@ -390,7 +390,7 @@
                   </div>
                   <form
                     class="newsletter-form"
-                    action="/webhook/send"
+                    action="https://api.formbee.dev/formbee/FORMBEE_NEWS_API_KEY"
                     method="post"
                     data-formbee-form
                     data-formbee-key="newsletterNews"
@@ -449,10 +449,7 @@
                 </section>
 
                 <div class="newsletter-note">
-                  <p>
-                    News item submissions are forwarded through FormBee to the newsletter review channel. Editors
-                    review submissions before inclusion.
-                  </p>
+                  <p>Editors review submissions before inclusion.</p>
                 </div>
               </main>
             </div>

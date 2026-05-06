@@ -132,13 +132,20 @@
       });
 
       if (!response.ok) {
-        throw new Error('FormBee returned ' + response.status);
+        throw new Error(String(response.status));
       }
 
       form.reset();
       setStatus(form, form.getAttribute('data-formbee-success') || 'Thank you. Your submission was received.', 'success');
     } catch (error) {
-      setStatus(form, 'The submission could not be sent. Please try again later.', 'error');
+      var setupError = error && /^(404|405)$/.test(error.message || '');
+      setStatus(
+        form,
+        setupError
+          ? 'This form still needs its FormBee webhook endpoint to be connected.'
+          : 'The submission could not be sent. Please try again later.',
+        'error'
+      );
     } finally {
       setBusy(form, false);
     }
