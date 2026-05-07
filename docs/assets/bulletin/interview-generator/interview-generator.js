@@ -52,6 +52,33 @@
       .replace(/"/g, "&quot;");
   }
 
+  function stripOuterQuotationMarks(value) {
+    let text = String(value || "").trim();
+    const pairs = [
+      ['"', '"'],
+      ["'", "'"],
+      ["\u201c", "\u201d"],
+      ["\u2018", "\u2019"],
+      ["\u00ab", "\u00bb"]
+    ];
+
+    let changed = true;
+    while (changed && text.length > 1) {
+      changed = false;
+      pairs.forEach(([open, close]) => {
+        if (text.startsWith(open) && text.endsWith(close)) {
+          text = text.slice(open.length, -close.length).trim();
+          changed = true;
+        }
+      });
+    }
+    return text;
+  }
+
+  function previewQuote(value) {
+    return `&ldquo;${htmlEscape(stripOuterQuotationMarks(value))}&rdquo;`;
+  }
+
   function paragraphs(value) {
     return String(value || "")
       .split(/\n{2,}/)
@@ -114,7 +141,7 @@
       paragraphs(item.answer).forEach((paragraph) => {
         chunks.push(`\\AliusParagraph{${texEscape(paragraph)}}`);
       });
-      if (item.quote) chunks.push(`\\AliusPullQuote{${texEscape(item.quote)}}`);
+      if (item.quote) chunks.push(`\\AliusPullQuote{${texEscape(stripOuterQuotationMarks(item.quote))}}`);
       chunks.push("");
     });
     const referenceLines = lines(data.references);
@@ -152,6 +179,7 @@
       "\\IfFontExistsTF{Lato Light}{\\newfontfamily\\AliusSansLight{Lato Light}}{\\newfontfamily\\AliusSansLight{Latin Modern Sans}}",
       "\\IfFontExistsTF{Cormorant Garamond}{\\newfontfamily\\AliusSerif{Cormorant Garamond}}{\\newfontfamily\\AliusSerif{TeX Gyre Pagella}}",
       "\\IfFontExistsTF{Cormorant Garamond Light}{\\newfontfamily\\AliusSerifLight{Cormorant Garamond Light}}{\\newfontfamily\\AliusSerifLight{TeX Gyre Pagella}}",
+      "\\IfFontExistsTF{Georgia}{\\newfontfamily\\AliusQuoteFont{Georgia}}{\\newfontfamily\\AliusQuoteFont{TeX Gyre Pagella}}",
       "\\setmainfont{TeX Gyre Pagella}",
       "\\hypersetup{colorlinks=true,urlcolor=AliusQuestionGreen,linkcolor=AliusQuestionGreen}",
       "\\pagestyle{fancy}",
@@ -171,7 +199,7 @@
       "\\newcommand{\\AliusContributor}[2]{\\begin{minipage}[t]{0.46\\linewidth}{\\AliusSans\\fontsize{10}{12}\\selectfont\\textcolor{AliusQuestionGreen}{#1}\\par}{\\AliusSerif\\fontsize{10}{12}\\selectfont #2\\par}\\end{minipage}}",
       "\\newcommand{\\AliusQuestion}[1]{\\vspace{4mm}{\\AliusSans\\fontsize{12.5}{17.2}\\selectfont\\textcolor{AliusQuestionGreen}{#1}\\par}\\vspace{1.5mm}}",
       "\\newcommand{\\AliusParagraph}[1]{{\\AliusSerif\\fontsize{14}{19.5}\\selectfont\\justifying\\textcolor{AliusTextBlack}{#1}\\par}\\vspace{2.2mm}}",
-      "\\newcommand{\\AliusPullQuote}[1]{\\vspace{3mm}\\begin{center}\\begin{minipage}{0.76\\linewidth}\\centering{\\AliusSansLight\\fontsize{15}{18}\\selectfont\\textcolor{AliusQuoteGray}{#1}\\par}\\end{minipage}\\end{center}\\vspace{3mm}}",
+      "\\newcommand{\\AliusPullQuote}[1]{\\vspace{4mm}\\begin{center}\\begin{minipage}{0.78\\linewidth}\\centering{\\AliusQuoteFont\\itshape\\fontsize{18}{22}\\selectfont\\textcolor{AliusQuoteGray}{``#1''}\\par}\\end{minipage}\\end{center}\\vspace{4mm}}",
       "\\newcommand{\\AliusSectionHeading}[1]{\\vspace{5mm}{\\AliusSans\\fontsize{15}{18}\\selectfont #1\\par}\\vspace{2mm}}",
       "\\newcommand{\\AliusReferenceEntry}[1]{{\\AliusSerif\\fontsize{11.5}{14}\\selectfont #1\\par}}",
       "\\begin{document}",
@@ -341,33 +369,62 @@
     setStatus("Overleaf ZIP ready.");
   }
 
+  function previewContributorHtml(name, credentials) {
+    const detail = lines(credentials)
+      .map((line) => `<p>${htmlEscape(line)}</p>`)
+      .join("");
+    return `
+      <div class="alius-print-contributor">
+        <strong>${htmlEscape(name)}</strong>
+        ${detail}
+      </div>
+    `;
+  }
+
   function previewHtml(data) {
     const qas = data.questions.map((item) => {
       const answer = paragraphs(item.answer)
         .map((paragraph) => `<p class="alius-print-answer">${htmlEscape(paragraph)}</p>`)
         .join("");
-      const quote = item.quote ? `<blockquote class="alius-print-quote">${htmlEscape(item.quote)}</blockquote>` : "";
+      const quote = item.quote ? `<blockquote class="alius-print-quote">${previewQuote(item.quote)}</blockquote>` : "";
       return [
         item.question ? `<p class="alius-print-question">${htmlEscape(item.question)}</p>` : "",
         answer,
         quote
       ].join("");
     }).join("");
+    const abstract = data.abstract
+      ? `<section class="alius-print-abstract-block"><h3>Abstract</h3>${paragraphs(data.abstract).map((paragraph) => `<p class="alius-print-abstract">${htmlEscape(paragraph)}</p>`).join("")}</section>`
+      : "";
+    const keywords = data.keywords
+      ? `<p class="alius-print-keywords"><strong>Keywords:</strong> ${htmlEscape(data.keywords)}</p>`
+      : "";
     const references = lines(data.references).length
       ? `<h3 class="alius-print-section">References</h3>${lines(data.references).map((line) => `<p class="alius-print-answer">${htmlEscape(line)}</p>`).join("")}`
       : "";
     return `
       <article class="alius-print-page">
         <h2 class="alius-print-title">${htmlEscape(data.title)}</h2>
-        <p class="alius-print-subtitle">${htmlEscape(data.subtitle)}</p>
-        <p class="alius-print-credit">${htmlEscape(data.creditLine)}</p>
-        <div class="alius-print-meta">
-          <p><strong>Cite as:</strong> ${htmlEscape(data.citation)}</p>
-          <p><strong>Abstract:</strong> ${htmlEscape(data.abstract)}</p>
-          <p><strong>Keywords:</strong> ${htmlEscape(data.keywords)}</p>
+        <div class="alius-print-front">
+          <div class="alius-print-front-left">
+            <p class="alius-print-subtitle">${htmlEscape(data.subtitle)}</p>
+            <p class="alius-print-interviewee">${htmlEscape(data.interviewee)}</p>
+            <p class="alius-print-credit">${htmlEscape(data.creditLine)}</p>
+            <p class="alius-print-citation"><strong>Citation:</strong> ${htmlEscape(data.citation)}</p>
+          </div>
+          <div class="alius-print-contributors">
+            ${previewContributorHtml(data.interviewee, data.intervieweeCredentials)}
+            ${previewContributorHtml(data.interviewer, data.interviewerCredentials)}
+          </div>
         </div>
+        ${abstract}
+        ${keywords}
         ${qas}
         ${references}
+        <footer class="alius-print-footer">
+          <span>ALIUS Bulletin n&deg;${htmlEscape(data.issueNumber)} (${htmlEscape(data.year)})</span>
+          <span>aliusresearch.org/bulletin</span>
+        </footer>
       </article>
     `;
   }
