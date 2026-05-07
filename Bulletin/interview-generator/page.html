@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALIUS Interview Generator - Alius</title>
+  <meta name="description" content="Generate an ALIUS Bulletin interview as an Overleaf project or browser PDF.">
+  <link rel="stylesheet" href="/assets/vendor/weebly-site/files/main_style.css?1771702559">
+  <link href="/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Raleway/font.css" rel="stylesheet" type="text/css">
+  <link href="/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Playfair_Display/font.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/assets/bulletin/interview-generator/interview-generator.css">
+</head>
+<body class="wsite-page-bulletin-interview-generator no-header full-width-on wsite-theme-light">
+  <main class="generator-shell">
+    <nav class="generator-nav" aria-label="ALIUS">
+      <a href="/" aria-label="ALIUS home">ALIUS</a>
+      <div class="generator-nav__links">
+        <a href="/bulletin/">Bulletin</a>
+        <a href="/team/">Team</a>
+        <a href="/events/">Events</a>
+        <a href="/membership/">Membership</a>
+      </div>
+    </nav>
+
+    <header class="generator-title">
+      <h1>ALIUS Interview Generator</h1>
+      <p>Enter the interview metadata, questions, answers, and quotations. The Overleaf export is a minimal ZIP with one self-contained <code>main.tex</code> file and one <code>references.bib</code> file.</p>
+    </header>
+
+    <div class="generator-layout">
+      <form id="interview-generator-form" class="generator-form">
+        <fieldset class="generator-section">
+          <legend>Issue</legend>
+          <div class="field-grid">
+            <div class="generator-field">
+              <label for="issueNumber">Issue number</label>
+              <input id="issueNumber" name="issueNumber" type="text" value="future">
+            </div>
+            <div class="generator-field">
+              <label for="year">Year</label>
+              <input id="year" name="year" type="text" value="2026">
+            </div>
+            <div class="generator-field">
+              <label for="issueDate">Date line</label>
+              <input id="issueDate" name="issueDate" type="text" placeholder="MAY 2026">
+            </div>
+            <div class="generator-field">
+              <label for="editors">Editors</label>
+              <input id="editors" name="editors" type="text" placeholder="Editor One &amp; Editor Two (eds.)">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="generator-section">
+          <legend>Interview</legend>
+          <div class="field-grid">
+            <div class="generator-field span-2">
+              <label for="title">Title</label>
+              <input id="title" name="title" type="text" value="Generated ALIUS interview">
+            </div>
+            <div class="generator-field span-2">
+              <label for="subtitle">Subtitle</label>
+              <input id="subtitle" name="subtitle" type="text" placeholder="An interview with ...">
+            </div>
+            <div class="generator-field">
+              <label for="intervieweeName">Interviewee name</label>
+              <input id="intervieweeName" name="intervieweeName" type="text" value="Interviewee Name">
+            </div>
+            <div class="generator-field">
+              <label for="interviewerName">Interviewer name</label>
+              <input id="interviewerName" name="interviewerName" type="text" value="Interviewer Name">
+            </div>
+            <div class="generator-field">
+              <label for="intervieweeCredentials">Interviewee credentials</label>
+              <textarea id="intervieweeCredentials" name="intervieweeCredentials" placeholder="email@example.org&#10;Institution&#10;City, Country"></textarea>
+            </div>
+            <div class="generator-field">
+              <label for="interviewerCredentials">Interviewer credentials</label>
+              <textarea id="interviewerCredentials" name="interviewerCredentials" placeholder="email@example.org&#10;Institution&#10;City, Country"></textarea>
+            </div>
+            <div class="generator-field span-2">
+              <label for="creditLine">Credit line</label>
+              <input id="creditLine" name="creditLine" type="text" placeholder="By Interviewer Name">
+            </div>
+            <div class="generator-field span-2">
+              <label for="citation">Citation</label>
+              <textarea id="citation" name="citation" placeholder="Name, N. &amp; Name, N. (2026). Title. ALIUS Bulletin."></textarea>
+            </div>
+            <div class="generator-field">
+              <label for="doi">DOI or URL</label>
+              <input id="doi" name="doi" type="text" placeholder="https://doi.org/...">
+            </div>
+            <div class="generator-field">
+              <label for="slug">File slug</label>
+              <input id="slug" name="slug" type="text" placeholder="generated-interview">
+            </div>
+            <div class="generator-field span-2">
+              <label for="abstract">Abstract</label>
+              <textarea id="abstract" name="abstract"></textarea>
+            </div>
+            <div class="generator-field span-2">
+              <label for="keywords">Keywords</label>
+              <input id="keywords" name="keywords" type="text" placeholder="consciousness, phenomenology, ...">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="generator-section">
+          <legend>Questions And Answers</legend>
+          <div id="qa-list" class="qa-list"></div>
+          <button id="add-question" class="generator-button secondary" type="button">Add question</button>
+        </fieldset>
+
+        <fieldset class="generator-section">
+          <legend>References</legend>
+          <div class="generator-field">
+            <label for="references">One reference per line</label>
+            <textarea id="references" name="references"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="generator-actions">
+          <button id="download-zip" class="generator-button primary" type="button">Download Overleaf ZIP</button>
+          <button id="print-pdf" class="generator-button secondary" type="button">Save PDF</button>
+          <span id="generator-status" class="generator-status" aria-live="polite"></span>
+        </div>
+      </form>
+
+      <aside class="generator-preview-wrap" aria-label="Preview">
+        <div class="preview-toolbar">
+          <strong>Preview</strong>
+          <span class="generator-status">Browser PDF uses this preview.</span>
+        </div>
+        <div id="interview-preview"></div>
+      </aside>
+    </div>
+  </main>
+  <script src="/assets/bulletin/interview-generator/interview-generator.js"></script>
+</body>
+</html>

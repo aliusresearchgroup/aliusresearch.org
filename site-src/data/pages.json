@@ -88,6 +88,28 @@
     "redirect_legacy": true
   },
   {
+    "id": "bulletin-interview-generator",
+    "legacy_path": "bulletin-interview-generator.html",
+    "legacy_name": "bulletin-interview-generator",
+    "canonical_path": "/bulletin/interview-generator/",
+    "title": "ALIUS Interview Generator - Alius",
+    "description": "Generate an ALIUS Bulletin style interview as an Overleaf project or browser PDF.",
+    "section": "bulletin",
+    "subcategory": "interview-generator",
+    "layout": "article",
+    "nav_group": "bulletin",
+    "order": 1,
+    "body_fragment": "",
+    "head_fragment": "",
+    "source_html": "../Bulletin/interview-generator/page.html",
+    "page_css": "",
+    "page_js": "",
+    "html_tag_attributes": "lang=\"en\"",
+    "body_tag_attributes": "class=\"no-header  wsite-page-bulletin-interview-generator  full-width-on  wsite-theme-light\"",
+    "status": "published",
+    "redirect_legacy": true
+  },
+  {
     "id": "journal-club",
     "legacy_path": "journal-club.html",
     "legacy_name": "journal-club",
