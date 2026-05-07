@@ -392,19 +392,21 @@ body.wsite-page-bulletin #wsite-content .bulletin-index__intro p {
   line-height: 1.65;
   margin: 0;
 }
-body.wsite-page-bulletin #wsite-content .bulletin-filters {
+body.wsite-page-bulletin #wsite-content .bulletin-controls {
   display: grid;
   gap: 14px;
-  margin: 0 auto 18px;
+  margin: 0 auto 20px;
   max-width: 1060px;
 }
+body.wsite-page-bulletin #wsite-content .bulletin-control-row,
 body.wsite-page-bulletin #wsite-content .bulletin-filter-group {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
 }
-body.wsite-page-bulletin #wsite-content .bulletin-filter-group h3 {
+body.wsite-page-bulletin #wsite-content .bulletin-filter-group h3,
+body.wsite-page-bulletin #wsite-content .bulletin-author-control label {
   color: #65706a;
   flex: 0 0 100%;
   font: 700 12px/1.2 Raleway, Arial, sans-serif;
@@ -415,7 +417,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-filter {
   align-items: center;
   background: #fff;
   border: 1px solid rgba(26, 77, 46, 0.2);
-  border-radius: 999px;
+  border-radius: 7px;
   color: #2a3330;
   cursor: pointer;
   display: inline-flex;
@@ -426,7 +428,8 @@ body.wsite-page-bulletin #wsite-content .bulletin-filter {
   transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-filter:hover,
-body.wsite-page-bulletin #wsite-content .bulletin-filter:focus-visible {
+body.wsite-page-bulletin #wsite-content .bulletin-filter:focus-visible,
+body.wsite-page-bulletin #wsite-content .bulletin-author-select:focus-visible {
   background: rgba(143, 191, 77, 0.08);
   border-color: rgba(26, 77, 46, 0.45);
   outline: none;
@@ -441,6 +444,21 @@ body.wsite-page-bulletin #wsite-content .bulletin-filter__count {
   font-variant-numeric: tabular-nums;
   opacity: 0.72;
 }
+body.wsite-page-bulletin #wsite-content .bulletin-author-control {
+  display: grid;
+  gap: 5px;
+  max-width: 360px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-author-select {
+  background: #fff;
+  border: 1px solid rgba(26, 77, 46, 0.22);
+  border-radius: 7px;
+  color: #2a3330;
+  font: 600 13px/1.35 Raleway, Arial, sans-serif;
+  min-height: 39px;
+  padding: 8px 10px;
+  width: 100%;
+}
 body.wsite-page-bulletin #wsite-content .bulletin-result-count,
 body.wsite-page-bulletin #wsite-content .bulletin-empty {
   color: #65706a;
@@ -450,16 +468,76 @@ body.wsite-page-bulletin #wsite-content .bulletin-empty {
 }
 body.wsite-page-bulletin #wsite-content .bulletin-list {
   display: grid;
-  gap: 0;
+  gap: 30px;
   margin: 0 auto;
   max-width: 1060px;
 }
-body.wsite-page-bulletin #wsite-content .bulletin-card {
-  border-bottom: 1px solid #dbe4dc;
-  padding: 28px 0 32px;
+body.wsite-page-bulletin #wsite-content .bulletin-issue {
+  border-top: 1px solid #dbe4dc;
+  padding-top: 24px;
 }
+body.wsite-page-bulletin #wsite-content .bulletin-issue.is-filtered-out,
 body.wsite-page-bulletin #wsite-content .bulletin-card.is-filtered-out {
   display: none;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__header {
+  align-items: flex-start;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__header h3 {
+  color: #2f382f;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 3px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__header p {
+  color: #65706a;
+  font: 600 13px/1.4 Raleway, Arial, sans-serif;
+  margin: 0;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__link {
+  border: 1px solid #b8c9b4;
+  border-radius: 6px;
+  color: #3f6f25;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font: 700 13px/1 Raleway, Arial, sans-serif;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__link:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-issue__link:focus {
+  background: #edf4ea;
+  color: #2f5e1e;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__embed {
+  border: 1px solid #dbe4dc;
+  border-radius: 8px;
+  margin: 0 0 10px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__embed summary {
+  color: #2f382f;
+  cursor: pointer;
+  font: 700 13px/1.35 Raleway, Arial, sans-serif;
+  padding: 11px 12px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__embed iframe {
+  border: 0;
+  border-top: 1px solid #dbe4dc;
+  display: block;
+  height: 620px;
+  width: 100%;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__items {
+  display: grid;
+  gap: 0;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card {
+  border-bottom: 1px solid #dbe4dc;
+  padding: 24px 0 30px;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-card__header {
   max-width: 920px;
@@ -497,7 +575,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__tags {
 body.wsite-page-bulletin #wsite-content .bulletin-card__tags span {
   background: rgba(47, 127, 123, 0.06);
   border: 1px solid rgba(47, 127, 123, 0.2);
-  border-radius: 999px;
+  border-radius: 6px;
   color: #2f7f7b;
   font: 600 11.5px/1.2 Raleway, Arial, sans-serif;
   padding: 4px 8px;
@@ -567,6 +645,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
 @media (max-width: 860px) {
   body.wsite-page-bulletin #wsite-content .bulletin-index { padding-left: 0; padding-right: 0; }
   body.wsite-page-bulletin #wsite-content .bulletin-index__intro h2 { font-size: 25px !important; }
+  body.wsite-page-bulletin #wsite-content .bulletin-issue__header { display: block; }
+  body.wsite-page-bulletin #wsite-content .bulletin-issue__link { margin-top: 10px; }
+  body.wsite-page-bulletin #wsite-content .bulletin-issue__embed iframe { height: 420px; }
   body.wsite-page-bulletin #wsite-content .bulletin-card__copy { grid-template-columns: 1fr; }
   body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe { min-height: 190px; }
 }
@@ -641,99 +722,105 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
           <main class="bulletin-index" aria-label="ALIUS Bulletin index">
             <header class="bulletin-index__intro">
               <h2>Bulletin interviews, podcasts and essays</h2>
-              <p>Filter the ALIUS Bulletin by issue, featured person, or recurring topic. Each entry includes its abstract, speaker biography, PDF link, and any matching podcast or lecture recording.</p>
+              <p>The bulletin index is organized by issue, with topic filters and a compact author list for narrower browsing. Entries include abstract text, speaker biography, item PDF links, and matching podcast or lecture recordings.</p>
             </header>
-            <div class="bulletin-filters" role="group" aria-label="Filter bulletin entries">
-                            <button type="button" class="bulletin-filter bulletin-filter--all is-active" data-filter="*" aria-pressed="true">All <span class="bulletin-filter__count">41</span></button>
-            <section class="bulletin-filter-group" aria-label="Issues">
-              <h3>Issues</h3>
-              <button type="button" class="bulletin-filter" data-filter="issue-07" aria-pressed="false">Issue 7 <span class="bulletin-filter__count">2</span></button>
-              <button type="button" class="bulletin-filter" data-filter="issue-06" aria-pressed="false">Issue 6 <span class="bulletin-filter__count">7</span></button>
-              <button type="button" class="bulletin-filter" data-filter="issue-05" aria-pressed="false">Issue 5 <span class="bulletin-filter__count">5</span></button>
-              <button type="button" class="bulletin-filter" data-filter="issue-04" aria-pressed="false">Issue 4 <span class="bulletin-filter__count">8</span></button>
-              <button type="button" class="bulletin-filter" data-filter="issue-03" aria-pressed="false">Issue 3 <span class="bulletin-filter__count">5</span></button>
-              <button type="button" class="bulletin-filter" data-filter="issue-02" aria-pressed="false">Issue 2 <span class="bulletin-filter__count">8</span></button>
-              <button type="button" class="bulletin-filter" data-filter="issue-01" aria-pressed="false">Issue 1 <span class="bulletin-filter__count">6</span></button>
-            </section>
-            <section class="bulletin-filter-group" aria-label="Interviewees and authors">
-              <h3>Interviewees and authors</h3>
-              <button type="button" class="bulletin-filter" data-filter="anna-ciaunica" aria-pressed="false">Anna Ciaunica <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="ann-taves" aria-pressed="false">Ann Taves <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="benjamin-baird" aria-pressed="false">Benjamin Baird <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="bigna-lenggenhager" aria-pressed="false">Bigna Lenggenhager <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="charles-nichols" aria-pressed="false">Charles D. Nichols <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="charlotte-martial" aria-pressed="false">Charlotte Martial <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="daniel-dennett" aria-pressed="false">Daniel Dennett <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="david-e-nichols" aria-pressed="false">David E. Nichols <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="david-nichols" aria-pressed="false">David Nichols <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="david-olson" aria-pressed="false">David E. Olson <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="david-yaden" aria-pressed="false">David B. Yaden <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="frederique-de-vignemont" aria-pressed="false">Fr&eacute;d&eacute;rique de Vignemont <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="jakob-hohwy" aria-pressed="false">Jakob Hohwy <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="jean-pierre-changeux" aria-pressed="false">Jean-Pierre Changeux <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="jennifer-windt" aria-pressed="false">Jennifer Windt <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="jeremy-skipper" aria-pressed="false">Jeremy I. Skipper <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="juan-gonzalez" aria-pressed="false">Juan Gonz&aacute;lez <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="karl-friston" aria-pressed="false">Karl Friston <span class="bulletin-filter__count">2</span></button>
-              <button type="button" class="bulletin-filter" data-filter="katrin-preller" aria-pressed="false">Katrin Preller <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="kevin-oregan" aria-pressed="false">Kevin O'Regan <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="kieran-fox" aria-pressed="false">Kieran Fox <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="maddalena-canna" aria-pressed="false">Maddalena Canna <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="manoj-doss" aria-pressed="false">Manoj Doss <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="martin-fortier" aria-pressed="false">Martin Fortier <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="matthieu-koroma" aria-pressed="false">Matthieu Koroma <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="matthew-ratcliffe" aria-pressed="false">Matthew Ratcliffe <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="michael-winkelman" aria-pressed="false">Michael Winkelman <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="monima-chadha" aria-pressed="false">Monima Chadha <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="olivia-carter" aria-pressed="false">Olivia Carter <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="olivia-gosseries" aria-pressed="false">Olivia Gosseries <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="rebecca-seligman" aria-pressed="false">Rebecca Seligman <span class="bulletin-filter__count">2</span></button>
-              <button type="button" class="bulletin-filter" data-filter="robert-sapolsky" aria-pressed="false">Robert Sapolsky <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="robin-carhart-harris" aria-pressed="false">Robin Carhart-Harris <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="simon-mccarthy-jones" aria-pressed="false">Simon McCarthy-Jones <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="steven-jillings" aria-pressed="false">Steven Jillings <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="tanya-luhrmann" aria-pressed="false">Tanya Luhrmann <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="thomas-metzinger" aria-pressed="false">Thomas Metzinger <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="tim-bayne" aria-pressed="false">Tim Bayne <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="timothy-hanks" aria-pressed="false">Timothy Hanks <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="timo-torsten-schmidt" aria-pressed="false">Timo Torsten Schmidt <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="tom-froese" aria-pressed="false">Tom Froese <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="zoltan-dienes" aria-pressed="false">Zoltan Dienes <span class="bulletin-filter__count">1</span></button>
-            </section>
-            <section class="bulletin-filter-group" aria-label="Recurring themes">
-              <h3>Recurring themes</h3>
-              <button type="button" class="bulletin-filter" data-filter="consciousness" aria-pressed="false">Consciousness <span class="bulletin-filter__count">27</span></button>
-              <button type="button" class="bulletin-filter" data-filter="psychedelics" aria-pressed="false">Psychedelics <span class="bulletin-filter__count">16</span></button>
-              <button type="button" class="bulletin-filter" data-filter="neuroscience" aria-pressed="false">Neuroscience <span class="bulletin-filter__count">22</span></button>
-              <button type="button" class="bulletin-filter" data-filter="philosophy" aria-pressed="false">Philosophy <span class="bulletin-filter__count">12</span></button>
-              <button type="button" class="bulletin-filter" data-filter="phenomenology" aria-pressed="false">Phenomenology <span class="bulletin-filter__count">15</span></button>
-              <button type="button" class="bulletin-filter" data-filter="anthropology" aria-pressed="false">Anthropology <span class="bulletin-filter__count">6</span></button>
-              <button type="button" class="bulletin-filter" data-filter="sleep-dreaming" aria-pressed="false">Sleep &amp; dreaming <span class="bulletin-filter__count">4</span></button>
-              <button type="button" class="bulletin-filter" data-filter="body-self" aria-pressed="false">Body &amp; self <span class="bulletin-filter__count">11</span></button>
-              <button type="button" class="bulletin-filter" data-filter="meditation-hypnosis" aria-pressed="false">Meditation &amp; hypnosis <span class="bulletin-filter__count">4</span></button>
-              <button type="button" class="bulletin-filter" data-filter="hallucinations" aria-pressed="false">Hallucinations <span class="bulletin-filter__count">3</span></button>
-              <button type="button" class="bulletin-filter" data-filter="near-death-experiences" aria-pressed="false">Near-death experiences <span class="bulletin-filter__count">2</span></button>
-              <button type="button" class="bulletin-filter" data-filter="free-will-agency" aria-pressed="false">Free will &amp; agency <span class="bulletin-filter__count">2</span></button>
-              <button type="button" class="bulletin-filter" data-filter="computation" aria-pressed="false">Computation <span class="bulletin-filter__count">10</span></button>
-              <button type="button" class="bulletin-filter" data-filter="methods" aria-pressed="false">Methods <span class="bulletin-filter__count">13</span></button>
-              <button type="button" class="bulletin-filter" data-filter="classification" aria-pressed="false">Classification <span class="bulletin-filter__count">4</span></button>
-              <button type="button" class="bulletin-filter" data-filter="religious-experience" aria-pressed="false">Religious experience <span class="bulletin-filter__count">3</span></button>
-              <button type="button" class="bulletin-filter" data-filter="disorders-of-consciousness" aria-pressed="false">Disorders of consciousness <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="language" aria-pressed="false">Language <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="pharmacology" aria-pressed="false">Pharmacology <span class="bulletin-filter__count">4</span></button>
-              <button type="button" class="bulletin-filter" data-filter="psychiatry" aria-pressed="false">Psychiatry <span class="bulletin-filter__count">7</span></button>
-              <button type="button" class="bulletin-filter" data-filter="cognition" aria-pressed="false">Cognition <span class="bulletin-filter__count">9</span></button>
-              <button type="button" class="bulletin-filter" data-filter="culture" aria-pressed="false">Culture <span class="bulletin-filter__count">8</span></button>
-              <button type="button" class="bulletin-filter" data-filter="therapy" aria-pressed="false">Therapy <span class="bulletin-filter__count">4</span></button>
-              <button type="button" class="bulletin-filter" data-filter="interoception" aria-pressed="false">Interoception <span class="bulletin-filter__count">2</span></button>
-              <button type="button" class="bulletin-filter" data-filter="ethics" aria-pressed="false">Ethics <span class="bulletin-filter__count">2</span></button>
-              <button type="button" class="bulletin-filter" data-filter="art-science" aria-pressed="false">Art &amp; science <span class="bulletin-filter__count">1</span></button>
-              <button type="button" class="bulletin-filter" data-filter="behavior" aria-pressed="false">Behavior <span class="bulletin-filter__count">2</span></button>
-            </section>
+            <div class="bulletin-controls" role="group" aria-label="Filter bulletin entries">
+              <div class="bulletin-control-row bulletin-control-row--primary">
+                <button type="button" class="bulletin-filter bulletin-filter--all is-active" data-filter="*" aria-pressed="true">All <span class="bulletin-filter__count">41</span></button>
+                <section class="bulletin-filter-group" aria-label="Issues">
+                  <h3>Issues</h3>
+                  <button type="button" class="bulletin-filter" data-filter-type="issue" data-filter="issue-07" aria-pressed="false">Issue 7 <span class="bulletin-filter__count">2</span></button>
+                  <button type="button" class="bulletin-filter" data-filter-type="issue" data-filter="issue-06" aria-pressed="false">Issue 6 <span class="bulletin-filter__count">7</span></button>
+                  <button type="button" class="bulletin-filter" data-filter-type="issue" data-filter="issue-05" aria-pressed="false">Issue 5 <span class="bulletin-filter__count">5</span></button>
+                  <button type="button" class="bulletin-filter" data-filter-type="issue" data-filter="issue-04" aria-pressed="false">Issue 4 <span class="bulletin-filter__count">8</span></button>
+                  <button type="button" class="bulletin-filter" data-filter-type="issue" data-filter="issue-03" aria-pressed="false">Issue 3 <span class="bulletin-filter__count">5</span></button>
+                  <button type="button" class="bulletin-filter" data-filter-type="issue" data-filter="issue-02" aria-pressed="false">Issue 2 <span class="bulletin-filter__count">8</span></button>
+                  <button type="button" class="bulletin-filter" data-filter-type="issue" data-filter="issue-01" aria-pressed="false">Issue 1 <span class="bulletin-filter__count">6</span></button>
+                </section>
+              </div>
+              <section class="bulletin-filter-group" aria-label="Topics">
+                <h3>Topics</h3>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="consciousness" aria-pressed="false">Consciousness <span class="bulletin-filter__count">27</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="neuroscience" aria-pressed="false">Neuroscience <span class="bulletin-filter__count">22</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="psychedelics" aria-pressed="false">Psychedelics <span class="bulletin-filter__count">16</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="phenomenology" aria-pressed="false">Phenomenology <span class="bulletin-filter__count">15</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="methods" aria-pressed="false">Methods <span class="bulletin-filter__count">13</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="philosophy" aria-pressed="false">Philosophy <span class="bulletin-filter__count">12</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="body-self" aria-pressed="false">Body &amp; self <span class="bulletin-filter__count">11</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="computation" aria-pressed="false">Computation <span class="bulletin-filter__count">10</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="cognition" aria-pressed="false">Cognition <span class="bulletin-filter__count">9</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="culture" aria-pressed="false">Culture <span class="bulletin-filter__count">8</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="psychiatry" aria-pressed="false">Psychiatry <span class="bulletin-filter__count">7</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="anthropology" aria-pressed="false">Anthropology <span class="bulletin-filter__count">6</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="sleep-dreaming" aria-pressed="false">Sleep &amp; dreaming <span class="bulletin-filter__count">4</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="therapy" aria-pressed="false">Therapy <span class="bulletin-filter__count">4</span></button>
+                <button type="button" class="bulletin-filter" data-filter-type="topic" data-filter="pharmacology" aria-pressed="false">Pharmacology <span class="bulletin-filter__count">4</span></button>
+              </section>
+              <div class="bulletin-author-control">
+                <label for="bulletin-author-filter">Author or interviewee</label>
+                <select id="bulletin-author-filter" class="bulletin-author-select">
+                  <option value="">All authors and interviewees</option>
+                  <option value="ann-taves">Ann Taves (1)</option>
+                  <option value="anna-ciaunica">Anna Ciaunica (1)</option>
+                  <option value="benjamin-baird">Benjamin Baird (1)</option>
+                  <option value="bigna-lenggenhager">Bigna Lenggenhager (1)</option>
+                  <option value="charles-nichols">Charles D. Nichols (1)</option>
+                  <option value="charlotte-martial">Charlotte Martial (1)</option>
+                  <option value="daniel-dennett">Daniel Dennett (1)</option>
+                  <option value="david-yaden">David B. Yaden (1)</option>
+                  <option value="david-e-nichols">David E. Nichols (1)</option>
+                  <option value="david-olson">David E. Olson (1)</option>
+                  <option value="david-nichols">David Nichols (1)</option>
+                  <option value="frederique-de-vignemont">Frédérique de Vignemont (1)</option>
+                  <option value="jakob-hohwy">Jakob Hohwy (1)</option>
+                  <option value="jean-pierre-changeux">Jean-Pierre Changeux (1)</option>
+                  <option value="jennifer-windt">Jennifer Windt (1)</option>
+                  <option value="jeremy-skipper">Jeremy I. Skipper (1)</option>
+                  <option value="juan-gonzalez">Juan González (1)</option>
+                  <option value="karl-friston">Karl Friston (2)</option>
+                  <option value="katrin-preller">Katrin Preller (1)</option>
+                  <option value="kevin-oregan">Kevin O&#x27;Regan (1)</option>
+                  <option value="kieran-fox">Kieran Fox (1)</option>
+                  <option value="maddalena-canna">Maddalena Canna (1)</option>
+                  <option value="manoj-doss">Manoj Doss (1)</option>
+                  <option value="martin-fortier">Martin Fortier (1)</option>
+                  <option value="matthew-ratcliffe">Matthew Ratcliffe (1)</option>
+                  <option value="matthieu-koroma">Matthieu Koroma (1)</option>
+                  <option value="michael-winkelman">Michael Winkelman (1)</option>
+                  <option value="monima-chadha">Monima Chadha (1)</option>
+                  <option value="olivia-carter">Olivia Carter (1)</option>
+                  <option value="olivia-gosseries">Olivia Gosseries (1)</option>
+                  <option value="rebecca-seligman">Rebecca Seligman (2)</option>
+                  <option value="robert-sapolsky">Robert Sapolsky (1)</option>
+                  <option value="robin-carhart-harris">Robin Carhart-Harris (1)</option>
+                  <option value="simon-mccarthy-jones">Simon McCarthy-Jones (1)</option>
+                  <option value="steven-jillings">Steven Jillings (1)</option>
+                  <option value="tanya-luhrmann">Tanya Luhrmann (1)</option>
+                  <option value="thomas-metzinger">Thomas Metzinger (1)</option>
+                  <option value="tim-bayne">Tim Bayne (1)</option>
+                  <option value="timo-torsten-schmidt">Timo Torsten Schmidt (1)</option>
+                  <option value="timothy-hanks">Timothy Hanks (1)</option>
+                  <option value="tom-froese">Tom Froese (1)</option>
+                  <option value="zoltan-dienes">Zoltan Dienes (1)</option>
+                </select>
+              </div>
             </div>
             <p class="bulletin-result-count" aria-live="polite"><span id="bulletin-visible-count">41</span> entries shown</p>
             <div class="bulletin-list">
-              <article id="bulletin-froese-irruption" class="bulletin-card" data-tags="issue-07 tom-froese consciousness agency psychedelics neuroscience methods">
+              <section class="bulletin-issue" data-issue="issue-07">
+                <header class="bulletin-issue__header">
+                  <div>
+                    <h3>Issue 7</h3>
+                    <p>2 entries</p>
+                  </div>
+                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
+                </header>
+                <details class="bulletin-issue__embed">
+                  <summary>Preview full Issue 7 PDF</summary>
+                  <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-full.pdf#view=FitH" title="ALIUS Bulletin Issue 7 PDF" loading="lazy"></iframe>
+                </details>
+                <div class="bulletin-issue__items">
+<article id="bulletin-froese-irruption" class="bulletin-card" data-tags="issue-07 tom-froese consciousness agency psychedelics neuroscience methods">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 7</span><span>Interview</span> <span>11 pp.</span></p>
                   <h3>The irruption theory: How mind and matter meet along the route to consciousness</h3>
@@ -743,7 +830,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>In this interview, Tom Froese and Matthieu Koroma address the irruption theory, an account of how mental actions manifest themselves as unexplained variability in brain and bodily activity. The discussion considers how this approach can trace consciousness in physiological signatures such as scale-free activity and informational complexity, and how altered states can help disentangle the physiological correlates of consciousness from agency.</p>
+                    <p>In this interview, Tom Froese and Matthieu Koroma address the irruption theory, an account of how mental actions manifest themselves as unexplained variability in brain and bodily activity. We discuss how this approach can be applied to trace back consciousness in (neuro)physiological signatures such as scale free activity and informational complexity. We highlight the study of altered states of consciousness as an opportunity to disentangle the physiological correlates of consciousness from agency. We conclude by addressing how irruption theory provides insights into the therapeutic effects of psychedelics and the importance of crafting an appropriate context to consciously shape agency and behavior.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -756,7 +843,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-changeux-molecular-social" class="bulletin-card" data-tags="issue-07 jean-pierre-changeux consciousness neuroscience art-science psychedelics computation">
+<article id="bulletin-changeux-molecular-social" class="bulletin-card" data-tags="issue-07 jean-pierre-changeux consciousness neuroscience art-science psychedelics computation">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 7</span><span>Interview</span> <span>15 pp.</span></p>
                   <h3>Consciousness: from molecular to social scales</h3>
@@ -766,7 +853,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>In this interview, Guillaume Dumas reaches out to Jean-Pierre Changeux to offer a wide-ranging view on consciousness, spanning its fundamental molecular mechanisms up to its social dimension. They discuss altered states of consciousness, artistic practice, artificial intelligence, and the importance of multidisciplinary research for advancing consciousness studies.</p>
+                    <p>In this interview, Guillaume Dumas reaches out to Jean-Pierre Changeux to offer a wide-ranging view on consciousness, spanning over its fundamental molecular mechanisms up to its social dimension. They further discuss the exploration of altered states of consciousness and its relation to artistic practice. They finally tackle the opportunities of some of the prominent fields of future research such as artificial intelligence and highlight the importance of multidisciplinary research in advancing the study of consciousness.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -779,7 +866,22 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-ciaunica-early-sensory-life" class="bulletin-card" data-tags="issue-06 anna-ciaunica consciousness body-self interoception phenomenology">
+                </div>
+              </section>
+              <section class="bulletin-issue" data-issue="issue-06">
+                <header class="bulletin-issue__header">
+                  <div>
+                    <h3>Issue 6</h3>
+                    <p>7 entries</p>
+                  </div>
+                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
+                </header>
+                <details class="bulletin-issue__embed">
+                  <summary>Preview full Issue 6 PDF</summary>
+                  <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-full.pdf#view=FitH" title="ALIUS Bulletin Issue 6 PDF" loading="lazy"></iframe>
+                </details>
+                <div class="bulletin-issue__items">
+<article id="bulletin-ciaunica-early-sensory-life" class="bulletin-card" data-tags="issue-06 anna-ciaunica consciousness body-self interoception phenomenology">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 6</span><span>Podcast</span> <span>3 pp.</span></p>
                   <h3>What is it like to be in early sensory life?</h3>
@@ -789,7 +891,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>In this episode, Anna Ciaunica reviews recent progress on the scientific study of conscious experiences in early sensory life.</p>
+                    <p>In this episode, Anna Ciaunica reviews the recent progress on the scientific study of conscious experiences in early sensory life.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -805,7 +907,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
               <iframe src="https://www.youtube.com/embed/n6HQrGJTC34?wmode=opaque" title="What is it like to be in early sensory life?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
               </article>
-              <article id="bulletin-jillings-weightlessness" class="bulletin-card" data-tags="issue-06 steven-jillings consciousness body-self neuroscience phenomenology">
+<article id="bulletin-jillings-weightlessness" class="bulletin-card" data-tags="issue-06 steven-jillings consciousness body-self neuroscience phenomenology">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 6</span><span>Podcast</span> <span>5 pp.</span></p>
                   <h3>What is it like to be in weightlessness?</h3>
@@ -815,7 +917,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>In this episode, Steven Jillings reviews recent progress on the scientific study of conscious experiences in weightlessness.</p>
+                    <p>In this episode, Steven Jillings reviews the recent progress on the scientific study of conscious experiences in weightlessness.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -831,7 +933,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
               <iframe src="https://www.youtube.com/embed/xUI4urgaZRk?wmode=opaque" title="What is it like to be in weightlessness?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
               </article>
-              <article id="bulletin-koroma-asleep" class="bulletin-card" data-tags="issue-06 matthieu-koroma consciousness sleep-dreaming body-self neuroscience phenomenology">
+<article id="bulletin-koroma-asleep" class="bulletin-card" data-tags="issue-06 matthieu-koroma consciousness sleep-dreaming body-self neuroscience phenomenology">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 6</span><span>Podcast</span> <span>5 pp.</span></p>
                   <h3>What is it like to be asleep?</h3>
@@ -841,7 +943,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>In this episode, Matthieu Koroma reviews recent progress on the scientific study of conscious experiences during sleep.</p>
+                    <p>In this episode, Matthieu Koroma reviews the recent progress on the scientific study of conscious experiences during sleep.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -857,7 +959,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
               <iframe src="https://www.youtube.com/embed/OB8YskNJC40?wmode=opaque" title="What is it like to be asleep?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
               </article>
-              <article id="bulletin-gonzalez-interdisciplinary" class="bulletin-card" data-tags="issue-06 juan-gonzalez consciousness philosophy psychedelics phenomenology methods">
+<article id="bulletin-gonzalez-interdisciplinary" class="bulletin-card" data-tags="issue-06 juan-gonzalez consciousness philosophy psychedelics phenomenology methods">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 6</span><span>Interview</span> <span>18 pp.</span></p>
                   <h3>An interdisciplinary journey into consciousness research</h3>
@@ -867,7 +969,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Pr. Gonz&aacute;lez and Dr. Koroma discuss the purpose and challenges of interdisciplinary consciousness research, tracing the history of ALIUS and considering how multiple disciplines, contexts, and methodologies can shape models of consciousness, sentience, subjective experience, empirical data, and the spiritual realm.</p>
+                    <p>In this interview, Pr. González and Dr. Koroma discuss the purpose and the challenges of an interdisciplinary study of consciousness. They do so by first tracing back the history of ALIUS, a 15-year-old international association dedicated to the scientific study of the diversity of consciousness. By discussing how we can incorporate views from multiple disciplines, contexts, and methodologies in our understanding of consciousness, they oﬀer insights into the role of science and philosophy. They further address the mystery of consciousness, the place of first-hand subjective experience and empirical data in modelling consciousness, and how we can navigate among multiple definitions of consciousness and related notions associated with it like sentience or the spiritual realm.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -880,7 +982,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-sapolsky-free-will" class="bulletin-card" data-tags="issue-06 robert-sapolsky free-will-agency neuroscience philosophy behavior">
+<article id="bulletin-sapolsky-free-will" class="bulletin-card" data-tags="issue-06 robert-sapolsky free-will-agency neuroscience philosophy behavior">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 6</span><span>Interview</span> <span>11 pp.</span></p>
                   <h3>On free will or the lack thereof</h3>
@@ -890,7 +992,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Robert Sapolsky outlines his view on free will and related topics, anticipating his book Determined: The Science of Life Without Free Will. The discussion moves across neuroscience, philosophy, education, and the criminal justice system.</p>
+                    <p>In this interview, Robert Sapolsky outlines his view on Free Will and related topics. The discussion anticipates his upcoming book Determined: The Science of Life Without Free Will. Various topics are covered at the intersection of neuroscience</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -903,7 +1005,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-doss-cinco-sins" class="bulletin-card" data-tags="issue-06 manoj-doss psychedelics methods cognition pharmacology neuroscience">
+<article id="bulletin-doss-cinco-sins" class="bulletin-card" data-tags="issue-06 manoj-doss psychedelics methods cognition pharmacology neuroscience">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 6</span><span>Interview and lecture</span> <span>27 pp.</span></p>
                   <h3>On the Cinco Sins of Psychedelic Research</h3>
@@ -913,7 +1015,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Manoj Doss addresses the Cinco Sins of Psychedelic Research, highlighting methodological concerns and biases, including those stemming from self-experimentation and researchers' personal drug experiences. He argues for closer integration of cognitive psychology and neuropharmacology, with stronger behavioral measures for studying psychedelics' effects on cognition and memory.</p>
+                    <p>In this interview, Manoj Doss addresses the "Cinco Sins of Psychedelic Research," highlighting methodological concerns and biases, including those stemming from self-experimentation and researchers' personal drug experiences. Advocating for a closer integration of cognitive psychology and neuropharmacology, he calls for empirical approaches to study psychedelics' effects on cognition and memory. Doss's critique underscores the importance of behavioral measures to advance a scientific understanding of psychedelic substances.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -929,7 +1031,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
               <iframe src="https://www.youtube.com/embed/yWWdMe7FC9k" title="On the Cinco Sins of Psychedelic Research" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
               </article>
-              <article id="bulletin-skipper-language" class="bulletin-card" data-tags="issue-06 jeremy-skipper consciousness psychedelics language neuroscience phenomenology">
+<article id="bulletin-skipper-language" class="bulletin-card" data-tags="issue-06 jeremy-skipper consciousness psychedelics language neuroscience phenomenology">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 6</span><span>Interview</span> <span>30 pp.</span></p>
                   <h3>The intimacy of psychedelics, language, and consciousness</h3>
@@ -939,7 +1041,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>This interview explores the intimate relationship between language and consciousness, drawing insights from aphasia phenomenology, psychedelic experiences, and neuroscientific theories. Skipper argues that language is not merely a tool for reporting conscious experiences but plays a generative role in shaping and sustaining consciousness itself.</p>
+                    <p>This interview explores the intimate relationship between language and consciousness, drawing insights from aphasia phenomenology, psychedelic experiences, and neuroscientific theories. Jeremy I. Skipper, a cognitive neuroscientist, argues that language is not merely a tool for reporting conscious experiences but plays a generative role in shaping and sustaining consciousness itself. He critiques localizationist models of language processing, emphasizing the context-dependence and dynamic recruitment of brain regions. Parallels are drawn between the experiences of aphasic patients, who report a loss of self-narrative and increased connectedness, and the phenomenology of psychedelic states, which often involve a dissolution of linguistic categories and a sense of ineffability. Skipper outlines potential neural mechanisms linking language disruption to psychedelic experiences and discusses the UNITy Project, aimed in part at studying post-acute meaning-making processes and predicting changes in language and well-being after psychedelic sessions.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -951,7 +1053,22 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-martial-near-death" class="bulletin-card" data-tags="issue-05 charlotte-martial near-death-experiences consciousness neuroscience methods">
+                </div>
+              </section>
+              <section class="bulletin-issue" data-issue="issue-05">
+                <header class="bulletin-issue__header">
+                  <div>
+                    <h3>Issue 5</h3>
+                    <p>5 entries</p>
+                  </div>
+                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
+                </header>
+                <details class="bulletin-issue__embed">
+                  <summary>Preview full Issue 5 PDF</summary>
+                  <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf#view=FitH" title="ALIUS Bulletin Issue 5 PDF" loading="lazy"></iframe>
+                </details>
+                <div class="bulletin-issue__items">
+<article id="bulletin-martial-near-death" class="bulletin-card" data-tags="issue-05 charlotte-martial near-death-experiences consciousness neuroscience methods">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 5</span><span>Commentary</span> <span>10 pp.</span></p>
                   <h3>Near-death experiences in the public debate: A scientific perspective</h3>
@@ -961,7 +1078,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Charlotte Martial responds to the first episode of Netflix's Surviving Death, dedicated to near-death experiences. She welcomes public attention to this growing area of research while raising scientific concerns and outlining points that can move the debate about NDEs forward.</p>
+                    <p>On January 6th 2021, Netflix released a new docu-series called "Surviving Death", whose first episode is dedicated to near-death experiences (NDEs). We asked ALIUS member and NDE expert Charlotte Martial (neuropsychologist and post-doctoral researcher at the Coma Science Group) to share her perspective about this episode. She watched it with great interest and shares her enthusiasm that popular media addresses this fascinating and growing area of research, which has not received the scientific and medical attention it deserves. She would like to raise several concerns about some statements and comments and address further points to move the debate about NDEs forward.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -974,7 +1091,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-canna-seligman-culture" class="bulletin-card" data-tags="issue-05 maddalena-canna rebecca-seligman anthropology culture body-self interoception psychiatry">
+<article id="bulletin-canna-seligman-culture" class="bulletin-card" data-tags="issue-05 maddalena-canna rebecca-seligman anthropology culture body-self interoception psychiatry">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 5</span><span>Interview</span> <span>16 pp.</span></p>
                   <h3>How culture breaks down the mind-body divide</h3>
@@ -984,7 +1101,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Anthropologists Maddalena Canna and Rebecca Seligman discuss how culture shapes the relationship between body and mind. Their work on Functional Neurological Disorder uses anthropological and psychophysiological methods to examine interoceptive affordance, cultural expectations, symptom meaning, and the social dimensions of care.</p>
+                    <p>In this interview, anthropologists Maddalena Canna and Rebecca Seligman explain their recent research agenda investigating how culture shapes the relationship between the body and mind. After having studied trance, they shift their focus to Functional Neurological Disorder (FND), an illness in which sensory or motor symptoms do not match any identified physiological causes. Their approach relies on a mix of anthropological and psychophysiological methods to unravel the mechanisms by which cultural expectations influence the perception and meaning of bodily sensations, a phenomenon that they call “interoceptive affordance”. The cultural contextualization of psychophysiological processes puts into question our conceptions of the body and mind divide, and what we consider as normal or pathological. By emphasizing how social factors such as gender, race and medical categorization impact the symptomatology of FND, they highlight how anthropological research can lead to a more encompassing and humanized vision of treatment and care that replaces the category of patient with a participatory actor of the scientific investigation of conscious states and their modification.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -997,7 +1114,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-chadha-indian-philosophy" class="bulletin-card" data-tags="issue-05 monima-chadha philosophy consciousness meditation-hypnosis psychedelics body-self">
+<article id="bulletin-chadha-indian-philosophy" class="bulletin-card" data-tags="issue-05 monima-chadha philosophy consciousness meditation-hypnosis psychedelics body-self">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 5</span><span>Interview</span> <span>10 pp.</span></p>
                   <h3>Indian philosophy and the value of transformative experiences</h3>
@@ -1007,7 +1124,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Monima Chadha discusses Indian philosophy and the diversity of consciousness, explaining how translating concepts and practices into Western debates requires attention to traditions oriented toward liberation. The conversation highlights transformative experiences, meditation, no-self, and cross-cultural philosophy of mind.</p>
+                    <p>In this interview, we engage in a cross-cultural discussion about the diversity of consciousness. Indian philosophy can seem quite cryptic and difficult to follow because it is a primary oral tradition. However, Monima Chadha has developed a series of work aiming at introducing the rich insights of Indian philosophy of mind into the western literature. Key aspects of metaphysical debates such as the nature of consciousness and the notion of no-self are framed in Indian philosophy as primarily guided by the aim to achieve enlightenment or liberation. Altered states of consciousness are considered as transformative experiences and meditation is highlighted as an additional resource in the Indian tradition to gain insight into the nature of consciousness.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1020,7 +1137,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-olson-yaden-therapeutic-effects" class="bulletin-card" data-tags="issue-05 david-olson david-yaden psychedelics pharmacology phenomenology therapy consciousness">
+<article id="bulletin-olson-yaden-therapeutic-effects" class="bulletin-card" data-tags="issue-05 david-olson david-yaden psychedelics pharmacology phenomenology therapy consciousness">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 5</span><span>Conversation and video</span> <span>18 pp.</span></p>
                   <h3>Are the subjective effects of psychedelics necessary for their enduring therapeutic effects?</h3>
@@ -1030,7 +1147,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>This discussion asks whether the subjective effects of psychedelics are necessary for enduring therapeutic benefit. Yaden and Griffiths emphasized mystical and other acute experiences, while Olson emphasized psychoplastogenic mechanisms that may produce benefit independently of subjective effects. The transcript clarifies the two positions and points of disagreement.</p>
+                    <p>ALIUS recently invited Dr. David E. Olson and Dr. David B. Yaden to discuss whether or not the subjective effects of psychedelics are necessary for their enduring therapeutic benefit in an interactive online discussion. The aim of this discussion is to examine their most recent back-to-back publication wherein Yaden &amp; Griffiths (2021) emphasized the subjective effects of psychedelics, such as mystical experiences, in relation to their long-lasting therapeutic effects, whereas Olson (2021) emphasized that there are certain therapeutic benefits related to the psychoplastogenic properties of these substances that are unrelated to their subjective effects. We invited the authors to clarify the fine points of their arguments and to tease out any point of disagreement between these two perspectives. What follows is an edited transcript of their discussion.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1046,7 +1163,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
               <iframe src="https://www.youtube.com/embed/SY9814V1svs" title="Are the subjective effects of psychedelics necessary for their enduring therapeutic effects?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
               </article>
-              <article id="bulletin-schmidt-phenomenoconnectomics" class="bulletin-card" data-tags="issue-05 timo-torsten-schmidt consciousness neuroscience phenomenology methods classification">
+<article id="bulletin-schmidt-phenomenoconnectomics" class="bulletin-card" data-tags="issue-05 timo-torsten-schmidt consciousness neuroscience phenomenology methods classification">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 5</span><span>Interview</span> <span>16 pp.</span></p>
                   <h3>Phenomenoconnectomics and the Neural Correlates of Altered Consciousness</h3>
@@ -1056,7 +1173,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Timo Torsten Schmidt discusses efforts to compile psychometric measures from controlled experiments on altered states of consciousness and introduces phenomenoconnectomics, a program linking phenomenology and functional connectivity to identify commonalities and differences across altered states.</p>
+                    <p>In this interview, Timo Torsten Schmidt provides details about his efforts to compile a comprehensive database of all psychometric measures gathered from controlled experiments investigating altered states of consciousness (ASCs) induced by pharmacological and non-pharmacological methods. He also introduces the paradigm of Phenomenoconnectomics which aims to systematically investigate the phenomenology and functional connectivity of ASCs to identify commonalities and differences, to ultimately identify the necessary neuronal correlates of specific experiences as they occur during ASCs. He explains some key findings of his own neuroscientific research on the neural correlates of consciousness under the influence of non-pharmacological manipulations, such as Ganzfeld exposure and flicker light stimulation-induced visual illusory percepts. Finally, we touch upon the current limitations of psychometric methods in their ability to capture the full diversity of the phenomenal space and future plans to overcome these caveats through Open Science initiatives that support harm reduction efforts.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1069,7 +1186,22 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-fortier-tribute" class="bulletin-card" data-tags="issue-04 martin-fortier consciousness anthropology psychedelics culture methods">
+                </div>
+              </section>
+              <section class="bulletin-issue" data-issue="issue-04">
+                <header class="bulletin-issue__header">
+                  <div>
+                    <h3>Issue 4</h3>
+                    <p>8 entries</p>
+                  </div>
+                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
+                </header>
+                <details class="bulletin-issue__embed">
+                  <summary>Preview full Issue 4 PDF</summary>
+                  <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf#view=FitH" title="ALIUS Bulletin Issue 4 PDF" loading="lazy"></iframe>
+                </details>
+                <div class="bulletin-issue__items">
+<article id="bulletin-fortier-tribute" class="bulletin-card" data-tags="issue-04 martin-fortier consciousness anthropology psychedelics culture methods">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 4</span><span>Tribute</span></p>
                   <h3>Tribute to Martin Fortier</h3>
@@ -1079,7 +1211,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Martin Fortier is remembered as a brilliant colleague and friend whose commitment to interdisciplinarity shaped ALIUS and influenced many researchers. The text adapts Martin's own summary of his wide-ranging research to provide a faithful and accurate representation of his work.</p>
+                    <p>Martin Fortier has been a wonderful friend and a brilliant colleague, gone far too soon to realize his extraordinary potential despite his many precocious achievements. More than anyone, he embodied the spirit of interdisciplinarity. His passion for the scientific study of consciousness was inspiring, altering the trajectory of many researchers in our network and beyond. This text is intended to provide a faithful, up-to-date, and accurate representation of Martin's wide-ranging research by adapting in large part from Martin's own summary of his work written about a year before his passing.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1091,7 +1223,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-nichols-dmt" class="bulletin-card" data-tags="issue-04 charles-nichols david-e-nichols psychedelics pharmacology neuroscience near-death-experiences methods">
+<article id="bulletin-nichols-dmt" class="bulletin-card" data-tags="issue-04 charles-nichols david-e-nichols psychedelics pharmacology neuroscience near-death-experiences methods">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 4</span><span>Commentary</span></p>
                   <h3>DMT in the mammalian brain: A critical appraisal</h3>
@@ -1101,7 +1233,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Charles D. Nichols and David E. Nichols critically assess claims that DMT is synthesized in rat brain cortex at neurotransmitter-like levels and increases at death. They argue that while the findings are interesting, they do not support claims that DMT functions like serotonin in cortex or causes near-death experiences.</p>
+                    <p>Recently, a publication from Dean et al. reported that N,N-dimethyl tryptamine (DMT) is synthesized in the rat brain cortex, present at levels similar to other monoamine neurotransmitters, and significantly increases in concentration at death. They further promoted the theory that DMT may serve as the causative agent for “near death experiences”, which have been compared to peak psychedelic experiences. The publication certainly is interesting and suggests additional directions to explore scientifically but does not meet the bar for either claim that DMT is at functional levels in the cortex comparable to serotonin or is the “near death” neurotransmitter.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1114,7 +1246,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-baird-lucid-dreaming" class="bulletin-card" data-tags="issue-04 benjamin-baird consciousness sleep-dreaming meditation-hypnosis neuroscience phenomenology">
+<article id="bulletin-baird-lucid-dreaming" class="bulletin-card" data-tags="issue-04 benjamin-baird consciousness sleep-dreaming meditation-hypnosis neuroscience phenomenology">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
                   <h3>Internally generated conscious activity: reflections upon lucid dreaming</h3>
@@ -1124,7 +1256,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Benjamin Baird discusses conscious activity that is internally generated rather than driven by sensory stimuli, including dreaming, mind-wandering, meditation, and lucid dreaming. Lucid dreaming is highlighted as a way to gain experimental control over internally generated conscious activity during sleep.</p>
+                    <p>Certain conscious states such as dreaming reveal that conscious activity can be to a large extent internally generated rather than being driven by sensory stimuli. In this interview, psychologist and neuroscientist Benjamin Baird discusses the developments of scientific research on these conscious phenomena including dreaming, mind-wandering and meditation and how they interrelate. Lucid dreaming, the ability to become aware that one is dreaming while in a dream, is highlighted as a unique way to gain experimental control over internally generated conscious activity during sleep.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1136,7 +1268,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-carter-dimensions" class="bulletin-card" data-tags="issue-04 olivia-carter consciousness psychedelics neuroscience classification computation">
+<article id="bulletin-carter-dimensions" class="bulletin-card" data-tags="issue-04 olivia-carter consciousness psychedelics neuroscience classification computation">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
                   <h3>Dimensions of consciousness: from perceptual illusions to psychedelics</h3>
@@ -1146,7 +1278,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Olivia Carter explains how visual perception research led her to study psychedelics and inspired a multidimensional model of consciousness. The conversation addresses higher states, artificial intelligence, and the questions consciousness research needs to ask next.</p>
+                    <p>In this interview, the psychologist and neuroscientist Olivia Carter (University of Melbourne, Australia) explains how she became interested in the field of consciousness. We discuss how her work on visual perception has led her to study the effect of psychedelics and how this has inspired a multidimensional model of consciousness. We discuss the potential contents of “higher” states of consciousness and argue that the existence of those is an unresolved question. We finish the exchange on the challenges for successful demonstration of artificial intelligence and by discussing the most important questions that the field needs to ask and answer in order to move forward.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1158,7 +1290,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-gosseries-disorders" class="bulletin-card" data-tags="issue-04 olivia-gosseries disorders-of-consciousness psychedelics therapy neuroscience ethics">
+<article id="bulletin-gosseries-disorders" class="bulletin-card" data-tags="issue-04 olivia-gosseries disorders-of-consciousness psychedelics therapy neuroscience ethics">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
                   <h3>Use of psychedelics in the treatment of disorders of consciousness</h3>
@@ -1168,7 +1300,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Olivia Gosseries discusses the possibility of using psychedelics to treat disorders of consciousness. Building on research on residual awareness and recovery, the conversation considers clinical trials, efficacy, ethics, legal issues, and related non-pathological altered states.</p>
+                    <p>In this interview, we discuss the use of psychedelic drugs as a promising treatment in disorders of consciousness. Psilocybin, a classic psychedelic, is currently undergoing substantial clinical investigations in healthy volunteers, but also in clinical populations. Recently, experts in the field of psychedelics have addressed the attractive possibility to use such psychedelics on patients suffering from disorders of consciousness. Building on her empirical and theoretical research on disorders of consciousness, Olivia Gosseries gives us her opinion. Implementing rigorous clinical trials with psychedelics on patients with disorders of consciousness will allow their clinical efficacy to be tested. We finish the interview by briefly addressing the ethical and legal challenges and discussing other related non-pathological modified states of consciousness.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1180,7 +1312,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-hanks-decision-making" class="bulletin-card" data-tags="issue-04 timothy-hanks neuroscience free-will-agency computation behavior psychiatry">
+<article id="bulletin-hanks-decision-making" class="bulletin-card" data-tags="issue-04 timothy-hanks neuroscience free-will-agency computation behavior psychiatry">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
                   <h3>Neuroscience of decision making</h3>
@@ -1190,7 +1322,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Tim Hanks discusses neuroscience, decision making, philosophy, and science as a career. He explains how computational neuroscience shapes his research agenda and how decision making connects to free will, conscious awareness, mental health, experimental approaches, and clinical deployment.</p>
+                    <p>In this interview, Professor Tim Hanks discusses topics related to neuroscience, decision making, philosophy, and science as a career. Hanks explores how ideas from computational neuroscience have helped him set his own research agenda and also navigate everyday situations. The way the brain makes decisions is deeply intertwined with topics such as free will, conscious awareness, and mental health. In order to productively study such diverse topics related to decision making, Hanks recommends an integrative approach that draws on multiple types of experiments and model systems, with an eye towards clinical deployment. His approach builds on various scientific frameworks, while also reminding us to stay open-minded about what the future of neuroscience may look like or bring.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1202,7 +1334,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-lenggenhager-bodily-self" class="bulletin-card" data-tags="issue-04 bigna-lenggenhager body-self consciousness neuroscience therapy phenomenology">
+<article id="bulletin-lenggenhager-bodily-self" class="bulletin-card" data-tags="issue-04 bigna-lenggenhager body-self consciousness neuroscience therapy phenomenology">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
                   <h3>Bodily boundaries and beyond: exploring the malleability of bodily self-consciousness</h3>
@@ -1212,7 +1344,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Bigna Lenggenhager discusses bodily self-consciousness, bodily disorders, and bodily illusions. The exchange covers the rubber hand illusion, full-body illusion, self-consciousness and bodily awareness, disembodiment, and the use of virtual reality as a therapeutic tool.</p>
+                    <p>In this interview, Bigna Lenggenhager discusses her groundbreaking empirical work on bodily self-consciousness, bodily disorders and bodily illusions. The conversation explores issues related to the interpretation of the rubber hand illusion and the full-body illusion, the nature of the relationship between self- consciousness and bodily awareness, syndromes of disembodiment, as well as the use of virtual reality as a therapeutic tool for bodily disorders.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1224,7 +1356,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-vignemont-body-self" class="bulletin-card" data-tags="issue-04 frederique-de-vignemont body-self philosophy phenomenology neuroscience">
+<article id="bulletin-vignemont-body-self" class="bulletin-card" data-tags="issue-04 frederique-de-vignemont body-self philosophy phenomenology neuroscience">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 4</span><span>Interview</span></p>
                   <h3>Body meets self</h3>
@@ -1234,7 +1366,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Fr&eacute;d&eacute;rique de Vignemont discusses bodily awareness, body ownership, pain, touch, peripersonal space, and methodological questions about empirical evidence in philosophy. The exchange also addresses somatoparaphrenia, depersonalization, deafferentation, and experimental bodily illusions.</p>
+                    <p>In this interview, Frédérique de Vignemont discusses her wide-ranging and influential research program on philosophical issues related to bodily awareness. The conversation explores core questions of this research program, such as the existence of a sense of body ownership, the nature of pain and touch, and the role of the peripersonal space, as well as methodological questions regarding the role of empirical evidence in philosophical investigation and the value of arguments from phenomenal contrast in philosophy of mind. In the course of this discussion, Vignemont defends her interpretation of pathological conditions such as somatoparaphrenia, depersonalization disorder, and peripheral deafferentation, as well as experimental bodily illusions such as the rubber hand illusion.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1247,7 +1379,22 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-bayne-natural-phenomenon" class="bulletin-card" data-tags="issue-03 tim-bayne consciousness philosophy methods classification phenomenology">
+                </div>
+              </section>
+              <section class="bulletin-issue" data-issue="issue-03">
+                <header class="bulletin-issue__header">
+                  <div>
+                    <h3>Issue 3</h3>
+                    <p>5 entries</p>
+                  </div>
+                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
+                </header>
+                <details class="bulletin-issue__embed">
+                  <summary>Preview full Issue 3 PDF</summary>
+                  <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf#view=FitH" title="ALIUS Bulletin Issue 3 PDF" loading="lazy"></iframe>
+                </details>
+                <div class="bulletin-issue__items">
+<article id="bulletin-bayne-natural-phenomenon" class="bulletin-card" data-tags="issue-03 tim-bayne consciousness philosophy methods classification phenomenology">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
                   <h3>How to study consciousness as a natural phenomenon</h3>
@@ -1257,7 +1404,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Tim Bayne discusses how consciousness should be studied as a natural phenomenon. He argues for a natural-kind approach in which consciousness properties are empirically informed rather than defined a priori, and defends a cautious, integrative, multidimensional model of conscious states.</p>
+                    <p>The field of the scientific study of consciousness has seen a flourishing of methodologies and theories. The debate over what defines consciousness and how we should study it is, however, yet to be settled. Philosopher Tim Bayne has proposed the “natural kind” approach, suggesting that consciousness properties should be empirically informed rather than defined a priori. Relying on the cross-talk between philosophy and empirical science, he proposes a cautious and integrative outlook that takes into account the diversity of the conscious phenomenon, defending a multidimensional model of conscious states.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1269,7 +1416,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-dennett-explained" class="bulletin-card" data-tags="issue-03 daniel-dennett consciousness philosophy psychedelics computation culture">
+<article id="bulletin-dennett-explained" class="bulletin-card" data-tags="issue-03 daniel-dennett consciousness philosophy psychedelics computation culture">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
                   <h3>Dennett explained</h3>
@@ -1279,7 +1426,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Daniel Dennett discusses his philosophical roots and reflections on Freud, predictive processing, psychedelics, consciousness, and ancient Athens. The interview highlights his interest in cross-disciplinary exchange and the role of philosophy in criticizing and contributing to mind science.</p>
+                    <p>Throughout his long career, Professor Daniel Dennett has been notable for bringing together the ideas of academic philosophy, workbench scientists, artificial intelligence pioneers, and even “cultish” intellectual figures like Julian Jaynes and J.J. Gibson. In this interview, Dennett discusses his philosophical roots, as well as his thoughts on Freud, predictive processing, psychedelics, consciousness, and ancient Athens. Dennett believes that philosophers have the ability to criticize and contribute to the science of the mind, and speaks to the virtues of cross-disciplinary glances and “hybrid vigor.” He believes that psychoactive drugs have potential scientific and therapeutic value. Experimenting with psychoactive substances, however, should be done within the proper settings, and not left to rogue agents.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1291,7 +1438,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-dienes-hypnosis-meditation" class="bulletin-card" data-tags="issue-03 zoltan-dienes consciousness meditation-hypnosis methods cognition phenomenology">
+<article id="bulletin-dienes-hypnosis-meditation" class="bulletin-card" data-tags="issue-03 zoltan-dienes consciousness meditation-hypnosis methods cognition phenomenology">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
                   <h3>Role of hypnosis and meditation in consciousness research</h3>
@@ -1301,7 +1448,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Zoltan Dienes answers questions about hypnosis and meditation as topics for consciousness research. He considers whether altered-state concepts are useful in these contexts, what is known about neurocognitive mechanisms, and how hypnosis and mindfulness may relate through metacognitive processes.</p>
+                    <p>In this interview, Zoltan Dienes (Brighton, UK), specialist in consciousness studies, answers questions related to hypnosis and meditation: Why are hypnosis and mindfulness interesting topics for the study of consciousness? Is the notion of altered state of consciousness a useful notion in the context of hypnosis and mindfulness? What do we know about the neurocognitive mechanisms sustaining the action of hypnosis and mindfulness? There is a long tradition of using hypnosis clinically, particularly as an analgesic method; might mindfulness and hypnosis work in the same way? Building on his empirical and theoretical research on hypnosis and meditation, Zoltan Dienes gives us his answers. Hypnosis and meditation are postulated to engage metacognitive processes, though in opposite ways.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1313,7 +1460,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-preller-sociality" class="bulletin-card" data-tags="issue-03 katrin-preller psychedelics neuroscience therapy cognition methods">
+<article id="bulletin-preller-sociality" class="bulletin-card" data-tags="issue-03 katrin-preller psychedelics neuroscience therapy cognition methods">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
                   <h3>Psychedelics and sociality: probing the diversity of cognition beyond the individual mind</h3>
@@ -1323,7 +1470,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Katrin Preller discusses psychedelics as tools for investigating social cognition and clinical mechanisms. The exchange emphasizes scientific rigor, psychedelic-assisted therapy, VR, hyperscanning, thalamic gating, cortico-striato-thalamo-cortical loops, and future challenges around funding, sample size, and ethics.</p>
+                    <p>In this interview, we discuss how beyond the tremendous therapeutic opportunities offered by psychedelics, they also provide a unique opportunity to investigate social cognition in a causal way and thus increase our mechanistic understanding of it. We argue this basic research is necessary to understand the underlying mechanisms and assure their clinical efficacy. However, revealing this potential requires a great deal of education for clinicians and researchers. This includes scientific rigor both in terms of how administration of psychedelic substances is completed and how psychedelic-assisted therapy is conducted. We also argue that important synergies of recent tools (VR, hyperscanning) in lab experiments can bring more naturalistic settings and thus increase relevance for real-world applications. We finally review recent results demonstrating how altered state of consciousness induced by psychedelics can result from thalamic gating deficits and alterations in information processing of internal and external stimuli within cortico-striato-thalamo-cortical (CSTC) feedback loops. We finish the exchange on the most important challenges for future research, including funding, sample size, and ethics.</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1335,7 +1482,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-winkelman-neuroanthropology" class="bulletin-card" data-tags="issue-03 michael-winkelman consciousness anthropology culture religious-experience psychedelics">
+<article id="bulletin-winkelman-neuroanthropology" class="bulletin-card" data-tags="issue-03 michael-winkelman consciousness anthropology culture religious-experience psychedelics">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 3</span><span>Interview</span></p>
                   <h3>Evolutionary neuroanthropology of consciousness: exploring the diversity of conscious modes across cultures</h3>
@@ -1345,7 +1492,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 <div class="bulletin-card__copy">
                   <section aria-label="Abstract">
                     <h4>Abstract</h4>
-                    <p>Michael Winkelman and Martin Fortier discuss how consciousness is grounded in evolutionary mechanisms and enculturated. Topics include neuroanthropology, evolutionary psychology, shamanism, big data in religious studies, taxonomy of conscious modes, psychointegrators, constructivism, perennialism, and visionary plants.</p>
+                    <p>In this interview, Michael Winkelman and Martin Fortier discuss the extent to which consciousness is grounded in deep evolutionary mechanisms and can be enculturated. First, the main tenets of two neuroanthropological approaches to consciousness and culture are outlined. Next, the upsides and downsides of evolutionary psychology are examined; the fruitfulness of this approach in the study of cultural phenomena such as shamanism is debated. The authors then discuss the promises of the “big data” approach to the study of religion as well as evolutionary puzzles about religion. Turning to issues bearing on the taxonomy of consciousness, the interview explores how consciousness should be individuated and especially how many “modes” of consciousness should be identified based on what we know of the biology and phenomenology of altered consciousness. Winkelman’s concepts of the “integrative mode of consciousness” and “psychointegrators” are subsequently examined. Next, the interview addresses both how alterations of consciousness are universally similar (the perennialist view) and can also be enculturated (the constructivist view). Finally, the authors discuss issues around the cultural use of hallucinogens (a.k.a. visionary plants): what is the best method to study them? And for how long have humans used them?</p>
                   </section>
                   <section aria-label="Speaker biography">
                     <h4>Speaker biography</h4>
@@ -1357,7 +1504,22 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-fox-spontaneous-thinking" class="bulletin-card" data-tags="issue-02 kieran-fox sleep-dreaming meditation-hypnosis cognition neuroscience psychiatry">
+                </div>
+              </section>
+              <section class="bulletin-issue" data-issue="issue-02">
+                <header class="bulletin-issue__header">
+                  <div>
+                    <h3>Issue 2</h3>
+                    <p>8 entries</p>
+                  </div>
+                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
+                </header>
+                <details class="bulletin-issue__embed">
+                  <summary>Preview full Issue 2 PDF</summary>
+                  <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf#view=FitH" title="ALIUS Bulletin Issue 2 PDF" loading="lazy"></iframe>
+                </details>
+                <div class="bulletin-issue__items">
+<article id="bulletin-fox-spontaneous-thinking" class="bulletin-card" data-tags="issue-02 kieran-fox sleep-dreaming meditation-hypnosis cognition neuroscience psychiatry">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
                   <h3>Wandering along the spectrum of spontaneous thinking: dreaming, meditation, mind-wandering, and well-being</h3>
@@ -1380,7 +1542,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-friston-woodlice" class="bulletin-card" data-tags="issue-02 karl-friston computation neuroscience consciousness psychiatry philosophy">
+<article id="bulletin-friston-woodlice" class="bulletin-card" data-tags="issue-02 karl-friston computation neuroscience consciousness psychiatry philosophy">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
                   <h3>Of woodlice and men: A Bayesian account of cognition, life and consciousness</h3>
@@ -1403,7 +1565,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-friston-autobiography" class="bulletin-card" data-tags="issue-02 karl-friston computation neuroscience cognition autobiography">
+<article id="bulletin-friston-autobiography" class="bulletin-card" data-tags="issue-02 karl-friston computation neuroscience cognition autobiography">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 2</span><span>Autobiography</span></p>
                   <h3>Am I autistic? An intellectual autobiography</h3>
@@ -1426,7 +1588,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-metzinger-self-models" class="bulletin-card" data-tags="issue-02 thomas-metzinger consciousness body-self philosophy ethics computation">
+<article id="bulletin-metzinger-self-models" class="bulletin-card" data-tags="issue-02 thomas-metzinger consciousness body-self philosophy ethics computation">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
                   <h3>Splendor and misery of self-models: conceptual and empirical issues regarding consciousness and self-consciousness</h3>
@@ -1449,7 +1611,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-david-nichols-pharmacology" class="bulletin-card" data-tags="issue-02 david-nichols psychedelics pharmacology consciousness methods">
+<article id="bulletin-david-nichols-pharmacology" class="bulletin-card" data-tags="issue-02 david-nichols psychedelics pharmacology consciousness methods">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
                   <h3>Psychedelics: from pharmacology to phenomenology</h3>
@@ -1472,7 +1634,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-oregan-sensorimotor" class="bulletin-card" data-tags="issue-02 kevin-oregan consciousness body-self philosophy computation phenomenology">
+<article id="bulletin-oregan-sensorimotor" class="bulletin-card" data-tags="issue-02 kevin-oregan consciousness body-self philosophy computation phenomenology">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
                   <h3>On the feel of things: the sensorimotor theory of consciousness</h3>
@@ -1495,7 +1657,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-ratcliffe-hallucinations" class="bulletin-card" data-tags="issue-02 matthew-ratcliffe hallucinations phenomenology philosophy psychiatry">
+<article id="bulletin-ratcliffe-hallucinations" class="bulletin-card" data-tags="issue-02 matthew-ratcliffe hallucinations phenomenology philosophy psychiatry">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
                   <h3>Verbal hallucinations, intentionality, and interpersonal experience</h3>
@@ -1518,7 +1680,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-taves-religious-experience" class="bulletin-card" data-tags="issue-02 ann-taves religious-experience anthropology culture computation cognition">
+<article id="bulletin-taves-religious-experience" class="bulletin-card" data-tags="issue-02 ann-taves religious-experience anthropology culture computation cognition">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 2</span><span>Interview</span></p>
                   <h3>Conceptual, anthropological and cognitive issues surrounding religious experience</h3>
@@ -1541,7 +1703,22 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-carhart-harris-psychedelics" class="bulletin-card" data-tags="issue-01 robin-carhart-harris consciousness psychedelics neuroscience methods body-self">
+                </div>
+              </section>
+              <section class="bulletin-issue" data-issue="issue-01">
+                <header class="bulletin-issue__header">
+                  <div>
+                    <h3>Issue 1</h3>
+                    <p>6 entries</p>
+                  </div>
+                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
+                </header>
+                <details class="bulletin-issue__embed">
+                  <summary>Preview full Issue 1 PDF</summary>
+                  <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf#view=FitH" title="ALIUS Bulletin Issue 1 PDF" loading="lazy"></iframe>
+                </details>
+                <div class="bulletin-issue__items">
+<article id="bulletin-carhart-harris-psychedelics" class="bulletin-card" data-tags="issue-01 robin-carhart-harris consciousness psychedelics neuroscience methods body-self">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
                   <h3>Consciousness and psychedelics</h3>
@@ -1564,7 +1741,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-hohwy-conscious-modes" class="bulletin-card" data-tags="issue-01 jakob-hohwy consciousness philosophy computation classification cognition">
+<article id="bulletin-hohwy-conscious-modes" class="bulletin-card" data-tags="issue-01 jakob-hohwy consciousness philosophy computation classification cognition">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
                   <h3>On different ways of being conscious: modes of consciousness and the predictive mind</h3>
@@ -1587,7 +1764,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-luhrmann-anthropology-mind" class="bulletin-card" data-tags="issue-01 tanya-luhrmann anthropology culture religious-experience hallucinations cognition">
+<article id="bulletin-luhrmann-anthropology-mind" class="bulletin-card" data-tags="issue-01 tanya-luhrmann anthropology culture religious-experience hallucinations cognition">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
                   <h3>The anthropology of mind: exploring unusual sensations and spiritual experiences across cultures</h3>
@@ -1610,7 +1787,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-mccarthy-jones-voice-hearing" class="bulletin-card" data-tags="issue-01 simon-mccarthy-jones hallucinations psychiatry culture neuroscience cognition">
+<article id="bulletin-mccarthy-jones-voice-hearing" class="bulletin-card" data-tags="issue-01 simon-mccarthy-jones hallucinations psychiatry culture neuroscience cognition">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
                   <h3>The phenomenon of voice-hearing: an interdisciplinary approach</h3>
@@ -1633,7 +1810,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-seligman-dissociative" class="bulletin-card" data-tags="issue-01 rebecca-seligman anthropology culture consciousness psychiatry body-self">
+<article id="bulletin-seligman-dissociative" class="bulletin-card" data-tags="issue-01 rebecca-seligman anthropology culture consciousness psychiatry body-self">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
                   <h3>Towards a biocultural approach to dissociative consciousness</h3>
@@ -1656,7 +1833,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-              <article id="bulletin-windt-dreams" class="bulletin-card" data-tags="issue-01 jennifer-windt sleep-dreaming consciousness phenomenology philosophy methods">
+<article id="bulletin-windt-dreams" class="bulletin-card" data-tags="issue-01 jennifer-windt sleep-dreaming consciousness phenomenology philosophy methods">
                 <header class="bulletin-card__header">
                   <p class="bulletin-card__meta"><span>Issue 1</span><span>Interview</span></p>
                   <h3>Relocating dreams on the conceptual map: how the analysis of sleep and dreaming challenges our taxonomy of mental states</h3>
@@ -1679,6 +1856,8 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
+                </div>
+              </section>
             </div>
             <p class="bulletin-empty" hidden>No bulletin entries match those filters.</p>
           </main>
@@ -1730,46 +1909,91 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
 <script language="javascript" src="/assets/vendor/weebly-site/files/theme/files/mobile.js"></script>
 <script>
 (function() {
-  var filters = Array.prototype.slice.call(document.querySelectorAll('.bulletin-filter'));
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.bulletin-filter'));
   var cards = Array.prototype.slice.call(document.querySelectorAll('.bulletin-card'));
+  var issues = Array.prototype.slice.call(document.querySelectorAll('.bulletin-issue'));
+  var authorSelect = document.getElementById('bulletin-author-filter');
   var count = document.getElementById('bulletin-visible-count');
   var empty = document.querySelector('.bulletin-empty');
-  if (!filters.length || !cards.length) return;
-  var active = new Set();
+  if (!buttons.length || !cards.length) return;
 
-  function cardMatches(card, showAll) {
-    if (showAll) return true;
-    var tags = (card.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
+  var activeIssue = '';
+  var activeTopics = new Set();
+
+  function selectedFilters() {
     var selected = [];
-    active.forEach(function(tag) { selected.push(tag); });
-    return selected.every(function(tag) { return tags.indexOf(tag) !== -1; });
+    if (activeIssue) selected.push(activeIssue);
+    activeTopics.forEach(function(topic) { selected.push(topic); });
+    if (authorSelect && authorSelect.value) selected.push(authorSelect.value);
+    return selected;
   }
 
-  function applyFilters() {
-    var showAll = active.size === 0;
-    var visible = 0;
-    filters.forEach(function(button) {
+  function cardMatches(card, filters) {
+    if (!filters.length) return true;
+    var tags = (card.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
+    return filters.every(function(tag) { return tags.indexOf(tag) !== -1; });
+  }
+
+  function syncButtons(filters) {
+    var showAll = filters.length === 0;
+    buttons.forEach(function(button) {
       var filter = button.getAttribute('data-filter');
-      var isActive = showAll ? filter === '*' : active.has(filter);
+      var type = button.getAttribute('data-filter-type');
+      var isActive = false;
+      if (filter === '*') isActive = showAll;
+      else if (type === 'issue') isActive = activeIssue === filter;
+      else isActive = activeTopics.has(filter);
       button.classList.toggle('is-active', isActive);
       button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
+  }
+
+  function applyFilters() {
+    var filters = selectedFilters();
+    var visible = 0;
+    syncButtons(filters);
     cards.forEach(function(card) {
-      var match = cardMatches(card, showAll);
+      var match = cardMatches(card, filters);
       card.classList.toggle('is-filtered-out', !match);
       if (match) visible += 1;
+    });
+    issues.forEach(function(issue) {
+      var visibleCards = issue.querySelectorAll('.bulletin-card:not(.is-filtered-out)').length;
+      issue.classList.toggle('is-filtered-out', visibleCards === 0);
     });
     if (count) count.textContent = String(visible);
     if (empty) empty.hidden = visible !== 0;
   }
 
-  filters.forEach(function(button) {
+  buttons.forEach(function(button) {
     button.addEventListener('click', function() {
       var filter = button.getAttribute('data-filter');
-      if (filter === '*') active.clear();
-      else if (active.has(filter)) active.delete(filter);
-      else active.add(filter);
+      var type = button.getAttribute('data-filter-type');
+      if (filter === '*') {
+        activeIssue = '';
+        activeTopics.clear();
+        if (authorSelect) authorSelect.value = '';
+      } else if (type === 'issue') {
+        activeIssue = activeIssue === filter ? '' : filter;
+      } else if (activeTopics.has(filter)) {
+        activeTopics.delete(filter);
+      } else {
+        activeTopics.add(filter);
+      }
       applyFilters();
+    });
+  });
+
+  if (authorSelect) {
+    authorSelect.addEventListener('change', applyFilters);
+  }
+
+  Array.prototype.slice.call(document.querySelectorAll('.bulletin-issue__embed')).forEach(function(details) {
+    details.addEventListener('toggle', function() {
+      var frame = details.querySelector('iframe[data-pdf-src]');
+      if (details.open && frame && !frame.getAttribute('src')) {
+        frame.setAttribute('src', frame.getAttribute('data-pdf-src'));
+      }
     });
   });
 
