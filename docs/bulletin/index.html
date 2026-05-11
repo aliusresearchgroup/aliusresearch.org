@@ -516,13 +516,40 @@ body.wsite-page-bulletin #wsite-content .bulletin-issue__link:focus {
 body.wsite-page-bulletin #wsite-content .bulletin-issue__embed {
   border: 1px solid #dbe4dc;
   border-radius: 8px;
-  margin: 0 0 10px;
+  margin: 0 0 16px;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-issue__embed summary {
+  align-items: center;
   color: #2f382f;
   cursor: pointer;
+  display: flex;
   font: 700 13px/1.35 Raleway, Arial, sans-serif;
+  gap: 12px;
+  justify-content: space-between;
+  list-style: none;
   padding: 11px 12px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__embed summary::-webkit-details-marker {
+  display: none;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__embed summary::after {
+  color: #3f6f25;
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 18px;
+  line-height: 1;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__embed[open] summary::after {
+  content: "-";
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__summary-title {
+  color: #2f382f;
+  font: 700 17px/1.25 Raleway, Arial, sans-serif;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-issue__summary-meta {
+  color: #65706a;
+  font: 600 12px/1.35 Raleway, Arial, sans-serif;
+  margin-left: auto;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-issue__embed iframe {
   border: 0;
@@ -628,6 +655,122 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__links a:first-child:focu
   background: #3f6f25;
   color: #fff;
 }
+body.wsite-page-bulletin #wsite-content .bulletin-card__links .bulletin-card__doi,
+body.wsite-page-bulletin #wsite-content .bulletin-card__links a[href^="https://doi.org/"] {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #24713d;
+  min-height: 34px;
+  padding: 0 2px;
+  text-decoration: underline;
+  text-decoration-color: rgba(36, 113, 61, 0.32);
+  text-underline-offset: 3px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__links .bulletin-card__doi:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-card__links .bulletin-card__doi:focus,
+body.wsite-page-bulletin #wsite-content .bulletin-card__links a[href^="https://doi.org/"]:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-card__links a[href^="https://doi.org/"]:focus {
+  background: transparent;
+  color: #1a4d2e;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__cite,
+body.wsite-page-bulletin .bulletin-citation-modal button {
+  border: 1px solid #b8c9b4;
+  border-radius: 6px;
+  color: #3f6f25;
+  cursor: pointer;
+  display: inline-flex;
+  font: 700 13px/1 Raleway, Arial, sans-serif;
+  padding: 10px 12px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__cite {
+  background: #fff;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__cite:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-card__cite:focus {
+  background: #edf4ea;
+  color: #2f5e1e;
+}
+body.wsite-page-bulletin .bulletin-citation-modal[hidden] {
+  display: none;
+}
+body.wsite-page-bulletin .bulletin-citation-modal {
+  background: rgba(32, 42, 38, 0.58);
+  bottom: 0;
+  display: grid;
+  left: 0;
+  padding: 24px;
+  place-items: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__dialog {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  box-sizing: border-box;
+  max-height: min(720px, calc(100vh - 48px));
+  max-width: min(660px, 100%);
+  overflow: auto;
+  padding: 22px;
+  width: 100%;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__header {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__header h2 {
+  color: #2f382f;
+  font-size: 22px !important;
+  line-height: 1.2;
+  margin: 0;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__close {
+  background: #fff;
+  flex: 0 0 auto;
+  padding: 8px 10px;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__title,
+body.wsite-page-bulletin .bulletin-citation-modal__authors {
+  margin: 0 0 10px;
+  max-width: none;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__authors {
+  color: #65706a;
+  font: 600 13px/1.45 Raleway, Arial, sans-serif !important;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__text {
+  background: #f6f8f7;
+  border: 1px solid #dbe4dc;
+  border-radius: 7px;
+  color: #2f382f;
+  font: 13px/1.5 "Courier New", monospace;
+  margin: 14px 0;
+  overflow: auto;
+  padding: 14px;
+  white-space: pre-wrap;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__downloads button {
+  background: #fff;
+}
+body.wsite-page-bulletin .bulletin-citation-modal__downloads button:hover,
+body.wsite-page-bulletin .bulletin-citation-modal__downloads button:focus,
+body.wsite-page-bulletin .bulletin-citation-modal__close:hover,
+body.wsite-page-bulletin .bulletin-citation-modal__close:focus {
+  background: #edf4ea;
+  color: #2f5e1e;
+}
 body.wsite-page-bulletin #wsite-content .bulletin-card__media {
   border-top: 1px solid #e6ece7;
   margin-top: 18px;
@@ -647,6 +790,8 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
   body.wsite-page-bulletin #wsite-content .bulletin-index__intro h2 { font-size: 25px !important; }
   body.wsite-page-bulletin #wsite-content .bulletin-issue__header { display: block; }
   body.wsite-page-bulletin #wsite-content .bulletin-issue__link { margin-top: 10px; }
+  body.wsite-page-bulletin #wsite-content .bulletin-issue__embed summary { align-items: flex-start; }
+  body.wsite-page-bulletin #wsite-content .bulletin-issue__summary-meta { margin-left: 0; }
   body.wsite-page-bulletin #wsite-content .bulletin-issue__embed iframe { height: 420px; }
   body.wsite-page-bulletin #wsite-content .bulletin-card__copy { grid-template-columns: 1fr; }
   body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe { min-height: 190px; }
@@ -809,15 +954,8 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
             <p class="bulletin-result-count" aria-live="polite"><span id="bulletin-visible-count">41</span> entries shown</p>
             <div class="bulletin-list">
               <section class="bulletin-issue" data-issue="issue-07">
-                <header class="bulletin-issue__header">
-                  <div>
-                    <h3>Issue 7</h3>
-                    <p>2 entries</p>
-                  </div>
-                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
-                </header>
                 <details class="bulletin-issue__embed">
-                  <summary>Preview full Issue 7 PDF</summary>
+                  <summary><span class="bulletin-issue__summary-title">Issue 7</span><span class="bulletin-issue__summary-meta">2 entries - full issue PDF</span></summary>
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-full.pdf#view=FitH" title="ALIUS Bulletin Issue 7 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
@@ -840,7 +978,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.5281/zenodo.13907364" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.5281/zenodo.13907364" target="_blank" rel="noopener">10.5281/zenodo.13907364</a>
                 </div>
 
               </article>
@@ -863,22 +1001,15 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.5281/zenodo.13907411" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.5281/zenodo.13907411" target="_blank" rel="noopener">10.5281/zenodo.13907411</a>
                 </div>
 
               </article>
                 </div>
               </section>
               <section class="bulletin-issue" data-issue="issue-06">
-                <header class="bulletin-issue__header">
-                  <div>
-                    <h3>Issue 6</h3>
-                    <p>7 entries</p>
-                  </div>
-                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
-                </header>
                 <details class="bulletin-issue__embed">
-                  <summary>Preview full Issue 6 PDF</summary>
+                  <summary><span class="bulletin-issue__summary-title">Issue 6</span><span class="bulletin-issue__summary-meta">7 entries - full issue PDF</span></summary>
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-full.pdf#view=FitH" title="ALIUS Bulletin Issue 6 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
@@ -901,7 +1032,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-ciaunica-what-is-like-to-be-in-early-sensory-life.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.5281/zenodo.7457394" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.5281/zenodo.7457394" target="_blank" rel="noopener">10.5281/zenodo.7457394</a>
                 </div>
             <div class="bulletin-card__media">
               <p>Podcast episode</p>
@@ -927,7 +1058,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightlessness.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.5281/zenodo.7457656" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.5281/zenodo.7457656" target="_blank" rel="noopener">10.5281/zenodo.7457656</a>
                 </div>
             <div class="bulletin-card__media">
               <p>Podcast episode</p>
@@ -953,7 +1084,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.5281/zenodo.7419360" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.5281/zenodo.7419360" target="_blank" rel="noopener">10.5281/zenodo.7419360</a>
                 </div>
             <div class="bulletin-card__media">
               <p>Podcast episode</p>
@@ -979,7 +1110,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-research.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.5281/zenodo.7674054" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.5281/zenodo.7674054" target="_blank" rel="noopener">10.5281/zenodo.7674054</a>
                 </div>
 
               </article>
@@ -1002,7 +1133,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.5281/zenodo.7394901" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.5281/zenodo.7394901" target="_blank" rel="noopener">10.5281/zenodo.7394901</a>
                 </div>
 
               </article>
@@ -1025,7 +1156,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.5281/zenodo.10797875" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.5281/zenodo.10797875" target="_blank" rel="noopener">10.5281/zenodo.10797875</a>
                 </div>
             <div class="bulletin-card__media">
               <p>Accompanying lecture</p>
@@ -1057,15 +1188,8 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
               </section>
               <section class="bulletin-issue" data-issue="issue-05">
-                <header class="bulletin-issue__header">
-                  <div>
-                    <h3>Issue 5</h3>
-                    <p>5 entries</p>
-                  </div>
-                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
-                </header>
                 <details class="bulletin-issue__embed">
-                  <summary>Preview full Issue 5 PDF</summary>
+                  <summary><span class="bulletin-issue__summary-title">Issue 5</span><span class="bulletin-issue__summary-meta">5 entries - full issue PDF</span></summary>
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf#view=FitH" title="ALIUS Bulletin Issue 5 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
@@ -1088,7 +1212,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-debate-near-death-experiences-in-the-public-debate-a-scientific-perspective.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/0bzc-fc94" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/0bzc-fc94" target="_blank" rel="noopener">10.34700/0bzc-fc94</a>
                 </div>
 
               </article>
@@ -1111,7 +1235,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/mfzk-ve81" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/mfzk-ve81" target="_blank" rel="noopener">10.34700/mfzk-ve81</a>
                 </div>
 
               </article>
@@ -1134,7 +1258,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of-transformative-experiences.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/rn10-az29" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/rn10-az29" target="_blank" rel="noopener">10.34700/rn10-az29</a>
                 </div>
 
               </article>
@@ -1157,7 +1281,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/0v21-5n82" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/0v21-5n82" target="_blank" rel="noopener">10.34700/0v21-5n82</a>
                 </div>
             <div class="bulletin-card__media">
               <p>Accompanying discussion</p>
@@ -1183,22 +1307,15 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-database-for-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/wb76-w666" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/wb76-w666" target="_blank" rel="noopener">10.34700/wb76-w666</a>
                 </div>
 
               </article>
                 </div>
               </section>
               <section class="bulletin-issue" data-issue="issue-04">
-                <header class="bulletin-issue__header">
-                  <div>
-                    <h3>Issue 4</h3>
-                    <p>8 entries</p>
-                  </div>
-                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
-                </header>
                 <details class="bulletin-issue__embed">
-                  <summary>Preview full Issue 4 PDF</summary>
+                  <summary><span class="bulletin-issue__summary-title">Issue 4</span><span class="bulletin-issue__summary-meta">8 entries - full issue PDF</span></summary>
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf#view=FitH" title="ALIUS Bulletin Issue 4 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
@@ -1243,7 +1360,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-nichols-and-nichols-dmt-in-the-mammalian-brain-a-critical-appraisal.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/a5hm-fs14" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/a5hm-fs14" target="_blank" rel="noopener">10.34700/a5hm-fs14</a>
                 </div>
 
               </article>
@@ -1376,22 +1493,15 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/gza7-yy49" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/gza7-yy49" target="_blank" rel="noopener">10.34700/gza7-yy49</a>
                 </div>
 
               </article>
                 </div>
               </section>
               <section class="bulletin-issue" data-issue="issue-03">
-                <header class="bulletin-issue__header">
-                  <div>
-                    <h3>Issue 3</h3>
-                    <p>5 entries</p>
-                  </div>
-                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
-                </header>
                 <details class="bulletin-issue__embed">
-                  <summary>Preview full Issue 3 PDF</summary>
+                  <summary><span class="bulletin-issue__summary-title">Issue 3</span><span class="bulletin-issue__summary-meta">5 entries - full issue PDF</span></summary>
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf#view=FitH" title="ALIUS Bulletin Issue 3 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
@@ -1508,15 +1618,8 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
               </section>
               <section class="bulletin-issue" data-issue="issue-02">
-                <header class="bulletin-issue__header">
-                  <div>
-                    <h3>Issue 2</h3>
-                    <p>8 entries</p>
-                  </div>
-                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
-                </header>
                 <details class="bulletin-issue__embed">
-                  <summary>Preview full Issue 2 PDF</summary>
+                  <summary><span class="bulletin-issue__summary-title">Issue 2</span><span class="bulletin-issue__summary-meta">8 entries - full issue PDF</span></summary>
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf#view=FitH" title="ALIUS Bulletin Issue 2 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
@@ -1539,7 +1642,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/m6kp-c494" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/m6kp-c494" target="_blank" rel="noopener">10.34700/m6kp-c494</a>
                 </div>
 
               </article>
@@ -1562,7 +1665,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/h460-nz89" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/h460-nz89" target="_blank" rel="noopener">10.34700/h460-nz89</a>
                 </div>
 
               </article>
@@ -1585,7 +1688,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-biography-am-i-autistic-an-intellectual-autobiography.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/q2qt-2y52" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/q2qt-2y52" target="_blank" rel="noopener">10.34700/q2qt-2y52</a>
                 </div>
 
               </article>
@@ -1608,7 +1711,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/epgh-at59" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/epgh-at59" target="_blank" rel="noopener">10.34700/epgh-at59</a>
                 </div>
 
               </article>
@@ -1631,7 +1734,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-nichols-psychedelics-from-pharmacology-to-phenomenology.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/ezb7-sq10" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/ezb7-sq10" target="_blank" rel="noopener">10.34700/ezb7-sq10</a>
                 </div>
 
               </article>
@@ -1654,7 +1757,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-o-regan-on-the-feel-of-things-the-sensorimotor-theory-of-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/zam3-yk89" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/zam3-yk89" target="_blank" rel="noopener">10.34700/zam3-yk89</a>
                 </div>
 
               </article>
@@ -1677,7 +1780,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-intentionality-and-interpersonal-experience.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/913r-wa92" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/913r-wa92" target="_blank" rel="noopener">10.34700/913r-wa92</a>
                 </div>
 
               </article>
@@ -1700,22 +1803,15 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-religious.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/3qja-m432" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/3qja-m432" target="_blank" rel="noopener">10.34700/3qja-m432</a>
                 </div>
 
               </article>
                 </div>
               </section>
               <section class="bulletin-issue" data-issue="issue-01">
-                <header class="bulletin-issue__header">
-                  <div>
-                    <h3>Issue 1</h3>
-                    <p>6 entries</p>
-                  </div>
-                  <a class="bulletin-issue__link" href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf" target="_blank" rel="noopener">Open full issue PDF</a>
-                </header>
                 <details class="bulletin-issue__embed">
-                  <summary>Preview full Issue 1 PDF</summary>
+                  <summary><span class="bulletin-issue__summary-title">Issue 1</span><span class="bulletin-issue__summary-meta">6 entries - full issue PDF</span></summary>
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf#view=FitH" title="ALIUS Bulletin Issue 1 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
@@ -1738,7 +1834,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/m5ky-6w96" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/m5ky-6w96" target="_blank" rel="noopener">10.34700/m5ky-6w96</a>
                 </div>
 
               </article>
@@ -1761,7 +1857,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-hohwy-on-different-ways-of-being-conscious-modes-of-consciousness-and-the.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/8yq5-pv76" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/8yq5-pv76" target="_blank" rel="noopener">10.34700/8yq5-pv76</a>
                 </div>
 
               </article>
@@ -1784,7 +1880,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/7ppf-h459" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/7ppf-h459" target="_blank" rel="noopener">10.34700/7ppf-h459</a>
                 </div>
 
               </article>
@@ -1807,7 +1903,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-mccarthy-jones-phenomenon-of-voice-hearing-an-interdisciplinary-approach.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/pmnr-8325" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/pmnr-8325" target="_blank" rel="noopener">10.34700/pmnr-8325</a>
                 </div>
 
               </article>
@@ -1830,7 +1926,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-seligman-towards-a-biocultural-approach-to-dissociative-consciousness.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/x80s-k850" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/x80s-k850" target="_blank" rel="noopener">10.34700/x80s-k850</a>
                 </div>
 
               </article>
@@ -1853,7 +1949,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
                 <div class="bulletin-card__links">
                   <a href="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf" target="_blank" rel="noopener">Read PDF</a>
-              <a href="https://doi.org/10.34700/xhfg-wq83" target="_blank" rel="noopener">DOI</a>
+              <a class="bulletin-card__doi" href="https://doi.org/10.34700/xhfg-wq83" target="_blank" rel="noopener">10.34700/xhfg-wq83</a>
                 </div>
 
               </article>
@@ -1918,8 +2014,326 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
   var empty = document.querySelector('.bulletin-empty');
   if (!buttons.length || !cards.length) return;
 
+  var doiYears = {
+    '10.5281/zenodo.13907364': '2024',
+    '10.5281/zenodo.13907411': '2024',
+    '10.5281/zenodo.7457394': '2022',
+    '10.5281/zenodo.7457656': '2022',
+    '10.5281/zenodo.7419360': '2022',
+    '10.5281/zenodo.7674054': '2023',
+    '10.5281/zenodo.7394901': '2022',
+    '10.5281/zenodo.10797875': '2024',
+    '10.34700/0bzc-fc94': '2021',
+    '10.34700/mfzk-ve81': '2021',
+    '10.34700/rn10-az29': '2021',
+    '10.34700/0v21-5n82': '2021',
+    '10.34700/wb76-w666': '2021',
+    '10.34700/a5hm-fs14': '2020',
+    '10.34700/gza7-yy49': '2020',
+    '10.34700/m6kp-c494': '2018',
+    '10.34700/h460-nz89': '2018',
+    '10.34700/q2qt-2y52': '2018',
+    '10.34700/epgh-at59': '2018',
+    '10.34700/ezb7-sq10': '2018',
+    '10.34700/zam3-yk89': '2018',
+    '10.34700/913r-wa92': '2018',
+    '10.34700/3qja-m432': '2018',
+    '10.34700/m5ky-6w96': '2017',
+    '10.34700/8yq5-pv76': '2017',
+    '10.34700/7ppf-h459': '2017',
+    '10.34700/pmnr-8325': '2017',
+    '10.34700/x80s-k850': '2017',
+    '10.34700/xhfg-wq83': '2017'
+  };
+  var issueYears = {
+    '1': '2017',
+    '2': '2018',
+    '3': '2019',
+    '4': '2020',
+    '5': '2021',
+    '6': '2024',
+    '7': '2024'
+  };
+  var citationModal = null;
+  var activeCitation = null;
+
   var activeIssue = '';
   var activeTopics = new Set();
+
+  function cleanText(value) {
+    return (value || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function nodeText(node) {
+    return node ? cleanText(node.textContent) : '';
+  }
+
+  function doiFromHref(href) {
+    var match = (href || '').match(/doi\.org\/(.+)$/i);
+    return match ? decodeURIComponent(match[1]) : '';
+  }
+
+  function canonicalUrl(path) {
+    if (!path) return 'https://www.aliusresearch.org/bulletin/';
+    if (/^https?:\/\//i.test(path)) return path;
+    if (path.charAt(0) === '/') return 'https://www.aliusresearch.org' + path;
+    return 'https://www.aliusresearch.org/' + path.replace(/^\/+/, '');
+  }
+
+  function splitNames(value) {
+    return cleanText(value)
+      .replace(/\s*&\s*/g, ' and ')
+      .split(/\s+and\s+/i)
+      .map(cleanText)
+      .filter(Boolean);
+  }
+
+  function appendUnique(names, name) {
+    var normalized = cleanText(name).toLowerCase();
+    if (!normalized) return;
+    var exists = names.some(function(existing) {
+      return cleanText(existing).toLowerCase() === normalized;
+    });
+    if (!exists) names.push(cleanText(name));
+  }
+
+  function parseAuthors(people) {
+    var primary = cleanText(people.split(',')[0]);
+    var authors = splitNames(primary);
+    var roleMatch = people.match(/(?:interviewed|hosted|recorded) by ([^;]+)/i);
+    if (roleMatch) {
+      splitNames(roleMatch[1]).forEach(function(name) {
+        appendUnique(authors, name);
+      });
+    }
+    return authors.length ? authors : ['ALIUS contributors'];
+  }
+
+  function parsePerson(name) {
+    var particles = {
+      da: true, de: true, del: true, der: true, di: true, du: true,
+      la: true, le: true, van: true, von: true
+    };
+    var parts = cleanText(name).split(/\s+/).filter(Boolean);
+    if (parts.length <= 1) return { given: '', family: parts[0] || '' };
+    var familyStart = parts.length - 1;
+    var beforeFamily = parts[familyStart - 1] || '';
+    if (particles[beforeFamily.toLowerCase()]) familyStart -= 1;
+    return {
+      given: parts.slice(0, familyStart).join(' '),
+      family: parts.slice(familyStart).join(' ')
+    };
+  }
+
+  function initials(given) {
+    return cleanText(given)
+      .replace(/\./g, '')
+      .split(/[\s-]+/)
+      .filter(Boolean)
+      .map(function(part) { return part.charAt(0).toUpperCase() + '.'; })
+      .join(' ');
+  }
+
+  function apaName(name) {
+    var person = parsePerson(name);
+    var givenInitials = initials(person.given);
+    return person.family + (givenInitials ? ', ' + givenInitials : '');
+  }
+
+  function apaAuthors(authors) {
+    var formatted = authors.map(apaName);
+    if (formatted.length <= 1) return formatted[0] || 'ALIUS contributors';
+    if (formatted.length === 2) return formatted[0] + ' & ' + formatted[1];
+    return formatted.slice(0, -1).join(', ') + ', & ' + formatted[formatted.length - 1];
+  }
+
+  function bibName(name) {
+    var person = parsePerson(name);
+    return person.family + (person.given ? ', ' + person.given : '');
+  }
+
+  function slug(value) {
+    return cleanText(value)
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '')
+      .slice(0, 42) || 'alius-bulletin';
+  }
+
+  function bibEscape(value) {
+    return String(value || '').replace(/[{}\\]/g, '');
+  }
+
+  function citationKey(meta) {
+    var first = parsePerson(meta.authors[0] || 'Alius').family || 'Alius';
+    return slug(first + '-' + meta.year + '-' + meta.title);
+  }
+
+  function buildCitationMeta(card) {
+    var metaSpans = Array.prototype.slice.call(card.querySelectorAll('.bulletin-card__meta span'));
+    var issue = (nodeText(metaSpans[0]).match(/\d+/) || [''])[0];
+    var people = nodeText(card.querySelector('.bulletin-card__people'));
+    var pdf = card.querySelector('.bulletin-card__links a[href$=".pdf"]');
+    var doiLink = card.querySelector('.bulletin-card__links a[href^="https://doi.org/"]');
+    var doi = doiLink ? doiFromHref(doiLink.href) : '';
+    return {
+      id: card.id || slug(nodeText(card.querySelector('h3'))),
+      title: nodeText(card.querySelector('h3')),
+      people: people,
+      authors: parseAuthors(people),
+      issue: issue,
+      itemType: nodeText(metaSpans[1]) || 'Article',
+      year: doiYears[doi] || issueYears[issue] || '',
+      doi: doi,
+      url: doi ? 'https://doi.org/' + doi : canonicalUrl(pdf ? pdf.getAttribute('href') : ''),
+      pdf: canonicalUrl(pdf ? pdf.getAttribute('href') : '')
+    };
+  }
+
+  function apaCitation(meta) {
+    var locator = meta.doi ? 'https://doi.org/' + meta.doi : meta.url;
+    return apaAuthors(meta.authors) + ' (' + meta.year + '). ' + meta.title +
+      '. ALIUS Bulletin, ' + meta.issue + '. ' + locator;
+  }
+
+  function bibtexCitation(meta) {
+    var lines = [
+      '@article{' + citationKey(meta) + ',',
+      '  author = {' + meta.authors.map(bibName).map(bibEscape).join(' and ') + '},',
+      '  title = {' + bibEscape(meta.title) + '},',
+      '  journal = {ALIUS Bulletin},',
+      '  year = {' + bibEscape(meta.year) + '},',
+      '  volume = {' + bibEscape(meta.issue) + '},'
+    ];
+    if (meta.doi) lines.push('  doi = {' + bibEscape(meta.doi) + '},');
+    lines.push('  url = {' + bibEscape(meta.url) + '}');
+    lines.push('}');
+    return lines.join('\n');
+  }
+
+  function risCitation(meta) {
+    var lines = ['TY  - JOUR'];
+    meta.authors.forEach(function(author) { lines.push('AU  - ' + bibName(author)); });
+    lines.push('TI  - ' + meta.title);
+    lines.push('T2  - ALIUS Bulletin');
+    lines.push('PY  - ' + meta.year);
+    lines.push('VL  - ' + meta.issue);
+    if (meta.doi) lines.push('DO  - ' + meta.doi);
+    lines.push('UR  - ' + meta.url);
+    lines.push('ER  - ');
+    return lines.join('\n');
+  }
+
+  function endnoteCitation(meta) {
+    var lines = ['%0 Journal Article'];
+    meta.authors.forEach(function(author) { lines.push('%A ' + bibName(author)); });
+    lines.push('%T ' + meta.title);
+    lines.push('%J ALIUS Bulletin');
+    lines.push('%D ' + meta.year);
+    lines.push('%V ' + meta.issue);
+    if (meta.doi) lines.push('%R ' + meta.doi);
+    lines.push('%U ' + meta.url);
+    return lines.join('\n');
+  }
+
+  function citationContent(meta, format) {
+    if (format === 'ris') return risCitation(meta);
+    if (format === 'endnote') return endnoteCitation(meta);
+    return bibtexCitation(meta);
+  }
+
+  function getCitationModal() {
+    if (citationModal) return citationModal;
+    citationModal = document.createElement('div');
+    citationModal.className = 'bulletin-citation-modal';
+    citationModal.hidden = true;
+    citationModal.innerHTML = [
+      '<div class="bulletin-citation-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="bulletin-citation-title">',
+      '  <div class="bulletin-citation-modal__header">',
+      '    <h2 id="bulletin-citation-title">Citation</h2>',
+      '    <button type="button" class="bulletin-citation-modal__close" aria-label="Close citation window">Close</button>',
+      '  </div>',
+      '  <p class="bulletin-citation-modal__title"></p>',
+      '  <p class="bulletin-citation-modal__authors"></p>',
+      '  <pre class="bulletin-citation-modal__text"></pre>',
+      '  <div class="bulletin-citation-modal__downloads">',
+      '    <button type="button" data-format="bibtex">Download BibTeX</button>',
+      '    <button type="button" data-format="ris">Download RIS</button>',
+      '    <button type="button" data-format="endnote">Download EndNote</button>',
+      '  </div>',
+      '</div>'
+    ].join('');
+    document.body.appendChild(citationModal);
+    citationModal.addEventListener('click', function(event) {
+      if (event.target === citationModal || event.target.classList.contains('bulletin-citation-modal__close')) {
+        closeCitationModal();
+      }
+    });
+    citationModal.querySelector('.bulletin-citation-modal__downloads').addEventListener('click', function(event) {
+      var button = event.target.closest('button[data-format]');
+      if (!button || !activeCitation) return;
+      downloadCitation(activeCitation, button.getAttribute('data-format'));
+    });
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && citationModal && !citationModal.hidden) {
+        closeCitationModal();
+      }
+    });
+    return citationModal;
+  }
+
+  function openCitationModal(meta) {
+    var modal = getCitationModal();
+    activeCitation = meta;
+    modal.querySelector('.bulletin-citation-modal__title').textContent = meta.title;
+    modal.querySelector('.bulletin-citation-modal__authors').textContent = apaAuthors(meta.authors);
+    modal.querySelector('.bulletin-citation-modal__text').textContent = apaCitation(meta);
+    modal.hidden = false;
+    modal.querySelector('.bulletin-citation-modal__close').focus();
+  }
+
+  function closeCitationModal() {
+    if (!citationModal) return;
+    citationModal.hidden = true;
+    activeCitation = null;
+  }
+
+  function downloadCitation(meta, format) {
+    var extension = format === 'ris' ? 'ris' : (format === 'endnote' ? 'enw' : 'bib');
+    var mime = format === 'ris' ? 'application/x-research-info-systems' : 'text/plain';
+    var blob = new Blob([citationContent(meta, format)], { type: mime + ';charset=utf-8' });
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = slug(meta.title) + '.' + extension;
+    document.body.appendChild(link);
+    link.click();
+    URL.revokeObjectURL(link.href);
+    link.remove();
+  }
+
+  function enhanceCitationTools() {
+    cards.forEach(function(card) {
+      var links = card.querySelector('.bulletin-card__links');
+      if (!links || links.querySelector('.bulletin-card__cite')) return;
+      var doiLink = links.querySelector('a[href^="https://doi.org/"]');
+      if (doiLink) {
+        var doi = doiFromHref(doiLink.href);
+        doiLink.classList.add('bulletin-card__doi');
+        doiLink.textContent = doi;
+        doiLink.setAttribute('aria-label', 'DOI ' + doi);
+      }
+      var citeButton = document.createElement('button');
+      citeButton.type = 'button';
+      citeButton.className = 'bulletin-card__cite';
+      citeButton.textContent = 'Cite';
+      citeButton.addEventListener('click', function() {
+        openCitationModal(buildCitationMeta(card));
+      });
+      links.appendChild(citeButton);
+    });
+  }
 
   function selectedFilters() {
     var selected = [];
@@ -1988,6 +2402,8 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
   if (authorSelect) {
     authorSelect.addEventListener('change', applyFilters);
   }
+
+  enhanceCitationTools();
 
   Array.prototype.slice.call(document.querySelectorAll('.bulletin-issue__embed')).forEach(function(details) {
     details.addEventListener('toggle', function() {
