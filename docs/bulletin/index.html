@@ -671,8 +671,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__links a[href^="https://d
   color: #1a4d2e;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-card__cite,
-body.wsite-page-bulletin .bulletin-citation-modal button,
-body.wsite-page-bulletin .bulletin-citation-modal__format-link {
+body.wsite-page-bulletin .bulletin-citation-modal button {
   border: 1px solid #b8c9b4;
   border-radius: 6px;
   color: #3f6f25;
@@ -759,14 +758,11 @@ body.wsite-page-bulletin .bulletin-citation-modal__downloads {
   flex-wrap: wrap;
   gap: 8px;
 }
-body.wsite-page-bulletin .bulletin-citation-modal__downloads button,
-body.wsite-page-bulletin .bulletin-citation-modal__format-link {
+body.wsite-page-bulletin .bulletin-citation-modal__downloads button {
   background: #fff;
 }
 body.wsite-page-bulletin .bulletin-citation-modal__downloads button:hover,
 body.wsite-page-bulletin .bulletin-citation-modal__downloads button:focus,
-body.wsite-page-bulletin .bulletin-citation-modal__format-link:hover,
-body.wsite-page-bulletin .bulletin-citation-modal__format-link:focus,
 body.wsite-page-bulletin .bulletin-citation-modal__close:hover,
 body.wsite-page-bulletin .bulletin-citation-modal__close:focus {
   background: #edf4ea;
@@ -2205,6 +2201,36 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     return bibtexCitation(meta);
   }
 
+  function citationDownloadSettings(format) {
+    if (format === 'ris') {
+      return {
+        extension: 'ris',
+        mimeType: 'application/x-research-info-systems'
+      };
+    }
+    return {
+      extension: 'enw',
+      mimeType: 'application/x-endnote-refer'
+    };
+  }
+
+  function downloadCitation(meta, format) {
+    var settings = citationDownloadSettings(format);
+    var blob = new Blob([citationContent(meta, format)], {
+      type: settings.mimeType + ';charset=utf-8'
+    });
+    var url = URL.createObjectURL(blob);
+    var link = document.createElement('a');
+    link.href = url;
+    link.download = slug(meta.title) + '.' + settings.extension;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(function() {
+      URL.revokeObjectURL(url);
+    }, 1000);
+  }
+
   function getCitationModal() {
     if (citationModal) return citationModal;
     citationModal = document.createElement('div');
@@ -2220,9 +2246,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
       '  <p class="bulletin-citation-modal__authors"></p>',
       '  <pre class="bulletin-citation-modal__text"></pre>',
       '  <div class="bulletin-citation-modal__downloads">',
-      '    <a class="bulletin-citation-modal__format-link" data-format="bibtex" href="#">BibTeX</a>',
-      '    <a class="bulletin-citation-modal__format-link" data-format="ris" href="#">RIS</a>',
-      '    <a class="bulletin-citation-modal__format-link" data-format="endnote" href="#">EndNote</a>',
+      '    <button type="button" data-format="bibtex">BibTeX</button>',
+      '    <button type="button" data-format="ris">RIS</button>',
+      '    <button type="button" data-format="endnote">EndNote</button>',
       '  </div>',
       '</div>'
     ].join('');
@@ -2230,6 +2256,15 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     citationModal.addEventListener('click', function(event) {
       if (event.target === citationModal || event.target.classList.contains('bulletin-citation-modal__close')) {
         closeCitationModal();
+      }
+      var formatButton = event.target.closest ? event.target.closest('.bulletin-citation-modal__downloads button') : null;
+      if (formatButton && activeCitation) {
+        var format = formatButton.getAttribute('data-format');
+        if (format === 'bibtex') {
+          citationModal.querySelector('.bulletin-citation-modal__text').textContent = bibtexCitation(activeCitation);
+          return;
+        }
+        downloadCitation(activeCitation, format);
       }
     });
     document.addEventListener('keydown', function(event) {
@@ -2246,9 +2281,6 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     modal.querySelector('.bulletin-citation-modal__title').textContent = meta.title;
     modal.querySelector('.bulletin-citation-modal__authors').textContent = apaAuthors(meta.authors);
     modal.querySelector('.bulletin-citation-modal__text').textContent = apaCitation(meta);
-    Array.prototype.forEach.call(modal.querySelectorAll('.bulletin-citation-modal__format-link'), function(link) {
-      link.href = citationPageUrl(meta, link.getAttribute('data-format'));
-    });
     modal.hidden = false;
     modal.querySelector('.bulletin-citation-modal__close').focus();
   }
@@ -2257,10 +2289,6 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     if (!citationModal) return;
     citationModal.hidden = true;
     activeCitation = null;
-  }
-
-  function citationPageUrl(meta, format) {
-    return '/bulletin/citation/?format=' + encodeURIComponent(format) + '#citation=' + encodeURIComponent(citationContent(meta, format));
   }
 
   function ensureDoiRow(links, doiLink) {
