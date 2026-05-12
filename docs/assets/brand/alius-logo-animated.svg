@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="309" height="161" viewBox="0 0 309 161">
+<svg xmlns="http://www.w3.org/2000/svg" width="357" height="161" viewBox="-24 0 357 161">
   <title>ALIUS animated logo</title>
   <desc>ALIUS logo recreated with Century Gothic text and animated vector leaf.</desc>
-  <rect width="309" height="161" fill="#fefefe"/>
-  <svg x="0" y="0" width="90" height="98" viewBox="0 0 1023 1111" preserveAspectRatio="none" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;overflow:hidden;">
+  <rect x="-24" width="357" height="161" fill="#fefefe"/>
+  <g fill="#145d35" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400">
+    <text x="89.5" y="89.9" font-size="86.4" letter-spacing="0">ALIUS</text>
+    <text x="4.2" y="123.5" font-size="19.3" letter-spacing="0">Interdisciplinary research group</text>
+    <text x="-0.6" y="154.8" font-size="19.3" letter-spacing="0">on the diversity of consciousness</text>
+  </g>
+  <svg x="0" y="0" width="90" height="98" viewBox="0 0 1023 1111" preserveAspectRatio="none" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;overflow:visible;">
     <title>ALIUS animated vector logo</title>
       <desc>Three vector leaf paths animated with SVG path keyframes; overlap tones are produced by multiply blending, not embedded bitmap frames.</desc>
       <style><![CDATA[
@@ -21,9 +26,4 @@
         </path>
       </g>
   </svg>
-  <g fill="#145d35" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400">
-    <text x="89.5" y="89.9" font-size="86.4" letter-spacing="0">ALIUS</text>
-    <text x="4.2" y="123.5" font-size="19.3" letter-spacing="0">Interdisciplinary research group</text>
-    <text x="-0.6" y="154.8" font-size="19.3" letter-spacing="0">on the diversity of consciousness</text>
-  </g>
 </svg>
