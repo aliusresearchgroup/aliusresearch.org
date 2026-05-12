@@ -15,6 +15,11 @@
     return node ? node.value.trim() : "";
   }
 
+  function positiveInteger(value, fallback) {
+    const parsed = Number.parseInt(value, 10);
+    return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+  }
+
   function slugify(value) {
     const slug = value
       .toLowerCase()
@@ -76,7 +81,7 @@
   }
 
   function previewQuote(value) {
-    return `&ldquo;${htmlEscape(stripOuterQuotationMarks(value))}&rdquo;`;
+    return htmlEscape(stripOuterQuotationMarks(value));
   }
 
   function paragraphs(value) {
@@ -107,10 +112,12 @@
     const interviewer = valueOf("interviewerName") || "Interviewer Name";
     const slug = slugify(valueOf("slug") || `${interviewee}-${title}`);
     const citation = valueOf("citation") || `${interviewee} & ${interviewer} (${valueOf("year") || "2026"}). ${title}. ALIUS Bulletin.`;
+    const citedStartPage = (citation.match(/,\s*(\d+)\s*[-\u2013\u2014]/) || [])[1];
     return {
       slug,
       issueNumber: valueOf("issueNumber") || "future",
       year: valueOf("year") || "2026",
+      startPage: positiveInteger(valueOf("startPage"), positiveInteger(citedStartPage, 1)),
       issueDate: valueOf("issueDate"),
       editors: valueOf("editors"),
       title,
@@ -199,7 +206,7 @@
       "\\newcommand{\\AliusContributor}[2]{\\begin{minipage}[t]{0.46\\linewidth}{\\AliusSans\\fontsize{10}{12}\\selectfont\\textcolor{AliusQuestionGreen}{#1}\\par}{\\AliusSerif\\fontsize{10}{12}\\selectfont #2\\par}\\end{minipage}}",
       "\\newcommand{\\AliusQuestion}[1]{\\vspace{4mm}{\\AliusSans\\fontsize{12.5}{17.2}\\selectfont\\textcolor{AliusQuestionGreen}{#1}\\par}\\vspace{1.5mm}}",
       "\\newcommand{\\AliusParagraph}[1]{{\\AliusSerif\\fontsize{14}{19.5}\\selectfont\\justifying\\textcolor{AliusTextBlack}{#1}\\par}\\vspace{2.2mm}}",
-      "\\newcommand{\\AliusPullQuote}[1]{\\vspace{4mm}\\begin{center}\\begin{minipage}{0.78\\linewidth}\\centering{\\AliusQuoteFont\\itshape\\fontsize{18}{22}\\selectfont\\textcolor{AliusQuoteGray}{``#1''}\\par}\\end{minipage}\\end{center}\\vspace{4mm}}",
+      "\\newcommand{\\AliusPullQuote}[1]{\\vspace{4mm}\\begin{center}\\begin{minipage}{0.86\\linewidth}\\centering{\\AliusSansLight\\itshape\\fontsize{18}{23}\\selectfont\\textcolor{AliusQuoteGray}{\\makebox[0pt][r]{\\fontsize{26}{26}\\selectfont``\\hspace{5mm}}#1\\makebox[0pt][l]{\\hspace{5mm}\\fontsize{26}{26}\\selectfont''}}\\par}\\end{minipage}\\end{center}\\vspace{4mm}}",
       "\\newcommand{\\AliusSectionHeading}[1]{\\vspace{5mm}{\\AliusSans\\fontsize{15}{18}\\selectfont #1\\par}\\vspace{2mm}}",
       "\\newcommand{\\AliusReferenceEntry}[1]{{\\AliusSerif\\fontsize{11.5}{14}\\selectfont #1\\par}}",
       "\\begin{document}",
@@ -381,29 +388,57 @@
     `;
   }
 
-  function previewHtml(data) {
-    const qas = data.questions.map((item) => {
-      const answer = paragraphs(item.answer)
-        .map((paragraph) => `<p class="alius-print-answer">${htmlEscape(paragraph)}</p>`)
-        .join("");
-      const quote = item.quote ? `<blockquote class="alius-print-quote">${previewQuote(item.quote)}</blockquote>` : "";
-      return [
-        item.question ? `<p class="alius-print-question">${htmlEscape(item.question)}</p>` : "",
-        answer,
-        quote
-      ].join("");
-    }).join("");
+  function issueNumberText(data) {
+    return String(data.issueNumber || "")
+      .replace(/^n\s*/i, "")
+      .replace(/^n\u00b0\s*/i, "")
+      .trim() || "future";
+  }
+
+  function runningName(data) {
+    const name = String(data.interviewee || "").trim();
+    if (!name) return "ALIUS";
+    const parts = name.split(/\s+/).filter(Boolean);
+    return parts.length > 1 ? parts[parts.length - 1] : parts[0];
+  }
+
+  function runningTitle(data) {
+    const title = String(data.title || "").replace(/\s+/g, " ").trim();
+    const max = 78;
+    return title.length > max ? `${title.slice(0, max - 1).trim()}...` : title;
+  }
+
+  function pageNumber(data, pageIndex) {
+    return data.startPage + pageIndex - 1;
+  }
+
+  function splitForPrint(paragraph) {
+    const text = String(paragraph || "").replace(/\s+/g, " ").trim();
+    if (text.length <= 1150) return [text];
+    const sentenceParts = text.match(/[^.!?]+[.!?]+["')\]]*|.+$/g) || [text];
+    const chunks = [];
+    let current = "";
+    sentenceParts.forEach((part) => {
+      const next = current ? `${current} ${part.trim()}` : part.trim();
+      if (next.length > 950 && current) {
+        chunks.push(current);
+        current = part.trim();
+      } else {
+        current = next;
+      }
+    });
+    if (current) chunks.push(current);
+    return chunks;
+  }
+
+  function previewIntroHtml(data) {
     const abstract = data.abstract
       ? `<section class="alius-print-abstract-block"><h3>Abstract</h3>${paragraphs(data.abstract).map((paragraph) => `<p class="alius-print-abstract">${htmlEscape(paragraph)}</p>`).join("")}</section>`
       : "";
     const keywords = data.keywords
       ? `<p class="alius-print-keywords"><strong>Keywords:</strong> ${htmlEscape(data.keywords)}</p>`
       : "";
-    const references = lines(data.references).length
-      ? `<h3 class="alius-print-section">References</h3>${lines(data.references).map((line) => `<p class="alius-print-answer">${htmlEscape(line)}</p>`).join("")}`
-      : "";
     return `
-      <article class="alius-print-page">
         <h2 class="alius-print-title">${htmlEscape(data.title)}</h2>
         <div class="alius-print-front">
           <div class="alius-print-front-left">
@@ -419,19 +454,87 @@
         </div>
         ${abstract}
         ${keywords}
-        ${qas}
-        ${references}
-        <footer class="alius-print-footer">
-          <span>ALIUS Bulletin n&deg;${htmlEscape(data.issueNumber)} (${htmlEscape(data.year)})</span>
-          <span>aliusresearch.org/bulletin</span>
-        </footer>
-      </article>
     `;
   }
 
-  function refreshPreview() {
+  function previewBlocks(data) {
+    const blocks = [];
+    data.questions.forEach((item) => {
+      if (item.question) {
+        blocks.push(`<p class="alius-print-question">${htmlEscape(item.question)}</p>`);
+      }
+      paragraphs(item.answer).forEach((paragraph) => {
+        splitForPrint(paragraph).forEach((chunk, index) => {
+          const continuation = index > 0 ? " is-continuation" : "";
+          blocks.push(`<p class="alius-print-answer${continuation}">${htmlEscape(chunk)}</p>`);
+        });
+      });
+      if (item.quote) {
+        blocks.push(`<blockquote class="alius-print-quote">${previewQuote(item.quote)}</blockquote>`);
+      }
+    });
+    if (lines(data.references).length) {
+      blocks.push('<h3 class="alius-print-section">References</h3>');
+      lines(data.references).forEach((line) => {
+        blocks.push(`<p class="alius-print-answer">${htmlEscape(line)}</p>`);
+      });
+    }
+    return blocks;
+  }
+
+  function createPrintPage(data, pageIndex) {
+    const article = document.createElement("article");
+    article.className = pageIndex > 1 ? "alius-print-page is-continuation" : "alius-print-page";
+    const header = pageIndex > 1
+      ? `<header class="alius-print-running-head"><span>${htmlEscape(runningName(data))} - ${htmlEscape(runningTitle(data))}</span><span class="alius-print-page-number">${pageNumber(data, pageIndex)}</span></header>`
+      : "";
+    article.innerHTML = `
+      ${header}
+      <div class="alius-print-flow"></div>
+      <footer class="alius-print-footer">
+        <span>ALIUS Bulletin n&deg;${htmlEscape(issueNumberText(data))} (${htmlEscape(data.year)})</span>
+        <span>aliusresearch.org/bulletin</span>
+      </footer>
+    `;
+    return article;
+  }
+
+  function isPageOverflowing(page) {
+    const flow = $(".alius-print-flow", page);
+    const footer = $(".alius-print-footer", page);
+    if (!flow || !footer) return false;
+    return flow.getBoundingClientRect().bottom > footer.getBoundingClientRect().top + 12;
+  }
+
+  function renderPaginatedPreview(data) {
     const preview = $("#interview-preview");
-    if (preview) preview.innerHTML = previewHtml(collectData());
+    if (!preview) return;
+
+    preview.innerHTML = "";
+    let pageIndex = 1;
+    let page = createPrintPage(data, pageIndex);
+    preview.appendChild(page);
+    let flow = $(".alius-print-flow", page);
+    flow.insertAdjacentHTML("beforeend", previewIntroHtml(data));
+
+    previewBlocks(data).forEach((block) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "alius-print-block";
+      wrapper.innerHTML = block;
+      flow.appendChild(wrapper);
+      if (isPageOverflowing(page) && flow.children.length > 1) {
+        wrapper.remove();
+        pageIndex += 1;
+        page = createPrintPage(data, pageIndex);
+        preview.appendChild(page);
+        flow = $(".alius-print-flow", page);
+        flow.appendChild(wrapper);
+      }
+    });
+  }
+
+  function refreshPreview() {
+    renderPaginatedPreview(collectData());
   }
 
   function addQuestion(seed) {
@@ -491,6 +594,7 @@
       setStatus("Use the browser print dialog to save as PDF.");
       window.print();
     });
+    window.addEventListener("beforeprint", refreshPreview);
     document.addEventListener("input", (event) => {
       if (event.target.closest("#interview-generator-form")) refreshPreview();
     });
@@ -504,6 +608,9 @@
     });
     bindEvents();
     refreshPreview();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(refreshPreview).catch(() => {});
+    }
   }
 
   if (document.readyState === "loading") {

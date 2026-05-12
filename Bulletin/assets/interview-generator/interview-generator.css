@@ -36,6 +36,18 @@
   --alius-line: #dbe4dc;
   --alius-soft: #f6f8f4;
   --alius-paper: #ffffff;
+  --alius-page-width: 210mm;
+  --alius-page-height: 297mm;
+  --alius-page-x: 31.75mm;
+  --alius-page-top-first: 25.4mm;
+  --alius-page-top-running: 34.8mm;
+  --alius-page-bottom: 22mm;
+  --alius-rule: #7f7f7f;
+}
+
+@page {
+  margin: 0;
+  size: A4;
 }
 
 body.wsite-page-bulletin-interview-generator {
@@ -246,6 +258,8 @@ body.wsite-page-bulletin-interview-generator {
 
 .generator-preview-wrap {
   overflow: hidden;
+  position: sticky;
+  top: 18px;
 }
 
 .preview-toolbar {
@@ -262,14 +276,60 @@ body.wsite-page-bulletin-interview-generator {
   font: 700 13px/1.2 "Raleway", "Alius Lato", sans-serif;
 }
 
+#interview-preview {
+  background: #e9ede7;
+  max-height: calc(100vh - 116px);
+  overflow: auto;
+  padding: 18px;
+}
+
 .alius-print-page {
   background: #fff;
   box-sizing: border-box;
   color: #000;
+  display: block;
+  font-family: "Alius Lato", sans-serif;
+  height: var(--alius-page-height);
+  margin: 0 auto 18px;
+  overflow: hidden;
+  padding: var(--alius-page-top-first) var(--alius-page-x) var(--alius-page-bottom);
+  position: relative;
+  width: var(--alius-page-width);
+  box-shadow: 0 8px 26px rgba(38, 49, 42, 0.16);
+}
+
+.alius-print-page.is-continuation {
+  padding-top: var(--alius-page-top-running);
+}
+
+.alius-print-flow {
+  box-sizing: border-box;
+}
+
+.alius-print-running-head {
+  align-items: baseline;
+  border-bottom: 1px solid var(--alius-rule);
+  box-sizing: border-box;
+  color: #8f8f8f;
   display: flex;
-  flex-direction: column;
-  min-height: 842px;
-  padding: 66px 64px 38px;
+  font-family: "Alius Cormorant", serif;
+  font-size: 18px;
+  font-weight: 300;
+  justify-content: space-between;
+  left: var(--alius-page-x);
+  line-height: 1.2;
+  padding-bottom: 8px;
+  position: absolute;
+  right: var(--alius-page-x);
+  top: 11.8mm;
+}
+
+.alius-print-page-number {
+  color: #000;
+  font-family: "Alius Cormorant", serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 10mm;
 }
 
 .alius-print-title {
@@ -277,17 +337,17 @@ body.wsite-page-bulletin-interview-generator {
   font-family: "Alius Lato", sans-serif;
   font-size: 32px;
   font-weight: 300;
-  line-height: 1.2;
-  margin: 0 0 56px;
+  line-height: 1.38;
+  margin: 0 0 15.5mm;
   text-align: left;
 }
 
 .alius-print-front {
   align-items: stretch;
   display: grid;
-  gap: 22px;
-  grid-template-columns: minmax(0, 1.25fr) minmax(150px, 0.8fr);
-  margin-bottom: 42px;
+  column-gap: 6mm;
+  grid-template-columns: minmax(0, 94mm) minmax(0, 1fr);
+  margin-bottom: 16mm;
 }
 
 .alius-print-front-left {
@@ -299,36 +359,36 @@ body.wsite-page-bulletin-interview-generator {
 .alius-print-subtitle {
   color: #111;
   font-family: "Alius Lato", sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 1.24;
+  line-height: 1.25;
   margin: 0 0 8px;
 }
 
 .alius-print-interviewee {
   color: #111;
   font-family: "Alius Lato", sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1.18;
-  margin: 0 0 28px;
+  margin: 0 0 22px;
 }
 
 .alius-print-credit {
   color: #111;
   font-family: "Alius Lato", sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.25;
-  margin: 0 0 28px;
+  margin: 0 0 12px;
 }
 
 .alius-print-citation {
   color: #111;
   font-family: "Alius Lato", sans-serif;
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 1.42;
+  line-height: 1.25;
   margin: 0;
   text-align: justify;
 }
@@ -341,39 +401,39 @@ body.wsite-page-bulletin-interview-generator {
   border-left: 1px solid #9d9d9d;
   color: #111;
   font-family: "Alius Lato", sans-serif;
-  padding: 20px 0 0 14px;
+  padding: 0 0 0 4mm;
 }
 
 .alius-print-contributor {
-  margin: 0 0 22px;
+  margin: 0 0 8mm;
 }
 
 .alius-print-contributor strong {
   display: block;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.18;
+  line-height: 1.15;
   margin-bottom: 2px;
 }
 
 .alius-print-contributor p {
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 1.18;
+  line-height: 1.15;
   margin: 0;
 }
 
 .alius-print-abstract-block {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
 }
 
 .alius-print-abstract-block h3 {
   color: #000;
   font-family: "Alius Lato", sans-serif;
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 400;
   line-height: 1.2;
-  margin: 0 0 22px;
+  margin: 0 0 9mm;
 }
 
 .alius-print-abstract {
@@ -382,18 +442,18 @@ body.wsite-page-bulletin-interview-generator {
   font-size: 15.5px;
   font-weight: 300;
   line-height: 1.42;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   text-align: justify;
 }
 
 .alius-print-keywords {
   color: #111;
   font-family: "Alius Lato", sans-serif;
-  font-size: 14.5px;
+  font-size: 16px;
   font-style: italic;
   font-weight: 300;
   line-height: 1.35;
-  margin: 0 0 38px;
+  margin: 0 0 12mm;
 }
 
 .alius-print-keywords strong {
@@ -418,49 +478,84 @@ body.wsite-page-bulletin-interview-generator {
 }
 
 .alius-print-question {
-  font-size: 17px;
-  line-height: 1.34;
-  margin: 32px 0 14px;
+  font-size: 16px;
+  line-height: 1.37;
+  margin: 5mm 0 2mm;
+  text-align: justify;
 }
 
 .alius-print-answer {
   color: #000;
   font-family: "Alius Cormorant", serif;
-  font-size: 15.5px;
-  line-height: 1.45;
-  margin: 0 0 13px;
+  font-size: 18px;
+  line-height: 1.43;
+  margin: 0 0 4.2mm;
   text-align: justify;
+}
+
+.alius-print-answer.is-continuation {
+  margin-top: -2mm;
 }
 
 .alius-print-quote {
   color: #666;
-  font-family: Georgia, "Alius Cormorant", serif;
-  font-size: 20px;
+  font-family: "Alius Lato", sans-serif;
+  font-size: 22px;
   font-style: italic;
+  font-weight: 300;
   line-height: 1.28;
-  margin: 24px auto;
-  max-width: 78%;
+  margin: 7mm auto 9mm;
+  max-width: 86%;
+  padding: 0 18mm;
+  position: relative;
+  quotes: "\201C" "\201D";
   text-align: center;
+}
+
+.alius-print-quote::before,
+.alius-print-quote::after {
+  color: #777;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+}
+
+.alius-print-quote::before {
+  content: "\201C";
+  left: 0;
+}
+
+.alius-print-quote::after {
+  content: "\201D";
+  right: 0;
 }
 
 .alius-print-section {
   color: #000;
   font-family: "Alius Lato", sans-serif;
-  font-size: 15px;
-  margin: 24px 0 8px;
+  font-size: 18px;
+  margin: 8mm 0 3mm;
 }
 
 .alius-print-footer {
   align-items: center;
-  border-top: 1px solid #8b8b8b;
-  color: #8b8b8b;
+  border-top: 1px solid var(--alius-rule);
+  bottom: 10.6mm;
+  box-sizing: border-box;
+  color: #9a9a9a;
   display: flex;
   font-family: "Alius Cormorant", serif;
-  font-size: 13px;
+  font-size: 15px;
   justify-content: space-between;
   line-height: 1.2;
-  margin-top: auto;
-  padding-top: 10px;
+  left: var(--alius-page-x);
+  padding-top: 4mm;
+  position: absolute;
+  right: var(--alius-page-x);
 }
 
 .alius-print-footer span:last-child {
@@ -489,7 +584,11 @@ body.wsite-page-bulletin-interview-generator {
   }
 
   .alius-print-page {
-    padding: 34px 24px;
+    height: auto;
+    min-height: 297mm;
+    padding-left: 18mm;
+    padding-right: 18mm;
+    width: 210mm;
   }
 
   .alius-print-front {
@@ -504,25 +603,59 @@ body.wsite-page-bulletin-interview-generator {
 }
 
 @media print {
-  body * {
-    visibility: hidden !important;
+  html,
+  body {
+    background: #fff !important;
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: var(--alius-page-width);
   }
 
-  #interview-preview,
-  #interview-preview * {
-    visibility: visible !important;
+  .generator-nav,
+  .generator-title,
+  .generator-form,
+  .preview-toolbar {
+    display: none !important;
+  }
+
+  .generator-shell,
+  .generator-layout,
+  .generator-preview-wrap {
+    background: #fff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    margin: 0 !important;
+    max-width: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    width: var(--alius-page-width) !important;
   }
 
   #interview-preview {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    background: #fff !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    width: var(--alius-page-width);
   }
 
   .alius-print-page {
     border: 0;
-    min-height: auto;
-    padding: 18mm 20mm 16mm;
+    box-shadow: none;
+    break-after: page;
+    height: var(--alius-page-height);
+    margin: 0;
+    page-break-after: always;
+    width: var(--alius-page-width);
+  }
+
+  .alius-print-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
   }
 }
