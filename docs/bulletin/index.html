@@ -582,22 +582,24 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__people {
 }
 body.wsite-page-bulletin #wsite-content .bulletin-person {
   display: inline-block;
-  padding-right: 18px;
+  padding-right: 20px;
   position: relative;
   white-space: nowrap;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-person__orcid {
+  background: transparent;
+  border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(69, 115, 27, 0.18);
+  box-shadow: none;
   display: inline-flex;
-  height: 14px;
-  line-height: 1;
-  overflow: hidden;
+  height: 16px;
+  line-height: 0;
+  overflow: visible;
   position: absolute;
   right: 0;
   text-decoration: none;
-  top: -0.35em;
-  width: 14px;
+  top: -0.45em;
+  width: 16px;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-person__orcid img {
   display: block;
@@ -606,7 +608,6 @@ body.wsite-page-bulletin #wsite-content .bulletin-person__orcid img {
 }
 body.wsite-page-bulletin #wsite-content .bulletin-person__orcid:hover,
 body.wsite-page-bulletin #wsite-content .bulletin-person__orcid:focus {
-  box-shadow: 0 0 0 1px rgba(69, 115, 27, 0.24);
   outline: 2px solid rgba(166, 206, 57, 0.35);
   outline-offset: 2px;
 }
@@ -1871,7 +1872,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     '6': '2024',
     '7': '2024'
   };
-  var orcidBadgeSrc = '/assets/shared/images/orcid.svg';
+  var orcidBadgeSrc = '/assets/shared/images/orcid.svg?v=20260512';
   var orcidLinks = {
     'Alessio Bucci': '0000-0002-8594-5972',
     'Alexandra Mikhailova': '0000-0002-8699-7125',
