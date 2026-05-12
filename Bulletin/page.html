@@ -582,31 +582,31 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__people {
 }
 body.wsite-page-bulletin #wsite-content .bulletin-person {
   display: inline-block;
-  padding-right: 17px;
+  padding-right: 18px;
   position: relative;
   white-space: nowrap;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-person__orcid {
-  background: #a6ce39;
   border-radius: 50%;
   box-shadow: 0 0 0 1px rgba(69, 115, 27, 0.18);
-  color: #fff;
-  height: 13px;
-  line-height: 13px;
+  display: inline-flex;
+  height: 14px;
+  line-height: 1;
+  overflow: hidden;
   position: absolute;
   right: 0;
-  text-align: center;
   text-decoration: none;
   top: -0.35em;
-  width: 13px;
+  width: 14px;
 }
-body.wsite-page-bulletin #wsite-content .bulletin-person__orcid::before {
-  content: "iD";
-  font: 700 6.5px/13px Arial, sans-serif;
+body.wsite-page-bulletin #wsite-content .bulletin-person__orcid img {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-person__orcid:hover,
 body.wsite-page-bulletin #wsite-content .bulletin-person__orcid:focus {
-  background: #8fbf2f;
+  box-shadow: 0 0 0 1px rgba(69, 115, 27, 0.24);
   outline: 2px solid rgba(166, 206, 57, 0.35);
   outline-offset: 2px;
 }
@@ -1871,6 +1871,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     '6': '2024',
     '7': '2024'
   };
+  var orcidBadgeSrc = '/assets/shared/images/orcid.svg';
   var orcidLinks = {
     'Alessio Bucci': '0000-0002-8594-5972',
     'Alexandra Mikhailova': '0000-0002-8699-7125',
@@ -1973,6 +1974,12 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
         link.rel = 'noopener noreferrer';
         link.setAttribute('aria-label', 'ORCID iD for ' + name);
         link.title = 'ORCID iD for ' + name;
+        var icon = document.createElement('img');
+        icon.src = orcidBadgeSrc;
+        icon.alt = '';
+        icon.decoding = 'async';
+        icon.setAttribute('aria-hidden', 'true');
+        link.appendChild(icon);
         person.appendChild(link);
         fragment.appendChild(person);
         lastIndex = personPattern.lastIndex;
