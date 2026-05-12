@@ -580,6 +580,36 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__people {
   font: 600 14px/1.45 Raleway, Arial, sans-serif;
   margin: 0 0 10px;
 }
+body.wsite-page-bulletin #wsite-content .bulletin-person {
+  display: inline-block;
+  padding-right: 17px;
+  position: relative;
+  white-space: nowrap;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-person__orcid {
+  background: #a6ce39;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(69, 115, 27, 0.18);
+  color: #fff;
+  height: 13px;
+  line-height: 13px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: -0.35em;
+  width: 13px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-person__orcid::before {
+  content: "iD";
+  font: 700 6.5px/13px Arial, sans-serif;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-person__orcid:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-person__orcid:focus {
+  background: #8fbf2f;
+  outline: 2px solid rgba(166, 206, 57, 0.35);
+  outline-offset: 2px;
+}
 body.wsite-page-bulletin #wsite-content .bulletin-card__tags {
   display: flex;
   flex-wrap: wrap;
@@ -1854,6 +1884,62 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     '6': '2024',
     '7': '2024'
   };
+  var orcidLinks = {
+    'Alessio Bucci': '0000-0002-8594-5972',
+    'Alexandra Mikhailova': '0000-0002-8699-7125',
+    'Ann Taves': '0000-0002-2695-5337',
+    'Anna Ciaunica': '0000-0002-2708-8319',
+    'Arnaud Halloy': '0009-0004-1515-4667',
+    'Benjamin Baird': '0000-0001-8541-0508',
+    'Bigna Lenggenhager': '0000-0003-0418-9931',
+    'Carlota Serrahima': '0000-0001-9525-6508',
+    'Charles D. Nichols': '0000-0002-0615-0646',
+    'Charlotte Martial': '0000-0001-6291-3460',
+    'Christopher Timmermann': '0000-0002-2281-377X',
+    'Cordelia Erickson-Davis': '0000-0001-7694-820X',
+    'Daniel Dennett': '0000-0003-1181-3093',
+    'David B. Yaden': '0000-0002-9604-6227',
+    'David E. Olson': '0000-0002-4517-0543',
+    'Edvard Aviles': '0000-0002-3936-8959',
+    'Frederique de Vignemont': '0009-0006-1354-1553',
+    'George Fejer': '0000-0002-4904-5504',
+    'Guillaume Dumas': '0000-0002-2253-1844',
+    'Jakob Hohwy': '0000-0003-3906-3060',
+    'Jakub Limanowski': '0000-0001-9673-5500',
+    'Jasmine T. Ho': '0000-0002-3429-3732',
+    'Jean-Pierre Changeux': '0000-0003-0297-1583',
+    'Jennifer Windt': '0000-0001-9862-8389',
+    'Jeremy I. Skipper': '0000-0002-5503-764X',
+    'Karl Friston': '0000-0001-7984-8909',
+    'Katrin H. Preller': '0000-0003-0413-7672',
+    'Katrin Preller': '0000-0003-0413-7672',
+    'Kevin O\'Regan': '0000-0002-4874-8339',
+    'Kieran Fox': '0000-0002-6923-4580',
+    'Leor Roseman': '0000-0001-9990-6029',
+    'Maddalena Canna': '0000-0002-7506-5875',
+    'Manoj Doss': '0000-0003-2939-2522',
+    'Martin E. Fortier': '0000-0003-3282-8120',
+    'Martin Fortier': '0000-0003-3282-8120',
+    'Matthew Ratcliffe': '0000-0003-4519-4833',
+    'Matthieu Koroma': '0000-0003-2269-7841',
+    'Michael Winkelman': '0000-0002-9936-348X',
+    'Monima Chadha': '0000-0002-5596-0696',
+    'Olivia Carter': '0000-0001-7708-6154',
+    'Olivia Gosseries': '0000-0001-9011-7496',
+    'Raphael Milliere': '0000-0001-6965-6073',
+    'Rebecca Seligman': '0000-0002-9402-0322',
+    'Robert Sapolsky': '0000-0002-7435-5838',
+    'Robin Carhart-Harris': '0000-0002-6062-7150',
+    'Simon McCarthy-Jones': '0000-0003-4442-7818',
+    'Steven Jillings': '0000-0001-7298-8925',
+    'Tanya Luhrmann': '0000-0001-9923-4234',
+    'Thomas Metzinger': '0000-0003-2514-7191',
+    'Tim Bayne': '0000-0001-8591-7907',
+    'Timo Torsten Schmidt': '0000-0003-1612-1301',
+    'Timothy Hanks': '0000-0003-4147-4475',
+    'Tom Froese': '0000-0002-9899-5274',
+    'Zoltan Dienes': '0000-0001-7454-3161'
+  };
   var citationModal = null;
   var activeCitation = null;
 
@@ -1866,6 +1952,48 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
 
   function nodeText(node) {
     return node ? cleanText(node.textContent) : '';
+  }
+
+  function escapeRegExp(value) {
+    return String(value || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function enhanceOrcidLinks() {
+    var names = Object.keys(orcidLinks).sort(function(a, b) {
+      return b.length - a.length;
+    });
+    if (!names.length) return;
+    var personPattern = new RegExp('\\b(' + names.map(escapeRegExp).join('|') + ')\\b', 'g');
+    cards.forEach(function(card) {
+      var people = card.querySelector('.bulletin-card__people');
+      if (!people || people.querySelector('.bulletin-person')) return;
+      var text = people.textContent;
+      var fragment = document.createDocumentFragment();
+      var lastIndex = 0;
+      var match;
+      personPattern.lastIndex = 0;
+      while ((match = personPattern.exec(text)) !== null) {
+        var name = match[0];
+        var orcid = orcidLinks[name];
+        fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+        var person = document.createElement('span');
+        person.className = 'bulletin-person';
+        person.appendChild(document.createTextNode(name));
+        var link = document.createElement('a');
+        link.className = 'bulletin-person__orcid';
+        link.href = 'https://orcid.org/' + orcid;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', 'ORCID iD for ' + name);
+        link.title = 'ORCID iD for ' + name;
+        person.appendChild(link);
+        fragment.appendChild(person);
+        lastIndex = personPattern.lastIndex;
+      }
+      fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+      people.textContent = '';
+      people.appendChild(fragment);
+    });
   }
 
   function doiFromHref(href) {
@@ -2248,6 +2376,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     authorSelect.addEventListener('change', applyFilters);
   }
 
+  enhanceOrcidLinks();
   enhanceCitationTools();
 
   Array.prototype.slice.call(document.querySelectorAll('.bulletin-issue__embed')).forEach(function(details) {
