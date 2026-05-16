@@ -1,0 +1,147 @@
+[
+  {
+    "slug": "assc-satellite-2025",
+    "title": "ASSC Satellite Event on Non-Ordinary States of Consciousness",
+    "date": "10-14 July 2025",
+    "place": "Vrachos Villas, Agia Paraskevi / Ligres, Crete",
+    "sort": "2025-07-10",
+    "sections": [
+      "event-assc-2025",
+      "assc-themes",
+      "assc-timeline"
+    ],
+    "image": "/assets/events/images/assc-satellite-2025-cover.svg",
+    "image_alt": "ASSC Satellite Event poster graphic",
+    "description": "A compact post-ASSC 2025 workshop-retreat on non-ordinary states of consciousness."
+  },
+  {
+    "slug": "workshop-in-tribute-to-martin-fortier-2021",
+    "title": "Workshop in Tribute to Martin Fortier",
+    "date": "17 December 2021",
+    "place": "Institut Jean Nicod, ENS, Paris",
+    "sort": "2021-12-17",
+    "sections": [
+      "event-fortier-2021"
+    ],
+    "image": "/assets/events/images/workshop-in-tribute-to-martin-fortier-2021-cover.svg",
+    "image_alt": "Workshop in Tribute to Martin Fortier poster graphic",
+    "description": "Partner event honoring Martin Fortier's work on altered states and the diversity of consciousness."
+  },
+  {
+    "slug": "somatic-cultures-and-consciousness-2019",
+    "title": "Somatic Cultures and Consciousness",
+    "date": "23 November 2019",
+    "place": "Vancouver CC WEST, Room 212, Vancouver",
+    "sort": "2019-11-23",
+    "sections": [
+      "event-somatic-2021"
+    ],
+    "image": "/assets/events/images/somatic-cultures-and-consciousness-2019-cover.svg",
+    "image_alt": "Somatic Cultures and Consciousness poster graphic",
+    "description": "Panel on embodiment, culture, and self-transformation."
+  },
+  {
+    "slug": "voix-et-visions-2019",
+    "title": "Voix et visions",
+    "date": "24-26 October 2019",
+    "place": "ENS, Salle Dussane and Salle des actes, Paris",
+    "sort": "2019-10-24",
+    "sections": [
+      "event-voix-visions-2019"
+    ],
+    "image": "/uploads/9/1/6/0/91600416/published/screenshot-2019-10-03-at-09-22-47.png",
+    "image_alt": "Voix et visions event poster",
+    "description": "Three-day study event on voices, visions, and hallucinations."
+  },
+  {
+    "slug": "cultural-shaping-of-consciousness-2019",
+    "title": "The Cultural Shaping of Consciousness",
+    "date": "28 June 2019",
+    "place": "Western Ontario University, London, Ontario",
+    "sort": "2019-06-28",
+    "sections": [
+      "event-cultural-shaping-2019"
+    ],
+    "image": "/assets/events/images/cultural-shaping-of-consciousness-2019-cover.svg",
+    "image_alt": "The Cultural Shaping of Consciousness poster graphic",
+    "description": "Partner symposium at ASSC on culture-dependent altered states."
+  },
+  {
+    "slug": "recherches-en-neurosciences-et-engagement-social-2018",
+    "title": "Recherches en Neurosciences et Engagement Social",
+    "date": "4 December 2018",
+    "place": "Italian Embassy, Paris",
+    "sort": "2018-12-04",
+    "sections": [
+      "event-neurosciences-2018"
+    ],
+    "image": "/assets/events/images/recherches-en-neurosciences-et-engagement-social-2018-cover.svg",
+    "image_alt": "Recherches en Neurosciences et Engagement Social poster graphic",
+    "description": "Partner event retained from the historical program archive."
+  },
+  {
+    "slug": "alius-workshop-2018",
+    "title": "ALIUS Workshop 2018",
+    "date": "26-27 October 2018",
+    "place": "ENS, 45 rue d'Ulm, Paris",
+    "sort": "2018-10-26",
+    "sections": [
+      "event-workshop-2018"
+    ],
+    "image": "/media/images/alius-flyer.png",
+    "image_alt": "ALIUS Workshop 2018 flyer",
+    "description": "Methodological Issues in Consciousness Research."
+  },
+  {
+    "slug": "alius-workshop-2017",
+    "title": "ALIUS Workshop 2017",
+    "date": "8-9 December 2017",
+    "place": "ENS, 46 rue d'Ulm and 24 rue Lhomond, Paris",
+    "sort": "2017-12-08",
+    "sections": [
+      "event-workshop-2017"
+    ],
+    "image": "/uploads/9/1/6/0/91600416/editor/descartes.png",
+    "image_alt": "ALIUS Workshop 2017 legacy illustration",
+    "description": "Exploring the diversity of consciousness."
+  },
+  {
+    "slug": "images-visionnaires-2017",
+    "title": "Anthropologie de l'art visuel des hallucinations",
+    "date": "3 October 2017",
+    "place": "Coll?ge de France, Salle 2, Paris",
+    "sort": "2017-10-03",
+    "sections": [
+      "event-hallucinations-2017"
+    ],
+    "image": "/media/images/je-visionnaire-2.png",
+    "image_alt": "Images Visionnaires event poster",
+    "description": "Study day on visual hallucinations, visionary art, and anthropology."
+  },
+  {
+    "slug": "the-sense-of-self-2017",
+    "title": "The Sense of Self",
+    "date": "29-31 May 2017",
+    "place": "University of Oxford",
+    "sort": "2017-05-29",
+    "sections": [
+      "event-sense-self-2017"
+    ],
+    "image": "/assets/events/images/the-sense-of-self-2017-cover.svg",
+    "image_alt": "The Sense of Self poster graphic",
+    "description": "Partner event on selfhood, conscious experience, and altered states."
+  },
+  {
+    "slug": "bicycle-day-workshop-2017",
+    "title": "Bicycle Day Workshop",
+    "date": "19 April 2017",
+    "place": "Stanford University",
+    "sort": "2017-04-19",
+    "sections": [
+      "event-bicycle-day-2017"
+    ],
+    "image": "/media/images/dsc-0244-orig.jpg",
+    "image_alt": "Bicycle Day Workshop event photo",
+    "description": "Neuroscientific and socio-cultural approaches to hallucinogenic experiences."
+  }
+]

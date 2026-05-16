@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Workshop in Tribute to Martin Fortier</title>
+  <desc id="desc">Poster-style fallback artwork for the event.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#123a25"/>
+      <stop offset="100%" stop-color="#2f6f6a"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="24" fill="url(#bg)"/>
+  <circle cx="612" cy="72" r="150" fill="#8ebf7a" opacity="0.18"/>
+  <circle cx="606" cy="368" r="210" fill="#d7e6d1" opacity="0.12"/>
+  <path d="M0 332C114 264 232 278 338 320C440 360 572 368 720 292V420H0Z" fill="#f7f8f4" opacity="0.10"/>
+  <text x="32" y="48" fill="#b9d8b1" font-family="Raleway, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3">ALIUS EVENT</text>
+  <text x="32" y="120" fill="#f7f8f4" font-family="Raleway, Arial, sans-serif" font-size="28" font-weight="700">Workshop in Tribute to</text><text x="32" y="156" fill="#f7f8f4" font-family="Raleway, Arial, sans-serif" font-size="28" font-weight="700">Martin Fortier</text>
+  <text x="32" y="384" fill="#f7f8f4" font-family="Raleway, Arial, sans-serif" font-size="18" font-weight="700">2021</text>
+</svg>
