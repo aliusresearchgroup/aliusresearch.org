@@ -152,7 +152,8 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 </style>
 <style>
 /* Consolidated-page design: minimalist section dividers + fixed bottom nav */
-html { scroll-behavior: smooth; }
+/* DOI fragment links should land directly on the entry title, not animate. */
+html { scroll-behavior: auto !important; }
 
 /* Keep section dividers clean */
 body.wsite-page-team .wsite-section-wrap,
@@ -570,14 +571,6 @@ body.wsite-page-bulletin #wsite-content .bulletin-card {
   border-bottom: 1px solid #dbe4dc;
   padding: 24px 0 30px;
 }
-body.wsite-page-bulletin #wsite-content .bulletin-card-anchor {
-  display: block;
-  height: 0;
-  overflow: hidden;
-  position: relative;
-  top: -20px;
-  visibility: hidden;
-}
 body.wsite-page-bulletin #wsite-content .bulletin-card__header {
   max-width: 920px;
 }
@@ -586,6 +579,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card h3 {
   font-size: 21px;
   line-height: 1.3;
   margin: 0 0 8px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card h3[id] {
+  scroll-margin-top: 54px !important;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-card__people {
   color: #515151;
@@ -1171,10 +1167,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf#view=FitH" title="ALIUS Bulletin Issue 5 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
-<span id="bulletin05-martial" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-martial-near-death" class="bulletin-card" data-tags="issue-05 charlotte-martial ndes">
                 <header class="bulletin-card__header">
-                  <h3>Near-death experiences in the public debate: A scientific perspective</h3>
+                  <h3 id="bulletin05-martial">Near-death experiences in the public debate: A scientific perspective</h3>
                   <p class="bulletin-card__people">Charlotte Martial, commentary on Surviving Death, 2021</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>NDEs</span></p>
                 </header>
@@ -1190,10 +1185,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin05-cannaseligmaninterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-canna-seligman-culture" class="bulletin-card" data-tags="issue-05 maddalena-canna rebecca-seligman dissociation">
                 <header class="bulletin-card__header">
-                  <h3>How culture breaks down the mind-body divide</h3>
+                  <h3 id="bulletin05-cannaseligmaninterview">How culture breaks down the mind-body divide</h3>
                   <p class="bulletin-card__people">Maddalena Canna and Rebecca Seligman, interviewed by Matthieu Koroma</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Dissociation</span></p>
                 </header>
@@ -1209,10 +1203,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin05-chadhainterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-chadha-indian-philosophy" class="bulletin-card" data-tags="issue-05 monima-chadha meditation psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>Indian philosophy and the value of transformative experiences</h3>
+                  <h3 id="bulletin05-chadhainterview">Indian philosophy and the value of transformative experiences</h3>
                   <p class="bulletin-card__people">Monima Chadha, interviewed by Edvard Aviles and Matthieu Koroma</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Meditation</span><span>Psychedelics</span></p>
                 </header>
@@ -1228,10 +1221,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin05-olsonyadeninterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-olson-yaden-therapeutic-effects" class="bulletin-card" data-tags="issue-05 david-olson david-yaden psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>Are the Subjective Effects of Psychedelics Necessary for Their Enduring Therapeutic Effects?</h3>
+                  <h3 id="bulletin05-olsonyadeninterview">Are the Subjective Effects of Psychedelics Necessary for Their Enduring Therapeutic Effects?</h3>
                   <p class="bulletin-card__people">David E. Olson and David B. Yaden, hosted by George Fejer</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Psychedelics</span></p>
                 </header>
@@ -1249,10 +1241,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf" target="_blank" rel="noopener">Read PDF</a>
                 </div>
               </article>
-<span id="bulletin05-schmidtinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-schmidt-phenomenoconnectomics" class="bulletin-card" data-tags="issue-05 timo-torsten-schmidt">
                 <header class="bulletin-card__header">
-                  <h3>Phenomenoconnectomics and the Neural Correlates of Altered Consciousness</h3>
+                  <h3 id="bulletin05-schmidtinterview">Phenomenoconnectomics and the Neural Correlates of Altered Consciousness</h3>
                   <p class="bulletin-card__people">Timo Torsten Schmidt, interviewed by George Fejer</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"></p>
                 </header>
@@ -1276,10 +1267,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf#view=FitH" title="ALIUS Bulletin Issue 4 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
-<span id="bulletin04-martintribute" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-fortier-tribute" class="bulletin-card" data-tags="issue-04 martin-fortier psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>A tribute to Martin E. Fortier</h3>
+                  <h3 id="bulletin04-martintribute">A tribute to Martin E. Fortier</h3>
                   <p class="bulletin-card__people">ALIUS Research group</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Psychedelics</span></p>
                 </header>
@@ -1295,10 +1285,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin04-nicholsinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-nichols-dmt" class="bulletin-card" data-tags="issue-04 charles-nichols david-e-nichols psychedelics ndes">
                 <header class="bulletin-card__header">
-                  <h3>DMT in the mammalian brain: A critical appraisal</h3>
+                  <h3 id="bulletin04-nicholsinterview">DMT in the mammalian brain: A critical appraisal</h3>
                   <p class="bulletin-card__people">Charles D. Nichols and David E. Nichols, commentary on Dean et al., 2019</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Psychedelics</span><span>NDEs</span></p>
                 </header>
@@ -1314,10 +1303,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin04-bairdinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-baird-lucid-dreaming" class="bulletin-card" data-tags="issue-04 benjamin-baird dreams meditation">
                 <header class="bulletin-card__header">
-                  <h3>Internally generated conscious activity: Reflections upon (lucid) dreaming, mind-wandering and meditation</h3>
+                  <h3 id="bulletin04-bairdinterview">Internally generated conscious activity: Reflections upon (lucid) dreaming, mind-wandering and meditation</h3>
                   <p class="bulletin-card__people">Benjamin Baird, interviewed by Matthieu Koroma</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Dreams</span><span>Meditation</span></p>
                 </header>
@@ -1333,10 +1321,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin04-carterinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-carter-dimensions" class="bulletin-card" data-tags="issue-04 olivia-carter psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>The dimensions of consciousness: From perceptual illusions to psychedelics</h3>
+                  <h3 id="bulletin04-carterinterview">The dimensions of consciousness: From perceptual illusions to psychedelics</h3>
                   <p class="bulletin-card__people">Olivia Carter, interviewed by Katrin H. Preller</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Psychedelics</span></p>
                 </header>
@@ -1352,10 +1339,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin04-gosseriesinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-gosseries-disorders" class="bulletin-card" data-tags="issue-04 olivia-gosseries coma psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>The use of psychedelics in the treatment of disorders of consciousness</h3>
+                  <h3 id="bulletin04-gosseriesinterview">The use of psychedelics in the treatment of disorders of consciousness</h3>
                   <p class="bulletin-card__people">Olivia Gosseries, interviewed by Charlotte Martial</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Coma</span><span>Psychedelics</span></p>
                 </header>
@@ -1371,10 +1357,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin04-hanksinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-hanks-decision-making" class="bulletin-card" data-tags="issue-04 timothy-hanks">
                 <header class="bulletin-card__header">
-                  <h3>The neuroscience of decision making</h3>
+                  <h3 id="bulletin04-hanksinterview">The neuroscience of decision making</h3>
                   <p class="bulletin-card__people">Timothy Hanks, interviewed by Alexandra Mikhailova and Daniel A. Friedman</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"></p>
                 </header>
@@ -1390,10 +1375,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin04-lenggenhagerinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-lenggenhager-bodily-self" class="bulletin-card" data-tags="issue-04 bigna-lenggenhager body-shifts">
                 <header class="bulletin-card__header">
-                  <h3>Bodily boundaries and beyond: Exploring the malleability of bodily self-consciousness</h3>
+                  <h3 id="bulletin04-lenggenhagerinterview">Bodily boundaries and beyond: Exploring the malleability of bodily self-consciousness</h3>
                   <p class="bulletin-card__people">Bigna Lenggenhager, interviewed by Jasmine T. Ho and Raphael Milliere</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Body shifts</span></p>
                 </header>
@@ -1409,10 +1393,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin04-vignemontinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-vignemont-body-self" class="bulletin-card" data-tags="issue-04 frederique-de-vignemont body-shifts">
                 <header class="bulletin-card__header">
-                  <h3>Body meets self</h3>
+                  <h3 id="bulletin04-vignemontinterview">Body meets self</h3>
                   <p class="bulletin-card__people">Frederique de Vignemont, interviewed by Raphael Milliere and Carlota Serrahima</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Body shifts</span></p>
                 </header>
@@ -1436,10 +1419,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf#view=FitH" title="ALIUS Bulletin Issue 3 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
-<span id="bulletin03-bayneinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-bayne-natural-phenomenon" class="bulletin-card" data-tags="issue-03 tim-bayne">
                 <header class="bulletin-card__header">
-                  <h3>How to study consciousness as a natural phenomenon</h3>
+                  <h3 id="bulletin03-bayneinterview">How to study consciousness as a natural phenomenon</h3>
                   <p class="bulletin-card__people">Tim Bayne, interviewed by Alessio Bucci and Matthieu Koroma</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"></p>
                 </header>
@@ -1455,10 +1437,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin03-dennettinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-dennett-explained" class="bulletin-card" data-tags="issue-03 daniel-dennett psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>Dennett Explained</h3>
+                  <h3 id="bulletin03-dennettinterview">Dennett Explained</h3>
                   <p class="bulletin-card__people">Daniel Dennett, interviewed by Brendan Fleig-Goldstein and Daniel A. Friedman</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Psychedelics</span></p>
                 </header>
@@ -1474,10 +1455,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin03-dienesinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-dienes-hypnosis-meditation" class="bulletin-card" data-tags="issue-03 zoltan-dienes hypnosis meditation">
                 <header class="bulletin-card__header">
-                  <h3>The role of hypnosis and meditation in consciousness research</h3>
+                  <h3 id="bulletin03-dienesinterview">The role of hypnosis and meditation in consciousness research</h3>
                   <p class="bulletin-card__people">Zoltan Dienes, interviewed by Jean-Remy Martin</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Hypnosis</span><span>Meditation</span></p>
                 </header>
@@ -1493,10 +1473,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin03-prellerinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-preller-sociality" class="bulletin-card" data-tags="issue-03 katrin-preller psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>Psychedelics and Sociality: Probing the diversity of cognition beyond individuals</h3>
+                  <h3 id="bulletin03-prellerinterview">Psychedelics and Sociality: Probing the diversity of cognition beyond individuals</h3>
                   <p class="bulletin-card__people">Katrin Preller, interviewed by Guillaume Dumas</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Psychedelics</span></p>
                 </header>
@@ -1512,10 +1491,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin03-winkelmaninterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-winkelman-neuroanthropology" class="bulletin-card" data-tags="issue-03 michael-winkelman religious-exp psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>The evolutionary neuroanthropology of consciousness: Exploring the diversity of conscious states across cultures</h3>
+                  <h3 id="bulletin03-winkelmaninterview">The evolutionary neuroanthropology of consciousness: Exploring the diversity of conscious states across cultures</h3>
                   <p class="bulletin-card__people">Michael Winkelman, interviewed by Martin E. Fortier</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Religious exp.</span><span>Psychedelics</span></p>
                 </header>
@@ -1539,10 +1517,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf#view=FitH" title="ALIUS Bulletin Issue 2 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
-<span id="bulletin02-foxinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-fox-spontaneous-thinking" class="bulletin-card" data-tags="issue-02 kieran-fox dreams meditation">
                 <header class="bulletin-card__header">
-                  <h3>Wandering along the spectrum of spontaneous thinking: Dreaming, meditation, mind-wandering, and well-being</h3>
+                  <h3 id="bulletin02-foxinterview">Wandering along the spectrum of spontaneous thinking: Dreaming, meditation, mind-wandering, and well-being</h3>
                   <p class="bulletin-card__people">Kieran Fox, interviewed by Matthieu Koroma</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Dreams</span><span>Meditation</span></p>
                 </header>
@@ -1558,10 +1535,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin02-fristoninterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-friston-woodlice" class="bulletin-card" data-tags="issue-02 karl-friston">
                 <header class="bulletin-card__header">
-                  <h3>Of woodlice and men: A Bayesian account of cognition, life and consciousness</h3>
+                  <h3 id="bulletin02-fristoninterview">Of woodlice and men: A Bayesian account of cognition, life and consciousness</h3>
                   <p class="bulletin-card__people">Karl Friston, interviewed by Martin Fortier and Daniel A. Friedman</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"></p>
                 </header>
@@ -1577,10 +1553,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin02-fristonbiography" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-friston-autobiography" class="bulletin-card" data-tags="issue-02 karl-friston">
                 <header class="bulletin-card__header">
-                  <h3>Am I autistic? An intellectual autobiography</h3>
+                  <h3 id="bulletin02-fristonbiography">Am I autistic? An intellectual autobiography</h3>
                   <p class="bulletin-card__people">Karl Friston</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"></p>
                 </header>
@@ -1596,10 +1571,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin02-metzingerinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-metzinger-self-models" class="bulletin-card" data-tags="issue-02 thomas-metzinger body-shifts">
                 <header class="bulletin-card__header">
-                  <h3>Splendor and misery of self-models: Conceptual and empirical issues regarding consciousness and self-consciousness</h3>
+                  <h3 id="bulletin02-metzingerinterview">Splendor and misery of self-models: Conceptual and empirical issues regarding consciousness and self-consciousness</h3>
                   <p class="bulletin-card__people">Thomas Metzinger, interviewed by Jakub Limanowski and Raphael Milliere</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Body shifts</span></p>
                 </header>
@@ -1615,10 +1589,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin02-nicholsinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-david-nichols-pharmacology" class="bulletin-card" data-tags="issue-02 david-nichols psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>Psychedelics: From pharmacology to phenomenology</h3>
+                  <h3 id="bulletin02-nicholsinterview">Psychedelics: From pharmacology to phenomenology</h3>
                   <p class="bulletin-card__people">David Nichols, interviewed by Leor Roseman and Christopher Timmermann</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Psychedelics</span></p>
                 </header>
@@ -1634,10 +1607,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin02-oreganinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-oregan-sensorimotor" class="bulletin-card" data-tags="issue-02 kevin-oregan">
                 <header class="bulletin-card__header">
-                  <h3>On the "feel" of things: The sensorimotor theory of consciousness</h3>
+                  <h3 id="bulletin02-oreganinterview">On the "feel" of things: The sensorimotor theory of consciousness</h3>
                   <p class="bulletin-card__people">Kevin O'Regan, interviewed by Cordelia Erickson-Davis</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"></p>
                 </header>
@@ -1653,10 +1625,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin02-ratcliffeinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-ratcliffe-hallucinations" class="bulletin-card" data-tags="issue-02 matthew-ratcliffe hallucinations">
                 <header class="bulletin-card__header">
-                  <h3>Verbal hallucinations, intentionality, and interpersonal experience</h3>
+                  <h3 id="bulletin02-ratcliffeinterview">Verbal hallucinations, intentionality, and interpersonal experience</h3>
                   <p class="bulletin-card__people">Matthew Ratcliffe, interviewed by Mathieu Frerejouan</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Hallucinations</span></p>
                 </header>
@@ -1672,10 +1643,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin02-tavesinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-taves-religious-experience" class="bulletin-card" data-tags="issue-02 ann-taves religious-exp">
                 <header class="bulletin-card__header">
-                  <h3>Conceptual, anthropological and cognitive issues surrounding religious experience</h3>
+                  <h3 id="bulletin02-tavesinterview">Conceptual, anthropological and cognitive issues surrounding religious experience</h3>
                   <p class="bulletin-card__people">Ann Taves, interviewed by Martin E. Fortier and Maddalena Canna</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Religious exp.</span></p>
                 </header>
@@ -1699,10 +1669,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf#view=FitH" title="ALIUS Bulletin Issue 1 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
-<span id="bulletin01-carhartharrisinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-carhart-harris-psychedelics" class="bulletin-card" data-tags="issue-01 robin-carhart-harris psychedelics">
                 <header class="bulletin-card__header">
-                  <h3>Consciousness and psychedelics</h3>
+                  <h3 id="bulletin01-carhartharrisinterview">Consciousness and psychedelics</h3>
                   <p class="bulletin-card__people">Robin Carhart-Harris, interviewed by Martin Fortier and Raphael Milliere</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Psychedelics</span></p>
                 </header>
@@ -1718,10 +1687,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin01-hohwyinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-hohwy-conscious-modes" class="bulletin-card" data-tags="issue-01 jakob-hohwy">
                 <header class="bulletin-card__header">
-                  <h3>On different ways of being conscious: modes of consciousness and the predictive mind</h3>
+                  <h3 id="bulletin01-hohwyinterview">On different ways of being conscious: modes of consciousness and the predictive mind</h3>
                   <p class="bulletin-card__people">Jakob Hohwy, interviewed by Matthieu Koroma</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"></p>
                 </header>
@@ -1737,10 +1705,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin01-luhrmanninterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-luhrmann-anthropology-mind" class="bulletin-card" data-tags="issue-01 tanya-luhrmann religious-exp hallucinations">
                 <header class="bulletin-card__header">
-                  <h3>The anthropology of mind: exploring unusual sensations and spiritual experiences across cultures</h3>
+                  <h3 id="bulletin01-luhrmanninterview">The anthropology of mind: exploring unusual sensations and spiritual experiences across cultures</h3>
                   <p class="bulletin-card__people">Tanya Luhrmann, interviewed by Martin Fortier</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Religious exp.</span><span>Hallucinations</span></p>
                 </header>
@@ -1756,10 +1723,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin01-mccarthyjonesinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-mccarthy-jones-voice-hearing" class="bulletin-card" data-tags="issue-01 simon-mccarthy-jones hallucinations">
                 <header class="bulletin-card__header">
-                  <h3>The phenomenon of voice-hearing: an interdisciplinary approach</h3>
+                  <h3 id="bulletin01-mccarthyjonesinterview">The phenomenon of voice-hearing: an interdisciplinary approach</h3>
                   <p class="bulletin-card__people">Simon McCarthy-Jones, interviewed by Mathieu Frerejouan</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Hallucinations</span></p>
                 </header>
@@ -1775,10 +1741,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin01-seligmaninterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-seligman-dissociative" class="bulletin-card" data-tags="issue-01 rebecca-seligman dissociation">
                 <header class="bulletin-card__header">
-                  <h3>Towards a biocultural approach to dissociative consciousness</h3>
+                  <h3 id="bulletin01-seligmaninterview">Towards a biocultural approach to dissociative consciousness</h3>
                   <p class="bulletin-card__people">Rebecca Seligman, interviewed by Arnaud Halloy</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Dissociation</span></p>
                 </header>
@@ -1794,10 +1759,9 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<span id="bulletin01-windtinterview" class="bulletin-card-anchor" aria-hidden="true"></span>
 <article id="bulletin-windt-dreams" class="bulletin-card" data-tags="issue-01 jennifer-windt dreams sleep">
                 <header class="bulletin-card__header">
-                  <h3>Relocating dreams on the conceptual map: how the analysis of sleep and dreaming challenges our taxonomy of mental states</h3>
+                  <h3 id="bulletin01-windtinterview">Relocating dreams on the conceptual map: how the analysis of sleep and dreaming challenges our taxonomy of mental states</h3>
                   <p class="bulletin-card__people">Jennifer Windt, interviewed by Alessio Bucci and Raphael Milliere</p>
                   <p class="bulletin-card__tags" aria-label="Bulletin altered-state terms"><span>Dreams</span><span>Sleep</span></p>
                 </header>
@@ -2413,20 +2377,6 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     authorSelect.addEventListener('change', applyFilters);
   }
 
-  function smoothScrollToHash() {
-    var rawHash = window.location.hash ? window.location.hash.slice(1) : '';
-    if (!rawHash) return;
-    var target = document.getElementById(decodeURIComponent(rawHash));
-    if (!target) return;
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
-  if (window.location.hash) {
-    window.addEventListener('load', function() {
-      window.setTimeout(smoothScrollToHash, 0);
-    });
-  }
-  window.addEventListener('hashchange', smoothScrollToHash);
 
   enhanceOrcidLinks();
   enhanceCitationTools();
