@@ -97,6 +97,7 @@
     var path = currentPath();
     if (path === '/') return homeAnchors();
     if (path === '/team/') return teamAnchors();
+    if (path === '/journal-club/' || path === '/video-lectures/') return [];
     var legacy = harvestLegacySectionNav();
     if (legacy.length) return legacy;
     if (PRESETS[path]) return PRESETS[path];

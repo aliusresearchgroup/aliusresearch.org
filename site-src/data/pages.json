@@ -110,14 +110,14 @@
         "redirect_legacy": true
     },
     {
-        "id": "journal-club",
+        "id": "video-lectures",
         "legacy_path": "journal-club.html",
         "legacy_name": "journal-club",
-        "canonical_path": "/journal-club/",
+        "canonical_path": "/video-lectures/",
         "title": "Video Lectures - Alius",
         "description": "",
         "section": "events",
-        "subcategory": "journal-club",
+        "subcategory": "video-lectures",
         "layout": "article",
         "nav_group": "events",
         "order": 0,

@@ -410,23 +410,33 @@
         "type": "legacy-html-page"
     },
     {
+        "from": "/video-lectures.html",
+        "to": "/video-lectures/",
+        "type": "canonical-html-page"
+    },
+    {
+        "from": "/journal-club/",
+        "to": "/video-lectures/",
+        "type": "renamed-section"
+    },
+    {
         "from": "/journal-club.html",
-        "to": "/journal-club/",
+        "to": "/video-lectures/",
         "type": "legacy-html-page"
     },
     {
         "from": "/journal-club-228113.html",
-        "to": "/journal-club/",
+        "to": "/video-lectures/",
         "type": "legacy-html-page"
     },
     {
         "from": "/journalclub-868968.html",
-        "to": "/journal-club/",
+        "to": "/video-lectures/",
         "type": "legacy-html-page"
     },
     {
         "from": "/journal-club-995321.html",
-        "to": "/journal-club/",
+        "to": "/video-lectures/",
         "type": "legacy-html-page"
     },
     {
@@ -811,7 +821,7 @@
     },
     {
         "from": "/events/journal-club/",
-        "to": "/journal-club/",
+        "to": "/video-lectures/",
         "type": "legacy-html-page"
     },
     {
