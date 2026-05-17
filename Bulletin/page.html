@@ -572,13 +572,19 @@ body.wsite-page-bulletin #wsite-content .bulletin-card {
   padding: 24px 0 30px;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-card__header {
+  box-sizing: border-box;
   max-width: 920px;
+  width: 100%;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-card h3 {
   color: #2f382f;
   font-size: 21px;
+  hyphens: none;
   line-height: 1.3;
   margin: 0 0 8px;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+  word-break: normal;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-card h3[id] {
   scroll-margin-top: 54px !important;
@@ -637,9 +643,14 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__tags span {
   padding: 4px 8px;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-card__copy {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  background: #fbfdfb;
+  border: 1px solid rgba(47, 127, 123, 0.16);
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: block;
+  max-width: 920px;
+  padding: 16px 18px 18px;
+  width: 100%;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-card__copy h4 {
   color: #1a4d2e;
@@ -649,9 +660,12 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__copy h4 {
 body.wsite-page-bulletin #wsite-content .bulletin-card__copy p {
   color: #40504a;
   font-size: 15px;
+  hyphens: none;
   line-height: 1.64;
   margin: 0;
+  overflow-wrap: normal;
   text-align: left;
+  word-break: normal;
 }
 body.wsite-page-bulletin #wsite-content .bulletin-card__copy .bulletin-card__keywords {
   color: #5d6a66;
@@ -841,7 +855,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
   body.wsite-page-bulletin #wsite-content .bulletin-issue__embed summary { align-items: flex-start; }
   body.wsite-page-bulletin #wsite-content .bulletin-issue__summary-meta { margin-left: 0; }
   body.wsite-page-bulletin #wsite-content .bulletin-issue__embed iframe { height: 420px; }
-  body.wsite-page-bulletin #wsite-content .bulletin-card__copy { grid-template-columns: 1fr; }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__copy { padding: 14px 15px 16px; }
   body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe { min-height: 190px; }
 }
 </style>
