@@ -81,33 +81,33 @@
     },
     {
         "from": "/bulletin01-carhartharrisinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin01-carhartharrisinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin01-hohwyinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-hohwy-on-different-ways-of-being-conscious-modes-of-consciousness-and-the.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin01-hohwyinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin01-luhrmanninterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin01-luhrmanninterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin01-mccarthyjonesinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-mccarthy-jones-phenomenon-of-voice-hearing-an-interdisciplinary-approach.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin01-mccarthyjonesinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin01-seligmaninterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-seligman-towards-a-biocultural-approach-to-dissociative-consciousness.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin01-seligmaninterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin01-windtinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin01-windtinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin02.html",
@@ -116,38 +116,38 @@
     },
     {
         "from": "/bulletin02-foxinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin02-foxinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin02-fristonbiography.html",
-        "to": "/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-biography-am-i-autistic-an-intellectual-autobiography.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin02-fristonbiography",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin02-fristoninterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin02-fristoninterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin02-metzingerinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin02-metzingerinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin02-nicholsinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-nichols-psychedelics-from-pharmacology-to-phenomenology.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin02-nicholsinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin02-oreganinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-o-regan-on-the-feel-of-things-the-sensorimotor-theory-of-consciousness.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin02-oreganinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin02-ratcliffeinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-intentionality-and-interpersonal-experience.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin02-ratcliffeinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin02-ratcliffeinterview-496999-868603-823482-372692.html",
@@ -156,8 +156,8 @@
     },
     {
         "from": "/bulletin02-tavesinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-religious.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin02-tavesinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin03.html",
@@ -166,28 +166,28 @@
     },
     {
         "from": "/bulletin03-bayneinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-bayne-how-to-study-consciousness-as-a-natural-phenomenon.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin03-bayneinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin03-dennettinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-dennett-explained.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin03-dennettinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin03-dienesinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-dienes-role-of-hypnosis-and-meditation-in-consciousness-research.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin03-dienesinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin03-prellerinterview.html",
-        "to": "/bulletin/interviews/bulletin03-prellerinterview/",
-        "type": "legacy-html-page"
+        "to": "/bulletin/#bulletin03-prellerinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin03-winkelmaninterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin03-winkelmaninterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin04.html",
@@ -196,43 +196,43 @@
     },
     {
         "from": "/bulletin04-bairdinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-baird-internally-generated-conscious-activity-reflections-upon-lucid-dreaming.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin04-bairdinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin04-carterinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-carter-dimensions-of-consciousness-from-perceptual-illusions-to-psychedelics.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin04-carterinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin04-gosseriesinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-treatment-of-disorders-of-consciousness.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin04-gosseriesinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin04-hanksinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-hanks-neuroscience-of-decision-making.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin04-hanksinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin04-lenggenhagerinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-lenggenhager-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin04-lenggenhagerinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin04-martintribute.html",
-        "to": "/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin04-martintribute",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin04-nicholsinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-nichols-and-nichols-dmt-in-the-mammalian-brain-a-critical-appraisal.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin04-nicholsinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin04-vignemontinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin04-vignemontinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin05.html",
@@ -241,28 +241,28 @@
     },
     {
         "from": "/bulletin05-cannaseligmaninterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin05-cannaseligmaninterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin05-chadhainterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of-transformative-experiences.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin05-chadhainterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin05-martial.html",
-        "to": "/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-debate-near-death-experiences-in-the-public-debate-a-scientific-perspective.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin05-martial",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin05-olsonyadeninterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin05-olsonyadeninterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin05-schmidtinterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-database-for-consciousness.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin05-schmidtinterview",
+        "type": "doi-anchor-landing"
     },
     {
         "from": "/bulletin06.html",
@@ -976,7 +976,7 @@
     },
     {
         "from": "/bulletin03-winkelmanInterview.html",
-        "to": "/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf",
-        "type": "doi-pdf-landing"
+        "to": "/bulletin/#bulletin03-winkelmaninterview",
+        "type": "doi-anchor-landing"
     }
 ]
