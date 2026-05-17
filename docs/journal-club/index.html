@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Journal Clubs - Alius</title>
+    <title>Video Lectures - Alius</title>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta
-      content="ALIUS Journal Club recordings with embedded talks, abstracts, and speaker biographies."
+      content="ALIUS video lectures with embedded talks, abstracts, and speaker biographies."
       name="description"
     />
     <link
@@ -58,7 +58,7 @@
               <li class="wsite-menu-item-wrap"><a href="/" class="wsite-menu-item">Home</a></li>
               <li class="wsite-menu-item-wrap"><a href="/team/" class="wsite-menu-item">Team</a></li>
               <li class="wsite-menu-item-wrap"><a href="/bulletin/" class="wsite-menu-item">Bulletin</a></li>
-              <li id="active" class="wsite-menu-item-wrap"><a href="/journal-club/" class="wsite-menu-item">Journal Clubs</a></li>
+              <li id="active" class="wsite-menu-item-wrap"><a href="/journal-club/" class="wsite-menu-item">Video Lectures</a></li>
               <li class="wsite-menu-item-wrap"><a href="/events/" class="wsite-menu-item">Events</a></li>
               <li class="wsite-menu-item-wrap"><a href="/membership/" class="wsite-menu-item">Membership</a></li>
               <li class="wsite-menu-item-wrap"><a href="/newsletter/" class="wsite-menu-item">Newsletter</a></li>
@@ -67,7 +67,7 @@
 
           <div id="content-wrapper">
             <div id="wsite-content" class="wsite-elements wsite-not-footer">
-          <nav class="section-nav" aria-label="Journal Club sections">
+          <nav class="section-nav" aria-label="Video lecture sections">
             <a href="#journal-koroma">Sleep &amp; cardiac response | Matthieu Koroma</a>
             <a href="#journal-suseelan">Psychedelic difficulties | Shayam Suseelan</a>
             <a href="#journal-aicher">Psychedelics &amp; therapy | Helena Aicher</a>
@@ -80,6 +80,7 @@
             <a href="#journal-serino">Peripersonal space | Andrea Serino</a>
             <a href="#journal-balaet">Naturalistic psychedelics | Maria Balaet</a>
             <a href="#journal-lifshitz">Tulpamancy &amp; self | Michael Lifshitz</a>
+            <a href="#journal-fortier">Hallucinogenic experiences | Martin Fortier</a>
             <a href="#journal-fort-schmidt">ASC classification | Larry Fort &amp; Timo Schmidt</a>
             <a href="#journal-tagliazucchi">Studying psychedelics | Enzo Tagliazucchi</a>
           </nav>
@@ -178,6 +179,15 @@
               letter-spacing: 0;
               cursor: pointer;
               transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+            }
+
+            body.wsite-page-journal-club .journal-intro {
+              max-width: 820px;
+              margin: 0 0 24px;
+            }
+
+            body.wsite-page-journal-club .journal-intro p {
+              margin-top: 12px;
             }
 
             body.wsite-page-journal-club .journal-filter:hover,
@@ -329,26 +339,33 @@
             }
           </style>
 
-          <main class="journal-page" aria-label="ALIUS Journal Club recordings">
-            <div class="journal-filters" role="group" aria-label="Filter Journal Club videos by topic">
-              <button type="button" class="journal-filter journal-filter--all is-active" data-filter="*">All <span class="journal-filter__count">14</span></button>
-              <button type="button" class="journal-filter" data-filter="psychedelics">Psychedelics <span class="journal-filter__count">9</span></button>
-              <button type="button" class="journal-filter" data-filter="neuroscience">Neuroscience <span class="journal-filter__count">10</span></button>
+          <main class="journal-page" aria-label="ALIUS video lecture recordings">
+            <header class="journal-intro">
+              <h1>Video Lectures</h1>
+              <p>
+                Recorded ALIUS talks on altered states of consciousness, psychedelics, hallucinations, embodiment,
+                selfhood, and methods for consciousness research.
+              </p>
+            </header>
+            <div class="journal-filters" role="group" aria-label="Filter video lectures by topic">
+              <button type="button" class="journal-filter journal-filter--all is-active" data-filter="*">All <span class="journal-filter__count">15</span></button>
+              <button type="button" class="journal-filter" data-filter="psychedelics">Psychedelics <span class="journal-filter__count">10</span></button>
+              <button type="button" class="journal-filter" data-filter="neuroscience">Neuroscience <span class="journal-filter__count">11</span></button>
               <button type="button" class="journal-filter" data-filter="methods">Methods <span class="journal-filter__count">6</span></button>
-              <button type="button" class="journal-filter" data-filter="phenomenology">Phenomenology <span class="journal-filter__count">6</span></button>
+              <button type="button" class="journal-filter" data-filter="phenomenology">Phenomenology <span class="journal-filter__count">7</span></button>
               <button type="button" class="journal-filter" data-filter="therapy">Therapy <span class="journal-filter__count">3</span></button>
               <button type="button" class="journal-filter" data-filter="mental-health">Mental health <span class="journal-filter__count">2</span></button>
               <button type="button" class="journal-filter" data-filter="sleep">Sleep <span class="journal-filter__count">1</span></button>
               <button type="button" class="journal-filter" data-filter="self">Self <span class="journal-filter__count">3</span></button>
               <button type="button" class="journal-filter" data-filter="body">Body <span class="journal-filter__count">2</span></button>
-              <button type="button" class="journal-filter" data-filter="pharmacology">Pharmacology <span class="journal-filter__count">3</span></button>
+              <button type="button" class="journal-filter" data-filter="pharmacology">Pharmacology <span class="journal-filter__count">4</span></button>
               <button type="button" class="journal-filter" data-filter="meditation">Meditation <span class="journal-filter__count">2</span></button>
               <button type="button" class="journal-filter" data-filter="computation">Computation <span class="journal-filter__count">2</span></button>
               <button type="button" class="journal-filter" data-filter="cognition">Cognition <span class="journal-filter__count">2</span></button>
               <button type="button" class="journal-filter" data-filter="dmt">DMT <span class="journal-filter__count">1</span></button>
               <button type="button" class="journal-filter" data-filter="policy">Policy <span class="journal-filter__count">1</span></button>
               <button type="button" class="journal-filter" data-filter="naturalistic">Naturalistic <span class="journal-filter__count">1</span></button>
-              <button type="button" class="journal-filter" data-filter="anthropology">Anthropology <span class="journal-filter__count">1</span></button>
+              <button type="button" class="journal-filter" data-filter="anthropology">Anthropology <span class="journal-filter__count">2</span></button>
               <button type="button" class="journal-filter" data-filter="classification">Classification <span class="journal-filter__count">1</span></button>
             </div>
 
@@ -833,6 +850,53 @@
                       Michael Lifshitz is an assistant professor in Social and Transcultural Psychiatry at McGill University
                       and the Jewish General Hospital. His work combines phenomenology, neuroscience, and ethnography to
                       study meditation, hypnosis, placebo effects, prayer, psychedelics, and agency.
+                    </p>
+                  </section>
+                </div>
+              </article>
+
+              <article id="journal-fortier" class="journal-talk" data-tags="psychedelics anthropology phenomenology neuroscience pharmacology">
+                <header class="journal-talk__header">
+                  <h2>The Neuroanthropology of Hallucinogenic Experiences: Beyond nativism and culturalism</h2>
+                  <p class="journal-speaker">Martin E. Fortier &middot; Feb 11, 2019</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Psychedelics</span><span>Anthropology</span><span>Phenomenology</span><span>Neuroscience</span><span>Pharmacology</span></p>
+                </header>
+                <div class="journal-video-wrap">
+                  <div class="journal-video">
+                    <iframe
+                      src="https://www.youtube.com/embed/Mtw-n2LEhdk"
+                      title="The Neuroanthropology of Hallucinogenic Experiences: Beyond nativism and culturalism - Martin Fortier"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <a class="journal-youtube-link" href="https://www.youtube.com/watch?v=Mtw-n2LEhdk">Open on YouTube</a>
+                </div>
+                <div class="journal-copy">
+                  <section class="journal-copy-block" aria-labelledby="abstract-fortier">
+                    <h3 id="abstract-fortier">Abstract</h3>
+                    <p>
+                      When taken at high enough doses, hallucinogens can induce a large range of hallucinations involving
+                      people, animals, artefacts, elves, spirits, chimeras, and other contents. This lecture asks where these
+                      contents come from and examines two influential answers: culturalism, which treats hallucinatory content
+                      as reconfigured environmental stimuli, and nativism, which attributes content to evolutionarily
+                      inherited modules or archetypes.
+                    </p>
+                    <p>
+                      Fortier argues that both views are undermined by neurobiological models of hallucination, the diversity
+                      of receptoromes, and cross-cultural descriptions of hallucinogenic experience. He proposes a
+                      constructivist model integrating anthropology, biology, and neuropharmacology, including non-genetic and
+                      non-cultural processes such as prenatal spontaneous activity and neural selection.
+                    </p>
+                  </section>
+                  <section class="journal-copy-block" aria-labelledby="bio-fortier">
+                    <h3 id="bio-fortier">Speaker biography</h3>
+                    <p>
+                      Martin E. Fortier was affiliated with the Institut Jean Nicod, Department of Cognitive Studies, ENS,
+                      Paris, and the Department of Philosophy and Social Sciences, EHESS, Paris. His work brought
+                      anthropology, philosophy, and cognitive science into conversation around hallucinogenic experience and
+                      altered states of consciousness.
                     </p>
                   </section>
                 </div>
