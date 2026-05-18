@@ -16,9 +16,11 @@ This archive preserves the generated vector logo variants and the final progress
 
 - `progress/two-curve-mold-continuity-close-board.jpg` - close frame board for the final third-leaf growth pass.
 - `progress/two-curve-mold-continuity-broad-board.jpg` - broader timing board showing sprouting followed by swaying.
+- `progress/two-curve-mold-slender-close-board.jpg` - later refinement with a pointier, slimmer early third-leaf sprout.
+- `progress/two-curve-mold-slender-broad-board.jpg` - broader timing board for the slimmer early-sprout refinement.
 
 ## Final Third-Leaf Model
 
 The final sprouting pass treats the third leaf as two smooth cubic boundary curves growing inside the final right-leaf envelope. The two curves always meet at the base and the tip, the tip remains point-like throughout growth, and the path avoids clipping masks by staying inside the final contour mathematically.
 
-Both sprouting SVGs use 426 animated `d` frames for the third leaf, with 55 cubic segments per frame. The standalone version is pure vector and transparent.
+Both sprouting SVGs use 426 animated `d` frames for the third leaf, with 55 cubic segments per frame. The standalone version is pure vector and transparent. The latest refinement keeps the early growth narrower and more pointed before it fills into the final right-leaf contour.
