@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="357" height="161" viewBox="-24 0 357 161">
+<svg xmlns="http://www.w3.org/2000/svg" width="357" height="173" viewBox="-24 -8 357 173">
   <title>ALIUS gusting animated logo</title>
   <desc>ALIUS logo recreated with Century Gothic text and a gusting animated vector leaf mark.</desc>
-  <rect x="-24" width="357" height="161" fill="#fefefe"/>
+  <rect x="-24" y="-8" width="357" height="173" fill="#fefefe"/>
   <g fill="#145d35" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400">
     <text x="82.5" y="89.9" font-size="86.4" letter-spacing="0">ALIUS</text>
     <text x="4.2" y="123.5" font-size="19.3" letter-spacing="0">Interdisciplinary research group</text>
     <text x="-0.6" y="154.8" font-size="19.3" letter-spacing="0">on the diversity of consciousness</text>
   </g>
-  <svg x="0" y="0" width="90" height="98" viewBox="0 0 1023 1111" preserveAspectRatio="none" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;overflow:visible;">
+  <svg x="-7.04" y="-7.06" width="104.08" height="112.11" viewBox="-80 -80 1183 1271" preserveAspectRatio="none" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;overflow:visible;">
     <title>ALIUS gusting vector leaf mark</title>
       <desc>Three vector leaf paths animated with SVG path keyframes that fluctuate between weak and strong wind; overlap tones are produced by multiply blending, not embedded bitmap frames.</desc>
       <style><![CDATA[
