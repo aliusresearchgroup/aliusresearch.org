@@ -1,0 +1,736 @@
+{
+  "source": "Nur_Logo_Loop_02.gif",
+  "animated_svg": "nur-logo-loop.svg",
+  "width": 899,
+  "height": 921,
+  "frame_count": 118,
+  "total_duration_ms": 3540,
+  "frame_duration_ms": 30,
+  "loop": "infinite",
+  "palette": [
+    "#008136",
+    "#83bb26",
+    "#6ab12d",
+    "#009f3a",
+    "#007a39",
+    "#007d38"
+  ],
+  "vectorization": {
+    "palette_size": 6,
+    "contour_epsilon": 2.2,
+    "dilate_iterations": 1,
+    "min_contour_area": 18,
+    "stroke_width": 0.5,
+    "trace": "OpenCV contours with Catmull-Rom cubic smoothing"
+  },
+  "frames": [
+    {
+      "index": 0,
+      "file": "frame-000.svg",
+      "duration_ms": 30,
+      "delay_ms": 0
+    },
+    {
+      "index": 1,
+      "file": "frame-001.svg",
+      "duration_ms": 30,
+      "delay_ms": 30
+    },
+    {
+      "index": 2,
+      "file": "frame-002.svg",
+      "duration_ms": 30,
+      "delay_ms": 60
+    },
+    {
+      "index": 3,
+      "file": "frame-003.svg",
+      "duration_ms": 30,
+      "delay_ms": 90
+    },
+    {
+      "index": 4,
+      "file": "frame-004.svg",
+      "duration_ms": 30,
+      "delay_ms": 120
+    },
+    {
+      "index": 5,
+      "file": "frame-005.svg",
+      "duration_ms": 30,
+      "delay_ms": 150
+    },
+    {
+      "index": 6,
+      "file": "frame-006.svg",
+      "duration_ms": 30,
+      "delay_ms": 180
+    },
+    {
+      "index": 7,
+      "file": "frame-007.svg",
+      "duration_ms": 30,
+      "delay_ms": 210
+    },
+    {
+      "index": 8,
+      "file": "frame-008.svg",
+      "duration_ms": 30,
+      "delay_ms": 240
+    },
+    {
+      "index": 9,
+      "file": "frame-009.svg",
+      "duration_ms": 30,
+      "delay_ms": 270
+    },
+    {
+      "index": 10,
+      "file": "frame-010.svg",
+      "duration_ms": 30,
+      "delay_ms": 300
+    },
+    {
+      "index": 11,
+      "file": "frame-011.svg",
+      "duration_ms": 30,
+      "delay_ms": 330
+    },
+    {
+      "index": 12,
+      "file": "frame-012.svg",
+      "duration_ms": 30,
+      "delay_ms": 360
+    },
+    {
+      "index": 13,
+      "file": "frame-013.svg",
+      "duration_ms": 30,
+      "delay_ms": 390
+    },
+    {
+      "index": 14,
+      "file": "frame-014.svg",
+      "duration_ms": 30,
+      "delay_ms": 420
+    },
+    {
+      "index": 15,
+      "file": "frame-015.svg",
+      "duration_ms": 30,
+      "delay_ms": 450
+    },
+    {
+      "index": 16,
+      "file": "frame-016.svg",
+      "duration_ms": 30,
+      "delay_ms": 480
+    },
+    {
+      "index": 17,
+      "file": "frame-017.svg",
+      "duration_ms": 30,
+      "delay_ms": 510
+    },
+    {
+      "index": 18,
+      "file": "frame-018.svg",
+      "duration_ms": 30,
+      "delay_ms": 540
+    },
+    {
+      "index": 19,
+      "file": "frame-019.svg",
+      "duration_ms": 30,
+      "delay_ms": 570
+    },
+    {
+      "index": 20,
+      "file": "frame-020.svg",
+      "duration_ms": 30,
+      "delay_ms": 600
+    },
+    {
+      "index": 21,
+      "file": "frame-021.svg",
+      "duration_ms": 30,
+      "delay_ms": 630
+    },
+    {
+      "index": 22,
+      "file": "frame-022.svg",
+      "duration_ms": 30,
+      "delay_ms": 660
+    },
+    {
+      "index": 23,
+      "file": "frame-023.svg",
+      "duration_ms": 30,
+      "delay_ms": 690
+    },
+    {
+      "index": 24,
+      "file": "frame-024.svg",
+      "duration_ms": 30,
+      "delay_ms": 720
+    },
+    {
+      "index": 25,
+      "file": "frame-025.svg",
+      "duration_ms": 30,
+      "delay_ms": 750
+    },
+    {
+      "index": 26,
+      "file": "frame-026.svg",
+      "duration_ms": 30,
+      "delay_ms": 780
+    },
+    {
+      "index": 27,
+      "file": "frame-027.svg",
+      "duration_ms": 30,
+      "delay_ms": 810
+    },
+    {
+      "index": 28,
+      "file": "frame-028.svg",
+      "duration_ms": 30,
+      "delay_ms": 840
+    },
+    {
+      "index": 29,
+      "file": "frame-029.svg",
+      "duration_ms": 30,
+      "delay_ms": 870
+    },
+    {
+      "index": 30,
+      "file": "frame-030.svg",
+      "duration_ms": 30,
+      "delay_ms": 900
+    },
+    {
+      "index": 31,
+      "file": "frame-031.svg",
+      "duration_ms": 30,
+      "delay_ms": 930
+    },
+    {
+      "index": 32,
+      "file": "frame-032.svg",
+      "duration_ms": 30,
+      "delay_ms": 960
+    },
+    {
+      "index": 33,
+      "file": "frame-033.svg",
+      "duration_ms": 30,
+      "delay_ms": 990
+    },
+    {
+      "index": 34,
+      "file": "frame-034.svg",
+      "duration_ms": 30,
+      "delay_ms": 1020
+    },
+    {
+      "index": 35,
+      "file": "frame-035.svg",
+      "duration_ms": 30,
+      "delay_ms": 1050
+    },
+    {
+      "index": 36,
+      "file": "frame-036.svg",
+      "duration_ms": 30,
+      "delay_ms": 1080
+    },
+    {
+      "index": 37,
+      "file": "frame-037.svg",
+      "duration_ms": 30,
+      "delay_ms": 1110
+    },
+    {
+      "index": 38,
+      "file": "frame-038.svg",
+      "duration_ms": 30,
+      "delay_ms": 1140
+    },
+    {
+      "index": 39,
+      "file": "frame-039.svg",
+      "duration_ms": 30,
+      "delay_ms": 1170
+    },
+    {
+      "index": 40,
+      "file": "frame-040.svg",
+      "duration_ms": 30,
+      "delay_ms": 1200
+    },
+    {
+      "index": 41,
+      "file": "frame-041.svg",
+      "duration_ms": 30,
+      "delay_ms": 1230
+    },
+    {
+      "index": 42,
+      "file": "frame-042.svg",
+      "duration_ms": 30,
+      "delay_ms": 1260
+    },
+    {
+      "index": 43,
+      "file": "frame-043.svg",
+      "duration_ms": 30,
+      "delay_ms": 1290
+    },
+    {
+      "index": 44,
+      "file": "frame-044.svg",
+      "duration_ms": 30,
+      "delay_ms": 1320
+    },
+    {
+      "index": 45,
+      "file": "frame-045.svg",
+      "duration_ms": 30,
+      "delay_ms": 1350
+    },
+    {
+      "index": 46,
+      "file": "frame-046.svg",
+      "duration_ms": 30,
+      "delay_ms": 1380
+    },
+    {
+      "index": 47,
+      "file": "frame-047.svg",
+      "duration_ms": 30,
+      "delay_ms": 1410
+    },
+    {
+      "index": 48,
+      "file": "frame-048.svg",
+      "duration_ms": 30,
+      "delay_ms": 1440
+    },
+    {
+      "index": 49,
+      "file": "frame-049.svg",
+      "duration_ms": 30,
+      "delay_ms": 1470
+    },
+    {
+      "index": 50,
+      "file": "frame-050.svg",
+      "duration_ms": 30,
+      "delay_ms": 1500
+    },
+    {
+      "index": 51,
+      "file": "frame-051.svg",
+      "duration_ms": 30,
+      "delay_ms": 1530
+    },
+    {
+      "index": 52,
+      "file": "frame-052.svg",
+      "duration_ms": 30,
+      "delay_ms": 1560
+    },
+    {
+      "index": 53,
+      "file": "frame-053.svg",
+      "duration_ms": 30,
+      "delay_ms": 1590
+    },
+    {
+      "index": 54,
+      "file": "frame-054.svg",
+      "duration_ms": 30,
+      "delay_ms": 1620
+    },
+    {
+      "index": 55,
+      "file": "frame-055.svg",
+      "duration_ms": 30,
+      "delay_ms": 1650
+    },
+    {
+      "index": 56,
+      "file": "frame-056.svg",
+      "duration_ms": 30,
+      "delay_ms": 1680
+    },
+    {
+      "index": 57,
+      "file": "frame-057.svg",
+      "duration_ms": 30,
+      "delay_ms": 1710
+    },
+    {
+      "index": 58,
+      "file": "frame-058.svg",
+      "duration_ms": 30,
+      "delay_ms": 1740
+    },
+    {
+      "index": 59,
+      "file": "frame-059.svg",
+      "duration_ms": 30,
+      "delay_ms": 1770
+    },
+    {
+      "index": 60,
+      "file": "frame-060.svg",
+      "duration_ms": 30,
+      "delay_ms": 1800
+    },
+    {
+      "index": 61,
+      "file": "frame-061.svg",
+      "duration_ms": 30,
+      "delay_ms": 1830
+    },
+    {
+      "index": 62,
+      "file": "frame-062.svg",
+      "duration_ms": 30,
+      "delay_ms": 1860
+    },
+    {
+      "index": 63,
+      "file": "frame-063.svg",
+      "duration_ms": 30,
+      "delay_ms": 1890
+    },
+    {
+      "index": 64,
+      "file": "frame-064.svg",
+      "duration_ms": 30,
+      "delay_ms": 1920
+    },
+    {
+      "index": 65,
+      "file": "frame-065.svg",
+      "duration_ms": 30,
+      "delay_ms": 1950
+    },
+    {
+      "index": 66,
+      "file": "frame-066.svg",
+      "duration_ms": 30,
+      "delay_ms": 1980
+    },
+    {
+      "index": 67,
+      "file": "frame-067.svg",
+      "duration_ms": 30,
+      "delay_ms": 2010
+    },
+    {
+      "index": 68,
+      "file": "frame-068.svg",
+      "duration_ms": 30,
+      "delay_ms": 2040
+    },
+    {
+      "index": 69,
+      "file": "frame-069.svg",
+      "duration_ms": 30,
+      "delay_ms": 2070
+    },
+    {
+      "index": 70,
+      "file": "frame-070.svg",
+      "duration_ms": 30,
+      "delay_ms": 2100
+    },
+    {
+      "index": 71,
+      "file": "frame-071.svg",
+      "duration_ms": 30,
+      "delay_ms": 2130
+    },
+    {
+      "index": 72,
+      "file": "frame-072.svg",
+      "duration_ms": 30,
+      "delay_ms": 2160
+    },
+    {
+      "index": 73,
+      "file": "frame-073.svg",
+      "duration_ms": 30,
+      "delay_ms": 2190
+    },
+    {
+      "index": 74,
+      "file": "frame-074.svg",
+      "duration_ms": 30,
+      "delay_ms": 2220
+    },
+    {
+      "index": 75,
+      "file": "frame-075.svg",
+      "duration_ms": 30,
+      "delay_ms": 2250
+    },
+    {
+      "index": 76,
+      "file": "frame-076.svg",
+      "duration_ms": 30,
+      "delay_ms": 2280
+    },
+    {
+      "index": 77,
+      "file": "frame-077.svg",
+      "duration_ms": 30,
+      "delay_ms": 2310
+    },
+    {
+      "index": 78,
+      "file": "frame-078.svg",
+      "duration_ms": 30,
+      "delay_ms": 2340
+    },
+    {
+      "index": 79,
+      "file": "frame-079.svg",
+      "duration_ms": 30,
+      "delay_ms": 2370
+    },
+    {
+      "index": 80,
+      "file": "frame-080.svg",
+      "duration_ms": 30,
+      "delay_ms": 2400
+    },
+    {
+      "index": 81,
+      "file": "frame-081.svg",
+      "duration_ms": 30,
+      "delay_ms": 2430
+    },
+    {
+      "index": 82,
+      "file": "frame-082.svg",
+      "duration_ms": 30,
+      "delay_ms": 2460
+    },
+    {
+      "index": 83,
+      "file": "frame-083.svg",
+      "duration_ms": 30,
+      "delay_ms": 2490
+    },
+    {
+      "index": 84,
+      "file": "frame-084.svg",
+      "duration_ms": 30,
+      "delay_ms": 2520
+    },
+    {
+      "index": 85,
+      "file": "frame-085.svg",
+      "duration_ms": 30,
+      "delay_ms": 2550
+    },
+    {
+      "index": 86,
+      "file": "frame-086.svg",
+      "duration_ms": 30,
+      "delay_ms": 2580
+    },
+    {
+      "index": 87,
+      "file": "frame-087.svg",
+      "duration_ms": 30,
+      "delay_ms": 2610
+    },
+    {
+      "index": 88,
+      "file": "frame-088.svg",
+      "duration_ms": 30,
+      "delay_ms": 2640
+    },
+    {
+      "index": 89,
+      "file": "frame-089.svg",
+      "duration_ms": 30,
+      "delay_ms": 2670
+    },
+    {
+      "index": 90,
+      "file": "frame-090.svg",
+      "duration_ms": 30,
+      "delay_ms": 2700
+    },
+    {
+      "index": 91,
+      "file": "frame-091.svg",
+      "duration_ms": 30,
+      "delay_ms": 2730
+    },
+    {
+      "index": 92,
+      "file": "frame-092.svg",
+      "duration_ms": 30,
+      "delay_ms": 2760
+    },
+    {
+      "index": 93,
+      "file": "frame-093.svg",
+      "duration_ms": 30,
+      "delay_ms": 2790
+    },
+    {
+      "index": 94,
+      "file": "frame-094.svg",
+      "duration_ms": 30,
+      "delay_ms": 2820
+    },
+    {
+      "index": 95,
+      "file": "frame-095.svg",
+      "duration_ms": 30,
+      "delay_ms": 2850
+    },
+    {
+      "index": 96,
+      "file": "frame-096.svg",
+      "duration_ms": 30,
+      "delay_ms": 2880
+    },
+    {
+      "index": 97,
+      "file": "frame-097.svg",
+      "duration_ms": 30,
+      "delay_ms": 2910
+    },
+    {
+      "index": 98,
+      "file": "frame-098.svg",
+      "duration_ms": 30,
+      "delay_ms": 2940
+    },
+    {
+      "index": 99,
+      "file": "frame-099.svg",
+      "duration_ms": 30,
+      "delay_ms": 2970
+    },
+    {
+      "index": 100,
+      "file": "frame-100.svg",
+      "duration_ms": 30,
+      "delay_ms": 3000
+    },
+    {
+      "index": 101,
+      "file": "frame-101.svg",
+      "duration_ms": 30,
+      "delay_ms": 3030
+    },
+    {
+      "index": 102,
+      "file": "frame-102.svg",
+      "duration_ms": 30,
+      "delay_ms": 3060
+    },
+    {
+      "index": 103,
+      "file": "frame-103.svg",
+      "duration_ms": 30,
+      "delay_ms": 3090
+    },
+    {
+      "index": 104,
+      "file": "frame-104.svg",
+      "duration_ms": 30,
+      "delay_ms": 3120
+    },
+    {
+      "index": 105,
+      "file": "frame-105.svg",
+      "duration_ms": 30,
+      "delay_ms": 3150
+    },
+    {
+      "index": 106,
+      "file": "frame-106.svg",
+      "duration_ms": 30,
+      "delay_ms": 3180
+    },
+    {
+      "index": 107,
+      "file": "frame-107.svg",
+      "duration_ms": 30,
+      "delay_ms": 3210
+    },
+    {
+      "index": 108,
+      "file": "frame-108.svg",
+      "duration_ms": 30,
+      "delay_ms": 3240
+    },
+    {
+      "index": 109,
+      "file": "frame-109.svg",
+      "duration_ms": 30,
+      "delay_ms": 3270
+    },
+    {
+      "index": 110,
+      "file": "frame-110.svg",
+      "duration_ms": 30,
+      "delay_ms": 3300
+    },
+    {
+      "index": 111,
+      "file": "frame-111.svg",
+      "duration_ms": 30,
+      "delay_ms": 3330
+    },
+    {
+      "index": 112,
+      "file": "frame-112.svg",
+      "duration_ms": 30,
+      "delay_ms": 3360
+    },
+    {
+      "index": 113,
+      "file": "frame-113.svg",
+      "duration_ms": 30,
+      "delay_ms": 3390
+    },
+    {
+      "index": 114,
+      "file": "frame-114.svg",
+      "duration_ms": 30,
+      "delay_ms": 3420
+    },
+    {
+      "index": 115,
+      "file": "frame-115.svg",
+      "duration_ms": 30,
+      "delay_ms": 3450
+    },
+    {
+      "index": 116,
+      "file": "frame-116.svg",
+      "duration_ms": 30,
+      "delay_ms": 3480
+    },
+    {
+      "index": 117,
+      "file": "frame-117.svg",
+      "duration_ms": 30,
+      "delay_ms": 3510
+    }
+  ]
+}
