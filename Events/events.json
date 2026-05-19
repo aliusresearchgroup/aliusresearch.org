@@ -10,8 +10,8 @@
       "assc-themes",
       "assc-timeline"
     ],
-    "image": "/assets/events/images/assc-satellite-2025-cover.svg",
-    "image_alt": "ASSC Satellite Event poster graphic",
+    "image": "/media/images/vrachos-3.png",
+    "image_alt": "Vrachos Villas venue photo",
     "description": "A compact post-ASSC 2025 workshop-retreat on non-ordinary states of consciousness."
   },
   {
@@ -23,8 +23,8 @@
     "sections": [
       "event-fortier-2021"
     ],
-    "image": "/assets/events/images/workshop-in-tribute-to-martin-fortier-2021-cover.svg",
-    "image_alt": "Workshop in Tribute to Martin Fortier poster graphic",
+    "image": "/media/images/portrait-1-format-carre-4-jpg-1-orig-1.png",
+    "image_alt": "Portrait of Martin Fortier",
     "description": "Partner event honoring Martin Fortier's work on altered states and the diversity of consciousness."
   },
   {
@@ -36,8 +36,8 @@
     "sections": [
       "event-somatic-2021"
     ],
-    "image": "/assets/events/images/somatic-cultures-and-consciousness-2019-cover.svg",
-    "image_alt": "Somatic Cultures and Consciousness poster graphic",
+    "image": "/assets/events/images/somatic-cultures-and-consciousness-2019-organizers.jpg",
+    "image_alt": "Maddalena Canna and Rebecca Seligman",
     "description": "Panel on embodiment, culture, and self-transformation."
   },
   {
@@ -62,8 +62,8 @@
     "sections": [
       "event-cultural-shaping-2019"
     ],
-    "image": "/assets/events/images/cultural-shaping-of-consciousness-2019-cover.svg",
-    "image_alt": "The Cultural Shaping of Consciousness poster graphic",
+    "image": "/assets/events/images/cultural-shaping-of-consciousness-2019-assc-logo.png",
+    "image_alt": "Association for the Scientific Study of Consciousness logo",
     "description": "Partner symposium at ASSC on culture-dependent altered states."
   },
   {
@@ -75,8 +75,8 @@
     "sections": [
       "event-neurosciences-2018"
     ],
-    "image": "/assets/events/images/recherches-en-neurosciences-et-engagement-social-2018-cover.svg",
-    "image_alt": "Recherches en Neurosciences et Engagement Social poster graphic",
+    "image": "/assets/events/images/recherches-en-neurosciences-et-engagement-social-2018-photo.jpg",
+    "image_alt": "Panel event in memory of Tiziana Zalla at the Italian Embassy in Paris",
     "description": "Partner event retained from the historical program archive."
   },
   {
@@ -127,8 +127,8 @@
     "sections": [
       "event-sense-self-2017"
     ],
-    "image": "/assets/events/images/the-sense-of-self-2017-cover.svg",
-    "image_alt": "The Sense of Self poster graphic",
+    "image": "/assets/events/images/the-sense-of-self-2017-logo.png",
+    "image_alt": "The Sense of Self event logo",
     "description": "Partner event on selfhood, conscious experience, and altered states."
   },
   {

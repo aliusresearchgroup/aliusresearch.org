@@ -98,9 +98,9 @@ def diff_images(reference: Image.Image, candidate: Image.Image) -> tuple[float, 
     return mean_abs, changed_ratio, diff_image
 
 
-def first_page_text(path: Path) -> str:
+def first_page_text(path: Path, page_index: int = 0) -> str:
     doc = fitz.open(path)
-    return " ".join(doc[0].get_text("text").split())
+    return " ".join(doc[page_index].get_text("text").split())
 
 
 def normalize_text_for_compare(text: str) -> str:
@@ -138,14 +138,38 @@ def region_hints(diff_image: Image.Image) -> list[str]:
     return hints
 
 
-def validate_fixture(project_root: Path, repo_root: Path, fixture: dict, report_root: Path) -> dict:
+def should_skip_fixture(fixture: dict, include_incomplete: bool) -> bool:
+    status = fixture.get("status", "reconstructed")
+    return not include_incomplete and status not in {"reconstructed", "calibration"}
+
+
+def validate_fixture(
+    project_root: Path,
+    repo_root: Path,
+    fixture: dict,
+    report_root: Path,
+    *,
+    dpi: int,
+    save_renders: bool,
+    include_incomplete: bool,
+) -> dict:
     slug = fixture["name"]
+    if should_skip_fixture(fixture, include_incomplete):
+        return {
+            "name": slug,
+            "status": fixture.get("status", "source-indexed"),
+            "skipped": True,
+            "skip_reason": "fixture is not marked reconstructed",
+        }
+
     main_tex = project_root / fixture["main_tex"]
     candidate_pdf = compile_fixture(project_root, main_tex, slug)
     reference_pdf = repo_root / fixture["reference_pdf"] if fixture.get("reference_pdf") else None
 
     result = {
         "name": slug,
+        "status": fixture.get("status", "reconstructed"),
+        "skipped": False,
         "candidate_pdf": str(candidate_pdf),
         "reference_pdf": str(reference_pdf) if reference_pdf else None,
         "page_count_match": None,
@@ -160,16 +184,28 @@ def validate_fixture(project_root: Path, repo_root: Path, fixture: dict, report_
 
     candidate_sizes = pdf_page_sizes(candidate_pdf)
     reference_sizes = pdf_page_sizes(reference_pdf)
-    result["page_count_match"] = len(candidate_sizes) == len(reference_sizes)
-    result["page_size_match"] = page_sizes_match(candidate_sizes, reference_sizes)
+    candidate_page_start = max(int(fixture.get("candidate_page", 1)) - 1, 0)
+    reference_page_start = max(int(fixture.get("reference_page", 1)) - 1, 0)
+    max_pages = fixture.get("max_pages")
+    if max_pages is None:
+        candidate_window = candidate_sizes[candidate_page_start:]
+        reference_window = reference_sizes[reference_page_start:]
+    else:
+        max_pages = int(max_pages)
+        candidate_window = candidate_sizes[candidate_page_start : candidate_page_start + max_pages]
+        reference_window = reference_sizes[reference_page_start : reference_page_start + max_pages]
+    result["page_count_match"] = len(candidate_window) == len(reference_window)
+    result["page_size_match"] = page_sizes_match(candidate_window, reference_window)
     result["candidate_first_page_size"] = candidate_sizes[0] if candidate_sizes else None
     result["reference_first_page_size"] = reference_sizes[0] if reference_sizes else None
+    result["candidate_page_start"] = candidate_page_start + 1
+    result["reference_page_start"] = reference_page_start + 1
 
     fonts = pdf_fonts(candidate_pdf)
     required_fonts = fixture.get("required_fonts", [])
     result["required_fonts_present"] = all(any(required in font for font in fonts) for required in required_fonts)
 
-    page_text = normalize_text_for_compare(first_page_text(candidate_pdf))
+    page_text = normalize_text_for_compare(first_page_text(candidate_pdf, candidate_page_start))
     for expected in expected_strings(project_root, fixture):
         if expected and expected not in page_text:
             result["front_matter_match"] = False
@@ -178,20 +214,33 @@ def validate_fixture(project_root: Path, repo_root: Path, fixture: dict, report_
     report_dir = report_root / slug
     report_dir.mkdir(parents=True, exist_ok=True)
 
-    for page_index in range(min(len(candidate_sizes), len(reference_sizes))):
-        ref_image = render_page(reference_pdf, page_index, dpi=160)
-        cand_image = render_page(candidate_pdf, page_index, dpi=160)
+    for page_offset in range(min(len(candidate_window), len(reference_window))):
+        ref_page_index = reference_page_start + page_offset
+        cand_page_index = candidate_page_start + page_offset
+        display_page = page_offset + 1
+        ref_image = render_page(reference_pdf, ref_page_index, dpi=dpi)
+        cand_image = render_page(candidate_pdf, cand_page_index, dpi=dpi)
         mean_abs, changed_ratio, diff_image = diff_images(ref_image, cand_image)
-        diff_path = report_dir / f"page-{page_index + 1:03d}.diff.png"
+        diff_path = report_dir / f"page-{display_page:03d}.diff.png"
         diff_image.save(diff_path)
+        page_result = {
+            "page": display_page,
+            "candidate_pdf_page": cand_page_index + 1,
+            "reference_pdf_page": ref_page_index + 1,
+            "mean_abs": round(mean_abs, 5),
+            "changed_ratio": round(changed_ratio, 5),
+            "hints": region_hints(diff_image),
+            "diff_image": str(diff_path),
+        }
+        if save_renders:
+            reference_path = report_dir / f"page-{display_page:03d}.reference.png"
+            candidate_path = report_dir / f"page-{display_page:03d}.candidate.png"
+            ref_image.save(reference_path)
+            cand_image.save(candidate_path)
+            page_result["reference_image"] = str(reference_path)
+            page_result["candidate_image"] = str(candidate_path)
         result["page_diffs"].append(
-            {
-                "page": page_index + 1,
-                "mean_abs": round(mean_abs, 5),
-                "changed_ratio": round(changed_ratio, 5),
-                "hints": region_hints(diff_image),
-                "diff_image": str(diff_path),
-            }
+            page_result
         )
     return result
 
@@ -199,6 +248,10 @@ def validate_fixture(project_root: Path, repo_root: Path, fixture: dict, report_
 def main() -> None:
     parser = argparse.ArgumentParser(description="Compile and validate ALIUS bulletin fixtures against reference PDFs.")
     parser.add_argument("--manifest", required=True, type=Path)
+    parser.add_argument("--dpi", type=int, default=160)
+    parser.add_argument("--save-renders", action="store_true", help="Save candidate and reference page PNGs next to diff images.")
+    parser.add_argument("--include-incomplete", action="store_true", help="Also compile fixtures not marked reconstructed.")
+    parser.add_argument("--only", action="append", default=[], help="Validate only the named fixture. Can be passed multiple times.")
     args = parser.parse_args()
 
     manifest_path = args.manifest.resolve()
@@ -210,12 +263,27 @@ def main() -> None:
 
     summary_lines = ["# Validation Report", ""]
     all_results = []
-    for section in ("pieces", "issues"):
+    for section in ("covers", "pieces", "issues"):
         for fixture in manifest.get(section, []):
-            result = validate_fixture(project_root, repo_root, fixture, report_root)
+            if args.only and fixture["name"] not in set(args.only):
+                continue
+            result = validate_fixture(
+                project_root,
+                repo_root,
+                fixture,
+                report_root,
+                dpi=args.dpi,
+                save_renders=args.save_renders,
+                include_incomplete=args.include_incomplete,
+            )
             all_results.append(result)
             summary_lines.append(f"## {result['name']}")
             summary_lines.append("")
+            if result.get("skipped"):
+                summary_lines.append(f"- Status: `skipped`")
+                summary_lines.append(f"- Reason: `{result['skip_reason']}`")
+                summary_lines.append("")
+                continue
             summary_lines.append(f"- Candidate PDF: `{result['candidate_pdf']}`")
             if result["reference_pdf"]:
                 summary_lines.append(f"- Reference PDF: `{result['reference_pdf']}`")

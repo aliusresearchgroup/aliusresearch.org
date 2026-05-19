@@ -801,6 +801,11 @@ body.wsite-page-events .event-card__image {
   background: #eef3ed;
 }
 
+body.wsite-page-events .event-card__image--contain {
+  padding: 22px;
+  object-fit: contain;
+}
+
 body.wsite-page-events .event-card__body {
   display: grid;
   gap: 14px;
