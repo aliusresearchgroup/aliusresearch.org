@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="357" height="173" viewBox="-24 -8 357 173" preserveAspectRatio="xMidYMid meet" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;overflow:visible;">
-  <title>ALIUS all-leaf mold sprouting logo with robust liquid wordmark mold reveal v08 distinct three-leaf sway</title>
-  <desc>Pure SVG ALIUS logo, fast-growth distinct-sway v08 robust-liquid-wordmark edition: the three leaves sprout with equal-duration mold-constrained vector paths, then keep swaying at subtly different calm wind speeds so the dark left leaf, middle leaf, and light right leaf remain out of phase by design. The wordmark uses one shared hardcoded letter mold for the visible letters, per-letter liquid clips, and late cleanup seals: each thick white liquid channel is clipped to the exact letter mold and advances by stroke-dash front first, so the ALIUS letters fill like water moving through their glyph-shaped molds before the cleanup layer closes residual pinholes.</desc>
+  <title>ALIUS all-leaf mold sprouting logo with locked per-letter liquid reveal v07 fast growth distinct three-leaf sway</title>
+  <desc>Pure SVG ALIUS logo, fast-growth distinct-sway edition: the three leaves sprout with equal-duration mold-constrained vector paths, then keep swaying at subtly different calm wind speeds so the dark left leaf, middle leaf, and light right leaf remain out of phase by design. The wordmark uses one shared hardcoded letter mold for the visible letters, the per-letter liquid clips, and the final mask seals, so the organic liquid-maze reveal cannot leave U or S fragments unfilled in different browser contexts.</desc>
   <style>
     #alius-animated-leaf-source { isolation: isolate; }
     .leaf { mix-blend-mode: multiply; }
@@ -65,157 +65,157 @@
       <g id="alius-wordmark-liquid-growth" filter="url(#alius-liquid-soften)">
         <g id="alius-letter-a-liquid" clip-path="url(#alius-letter-clip-a)">
         <circle class="continuous-liquid-seed a-seed" cx="88" cy="96" r="0" fill="#fff" opacity="0">
-          <animate attributeName="opacity" begin="3.7500s" dur="0.0845s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
-          <animate attributeName="r" begin="3.7500s" dur="0.1900s" values="0;5.104;8.800" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
-          <animate attributeName="opacity" begin="4.0245s" dur="0.1795s" values="1;0" fill="freeze" />
+          <animate attributeName="opacity" begin="3.75s" dur="0.04s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
+          <animate attributeName="r" begin="3.75s" dur="0.09s" values="0;5.104;8.800" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="opacity" begin="3.88s" dur="0.085s" values="1;0" fill="freeze" />
         </circle>
-        <path class="continuous-liquid-letter-flow a-continuous-maze-main" d="M88 96 C94 77 103 43 112 20 C121 45 132 78 140 96" fill="none" stroke="#fff" stroke-width="25.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="3.7500s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="3.7500s" dur="0.9501s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow a-continuous-maze-main" d="M88 96 C94 77 103 43 112 20 C121 45 132 78 140 96" fill="none" stroke="#fff" stroke-width="7.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="3.75s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="3.75s" dur="0.45s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="3.75s" dur="0.45s" values="7.00;15.33;25.50;25.50" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
-        <path class="continuous-liquid-letter-flow a-continuous-maze-sidewall" d="M91 94 C96 80 103 55 110 24 C119 54 132 83 138 96" fill="none" stroke="#fff" stroke-width="18.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="3.8133s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="3.8133s" dur="0.8868s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow a-continuous-maze-sidewall" d="M91 94 C96 80 103 55 110 24 C119 54 132 83 138 96" fill="none" stroke="#fff" stroke-width="4.80" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="3.78s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="3.78s" dur="0.42s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="3.78s" dur="0.42s" values="4.80;10.74;18.00;18.00" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
-        <path class="continuous-liquid-letter-flow a-continuous-maze-crossbar" d="M99 64 C107 62 121 62 130 64" fill="none" stroke="#fff" stroke-width="16.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="4.1723s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="4.1723s" dur="0.5278s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow a-continuous-maze-crossbar" d="M99 64 C107 62 121 62 130 64" fill="none" stroke="#fff" stroke-width="4.60" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="3.95s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="3.95s" dur="0.25s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="3.95s" dur="0.25s" values="4.60;9.96;16.50;16.50" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
         </g>
         <g id="alius-letter-l-liquid" clip-path="url(#alius-letter-clip-l)">
         <circle class="continuous-liquid-seed l-seed" cx="158" cy="20" r="0" fill="#fff" opacity="0">
-          <animate attributeName="opacity" begin="4.4541s" dur="0.0845s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
-          <animate attributeName="r" begin="4.4541s" dur="0.1900s" values="0;4.872;8.400" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
-          <animate attributeName="opacity" begin="4.7180s" dur="0.1900s" values="1;0" fill="freeze" />
+          <animate attributeName="opacity" begin="4.0835s" dur="0.04s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
+          <animate attributeName="r" begin="4.0835s" dur="0.09s" values="0;4.872;8.400" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="opacity" begin="4.2085s" dur="0.09s" values="1;0" fill="freeze" />
         </circle>
-        <path class="continuous-liquid-letter-flow l-vertical-foot" d="M158 20 C158 43 157 70 158 96 C169 97 184 96 196 96" fill="none" stroke="#fff" stroke-width="24.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="4.4541s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="4.4541s" dur="0.7812s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow l-vertical-foot" d="M158 20 C158 43 157 70 158 96 C169 97 184 96 196 96" fill="none" stroke="#fff" stroke-width="7.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="4.0835s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="4.0835s" dur="0.37s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="4.0835s" dur="0.37s" values="7.00;18.00;24.00;24.00" keyTimes="0;0.38;0.76;1" calcMode="linear" fill="freeze" />
         </path>
-        <path class="continuous-liquid-letter-flow l-sidewall" d="M164 22 C163 48 163 76 164 91 C174 91 186 91 195 91" fill="none" stroke="#fff" stroke-width="15.80" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="4.5386s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="4.5386s" dur="0.6967s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow l-sidewall" d="M164 22 C163 48 163 76 164 91 C174 91 186 91 195 91" fill="none" stroke="#fff" stroke-width="4.80" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="4.1235s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="4.1235s" dur="0.33s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="4.1235s" dur="0.33s" values="4.80;11.50;15.80;15.80" keyTimes="0;0.38;0.76;1" calcMode="linear" fill="freeze" />
         </path>
         </g>
         <g id="alius-letter-i-liquid" clip-path="url(#alius-letter-clip-i)">
         <circle class="continuous-liquid-seed i-seed" cx="199" cy="20" r="0" fill="#fff" opacity="0">
-          <animate attributeName="opacity" begin="4.9471s" dur="0.0845s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
-          <animate attributeName="r" begin="4.9471s" dur="0.1900s" values="0;4.176;7.200" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
-          <animate attributeName="opacity" begin="5.2110s" dur="0.1900s" values="1;0" fill="freeze" />
+          <animate attributeName="opacity" begin="4.317s" dur="0.04s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
+          <animate attributeName="r" begin="4.317s" dur="0.09s" values="0;4.176;7.200" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="opacity" begin="4.442s" dur="0.09s" values="1;0" fill="freeze" />
         </circle>
-        <path class="continuous-liquid-letter-flow i-continuous-maze-core" d="M199 18 C199 42 199 70 199 96" fill="none" stroke="#fff" stroke-width="23.80" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="4.9471s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="4.9471s" dur="0.6334s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow i-continuous-maze-core" d="M199 18 C199 42 199 70 199 96" fill="none" stroke="#fff" stroke-width="6.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="4.317s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="4.317s" dur="0.3s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="4.317s" dur="0.3s" values="6.50;14.29;23.80;23.80" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
         </g>
         <g id="alius-letter-u-liquid" clip-path="url(#alius-letter-clip-u)">
         <circle class="continuous-liquid-seed u-bowl-seed" cx="235" cy="94" r="0" fill="#fff" opacity="0">
-          <animate attributeName="opacity" begin="5.2997s" dur="0.0845s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
-          <animate attributeName="r" begin="5.2997s" dur="0.1900s" values="0;5.452;9.400" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
-          <animate attributeName="opacity" begin="5.5636s" dur="0.1900s" values="1;0" fill="freeze" />
+          <animate attributeName="opacity" begin="4.484s" dur="0.04s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
+          <animate attributeName="r" begin="4.484s" dur="0.09s" values="0;5.452;9.400" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="opacity" begin="4.609s" dur="0.09s" values="1;0" fill="freeze" />
         </circle>
-        <path class="continuous-liquid-letter-flow u-continuous-maze-left-arm" d="M235 94 C226 94 219 85 216 66 C214 49 216 31 216 20" fill="none" stroke="#fff" stroke-width="25.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="5.2997s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="5.2997s" dur="0.8656s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow u-continuous-maze-left-arm" d="M235 94 C226 94 219 85 216 66 C214 49 216 31 216 20" fill="none" stroke="#fff" stroke-width="7.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="4.484s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="4.484s" dur="0.41s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="4.484s" dur="0.41s" values="7.00;15.33;25.50;25.50" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
-        <path class="continuous-liquid-letter-flow u-continuous-maze-right-arm" d="M235 94 C246 94 252 85 254 66 C256 49 254 31 254 20" fill="none" stroke="#fff" stroke-width="25.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="5.2997s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="5.2997s" dur="0.8656s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow u-continuous-maze-right-arm" d="M235 94 C246 94 252 85 254 66 C256 49 254 31 254 20" fill="none" stroke="#fff" stroke-width="7.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="4.484s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="4.484s" dur="0.41s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="4.484s" dur="0.41s" values="7.00;15.33;25.50;25.50" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
-        <path class="continuous-liquid-letter-flow u-continuous-maze-inner-left" d="M235 94 C226 91 222 77 222 61 C222 44 222 31 222 23" fill="none" stroke="#fff" stroke-width="17.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="5.3419s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="5.3419s" dur="0.8234s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow u-continuous-maze-inner-left" d="M235 94 C226 91 222 77 222 61 C222 44 222 31 222 23" fill="none" stroke="#fff" stroke-width="4.80" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="4.504s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="4.504s" dur="0.39s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="4.504s" dur="0.39s" values="4.80;10.52;17.50;17.50" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
-        <path class="continuous-liquid-letter-flow u-continuous-maze-inner-right" d="M235 94 C246 91 249 77 249 61 C248 44 248 31 248 23" fill="none" stroke="#fff" stroke-width="17.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="5.3419s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="5.3419s" dur="0.8234s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow u-continuous-maze-inner-right" d="M235 94 C246 91 249 77 249 61 C248 44 248 31 248 23" fill="none" stroke="#fff" stroke-width="4.80" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="4.504s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="4.504s" dur="0.39s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="4.504s" dur="0.39s" values="4.80;10.52;17.50;17.50" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
-        <path class="continuous-liquid-letter-flow u-continuous-maze-bowl-left" d="M235 94 C229 97 222 92 219 83" fill="none" stroke="#fff" stroke-width="14.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="5.3208s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="5.3208s" dur="0.5278s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow u-continuous-maze-bowl-left" d="M235 94 C229 97 222 92 219 83" fill="none" stroke="#fff" stroke-width="4.20" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="4.494s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="4.494s" dur="0.25s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="4.494s" dur="0.25s" values="4.20;8.84;14.50;14.50" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
-        <path class="continuous-liquid-letter-flow u-continuous-maze-bowl-right" d="M235 94 C241 97 249 92 252 83" fill="none" stroke="#fff" stroke-width="14.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-          <animate attributeName="opacity" begin="5.3208s" dur="0.0011s" values="0;1" fill="freeze" />
-          <animate attributeName="stroke-dashoffset" begin="5.3208s" dur="0.5278s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
-          
+        <path class="continuous-liquid-letter-flow u-continuous-maze-bowl-right" d="M235 94 C241 97 249 92 252 83" fill="none" stroke="#fff" stroke-width="4.20" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+          <animate attributeName="opacity" begin="4.494s" dur="0.0005s" values="0;1" fill="freeze" />
+          <animate attributeName="stroke-dashoffset" begin="4.494s" dur="0.25s" values="100;91;79;63;44;26;10;3;0" keyTimes="0;0.10;0.22;0.36;0.52;0.68;0.84;0.94;1" calcMode="linear" fill="freeze" />
+          <animate attributeName="stroke-width" begin="4.494s" dur="0.25s" values="4.20;8.84;14.50;14.50" keyTimes="0;0.36;0.76;1" calcMode="linear" fill="freeze" />
         </path>
         </g>
         <g id="alius-letter-s-liquid" clip-path="url(#alius-letter-clip-s)">
         <g id="alius-connected-glyph-liquid-arch" class="s-connected-glyph-liquid-arch">
           <circle class="continuous-liquid-seed s-waist-seed" cx="281.0" cy="59.5" r="0" fill="#fff" opacity="0">
-            <animate attributeName="opacity" begin="5.8983s" dur="0.0845s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
-            <animate attributeName="r" begin="5.8983s" dur="0.1900s" values="0;4.900;8.600" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
-            <animate attributeName="opacity" begin="6.1991s" dur="0.1900s" values="1;0" fill="freeze" />
+            <animate attributeName="opacity" begin="4.7675s" dur="0.04s" values="0;1;1" keyTimes="0;0.35;1" fill="freeze" />
+            <animate attributeName="r" begin="4.7675s" dur="0.09s" values="0;4.900;8.600" keyTimes="0;0.46;1" calcMode="linear" fill="freeze" />
+            <animate attributeName="opacity" begin="4.91s" dur="0.09s" values="1;0" fill="freeze" />
           </circle>
-          <path class="continuous-liquid-letter-flow s-connected-upper-main" d="M281.0 59.5 C274.0 55.0 267.4 50.2 266.8 42.2 C266.2 32.4 275.0 28.4 284.2 29.7 C290.4 30.6 294.8 34.8 296.0 40.8" fill="none" stroke="#fff" stroke-width="29.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-            <animate attributeName="opacity" begin="5.8983s" dur="0.0011s" values="0;1" fill="freeze" />
-            <animate attributeName="stroke-dashoffset" begin="5.8983s" dur="0.5701s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
-            
+          <path class="continuous-liquid-letter-flow s-connected-upper-main" d="M281.0 59.5 C274.0 55.0 267.4 50.2 266.8 42.2 C266.2 32.4 275.0 28.4 284.2 29.7 C290.4 30.6 294.8 34.8 296.0 40.8" fill="none" stroke="#fff" stroke-width="6.80" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+            <animate attributeName="opacity" begin="4.7675s" dur="0.0005s" values="0;1" fill="freeze" />
+            <animate attributeName="stroke-dashoffset" begin="4.7675s" dur="0.27s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
+            <animate attributeName="stroke-width" begin="4.7675s" dur="0.27s" values="6.80;6.80;19.01;29.00" keyTimes="0;0.24;0.74;1" calcMode="linear" fill="freeze" />
           </path>
-          <path class="continuous-liquid-letter-flow s-connected-lower-main" d="M281.0 59.5 C287.6 64.4 293.5 70.4 294.1 78.5 C294.8 88.5 286.3 92.3 277.0 91.2 C268.4 90.2 262.2 84.1 260.1 77.0" fill="none" stroke="#fff" stroke-width="30.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-            <animate attributeName="opacity" begin="5.8983s" dur="0.0011s" values="0;1" fill="freeze" />
-            <animate attributeName="stroke-dashoffset" begin="5.8983s" dur="0.6017s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
-            
+          <path class="continuous-liquid-letter-flow s-connected-lower-main" d="M281.0 59.5 C287.6 64.4 293.5 70.4 294.1 78.5 C294.8 88.5 286.3 92.3 277.0 91.2 C268.4 90.2 262.2 84.1 260.1 77.0" fill="none" stroke="#fff" stroke-width="6.80" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+            <animate attributeName="opacity" begin="4.7675s" dur="0.0005s" values="0;1" fill="freeze" />
+            <animate attributeName="stroke-dashoffset" begin="4.7675s" dur="0.285s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
+            <animate attributeName="stroke-width" begin="4.7675s" dur="0.285s" values="6.80;6.80;19.56;30.00" keyTimes="0;0.24;0.74;1" calcMode="linear" fill="freeze" />
           </path>
-          <path class="continuous-liquid-letter-flow s-connected-upper-outer-side" d="M281.0 59.5 C272.2 55.2 264.0 47.2 265.2 38.2 C267.2 28.2 279.6 24.8 290.8 29.8" fill="none" stroke="#fff" stroke-width="17.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-            <animate attributeName="opacity" begin="6.0302s" dur="0.0011s" values="0;1" fill="freeze" />
-            <animate attributeName="stroke-dashoffset" begin="6.0302s" dur="0.4539s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
-            
+          <path class="continuous-liquid-letter-flow s-connected-upper-outer-side" d="M281.0 59.5 C272.2 55.2 264.0 47.2 265.2 38.2 C267.2 28.2 279.6 24.8 290.8 29.8" fill="none" stroke="#fff" stroke-width="4.20" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+            <animate attributeName="opacity" begin="4.83s" dur="0.0005s" values="0;1" fill="freeze" />
+            <animate attributeName="stroke-dashoffset" begin="4.83s" dur="0.215s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
+            <animate attributeName="stroke-width" begin="4.83s" dur="0.215s" values="4.20;4.20;11.52;17.50" keyTimes="0;0.24;0.74;1" calcMode="linear" fill="freeze" />
           </path>
-          <path class="continuous-liquid-letter-flow s-connected-upper-inner-side" d="M281.0 59.5 C275.2 55.0 270.4 51.8 270.8 44.8 C271.4 36.8 280.5 34.1 288.8 38.8" fill="none" stroke="#fff" stroke-width="15.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-            <animate attributeName="opacity" begin="6.0513s" dur="0.0011s" values="0;1" fill="freeze" />
-            <animate attributeName="stroke-dashoffset" begin="6.0513s" dur="0.4223s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
-            
+          <path class="continuous-liquid-letter-flow s-connected-upper-inner-side" d="M281.0 59.5 C275.2 55.0 270.4 51.8 270.8 44.8 C271.4 36.8 280.5 34.1 288.8 38.8" fill="none" stroke="#fff" stroke-width="4.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+            <animate attributeName="opacity" begin="4.84s" dur="0.0005s" values="0;1" fill="freeze" />
+            <animate attributeName="stroke-dashoffset" begin="4.84s" dur="0.2s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
+            <animate attributeName="stroke-width" begin="4.84s" dur="0.2s" values="4.00;4.00;10.32;15.50" keyTimes="0;0.24;0.74;1" calcMode="linear" fill="freeze" />
           </path>
-          <path class="continuous-liquid-letter-flow s-connected-waist-diagonal" d="M281.0 59.5 C285.2 61.6 289.2 64.2 291.0 67.8 C294.1 72.8 294.4 77.5 292.5 82.4" fill="none" stroke="#fff" stroke-width="19.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-            <animate attributeName="opacity" begin="5.9774s" dur="0.0011s" values="0;1" fill="freeze" />
-            <animate attributeName="stroke-dashoffset" begin="5.9774s" dur="0.4117s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
-            
+          <path class="continuous-liquid-letter-flow s-connected-waist-diagonal" d="M281.0 59.5 C285.2 61.6 289.2 64.2 291.0 67.8 C294.1 72.8 294.4 77.5 292.5 82.4" fill="none" stroke="#fff" stroke-width="4.80" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+            <animate attributeName="opacity" begin="4.805s" dur="0.0005s" values="0;1" fill="freeze" />
+            <animate attributeName="stroke-dashoffset" begin="4.805s" dur="0.195s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
+            <animate attributeName="stroke-width" begin="4.805s" dur="0.195s" values="4.80;4.80;12.61;19.00" keyTimes="0;0.24;0.74;1" calcMode="linear" fill="freeze" />
           </path>
-          <path class="continuous-liquid-letter-flow s-connected-lower-inner-side" d="M281.0 59.5 C289.0 69.0 293.8 80.0 289.0 86.4 C284.5 92.4 274.2 92.4 266.5 85.8" fill="none" stroke="#fff" stroke-width="17.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-            <animate attributeName="opacity" begin="6.0461s" dur="0.0011s" values="0;1" fill="freeze" />
-            <animate attributeName="stroke-dashoffset" begin="6.0461s" dur="0.4539s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
-            
+          <path class="continuous-liquid-letter-flow s-connected-lower-inner-side" d="M281.0 59.5 C289.0 69.0 293.8 80.0 289.0 86.4 C284.5 92.4 274.2 92.4 266.5 85.8" fill="none" stroke="#fff" stroke-width="4.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+            <animate attributeName="opacity" begin="4.8375s" dur="0.0005s" values="0;1" fill="freeze" />
+            <animate attributeName="stroke-dashoffset" begin="4.8375s" dur="0.215s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
+            <animate attributeName="stroke-width" begin="4.8375s" dur="0.215s" values="4.00;4.00;11.43;17.50" keyTimes="0;0.24;0.74;1" calcMode="linear" fill="freeze" />
           </path>
-          <path class="continuous-liquid-letter-flow s-connected-lower-outer-side" d="M281.0 59.5 C294.0 72.4 296.0 88.2 286.8 94.0 C276.8 100.0 260.6 91.0 258.8 81.2" fill="none" stroke="#fff" stroke-width="17.50" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-            <animate attributeName="opacity" begin="6.0725s" dur="0.0011s" values="0;1" fill="freeze" />
-            <animate attributeName="stroke-dashoffset" begin="6.0725s" dur="0.4434s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
-            
+          <path class="continuous-liquid-letter-flow s-connected-lower-outer-side" d="M281.0 59.5 C294.0 72.4 296.0 88.2 286.8 94.0 C276.8 100.0 260.6 91.0 258.8 81.2" fill="none" stroke="#fff" stroke-width="4.20" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+            <animate attributeName="opacity" begin="4.85s" dur="0.0005s" values="0;1" fill="freeze" />
+            <animate attributeName="stroke-dashoffset" begin="4.85s" dur="0.21s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
+            <animate attributeName="stroke-width" begin="4.85s" dur="0.21s" values="4.20;4.20;11.52;17.50" keyTimes="0;0.24;0.74;1" calcMode="linear" fill="freeze" />
           </path>
-          <path class="continuous-liquid-letter-flow s-connected-center-seal" d="M276.2 57.5 C280.0 60.8 285.6 63.2 290.2 66.6" fill="none" stroke="#fff" stroke-width="17.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
-            <animate attributeName="opacity" begin="5.9299s" dur="0.0011s" values="0;1" fill="freeze" />
-            <animate attributeName="stroke-dashoffset" begin="5.9299s" dur="0.2956s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
-            
+          <path class="continuous-liquid-letter-flow s-connected-center-seal" d="M276.2 57.5 C280.0 60.8 285.6 63.2 290.2 66.6" fill="none" stroke="#fff" stroke-width="5.00" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0">
+            <animate attributeName="opacity" begin="4.7825s" dur="0.0005s" values="0;1" fill="freeze" />
+            <animate attributeName="stroke-dashoffset" begin="4.7825s" dur="0.14s" values="100;95;87;73;55;36;17;4;0" keyTimes="0;0.08;0.18;0.32;0.48;0.64;0.80;0.93;1" calcMode="linear" fill="freeze" />
+            <animate attributeName="stroke-width" begin="4.7825s" dur="0.14s" values="5.00;5.00;11.60;17.00" keyTimes="0;0.24;0.74;1" calcMode="linear" fill="freeze" />
           </path>
         </g>
         </g>
       </g>
       <g id="alius-wordmark-mold-lock" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">
         <text x="82.5" y="89.9" fill="#fff" opacity="0">A
-          <animate attributeName="opacity" begin="4.9000s" dur="0.5000s" values="0;0.08;1" keyTimes="0;0.5;1" fill="freeze" />
+          <animate attributeName="opacity" begin="4.05s" dur="0.18s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
         </text>
         <text x="146.4117279" y="89.9" fill="#fff" opacity="0">L
-          <animate attributeName="opacity" begin="5.4500s" dur="0.5000s" values="0;0.08;1" keyTimes="0;0.5;1" fill="freeze" />
+          <animate attributeName="opacity" begin="4.34s" dur="0.16s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
         </text>
         <text x="186.3210907" y="89.9" fill="#fff" opacity="0">I
-          <animate attributeName="opacity" begin="5.8200s" dur="0.4200s" values="0;0.08;1" keyTimes="0;0.5;1" fill="freeze" />
+          <animate attributeName="opacity" begin="4.50s" dur="0.14s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
         </text>
         <text x="205.8546906" y="89.9" fill="#fff" opacity="0">U
-          <animate attributeName="opacity" begin="6.4200s" dur="0.5200s" values="0;0.08;1" keyTimes="0;0.5;1" fill="freeze" />
+          <animate attributeName="opacity" begin="4.73s" dur="0.20s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
         </text>
         <text x="262.4273376" y="89.9" fill="#fff" opacity="0">S
-          <animate attributeName="opacity" begin="6.7600s" dur="0.5200s" values="0;0.08;1" keyTimes="0;0.5;1" fill="freeze" />
+          <animate attributeName="opacity" begin="4.88s" dur="0.22s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
         </text>
       </g>
 
