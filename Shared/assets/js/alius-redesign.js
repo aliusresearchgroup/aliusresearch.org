@@ -212,7 +212,17 @@
     apply();
   }
 
+  function restartAnimatedLogo() {
+    var logos = Array.prototype.slice.call(document.querySelectorAll('.wsite-logo img'));
+    if (!logos.length) return;
+    var stamp = Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 7);
+    logos.forEach(function (img) {
+      img.src = '/assets/brand/alius-logo.svg?v=20260520-final-water-mould-out-of-phase-sway&restart=' + stamp;
+    });
+  }
+
   function init() {
+    restartAnimatedLogo();
     buildAnchorNav(anchorsForPage());
     wireSmoothScroll();
     wireActiveState();
@@ -224,4 +234,8 @@
   } else {
     init();
   }
+
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) restartAnimatedLogo();
+  });
 })();

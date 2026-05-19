@@ -2,7 +2,8 @@
 
 This folder preserves the logo materials used for the website header.
 
-- `alius-logo.svg`: live website logo, with the animated vector leaf and the recreated Century Gothic text layout.
+- `alius-logo.svg`: final live website logo, with all-leaf mold sprouting, out-of-phase leaf sway, and a per-letter liquid-mould Century Gothic wordmark reveal.
+- `../../../../archive/20260519/generated-brand-assets/alius-logo-animated-vector-final-water-mould-out-of-phase-sway-20260519.svg`: archived copy of the final preferred SVG.
 - `alius-logo-animated.svg`: archived copy of the animated full logo.
 - `alius-leaf-animated.svg`: animated leaf-only SVG component.
 - `alius-logo-static.svg`: archived static SVG recreation of the original raster logo.
