@@ -952,8 +952,46 @@ body.wsite-page-team .team-card:focus-visible {
     font-size: 10.5px;
   }
 
+  #header {
+    height: clamp(78px, 20vw, 84px);
+  }
+
+  #sitename {
+    margin: 0;
+    text-align: center;
+  }
+
+  #sitename .wsite-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+  }
+
+  #sitename .wsite-logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #sitename .wsite-logo img {
+    display: block;
+    width: auto;
+    max-width: min(380px, 92vw);
+    max-height: clamp(64px, 16vw, 68px) !important;
+    object-fit: contain;
+  }
+
+  #wrapper {
+    padding-top: clamp(78px, 20vw, 84px);
+  }
+
+  #navigation {
+    top: clamp(78px, 20vw, 84px);
+  }
+
   .alius-anchor-nav {
-    top: 136px;
+    top: calc(clamp(78px, 20vw, 84px) + 71px);
     z-index: 840;
   }
 
