@@ -988,5 +988,20 @@
         "from": "/bulletin03-winkelmanInterview.html",
         "to": "/bulletin/#bulletin03-winkelmaninterview",
         "type": "doi-anchor-landing"
+    },
+    {
+        "from": "/bulletin/interview-generator/",
+        "to": "/bulletin/instructions-guidelines/#interview-generator",
+        "type": "bulletin-guidelines-anchor"
+    },
+    {
+        "from": "/bulletin-interview-generator.html",
+        "to": "/bulletin/instructions-guidelines/#interview-generator",
+        "type": "bulletin-guidelines-anchor"
+    },
+    {
+        "from": "/bulletin-instructions-guidelines.html",
+        "to": "/bulletin/instructions-guidelines/",
+        "type": "bulletin-guidelines-anchor"
     }
 ]

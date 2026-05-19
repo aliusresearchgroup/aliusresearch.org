@@ -63,28 +63,6 @@ body.wsite-page-bulletin-interview-generator {
   padding: 32px 22px 54px;
 }
 
-.generator-nav {
-  align-items: center;
-  border-bottom: 1px solid var(--alius-line);
-  display: flex;
-  gap: 18px;
-  justify-content: space-between;
-  margin-bottom: 28px;
-  padding-bottom: 16px;
-}
-
-.generator-nav a {
-  color: var(--alius-green-dark);
-  font: 700 13px/1.2 "Raleway", "Alius Lato", sans-serif;
-  text-decoration: none;
-}
-
-.generator-nav__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
 .generator-title {
   margin: 0 0 22px;
 }
@@ -103,6 +81,96 @@ body.wsite-page-bulletin-interview-generator {
   font: 600 14px/1.55 "Raleway", "Alius Lato", sans-serif;
   margin: 0;
   max-width: 780px;
+}
+
+.generator-title--compact {
+  margin-top: 34px;
+  scroll-margin-top: 24px;
+}
+
+.generator-title h2,
+.guidelines-panel h2 {
+  color: var(--alius-text);
+  font-family: "Playfair Display", "Alius Cormorant", serif;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.18;
+  margin: 0 0 8px;
+}
+
+.guidelines-panel {
+  margin: 26px 0 8px;
+}
+
+.guidelines-panel__header {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.guidelines-panel__header .generator-button {
+  text-decoration: none;
+}
+
+.guidelines-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.guideline-pdf-card {
+  background: var(--alius-paper);
+  border: 1px solid var(--alius-line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.guideline-pdf-card summary {
+  align-items: center;
+  color: var(--alius-green-dark);
+  cursor: pointer;
+  display: flex;
+  font: 700 14px/1.25 "Raleway", "Alius Lato", sans-serif;
+  gap: 12px;
+  justify-content: space-between;
+  list-style-position: inside;
+  min-height: 48px;
+  padding: 0 16px;
+}
+
+.guideline-pdf-card summary small {
+  color: var(--alius-muted);
+  font: 700 11px/1.2 "Raleway", "Alius Lato", sans-serif;
+  text-transform: uppercase;
+}
+
+.guideline-pdf-card__body {
+  border-top: 1px solid var(--alius-line);
+  padding: 14px;
+}
+
+.guideline-pdf-card__body iframe {
+  background: #fff;
+  border: 1px solid #cfdad1;
+  border-radius: 6px;
+  display: block;
+  height: min(70vh, 640px);
+  min-height: 420px;
+  width: 100%;
+}
+
+.guideline-pdf-card__body p {
+  margin: 10px 0 0;
+}
+
+.guideline-pdf-card__body a {
+  color: var(--alius-green-dark);
+  font: 700 12px/1.25 "Raleway", "Alius Lato", sans-serif;
+}
+
+.interview-generator-section {
+  scroll-margin-top: 24px;
 }
 
 .generator-layout {
@@ -574,9 +642,21 @@ body.wsite-page-bulletin-interview-generator {
     padding: 22px 14px 40px;
   }
 
-  .generator-nav {
+  .guidelines-panel__header {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .guideline-pdf-card summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    padding: 12px 14px;
+  }
+
+  .guideline-pdf-card__body iframe {
+    min-height: 360px;
   }
 
   .field-grid {
@@ -612,8 +692,10 @@ body.wsite-page-bulletin-interview-generator {
     width: var(--alius-page-width);
   }
 
-  .generator-nav,
+  #header,
+  #navigation,
   .generator-title,
+  .guidelines-panel,
   .generator-form,
   .preview-toolbar {
     display: none !important;
