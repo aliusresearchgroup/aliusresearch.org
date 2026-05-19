@@ -953,7 +953,7 @@ body.wsite-page-team .team-card:focus-visible {
   }
 
   #header {
-    height: clamp(78px, 20vw, 84px);
+    height: clamp(104px, 26vw, 112px);
   }
 
   #sitename {
@@ -978,20 +978,20 @@ body.wsite-page-team .team-card:focus-visible {
     display: block;
     width: auto;
     max-width: min(380px, 92vw);
-    max-height: clamp(64px, 16vw, 68px) !important;
+    max-height: clamp(92px, 23vw, 96px) !important;
     object-fit: contain;
   }
 
   #wrapper {
-    padding-top: clamp(78px, 20vw, 84px);
+    padding-top: clamp(104px, 26vw, 112px);
   }
 
   #navigation {
-    top: clamp(78px, 20vw, 84px);
+    top: clamp(104px, 26vw, 112px);
   }
 
   .alius-anchor-nav {
-    top: calc(clamp(78px, 20vw, 84px) + 71px);
+    top: calc(clamp(104px, 26vw, 112px) + 71px);
     z-index: 840;
   }
 

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="357" height="173" viewBox="-24 -8 357 173" preserveAspectRatio="xMidYMid meet" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;overflow:visible;">
-  <title>ALIUS all-leaf mold sprouting logo with locked per-letter liquid reveal v06 fast growth normal sway out-of-phase leaves</title>
-  <desc>Pure SVG ALIUS logo, fast-growth normal-sway out-of-phase edition: the three leaves sprout with equal-duration mold-constrained vector paths, then keep swaying at the original rate with one-third-cycle phase offsets. The wordmark uses one shared hardcoded letter mold for the visible letters, the per-letter liquid clips, and the final mask seals, so the organic liquid-maze reveal cannot leave U or S fragments unfilled in different browser contexts.</desc>
+  <title>ALIUS all-leaf mold sprouting logo with per-letter clipped continuous maze liquid letter reveal v05 fast growth normal sway out-of-phase leaves</title>
+  <desc>Pure SVG ALIUS logo, fast-growth normal-sway out-of-phase edition: the three leaves sprout with equal-duration mold-constrained vector paths, sway for two seconds after the third leaf completes, then the wordmark reveals through continuous MP4-inspired organic liquid-maze vector masks with coordinated sidewall traces, rounded circular growth fronts, U and S split-growth from interior seeds, and per-letter clipped continuous maze-style letter fills: each liquid path is confined to its own measured, sub-pixel padded glyph mold so neighboring strokes cannot reveal adjacent letters; A and I are single-source paths, L flows from its top source, U branches from one bowl source, and S uses connected paths with no remote circular nodes, so the S completes through the same flowing channel and the tagline keeps the MP4-derived gradual fade/reveal timing shifted to the faster timeline.</desc>
   <style>
     #alius-animated-leaf-source { isolation: isolate; }
     .leaf { mix-blend-mode: multiply; }
@@ -17,48 +17,40 @@
           <stop offset="1" stop-color="#000" stop-opacity="0" />
         </linearGradient>
 
-    <g id="alius-wordmark-mold-exact" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">
-      <text id="alius-letter-mold-a" x="82.5" y="89.9" fill="inherit">A</text>
-      <text id="alius-letter-mold-l" x="146.4117279" y="89.9" fill="inherit">L</text>
-      <text id="alius-letter-mold-i" x="186.3210907" y="89.9" fill="inherit">I</text>
-      <text id="alius-letter-mold-u" x="205.8546906" y="89.9" fill="inherit">U</text>
-      <text id="alius-letter-mold-s" x="262.4273376" y="89.9" fill="inherit">S</text>
-    </g>
-
     <clipPath id="alius-letter-clip-a" clipPathUnits="userSpaceOnUse">
-      <use href="#alius-letter-mold-a" />
-      <use href="#alius-letter-mold-a" transform="translate(-0.28 0)" />
-      <use href="#alius-letter-mold-a" transform="translate(0.28 0)" />
-      <use href="#alius-letter-mold-a" transform="translate(0 -0.28)" />
-      <use href="#alius-letter-mold-a" transform="translate(0 0.28)" />
+      <text x="82.5" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">A</text>
+      <text x="82.2200000" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">A</text>
+      <text x="82.7800000" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">A</text>
+      <text x="82.5" y="89.62" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">A</text>
+      <text x="82.5" y="90.18" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">A</text>
     </clipPath>
     <clipPath id="alius-letter-clip-l" clipPathUnits="userSpaceOnUse">
-      <use href="#alius-letter-mold-l" />
-      <use href="#alius-letter-mold-l" transform="translate(-0.28 0)" />
-      <use href="#alius-letter-mold-l" transform="translate(0.28 0)" />
-      <use href="#alius-letter-mold-l" transform="translate(0 -0.28)" />
-      <use href="#alius-letter-mold-l" transform="translate(0 0.28)" />
+      <text x="146.4117279" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">L</text>
+      <text x="146.1317279" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">L</text>
+      <text x="146.6917279" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">L</text>
+      <text x="146.4117279" y="89.62" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">L</text>
+      <text x="146.4117279" y="90.18" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">L</text>
     </clipPath>
     <clipPath id="alius-letter-clip-i" clipPathUnits="userSpaceOnUse">
-      <use href="#alius-letter-mold-i" />
-      <use href="#alius-letter-mold-i" transform="translate(-0.28 0)" />
-      <use href="#alius-letter-mold-i" transform="translate(0.28 0)" />
-      <use href="#alius-letter-mold-i" transform="translate(0 -0.28)" />
-      <use href="#alius-letter-mold-i" transform="translate(0 0.28)" />
+      <text x="186.3210907" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">I</text>
+      <text x="186.0410907" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">I</text>
+      <text x="186.6010907" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">I</text>
+      <text x="186.3210907" y="89.62" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">I</text>
+      <text x="186.3210907" y="90.18" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">I</text>
     </clipPath>
     <clipPath id="alius-letter-clip-u" clipPathUnits="userSpaceOnUse">
-      <use href="#alius-letter-mold-u" />
-      <use href="#alius-letter-mold-u" transform="translate(-0.28 0)" />
-      <use href="#alius-letter-mold-u" transform="translate(0.28 0)" />
-      <use href="#alius-letter-mold-u" transform="translate(0 -0.28)" />
-      <use href="#alius-letter-mold-u" transform="translate(0 0.28)" />
+      <text x="205.8546906" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">U</text>
+      <text x="205.5746906" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">U</text>
+      <text x="206.1346906" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">U</text>
+      <text x="205.8546906" y="89.62" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">U</text>
+      <text x="205.8546906" y="90.18" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">U</text>
     </clipPath>
     <clipPath id="alius-letter-clip-s" clipPathUnits="userSpaceOnUse">
-      <use href="#alius-letter-mold-s" />
-      <use href="#alius-letter-mold-s" transform="translate(-0.28 0)" />
-      <use href="#alius-letter-mold-s" transform="translate(0.28 0)" />
-      <use href="#alius-letter-mold-s" transform="translate(0 -0.28)" />
-      <use href="#alius-letter-mold-s" transform="translate(0 0.28)" />
+      <text x="262.4273376" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">S</text>
+      <text x="262.1473376" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">S</text>
+      <text x="262.7073376" y="89.9" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">S</text>
+      <text x="262.4273376" y="89.62" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">S</text>
+      <text x="262.4273376" y="90.18" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">S</text>
     </clipPath>
     <mask id="alius-wordmark-liquid-reveal" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="72" y="0" width="246" height="120">
       <rect x="72" y="0" width="246" height="120" fill="#000" />
@@ -201,23 +193,6 @@
         </g>
         </g>
       </g>
-      <g id="alius-wordmark-mold-lock" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0">
-        <text x="82.5" y="89.9" fill="#fff" opacity="0">A
-          <animate attributeName="opacity" begin="4.05s" dur="0.18s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
-        </text>
-        <text x="146.4117279" y="89.9" fill="#fff" opacity="0">L
-          <animate attributeName="opacity" begin="4.34s" dur="0.16s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
-        </text>
-        <text x="186.3210907" y="89.9" fill="#fff" opacity="0">I
-          <animate attributeName="opacity" begin="4.50s" dur="0.14s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
-        </text>
-        <text x="205.8546906" y="89.9" fill="#fff" opacity="0">U
-          <animate attributeName="opacity" begin="4.73s" dur="0.20s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
-        </text>
-        <text x="262.4273376" y="89.9" fill="#fff" opacity="0">S
-          <animate attributeName="opacity" begin="4.88s" dur="0.22s" values="0;0.35;1" keyTimes="0;0.5;1" fill="freeze" />
-        </text>
-      </g>
 
     </mask>
     <mask id="alius-tagline-reveal" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="-8" y="101" width="344" height="68">
@@ -230,12 +205,8 @@
           </rect>
         </mask>
   </defs>
-  <g id="alius-wordmark" fill="#145d35" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" font-size="86.4" letter-spacing="0" mask="url(#alius-wordmark-liquid-reveal)">
-    <text x="82.5" y="89.9">A</text>
-    <text x="146.4117279" y="89.9">L</text>
-    <text x="186.3210907" y="89.9">I</text>
-    <text x="205.8546906" y="89.9">U</text>
-    <text x="262.4273376" y="89.9">S</text>
+  <g id="alius-wordmark" fill="#145d35" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" mask="url(#alius-wordmark-liquid-reveal)">
+    <text x="82.5" y="89.9" font-size="86.4" letter-spacing="0">ALIUS</text>
   </g>
   <g id="alius-tagline" fill="#145d35" font-family="Century Gothic, 'Century Gothic', sans-serif" font-weight="400" mask="url(#alius-tagline-reveal)" opacity="0">
       <text x="4.2" y="123.5" font-size="19.3" letter-spacing="0">Interdisciplinary research group</text>

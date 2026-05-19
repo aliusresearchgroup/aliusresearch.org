@@ -217,7 +217,7 @@
     if (!logos.length) return;
     var stamp = Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 7);
     logos.forEach(function (img) {
-      img.src = '/assets/brand/alius-logo.svg?v=20260519-fast-growth-normal-sway-v04&restart=' + stamp;
+      img.src = '/assets/brand/alius-logo.svg?v=20260519-locked-mold-out-of-phase-v06&restart=' + stamp;
     });
   }
 
