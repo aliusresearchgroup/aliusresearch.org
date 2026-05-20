@@ -175,6 +175,11 @@ function setBioHeight(card, outerWidth) {
   card.style.setProperty('--expanded-bio-height', `${bioHeightAtWidth(card, innerWidth)}px`);
 }
 
+function setBioVisibility(card, visible) {
+  const bio = card.querySelector('.team-card__bio');
+  if (bio) bio.setAttribute('aria-hidden', visible ? 'false' : 'true');
+}
+
 function measureCardHeightAtSide(card, side) {
   const clone = card.cloneNode(true);
   clone.removeAttribute('id');
@@ -246,6 +251,7 @@ function deactivateCard(card) {
   if (!card) return;
   card.classList.remove('team-card--expanded');
   card.setAttribute('aria-expanded', 'false');
+  setBioVisibility(card, false);
   card.style.removeProperty('--expanded-bio-height');
 }
 
@@ -290,6 +296,7 @@ function expand(card) {
 
   expandedCard = card;
   card.setAttribute('aria-expanded', 'true');
+  setBioVisibility(card, true);
 
   if (plan.mode === 'accordion') {
     grid.style.removeProperty('grid-template-columns');
@@ -397,6 +404,7 @@ async function init() {
   cards.forEach((card) => {
     card.tabIndex = 0;
     card.setAttribute('aria-expanded', 'false');
+    setBioVisibility(card, false);
   });
   if (document.fonts && document.fonts.ready) {
     try { await document.fonts.ready; } catch (error) {}
