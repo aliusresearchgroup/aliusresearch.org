@@ -10,10 +10,18 @@ body {
   --alius-line: rgba(66, 81, 76, 0.18);
   --alius-paper: #ffffff;
   --alius-anchor-width: 188px;
+  --alius-anchor-top: 310px;
+  --alius-anchor-mobile-top: 136px;
   --alius-page-gutter: 48px;
+  --alius-content-measure: 920px;
+  --alius-wide-measure: 1064px;
+  --alius-title-measure: 760px;
   --alius-prose-measure: 68ch;
   --alius-prose-gutter: clamp(18px, 5vw, 48px);
   --alius-prose-line: 1.72;
+  --alius-section-gap: clamp(34px, 6vw, 72px);
+  --alius-anchor-offset: 112px;
+  --alius-anchor-offset-mobile: 224px;
 }
 
 #wsite-content .wsite-section-elements > .wsite-content-title,
@@ -27,13 +35,13 @@ body {
 #wsite-content .journal-page h2,
 #wsite-content .membership-page h2,
 #wsite-content .membership-page h3 {
-  max-width: min(760px, calc(100vw - var(--alius-prose-gutter) - var(--alius-prose-gutter))) !important;
+  max-width: min(var(--alius-title-measure), calc(100vw - var(--alius-prose-gutter) - var(--alius-prose-gutter))) !important;
   margin-right: auto !important;
   margin-left: auto !important;
   text-align: center !important;
 }
 
-body:not(.wsite-page-team) #wsite-content :where(.paragraph, p),
+body:not(.wsite-page-team):not(.wsite-page-bulletin-interview-generator) #wsite-content :where(.paragraph, p),
 body.wsite-page-team #wsite-content .memoriam :where(p, li) {
   box-sizing: border-box;
   max-width: min(var(--alius-prose-measure), calc(100vw - var(--alius-prose-gutter) - var(--alius-prose-gutter)));
@@ -47,16 +55,42 @@ body.wsite-page-team #wsite-content .memoriam :where(p, li) {
   overflow-wrap: break-word;
 }
 
-body:not(.wsite-page-team) #wsite-content :where(.paragraph, p) + :where(.paragraph, p),
+body:not(.wsite-page-team):not(.wsite-page-bulletin-interview-generator) #wsite-content :where(.paragraph, p) + :where(.paragraph, p),
 body.wsite-page-team #wsite-content .memoriam :where(p, li) + :where(p, li) {
   margin-top: 0.85em !important;
 }
 
-body:not(.wsite-page-team) #wsite-content :where(ul, ol):not(.wsite-menu-default):not(.tab-section-nav):not(.section-nav ol),
+body:not(.wsite-page-team):not(.wsite-page-bulletin-interview-generator) #wsite-content :where(ul, ol):not(.wsite-menu-default):not(.tab-section-nav):not(.section-nav ol):not(.alius-anchor-nav ol),
 body.wsite-page-team #wsite-content .memoriam :where(ul, ol) {
   max-width: min(var(--alius-prose-measure), calc(100vw - var(--alius-prose-gutter) - var(--alius-prose-gutter)));
   margin-right: auto !important;
   margin-left: auto !important;
+}
+
+.alius-layout-standard,
+.alius-prose,
+.alius-title,
+.alius-wide {
+  box-sizing: border-box;
+  width: min(100%, calc(100vw - var(--alius-prose-gutter) - var(--alius-prose-gutter)));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.alius-layout-standard {
+  max-width: var(--alius-content-measure);
+}
+
+.alius-prose {
+  max-width: var(--alius-prose-measure);
+}
+
+.alius-title {
+  max-width: var(--alius-title-measure);
+}
+
+.alius-wide {
+  max-width: var(--alius-wide-measure);
 }
 
 #header {
@@ -124,18 +158,19 @@ body.wsite-page-team #wsite-content .memoriam :where(ul, ol) {
   outline: none;
 }
 
+/* Legacy fixed bottom section nav is deprecated. Use generated .alius-anchor-nav. */
 .section-nav {
   display: none !important;
 }
 
 .alius-anchor-target,
 [id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: var(--alius-anchor-offset);
 }
 
 .alius-anchor-nav {
   position: fixed;
-  top: 310px;
+  top: var(--alius-anchor-top);
   left: 0;
   z-index: 850;
   width: var(--alius-anchor-width);
@@ -183,18 +218,24 @@ body.wsite-page-team #wsite-content .memoriam :where(ul, ol) {
 }
 
 body.wsite-page-team .team-grid {
-  transition: grid-template-columns 700ms ease;
+  transition: grid-template-columns var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              grid-template-rows var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 body.wsite-page-team .team-card {
-  min-height: 244px;
-  transition: border-color 180ms ease, background 180ms ease, opacity 180ms ease;
+  min-height: var(--team-card-base-size, 244px);
+  transition: border-color 180ms ease, background 180ms ease, opacity 240ms ease, box-shadow 240ms ease;
 }
 
 body.wsite-page-team .team-card--expanded {
-  grid-row: span 2;
-  z-index: 2;
+  z-index: 10;
+  overflow: hidden;
   transform: none !important;
+}
+
+body.wsite-page-team .team-grid--accordion-mode .team-card--expanded {
+  height: auto;
+  overflow: visible;
 }
 
 body.wsite-page-team #wsite-content h3.team-card__name {
@@ -220,10 +261,12 @@ body.wsite-page-team #wsite-content p.team-card__bio {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 700ms ease, opacity 240ms ease;
+  transition: max-height var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              margin var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 240ms ease;
 }
 
-body.wsite-page-team .team-card--expanded #wsite-content p.team-card__bio,
+body.wsite-page-team #wsite-content .team-card--expanded p.team-card__bio,
 body.wsite-page-team .team-card--expanded p.team-card__bio {
   max-height: var(--expanded-bio-height, 42rem) !important;
   opacity: 1 !important;
@@ -807,8 +850,8 @@ body.wsite-page-team .team-card:focus-visible {
 
 @media (max-width: 1180px) {
   .alius-anchor-nav {
-    position: static;
-    top: auto;
+    position: sticky;
+    top: var(--alius-anchor-mobile-top);
     right: 0;
     bottom: auto;
     left: 0;
@@ -869,7 +912,7 @@ body.wsite-page-team .team-card:focus-visible {
   body.wsite-page-events .event-section,
   body.wsite-page-events .event-day-grid,
   body.wsite-page-membership .membership-panel {
-    scroll-margin-top: 258px;
+    scroll-margin-top: calc(var(--alius-anchor-offset-mobile) + 34px);
   }
 
   body.wsite-page-events .event-section {
@@ -952,14 +995,56 @@ body.wsite-page-team .team-card:focus-visible {
     font-size: 10.5px;
   }
 
+  body {
+    --alius-anchor-mobile-top: calc(clamp(104px, 26vw, 112px) + 71px);
+  }
+
+  #header {
+    height: clamp(104px, 26vw, 112px);
+  }
+
+  #sitename {
+    margin: 0;
+    text-align: center;
+  }
+
+  #sitename .wsite-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+  }
+
+  #sitename .wsite-logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #sitename .wsite-logo img {
+    display: block;
+    width: auto;
+    max-width: min(380px, 92vw);
+    max-height: clamp(92px, 23vw, 96px) !important;
+    object-fit: contain;
+  }
+
+  #wrapper {
+    padding-top: clamp(104px, 26vw, 112px);
+  }
+
+  #navigation {
+    top: clamp(104px, 26vw, 112px);
+  }
+
   .alius-anchor-nav {
-    top: 136px;
+    top: var(--alius-anchor-mobile-top);
     z-index: 840;
   }
 
   .alius-anchor-target,
   [id] {
-    scroll-margin-top: 224px;
+    scroll-margin-top: var(--alius-anchor-offset-mobile);
   }
 
   #navigation li,
