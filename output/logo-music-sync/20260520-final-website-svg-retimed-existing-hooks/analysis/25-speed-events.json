@@ -1,0 +1,93 @@
+{
+  "number": 25,
+  "name": "25 Speed.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\25 Speed.mp3",
+  "duration": 6.029,
+  "events": {
+    "middle_leaf": 0.35,
+    "left_leaf": 0.575,
+    "right_leaf": 1.0,
+    "A": 2.149,
+    "L": 2.532,
+    "I": 3.135,
+    "U": 3.738,
+    "S": 4.462,
+    "settle": 5.306
+  },
+  "ambient_events": {
+    "tagline_start": 1.949,
+    "tagline_end": 5.809
+  },
+  "peaks": [
+    {
+      "time": 0.3499,
+      "score": 0.8079
+    },
+    {
+      "time": 0.5748,
+      "score": 0.7133
+    },
+    {
+      "time": 0.9996,
+      "score": 0.1913
+    },
+    {
+      "time": 1.3244,
+      "score": 0.1896
+    },
+    {
+      "time": 1.5243,
+      "score": 0.1924
+    },
+    {
+      "time": 1.7242,
+      "score": 0.2051
+    },
+    {
+      "time": 2.149,
+      "score": 0.2872
+    }
+  ],
+  "accent_overlays": [
+    {
+      "event": "A",
+      "time": 2.149,
+      "source_track": 38,
+      "source_name": "38 Abstract.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "L",
+      "time": 2.532,
+      "source_track": 8,
+      "source_name": "8 Chinese.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "I",
+      "time": 3.135,
+      "source_track": 30,
+      "source_name": "30 Fresh.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "U",
+      "time": 3.738,
+      "source_track": 38,
+      "source_name": "38 Abstract.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "S",
+      "time": 4.462,
+      "source_track": 8,
+      "source_name": "8 Chinese.mp3",
+      "gain": 0.16
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\25-speed.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\25-speed.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\25-speed.mp4"
+  }
+}

@@ -1,0 +1,518 @@
+{
+  "counts": {
+    "video": 39,
+    "svg": 39,
+    "analysis": 39,
+    "audio-composite": 39
+  },
+  "static_error_count": 0,
+  "analysis_error_count": 0,
+  "render_error_count": 0,
+  "max_duration_delta_seconds": 0.001,
+  "unique_pair_count": 39,
+  "distinct_word_sources": 39,
+  "sample_render_metrics": {
+    "01-06-rise__08-chinese": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 32,
+        "bbox": [
+          289,
+          410,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 20256,
+        "bbox": [
+          246,
+          72,
+          357,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 55166,
+        "bbox": [
+          93,
+          41,
+          357,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 98988,
+        "bbox": [
+          94,
+          32,
+          1121,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163557,
+        "bbox": [
+          97,
+          33,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "02-06-rise__03-electro": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 32,
+        "bbox": [
+          289,
+          410,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 20256,
+        "bbox": [
+          246,
+          72,
+          357,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 55166,
+        "bbox": [
+          93,
+          41,
+          357,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 98248,
+        "bbox": [
+          94,
+          32,
+          1103,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163499,
+        "bbox": [
+          97,
+          33,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "15-06-rise__17-gentle": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 32,
+        "bbox": [
+          289,
+          410,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 20256,
+        "bbox": [
+          246,
+          72,
+          357,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 55166,
+        "bbox": [
+          93,
+          41,
+          357,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 96222,
+        "bbox": [
+          94,
+          32,
+          1057,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 162985,
+        "bbox": [
+          94,
+          30,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "31-06-rise__35-short-digital": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 32,
+        "bbox": [
+          289,
+          410,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 20256,
+        "bbox": [
+          246,
+          72,
+          357,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 55166,
+        "bbox": [
+          93,
+          41,
+          357,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 104932,
+        "bbox": [
+          94,
+          32,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163262,
+        "bbox": [
+          94,
+          32,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "35-06-rise__32-soft": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 32,
+        "bbox": [
+          289,
+          410,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 20256,
+        "bbox": [
+          246,
+          72,
+          357,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 55166,
+        "bbox": [
+          93,
+          41,
+          357,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 104722,
+        "bbox": [
+          94,
+          32,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163504,
+        "bbox": [
+          96,
+          34,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "39-06-rise__23-inspiring": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 32,
+        "bbox": [
+          289,
+          410,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 20256,
+        "bbox": [
+          246,
+          72,
+          357,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 55166,
+        "bbox": [
+          93,
+          41,
+          357,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 96734,
+        "bbox": [
+          94,
+          32,
+          1061,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163001,
+        "bbox": [
+          94,
+          30,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    }
+  },
+  "representative_sheet": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\validation\\representative-event-frames.jpg",
+  "static_errors": [],
+  "analysis_errors": [],
+  "render_errors": []
+}

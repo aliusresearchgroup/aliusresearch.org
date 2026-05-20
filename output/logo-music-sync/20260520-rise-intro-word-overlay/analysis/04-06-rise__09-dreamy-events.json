@@ -1,0 +1,155 @@
+{
+  "variant": 4,
+  "name": "04-06-rise__09-dreamy",
+  "duration": 7.618,
+  "pair_score": 0.6294,
+  "transition_score": 0.6972,
+  "leaf_source": {
+    "number": 6,
+    "name": "6 Rise.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\6 Rise.mp3",
+    "duration": 8.647,
+    "score": 0.5335
+  },
+  "word_source": {
+    "number": 9,
+    "name": "9 Dreamy.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\9 Dreamy.mp3",
+    "duration": 10.005,
+    "score": 0.6992
+  },
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 1.274,
+    "right_leaf": 1.999,
+    "A": 2.819,
+    "L": 3.044,
+    "I": 3.894,
+    "U": 4.643,
+    "S": 5.368,
+    "settle": 7.198
+  },
+  "ambient_events": {
+    "tagline_start": 2.619,
+    "tagline_end": 7.398
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.5748,
+      1.2744,
+      1.9991
+    ],
+    "word_cues_source_seconds": [
+      2.224,
+      2.4489,
+      3.2985,
+      4.0482,
+      4.7728
+    ],
+    "word_source_trim_seconds": 1.724,
+    "word_start_seconds": 2.3191,
+    "word_shift_seconds": 0.5951,
+    "transition_gap_seconds": 0.82,
+    "crossfade": {
+      "leaf_fade_start": 4.493,
+      "leaf_fade_end": 6.168,
+      "word_fade_in_duration": 0.5399
+    },
+    "leaf_gain": 0.74,
+    "word_gain": 0.6052,
+    "hold_leaf_under_word": true
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.5748,
+      "score": 0.8036
+    },
+    {
+      "time": 1.2744,
+      "score": 0.7237
+    },
+    {
+      "time": 1.9991,
+      "score": 0.6403
+    },
+    {
+      "time": 3.4235,
+      "score": 0.5082
+    },
+    {
+      "time": 3.9982,
+      "score": 0.4476
+    },
+    {
+      "time": 4.2981,
+      "score": 0.411
+    },
+    {
+      "time": 4.5979,
+      "score": 0.5439
+    },
+    {
+      "time": 4.9478,
+      "score": 0.2348
+    },
+    {
+      "time": 5.5475,
+      "score": 0.2023
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.7247,
+      "score": 0.2169
+    },
+    {
+      "time": 1.0245,
+      "score": 0.409
+    },
+    {
+      "time": 1.3994,
+      "score": 0.4957
+    },
+    {
+      "time": 1.7742,
+      "score": 0.4498
+    },
+    {
+      "time": 2.224,
+      "score": 0.4831
+    },
+    {
+      "time": 2.4489,
+      "score": 0.5399
+    },
+    {
+      "time": 2.8987,
+      "score": 0.2827
+    },
+    {
+      "time": 3.2985,
+      "score": 0.5851
+    },
+    {
+      "time": 3.6484,
+      "score": 0.4778
+    },
+    {
+      "time": 4.0482,
+      "score": 0.7997
+    },
+    {
+      "time": 4.7728,
+      "score": 0.5906
+    },
+    {
+      "time": 5.2226,
+      "score": 0.2373
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\audio-composite\\04-06-rise__09-dreamy.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\svg\\04-06-rise__09-dreamy.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\video\\04-06-rise__09-dreamy.mp4"
+  }
+}

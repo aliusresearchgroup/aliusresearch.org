@@ -1,0 +1,65 @@
+{
+  "number": 22,
+  "name": "22 Modern.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\22 Modern.mp3",
+  "duration": 9.068,
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 1.249,
+    "right_leaf": 1.674,
+    "A": 2.474,
+    "L": 4.123,
+    "I": 5.123,
+    "U": 5.622,
+    "S": 6.619,
+    "settle": 7.98
+  },
+  "ambient_events": {
+    "tagline_start": 2.274,
+    "tagline_end": 8.848
+  },
+  "peaks": [
+    {
+      "time": 0.3249,
+      "score": 0.8913
+    },
+    {
+      "time": 0.5748,
+      "score": 0.3023
+    },
+    {
+      "time": 1.2494,
+      "score": 0.3687
+    },
+    {
+      "time": 1.6743,
+      "score": 0.1937
+    },
+    {
+      "time": 2.4739,
+      "score": 0.3798
+    },
+    {
+      "time": 3.0986,
+      "score": 0.1787
+    },
+    {
+      "time": 4.1231,
+      "score": 0.217
+    },
+    {
+      "time": 4.523,
+      "score": 0.1681
+    },
+    {
+      "time": 5.1227,
+      "score": 0.219
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\22-modern.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\22-modern.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\22-modern.mp4"
+  }
+}

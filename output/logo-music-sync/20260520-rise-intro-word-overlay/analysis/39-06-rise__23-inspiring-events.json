@@ -1,0 +1,139 @@
+{
+  "variant": 39,
+  "name": "39-06-rise__23-inspiring",
+  "duration": 8.102,
+  "pair_score": 0.3868,
+  "transition_score": 0.7006,
+  "leaf_source": {
+    "number": 6,
+    "name": "6 Rise.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\6 Rise.mp3",
+    "duration": 8.647,
+    "score": 0.5335
+  },
+  "word_source": {
+    "number": 23,
+    "name": "23Inspiring.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\23Inspiring.mp3",
+    "duration": 8.072,
+    "score": 0.193
+  },
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 1.274,
+    "right_leaf": 1.999,
+    "A": 2.819,
+    "L": 3.069,
+    "I": 3.319,
+    "U": 4.288,
+    "S": 5.852,
+    "settle": 7.682
+  },
+  "ambient_events": {
+    "tagline_start": 2.619,
+    "tagline_end": 7.882
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.5748,
+      1.2744,
+      1.9991
+    ],
+    "word_cues_source_seconds": [
+      1.5493,
+      1.7992,
+      2.0491,
+      3.0177,
+      4.5824
+    ],
+    "word_source_trim_seconds": 1.0493,
+    "word_start_seconds": 2.3191,
+    "word_shift_seconds": 1.2698,
+    "transition_gap_seconds": 0.82,
+    "crossfade": {
+      "leaf_fade_start": 4.138,
+      "leaf_fade_end": 6.652,
+      "word_fade_in_duration": 0.5399
+    },
+    "leaf_gain": 0.74,
+    "word_gain": 0.8461,
+    "hold_leaf_under_word": true
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.5748,
+      "score": 0.8036
+    },
+    {
+      "time": 1.2744,
+      "score": 0.7237
+    },
+    {
+      "time": 1.9991,
+      "score": 0.6403
+    },
+    {
+      "time": 3.4235,
+      "score": 0.5082
+    },
+    {
+      "time": 3.9982,
+      "score": 0.4476
+    },
+    {
+      "time": 4.2981,
+      "score": 0.411
+    },
+    {
+      "time": 4.5979,
+      "score": 0.5439
+    },
+    {
+      "time": 4.9478,
+      "score": 0.2348
+    },
+    {
+      "time": 5.5475,
+      "score": 0.2023
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.04,
+      "score": 0.6677
+    },
+    {
+      "time": 0.2999,
+      "score": 0.5644
+    },
+    {
+      "time": 0.7747,
+      "score": 0.7746
+    },
+    {
+      "time": 1.0495,
+      "score": 0.7418
+    },
+    {
+      "time": 1.2994,
+      "score": 0.3914
+    },
+    {
+      "time": 1.5493,
+      "score": 0.3212
+    },
+    {
+      "time": 1.7992,
+      "score": 0.3148
+    },
+    {
+      "time": 2.0491,
+      "score": 0.4495
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\audio-composite\\39-06-rise__23-inspiring.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\svg\\39-06-rise__23-inspiring.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\video\\39-06-rise__23-inspiring.mp4"
+  }
+}

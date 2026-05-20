@@ -1,0 +1,65 @@
+{
+  "number": 40,
+  "name": "40 Piano .mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\40 Piano .mp3",
+  "duration": 7.288,
+  "events": {
+    "middle_leaf": 0.9,
+    "left_leaf": 1.2,
+    "right_leaf": 1.624,
+    "A": 3.099,
+    "L": 3.398,
+    "I": 3.798,
+    "U": 4.519,
+    "S": 5.32,
+    "settle": 6.414
+  },
+  "ambient_events": {
+    "tagline_start": 2.899,
+    "tagline_end": 7.068
+  },
+  "peaks": [
+    {
+      "time": 0.2999,
+      "score": 0.7543
+    },
+    {
+      "time": 0.8996,
+      "score": 0.5216
+    },
+    {
+      "time": 1.1995,
+      "score": 0.2317
+    },
+    {
+      "time": 1.6243,
+      "score": 0.4436
+    },
+    {
+      "time": 1.9991,
+      "score": 0.2326
+    },
+    {
+      "time": 2.6738,
+      "score": 0.3432
+    },
+    {
+      "time": 3.0986,
+      "score": 0.5813
+    },
+    {
+      "time": 3.3985,
+      "score": 0.5464
+    },
+    {
+      "time": 3.7983,
+      "score": 0.737
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\40-piano.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\40-piano.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\40-piano.mp4"
+  }
+}

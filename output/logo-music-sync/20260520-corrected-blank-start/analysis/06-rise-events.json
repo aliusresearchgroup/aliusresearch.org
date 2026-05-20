@@ -1,0 +1,61 @@
+{
+  "number": 6,
+  "name": "6 Rise.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\6 Rise.mp3",
+  "duration": 8.647,
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 1.274,
+    "right_leaf": 1.999,
+    "A": 3.424,
+    "L": 3.998,
+    "I": 4.598,
+    "U": 5.548,
+    "S": 6.312,
+    "settle": 7.609
+  },
+  "peaks": [
+    {
+      "time": 0.5748,
+      "score": 0.8036
+    },
+    {
+      "time": 1.2744,
+      "score": 0.7237
+    },
+    {
+      "time": 1.9991,
+      "score": 0.6403
+    },
+    {
+      "time": 3.4235,
+      "score": 0.5082
+    },
+    {
+      "time": 3.9982,
+      "score": 0.4476
+    },
+    {
+      "time": 4.2981,
+      "score": 0.411
+    },
+    {
+      "time": 4.5979,
+      "score": 0.5439
+    },
+    {
+      "time": 4.9478,
+      "score": 0.2348
+    },
+    {
+      "time": 5.5475,
+      "score": 0.2023
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-corrected-blank-start\\audio-mix\\06-rise.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-corrected-blank-start\\svg\\06-rise.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-corrected-blank-start\\video\\06-rise.mp4"
+  }
+}

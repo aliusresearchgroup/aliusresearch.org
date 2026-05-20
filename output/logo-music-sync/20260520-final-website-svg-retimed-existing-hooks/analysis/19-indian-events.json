@@ -1,0 +1,69 @@
+{
+  "number": 19,
+  "name": "19 indian.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\19 indian.mp3",
+  "duration": 7.706,
+  "events": {
+    "middle_leaf": 0.675,
+    "left_leaf": 0.925,
+    "right_leaf": 1.374,
+    "A": 2.599,
+    "L": 2.999,
+    "I": 3.823,
+    "U": 4.778,
+    "S": 5.625,
+    "settle": 6.781
+  },
+  "ambient_events": {
+    "tagline_start": 2.399,
+    "tagline_end": 7.486
+  },
+  "peaks": [
+    {
+      "time": 0.1,
+      "score": 0.5961
+    },
+    {
+      "time": 0.3249,
+      "score": 0.5388
+    },
+    {
+      "time": 0.6747,
+      "score": 0.2747
+    },
+    {
+      "time": 0.9246,
+      "score": 0.2326
+    },
+    {
+      "time": 1.3744,
+      "score": 0.3305
+    },
+    {
+      "time": 2.199,
+      "score": 0.4148
+    },
+    {
+      "time": 2.5988,
+      "score": 0.3002
+    },
+    {
+      "time": 2.9987,
+      "score": 0.4088
+    },
+    {
+      "time": 3.5484,
+      "score": 0.2596
+    },
+    {
+      "time": 3.8233,
+      "score": 0.3626
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\19-indian.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\19-indian.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\19-indian.mp4"
+  }
+}

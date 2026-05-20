@@ -1,0 +1,138 @@
+{
+  "variant": 15,
+  "name": "15-23-inspiring__40-piano",
+  "duration": 6.203,
+  "pair_score": 0.7105,
+  "transition_score": 0.7615,
+  "leaf_source": {
+    "number": 23,
+    "name": "23Inspiring.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\23Inspiring.mp3",
+    "duration": 8.072,
+    "score": 0.737
+  },
+  "word_source": {
+    "number": 40,
+    "name": "40 Piano .mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\40 Piano .mp3",
+    "duration": 7.288,
+    "score": 0.6766
+  },
+  "events": {
+    "middle_leaf": 0.775,
+    "left_leaf": 1.05,
+    "right_leaf": 1.299,
+    "A": 1.779,
+    "L": 2.829,
+    "I": 3.254,
+    "U": 3.554,
+    "S": 3.953,
+    "settle": 5.783
+  },
+  "ambient_events": {
+    "tagline_start": 1.649,
+    "tagline_end": 5.983
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.7747,
+      1.0495,
+      1.2994
+    ],
+    "word_cues_source_seconds": [
+      1.6243,
+      2.6738,
+      3.0986,
+      3.3985,
+      3.7983
+    ],
+    "word_source_trim_seconds": 1.1243,
+    "word_start_seconds": 1.2794,
+    "word_shift_seconds": 0.1551,
+    "transition_gap_seconds": 0.48,
+    "crossfade": {
+      "leaf_fade_start": 1.4194,
+      "leaf_fade_end": 1.879,
+      "word_fade_in_duration": 0.5396
+    },
+    "leaf_gain": 0.86,
+    "word_gain": 1.35
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.04,
+      "score": 0.6677
+    },
+    {
+      "time": 0.2999,
+      "score": 0.5644
+    },
+    {
+      "time": 0.7747,
+      "score": 0.7746
+    },
+    {
+      "time": 1.0495,
+      "score": 0.7418
+    },
+    {
+      "time": 1.2994,
+      "score": 0.3914
+    },
+    {
+      "time": 1.5493,
+      "score": 0.3212
+    },
+    {
+      "time": 1.7992,
+      "score": 0.3148
+    },
+    {
+      "time": 2.0491,
+      "score": 0.4495
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.2999,
+      "score": 0.7543
+    },
+    {
+      "time": 0.8996,
+      "score": 0.5216
+    },
+    {
+      "time": 1.1995,
+      "score": 0.2317
+    },
+    {
+      "time": 1.6243,
+      "score": 0.4436
+    },
+    {
+      "time": 1.9991,
+      "score": 0.2326
+    },
+    {
+      "time": 2.6738,
+      "score": 0.3432
+    },
+    {
+      "time": 3.0986,
+      "score": 0.5813
+    },
+    {
+      "time": 3.3985,
+      "score": 0.5464
+    },
+    {
+      "time": 3.7983,
+      "score": 0.737
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\audio-composite\\15-23-inspiring__40-piano.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\svg\\15-23-inspiring__40-piano.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\video\\15-23-inspiring__40-piano.mp4"
+  }
+}

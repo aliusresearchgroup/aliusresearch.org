@@ -1,0 +1,166 @@
+{
+  "variant": 12,
+  "name": "12-27-simple__09-dreamy",
+  "duration": 6.571,
+  "pair_score": 0.7143,
+  "transition_score": 0.8948,
+  "leaf_source": {
+    "number": 27,
+    "name": "27 Simple.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\27 Simple.mp3",
+    "duration": 9.326,
+    "score": 0.6886
+  },
+  "word_source": {
+    "number": 9,
+    "name": "9 Dreamy.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\9 Dreamy.mp3",
+    "duration": 10.005,
+    "score": 0.6992
+  },
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 0.825,
+    "right_leaf": 1.249,
+    "A": 1.772,
+    "L": 1.997,
+    "I": 2.847,
+    "U": 3.596,
+    "S": 4.321,
+    "settle": 6.151
+  },
+  "ambient_events": {
+    "tagline_start": 1.599,
+    "tagline_end": 6.351
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.5748,
+      0.8246,
+      1.2494
+    ],
+    "word_cues_source_seconds": [
+      2.224,
+      2.4489,
+      3.2985,
+      4.0482,
+      4.7728
+    ],
+    "word_source_trim_seconds": 1.724,
+    "word_start_seconds": 1.2722,
+    "word_shift_seconds": -0.4518,
+    "transition_gap_seconds": 0.5228,
+    "crossfade": {
+      "leaf_fade_start": 1.3694,
+      "leaf_fade_end": 1.872,
+      "word_fade_in_duration": 0.5398
+    },
+    "leaf_gain": 0.86,
+    "word_gain": 0.6541
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.5748,
+      "score": 0.8553
+    },
+    {
+      "time": 0.8246,
+      "score": 0.3109
+    },
+    {
+      "time": 1.2494,
+      "score": 0.3673
+    },
+    {
+      "time": 1.6243,
+      "score": 0.5024
+    },
+    {
+      "time": 1.8991,
+      "score": 0.2663
+    },
+    {
+      "time": 2.174,
+      "score": 0.3856
+    },
+    {
+      "time": 2.4489,
+      "score": 0.2681
+    },
+    {
+      "time": 2.7238,
+      "score": 0.3959
+    },
+    {
+      "time": 4.373,
+      "score": 0.451
+    },
+    {
+      "time": 4.6729,
+      "score": 0.3122
+    },
+    {
+      "time": 4.8728,
+      "score": 0.2513
+    },
+    {
+      "time": 5.3476,
+      "score": 0.2069
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.7247,
+      "score": 0.2169
+    },
+    {
+      "time": 1.0245,
+      "score": 0.409
+    },
+    {
+      "time": 1.3994,
+      "score": 0.4957
+    },
+    {
+      "time": 1.7742,
+      "score": 0.4498
+    },
+    {
+      "time": 2.224,
+      "score": 0.4831
+    },
+    {
+      "time": 2.4489,
+      "score": 0.5399
+    },
+    {
+      "time": 2.8987,
+      "score": 0.2827
+    },
+    {
+      "time": 3.2985,
+      "score": 0.5851
+    },
+    {
+      "time": 3.6484,
+      "score": 0.4778
+    },
+    {
+      "time": 4.0482,
+      "score": 0.7997
+    },
+    {
+      "time": 4.7728,
+      "score": 0.5906
+    },
+    {
+      "time": 5.2226,
+      "score": 0.2373
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\audio-composite\\12-27-simple__09-dreamy.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\svg\\12-27-simple__09-dreamy.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\video\\12-27-simple__09-dreamy.mp4"
+  }
+}

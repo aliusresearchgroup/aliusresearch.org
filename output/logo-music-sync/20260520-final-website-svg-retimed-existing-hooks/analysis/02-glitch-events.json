@@ -1,0 +1,93 @@
+{
+  "number": 2,
+  "name": "2 Glitch.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\2 Glitch.mp3",
+  "duration": 6.635,
+  "events": {
+    "middle_leaf": 0.35,
+    "left_leaf": 0.675,
+    "right_leaf": 1.0,
+    "A": 1.499,
+    "L": 3.324,
+    "I": 3.469,
+    "U": 4.114,
+    "S": 4.91,
+    "settle": 5.839
+  },
+  "ambient_events": {
+    "tagline_start": 1.35,
+    "tagline_end": 6.415
+  },
+  "peaks": [
+    {
+      "time": 0.3499,
+      "score": 0.8643
+    },
+    {
+      "time": 0.6747,
+      "score": 0.2266
+    },
+    {
+      "time": 0.9996,
+      "score": 0.2595
+    },
+    {
+      "time": 1.4993,
+      "score": 0.5846
+    },
+    {
+      "time": 1.8242,
+      "score": 0.2245
+    },
+    {
+      "time": 2.8487,
+      "score": 0.2104
+    },
+    {
+      "time": 3.3235,
+      "score": 0.4443
+    }
+  ],
+  "accent_overlays": [
+    {
+      "event": "A",
+      "time": 1.499,
+      "source_track": 25,
+      "source_name": "25 Speed.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "L",
+      "time": 3.324,
+      "source_track": 31,
+      "source_name": "31 Positive .mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "I",
+      "time": 3.469,
+      "source_track": 39,
+      "source_name": "39 Cinematic.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "U",
+      "time": 4.114,
+      "source_track": 25,
+      "source_name": "25 Speed.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "S",
+      "time": 4.91,
+      "source_track": 31,
+      "source_name": "31 Positive .mp3",
+      "gain": 0.16
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\02-glitch.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\02-glitch.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\02-glitch.mp4"
+  }
+}

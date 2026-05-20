@@ -1,0 +1,105 @@
+{
+  "number": 18,
+  "name": "18 Heavenly.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\18 Heavenly.mp3",
+  "duration": 13.549,
+  "events": {
+    "middle_leaf": 1.374,
+    "left_leaf": 1.649,
+    "right_leaf": 2.099,
+    "A": 4.173,
+    "L": 6.147,
+    "I": 7.047,
+    "U": 8.696,
+    "S": 9.721,
+    "settle": 11.923
+  },
+  "ambient_events": {
+    "tagline_start": 3.973,
+    "tagline_end": 13.329
+  },
+  "peaks": [
+    {
+      "time": 1.3744,
+      "score": 0.294
+    },
+    {
+      "time": 1.6493,
+      "score": 0.733
+    },
+    {
+      "time": 2.0991,
+      "score": 0.3268
+    },
+    {
+      "time": 2.3489,
+      "score": 0.5023
+    },
+    {
+      "time": 3.1736,
+      "score": 0.3826
+    },
+    {
+      "time": 3.5234,
+      "score": 0.3891
+    },
+    {
+      "time": 4.1731,
+      "score": 0.4661
+    },
+    {
+      "time": 4.498,
+      "score": 0.3036
+    },
+    {
+      "time": 4.7978,
+      "score": 0.2512
+    },
+    {
+      "time": 5.0727,
+      "score": 0.4641
+    },
+    {
+      "time": 5.4975,
+      "score": 0.2803
+    },
+    {
+      "time": 6.1472,
+      "score": 0.5743
+    },
+    {
+      "time": 6.597,
+      "score": 0.2592
+    },
+    {
+      "time": 7.0468,
+      "score": 0.5207
+    },
+    {
+      "time": 7.5466,
+      "score": 0.4861
+    },
+    {
+      "time": 7.7965,
+      "score": 0.358
+    },
+    {
+      "time": 8.6961,
+      "score": 0.7784
+    },
+    {
+      "time": 9.4707,
+      "score": 0.2588
+    },
+    {
+      "time": 9.7206,
+      "score": 0.2629
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\18-heavenly.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\18-heavenly.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\18-heavenly.mp4"
+  }
+}

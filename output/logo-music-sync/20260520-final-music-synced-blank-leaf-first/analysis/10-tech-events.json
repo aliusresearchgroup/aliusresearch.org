@@ -1,0 +1,65 @@
+{
+  "number": 10,
+  "name": "10 Tech.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\10 Tech.mp3",
+  "duration": 7.615,
+  "events": {
+    "middle_leaf": 0.1,
+    "left_leaf": 0.425,
+    "right_leaf": 0.7,
+    "A": 2.474,
+    "L": 2.974,
+    "I": 3.823,
+    "U": 4.721,
+    "S": 5.559,
+    "settle": 6.701
+  },
+  "ambient_events": {
+    "tagline_start": 2.274,
+    "tagline_end": 7.395
+  },
+  "peaks": [
+    {
+      "time": 0.1,
+      "score": 0.5977
+    },
+    {
+      "time": 0.4248,
+      "score": 0.4686
+    },
+    {
+      "time": 0.6997,
+      "score": 0.2586
+    },
+    {
+      "time": 1.0995,
+      "score": 0.2869
+    },
+    {
+      "time": 2.249,
+      "score": 0.3777
+    },
+    {
+      "time": 2.4739,
+      "score": 0.3293
+    },
+    {
+      "time": 2.7488,
+      "score": 0.2112
+    },
+    {
+      "time": 2.9737,
+      "score": 0.4292
+    },
+    {
+      "time": 3.8233,
+      "score": 0.2017
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\audio-mix\\10-tech.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\svg\\10-tech.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\video\\10-tech.mp4"
+  }
+}

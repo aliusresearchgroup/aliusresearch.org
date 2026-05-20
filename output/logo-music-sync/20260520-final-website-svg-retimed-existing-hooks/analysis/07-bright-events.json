@@ -1,0 +1,109 @@
+{
+  "number": 7,
+  "name": "7 Bright.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\7 Bright.mp3",
+  "duration": 12.531,
+  "events": {
+    "middle_leaf": 1.224,
+    "left_leaf": 1.924,
+    "right_leaf": 2.299,
+    "A": 4.148,
+    "L": 5.572,
+    "I": 6.597,
+    "U": 7.946,
+    "S": 9.246,
+    "settle": 11.095
+  },
+  "ambient_events": {
+    "tagline_start": 3.948,
+    "tagline_end": 12.311
+  },
+  "peaks": [
+    {
+      "time": 1.2245,
+      "score": 0.8809
+    },
+    {
+      "time": 1.9241,
+      "score": 0.2769
+    },
+    {
+      "time": 2.299,
+      "score": 0.4107
+    },
+    {
+      "time": 2.7738,
+      "score": 0.36
+    },
+    {
+      "time": 3.3985,
+      "score": 0.3054
+    },
+    {
+      "time": 4.1481,
+      "score": 0.3992
+    },
+    {
+      "time": 4.5729,
+      "score": 0.2589
+    },
+    {
+      "time": 4.7728,
+      "score": 0.2503
+    },
+    {
+      "time": 5.0727,
+      "score": 0.2775
+    },
+    {
+      "time": 5.2976,
+      "score": 0.3431
+    },
+    {
+      "time": 5.5725,
+      "score": 0.2862
+    },
+    {
+      "time": 5.8973,
+      "score": 0.259
+    },
+    {
+      "time": 6.2222,
+      "score": 0.2425
+    },
+    {
+      "time": 6.597,
+      "score": 0.2838
+    },
+    {
+      "time": 6.9219,
+      "score": 0.3621
+    },
+    {
+      "time": 7.5966,
+      "score": 0.2774
+    },
+    {
+      "time": 7.9464,
+      "score": 0.3859
+    },
+    {
+      "time": 8.4462,
+      "score": 0.2922
+    },
+    {
+      "time": 9.2458,
+      "score": 0.3401
+    },
+    {
+      "time": 9.4707,
+      "score": 0.3129
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\07-bright.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\07-bright.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\07-bright.mp4"
+  }
+}

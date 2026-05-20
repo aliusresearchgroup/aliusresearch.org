@@ -1,0 +1,155 @@
+{
+  "variant": 9,
+  "name": "09-06-rise__24-pizzicato",
+  "duration": 7.018,
+  "pair_score": 0.5679,
+  "transition_score": 0.7165,
+  "leaf_source": {
+    "number": 6,
+    "name": "6 Rise.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\6 Rise.mp3",
+    "duration": 8.647,
+    "score": 0.5335
+  },
+  "word_source": {
+    "number": 24,
+    "name": "24 Pizzicato.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\24 Pizzicato.mp3",
+    "duration": 7.885,
+    "score": 0.5671
+  },
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 1.274,
+    "right_leaf": 1.999,
+    "A": 2.819,
+    "L": 3.769,
+    "I": 4.244,
+    "U": 4.518,
+    "S": 4.768,
+    "settle": 6.598
+  },
+  "ambient_events": {
+    "tagline_start": 2.619,
+    "tagline_end": 6.798
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.5748,
+      1.2744,
+      1.9991
+    ],
+    "word_cues_source_seconds": [
+      1.5243,
+      2.4739,
+      2.9487,
+      3.2235,
+      3.4734
+    ],
+    "word_source_trim_seconds": 1.0243,
+    "word_start_seconds": 2.3191,
+    "word_shift_seconds": 1.2948,
+    "transition_gap_seconds": 0.82,
+    "crossfade": {
+      "leaf_fade_start": 4.368,
+      "leaf_fade_end": 5.568,
+      "word_fade_in_duration": 0.5399
+    },
+    "leaf_gain": 0.74,
+    "word_gain": 0.58,
+    "hold_leaf_under_word": true
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.5748,
+      "score": 0.8036
+    },
+    {
+      "time": 1.2744,
+      "score": 0.7237
+    },
+    {
+      "time": 1.9991,
+      "score": 0.6403
+    },
+    {
+      "time": 3.4235,
+      "score": 0.5082
+    },
+    {
+      "time": 3.9982,
+      "score": 0.4476
+    },
+    {
+      "time": 4.2981,
+      "score": 0.411
+    },
+    {
+      "time": 4.5979,
+      "score": 0.5439
+    },
+    {
+      "time": 4.9478,
+      "score": 0.2348
+    },
+    {
+      "time": 5.5475,
+      "score": 0.2023
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.5248,
+      "score": 0.2946
+    },
+    {
+      "time": 0.8496,
+      "score": 0.2846
+    },
+    {
+      "time": 1.0495,
+      "score": 0.2181
+    },
+    {
+      "time": 1.5243,
+      "score": 0.2187
+    },
+    {
+      "time": 1.8242,
+      "score": 0.1909
+    },
+    {
+      "time": 2.4739,
+      "score": 0.8279
+    },
+    {
+      "time": 2.7488,
+      "score": 0.1952
+    },
+    {
+      "time": 2.9487,
+      "score": 0.2683
+    },
+    {
+      "time": 3.2235,
+      "score": 0.2435
+    },
+    {
+      "time": 3.4734,
+      "score": 0.3525
+    },
+    {
+      "time": 3.6983,
+      "score": 0.1827
+    },
+    {
+      "time": 4.2981,
+      "score": 0.1814
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\audio-composite\\09-06-rise__24-pizzicato.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\svg\\09-06-rise__24-pizzicato.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\video\\09-06-rise__24-pizzicato.mp4"
+  }
+}

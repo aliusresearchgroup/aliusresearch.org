@@ -1,0 +1,162 @@
+{
+  "variant": 1,
+  "name": "01-20-ambient__03-electro",
+  "duration": 6.437,
+  "pair_score": 0.7636,
+  "transition_score": 0.9354,
+  "leaf_source": {
+    "number": 20,
+    "name": "20 Ambient.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\20 Ambient.mp3",
+    "duration": 7.367,
+    "score": 0.7966
+  },
+  "word_source": {
+    "number": 3,
+    "name": "3 Electro.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\3 Electro.mp3",
+    "duration": 9.187,
+    "score": 0.6989
+  },
+  "events": {
+    "middle_leaf": 0.475,
+    "left_leaf": 0.9,
+    "right_leaf": 1.299,
+    "A": 1.938,
+    "L": 2.613,
+    "I": 3.063,
+    "U": 3.438,
+    "S": 4.187,
+    "settle": 6.017
+  },
+  "ambient_events": {
+    "tagline_start": 1.738,
+    "tagline_end": 6.217
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.4748,
+      0.8996,
+      1.2994
+    ],
+    "word_cues_source_seconds": [
+      1.8991,
+      2.5738,
+      3.0236,
+      3.3985,
+      4.1481
+    ],
+    "word_source_trim_seconds": 1.3991,
+    "word_start_seconds": 1.4385,
+    "word_shift_seconds": 0.0394,
+    "transition_gap_seconds": 0.6391,
+    "crossfade": {
+      "leaf_fade_start": 1.4194,
+      "leaf_fade_end": 2.038,
+      "word_fade_in_duration": 0.5395
+    },
+    "leaf_gain": 0.86,
+    "word_gain": 0.7016
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.4748,
+      "score": 0.8018
+    },
+    {
+      "time": 0.8996,
+      "score": 0.7676
+    },
+    {
+      "time": 1.2994,
+      "score": 0.8043
+    },
+    {
+      "time": 1.6493,
+      "score": 0.6592
+    },
+    {
+      "time": 2.0991,
+      "score": 0.1978
+    },
+    {
+      "time": 2.7238,
+      "score": 0.6033
+    },
+    {
+      "time": 3.1486,
+      "score": 0.5273
+    },
+    {
+      "time": 3.4984,
+      "score": 0.4603
+    },
+    {
+      "time": 4.323,
+      "score": 0.2028
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.2749,
+      "score": 0.7764
+    },
+    {
+      "time": 0.5248,
+      "score": 0.732
+    },
+    {
+      "time": 1.0745,
+      "score": 0.7516
+    },
+    {
+      "time": 1.5493,
+      "score": 0.2686
+    },
+    {
+      "time": 1.8991,
+      "score": 0.4985
+    },
+    {
+      "time": 2.199,
+      "score": 0.2944
+    },
+    {
+      "time": 2.5738,
+      "score": 0.5425
+    },
+    {
+      "time": 3.0236,
+      "score": 0.4191
+    },
+    {
+      "time": 3.3985,
+      "score": 0.4323
+    },
+    {
+      "time": 3.6983,
+      "score": 0.3128
+    },
+    {
+      "time": 4.1481,
+      "score": 0.7078
+    },
+    {
+      "time": 4.348,
+      "score": 0.2699
+    },
+    {
+      "time": 4.5479,
+      "score": 0.2825
+    },
+    {
+      "time": 5.3976,
+      "score": 0.2624
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs-smoke\\audio-composite\\01-20-ambient__03-electro.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs-smoke\\svg\\01-20-ambient__03-electro.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs-smoke\\video\\01-20-ambient__03-electro.mp4"
+  }
+}

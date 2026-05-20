@@ -1,0 +1,81 @@
+{
+  "number": 15,
+  "name": "15 Blockbuster.wav",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\15 Blockbuster.wav",
+  "duration": 17.567,
+  "events": {
+    "middle_leaf": 0.475,
+    "left_leaf": 0.95,
+    "right_leaf": 1.399,
+    "A": 5.298,
+    "L": 7.846,
+    "I": 8.796,
+    "U": 10.892,
+    "S": 12.824,
+    "settle": 15.459
+  },
+  "ambient_events": {
+    "tagline_start": 5.098,
+    "tagline_end": 17.347
+  },
+  "peaks": [
+    {
+      "time": 0.125,
+      "score": 0.8416
+    },
+    {
+      "time": 0.4748,
+      "score": 0.1663
+    },
+    {
+      "time": 0.9496,
+      "score": 0.1919
+    },
+    {
+      "time": 1.3994,
+      "score": 0.1551
+    },
+    {
+      "time": 1.8492,
+      "score": 0.1739
+    },
+    {
+      "time": 5.2976,
+      "score": 0.156
+    },
+    {
+      "time": 6.747,
+      "score": 0.1714
+    },
+    {
+      "time": 7.0718,
+      "score": 0.1553
+    },
+    {
+      "time": 7.5716,
+      "score": 0.1556
+    },
+    {
+      "time": 7.8465,
+      "score": 0.1767
+    },
+    {
+      "time": 8.2213,
+      "score": 0.1622
+    },
+    {
+      "time": 8.796,
+      "score": 0.5333
+    },
+    {
+      "time": 9.2458,
+      "score": 0.2169
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\15-blockbuster.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\15-blockbuster.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\15-blockbuster.mp4"
+  }
+}

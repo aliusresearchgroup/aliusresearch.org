@@ -1,0 +1,183 @@
+{
+  "variant": 29,
+  "name": "29-06-rise__18-heavenly",
+  "duration": 9.592,
+  "pair_score": 0.4831,
+  "transition_score": 0.8263,
+  "leaf_source": {
+    "number": 6,
+    "name": "6 Rise.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\6 Rise.mp3",
+    "duration": 8.647,
+    "score": 0.5335
+  },
+  "word_source": {
+    "number": 18,
+    "name": "18 Heavenly.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\18 Heavenly.mp3",
+    "duration": 13.549,
+    "score": 0.3675
+  },
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 1.274,
+    "right_leaf": 1.999,
+    "A": 2.819,
+    "L": 4.793,
+    "I": 5.693,
+    "U": 6.193,
+    "S": 7.342,
+    "settle": 9.172
+  },
+  "ambient_events": {
+    "tagline_start": 2.619,
+    "tagline_end": 9.372
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.5748,
+      1.2744,
+      1.9991
+    ],
+    "word_cues_source_seconds": [
+      4.1731,
+      6.1472,
+      7.0468,
+      7.5466,
+      8.6961
+    ],
+    "word_source_trim_seconds": 3.6731,
+    "word_start_seconds": 2.3191,
+    "word_shift_seconds": -1.354,
+    "transition_gap_seconds": 0.82,
+    "crossfade": {
+      "leaf_fade_start": 6.043,
+      "leaf_fade_end": 8.142,
+      "word_fade_in_duration": 0.5399
+    },
+    "leaf_gain": 0.74,
+    "word_gain": 0.7957,
+    "hold_leaf_under_word": true
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.5748,
+      "score": 0.8036
+    },
+    {
+      "time": 1.2744,
+      "score": 0.7237
+    },
+    {
+      "time": 1.9991,
+      "score": 0.6403
+    },
+    {
+      "time": 3.4235,
+      "score": 0.5082
+    },
+    {
+      "time": 3.9982,
+      "score": 0.4476
+    },
+    {
+      "time": 4.2981,
+      "score": 0.411
+    },
+    {
+      "time": 4.5979,
+      "score": 0.5439
+    },
+    {
+      "time": 4.9478,
+      "score": 0.2348
+    },
+    {
+      "time": 5.5475,
+      "score": 0.2023
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 1.3744,
+      "score": 0.294
+    },
+    {
+      "time": 1.6493,
+      "score": 0.733
+    },
+    {
+      "time": 2.0991,
+      "score": 0.3268
+    },
+    {
+      "time": 2.3489,
+      "score": 0.5023
+    },
+    {
+      "time": 3.1736,
+      "score": 0.3826
+    },
+    {
+      "time": 3.5234,
+      "score": 0.3891
+    },
+    {
+      "time": 4.1731,
+      "score": 0.4661
+    },
+    {
+      "time": 4.498,
+      "score": 0.3036
+    },
+    {
+      "time": 4.7978,
+      "score": 0.2512
+    },
+    {
+      "time": 5.0727,
+      "score": 0.4641
+    },
+    {
+      "time": 5.4975,
+      "score": 0.2803
+    },
+    {
+      "time": 6.1472,
+      "score": 0.5743
+    },
+    {
+      "time": 6.597,
+      "score": 0.2592
+    },
+    {
+      "time": 7.0468,
+      "score": 0.5207
+    },
+    {
+      "time": 7.5466,
+      "score": 0.4861
+    },
+    {
+      "time": 7.7965,
+      "score": 0.358
+    },
+    {
+      "time": 8.6961,
+      "score": 0.7784
+    },
+    {
+      "time": 9.4707,
+      "score": 0.2588
+    },
+    {
+      "time": 9.7206,
+      "score": 0.2629
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\audio-composite\\29-06-rise__18-heavenly.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\svg\\29-06-rise__18-heavenly.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\video\\29-06-rise__18-heavenly.mp4"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "variant": 17,
+  "name": "17-06-rise__19-indian",
+  "duration": 6.693,
+  "pair_score": 0.5502,
+  "transition_score": 0.6852,
+  "leaf_source": {
+    "number": 6,
+    "name": "6 Rise.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\6 Rise.mp3",
+    "duration": 8.647,
+    "score": 0.5335
+  },
+  "word_source": {
+    "number": 19,
+    "name": "19 indian.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\19 indian.mp3",
+    "duration": 7.706,
+    "score": 0.5368
+  },
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 1.274,
+    "right_leaf": 1.999,
+    "A": 2.819,
+    "L": 3.219,
+    "I": 3.619,
+    "U": 4.168,
+    "S": 4.443,
+    "settle": 6.273
+  },
+  "ambient_events": {
+    "tagline_start": 2.619,
+    "tagline_end": 6.473
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.5748,
+      1.2744,
+      1.9991
+    ],
+    "word_cues_source_seconds": [
+      2.199,
+      2.5988,
+      2.9987,
+      3.5484,
+      3.8233
+    ],
+    "word_source_trim_seconds": 1.699,
+    "word_start_seconds": 2.3191,
+    "word_shift_seconds": 0.6201,
+    "transition_gap_seconds": 0.82,
+    "crossfade": {
+      "leaf_fade_start": 4.018,
+      "leaf_fade_end": 5.243,
+      "word_fade_in_duration": 0.5399
+    },
+    "leaf_gain": 0.74,
+    "word_gain": 0.8901,
+    "hold_leaf_under_word": true
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.5748,
+      "score": 0.8036
+    },
+    {
+      "time": 1.2744,
+      "score": 0.7237
+    },
+    {
+      "time": 1.9991,
+      "score": 0.6403
+    },
+    {
+      "time": 3.4235,
+      "score": 0.5082
+    },
+    {
+      "time": 3.9982,
+      "score": 0.4476
+    },
+    {
+      "time": 4.2981,
+      "score": 0.411
+    },
+    {
+      "time": 4.5979,
+      "score": 0.5439
+    },
+    {
+      "time": 4.9478,
+      "score": 0.2348
+    },
+    {
+      "time": 5.5475,
+      "score": 0.2023
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.1,
+      "score": 0.5961
+    },
+    {
+      "time": 0.3249,
+      "score": 0.5388
+    },
+    {
+      "time": 0.6747,
+      "score": 0.2747
+    },
+    {
+      "time": 0.9246,
+      "score": 0.2326
+    },
+    {
+      "time": 1.3744,
+      "score": 0.3305
+    },
+    {
+      "time": 2.199,
+      "score": 0.4148
+    },
+    {
+      "time": 2.5988,
+      "score": 0.3002
+    },
+    {
+      "time": 2.9987,
+      "score": 0.4088
+    },
+    {
+      "time": 3.5484,
+      "score": 0.2596
+    },
+    {
+      "time": 3.8233,
+      "score": 0.3626
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\audio-composite\\17-06-rise__19-indian.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\svg\\17-06-rise__19-indian.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\video\\17-06-rise__19-indian.mp4"
+  }
+}

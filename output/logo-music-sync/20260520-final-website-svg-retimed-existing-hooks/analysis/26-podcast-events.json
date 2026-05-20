@@ -1,0 +1,73 @@
+{
+  "number": 26,
+  "name": "26 Podcast.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\26 Podcast.mp3",
+  "duration": 7.367,
+  "events": {
+    "middle_leaf": 0.6,
+    "left_leaf": 1.0,
+    "right_leaf": 1.249,
+    "A": 2.399,
+    "L": 3.199,
+    "I": 3.548,
+    "U": 4.567,
+    "S": 5.378,
+    "settle": 6.483
+  },
+  "ambient_events": {
+    "tagline_start": 2.199,
+    "tagline_end": 7.147
+  },
+  "peaks": [
+    {
+      "time": 0.04,
+      "score": 0.7362
+    },
+    {
+      "time": 0.5997,
+      "score": 0.4891
+    },
+    {
+      "time": 0.9996,
+      "score": 0.4907
+    },
+    {
+      "time": 1.2494,
+      "score": 0.4256
+    },
+    {
+      "time": 1.5993,
+      "score": 0.5011
+    },
+    {
+      "time": 2.149,
+      "score": 0.2199
+    },
+    {
+      "time": 2.3989,
+      "score": 0.2273
+    },
+    {
+      "time": 2.6988,
+      "score": 0.2232
+    },
+    {
+      "time": 2.9237,
+      "score": 0.2377
+    },
+    {
+      "time": 3.1986,
+      "score": 0.2639
+    },
+    {
+      "time": 3.5484,
+      "score": 0.3117
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\26-podcast.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\26-podcast.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\26-podcast.mp4"
+  }
+}

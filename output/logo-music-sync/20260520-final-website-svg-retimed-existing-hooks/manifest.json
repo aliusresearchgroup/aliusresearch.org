@@ -1,0 +1,3082 @@
+[
+  {
+    "number": 1,
+    "name": "1 Corporate.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\1 Corporate.mp3",
+    "duration": 8.451,
+    "events": {
+      "middle_leaf": 0.775,
+      "left_leaf": 1.0,
+      "right_leaf": 1.374,
+      "A": 2.774,
+      "L": 4.198,
+      "I": 4.548,
+      "U": 5.239,
+      "S": 6.169,
+      "settle": 7.437
+    },
+    "ambient_events": {
+      "tagline_start": 2.574,
+      "tagline_end": 8.231
+    },
+    "peaks": [
+      {
+        "time": 0.1,
+        "score": 0.232
+      },
+      {
+        "time": 0.7747,
+        "score": 0.2949
+      },
+      {
+        "time": 0.9996,
+        "score": 0.2172
+      },
+      {
+        "time": 1.3744,
+        "score": 0.8343
+      },
+      {
+        "time": 2.0491,
+        "score": 0.2637
+      },
+      {
+        "time": 2.7738,
+        "score": 0.229
+      },
+      {
+        "time": 4.1981,
+        "score": 0.6552
+      },
+      {
+        "time": 4.5479,
+        "score": 0.269
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\01-corporate.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\01-corporate.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\01-corporate.mp4"
+    }
+  },
+  {
+    "number": 2,
+    "name": "2 Glitch.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\2 Glitch.mp3",
+    "duration": 6.635,
+    "events": {
+      "middle_leaf": 0.35,
+      "left_leaf": 0.675,
+      "right_leaf": 1.0,
+      "A": 1.499,
+      "L": 3.324,
+      "I": 3.469,
+      "U": 4.114,
+      "S": 4.91,
+      "settle": 5.839
+    },
+    "ambient_events": {
+      "tagline_start": 1.35,
+      "tagline_end": 6.415
+    },
+    "peaks": [
+      {
+        "time": 0.3499,
+        "score": 0.8643
+      },
+      {
+        "time": 0.6747,
+        "score": 0.2266
+      },
+      {
+        "time": 0.9996,
+        "score": 0.2595
+      },
+      {
+        "time": 1.4993,
+        "score": 0.5846
+      },
+      {
+        "time": 1.8242,
+        "score": 0.2245
+      },
+      {
+        "time": 2.8487,
+        "score": 0.2104
+      },
+      {
+        "time": 3.3235,
+        "score": 0.4443
+      }
+    ],
+    "accent_overlays": [
+      {
+        "event": "A",
+        "time": 1.499,
+        "source_track": 25,
+        "source_name": "25 Speed.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "L",
+        "time": 3.324,
+        "source_track": 31,
+        "source_name": "31 Positive .mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "I",
+        "time": 3.469,
+        "source_track": 39,
+        "source_name": "39 Cinematic.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "U",
+        "time": 4.114,
+        "source_track": 25,
+        "source_name": "25 Speed.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "S",
+        "time": 4.91,
+        "source_track": 31,
+        "source_name": "31 Positive .mp3",
+        "gain": 0.16
+      }
+    ],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\02-glitch.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\02-glitch.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\02-glitch.mp4"
+    }
+  },
+  {
+    "number": 3,
+    "name": "3 Electro.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\3 Electro.mp3",
+    "duration": 9.187,
+    "events": {
+      "middle_leaf": 0.525,
+      "left_leaf": 1.075,
+      "right_leaf": 1.549,
+      "A": 3.024,
+      "L": 4.148,
+      "I": 4.548,
+      "U": 5.398,
+      "S": 6.707,
+      "settle": 8.085
+    },
+    "ambient_events": {
+      "tagline_start": 2.824,
+      "tagline_end": 8.967
+    },
+    "peaks": [
+      {
+        "time": 0.2749,
+        "score": 0.7764
+      },
+      {
+        "time": 0.5248,
+        "score": 0.732
+      },
+      {
+        "time": 1.0745,
+        "score": 0.7516
+      },
+      {
+        "time": 1.5493,
+        "score": 0.2686
+      },
+      {
+        "time": 1.8991,
+        "score": 0.4985
+      },
+      {
+        "time": 2.199,
+        "score": 0.2944
+      },
+      {
+        "time": 2.5738,
+        "score": 0.5425
+      },
+      {
+        "time": 3.0236,
+        "score": 0.4191
+      },
+      {
+        "time": 3.3985,
+        "score": 0.4323
+      },
+      {
+        "time": 3.6983,
+        "score": 0.3128
+      },
+      {
+        "time": 4.1481,
+        "score": 0.7078
+      },
+      {
+        "time": 4.348,
+        "score": 0.2699
+      },
+      {
+        "time": 4.5479,
+        "score": 0.2825
+      },
+      {
+        "time": 5.3976,
+        "score": 0.2624
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\03-electro.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\03-electro.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\03-electro.mp4"
+    }
+  },
+  {
+    "number": 4,
+    "name": "4 Clean.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\4 Clean.mp3",
+    "duration": 7.001,
+    "events": {
+      "middle_leaf": 0.625,
+      "left_leaf": 0.925,
+      "right_leaf": 1.274,
+      "A": 2.024,
+      "L": 3.08,
+      "I": 3.71,
+      "U": 4.34,
+      "S": 5.111,
+      "settle": 6.161
+    },
+    "ambient_events": {
+      "tagline_start": 1.824,
+      "tagline_end": 6.781
+    },
+    "peaks": [
+      {
+        "time": 0.6247,
+        "score": 0.1501
+      },
+      {
+        "time": 0.9246,
+        "score": 0.1655
+      },
+      {
+        "time": 1.2744,
+        "score": 0.8326
+      },
+      {
+        "time": 1.5493,
+        "score": 0.4988
+      },
+      {
+        "time": 1.8242,
+        "score": 0.4013
+      },
+      {
+        "time": 2.0241,
+        "score": 0.3336
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\04-clean.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\04-clean.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\04-clean.mp4"
+    }
+  },
+  {
+    "number": 5,
+    "name": "5 Quick.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\5 Quick.mp3",
+    "duration": 7.105,
+    "events": {
+      "middle_leaf": 0.5,
+      "left_leaf": 0.875,
+      "right_leaf": 1.374,
+      "A": 2.299,
+      "L": 2.824,
+      "I": 3.766,
+      "U": 4.405,
+      "S": 5.187,
+      "settle": 6.253
+    },
+    "ambient_events": {
+      "tagline_start": 2.099,
+      "tagline_end": 6.885
+    },
+    "peaks": [
+      {
+        "time": 0.4998,
+        "score": 0.8208
+      },
+      {
+        "time": 0.8746,
+        "score": 0.608
+      },
+      {
+        "time": 1.3744,
+        "score": 0.1982
+      },
+      {
+        "time": 1.6243,
+        "score": 0.1558
+      },
+      {
+        "time": 1.8492,
+        "score": 0.2126
+      },
+      {
+        "time": 2.299,
+        "score": 0.2814
+      },
+      {
+        "time": 2.8237,
+        "score": 0.1839
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\05-quick.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\05-quick.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\05-quick.mp4"
+    }
+  },
+  {
+    "number": 6,
+    "name": "6 Rise.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\6 Rise.mp3",
+    "duration": 8.647,
+    "events": {
+      "middle_leaf": 0.575,
+      "left_leaf": 1.274,
+      "right_leaf": 1.999,
+      "A": 3.424,
+      "L": 3.998,
+      "I": 4.598,
+      "U": 5.548,
+      "S": 6.312,
+      "settle": 7.609
+    },
+    "ambient_events": {
+      "tagline_start": 3.224,
+      "tagline_end": 8.427
+    },
+    "peaks": [
+      {
+        "time": 0.5748,
+        "score": 0.8036
+      },
+      {
+        "time": 1.2744,
+        "score": 0.7237
+      },
+      {
+        "time": 1.9991,
+        "score": 0.6403
+      },
+      {
+        "time": 3.4235,
+        "score": 0.5082
+      },
+      {
+        "time": 3.9982,
+        "score": 0.4476
+      },
+      {
+        "time": 4.2981,
+        "score": 0.411
+      },
+      {
+        "time": 4.5979,
+        "score": 0.5439
+      },
+      {
+        "time": 4.9478,
+        "score": 0.2348
+      },
+      {
+        "time": 5.5475,
+        "score": 0.2023
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\06-rise.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\06-rise.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\06-rise.mp4"
+    }
+  },
+  {
+    "number": 7,
+    "name": "7 Bright.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\7 Bright.mp3",
+    "duration": 12.531,
+    "events": {
+      "middle_leaf": 1.224,
+      "left_leaf": 1.924,
+      "right_leaf": 2.299,
+      "A": 4.148,
+      "L": 5.572,
+      "I": 6.597,
+      "U": 7.946,
+      "S": 9.246,
+      "settle": 11.095
+    },
+    "ambient_events": {
+      "tagline_start": 3.948,
+      "tagline_end": 12.311
+    },
+    "peaks": [
+      {
+        "time": 1.2245,
+        "score": 0.8809
+      },
+      {
+        "time": 1.9241,
+        "score": 0.2769
+      },
+      {
+        "time": 2.299,
+        "score": 0.4107
+      },
+      {
+        "time": 2.7738,
+        "score": 0.36
+      },
+      {
+        "time": 3.3985,
+        "score": 0.3054
+      },
+      {
+        "time": 4.1481,
+        "score": 0.3992
+      },
+      {
+        "time": 4.5729,
+        "score": 0.2589
+      },
+      {
+        "time": 4.7728,
+        "score": 0.2503
+      },
+      {
+        "time": 5.0727,
+        "score": 0.2775
+      },
+      {
+        "time": 5.2976,
+        "score": 0.3431
+      },
+      {
+        "time": 5.5725,
+        "score": 0.2862
+      },
+      {
+        "time": 5.8973,
+        "score": 0.259
+      },
+      {
+        "time": 6.2222,
+        "score": 0.2425
+      },
+      {
+        "time": 6.597,
+        "score": 0.2838
+      },
+      {
+        "time": 6.9219,
+        "score": 0.3621
+      },
+      {
+        "time": 7.5966,
+        "score": 0.2774
+      },
+      {
+        "time": 7.9464,
+        "score": 0.3859
+      },
+      {
+        "time": 8.4462,
+        "score": 0.2922
+      },
+      {
+        "time": 9.2458,
+        "score": 0.3401
+      },
+      {
+        "time": 9.4707,
+        "score": 0.3129
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\07-bright.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\07-bright.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\07-bright.mp4"
+    }
+  },
+  {
+    "number": 8,
+    "name": "8 Chinese.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\8 Chinese.mp3",
+    "duration": 6.856,
+    "events": {
+      "middle_leaf": 0.5,
+      "left_leaf": 0.8,
+      "right_leaf": 1.324,
+      "A": 2.174,
+      "L": 2.949,
+      "I": 3.473,
+      "U": 3.798,
+      "S": 5.073,
+      "settle": 6.033
+    },
+    "ambient_events": {
+      "tagline_start": 1.974,
+      "tagline_end": 6.636
+    },
+    "peaks": [
+      {
+        "time": 0.4998,
+        "score": 0.8453
+      },
+      {
+        "time": 0.7996,
+        "score": 0.4984
+      },
+      {
+        "time": 1.3244,
+        "score": 0.7114
+      },
+      {
+        "time": 1.8492,
+        "score": 0.5071
+      },
+      {
+        "time": 2.174,
+        "score": 0.4094
+      },
+      {
+        "time": 2.4239,
+        "score": 0.3323
+      },
+      {
+        "time": 2.6988,
+        "score": 0.2932
+      },
+      {
+        "time": 2.9487,
+        "score": 0.4069
+      },
+      {
+        "time": 3.4734,
+        "score": 0.6449
+      },
+      {
+        "time": 3.7983,
+        "score": 0.3945
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\08-chinese.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\08-chinese.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\08-chinese.mp4"
+    }
+  },
+  {
+    "number": 9,
+    "name": "9 Dreamy.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\9 Dreamy.mp3",
+    "duration": 10.005,
+    "events": {
+      "middle_leaf": 0.725,
+      "left_leaf": 1.024,
+      "right_leaf": 1.399,
+      "A": 3.299,
+      "L": 4.048,
+      "I": 4.773,
+      "U": 6.203,
+      "S": 7.304,
+      "settle": 8.804
+    },
+    "ambient_events": {
+      "tagline_start": 3.099,
+      "tagline_end": 9.785
+    },
+    "peaks": [
+      {
+        "time": 0.7247,
+        "score": 0.2169
+      },
+      {
+        "time": 1.0245,
+        "score": 0.409
+      },
+      {
+        "time": 1.3994,
+        "score": 0.4957
+      },
+      {
+        "time": 1.7742,
+        "score": 0.4498
+      },
+      {
+        "time": 2.224,
+        "score": 0.4831
+      },
+      {
+        "time": 2.4489,
+        "score": 0.5399
+      },
+      {
+        "time": 2.8987,
+        "score": 0.2827
+      },
+      {
+        "time": 3.2985,
+        "score": 0.5851
+      },
+      {
+        "time": 3.6484,
+        "score": 0.4778
+      },
+      {
+        "time": 4.0482,
+        "score": 0.7997
+      },
+      {
+        "time": 4.7728,
+        "score": 0.5906
+      },
+      {
+        "time": 5.2226,
+        "score": 0.2373
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\09-dreamy.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\09-dreamy.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\09-dreamy.mp4"
+    }
+  },
+  {
+    "number": 10,
+    "name": "10 Tech.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\10 Tech.mp3",
+    "duration": 7.615,
+    "events": {
+      "middle_leaf": 0.425,
+      "left_leaf": 0.7,
+      "right_leaf": 1.099,
+      "A": 2.474,
+      "L": 2.974,
+      "I": 3.823,
+      "U": 4.721,
+      "S": 5.559,
+      "settle": 6.701
+    },
+    "ambient_events": {
+      "tagline_start": 2.274,
+      "tagline_end": 7.395
+    },
+    "peaks": [
+      {
+        "time": 0.1,
+        "score": 0.5977
+      },
+      {
+        "time": 0.4248,
+        "score": 0.4686
+      },
+      {
+        "time": 0.6997,
+        "score": 0.2586
+      },
+      {
+        "time": 1.0995,
+        "score": 0.2869
+      },
+      {
+        "time": 2.249,
+        "score": 0.3777
+      },
+      {
+        "time": 2.4739,
+        "score": 0.3293
+      },
+      {
+        "time": 2.7488,
+        "score": 0.2112
+      },
+      {
+        "time": 2.9737,
+        "score": 0.4292
+      },
+      {
+        "time": 3.8233,
+        "score": 0.2017
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\10-tech.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\10-tech.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\10-tech.mp4"
+    }
+  },
+  {
+    "number": 11,
+    "name": "11 Elegant.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\11 Elegant.mp3",
+    "duration": 7.091,
+    "events": {
+      "middle_leaf": 0.525,
+      "left_leaf": 0.8,
+      "right_leaf": 1.05,
+      "A": 2.699,
+      "L": 3.024,
+      "I": 3.758,
+      "U": 4.396,
+      "S": 5.176,
+      "settle": 6.24
+    },
+    "ambient_events": {
+      "tagline_start": 2.499,
+      "tagline_end": 6.871
+    },
+    "peaks": [
+      {
+        "time": 0.5248,
+        "score": 0.7082
+      },
+      {
+        "time": 0.7996,
+        "score": 0.2003
+      },
+      {
+        "time": 1.0495,
+        "score": 0.1912
+      },
+      {
+        "time": 1.3494,
+        "score": 0.4511
+      },
+      {
+        "time": 1.6992,
+        "score": 0.235
+      },
+      {
+        "time": 2.0741,
+        "score": 0.2153
+      },
+      {
+        "time": 2.3739,
+        "score": 0.1877
+      },
+      {
+        "time": 2.6988,
+        "score": 0.4604
+      },
+      {
+        "time": 3.0236,
+        "score": 0.3099
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\11-elegant.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\11-elegant.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\11-elegant.mp4"
+    }
+  },
+  {
+    "number": 12,
+    "name": "12 Dramatic.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\12 Dramatic.mp3",
+    "duration": 7.445,
+    "events": {
+      "middle_leaf": 0.875,
+      "left_leaf": 1.399,
+      "right_leaf": 1.699,
+      "A": 2.074,
+      "L": 3.276,
+      "I": 3.946,
+      "U": 4.616,
+      "S": 5.435,
+      "settle": 6.552
+    },
+    "ambient_events": {
+      "tagline_start": 2.049,
+      "tagline_end": 7.225
+    },
+    "peaks": [
+      {
+        "time": 0.2749,
+        "score": 0.3757
+      },
+      {
+        "time": 0.8746,
+        "score": 0.2351
+      },
+      {
+        "time": 1.3994,
+        "score": 0.802
+      },
+      {
+        "time": 1.6992,
+        "score": 0.2006
+      },
+      {
+        "time": 2.0741,
+        "score": 0.1898
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\12-dramatic.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\12-dramatic.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\12-dramatic.mp4"
+    }
+  },
+  {
+    "number": 13,
+    "name": "13 Upbeat 8.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\13 Upbeat 8.mp3",
+    "duration": 7.576,
+    "events": {
+      "middle_leaf": 0.5,
+      "left_leaf": 1.249,
+      "right_leaf": 1.774,
+      "A": 2.524,
+      "L": 2.799,
+      "I": 4.015,
+      "U": 4.697,
+      "S": 5.53,
+      "settle": 6.666
+    },
+    "ambient_events": {
+      "tagline_start": 2.324,
+      "tagline_end": 7.356
+    },
+    "peaks": [
+      {
+        "time": 0.4998,
+        "score": 0.7601
+      },
+      {
+        "time": 1.2494,
+        "score": 0.4524
+      },
+      {
+        "time": 1.7742,
+        "score": 0.3023
+      },
+      {
+        "time": 1.9991,
+        "score": 0.3255
+      },
+      {
+        "time": 2.324,
+        "score": 0.1984
+      },
+      {
+        "time": 2.5239,
+        "score": 0.2893
+      },
+      {
+        "time": 2.7987,
+        "score": 0.326
+      },
+      {
+        "time": 3.0236,
+        "score": 0.2366
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\13-upbeat-8.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\13-upbeat-8.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\13-upbeat-8.mp4"
+    }
+  },
+  {
+    "number": 14,
+    "name": "14 Epic .mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\14 Epic .mp3",
+    "duration": 8.751,
+    "events": {
+      "middle_leaf": 0.5,
+      "left_leaf": 0.825,
+      "right_leaf": 1.099,
+      "A": 3.224,
+      "L": 3.85,
+      "I": 5.073,
+      "U": 5.426,
+      "S": 6.388,
+      "settle": 7.701
+    },
+    "ambient_events": {
+      "tagline_start": 3.024,
+      "tagline_end": 8.531
+    },
+    "peaks": [
+      {
+        "time": 0.1749,
+        "score": 0.7587
+      },
+      {
+        "time": 0.4998,
+        "score": 0.2513
+      },
+      {
+        "time": 0.8246,
+        "score": 0.3738
+      },
+      {
+        "time": 1.0995,
+        "score": 0.2677
+      },
+      {
+        "time": 1.4743,
+        "score": 0.2477
+      },
+      {
+        "time": 1.7992,
+        "score": 0.5623
+      },
+      {
+        "time": 2.224,
+        "score": 0.404
+      },
+      {
+        "time": 2.4489,
+        "score": 0.2676
+      },
+      {
+        "time": 2.7488,
+        "score": 0.2756
+      },
+      {
+        "time": 3.2235,
+        "score": 0.3269
+      },
+      {
+        "time": 5.0727,
+        "score": 0.3177
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\14-epic.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\14-epic.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\14-epic.mp4"
+    }
+  },
+  {
+    "number": 15,
+    "name": "15 Blockbuster.wav",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\15 Blockbuster.wav",
+    "duration": 17.567,
+    "events": {
+      "middle_leaf": 0.475,
+      "left_leaf": 0.95,
+      "right_leaf": 1.399,
+      "A": 5.298,
+      "L": 7.846,
+      "I": 8.796,
+      "U": 10.892,
+      "S": 12.824,
+      "settle": 15.459
+    },
+    "ambient_events": {
+      "tagline_start": 5.098,
+      "tagline_end": 17.347
+    },
+    "peaks": [
+      {
+        "time": 0.125,
+        "score": 0.8416
+      },
+      {
+        "time": 0.4748,
+        "score": 0.1663
+      },
+      {
+        "time": 0.9496,
+        "score": 0.1919
+      },
+      {
+        "time": 1.3994,
+        "score": 0.1551
+      },
+      {
+        "time": 1.8492,
+        "score": 0.1739
+      },
+      {
+        "time": 5.2976,
+        "score": 0.156
+      },
+      {
+        "time": 6.747,
+        "score": 0.1714
+      },
+      {
+        "time": 7.0718,
+        "score": 0.1553
+      },
+      {
+        "time": 7.5716,
+        "score": 0.1556
+      },
+      {
+        "time": 7.8465,
+        "score": 0.1767
+      },
+      {
+        "time": 8.2213,
+        "score": 0.1622
+      },
+      {
+        "time": 8.796,
+        "score": 0.5333
+      },
+      {
+        "time": 9.2458,
+        "score": 0.2169
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\15-blockbuster.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\15-blockbuster.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\15-blockbuster.mp4"
+    }
+  },
+  {
+    "number": 16,
+    "name": "16 Fast Corporate  .wav",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\16 Fast Corporate  .wav",
+    "duration": 6.964,
+    "events": {
+      "middle_leaf": 0.35,
+      "left_leaf": 0.725,
+      "right_leaf": 1.024,
+      "A": 2.449,
+      "L": 3.024,
+      "I": 3.324,
+      "U": 4.318,
+      "S": 5.154,
+      "settle": 6.129
+    },
+    "ambient_events": {
+      "tagline_start": 2.249,
+      "tagline_end": 6.744
+    },
+    "peaks": [
+      {
+        "time": 0.1,
+        "score": 0.7613
+      },
+      {
+        "time": 0.3499,
+        "score": 0.426
+      },
+      {
+        "time": 0.7247,
+        "score": 0.4929
+      },
+      {
+        "time": 1.0245,
+        "score": 0.3302
+      },
+      {
+        "time": 1.5993,
+        "score": 0.437
+      },
+      {
+        "time": 1.8242,
+        "score": 0.3034
+      },
+      {
+        "time": 2.0491,
+        "score": 0.4049
+      },
+      {
+        "time": 2.4489,
+        "score": 0.5324
+      },
+      {
+        "time": 2.6988,
+        "score": 0.4184
+      },
+      {
+        "time": 3.0236,
+        "score": 0.373
+      },
+      {
+        "time": 3.3235,
+        "score": 0.4528
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\16-fast-corporate.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\16-fast-corporate.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\16-fast-corporate.mp4"
+    }
+  },
+  {
+    "number": 17,
+    "name": "17 Gentle.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\17 Gentle.mp3",
+    "duration": 14.864,
+    "events": {
+      "middle_leaf": 1.624,
+      "left_leaf": 1.874,
+      "right_leaf": 2.199,
+      "A": 5.572,
+      "L": 5.872,
+      "I": 8.146,
+      "U": 9.171,
+      "S": 10.85,
+      "settle": 13.08
+    },
+    "ambient_events": {
+      "tagline_start": 5.372,
+      "tagline_end": 14.644
+    },
+    "peaks": [
+      {
+        "time": 1.6243,
+        "score": 0.2249
+      },
+      {
+        "time": 1.8742,
+        "score": 0.7566
+      },
+      {
+        "time": 2.199,
+        "score": 0.1805
+      },
+      {
+        "time": 2.7738,
+        "score": 0.3848
+      },
+      {
+        "time": 3.2485,
+        "score": 0.3052
+      },
+      {
+        "time": 3.7233,
+        "score": 0.8302
+      },
+      {
+        "time": 4.1981,
+        "score": 0.1821
+      },
+      {
+        "time": 4.6229,
+        "score": 0.3899
+      },
+      {
+        "time": 5.2976,
+        "score": 0.2765
+      },
+      {
+        "time": 5.5725,
+        "score": 0.7555
+      },
+      {
+        "time": 5.8723,
+        "score": 0.4422
+      },
+      {
+        "time": 6.3221,
+        "score": 0.2411
+      },
+      {
+        "time": 6.747,
+        "score": 0.1909
+      },
+      {
+        "time": 7.6216,
+        "score": 0.2
+      },
+      {
+        "time": 8.1463,
+        "score": 0.2636
+      },
+      {
+        "time": 8.746,
+        "score": 0.3084
+      },
+      {
+        "time": 9.1709,
+        "score": 0.2374
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\17-gentle.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\17-gentle.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\17-gentle.mp4"
+    }
+  },
+  {
+    "number": 18,
+    "name": "18 Heavenly.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\18 Heavenly.mp3",
+    "duration": 13.549,
+    "events": {
+      "middle_leaf": 1.374,
+      "left_leaf": 1.649,
+      "right_leaf": 2.099,
+      "A": 4.173,
+      "L": 6.147,
+      "I": 7.047,
+      "U": 8.696,
+      "S": 9.721,
+      "settle": 11.923
+    },
+    "ambient_events": {
+      "tagline_start": 3.973,
+      "tagline_end": 13.329
+    },
+    "peaks": [
+      {
+        "time": 1.3744,
+        "score": 0.294
+      },
+      {
+        "time": 1.6493,
+        "score": 0.733
+      },
+      {
+        "time": 2.0991,
+        "score": 0.3268
+      },
+      {
+        "time": 2.3489,
+        "score": 0.5023
+      },
+      {
+        "time": 3.1736,
+        "score": 0.3826
+      },
+      {
+        "time": 3.5234,
+        "score": 0.3891
+      },
+      {
+        "time": 4.1731,
+        "score": 0.4661
+      },
+      {
+        "time": 4.498,
+        "score": 0.3036
+      },
+      {
+        "time": 4.7978,
+        "score": 0.2512
+      },
+      {
+        "time": 5.0727,
+        "score": 0.4641
+      },
+      {
+        "time": 5.4975,
+        "score": 0.2803
+      },
+      {
+        "time": 6.1472,
+        "score": 0.5743
+      },
+      {
+        "time": 6.597,
+        "score": 0.2592
+      },
+      {
+        "time": 7.0468,
+        "score": 0.5207
+      },
+      {
+        "time": 7.5466,
+        "score": 0.4861
+      },
+      {
+        "time": 7.7965,
+        "score": 0.358
+      },
+      {
+        "time": 8.6961,
+        "score": 0.7784
+      },
+      {
+        "time": 9.4707,
+        "score": 0.2588
+      },
+      {
+        "time": 9.7206,
+        "score": 0.2629
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\18-heavenly.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\18-heavenly.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\18-heavenly.mp4"
+    }
+  },
+  {
+    "number": 19,
+    "name": "19 indian.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\19 indian.mp3",
+    "duration": 7.706,
+    "events": {
+      "middle_leaf": 0.675,
+      "left_leaf": 0.925,
+      "right_leaf": 1.374,
+      "A": 2.599,
+      "L": 2.999,
+      "I": 3.823,
+      "U": 4.778,
+      "S": 5.625,
+      "settle": 6.781
+    },
+    "ambient_events": {
+      "tagline_start": 2.399,
+      "tagline_end": 7.486
+    },
+    "peaks": [
+      {
+        "time": 0.1,
+        "score": 0.5961
+      },
+      {
+        "time": 0.3249,
+        "score": 0.5388
+      },
+      {
+        "time": 0.6747,
+        "score": 0.2747
+      },
+      {
+        "time": 0.9246,
+        "score": 0.2326
+      },
+      {
+        "time": 1.3744,
+        "score": 0.3305
+      },
+      {
+        "time": 2.199,
+        "score": 0.4148
+      },
+      {
+        "time": 2.5988,
+        "score": 0.3002
+      },
+      {
+        "time": 2.9987,
+        "score": 0.4088
+      },
+      {
+        "time": 3.5484,
+        "score": 0.2596
+      },
+      {
+        "time": 3.8233,
+        "score": 0.3626
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\19-indian.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\19-indian.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\19-indian.mp4"
+    }
+  },
+  {
+    "number": 20,
+    "name": "20 Ambient.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\20 Ambient.mp3",
+    "duration": 7.367,
+    "events": {
+      "middle_leaf": 0.475,
+      "left_leaf": 0.9,
+      "right_leaf": 1.299,
+      "A": 2.724,
+      "L": 3.149,
+      "I": 3.498,
+      "U": 4.323,
+      "S": 5.378,
+      "settle": 6.483
+    },
+    "ambient_events": {
+      "tagline_start": 2.524,
+      "tagline_end": 7.147
+    },
+    "peaks": [
+      {
+        "time": 0.4748,
+        "score": 0.8018
+      },
+      {
+        "time": 0.8996,
+        "score": 0.7676
+      },
+      {
+        "time": 1.2994,
+        "score": 0.8043
+      },
+      {
+        "time": 1.6493,
+        "score": 0.6592
+      },
+      {
+        "time": 2.0991,
+        "score": 0.1978
+      },
+      {
+        "time": 2.7238,
+        "score": 0.6033
+      },
+      {
+        "time": 3.1486,
+        "score": 0.5273
+      },
+      {
+        "time": 3.4984,
+        "score": 0.4603
+      },
+      {
+        "time": 4.323,
+        "score": 0.2028
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\20-ambient.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\20-ambient.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\20-ambient.mp4"
+    }
+  },
+  {
+    "number": 21,
+    "name": "21 Calm.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\21 Calm.mp3",
+    "duration": 7.553,
+    "events": {
+      "middle_leaf": 0.35,
+      "left_leaf": 1.075,
+      "right_leaf": 1.649,
+      "A": 2.149,
+      "L": 3.124,
+      "I": 4.098,
+      "U": 4.548,
+      "S": 5.023,
+      "settle": 6.646
+    },
+    "ambient_events": {
+      "tagline_start": 1.999,
+      "tagline_end": 7.333
+    },
+    "peaks": [
+      {
+        "time": 0.3499,
+        "score": 0.8215
+      },
+      {
+        "time": 1.0745,
+        "score": 0.3903
+      },
+      {
+        "time": 1.6493,
+        "score": 0.5877
+      },
+      {
+        "time": 2.149,
+        "score": 0.3861
+      },
+      {
+        "time": 3.1236,
+        "score": 0.3021
+      },
+      {
+        "time": 3.6484,
+        "score": 0.3257
+      },
+      {
+        "time": 4.0982,
+        "score": 0.2694
+      },
+      {
+        "time": 4.5479,
+        "score": 0.2732
+      },
+      {
+        "time": 5.0227,
+        "score": 0.2077
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\21-calm.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\21-calm.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\21-calm.mp4"
+    }
+  },
+  {
+    "number": 22,
+    "name": "22 Modern.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\22 Modern.mp3",
+    "duration": 9.068,
+    "events": {
+      "middle_leaf": 0.575,
+      "left_leaf": 1.249,
+      "right_leaf": 1.674,
+      "A": 2.474,
+      "L": 4.123,
+      "I": 5.123,
+      "U": 5.622,
+      "S": 6.619,
+      "settle": 7.98
+    },
+    "ambient_events": {
+      "tagline_start": 2.274,
+      "tagline_end": 8.848
+    },
+    "peaks": [
+      {
+        "time": 0.3249,
+        "score": 0.8913
+      },
+      {
+        "time": 0.5748,
+        "score": 0.3023
+      },
+      {
+        "time": 1.2494,
+        "score": 0.3687
+      },
+      {
+        "time": 1.6743,
+        "score": 0.1937
+      },
+      {
+        "time": 2.4739,
+        "score": 0.3798
+      },
+      {
+        "time": 3.0986,
+        "score": 0.1787
+      },
+      {
+        "time": 4.1231,
+        "score": 0.217
+      },
+      {
+        "time": 4.523,
+        "score": 0.1681
+      },
+      {
+        "time": 5.1227,
+        "score": 0.219
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\22-modern.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\22-modern.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\22-modern.mp4"
+    }
+  },
+  {
+    "number": 23,
+    "name": "23Inspiring.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\23Inspiring.mp3",
+    "duration": 8.072,
+    "events": {
+      "middle_leaf": 0.775,
+      "left_leaf": 1.05,
+      "right_leaf": 1.299,
+      "A": 2.049,
+      "L": 3.552,
+      "I": 4.278,
+      "U": 5.005,
+      "S": 5.892,
+      "settle": 7.103
+    },
+    "ambient_events": {
+      "tagline_start": 1.849,
+      "tagline_end": 7.852
+    },
+    "peaks": [
+      {
+        "time": 0.04,
+        "score": 0.6677
+      },
+      {
+        "time": 0.2999,
+        "score": 0.5644
+      },
+      {
+        "time": 0.7747,
+        "score": 0.7746
+      },
+      {
+        "time": 1.0495,
+        "score": 0.7418
+      },
+      {
+        "time": 1.2994,
+        "score": 0.3914
+      },
+      {
+        "time": 1.5493,
+        "score": 0.3212
+      },
+      {
+        "time": 1.7992,
+        "score": 0.3148
+      },
+      {
+        "time": 2.0491,
+        "score": 0.4495
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\23-inspiring.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\23-inspiring.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\23-inspiring.mp4"
+    }
+  },
+  {
+    "number": 24,
+    "name": "24 Pizzicato.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\24 Pizzicato.mp3",
+    "duration": 7.885,
+    "events": {
+      "middle_leaf": 0.525,
+      "left_leaf": 0.85,
+      "right_leaf": 1.05,
+      "A": 2.474,
+      "L": 3.473,
+      "I": 4.298,
+      "U": 4.889,
+      "S": 5.756,
+      "settle": 6.939
+    },
+    "ambient_events": {
+      "tagline_start": 2.274,
+      "tagline_end": 7.665
+    },
+    "peaks": [
+      {
+        "time": 0.5248,
+        "score": 0.2946
+      },
+      {
+        "time": 0.8496,
+        "score": 0.2846
+      },
+      {
+        "time": 1.0495,
+        "score": 0.2181
+      },
+      {
+        "time": 1.5243,
+        "score": 0.2187
+      },
+      {
+        "time": 1.8242,
+        "score": 0.1909
+      },
+      {
+        "time": 2.4739,
+        "score": 0.8279
+      },
+      {
+        "time": 2.7488,
+        "score": 0.1952
+      },
+      {
+        "time": 2.9487,
+        "score": 0.2683
+      },
+      {
+        "time": 3.2235,
+        "score": 0.2435
+      },
+      {
+        "time": 3.4734,
+        "score": 0.3525
+      },
+      {
+        "time": 3.6983,
+        "score": 0.1827
+      },
+      {
+        "time": 4.2981,
+        "score": 0.1814
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\24-pizzicato.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\24-pizzicato.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\24-pizzicato.mp4"
+    }
+  },
+  {
+    "number": 25,
+    "name": "25 Speed.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\25 Speed.mp3",
+    "duration": 6.029,
+    "events": {
+      "middle_leaf": 0.35,
+      "left_leaf": 0.575,
+      "right_leaf": 1.0,
+      "A": 2.149,
+      "L": 2.532,
+      "I": 3.135,
+      "U": 3.738,
+      "S": 4.462,
+      "settle": 5.306
+    },
+    "ambient_events": {
+      "tagline_start": 1.949,
+      "tagline_end": 5.809
+    },
+    "peaks": [
+      {
+        "time": 0.3499,
+        "score": 0.8079
+      },
+      {
+        "time": 0.5748,
+        "score": 0.7133
+      },
+      {
+        "time": 0.9996,
+        "score": 0.1913
+      },
+      {
+        "time": 1.3244,
+        "score": 0.1896
+      },
+      {
+        "time": 1.5243,
+        "score": 0.1924
+      },
+      {
+        "time": 1.7242,
+        "score": 0.2051
+      },
+      {
+        "time": 2.149,
+        "score": 0.2872
+      }
+    ],
+    "accent_overlays": [
+      {
+        "event": "A",
+        "time": 2.149,
+        "source_track": 38,
+        "source_name": "38 Abstract.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "L",
+        "time": 2.532,
+        "source_track": 8,
+        "source_name": "8 Chinese.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "I",
+        "time": 3.135,
+        "source_track": 30,
+        "source_name": "30 Fresh.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "U",
+        "time": 3.738,
+        "source_track": 38,
+        "source_name": "38 Abstract.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "S",
+        "time": 4.462,
+        "source_track": 8,
+        "source_name": "8 Chinese.mp3",
+        "gain": 0.16
+      }
+    ],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\25-speed.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\25-speed.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\25-speed.mp4"
+    }
+  },
+  {
+    "number": 26,
+    "name": "26 Podcast.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\26 Podcast.mp3",
+    "duration": 7.367,
+    "events": {
+      "middle_leaf": 0.6,
+      "left_leaf": 1.0,
+      "right_leaf": 1.249,
+      "A": 2.399,
+      "L": 3.199,
+      "I": 3.548,
+      "U": 4.567,
+      "S": 5.378,
+      "settle": 6.483
+    },
+    "ambient_events": {
+      "tagline_start": 2.199,
+      "tagline_end": 7.147
+    },
+    "peaks": [
+      {
+        "time": 0.04,
+        "score": 0.7362
+      },
+      {
+        "time": 0.5997,
+        "score": 0.4891
+      },
+      {
+        "time": 0.9996,
+        "score": 0.4907
+      },
+      {
+        "time": 1.2494,
+        "score": 0.4256
+      },
+      {
+        "time": 1.5993,
+        "score": 0.5011
+      },
+      {
+        "time": 2.149,
+        "score": 0.2199
+      },
+      {
+        "time": 2.3989,
+        "score": 0.2273
+      },
+      {
+        "time": 2.6988,
+        "score": 0.2232
+      },
+      {
+        "time": 2.9237,
+        "score": 0.2377
+      },
+      {
+        "time": 3.1986,
+        "score": 0.2639
+      },
+      {
+        "time": 3.5484,
+        "score": 0.3117
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\26-podcast.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\26-podcast.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\26-podcast.mp4"
+    }
+  },
+  {
+    "number": 27,
+    "name": "27 Simple.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\27 Simple.mp3",
+    "duration": 9.326,
+    "events": {
+      "middle_leaf": 0.575,
+      "left_leaf": 0.825,
+      "right_leaf": 1.249,
+      "A": 2.724,
+      "L": 4.373,
+      "I": 4.873,
+      "U": 5.348,
+      "S": 6.808,
+      "settle": 8.207
+    },
+    "ambient_events": {
+      "tagline_start": 2.524,
+      "tagline_end": 9.106
+    },
+    "peaks": [
+      {
+        "time": 0.5748,
+        "score": 0.8553
+      },
+      {
+        "time": 0.8246,
+        "score": 0.3109
+      },
+      {
+        "time": 1.2494,
+        "score": 0.3673
+      },
+      {
+        "time": 1.6243,
+        "score": 0.5024
+      },
+      {
+        "time": 1.8991,
+        "score": 0.2663
+      },
+      {
+        "time": 2.174,
+        "score": 0.3856
+      },
+      {
+        "time": 2.4489,
+        "score": 0.2681
+      },
+      {
+        "time": 2.7238,
+        "score": 0.3959
+      },
+      {
+        "time": 4.373,
+        "score": 0.451
+      },
+      {
+        "time": 4.6729,
+        "score": 0.3122
+      },
+      {
+        "time": 4.8728,
+        "score": 0.2513
+      },
+      {
+        "time": 5.3476,
+        "score": 0.2069
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\27-simple.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\27-simple.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\27-simple.mp4"
+    }
+  },
+  {
+    "number": 28,
+    "name": "28 Media.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\28 Media.mp3",
+    "duration": 7.497,
+    "events": {
+      "middle_leaf": 0.4,
+      "left_leaf": 0.7,
+      "right_leaf": 1.399,
+      "A": 2.899,
+      "L": 3.273,
+      "I": 3.923,
+      "U": 4.648,
+      "S": 5.473,
+      "settle": 6.597
+    },
+    "ambient_events": {
+      "tagline_start": 2.699,
+      "tagline_end": 7.277
+    },
+    "peaks": [
+      {
+        "time": 0.3998,
+        "score": 0.7512
+      },
+      {
+        "time": 0.6997,
+        "score": 0.435
+      },
+      {
+        "time": 1.3994,
+        "score": 0.513
+      },
+      {
+        "time": 1.8991,
+        "score": 0.3531
+      },
+      {
+        "time": 2.299,
+        "score": 0.1982
+      },
+      {
+        "time": 2.6238,
+        "score": 0.304
+      },
+      {
+        "time": 2.8987,
+        "score": 0.4384
+      },
+      {
+        "time": 3.2735,
+        "score": 0.2493
+      },
+      {
+        "time": 3.6234,
+        "score": 0.1986
+      },
+      {
+        "time": 3.9232,
+        "score": 0.2414
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\28-media.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\28-media.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\28-media.mp4"
+    }
+  },
+  {
+    "number": 29,
+    "name": "29 Opening.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\29 Opening.mp3",
+    "duration": 6.269,
+    "events": {
+      "middle_leaf": 0.575,
+      "left_leaf": 1.524,
+      "right_leaf": 1.799,
+      "A": 2.049,
+      "L": 2.374,
+      "I": 2.724,
+      "U": 3.887,
+      "S": 4.639,
+      "settle": 5.517
+    },
+    "ambient_events": {
+      "tagline_start": 2.149,
+      "tagline_end": 6.049
+    },
+    "peaks": [
+      {
+        "time": 0.5748,
+        "score": 0.8187
+      },
+      {
+        "time": 1.5243,
+        "score": 0.392
+      },
+      {
+        "time": 1.7992,
+        "score": 0.4041
+      },
+      {
+        "time": 2.0491,
+        "score": 0.3208
+      },
+      {
+        "time": 2.3739,
+        "score": 0.3774
+      },
+      {
+        "time": 2.7238,
+        "score": 0.2473
+      }
+    ],
+    "accent_overlays": [
+      {
+        "event": "A",
+        "time": 2.049,
+        "source_track": 25,
+        "source_name": "25 Speed.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "L",
+        "time": 2.374,
+        "source_track": 31,
+        "source_name": "31 Positive .mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "I",
+        "time": 2.724,
+        "source_track": 39,
+        "source_name": "39 Cinematic.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "U",
+        "time": 3.887,
+        "source_track": 25,
+        "source_name": "25 Speed.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "S",
+        "time": 4.639,
+        "source_track": 31,
+        "source_name": "31 Positive .mp3",
+        "gain": 0.16
+      }
+    ],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\29-opening.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\29-opening.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\29-opening.mp4"
+    }
+  },
+  {
+    "number": 30,
+    "name": "30 Fresh.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\30 Fresh.mp3",
+    "duration": 6.896,
+    "events": {
+      "middle_leaf": 0.7,
+      "left_leaf": 1.349,
+      "right_leaf": 2.049,
+      "A": 2.474,
+      "L": 2.999,
+      "I": 3.523,
+      "U": 4.073,
+      "S": 5.103,
+      "settle": 6.069
+    },
+    "ambient_events": {
+      "tagline_start": 2.399,
+      "tagline_end": 6.676
+    },
+    "peaks": [
+      {
+        "time": 0.2999,
+        "score": 0.55
+      },
+      {
+        "time": 0.6997,
+        "score": 0.7835
+      },
+      {
+        "time": 1.3494,
+        "score": 0.3002
+      },
+      {
+        "time": 2.0491,
+        "score": 0.3873
+      },
+      {
+        "time": 2.4739,
+        "score": 0.2454
+      },
+      {
+        "time": 2.9987,
+        "score": 0.5559
+      },
+      {
+        "time": 3.5234,
+        "score": 0.5248
+      },
+      {
+        "time": 4.0732,
+        "score": 0.4142
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\30-fresh.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\30-fresh.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\30-fresh.mp4"
+    }
+  },
+  {
+    "number": 31,
+    "name": "31 Positive .mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\31 Positive .mp3",
+    "duration": 4.754,
+    "events": {
+      "middle_leaf": 0.325,
+      "left_leaf": 1.274,
+      "right_leaf": 1.524,
+      "A": 1.774,
+      "L": 2.074,
+      "I": 2.377,
+      "U": 2.9,
+      "S": 3.471,
+      "settle": 4.184
+    },
+    "ambient_events": {
+      "tagline_start": 1.874,
+      "tagline_end": 4.534
+    },
+    "peaks": [
+      {
+        "time": 0.3249,
+        "score": 0.8
+      },
+      {
+        "time": 1.2744,
+        "score": 0.5537
+      },
+      {
+        "time": 1.5243,
+        "score": 0.4078
+      },
+      {
+        "time": 1.7742,
+        "score": 0.3905
+      },
+      {
+        "time": 2.0741,
+        "score": 0.5193
+      }
+    ],
+    "accent_overlays": [
+      {
+        "event": "left_leaf",
+        "time": 1.274,
+        "source_track": 30,
+        "source_name": "30 Fresh.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "right_leaf",
+        "time": 1.524,
+        "source_track": 38,
+        "source_name": "38 Abstract.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "A",
+        "time": 1.774,
+        "source_track": 8,
+        "source_name": "8 Chinese.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "L",
+        "time": 2.074,
+        "source_track": 30,
+        "source_name": "30 Fresh.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "I",
+        "time": 2.377,
+        "source_track": 38,
+        "source_name": "38 Abstract.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "U",
+        "time": 2.9,
+        "source_track": 8,
+        "source_name": "8 Chinese.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "S",
+        "time": 3.471,
+        "source_track": 30,
+        "source_name": "30 Fresh.mp3",
+        "gain": 0.2
+      }
+    ],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\31-positive.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\31-positive.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\31-positive.mp4"
+    }
+  },
+  {
+    "number": 32,
+    "name": "32 Soft.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\32 Soft.mp3",
+    "duration": 7.785,
+    "events": {
+      "middle_leaf": 0.375,
+      "left_leaf": 1.249,
+      "right_leaf": 1.924,
+      "A": 2.924,
+      "L": 3.425,
+      "I": 4.126,
+      "U": 4.826,
+      "S": 5.683,
+      "settle": 6.85
+    },
+    "ambient_events": {
+      "tagline_start": 2.724,
+      "tagline_end": 7.565
+    },
+    "peaks": [
+      {
+        "time": 0.1,
+        "score": 0.7221
+      },
+      {
+        "time": 0.3748,
+        "score": 0.2359
+      },
+      {
+        "time": 1.2494,
+        "score": 0.2698
+      },
+      {
+        "time": 1.9241,
+        "score": 0.1905
+      },
+      {
+        "time": 2.249,
+        "score": 0.1604
+      },
+      {
+        "time": 2.5988,
+        "score": 0.1862
+      },
+      {
+        "time": 2.9237,
+        "score": 0.2772
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\32-soft.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\32-soft.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\32-soft.mp4"
+    }
+  },
+  {
+    "number": 33,
+    "name": "33 Sentimental.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\33 Sentimental.mp3",
+    "duration": 10.057,
+    "events": {
+      "middle_leaf": 0.775,
+      "left_leaf": 1.274,
+      "right_leaf": 1.824,
+      "A": 3.773,
+      "L": 4.748,
+      "I": 5.497,
+      "U": 5.972,
+      "S": 7.342,
+      "settle": 8.85
+    },
+    "ambient_events": {
+      "tagline_start": 3.573,
+      "tagline_end": 9.837
+    },
+    "peaks": [
+      {
+        "time": 0.7747,
+        "score": 0.189
+      },
+      {
+        "time": 1.2744,
+        "score": 0.2587
+      },
+      {
+        "time": 1.8242,
+        "score": 0.1987
+      },
+      {
+        "time": 2.0241,
+        "score": 0.3731
+      },
+      {
+        "time": 2.4989,
+        "score": 0.368
+      },
+      {
+        "time": 2.7738,
+        "score": 0.723
+      },
+      {
+        "time": 3.2985,
+        "score": 0.5751
+      },
+      {
+        "time": 3.7733,
+        "score": 0.8246
+      },
+      {
+        "time": 4.0482,
+        "score": 0.2638
+      },
+      {
+        "time": 4.7479,
+        "score": 0.4381
+      },
+      {
+        "time": 5.4975,
+        "score": 0.4976
+      },
+      {
+        "time": 5.9723,
+        "score": 0.5736
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\33-sentimental.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\33-sentimental.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\33-sentimental.mp4"
+    }
+  },
+  {
+    "number": 34,
+    "name": "34 Servers Heat.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\34 Servers Heat.mp3",
+    "duration": 10.521,
+    "events": {
+      "middle_leaf": 0.55,
+      "left_leaf": 0.8,
+      "right_leaf": 1.024,
+      "A": 3.224,
+      "L": 3.973,
+      "I": 5.576,
+      "U": 6.523,
+      "S": 7.896,
+      "settle": 9.259
+    },
+    "ambient_events": {
+      "tagline_start": 3.024,
+      "tagline_end": 10.301
+    },
+    "peaks": [
+      {
+        "time": 0.04,
+        "score": 0.448
+      },
+      {
+        "time": 0.2249,
+        "score": 0.601
+      },
+      {
+        "time": 0.5498,
+        "score": 0.1479
+      },
+      {
+        "time": 0.7996,
+        "score": 0.1843
+      },
+      {
+        "time": 1.0245,
+        "score": 0.7617
+      },
+      {
+        "time": 1.3494,
+        "score": 0.1566
+      },
+      {
+        "time": 1.5493,
+        "score": 0.1654
+      },
+      {
+        "time": 1.8242,
+        "score": 0.77
+      },
+      {
+        "time": 2.224,
+        "score": 0.1872
+      },
+      {
+        "time": 2.4239,
+        "score": 0.1633
+      },
+      {
+        "time": 2.6238,
+        "score": 0.3583
+      },
+      {
+        "time": 2.8487,
+        "score": 0.4866
+      },
+      {
+        "time": 3.2235,
+        "score": 0.6678
+      },
+      {
+        "time": 3.6234,
+        "score": 0.1606
+      },
+      {
+        "time": 3.9732,
+        "score": 0.2776
+      },
+      {
+        "time": 7.4466,
+        "score": 0.1449
+      },
+      {
+        "time": 7.8964,
+        "score": 0.1897
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\34-servers-heat.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\34-servers-heat.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\34-servers-heat.mp4"
+    }
+  },
+  {
+    "number": 35,
+    "name": "35 Short Digital.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\35 Short Digital.mp3",
+    "duration": 4.052,
+    "events": {
+      "middle_leaf": 0.475,
+      "left_leaf": 1.0,
+      "right_leaf": 1.524,
+      "A": 2.024,
+      "L": 2.274,
+      "I": 2.389,
+      "U": 2.504,
+      "S": 2.958,
+      "settle": 3.566
+    },
+    "ambient_events": {
+      "tagline_start": 1.874,
+      "tagline_end": 3.832
+    },
+    "peaks": [
+      {
+        "time": 0.1999,
+        "score": 0.8299
+      },
+      {
+        "time": 0.4748,
+        "score": 0.2237
+      },
+      {
+        "time": 0.9996,
+        "score": 0.3402
+      },
+      {
+        "time": 1.5243,
+        "score": 0.2742
+      },
+      {
+        "time": 2.0241,
+        "score": 0.3669
+      },
+      {
+        "time": 2.274,
+        "score": 0.2847
+      }
+    ],
+    "accent_overlays": [
+      {
+        "event": "left_leaf",
+        "time": 1.0,
+        "source_track": 39,
+        "source_name": "39 Cinematic.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "right_leaf",
+        "time": 1.524,
+        "source_track": 25,
+        "source_name": "25 Speed.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "A",
+        "time": 2.024,
+        "source_track": 31,
+        "source_name": "31 Positive .mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "L",
+        "time": 2.274,
+        "source_track": 39,
+        "source_name": "39 Cinematic.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "I",
+        "time": 2.389,
+        "source_track": 25,
+        "source_name": "25 Speed.mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "U",
+        "time": 2.504,
+        "source_track": 31,
+        "source_name": "31 Positive .mp3",
+        "gain": 0.2
+      },
+      {
+        "event": "S",
+        "time": 2.958,
+        "source_track": 39,
+        "source_name": "39 Cinematic.mp3",
+        "gain": 0.2
+      }
+    ],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\35-short-digital.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\35-short-digital.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\35-short-digital.mp4"
+    }
+  },
+  {
+    "number": 36,
+    "name": "36 Skycraper Ride.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\36 Skycraper Ride.mp3",
+    "duration": 7.885,
+    "events": {
+      "middle_leaf": 0.475,
+      "left_leaf": 0.8,
+      "right_leaf": 1.125,
+      "A": 3.398,
+      "L": 4.123,
+      "I": 4.748,
+      "U": 5.048,
+      "S": 5.756,
+      "settle": 6.939
+    },
+    "ambient_events": {
+      "tagline_start": 3.198,
+      "tagline_end": 7.665
+    },
+    "peaks": [
+      {
+        "time": 0.2499,
+        "score": 0.3885
+      },
+      {
+        "time": 0.4748,
+        "score": 0.4814
+      },
+      {
+        "time": 0.7996,
+        "score": 0.3565
+      },
+      {
+        "time": 1.1245,
+        "score": 0.5315
+      },
+      {
+        "time": 1.3744,
+        "score": 0.2412
+      },
+      {
+        "time": 1.5743,
+        "score": 0.3693
+      },
+      {
+        "time": 1.7992,
+        "score": 0.3903
+      },
+      {
+        "time": 2.0491,
+        "score": 0.4745
+      },
+      {
+        "time": 2.6738,
+        "score": 0.345
+      },
+      {
+        "time": 2.9487,
+        "score": 0.3389
+      },
+      {
+        "time": 3.3985,
+        "score": 0.8717
+      },
+      {
+        "time": 4.1231,
+        "score": 0.2572
+      },
+      {
+        "time": 4.7479,
+        "score": 0.2346
+      },
+      {
+        "time": 5.0477,
+        "score": 0.2822
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\36-skycraper-ride.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\36-skycraper-ride.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\36-skycraper-ride.mp4"
+    }
+  },
+  {
+    "number": 37,
+    "name": "37 Stomping.wav",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\37 Stomping.wav",
+    "duration": 10.364,
+    "events": {
+      "middle_leaf": 0.725,
+      "left_leaf": 1.149,
+      "right_leaf": 1.699,
+      "A": 3.324,
+      "L": 4.648,
+      "I": 5.497,
+      "U": 6.022,
+      "S": 7.697,
+      "settle": 9.12
+    },
+    "ambient_events": {
+      "tagline_start": 3.124,
+      "tagline_end": 10.144
+    },
+    "peaks": [
+      {
+        "time": 0.2249,
+        "score": 0.8649
+      },
+      {
+        "time": 0.7247,
+        "score": 0.6028
+      },
+      {
+        "time": 1.1495,
+        "score": 0.6767
+      },
+      {
+        "time": 1.6992,
+        "score": 0.6444
+      },
+      {
+        "time": 2.4739,
+        "score": 0.6406
+      },
+      {
+        "time": 2.9237,
+        "score": 0.6108
+      },
+      {
+        "time": 3.3235,
+        "score": 0.6481
+      },
+      {
+        "time": 3.8483,
+        "score": 0.6112
+      },
+      {
+        "time": 4.6479,
+        "score": 0.6525
+      },
+      {
+        "time": 5.0977,
+        "score": 0.6
+      },
+      {
+        "time": 5.4975,
+        "score": 0.6523
+      },
+      {
+        "time": 6.0223,
+        "score": 0.6336
+      },
+      {
+        "time": 6.8469,
+        "score": 0.6323
+      },
+      {
+        "time": 7.2717,
+        "score": 0.6092
+      },
+      {
+        "time": 7.6965,
+        "score": 0.604
+      },
+      {
+        "time": 7.9714,
+        "score": 0.3595
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\37-stomping.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\37-stomping.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\37-stomping.mp4"
+    }
+  },
+  {
+    "number": 38,
+    "name": "38 Abstract.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\38 Abstract.mp3",
+    "duration": 6.545,
+    "events": {
+      "middle_leaf": 0.55,
+      "left_leaf": 0.875,
+      "right_leaf": 1.149,
+      "A": 1.924,
+      "L": 2.749,
+      "I": 3.273,
+      "U": 4.058,
+      "S": 4.844,
+      "settle": 5.76
+    },
+    "ambient_events": {
+      "tagline_start": 1.724,
+      "tagline_end": 6.325
+    },
+    "peaks": [
+      {
+        "time": 0.5498,
+        "score": 0.8166
+      },
+      {
+        "time": 0.8746,
+        "score": 0.1864
+      },
+      {
+        "time": 1.1495,
+        "score": 0.2023
+      },
+      {
+        "time": 1.5493,
+        "score": 0.2774
+      },
+      {
+        "time": 1.9241,
+        "score": 0.3076
+      },
+      {
+        "time": 2.224,
+        "score": 0.2323
+      },
+      {
+        "time": 2.4489,
+        "score": 0.3623
+      },
+      {
+        "time": 2.7488,
+        "score": 0.4198
+      },
+      {
+        "time": 3.0486,
+        "score": 0.1999
+      },
+      {
+        "time": 3.2735,
+        "score": 0.1855
+      }
+    ],
+    "accent_overlays": [
+      {
+        "event": "A",
+        "time": 1.924,
+        "source_track": 25,
+        "source_name": "25 Speed.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "L",
+        "time": 2.749,
+        "source_track": 31,
+        "source_name": "31 Positive .mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "I",
+        "time": 3.273,
+        "source_track": 39,
+        "source_name": "39 Cinematic.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "U",
+        "time": 4.058,
+        "source_track": 25,
+        "source_name": "25 Speed.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "S",
+        "time": 4.844,
+        "source_track": 31,
+        "source_name": "31 Positive .mp3",
+        "gain": 0.16
+      }
+    ],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\38-abstract.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\38-abstract.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\38-abstract.mp4"
+    }
+  },
+  {
+    "number": 39,
+    "name": "39 Cinematic.mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\39 Cinematic.mp3",
+    "duration": 6.504,
+    "events": {
+      "middle_leaf": 0.775,
+      "left_leaf": 1.099,
+      "right_leaf": 1.524,
+      "A": 1.999,
+      "L": 3.248,
+      "I": 3.393,
+      "U": 4.123,
+      "S": 4.448,
+      "settle": 5.724
+    },
+    "ambient_events": {
+      "tagline_start": 1.874,
+      "tagline_end": 6.284
+    },
+    "peaks": [
+      {
+        "time": 0.7747,
+        "score": 0.3147
+      },
+      {
+        "time": 1.0995,
+        "score": 0.4986
+      },
+      {
+        "time": 1.5243,
+        "score": 0.3961
+      },
+      {
+        "time": 1.9991,
+        "score": 0.4398
+      },
+      {
+        "time": 2.4489,
+        "score": 0.5753
+      },
+      {
+        "time": 3.2485,
+        "score": 0.9018
+      },
+      {
+        "time": 4.1231,
+        "score": 0.3596
+      },
+      {
+        "time": 4.448,
+        "score": 0.294
+      }
+    ],
+    "accent_overlays": [
+      {
+        "event": "A",
+        "time": 1.999,
+        "source_track": 29,
+        "source_name": "29 Opening.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "L",
+        "time": 3.248,
+        "source_track": 35,
+        "source_name": "35 Short Digital.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "I",
+        "time": 3.393,
+        "source_track": 2,
+        "source_name": "2 Glitch.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "U",
+        "time": 4.123,
+        "source_track": 29,
+        "source_name": "29 Opening.mp3",
+        "gain": 0.16
+      },
+      {
+        "event": "S",
+        "time": 4.448,
+        "source_track": 35,
+        "source_name": "35 Short Digital.mp3",
+        "gain": 0.16
+      }
+    ],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\39-cinematic.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\39-cinematic.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\39-cinematic.mp4"
+    }
+  },
+  {
+    "number": 40,
+    "name": "40 Piano .mp3",
+    "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\40 Piano .mp3",
+    "duration": 7.288,
+    "events": {
+      "middle_leaf": 0.9,
+      "left_leaf": 1.2,
+      "right_leaf": 1.624,
+      "A": 3.099,
+      "L": 3.398,
+      "I": 3.798,
+      "U": 4.519,
+      "S": 5.32,
+      "settle": 6.414
+    },
+    "ambient_events": {
+      "tagline_start": 2.899,
+      "tagline_end": 7.068
+    },
+    "peaks": [
+      {
+        "time": 0.2999,
+        "score": 0.7543
+      },
+      {
+        "time": 0.8996,
+        "score": 0.5216
+      },
+      {
+        "time": 1.1995,
+        "score": 0.2317
+      },
+      {
+        "time": 1.6243,
+        "score": 0.4436
+      },
+      {
+        "time": 1.9991,
+        "score": 0.2326
+      },
+      {
+        "time": 2.6738,
+        "score": 0.3432
+      },
+      {
+        "time": 3.0986,
+        "score": 0.5813
+      },
+      {
+        "time": 3.3985,
+        "score": 0.5464
+      },
+      {
+        "time": 3.7983,
+        "score": 0.737
+      }
+    ],
+    "accent_overlays": [],
+    "files": {
+      "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\40-piano.wav",
+      "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\40-piano.svg",
+      "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\40-piano.mp4"
+    }
+  }
+]

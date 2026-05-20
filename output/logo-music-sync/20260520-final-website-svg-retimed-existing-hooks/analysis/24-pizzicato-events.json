@@ -1,0 +1,77 @@
+{
+  "number": 24,
+  "name": "24 Pizzicato.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\24 Pizzicato.mp3",
+  "duration": 7.885,
+  "events": {
+    "middle_leaf": 0.525,
+    "left_leaf": 0.85,
+    "right_leaf": 1.05,
+    "A": 2.474,
+    "L": 3.473,
+    "I": 4.298,
+    "U": 4.889,
+    "S": 5.756,
+    "settle": 6.939
+  },
+  "ambient_events": {
+    "tagline_start": 2.274,
+    "tagline_end": 7.665
+  },
+  "peaks": [
+    {
+      "time": 0.5248,
+      "score": 0.2946
+    },
+    {
+      "time": 0.8496,
+      "score": 0.2846
+    },
+    {
+      "time": 1.0495,
+      "score": 0.2181
+    },
+    {
+      "time": 1.5243,
+      "score": 0.2187
+    },
+    {
+      "time": 1.8242,
+      "score": 0.1909
+    },
+    {
+      "time": 2.4739,
+      "score": 0.8279
+    },
+    {
+      "time": 2.7488,
+      "score": 0.1952
+    },
+    {
+      "time": 2.9487,
+      "score": 0.2683
+    },
+    {
+      "time": 3.2235,
+      "score": 0.2435
+    },
+    {
+      "time": 3.4734,
+      "score": 0.3525
+    },
+    {
+      "time": 3.6983,
+      "score": 0.1827
+    },
+    {
+      "time": 4.2981,
+      "score": 0.1814
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\24-pizzicato.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\24-pizzicato.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\24-pizzicato.mp4"
+  }
+}

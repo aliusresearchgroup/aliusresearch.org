@@ -1,0 +1,516 @@
+{
+  "counts": {
+    "video": 40,
+    "svg": 40,
+    "analysis": 40,
+    "audio-mix": 40
+  },
+  "static_error_count": 0,
+  "analysis_error_count": 0,
+  "render_error_count": 0,
+  "max_duration_delta_seconds": 0.013,
+  "sample_render_metrics": {
+    "01-corporate": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 43,
+        "bbox": [
+          289,
+          407,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 6192,
+        "bbox": [
+          264,
+          239,
+          322,
+          420
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 44796,
+        "bbox": [
+          118,
+          72,
+          356,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 95332,
+        "bbox": [
+          94,
+          33,
+          1018,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163028,
+        "bbox": [
+          92,
+          31,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "02-glitch": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 116,
+        "bbox": [
+          288,
+          394,
+          293,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 20254,
+        "bbox": [
+          246,
+          76,
+          356,
+          420
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 55233,
+        "bbox": [
+          95,
+          40,
+          357,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 87690,
+        "bbox": [
+          92,
+          32,
+          766,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163327,
+        "bbox": [
+          97,
+          31,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "15-blockbuster": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 24,
+        "bbox": [
+          289,
+          412,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 12423,
+        "bbox": [
+          254,
+          167,
+          339,
+          420
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 38221,
+        "bbox": [
+          136,
+          72,
+          357,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 74749,
+        "bbox": [
+          90,
+          31,
+          462,
+          651
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163158,
+        "bbox": [
+          90,
+          33,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "31-positive": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 77,
+        "bbox": [
+          288,
+          400,
+          292,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 20933,
+        "bbox": [
+          242,
+          72,
+          358,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 55230,
+        "bbox": [
+          95,
+          40,
+          357,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 67434,
+        "bbox": [
+          93,
+          32,
+          469,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 162923,
+        "bbox": [
+          92,
+          31,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "35-short-digital": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 68,
+        "bbox": [
+          288,
+          401,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 20417,
+        "bbox": [
+          246,
+          72,
+          357,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 55201,
+        "bbox": [
+          94,
+          41,
+          358,
+          423
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 104829,
+        "bbox": [
+          92,
+          32,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163274,
+        "bbox": [
+          97,
+          29,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    },
+    "40-piano": {
+      "frame0": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "before_first_leaf": {
+        "nonwhite": 0,
+        "bbox": null,
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "middle_leaf": {
+        "nonwhite": 32,
+        "bbox": [
+          289,
+          410,
+          292,
+          422
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "left_leaf": {
+        "nonwhite": 8283,
+        "bbox": [
+          260,
+          213,
+          328,
+          420
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "third_leaf": {
+        "nonwhite": 46902,
+        "bbox": [
+          113,
+          72,
+          357,
+          424
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "first_letter": {
+        "nonwhite": 101211,
+        "bbox": [
+          95,
+          33,
+          1184,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      },
+      "final": {
+        "nonwhite": 163417,
+        "bbox": [
+          97,
+          32,
+          1296,
+          665
+        ],
+        "size": [
+          1428,
+          692
+        ]
+      }
+    }
+  },
+  "representative_sheet": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\validation\\representative-event-frames.jpg",
+  "static_errors": [],
+  "analysis_errors": [],
+  "render_errors": []
+}

@@ -1,0 +1,61 @@
+{
+  "number": 23,
+  "name": "23Inspiring.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\23Inspiring.mp3",
+  "duration": 8.072,
+  "events": {
+    "middle_leaf": 0.775,
+    "left_leaf": 1.05,
+    "right_leaf": 1.299,
+    "A": 2.049,
+    "L": 3.552,
+    "I": 4.278,
+    "U": 5.005,
+    "S": 5.892,
+    "settle": 7.103
+  },
+  "ambient_events": {
+    "tagline_start": 1.849,
+    "tagline_end": 7.852
+  },
+  "peaks": [
+    {
+      "time": 0.04,
+      "score": 0.6677
+    },
+    {
+      "time": 0.2999,
+      "score": 0.5644
+    },
+    {
+      "time": 0.7747,
+      "score": 0.7746
+    },
+    {
+      "time": 1.0495,
+      "score": 0.7418
+    },
+    {
+      "time": 1.2994,
+      "score": 0.3914
+    },
+    {
+      "time": 1.5493,
+      "score": 0.3212
+    },
+    {
+      "time": 1.7992,
+      "score": 0.3148
+    },
+    {
+      "time": 2.0491,
+      "score": 0.4495
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\23-inspiring.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\23-inspiring.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\23-inspiring.mp4"
+  }
+}

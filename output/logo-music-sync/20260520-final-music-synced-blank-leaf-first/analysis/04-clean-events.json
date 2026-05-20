@@ -1,0 +1,53 @@
+{
+  "number": 4,
+  "name": "4 Clean.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\4 Clean.mp3",
+  "duration": 7.001,
+  "events": {
+    "middle_leaf": 0.625,
+    "left_leaf": 0.925,
+    "right_leaf": 1.274,
+    "A": 2.024,
+    "L": 3.08,
+    "I": 3.71,
+    "U": 4.34,
+    "S": 5.111,
+    "settle": 6.161
+  },
+  "ambient_events": {
+    "tagline_start": 1.824,
+    "tagline_end": 6.781
+  },
+  "peaks": [
+    {
+      "time": 0.6247,
+      "score": 0.1501
+    },
+    {
+      "time": 0.9246,
+      "score": 0.1655
+    },
+    {
+      "time": 1.2744,
+      "score": 0.8326
+    },
+    {
+      "time": 1.5493,
+      "score": 0.4988
+    },
+    {
+      "time": 1.8242,
+      "score": 0.4013
+    },
+    {
+      "time": 2.0241,
+      "score": 0.3336
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\audio-mix\\04-clean.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\svg\\04-clean.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\video\\04-clean.mp4"
+  }
+}

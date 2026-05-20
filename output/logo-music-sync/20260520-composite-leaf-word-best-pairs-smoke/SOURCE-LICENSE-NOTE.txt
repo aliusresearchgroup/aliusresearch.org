@@ -1,0 +1,3 @@
+Audio source folder: C:\Users\cogpsy-vrlab\Downloads\40 Logo Intro Music-20260520T093651Z-3-001\40 Logo Intro Music
+These files are treated as user-provided local source audio. Confirm the license before public release.
+Composite batch: each MP4 combines one leaf-cue source with a distinct word-cue source via crossfade.

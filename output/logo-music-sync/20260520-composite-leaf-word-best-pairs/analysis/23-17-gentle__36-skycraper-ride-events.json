@@ -1,0 +1,194 @@
+{
+  "variant": 23,
+  "name": "23-17-gentle__36-skycraper-ride",
+  "duration": 6.753,
+  "pair_score": 0.6544,
+  "transition_score": 0.9799,
+  "leaf_source": {
+    "number": 17,
+    "name": "17 Gentle.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\17 Gentle.mp3",
+    "duration": 14.864,
+    "score": 0.6165
+  },
+  "word_source": {
+    "number": 36,
+    "name": "36 Skycraper Ride.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\36 Skycraper Ride.mp3",
+    "duration": 7.885,
+    "score": 0.6198
+  },
+  "events": {
+    "middle_leaf": 1.624,
+    "left_leaf": 1.874,
+    "right_leaf": 2.199,
+    "A": 2.679,
+    "L": 2.904,
+    "I": 3.154,
+    "U": 3.778,
+    "S": 4.503,
+    "settle": 6.333
+  },
+  "ambient_events": {
+    "tagline_start": 2.549,
+    "tagline_end": 6.533
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      1.6243,
+      1.8742,
+      2.199
+    ],
+    "word_cues_source_seconds": [
+      1.5743,
+      1.7992,
+      2.0491,
+      2.6738,
+      3.3985
+    ],
+    "word_source_trim_seconds": 1.0743,
+    "word_start_seconds": 2.179,
+    "word_shift_seconds": 1.1047,
+    "transition_gap_seconds": 0.48,
+    "crossfade": {
+      "leaf_fade_start": 2.319,
+      "leaf_fade_end": 2.779,
+      "word_fade_in_duration": 0.54
+    },
+    "leaf_gain": 0.86,
+    "word_gain": 0.58
+  },
+  "leaf_peaks": [
+    {
+      "time": 1.6243,
+      "score": 0.2249
+    },
+    {
+      "time": 1.8742,
+      "score": 0.7566
+    },
+    {
+      "time": 2.199,
+      "score": 0.1805
+    },
+    {
+      "time": 2.7738,
+      "score": 0.3848
+    },
+    {
+      "time": 3.2485,
+      "score": 0.3052
+    },
+    {
+      "time": 3.7233,
+      "score": 0.8302
+    },
+    {
+      "time": 4.1981,
+      "score": 0.1821
+    },
+    {
+      "time": 4.6229,
+      "score": 0.3899
+    },
+    {
+      "time": 5.2976,
+      "score": 0.2765
+    },
+    {
+      "time": 5.5725,
+      "score": 0.7555
+    },
+    {
+      "time": 5.8723,
+      "score": 0.4422
+    },
+    {
+      "time": 6.3221,
+      "score": 0.2411
+    },
+    {
+      "time": 6.747,
+      "score": 0.1909
+    },
+    {
+      "time": 7.6216,
+      "score": 0.2
+    },
+    {
+      "time": 8.1463,
+      "score": 0.2636
+    },
+    {
+      "time": 8.746,
+      "score": 0.3084
+    },
+    {
+      "time": 9.1709,
+      "score": 0.2374
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.2499,
+      "score": 0.3885
+    },
+    {
+      "time": 0.4748,
+      "score": 0.4814
+    },
+    {
+      "time": 0.7996,
+      "score": 0.3565
+    },
+    {
+      "time": 1.1245,
+      "score": 0.5315
+    },
+    {
+      "time": 1.3744,
+      "score": 0.2412
+    },
+    {
+      "time": 1.5743,
+      "score": 0.3693
+    },
+    {
+      "time": 1.7992,
+      "score": 0.3903
+    },
+    {
+      "time": 2.0491,
+      "score": 0.4745
+    },
+    {
+      "time": 2.6738,
+      "score": 0.345
+    },
+    {
+      "time": 2.9487,
+      "score": 0.3389
+    },
+    {
+      "time": 3.3985,
+      "score": 0.8717
+    },
+    {
+      "time": 4.1231,
+      "score": 0.2572
+    },
+    {
+      "time": 4.7479,
+      "score": 0.2346
+    },
+    {
+      "time": 5.0477,
+      "score": 0.2822
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\audio-composite\\23-17-gentle__36-skycraper-ride.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\svg\\23-17-gentle__36-skycraper-ride.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\video\\23-17-gentle__36-skycraper-ride.mp4"
+  }
+}

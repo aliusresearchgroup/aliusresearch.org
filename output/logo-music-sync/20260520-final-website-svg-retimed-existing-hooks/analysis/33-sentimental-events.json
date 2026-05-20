@@ -1,0 +1,77 @@
+{
+  "number": 33,
+  "name": "33 Sentimental.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\33 Sentimental.mp3",
+  "duration": 10.057,
+  "events": {
+    "middle_leaf": 0.775,
+    "left_leaf": 1.274,
+    "right_leaf": 1.824,
+    "A": 3.773,
+    "L": 4.748,
+    "I": 5.497,
+    "U": 5.972,
+    "S": 7.342,
+    "settle": 8.85
+  },
+  "ambient_events": {
+    "tagline_start": 3.573,
+    "tagline_end": 9.837
+  },
+  "peaks": [
+    {
+      "time": 0.7747,
+      "score": 0.189
+    },
+    {
+      "time": 1.2744,
+      "score": 0.2587
+    },
+    {
+      "time": 1.8242,
+      "score": 0.1987
+    },
+    {
+      "time": 2.0241,
+      "score": 0.3731
+    },
+    {
+      "time": 2.4989,
+      "score": 0.368
+    },
+    {
+      "time": 2.7738,
+      "score": 0.723
+    },
+    {
+      "time": 3.2985,
+      "score": 0.5751
+    },
+    {
+      "time": 3.7733,
+      "score": 0.8246
+    },
+    {
+      "time": 4.0482,
+      "score": 0.2638
+    },
+    {
+      "time": 4.7479,
+      "score": 0.4381
+    },
+    {
+      "time": 5.4975,
+      "score": 0.4976
+    },
+    {
+      "time": 5.9723,
+      "score": 0.5736
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\33-sentimental.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\33-sentimental.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\33-sentimental.mp4"
+  }
+}

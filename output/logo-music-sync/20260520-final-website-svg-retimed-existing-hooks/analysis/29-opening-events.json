@@ -1,0 +1,89 @@
+{
+  "number": 29,
+  "name": "29 Opening.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\29 Opening.mp3",
+  "duration": 6.269,
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 1.524,
+    "right_leaf": 1.799,
+    "A": 2.049,
+    "L": 2.374,
+    "I": 2.724,
+    "U": 3.887,
+    "S": 4.639,
+    "settle": 5.517
+  },
+  "ambient_events": {
+    "tagline_start": 2.149,
+    "tagline_end": 6.049
+  },
+  "peaks": [
+    {
+      "time": 0.5748,
+      "score": 0.8187
+    },
+    {
+      "time": 1.5243,
+      "score": 0.392
+    },
+    {
+      "time": 1.7992,
+      "score": 0.4041
+    },
+    {
+      "time": 2.0491,
+      "score": 0.3208
+    },
+    {
+      "time": 2.3739,
+      "score": 0.3774
+    },
+    {
+      "time": 2.7238,
+      "score": 0.2473
+    }
+  ],
+  "accent_overlays": [
+    {
+      "event": "A",
+      "time": 2.049,
+      "source_track": 25,
+      "source_name": "25 Speed.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "L",
+      "time": 2.374,
+      "source_track": 31,
+      "source_name": "31 Positive .mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "I",
+      "time": 2.724,
+      "source_track": 39,
+      "source_name": "39 Cinematic.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "U",
+      "time": 3.887,
+      "source_track": 25,
+      "source_name": "25 Speed.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "S",
+      "time": 4.639,
+      "source_track": 31,
+      "source_name": "31 Positive .mp3",
+      "gain": 0.16
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\29-opening.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\29-opening.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\29-opening.mp4"
+  }
+}

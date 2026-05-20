@@ -1,0 +1,61 @@
+{
+  "number": 13,
+  "name": "13 Upbeat 8.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\13 Upbeat 8.mp3",
+  "duration": 7.576,
+  "events": {
+    "middle_leaf": 0.5,
+    "left_leaf": 1.249,
+    "right_leaf": 1.774,
+    "A": 2.524,
+    "L": 2.799,
+    "I": 4.015,
+    "U": 4.697,
+    "S": 5.53,
+    "settle": 6.666
+  },
+  "ambient_events": {
+    "tagline_start": 2.324,
+    "tagline_end": 7.356
+  },
+  "peaks": [
+    {
+      "time": 0.4998,
+      "score": 0.7601
+    },
+    {
+      "time": 1.2494,
+      "score": 0.4524
+    },
+    {
+      "time": 1.7742,
+      "score": 0.3023
+    },
+    {
+      "time": 1.9991,
+      "score": 0.3255
+    },
+    {
+      "time": 2.324,
+      "score": 0.1984
+    },
+    {
+      "time": 2.5239,
+      "score": 0.2893
+    },
+    {
+      "time": 2.7987,
+      "score": 0.326
+    },
+    {
+      "time": 3.0236,
+      "score": 0.2366
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\13-upbeat-8.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\13-upbeat-8.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\13-upbeat-8.mp4"
+  }
+}

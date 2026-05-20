@@ -1,0 +1,85 @@
+{
+  "number": 3,
+  "name": "3 Electro.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\3 Electro.mp3",
+  "duration": 9.187,
+  "events": {
+    "middle_leaf": 0.525,
+    "left_leaf": 1.075,
+    "right_leaf": 1.549,
+    "A": 3.024,
+    "L": 4.148,
+    "I": 4.548,
+    "U": 5.398,
+    "S": 6.707,
+    "settle": 8.085
+  },
+  "ambient_events": {
+    "tagline_start": 2.824,
+    "tagline_end": 8.967
+  },
+  "peaks": [
+    {
+      "time": 0.2749,
+      "score": 0.7764
+    },
+    {
+      "time": 0.5248,
+      "score": 0.732
+    },
+    {
+      "time": 1.0745,
+      "score": 0.7516
+    },
+    {
+      "time": 1.5493,
+      "score": 0.2686
+    },
+    {
+      "time": 1.8991,
+      "score": 0.4985
+    },
+    {
+      "time": 2.199,
+      "score": 0.2944
+    },
+    {
+      "time": 2.5738,
+      "score": 0.5425
+    },
+    {
+      "time": 3.0236,
+      "score": 0.4191
+    },
+    {
+      "time": 3.3985,
+      "score": 0.4323
+    },
+    {
+      "time": 3.6983,
+      "score": 0.3128
+    },
+    {
+      "time": 4.1481,
+      "score": 0.7078
+    },
+    {
+      "time": 4.348,
+      "score": 0.2699
+    },
+    {
+      "time": 4.5479,
+      "score": 0.2825
+    },
+    {
+      "time": 5.3976,
+      "score": 0.2624
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\03-electro.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\03-electro.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\03-electro.mp4"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "number": 36,
+  "name": "36 Skycraper Ride.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\36 Skycraper Ride.mp3",
+  "duration": 7.885,
+  "events": {
+    "middle_leaf": 0.475,
+    "left_leaf": 0.8,
+    "right_leaf": 1.125,
+    "A": 3.398,
+    "L": 4.123,
+    "I": 4.748,
+    "U": 5.048,
+    "S": 5.756,
+    "settle": 6.939
+  },
+  "ambient_events": {
+    "tagline_start": 3.198,
+    "tagline_end": 7.665
+  },
+  "peaks": [
+    {
+      "time": 0.2499,
+      "score": 0.3885
+    },
+    {
+      "time": 0.4748,
+      "score": 0.4814
+    },
+    {
+      "time": 0.7996,
+      "score": 0.3565
+    },
+    {
+      "time": 1.1245,
+      "score": 0.5315
+    },
+    {
+      "time": 1.3744,
+      "score": 0.2412
+    },
+    {
+      "time": 1.5743,
+      "score": 0.3693
+    },
+    {
+      "time": 1.7992,
+      "score": 0.3903
+    },
+    {
+      "time": 2.0491,
+      "score": 0.4745
+    },
+    {
+      "time": 2.6738,
+      "score": 0.345
+    },
+    {
+      "time": 2.9487,
+      "score": 0.3389
+    },
+    {
+      "time": 3.3985,
+      "score": 0.8717
+    },
+    {
+      "time": 4.1231,
+      "score": 0.2572
+    },
+    {
+      "time": 4.7479,
+      "score": 0.2346
+    },
+    {
+      "time": 5.0477,
+      "score": 0.2822
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\36-skycraper-ride.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\36-skycraper-ride.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\36-skycraper-ride.mp4"
+  }
+}

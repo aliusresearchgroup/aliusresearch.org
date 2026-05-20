@@ -1,0 +1,73 @@
+{
+  "number": 16,
+  "name": "16 Fast Corporate  .wav",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\16 Fast Corporate  .wav",
+  "duration": 6.964,
+  "events": {
+    "middle_leaf": 0.35,
+    "left_leaf": 0.725,
+    "right_leaf": 1.024,
+    "A": 2.449,
+    "L": 3.024,
+    "I": 3.324,
+    "U": 4.318,
+    "S": 5.154,
+    "settle": 6.129
+  },
+  "ambient_events": {
+    "tagline_start": 2.249,
+    "tagline_end": 6.744
+  },
+  "peaks": [
+    {
+      "time": 0.1,
+      "score": 0.7613
+    },
+    {
+      "time": 0.3499,
+      "score": 0.426
+    },
+    {
+      "time": 0.7247,
+      "score": 0.4929
+    },
+    {
+      "time": 1.0245,
+      "score": 0.3302
+    },
+    {
+      "time": 1.5993,
+      "score": 0.437
+    },
+    {
+      "time": 1.8242,
+      "score": 0.3034
+    },
+    {
+      "time": 2.0491,
+      "score": 0.4049
+    },
+    {
+      "time": 2.4489,
+      "score": 0.5324
+    },
+    {
+      "time": 2.6988,
+      "score": 0.4184
+    },
+    {
+      "time": 3.0236,
+      "score": 0.373
+    },
+    {
+      "time": 3.3235,
+      "score": 0.4528
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\16-fast-corporate.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\16-fast-corporate.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\16-fast-corporate.mp4"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "variant": 8,
+  "name": "08-06-rise__33-sentimental",
+  "duration": 8.268,
+  "pair_score": 0.5731,
+  "transition_score": 0.7029,
+  "leaf_source": {
+    "number": 6,
+    "name": "6 Rise.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\6 Rise.mp3",
+    "duration": 8.647,
+    "score": 0.5335
+  },
+  "word_source": {
+    "number": 33,
+    "name": "33 Sentimental.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\33 Sentimental.mp3",
+    "duration": 10.057,
+    "score": 0.5808
+  },
+  "events": {
+    "middle_leaf": 0.575,
+    "left_leaf": 1.274,
+    "right_leaf": 1.999,
+    "A": 2.819,
+    "L": 3.344,
+    "I": 3.819,
+    "U": 5.543,
+    "S": 6.018,
+    "settle": 7.848
+  },
+  "ambient_events": {
+    "tagline_start": 2.619,
+    "tagline_end": 8.048
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.5748,
+      1.2744,
+      1.9991
+    ],
+    "word_cues_source_seconds": [
+      2.7738,
+      3.2985,
+      3.7733,
+      5.4975,
+      5.9723
+    ],
+    "word_source_trim_seconds": 2.2738,
+    "word_start_seconds": 2.3191,
+    "word_shift_seconds": 0.0453,
+    "transition_gap_seconds": 0.82,
+    "crossfade": {
+      "leaf_fade_start": 5.393,
+      "leaf_fade_end": 6.818,
+      "word_fade_in_duration": 0.5399
+    },
+    "leaf_gain": 0.74,
+    "word_gain": 1.046,
+    "hold_leaf_under_word": true
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.5748,
+      "score": 0.8036
+    },
+    {
+      "time": 1.2744,
+      "score": 0.7237
+    },
+    {
+      "time": 1.9991,
+      "score": 0.6403
+    },
+    {
+      "time": 3.4235,
+      "score": 0.5082
+    },
+    {
+      "time": 3.9982,
+      "score": 0.4476
+    },
+    {
+      "time": 4.2981,
+      "score": 0.411
+    },
+    {
+      "time": 4.5979,
+      "score": 0.5439
+    },
+    {
+      "time": 4.9478,
+      "score": 0.2348
+    },
+    {
+      "time": 5.5475,
+      "score": 0.2023
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.7747,
+      "score": 0.189
+    },
+    {
+      "time": 1.2744,
+      "score": 0.2587
+    },
+    {
+      "time": 1.8242,
+      "score": 0.1987
+    },
+    {
+      "time": 2.0241,
+      "score": 0.3731
+    },
+    {
+      "time": 2.4989,
+      "score": 0.368
+    },
+    {
+      "time": 2.7738,
+      "score": 0.723
+    },
+    {
+      "time": 3.2985,
+      "score": 0.5751
+    },
+    {
+      "time": 3.7733,
+      "score": 0.8246
+    },
+    {
+      "time": 4.0482,
+      "score": 0.2638
+    },
+    {
+      "time": 4.7479,
+      "score": 0.4381
+    },
+    {
+      "time": 5.4975,
+      "score": 0.4976
+    },
+    {
+      "time": 5.9723,
+      "score": 0.5736
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\audio-composite\\08-06-rise__33-sentimental.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\svg\\08-06-rise__33-sentimental.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-rise-intro-word-overlay\\video\\08-06-rise__33-sentimental.mp4"
+  }
+}

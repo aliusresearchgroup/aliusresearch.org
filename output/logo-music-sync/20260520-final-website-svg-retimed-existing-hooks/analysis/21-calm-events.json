@@ -1,0 +1,65 @@
+{
+  "number": 21,
+  "name": "21 Calm.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\21 Calm.mp3",
+  "duration": 7.553,
+  "events": {
+    "middle_leaf": 0.35,
+    "left_leaf": 1.075,
+    "right_leaf": 1.649,
+    "A": 2.149,
+    "L": 3.124,
+    "I": 4.098,
+    "U": 4.548,
+    "S": 5.023,
+    "settle": 6.646
+  },
+  "ambient_events": {
+    "tagline_start": 1.999,
+    "tagline_end": 7.333
+  },
+  "peaks": [
+    {
+      "time": 0.3499,
+      "score": 0.8215
+    },
+    {
+      "time": 1.0745,
+      "score": 0.3903
+    },
+    {
+      "time": 1.6493,
+      "score": 0.5877
+    },
+    {
+      "time": 2.149,
+      "score": 0.3861
+    },
+    {
+      "time": 3.1236,
+      "score": 0.3021
+    },
+    {
+      "time": 3.6484,
+      "score": 0.3257
+    },
+    {
+      "time": 4.0982,
+      "score": 0.2694
+    },
+    {
+      "time": 4.5479,
+      "score": 0.2732
+    },
+    {
+      "time": 5.0227,
+      "score": 0.2077
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\21-calm.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\21-calm.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\21-calm.mp4"
+  }
+}

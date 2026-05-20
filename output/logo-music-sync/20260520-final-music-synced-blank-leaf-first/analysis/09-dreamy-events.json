@@ -1,0 +1,77 @@
+{
+  "number": 9,
+  "name": "9 Dreamy.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\9 Dreamy.mp3",
+  "duration": 10.005,
+  "events": {
+    "middle_leaf": 0.725,
+    "left_leaf": 1.024,
+    "right_leaf": 1.399,
+    "A": 3.299,
+    "L": 4.048,
+    "I": 4.773,
+    "U": 6.203,
+    "S": 7.304,
+    "settle": 8.804
+  },
+  "ambient_events": {
+    "tagline_start": 3.099,
+    "tagline_end": 9.785
+  },
+  "peaks": [
+    {
+      "time": 0.7247,
+      "score": 0.2169
+    },
+    {
+      "time": 1.0245,
+      "score": 0.409
+    },
+    {
+      "time": 1.3994,
+      "score": 0.4957
+    },
+    {
+      "time": 1.7742,
+      "score": 0.4498
+    },
+    {
+      "time": 2.224,
+      "score": 0.4831
+    },
+    {
+      "time": 2.4489,
+      "score": 0.5399
+    },
+    {
+      "time": 2.8987,
+      "score": 0.2827
+    },
+    {
+      "time": 3.2985,
+      "score": 0.5851
+    },
+    {
+      "time": 3.6484,
+      "score": 0.4778
+    },
+    {
+      "time": 4.0482,
+      "score": 0.7997
+    },
+    {
+      "time": 4.7728,
+      "score": 0.5906
+    },
+    {
+      "time": 5.2226,
+      "score": 0.2373
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\audio-mix\\09-dreamy.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\svg\\09-dreamy.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\video\\09-dreamy.mp4"
+  }
+}

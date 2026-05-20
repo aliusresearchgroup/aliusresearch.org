@@ -1,0 +1,65 @@
+{
+  "number": 20,
+  "name": "20 Ambient.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\20 Ambient.mp3",
+  "duration": 7.367,
+  "events": {
+    "middle_leaf": 0.475,
+    "left_leaf": 0.9,
+    "right_leaf": 1.299,
+    "A": 2.724,
+    "L": 3.149,
+    "I": 3.498,
+    "U": 4.323,
+    "S": 5.378,
+    "settle": 6.483
+  },
+  "ambient_events": {
+    "tagline_start": 2.524,
+    "tagline_end": 7.147
+  },
+  "peaks": [
+    {
+      "time": 0.4748,
+      "score": 0.8018
+    },
+    {
+      "time": 0.8996,
+      "score": 0.7676
+    },
+    {
+      "time": 1.2994,
+      "score": 0.8043
+    },
+    {
+      "time": 1.6493,
+      "score": 0.6592
+    },
+    {
+      "time": 2.0991,
+      "score": 0.1978
+    },
+    {
+      "time": 2.7238,
+      "score": 0.6033
+    },
+    {
+      "time": 3.1486,
+      "score": 0.5273
+    },
+    {
+      "time": 3.4984,
+      "score": 0.4603
+    },
+    {
+      "time": 4.323,
+      "score": 0.2028
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\20-ambient.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\20-ambient.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\20-ambient.mp4"
+  }
+}

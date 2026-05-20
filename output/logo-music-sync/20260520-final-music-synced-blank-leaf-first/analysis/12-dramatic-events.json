@@ -1,0 +1,49 @@
+{
+  "number": 12,
+  "name": "12 Dramatic.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\12 Dramatic.mp3",
+  "duration": 7.445,
+  "events": {
+    "middle_leaf": 0.275,
+    "left_leaf": 0.875,
+    "right_leaf": 1.399,
+    "A": 2.074,
+    "L": 3.276,
+    "I": 3.946,
+    "U": 4.616,
+    "S": 5.435,
+    "settle": 6.552
+  },
+  "ambient_events": {
+    "tagline_start": 1.874,
+    "tagline_end": 7.225
+  },
+  "peaks": [
+    {
+      "time": 0.2749,
+      "score": 0.3757
+    },
+    {
+      "time": 0.8746,
+      "score": 0.2351
+    },
+    {
+      "time": 1.3994,
+      "score": 0.802
+    },
+    {
+      "time": 1.6992,
+      "score": 0.2006
+    },
+    {
+      "time": 2.0741,
+      "score": 0.1898
+    }
+  ],
+  "accent_overlays": [],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\audio-mix\\12-dramatic.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\svg\\12-dramatic.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-music-synced-blank-leaf-first\\video\\12-dramatic.mp4"
+  }
+}

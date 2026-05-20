@@ -1,0 +1,142 @@
+{
+  "variant": 7,
+  "name": "07-23-inspiring__08-chinese",
+  "duration": 6.178,
+  "pair_score": 0.7217,
+  "transition_score": 0.7602,
+  "leaf_source": {
+    "number": 23,
+    "name": "23Inspiring.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\23Inspiring.mp3",
+    "duration": 8.072,
+    "score": 0.737
+  },
+  "word_source": {
+    "number": 8,
+    "name": "8 Chinese.mp3",
+    "path": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\8 Chinese.mp3",
+    "duration": 6.856,
+    "score": 0.7002
+  },
+  "events": {
+    "middle_leaf": 0.775,
+    "left_leaf": 1.05,
+    "right_leaf": 1.299,
+    "A": 1.779,
+    "L": 2.304,
+    "I": 2.629,
+    "U": 3.404,
+    "S": 3.928,
+    "settle": 5.758
+  },
+  "ambient_events": {
+    "tagline_start": 1.649,
+    "tagline_end": 5.958
+  },
+  "composite": {
+    "leaf_cues_source_seconds": [
+      0.7747,
+      1.0495,
+      1.2994
+    ],
+    "word_cues_source_seconds": [
+      1.3244,
+      1.8492,
+      2.174,
+      2.9487,
+      3.4734
+    ],
+    "word_source_trim_seconds": 0.8244,
+    "word_start_seconds": 1.2794,
+    "word_shift_seconds": 0.455,
+    "transition_gap_seconds": 0.48,
+    "crossfade": {
+      "leaf_fade_start": 1.4194,
+      "leaf_fade_end": 1.879,
+      "word_fade_in_duration": 0.5396
+    },
+    "leaf_gain": 0.86,
+    "word_gain": 0.9909
+  },
+  "leaf_peaks": [
+    {
+      "time": 0.04,
+      "score": 0.6677
+    },
+    {
+      "time": 0.2999,
+      "score": 0.5644
+    },
+    {
+      "time": 0.7747,
+      "score": 0.7746
+    },
+    {
+      "time": 1.0495,
+      "score": 0.7418
+    },
+    {
+      "time": 1.2994,
+      "score": 0.3914
+    },
+    {
+      "time": 1.5493,
+      "score": 0.3212
+    },
+    {
+      "time": 1.7992,
+      "score": 0.3148
+    },
+    {
+      "time": 2.0491,
+      "score": 0.4495
+    }
+  ],
+  "word_peaks": [
+    {
+      "time": 0.4998,
+      "score": 0.8453
+    },
+    {
+      "time": 0.7996,
+      "score": 0.4984
+    },
+    {
+      "time": 1.3244,
+      "score": 0.7114
+    },
+    {
+      "time": 1.8492,
+      "score": 0.5071
+    },
+    {
+      "time": 2.174,
+      "score": 0.4094
+    },
+    {
+      "time": 2.4239,
+      "score": 0.3323
+    },
+    {
+      "time": 2.6988,
+      "score": 0.2932
+    },
+    {
+      "time": 2.9487,
+      "score": 0.4069
+    },
+    {
+      "time": 3.4734,
+      "score": 0.6449
+    },
+    {
+      "time": 3.7983,
+      "score": 0.3945
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\audio-composite\\07-23-inspiring__08-chinese.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\svg\\07-23-inspiring__08-chinese.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-composite-leaf-word-best-pairs\\video\\07-23-inspiring__08-chinese.mp4"
+  }
+}

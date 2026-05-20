@@ -1,0 +1,97 @@
+{
+  "number": 39,
+  "name": "39 Cinematic.mp3",
+  "source": "C:\\Users\\cogpsy-vrlab\\Downloads\\40 Logo Intro Music-20260520T093651Z-3-001\\40 Logo Intro Music\\39 Cinematic.mp3",
+  "duration": 6.504,
+  "events": {
+    "middle_leaf": 0.775,
+    "left_leaf": 1.099,
+    "right_leaf": 1.524,
+    "A": 1.999,
+    "L": 3.248,
+    "I": 3.393,
+    "U": 4.123,
+    "S": 4.448,
+    "settle": 5.724
+  },
+  "ambient_events": {
+    "tagline_start": 1.874,
+    "tagline_end": 6.284
+  },
+  "peaks": [
+    {
+      "time": 0.7747,
+      "score": 0.3147
+    },
+    {
+      "time": 1.0995,
+      "score": 0.4986
+    },
+    {
+      "time": 1.5243,
+      "score": 0.3961
+    },
+    {
+      "time": 1.9991,
+      "score": 0.4398
+    },
+    {
+      "time": 2.4489,
+      "score": 0.5753
+    },
+    {
+      "time": 3.2485,
+      "score": 0.9018
+    },
+    {
+      "time": 4.1231,
+      "score": 0.3596
+    },
+    {
+      "time": 4.448,
+      "score": 0.294
+    }
+  ],
+  "accent_overlays": [
+    {
+      "event": "A",
+      "time": 1.999,
+      "source_track": 29,
+      "source_name": "29 Opening.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "L",
+      "time": 3.248,
+      "source_track": 35,
+      "source_name": "35 Short Digital.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "I",
+      "time": 3.393,
+      "source_track": 2,
+      "source_name": "2 Glitch.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "U",
+      "time": 4.123,
+      "source_track": 29,
+      "source_name": "29 Opening.mp3",
+      "gain": 0.16
+    },
+    {
+      "event": "S",
+      "time": 4.448,
+      "source_track": 35,
+      "source_name": "35 Short Digital.mp3",
+      "gain": 0.16
+    }
+  ],
+  "files": {
+    "audio": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\audio-mix\\39-cinematic.wav",
+    "svg": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\svg\\39-cinematic.svg",
+    "video": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\output\\logo-music-sync\\20260520-final-website-svg-retimed-existing-hooks\\video\\39-cinematic.mp4"
+  }
+}
