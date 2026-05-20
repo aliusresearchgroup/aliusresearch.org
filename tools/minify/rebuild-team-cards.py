@@ -3,7 +3,7 @@
 Each member becomes a simple card with:
   - Photo (circular avatar, top)
   - Name (h3, bold but not oversized)
-  - Affiliation/role (small muted line, optional)
+  - Coordinator label only when applicable
   - Bio paragraph (normal body text)
   - Icon row with links (LinkedIn, ResearchGate, Scholar, site, email)
 
@@ -76,6 +76,39 @@ EXTRA_MEMBERS = [
         "email": None,
     },
 ]
+
+# ORCID iDs already curated elsewhere in this repo for ALIUS Bulletin people.
+# The builder applies them only to matching team cards, and preserves explicit
+# ORCID links if a card source already supplies one later.
+ORCID_IDS = {
+    "Alessio Bucci": "0000-0002-8594-5972",
+    "Anna Ciaunica": "0000-0002-2708-8319",
+    "Arnaud Halloy": "0009-0004-1515-4667",
+    "Charlotte Martial": "0000-0001-6291-3460",
+    "Chris Timmermann": "0000-0002-2281-377X",
+    "Christopher Timmermann": "0000-0002-2281-377X",
+    "Cordelia Erickson-Davis": "0000-0001-7694-820X",
+    "Edvard Aviles": "0000-0002-3936-8959",
+    "George Fejer": "0000-0002-4904-5504",
+    "Guillaume Dumas": "0000-0002-2253-1844",
+    "Katrin H. Preller": "0000-0003-0413-7672",
+    "Katrin Preller": "0000-0003-0413-7672",
+    "Leor Roseman": "0000-0001-9990-6029",
+    "Maddalena Canna": "0000-0002-7506-5875",
+    "Martin E. Fortier": "0000-0003-3282-8120",
+    "Martin Fortier": "0000-0003-3282-8120",
+    "Matthieu Koroma": "0000-0003-2269-7841",
+    "Raphael Milliere": "0000-0001-6965-6073",
+    "Raphaël Millière": "0000-0001-6965-6073",
+    "Rebecca Seligman": "0000-0002-9402-0322",
+    "Timo Torsten Schmidt": "0000-0003-1612-1301",
+    "Tom Froese": "0000-0002-9899-5274",
+}
+
+ORCID_BY_KEY = {
+    re.sub(r"[^a-z0-9]+", "", name.lower()): orcid
+    for name, orcid in ORCID_IDS.items()
+}
 
 # ---- tag taxonomy ----
 
@@ -300,7 +333,7 @@ ICON_DEFS = {
     "researchgate":("ResearchGate",   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3v14H7zM14 5h3v14h-3zM7 11h10v2H7z"/></svg>'),
     "scholar":     ("Google Scholar", '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>'),
     "academia":    ("Academia",       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>'),
-    "orcid":       ("ORCID",          '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="bold">iD</text></svg>'),
+    "orcid":       ("ORCID iD",       '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="bold">iD</text></svg>'),
     "twitter":     ("Twitter / X",    '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22l-7.5 8.6L23 21h-6.8l-5.3-6.9L4.8 21H1.7l8-9.2L1 3h7l4.8 6.3zM17.7 19.2h1.9L6.4 4.7H4.3z"/></svg>'),
     "github":      ("GitHub",         '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.5-.3-5.2-1.3-5.2-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>'),
     "site":        ("Website",        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>'),
@@ -352,6 +385,9 @@ def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False
     for l in m.get("links") or []:
         t = classify_link(l["href"])
         link_by_type.setdefault(t, l["href"])
+    orcid = ORCID_BY_KEY.get(re.sub(r"[^a-z0-9]+", "", name.lower()))
+    if orcid:
+        link_by_type.setdefault("orcid", f"https://orcid.org/{orcid}")
 
     icons_html = ""
     for key in ("linkedin", "twitter", "scholar", "researchgate", "orcid", "academia", "github", "site", "pdf"):
@@ -383,8 +419,9 @@ def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False
     role_html = (
         '<p class="team-card__role">Team Coordinator</p>'
         if is_coordinator else
-        '<p class="team-card__role team-card__role--muted">Research Member</p>'
+        ''
     )
+    role_line = f"\n  {role_html}" if role_html else ""
 
     # Tag attribute so the filter can match without text parsing
     tag_list = tags_for_bio(bio, name, is_coordinator, is_memoriam)
@@ -393,8 +430,7 @@ def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False
 
     return f'''<article class="team-card{coord_class}" id="{slug}"{tags_attr}>
   {img_html}
-  <h3 class="team-card__name">{name}</h3>
-  {role_html}
+  <h3 class="team-card__name">{name}</h3>{role_line}
   <p class="team-card__bio">{bio}</p>
   <div class="team-card__links">{icons_html}</div>
 </article>'''
