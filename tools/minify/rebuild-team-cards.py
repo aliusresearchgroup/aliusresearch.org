@@ -16,6 +16,7 @@ Uncodixify principles applied:
   - Monochrome icons at 18px, subtle hover
 """
 import json
+import html
 import re
 from pathlib import Path
 from urllib.parse import urlparse
@@ -77,6 +78,10 @@ EXTRA_MEMBERS = [
     },
 ]
 
+def profile_key(name: str) -> str:
+    plain = html.unescape(re.sub(r"<[^>]+>", "", name or ""))
+    return re.sub(r"[^a-z0-9]+", "", plain.lower())
+
 # ORCID iDs already curated elsewhere in this repo for ALIUS Bulletin people.
 # The builder applies them only to matching team cards, and preserves explicit
 # ORCID links if a card source already supplies one later.
@@ -106,8 +111,33 @@ ORCID_IDS = {
 }
 
 ORCID_BY_KEY = {
-    re.sub(r"[^a-z0-9]+", "", name.lower()): orcid
+    profile_key(name): orcid
     for name, orcid in ORCID_IDS.items()
+}
+
+# Curated Google Scholar profiles for team cards whose source pages do not
+# already include a Scholar link.
+GOOGLE_SCHOLAR_PROFILES = {
+    "Alexandre Billon": "https://scholar.google.com/citations?user=Bknm2JwAAAAJ&hl=en",
+    "Anna Ciaunica": "https://scholar.google.com/citations?user=ZUMz7EAAAAAJ&hl=en",
+    "Charlotte Martial": "https://scholar.google.com/citations?user=aP8tsFAAAAAJ&hl=en",
+    "Chris Timmermann": "https://scholar.google.com/citations?user=ezYk7h0AAAAJ&hl=en",
+    "Christopher Timmermann": "https://scholar.google.com/citations?user=ezYk7h0AAAAJ&hl=en",
+    "Cyril Costines": "https://scholar.google.com/citations?user=-HSadLYAAAAJ&hl=en",
+    "Cyriel Costines": "https://scholar.google.com/citations?user=-HSadLYAAAAJ&hl=en",
+    "Guillaume Dumas": "https://scholar.google.com/citations?user=TakXk9MAAAAJ&hl=en",
+    "Matthew Sacchet": "https://scholar.google.com/citations?user=ckejHQkAAAAJ&hl=en",
+    "Raphael Milliere": "https://scholar.google.com/citations?user=_2kiRH0AAAAJ&hl=en",
+    "Raphaël Millière": "https://scholar.google.com/citations?user=_2kiRH0AAAAJ&hl=en",
+    "Romy Lorenz": "https://scholar.google.com/citations?user=i8KWsMkAAAAJ&hl=en",
+    "Timo Torsten Schmidt": "https://scholar.google.com/citations?user=o5IBmAQAAAAJ&hl=en",
+    "Tom Froese": "https://scholar.google.com/citations?user=uKd8pmUAAAAJ&hl=en",
+    "Audrey Mazancieux": "https://scholar.google.com/citations?user=0-VPCwQAAAAJ&hl=en",
+}
+
+GOOGLE_SCHOLAR_BY_KEY = {
+    profile_key(name): url
+    for name, url in GOOGLE_SCHOLAR_PROFILES.items()
 }
 
 # ---- tag taxonomy ----
@@ -385,9 +415,13 @@ def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False
     for l in m.get("links") or []:
         t = classify_link(l["href"])
         link_by_type.setdefault(t, l["href"])
-    orcid = ORCID_BY_KEY.get(re.sub(r"[^a-z0-9]+", "", name.lower()))
+    key = profile_key(name)
+    orcid = ORCID_BY_KEY.get(key)
     if orcid:
         link_by_type.setdefault("orcid", f"https://orcid.org/{orcid}")
+    scholar = GOOGLE_SCHOLAR_BY_KEY.get(key)
+    if scholar:
+        link_by_type.setdefault("scholar", scholar)
 
     icons_html = ""
     for key in ("linkedin", "twitter", "scholar", "researchgate", "orcid", "academia", "github", "site", "pdf"):

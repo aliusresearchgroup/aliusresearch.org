@@ -17,5 +17,7 @@ For detailed site formatting and responsive layout standards, also read `for AI 
 ## Deployment
 
 - After making website changes, push the committed changes to GitHub so the website deployment can update.
+- The main live website is deployed from the `current-deployment` branch. Unless the user explicitly says otherwise, finished public website edits should be committed and pushed to `current-deployment`.
+- After pushing, check that the GitHub Pages deployment for `current-deployment` succeeds and verify the relevant public URL, not just the raw GitHub file.
 - Do not leave finished site edits only in the local working tree unless the user explicitly asks not to push.
 - Commit and push only the files relevant to the requested change; preserve unrelated staged, unstaged, or untracked user work.
