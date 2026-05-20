@@ -151,160 +151,6 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 }
 </style>
 <style>
-/* Consolidated-page design: minimalist section dividers + fixed bottom nav */
-/* DOI fragment links should land directly on the entry title, not animate. */
-html { scroll-behavior: auto !important; }
-
-/* Keep section dividers clean */
-body.wsite-page-team .wsite-section-wrap,
-body.wsite-page-bulletin .wsite-section-wrap,
-body.wsite-page-events .wsite-section-wrap,
-body.wsite-page-membership .wsite-section-wrap {
-  scroll-margin-top: 16px;
-  scroll-margin-bottom: 100px;
-}
-
-/* Anchor targets (hidden offset spans sit above dividers) */
-.tab-anchor,
-.team-anchor {
-  position: relative;
-  top: -16px;
-  visibility: hidden;
-  pointer-events: none;
-  display: block;
-  height: 0;
-}
-
-/* Page bottom breathing room so last section isn't hidden under the fixed nav */
-body.wsite-page-team #wsite-content,
-body.wsite-page-bulletin #wsite-content,
-body.wsite-page-events #wsite-content,
-body.wsite-page-membership #wsite-content {
-  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
-}
-
-/* Fixed bottom section navigation */
-.section-nav {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  margin: 0;
-  padding: 0.55rem calc(0.75rem + env(safe-area-inset-right, 0px))
-           calc(0.55rem + env(safe-area-inset-bottom, 0px))
-           calc(0.75rem + env(safe-area-inset-left, 0px));
-  background: rgba(249, 249, 249, 0.94);
-  backdrop-filter: blur(10px) saturate(1.1);
-  -webkit-backdrop-filter: blur(10px) saturate(1.1);
-  border-top: 1px solid rgba(66, 81, 76, 0.18);
-  box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.05);
-  -webkit-tap-highlight-color: transparent;
-}
-
-.section-nav ol {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow-x: auto;
-  overflow-y: hidden;
-  /* Horizontal scroll snap (browsers that don't support just scroll freely) */
-  scroll-snap-type: x proximity;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.section-nav ol::-webkit-scrollbar { display: none; }
-
-.section-nav li {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-}
-
-.section-nav {
-  /* Overridden by pretext-nav-fit.js to the largest size that fits */
-  --section-nav-font-size: 12px;
-}
-.section-nav a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 40px;
-  padding: 0.45rem 0.85rem;
-  border-radius: 999px;
-  color: #42514c;
-  text-decoration: none;
-  white-space: nowrap;
-  font-family: 'Raleway', sans-serif;
-  font-size: var(--section-nav-font-size, 12px);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: background 160ms ease, color 160ms ease,
-              font-size 200ms ease;
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-/* When everything fits, disable horizontal scroll so flex can center perfectly */
-.section-nav:not(.is-overflow) ol { overflow-x: visible; }
-.section-nav a:hover,
-.section-nav a:focus,
-.section-nav a.is-active {
-  background: rgba(123, 140, 137, 0.18);
-  color: #2a3330;
-  outline: none;
-}
-
-/* Narrow-screen tuning (pretext-nav-fit.js handles font-size â€” only tune padding/gap here) */
-@media (max-width: 640px) {
-  .section-nav { padding-top: 0.45rem; padding-bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)); }
-  .section-nav ol { gap: 0.2rem; padding: 0 0.25rem; }
-  .section-nav.is-overflow ol { justify-content: flex-start; }
-  .section-nav a { padding: 0.4rem 0.7rem; letter-spacing: 0.06em; }
-}
-@media (max-width: 380px) {
-  .section-nav a { padding: 0.35rem 0.6rem; }
-}
-
-/* Avatar styling (team page) - kept here for a single-source-of-truth */
-body.wsite-page-team .team-avatar {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 0.8rem;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #e8ece9;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  flex-shrink: 0;
-}
-body.wsite-page-team .team-avatar img,
-body.wsite-page-team .team-avatar picture {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
-  display: block;
-  border-radius: 50%;
-  max-width: none !important;
-}
-@media (max-width: 640px) {
-  body.wsite-page-team .team-avatar { width: 140px; height: 140px; }
-}
-
-/* Reduce visual noise on section dividers */
-body.wsite-page-team .styled-hr,
-body.wsite-page-bulletin .styled-hr,
-body.wsite-page-events .styled-hr,
-body.wsite-page-membership .styled-hr {
-  border: 0;
-  border-top: 1px solid rgba(66, 81, 76, 0.15);
-  max-width: 320px;
-  margin: 10px auto 0;
-}
-</style>
-<style>
 /* Site refresh â€” palette lock (A13) + reading-column (A14) */
 .wsite-page-bulletin #wsite-content h2,
 .wsite-page-bulletin #wsite-content h2 *,
@@ -361,7 +207,7 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
   padding: 0 !important;
 }
 </style>
-<link rel="stylesheet" href="/assets/shared/css/alius-redesign.css?v=20260519-logo-mobile-v06">
+<link rel="stylesheet" href="/assets/shared/css/alius-redesign.css">
 <style>
 /* Bulletin filter index */
 body.wsite-page-bulletin #wsite-content .bulletin-index-section .container {
@@ -903,13 +749,12 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     <div class="wsite-section-content">
       <div class="container">
         <div class="wsite-section-elements">
-          <nav class="alius-anchor-nav bulletin-anchor-nav-disabled" hidden aria-hidden="true"></nav>
           <main class="bulletin-index" aria-label="ALIUS Bulletin index">
-            <header class="bulletin-index__intro">
+            <header id="bulletin-overview" class="bulletin-index__intro">
               <p>The <strong class="bulletin-brand">ALIUS Bulletin</strong> is an annual open-access publication of the ALIUS research group, an international and interdisciplinary collective whose Latin name reflects its commitment to the systematic study of the diversity of consciousness. The Bulletin presents current research on non-ordinary and understudied conscious states, traditionally classified as altered states of consciousness, across neuroscience, psychology, philosophy of mind, psychiatry, and anthropology, with an emphasis on empirical work and a naturalistic orientation that distances such states from parapsychological and pseudoscientific framings. Its interviews have covered psychedelics, the default-mode network, ego dissolution, the free-energy principle, predictive processing, voice-hearing, dissociation, dreaming, mind-wandering, hypnosis, meditation, near-death experiences, the mind-body divide, weightlessness, free will, and irruption theory, alongside methodological discussions on phenomenology and the comparative study of altered states. The Bulletin presents this work in the words of the researchers themselves, aiming to make rigorous inquiry on non-ordinary states accessible to a wider audience.</p>
               <p><a class="bulletin-issue__link" href="/bulletin/instructions-guidelines/">Bulletin Writing Instructions | Guidelines</a></p>
             </header>
-            <div class="bulletin-controls" role="group" aria-label="Filter bulletin entries">
+            <div id="bulletin-filters" class="bulletin-controls" role="group" aria-label="Filter bulletin entries">
               <div class="bulletin-control-row bulletin-control-row--primary">
                 <button type="button" class="bulletin-filter bulletin-filter--all is-active" data-filter="*" aria-pressed="true">All <span class="bulletin-filter__count">41</span></button>
                 <section class="bulletin-filter-group" aria-label="Issues">
@@ -987,7 +832,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
               </div>
             </div>
             <p class="bulletin-result-count" aria-live="polite"><span id="bulletin-visible-count">41</span> entries shown</p>
-            <div class="bulletin-list">
+            <div id="bulletin-list" class="bulletin-list">
               <section class="bulletin-issue" data-issue="issue-07">
                 <details class="bulletin-issue__embed">
                   <summary><span class="bulletin-issue__summary-title">Issue 7</span><span class="bulletin-issue__summary-meta">2 entries - full issue PDF</span></summary>
@@ -2380,6 +2225,6 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
   applyFilters();
 })();
 </script>
-<script src="/assets/shared/js/alius-redesign.js?v=20260519-logo-restart-v08" defer></script>
+<script src="/assets/shared/js/alius-redesign.js" defer></script>
 </body>
 </html>

@@ -16,6 +16,35 @@
       ['Research Members', 'research-members'],
       ['Martin Fortier', 'martinfortier']
     ],
+    '/bulletin/': [
+      ['Overview', 'bulletin-overview'],
+      ['Filters', 'bulletin-filters'],
+      ['Issues', 'bulletin-list']
+    ],
+    '/bulletin/instructions-guidelines/': [
+      ['Guidelines', 'bulletin-guidelines'],
+      ['Interview Generator', 'interview-generator']
+    ],
+    '/video-lectures/': [
+      ['Filters', 'journal-filters'],
+      ['Recordings', 'journal-list']
+    ],
+    '/events/': [
+      ['Overview', 'events-overview'],
+      ['Event List', 'events-list']
+    ],
+    '/events/assc-satellite-2025/': [
+      ['Overview', 'event-assc-2025'],
+      ['Themes', 'assc-themes'],
+      ['Program', 'assc-timeline'],
+      ['Speakers', 'assc-speakers']
+    ],
+    '/membership/': [
+      ['Overview', 'membership-overview'],
+      ['Active Roles', 'active-roles'],
+      ['Joining', 'joining'],
+      ['Governance', 'member-governance']
+    ],
     '/newsletter/': [
       ['Overview', 'newsletter-overview'],
       ['Sign Up', 'newsletter-signup'],
@@ -97,7 +126,6 @@
     var path = currentPath();
     if (path === '/') return homeAnchors();
     if (path === '/team/') return teamAnchors();
-    if (path === '/journal-club/' || path === '/video-lectures/') return [];
     var legacy = harvestLegacySectionNav();
     if (legacy.length) return legacy;
     if (PRESETS[path]) return PRESETS[path];
@@ -106,7 +134,10 @@
   }
 
   function buildAnchorNav(items) {
-    if (!items.length || document.querySelector('.alius-anchor-nav')) return;
+    if (!items.length || document.querySelector('.alius-anchor-nav:not([hidden])')) return;
+    Array.prototype.slice.call(document.querySelectorAll('.alius-anchor-nav[hidden]')).forEach(function (oldNav) {
+      if (oldNav.parentNode) oldNav.parentNode.removeChild(oldNav);
+    });
     var nav = document.createElement('nav');
     nav.className = 'alius-anchor-nav';
     nav.setAttribute('aria-label', 'Page sections');
@@ -122,6 +153,7 @@
       list.appendChild(li);
     });
     if (!list.children.length) return;
+    document.body.classList.add('has-alius-anchor-nav');
     var mount = document.getElementById('content-wrapper') || document.getElementById('wsite-content');
     if (mount && mount.parentNode) {
       mount.parentNode.insertBefore(nav, mount);

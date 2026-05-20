@@ -233,10 +233,10 @@
               width: 100%;
             }
 
-            body.wsite-page-journal-club .journal-speaker {
+            body.wsite-page-journal-club .journal-page .journal-speaker {
               margin-top: 8px;
-              color: var(--journal-muted);
-              font: 500 14px/1.45 Raleway, Arial, sans-serif;
+              color: var(--journal-green);
+              font: 700 14px/1.45 Raleway, Arial, sans-serif;
             }
 
             body.wsite-page-journal-club .journal-tags {
@@ -352,7 +352,7 @@
           </style>
 
           <main class="journal-page" aria-label="ALIUS video lecture recordings">
-            <div class="journal-controls" role="group" aria-label="Filter video lectures">
+            <div id="journal-filters" class="journal-controls" role="group" aria-label="Filter video lectures">
               <div class="journal-control-row">
                 <button type="button" class="journal-filter journal-filter--all is-active" data-filter="*">All <span class="journal-filter__count">15</span></button>
               </div>
@@ -381,7 +381,7 @@
               </section>
             </div>
 
-            <div class="journal-list">
+            <div id="journal-list" class="journal-list">
               <article id="journal-koroma" class="journal-talk" data-tags="sleep body neuroscience">
                 <header class="journal-talk__header">
                   <h2>Cardiac responses to sounds: insights on the embodiment of sleep functions</h2>

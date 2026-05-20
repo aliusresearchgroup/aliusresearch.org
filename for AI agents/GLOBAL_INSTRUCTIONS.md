@@ -2,6 +2,8 @@
 
 This is a running list of repo-wide instructions that future AI agents must preserve when editing this site.
 
+For detailed site formatting and responsive layout standards, also read `for AI agents/SITE_FORMATTING_STANDARDS.md` before changing public pages.
+
 ## Site Header And Navigation
 
 - Every public-facing page must keep the standard ALIUS site shell unless the user explicitly requests an exception.
