@@ -3,7 +3,7 @@ const COLLAPSE_AFTER_MS = 30000;
 const MIN_SIBLING_TRACK = 112;
 const MIN_SQUARE_SIDE = 280;
 const ACCORDION_WIDTH = 560;
-const COMPACT_ROW_SIZE = 236;
+const DORMANT_ROW_SIZE = 160;
 
 let pretext = null;
 let expandedCard = null;
@@ -60,11 +60,11 @@ function gridMetrics(grid) {
   const gap = Number.parseFloat(style.columnGap) || 0;
   const paddingLeft = Number.parseFloat(style.paddingLeft) || 0;
   const paddingRight = Number.parseFloat(style.paddingRight) || 0;
+  const dormantRowSize = Number.parseFloat(style.getPropertyValue('--team-dormant-row-size')) || DORMANT_ROW_SIZE;
   const rect = grid.getBoundingClientRect();
   const available = Math.max(0, rect.width - paddingLeft - paddingRight - gap * Math.max(0, columns - 1));
   const base = Math.max(1, available / Math.max(1, columns));
-  const compactRows = columns <= 1 || window.innerWidth <= ACCORDION_WIDTH || base < 180;
-  const rowBase = compactRows ? COMPACT_ROW_SIZE : base;
+  const rowBase = dormantRowSize;
   return { columns, gap, available, base, rowBase };
 }
 

@@ -982,30 +982,34 @@ body.wsite-page-team .team-section-heading h2 {
    boxes visibly resize in unison. */
 body.wsite-page-team .team-grid {
   --team-motion-duration: 860ms;
+  --team-dormant-row-size: 160px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  grid-auto-rows: var(--team-card-base-size, 236px);
-  gap: 16px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-auto-rows: var(--team-card-base-size, var(--team-dormant-row-size));
+  gap: 12px;
+  max-width: 1360px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 18px 24px 24px;
   overflow: visible;
   transition: grid-template-columns var(--team-motion-duration) cubic-bezier(0.22, 0.61, 0.36, 1),
               grid-template-rows var(--team-motion-duration) cubic-bezier(0.22, 0.61, 0.36, 1);
   will-change: grid-template-columns, grid-template-rows;
 }
 body.wsite-page-team .team-grid--accordion-mode {
-  grid-auto-rows: minmax(var(--team-card-base-size, 220px), auto);
+  grid-auto-rows: minmax(var(--team-card-base-size, var(--team-dormant-row-size)), auto);
 }
 @media (max-width: 1024px) {
   body.wsite-page-team .team-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
 }
 @media (max-width: 700px) {
   body.wsite-page-team .team-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+}
+@media (max-width: 560px) {
+  body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 420px) {
   body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
@@ -1025,13 +1029,13 @@ body.wsite-page-team .team-card {
   border: 1px solid rgba(26, 77, 46, 0.12);
   border-left: 3px solid #3d8b3d;  /* leaf-green left accent */
   border-radius: 8px;
-  padding: 18px 14px 12px;
+  padding: 10px 12px 9px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   height: 100%;             /* fills its grid cell — borders snap at row/col edges */
-  min-height: var(--team-card-base-size, 236px);
+  min-height: var(--team-card-base-size, var(--team-dormant-row-size));
   overflow: hidden;
   box-sizing: border-box;
   transition: opacity 240ms ease,
@@ -1056,14 +1060,14 @@ body.wsite-page-team .team-card--coord:hover {
 }
 
 body.wsite-page-team .team-card__avatar {
-  width: 84px;
-  height: 84px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;           /* don't let the flex column compress us */
   aspect-ratio: 1 / 1;      /* belt-and-braces: stay perfectly square */
   border-radius: 50%;
   overflow: hidden;
   background: #f2f4f3;
-  margin-bottom: 12px;
+  margin-bottom: 7px;
   /* Ring matches card accent (leaf green) */
   box-shadow: 0 0 0 3px #3d8b3d, 0 2px 6px rgba(0, 0, 0, 0.08);
 }
@@ -1081,21 +1085,21 @@ body.wsite-page-team .team-card__avatar img {
 }
 
 body.wsite-page-team .team-card__name {
-  font-size: 15px !important;
+  font-size: 14px !important;
   font-weight: 700 !important;
   color: #0f1a11 !important;
-  margin: 0 0 4px !important;
+  margin: 0 0 3px !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
-  line-height: 1.3 !important;
+  line-height: 1.25 !important;
 }
 body.wsite-page-team .team-card__role {
-  font-size: 11.5px !important;
+  font-size: 10.5px !important;
   font-weight: 600 !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   color: #3d8b3d !important;
-  margin: 0 0 8px !important;
+  margin: 0 0 4px !important;
 }
 body.wsite-page-team .team-card--coord .team-card__role {
   color: #6b9b1f !important;
@@ -1174,7 +1178,7 @@ body.wsite-page-team .team-card__links {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: auto;
-  padding-top: 4px;
+  padding-top: 5px;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   width: 100%;
 }
@@ -1183,8 +1187,8 @@ body.wsite-page-team .team-card__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   color: #6b7571;
@@ -1352,7 +1356,7 @@ body.wsite-page-team .team-card {
 }
 @media (max-width: 420px) {
   body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
-  body.wsite-page-team .team-card { padding: 18px; }
+  body.wsite-page-team .team-card { padding: 12px; }
 }
 
 /* Hide the original Weebly section-wraps on this page — the grid is our render path */
