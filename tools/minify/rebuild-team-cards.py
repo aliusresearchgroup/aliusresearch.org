@@ -126,6 +126,7 @@ GOOGLE_SCHOLAR_PROFILES = {
     "Cyril Costines": "https://scholar.google.com/citations?user=-HSadLYAAAAJ&hl=en",
     "Cyriel Costines": "https://scholar.google.com/citations?user=-HSadLYAAAAJ&hl=en",
     "Guillaume Dumas": "https://scholar.google.com/citations?user=TakXk9MAAAAJ&hl=en",
+    "Mar Estarellas": "https://scholar.google.com/citations?user=Myjep6cAAAAJ&hl=en",
     "Matthew Sacchet": "https://scholar.google.com/citations?user=ckejHQkAAAAJ&hl=en",
     "Raphael Milliere": "https://scholar.google.com/citations?user=_2kiRH0AAAAJ&hl=en",
     "Raphaël Millière": "https://scholar.google.com/citations?user=_2kiRH0AAAAJ&hl=en",
