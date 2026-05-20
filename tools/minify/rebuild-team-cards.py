@@ -560,6 +560,15 @@ body.wsite-page-team #wsite-content {
   padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
 }
 
+@media (max-width: 992px) {
+  body.wsite-page-team:not(.menu-open) .navmobile-wrapper {
+    pointer-events: none;
+  }
+
+  body.wsite-page-team.menu-open .navmobile-wrapper {
+    pointer-events: auto;
+  }
+}
 /* One font stack for the entire page: Raleway, with system-font fallback */
 body.wsite-page-team,
 body.wsite-page-team .team-page-title h1,
@@ -935,28 +944,21 @@ body.wsite-page-team .team-section-heading h2 {
    transition, so every card's 4 sides stay locked to its neighbours and
    boxes visibly resize in unison. */
 body.wsite-page-team .team-grid {
+  --team-motion-duration: 860ms;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  grid-auto-rows: 240px;
+  grid-auto-rows: var(--team-card-base-size, 236px);
   gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
-  transition: grid-template-columns 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
-  will-change: grid-template-columns;
+  overflow: visible;
+  transition: grid-template-columns var(--team-motion-duration) cubic-bezier(0.22, 0.61, 0.36, 1),
+              grid-template-rows var(--team-motion-duration) cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: grid-template-columns, grid-template-rows;
 }
-@media (max-width: 1024px) {
-  body.wsite-page-team .team-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  }
-}
-@media (max-width: 700px) {
-  body.wsite-page-team .team-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  }
-}
-@media (max-width: 420px) {
-  body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
+body.wsite-page-team .team-grid--accordion-mode {
+  grid-auto-rows: minmax(var(--team-card-base-size, 220px), auto);
 }
 @media (max-width: 1024px) {
   body.wsite-page-team .team-grid {
@@ -985,16 +987,20 @@ body.wsite-page-team .team-card {
   background: #ffffff;
   border: 1px solid rgba(26, 77, 46, 0.12);
   border-left: 3px solid #3d8b3d;  /* leaf-green left accent */
-  border-radius: 10px;
-  padding: 24px 20px 20px;
+  border-radius: 8px;
+  padding: 18px 14px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   height: 100%;             /* fills its grid cell — borders snap at row/col edges */
-  min-height: 320px;
+  min-height: var(--team-card-base-size, 236px);
+  overflow: hidden;
   box-sizing: border-box;
-  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  transition: opacity 240ms ease,
+              filter 240ms ease,
+              border-color 240ms ease,
+              box-shadow 240ms ease;
   text-shadow: 0 0 2px rgba(26, 77, 46, 0.02);
 }
 body.wsite-page-team .team-card--coord {
@@ -1005,7 +1011,7 @@ body.wsite-page-team .team-card:hover {
   border-color: rgba(26, 77, 46, 0.25);
   border-left-color: #3d8b3d;
   box-shadow: 0 6px 22px -6px rgba(26, 77, 46, 0.25), 0 0 0 1px rgba(61, 139, 61, 0.1);
-  transform: translateY(-3px);
+  transform: none;
 }
 body.wsite-page-team .team-card--coord:hover {
   border-left-color: #8fbf4d;
@@ -1013,14 +1019,14 @@ body.wsite-page-team .team-card--coord:hover {
 }
 
 body.wsite-page-team .team-card__avatar {
-  width: 96px;
-  height: 96px;
+  width: 84px;
+  height: 84px;
   flex-shrink: 0;           /* don't let the flex column compress us */
   aspect-ratio: 1 / 1;      /* belt-and-braces: stay perfectly square */
   border-radius: 50%;
   overflow: hidden;
   background: #f2f4f3;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   /* Ring matches card accent (leaf green) */
   box-shadow: 0 0 0 3px #3d8b3d, 0 2px 6px rgba(0, 0, 0, 0.08);
 }
@@ -1052,7 +1058,7 @@ body.wsite-page-team .team-card__role {
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   color: #3d8b3d !important;
-  margin: 0 0 12px !important;
+  margin: 0 0 8px !important;
 }
 body.wsite-page-team .team-card--coord .team-card__role {
   color: #6b9b1f !important;
@@ -1085,11 +1091,11 @@ body.wsite-page-team #wsite-content p.team-card__bio {
   max-height: 0;
   margin: 0 !important;
   opacity: 0;
-  transition: max-height 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              margin 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              opacity 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: max-height var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              margin var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 240ms ease 80ms;
 }
-body.wsite-page-team .team-card--expanded #wsite-content p.team-card__bio {
+body.wsite-page-team #wsite-content .team-card--expanded p.team-card__bio {
   max-height: var(--expanded-bio-height, 30em);
   margin: 16px 0 0 !important;
   opacity: 1;
@@ -1098,23 +1104,22 @@ body.wsite-page-team .team-card--expanded #wsite-content p.team-card__bio {
 /* Name + role — same technique; hidden in dormant, revealed with bio. */
 body.wsite-page-team #wsite-content h3.team-card__name,
 body.wsite-page-team #wsite-content p.team-card__role {
-  max-height: 0;
-  margin: 0 !important;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              margin 2400ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              opacity 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  max-height: none;
+  opacity: 1;
+  overflow: visible;
+  transition: max-height var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              margin var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 240ms ease;
 }
 /* Natural font sizes stay at their declared values (15px for name,
    11.5px for role) — those class selectors are defined earlier in this
    CSS block and continue to apply. */
-body.wsite-page-team .team-card--expanded #wsite-content h3.team-card__name {
+body.wsite-page-team #wsite-content .team-card--expanded h3.team-card__name {
   max-height: 3em;
   margin: 0 0 4px !important;
   opacity: 1;
 }
-body.wsite-page-team .team-card--expanded #wsite-content p.team-card__role {
+body.wsite-page-team #wsite-content .team-card--expanded p.team-card__role {
   max-height: 2em;
   margin: 0 0 12px !important;
   opacity: 1;
@@ -1122,7 +1127,7 @@ body.wsite-page-team .team-card--expanded #wsite-content p.team-card__role {
 
 body.wsite-page-team .team-card__links {
   display: flex;
-  gap: 2px;
+  gap: 4px;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: auto;
@@ -1378,18 +1383,23 @@ body.wsite-page-team .team-card.is-filtered-out {
 body.wsite-page-team .team-card {
   cursor: pointer;
   min-width: 0;
-  transition: opacity 2400ms ease,
-              border-color 2400ms ease,
-              box-shadow 2400ms ease;
+  will-change: opacity, filter;
 }
 
-/* Clicked card: takes 2 rows (taller) + gets visual emphasis. Its column
-   also widens via the inline grid-template-columns the JS sets on the grid. */
+/* Clicked card: its exact square or accordion height is driven by measured
+   grid tracks in team-pretext-grid.js, not a fixed row span. */
 body.wsite-page-team .team-card--expanded {
-  grid-row: span 2;
-  z-index: 2;
+  grid-row: auto;
+  z-index: 10;
+  overflow: hidden;
+  transform: none;
   border-color: rgba(26, 77, 46, 0.45);
-  box-shadow: 0 14px 40px -10px rgba(26, 77, 46, 0.28);
+  box-shadow: 0 10px 28px -16px rgba(26, 77, 46, 0.28),
+              0 0 0 1px rgba(61, 139, 61, 0.2);
+}
+body.wsite-page-team .team-grid--accordion-mode .team-card--expanded {
+  height: auto;
+  overflow: visible;
 }
 
 /* Non-expanded siblings while any card is expanded: soft dim */
@@ -1402,10 +1412,17 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
    their natural size, clipped bios just show less text. */
 body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expanded) {
   opacity: 0.7;
+  filter: saturate(0.75);
+}
+@media (prefers-reduced-motion: reduce) {
+  body.wsite-page-team .team-grid,
+  body.wsite-page-team .team-card,
+  body.wsite-page-team #wsite-content p.team-card__bio {
+    transition: none !important;
+  }
 }
 </style>
-<script src="/assets/js/team-card-expand.js" defer></script>
-<script src="/assets/js/team-filter.js" defer></script>
+<script type="module" src="/assets/team/js/team-pretext-grid.js"></script>
 """
 
 

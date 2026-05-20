@@ -218,18 +218,24 @@ body.wsite-page-team #wsite-content .memoriam :where(ul, ol) {
 }
 
 body.wsite-page-team .team-grid {
-  transition: grid-template-columns 700ms ease;
+  transition: grid-template-columns var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              grid-template-rows var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 body.wsite-page-team .team-card {
-  min-height: 244px;
-  transition: border-color 180ms ease, background 180ms ease, opacity 180ms ease;
+  min-height: var(--team-card-base-size, 244px);
+  transition: border-color 180ms ease, background 180ms ease, opacity 240ms ease, box-shadow 240ms ease;
 }
 
 body.wsite-page-team .team-card--expanded {
-  grid-row: span 2;
-  z-index: 2;
+  z-index: 10;
+  overflow: hidden;
   transform: none !important;
+}
+
+body.wsite-page-team .team-grid--accordion-mode .team-card--expanded {
+  height: auto;
+  overflow: visible;
 }
 
 body.wsite-page-team #wsite-content h3.team-card__name {
@@ -255,10 +261,12 @@ body.wsite-page-team #wsite-content p.team-card__bio {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 700ms ease, opacity 240ms ease;
+  transition: max-height var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              margin var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 240ms ease;
 }
 
-body.wsite-page-team .team-card--expanded #wsite-content p.team-card__bio,
+body.wsite-page-team #wsite-content .team-card--expanded p.team-card__bio,
 body.wsite-page-team .team-card--expanded p.team-card__bio {
   max-height: var(--expanded-bio-height, 42rem) !important;
   opacity: 1 !important;
