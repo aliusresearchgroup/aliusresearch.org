@@ -401,6 +401,24 @@ def slug_name(name: str) -> str:
     return f"member-{s}" if s else "member"
 
 
+def portrait_asset_slug(src: str) -> str:
+    s = re.sub(r"[^a-z0-9]+", "-", (src or "").lower()).strip("-")
+    return s[:80]
+
+
+def optimized_portrait_urls(src: str) -> tuple[str, str] | None:
+    """Return webp/jpg URLs for pre-cropped team portraits when available."""
+    if not src or not src.lstrip("/").startswith("media/images/"):
+        return None
+    stem = portrait_asset_slug(src)
+    rel = Path("media") / "team-portraits"
+    webp = REPO / "docs" / rel / f"{stem}.webp"
+    jpg = REPO / "docs" / rel / f"{stem}.jpg"
+    if not (webp.exists() and jpg.exists()):
+        return None
+    return (f"/media/team-portraits/{stem}.webp", f"/media/team-portraits/{stem}.jpg")
+
+
 def obfuscate_email(email: str) -> str:
     """Produce 'user [at] domain [dot] tld' form for scraper-hostile display."""
     if "@" not in email:
@@ -452,11 +470,21 @@ def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False
 
     img_html = ''
     if img:
-        img_html = f'<div class="team-card__avatar"><img src="{img}" alt="{name}" loading="lazy" decoding="async"></div>'
+        optimized = optimized_portrait_urls(img)
+        if optimized:
+            webp_url, jpg_url = optimized
+            img_html = (
+                f'<div class="team-card__avatar"><picture>'
+                f'<source srcset="{webp_url}" type="image/webp">'
+                f'<img src="{jpg_url}" alt="{name}" loading="lazy" decoding="async" width="400" height="400">'
+                f'</picture></div>'
+            )
+        else:
+            img_html = f'<div class="team-card__avatar"><img src="{img}" alt="{name}" loading="lazy" decoding="async"></div>'
 
     coord_class = ' team-card--coord' if is_coordinator else ''
     role_html = (
-        '<p class="team-card__role">Team Coordinator</p>'
+        '<div class="team-card__role">Team Coordinator</div>'
         if is_coordinator else
         ''
     )
@@ -469,8 +497,8 @@ def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False
 
     return f'''<article class="team-card{coord_class}" id="{slug}"{tags_attr}>
   {img_html}
-  <h3 class="team-card__name">{name}</h3>{role_line}
-  <p class="team-card__bio">{bio}</p>
+  <div class="team-card__name" role="heading" aria-level="3">{name}</div>{role_line}
+  <div class="team-card__bio">{bio}</div>
   <div class="team-card__links">{icons_html}</div>
 </article>'''
 
@@ -850,11 +878,11 @@ body.wsite-page-team .memoriam__subhead {
 body.wsite-page-team .memoriam__col p {
   font-size: 15px !important;
   line-height: 1.72 !important;
-  color: #2a3330 !important;
+  color: #2a3330;
   margin: 0 0 14px !important;
   text-align: justify !important;
   text-align-last: left !important;
-  font-weight: 400 !important;
+  font-weight: 400;
 }
 body.wsite-page-team .memoriam__video,
 body.wsite-page-team .memoriam__pdf {
@@ -1062,11 +1090,14 @@ body.wsite-page-team .team-grid--accordion-mode {
    #ffffff  — white (background)
 */
 
-/* Card (viscereality pattern: left-accent colored border) */
+/* Card: neutral at rest, topic-accented on interaction. */
 body.wsite-page-team .team-card {
+  --team-accent: #3d8b3d;
+  --team-accent-rgb: 61, 139, 61;
+  --team-accent-soft: rgba(61, 139, 61, 0.07);
   background: #ffffff;
-  border: 1px solid rgba(26, 77, 46, 0.12);
-  border-left: 3px solid #3d8b3d;  /* leaf-green left accent */
+  border: 1px solid rgba(31, 40, 38, 0.12);
+  border-left: 3px solid rgba(31, 40, 38, 0.12);
   border-radius: 8px;
   padding: 10px 12px 9px;
   display: flex;
@@ -1079,23 +1110,19 @@ body.wsite-page-team .team-card {
   box-sizing: border-box;
   transition: opacity 240ms ease,
               filter 240ms ease,
+              background 240ms ease,
               border-color 240ms ease,
               box-shadow 240ms ease;
   text-shadow: 0 0 2px rgba(26, 77, 46, 0.02);
 }
-body.wsite-page-team .team-card--coord {
-  border-left-color: #8fbf4d;  /* brighter leaf green for coordinators */
-  border-left-width: 4px;
-}
-body.wsite-page-team .team-card:hover {
-  border-color: rgba(26, 77, 46, 0.25);
-  border-left-color: #3d8b3d;
-  box-shadow: 0 6px 22px -6px rgba(26, 77, 46, 0.25), 0 0 0 1px rgba(61, 139, 61, 0.1);
+body.wsite-page-team .team-card:hover,
+body.wsite-page-team .team-card:focus-visible {
+  border-color: rgba(var(--team-accent-rgb, 61, 139, 61), 0.32);
+  border-left-color: rgba(var(--team-accent-rgb, 61, 139, 61), 0.5);
+  box-shadow: 0 6px 22px -8px rgba(var(--team-accent-rgb, 61, 139, 61), 0.22),
+              0 0 0 1px rgba(var(--team-accent-rgb, 61, 139, 61), 0.1);
   transform: none;
-}
-body.wsite-page-team .team-card--coord:hover {
-  border-left-color: #8fbf4d;
-  box-shadow: 0 6px 22px -6px rgba(143, 191, 77, 0.4), 0 0 0 1px rgba(143, 191, 77, 0.2);
+  outline: none;
 }
 
 body.wsite-page-team .team-card__avatar {
@@ -1107,11 +1134,17 @@ body.wsite-page-team .team-card__avatar {
   overflow: hidden;
   background: #f2f4f3;
   margin-bottom: 7px;
-  /* Ring matches card accent (leaf green) */
-  box-shadow: 0 0 0 3px #3d8b3d, 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 0 2px rgba(31, 40, 38, 0.14), 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: width var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              height var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              margin var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              box-shadow 240ms ease,
+              background 240ms ease;
 }
-body.wsite-page-team .team-card--coord .team-card__avatar {
-  box-shadow: 0 0 0 3px #8fbf4d, 0 2px 6px rgba(0, 0, 0, 0.08);
+body.wsite-page-team .team-card:hover .team-card__avatar,
+body.wsite-page-team .team-card:focus-visible .team-card__avatar {
+  box-shadow: 0 0 0 3px rgba(var(--team-accent-rgb, 61, 139, 61), 0.24),
+              0 3px 9px rgba(0, 0, 0, 0.09);
 }
 body.wsite-page-team .team-card__avatar img {
   width: 100%;
@@ -1122,74 +1155,80 @@ body.wsite-page-team .team-card__avatar img {
   max-width: none !important;
   border-radius: 50%;
 }
+body.wsite-page-team .team-card__avatar picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 body.wsite-page-team .team-card__name {
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  color: #0f1a11 !important;
-  margin: 0 0 3px !important;
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-  line-height: 1.25 !important;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f1a11;
+  margin: 0 0 3px;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.25;
 }
 body.wsite-page-team .team-card__role {
-  font-size: 10.5px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  color: #3d8b3d !important;
-  margin: 0 0 4px !important;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6b7571;
+  margin: 0 0 4px;
 }
 body.wsite-page-team .team-card--coord .team-card__role {
-  color: #6b9b1f !important;
+  color: #6b7571;
 }
 body.wsite-page-team .team-card__role--muted {
-  color: #6b7571 !important;
+  color: #6b7571;
 }
 
-/* Specificity note: Weebly declares `#wsite-content p { font-size:16px !important }`
-   at spec (1,0,1) — we prefix our rules with #wsite-content to match that ID
-   selector and add the type qualifier (`p.team-card__bio`) for clean override.
+/* Card internals use scoped component classes, not Weebly paragraph/heading
+   elements, so the profile UI can stay independent from inherited editor
+   typography. */
 
-   Motion design: `font-size` stays CONSTANT at its natural value for each
-   element. The VISUAL growth/shrink is driven entirely by the card's
-   `transform: scale()` — so the text and the card scale as one single
-   transform operation and are mechanically in lockstep (no compounding of
-   two independent animations). Text REVEAL in the dormant → expanded
-   transition uses `max-height` + `opacity` on the same 2400ms curve so
-   the content fades in as the box grows. */
-
-body.wsite-page-team #wsite-content p.team-card__bio {
-  font-size: 14px !important;          /* constant — scales WITH the card */
-  line-height: 1.55 !important;
+body.wsite-page-team .team-card__bio {
+  font-size: 14px;
+  line-height: 1.55;
   color: #2a3330 !important;
   font-weight: 400 !important;
   overflow: hidden;
   text-align: left;
   width: 100%;
+  box-sizing: border-box;
+  border-left: 3px solid transparent;
+  border-radius: 0 6px 6px 0;
+  background: transparent;
+  padding: 0 0 0 12px;
   /* Dormant: collapsed + invisible */
   max-height: 0;
-  margin: 0 !important;
+  margin: 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: max-height var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
               margin var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
               opacity 240ms ease var(--team-bio-reveal-delay, 120ms),
+              background 240ms ease,
+              border-color 240ms ease,
               visibility 0s linear var(--team-motion-duration, 860ms);
 }
-body.wsite-page-team #wsite-content .team-card--expanded p.team-card__bio {
+body.wsite-page-team .team-card--expanded .team-card__bio {
   max-height: var(--expanded-bio-height, 30em);
-  margin: 16px 0 0 !important;
+  margin: 16px 0 0;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition-delay: 0s, 0s, var(--team-bio-reveal-delay, 120ms), 0s;
+  background: var(--team-accent-soft, rgba(61, 139, 61, 0.07));
+  border-left-color: var(--team-accent, #3d8b3d);
+  transition-delay: 0s, 0s, var(--team-bio-reveal-delay, 120ms), 0s, 0s, 0s;
 }
 
 /* Name + role — same technique; hidden in dormant, revealed with bio. */
-body.wsite-page-team #wsite-content h3.team-card__name,
-body.wsite-page-team #wsite-content p.team-card__role {
+body.wsite-page-team .team-card__name,
+body.wsite-page-team .team-card__role {
   max-height: none;
   opacity: 1;
   overflow: visible;
@@ -1200,14 +1239,14 @@ body.wsite-page-team #wsite-content p.team-card__role {
 /* Natural font sizes stay at their declared values (15px for name,
    11.5px for role) — those class selectors are defined earlier in this
    CSS block and continue to apply. */
-body.wsite-page-team #wsite-content .team-card--expanded h3.team-card__name {
+body.wsite-page-team .team-card--expanded .team-card__name {
   max-height: 3em;
-  margin: 0 0 4px !important;
+  margin: 0 0 4px;
   opacity: 1;
 }
-body.wsite-page-team #wsite-content .team-card--expanded p.team-card__role {
+body.wsite-page-team .team-card--expanded .team-card__role {
   max-height: 2em;
-  margin: 0 0 12px !important;
+  margin: 0 0 12px;
   opacity: 1;
 }
 
@@ -1289,6 +1328,13 @@ body.wsite-page-team .team-card__icon--pdf:hover {
 body.wsite-page-team .team-card__icon--email:hover {
   border-color: rgba(92, 120, 114, 0.7);
   color: #5c7872;
+}
+body.wsite-page-team .team-card--expanded .team-card__icon:hover,
+body.wsite-page-team .team-card--expanded .team-card__icon:focus-visible {
+  border-color: rgba(var(--team-accent-rgb, 61, 139, 61), 0.72);
+  color: var(--team-accent, #3d8b3d);
+  background: rgba(var(--team-accent-rgb, 61, 139, 61), 0.08);
+  box-shadow: 0 0 0 3px rgba(var(--team-accent-rgb, 61, 139, 61), 0.14);
 }
 
 /* Email hover-reveal tooltip (anti-scraper: no mailto, no raw address in href) */
@@ -1479,9 +1525,22 @@ body.wsite-page-team .team-card--expanded {
   z-index: 10;
   overflow: hidden;
   transform: none;
-  border-color: rgba(26, 77, 46, 0.45);
-  box-shadow: 0 10px 28px -16px rgba(26, 77, 46, 0.28),
-              0 0 0 1px rgba(61, 139, 61, 0.2);
+  background: var(--team-accent-soft, rgba(61, 139, 61, 0.07));
+  border-color: rgba(var(--team-accent-rgb, 61, 139, 61), 0.46);
+  border-left-color: var(--team-accent, #3d8b3d);
+  box-shadow: 0 14px 32px -18px rgba(var(--team-accent-rgb, 61, 139, 61), 0.34),
+              0 0 0 1px rgba(var(--team-accent-rgb, 61, 139, 61), 0.16);
+}
+body.wsite-page-team .team-card--expanded .team-card__avatar {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 12px;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(var(--team-accent-rgb, 61, 139, 61), 0.42),
+              0 8px 18px rgba(0, 0, 0, 0.12);
+}
+body.wsite-page-team .team-card--expanded .team-card__role {
+  color: var(--team-accent, #3d8b3d) !important;
 }
 body.wsite-page-team .team-grid--accordion-mode .team-card--expanded {
   height: auto;
@@ -1503,7 +1562,8 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 @media (prefers-reduced-motion: reduce) {
   body.wsite-page-team .team-grid,
   body.wsite-page-team .team-card,
-  body.wsite-page-team #wsite-content p.team-card__bio {
+  body.wsite-page-team .team-card__avatar,
+  body.wsite-page-team .team-card__bio {
     transition: none !important;
   }
 }

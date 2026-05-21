@@ -4,6 +4,30 @@ const MIN_SIBLING_TRACK = 112;
 const MIN_SQUARE_SIDE = 280;
 const ACCORDION_WIDTH = 560;
 const DORMANT_ROW_SIZE = 160;
+const BIO_THREAD_INLINE_INSET = 16;
+const INITIAL_EAGER_AVATARS = 12;
+const AVATAR_PRELOAD_MARGIN = '1600px 0px';
+
+const DEFAULT_ACCENT = '#3d8b3d';
+const TAG_ACCENTS = new Map([
+  ['coordinators', '#8fbf4d'],
+  ['in-memoriam', '#7b8c89'],
+  ['psychedelics', '#6f8f3d'],
+  ['dmt', '#2f8f83'],
+  ['near-death-experiences', '#7c5aa6'],
+  ['mystical-experiences', '#b68a35'],
+  ['meditation', '#4f8a7b'],
+  ['dreams-sleep', '#5b7fb8'],
+  ['anthropology', '#a66a4c'],
+  ['philosophy', '#6d6875'],
+  ['neuroscience', '#2f7d62'],
+  ['virtual-reality', '#4f6fb3'],
+  ['hallucinations', '#9a6aa8'],
+  ['psychiatry', '#8a6f3f'],
+  ['computation', '#4d7f91'],
+  ['interoception', '#b07156'],
+  ['art-science', '#9a7a3f']
+]);
 
 let pretext = null;
 let expandedCard = null;
@@ -12,6 +36,7 @@ let animationTimer = 0;
 let resizeFrame = 0;
 let layoutVersion = 0;
 const preparedCache = new WeakMap();
+const avatarDecodeCache = new WeakSet();
 
 function cssFontFor(element) {
   const style = getComputedStyle(element);
@@ -34,6 +59,26 @@ function lineHeightPx(element) {
 
 function trackList(value) {
   return String(value || '').split(/\s+/).filter((track) => track && track !== 'none');
+}
+
+function hexToRgb(hex) {
+  const match = String(hex || '').trim().match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
+  if (!match) return '61, 139, 61';
+  return match.slice(1).map((part) => Number.parseInt(part, 16)).join(', ');
+}
+
+function cardAccent(card) {
+  const tags = (card.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
+  const tag = tags.find((item) => TAG_ACCENTS.has(item));
+  return TAG_ACCENTS.get(tag) || DEFAULT_ACCENT;
+}
+
+function applyCardAccent(card) {
+  const accent = cardAccent(card);
+  const rgb = hexToRgb(accent);
+  card.style.setProperty('--team-accent', accent);
+  card.style.setProperty('--team-accent-rgb', rgb);
+  card.style.setProperty('--team-accent-soft', `rgba(${rgb}, 0.07)`);
 }
 
 function columnsFor(grid) {
@@ -102,6 +147,59 @@ function setBaseSize(grid, metrics = gridMetrics(grid)) {
   return metrics;
 }
 
+function runWhenIdle(callback) {
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(callback, { timeout: 900 });
+  } else {
+    window.setTimeout(callback, 80);
+  }
+}
+
+function prepareAvatarImage(img, priority = 'low') {
+  if (!img || avatarDecodeCache.has(img)) return;
+  avatarDecodeCache.add(img);
+
+  img.loading = 'eager';
+  img.decoding = 'async';
+  img.setAttribute('fetchpriority', priority);
+  if ('fetchPriority' in img) img.fetchPriority = priority;
+
+  runWhenIdle(() => {
+    if (img.decode) {
+      img.decode().catch(() => {});
+    }
+  });
+}
+
+function initAvatarPreloading(cards) {
+  const avatars = cards
+    .map((card) => card.querySelector('.team-card__avatar img'))
+    .filter(Boolean);
+  if (!avatars.length) return;
+
+  avatars.forEach((img, index) => {
+    img.decoding = 'async';
+    img.setAttribute('fetchpriority', index < INITIAL_EAGER_AVATARS ? 'high' : 'low');
+  });
+
+  avatars.slice(0, INITIAL_EAGER_AVATARS).forEach((img) => prepareAvatarImage(img, 'high'));
+
+  if (!('IntersectionObserver' in window)) {
+    runWhenIdle(() => avatars.slice(INITIAL_EAGER_AVATARS).forEach((img) => prepareAvatarImage(img)));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      observer.unobserve(entry.target);
+      prepareAvatarImage(entry.target);
+    });
+  }, { rootMargin: AVATAR_PRELOAD_MARGIN, threshold: 0 });
+
+  avatars.slice(INITIAL_EAGER_AVATARS).forEach((img) => observer.observe(img));
+}
+
 function syncIdleGrid(grid) {
   const metrics = setBaseSize(grid);
   grid.style.gridTemplateRows = rowTracks(rowCountFor(grid, metrics.columns), metrics.rowBase);
@@ -143,6 +241,9 @@ function measureWithDom(bio, width) {
     'left:-9999px',
     'top:0',
     `width:${width}px`,
+    'box-sizing:border-box',
+    'border-left:3px solid transparent',
+    'padding:0 0 0 12px',
     'max-height:none',
     'opacity:1',
     'display:block',
@@ -160,12 +261,14 @@ function bioHeightAtWidth(card, width) {
   const bio = card.querySelector('.team-card__bio');
   if (!bio) return 0;
   let pretextHeight = null;
+  const textWidth = Math.max(120, width - BIO_THREAD_INLINE_INSET);
   try {
-    pretextHeight = measureWithPretext(bio, width);
+    pretextHeight = measureWithPretext(bio, textWidth);
   } catch (error) {
     pretextHeight = null;
   }
-  return Math.ceil(Math.max(pretextHeight || 0, measureWithDom(bio, width)) + 2);
+  if (pretextHeight) return Math.ceil(pretextHeight + 2);
+  return Math.ceil(measureWithDom(bio, width) + 2);
 }
 
 function setBioHeight(card, outerWidth) {
@@ -402,10 +505,12 @@ async function init() {
   const cards = Array.from(document.querySelectorAll('.team-card'));
   if (!cards.length) return;
   cards.forEach((card) => {
+    applyCardAccent(card);
     card.tabIndex = 0;
     card.setAttribute('aria-expanded', 'false');
     setBioVisibility(card, false);
   });
+  initAvatarPreloading(cards);
   if (document.fonts && document.fonts.ready) {
     try { await document.fonts.ready; } catch (error) {}
   }
