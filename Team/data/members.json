@@ -617,7 +617,24 @@
       "computation",
       "art-science"
     ],
-    "links": []
+    "links": [
+      {
+        "type": "LinkedIn",
+        "href": "https://www.linkedin.com/in/france-lerner-52939a66"
+      },
+      {
+        "type": "Website",
+        "href": "https://www.francelerner.com"
+      },
+      {
+        "type": "ORCID",
+        "href": "https://orcid.org/0009-0000-1283-6612"
+      },
+      {
+        "type": "Email",
+        "href": "mailto:lerner.france@gmail.com"
+      }
+    ]
   },
   {
     "id": "member-michael-lifshitz",

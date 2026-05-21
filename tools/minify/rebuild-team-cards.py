@@ -73,8 +73,12 @@ EXTRA_MEMBERS = [
             "neurophenomenological analysis, and generative AI to reconstruct "
             "subjective experiences across altered states of consciousness."
         ),
-        "links": [],
-        "email": None,
+        "links": [
+            {"href": "https://www.linkedin.com/in/france-lerner-52939a66", "text": "LinkedIn"},
+            {"href": "https://www.francelerner.com", "text": "Website"},
+            {"href": "https://orcid.org/0009-0000-1283-6612", "text": "ORCID iD"},
+        ],
+        "email": "lerner.france@gmail.com",
     },
 ]
 
