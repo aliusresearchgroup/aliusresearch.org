@@ -521,6 +521,53 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__copy .bulletin-card__key
 body.wsite-page-bulletin #wsite-content .bulletin-card__copy .bulletin-card__keywords strong {
   color: #1a4d2e;
 }
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio {
+  align-items: center;
+  background: #f8faf8;
+  border: 1px solid #dbe4dc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  max-width: 720px;
+  padding: 9px 10px;
+  width: 100%;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio audio {
+  display: block;
+  flex: 1 1 260px;
+  height: 36px;
+  min-width: 180px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-download,
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-status {
+  align-items: center;
+  border: 1px solid #b8c9b4;
+  border-radius: 6px;
+  color: #3f6f25;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font: 700 12.5px/1 Raleway, Arial, sans-serif;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 10px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-download:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-download:focus {
+  background: #edf4ea;
+  color: #2f5e1e;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-status {
+  background: #fff;
+  border-color: #d5dfd6;
+  color: #65706a;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio--pending {
+  background: #fbfcfb;
+}
 body.wsite-page-bulletin #wsite-content .bulletin-card__links {
   display: flex;
   flex-wrap: wrap;
@@ -708,6 +755,18 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
   body.wsite-page-bulletin #wsite-content .bulletin-issue__embed iframe { height: 420px; }
   body.wsite-page-bulletin #wsite-content .bulletin-card__copy { padding: 14px 15px 16px; }
   body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe { min-height: 190px; }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio {
+    align-items: stretch;
+    display: grid;
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio audio {
+    min-width: 0;
+    width: 100%;
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio-download,
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio-status {
+    width: max-content;
+  }
 }
 </style>
 </head>
@@ -839,7 +898,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-full.pdf#view=FitH" title="ALIUS Bulletin Issue 7 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
-<article id="bulletin-froese-irruption" class="bulletin-card" data-tags="issue-07 tom-froese psychedelics">
+<article id="bulletin-froese-irruption" class="bulletin-card" data-tags="issue-07 tom-froese psychedelics" data-audio-src="/media/audio/bulletin/irruption-theory-tom-froese.mp3" data-audio-label="Audio for Tom Froese interview">
                 <header class="bulletin-card__header">
                   <h3>The irruption theory: How mind and matter meet along the route to consciousness</h3>
                   <p class="bulletin-card__people">Tom Froese, interviewed by Matthieu Koroma</p>
@@ -883,7 +942,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-full.pdf#view=FitH" title="ALIUS Bulletin Issue 6 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
-<article id="bulletin-ciaunica-early-sensory-life" class="bulletin-card" data-tags="issue-06 anna-ciaunica body-shifts">
+<article id="bulletin-ciaunica-early-sensory-life" class="bulletin-card" data-tags="issue-06 anna-ciaunica body-shifts" data-audio-src="/media/audio/bulletin/what-is-it-like-to-be-in-early-sensory-life-anna-ciaunica.mp3" data-audio-label="Audio for Anna Ciaunica interview">
                 <header class="bulletin-card__header">
                   <h3>What is it like to be in early sensory life?</h3>
                   <p class="bulletin-card__people">Anna Ciaunica, recorded by Daniel Friedman; edited by Lena Coutrot, Daniel Friedman and Matthieu Koroma</p>
@@ -899,7 +958,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-ciaunica-what-is-like-to-be-in-early-sensory-life.pdf" target="_blank" rel="noopener">Read PDF</a>
                 </div>
               </article>
-<article id="bulletin-jillings-weightlessness" class="bulletin-card" data-tags="issue-06 steven-jillings body-shifts">
+<article id="bulletin-jillings-weightlessness" class="bulletin-card" data-tags="issue-06 steven-jillings body-shifts" data-audio-src="/media/audio/bulletin/what-is-it-like-to-be-in-weightlessness-steven-jillings.mp3" data-audio-label="Audio for Steven Jillings interview">
                 <header class="bulletin-card__header">
                   <h3>What is it like to be in weightlessness?</h3>
                   <p class="bulletin-card__people">Steven Jillings, recorded by Daniel Friedman; edited by Lena Coutrot, Daniel Friedman and Matthieu Koroma</p>
@@ -919,7 +978,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightlessness.pdf" target="_blank" rel="noopener">Read PDF</a>
                 </div>
               </article>
-<article id="bulletin-koroma-asleep" class="bulletin-card" data-tags="issue-06 matthieu-koroma sleep">
+<article id="bulletin-koroma-asleep" class="bulletin-card" data-tags="issue-06 matthieu-koroma sleep" data-audio-src="/media/audio/bulletin/what-is-it-like-to-be-asleep-matthieu-koroma.mp3" data-audio-label="Audio for Matthieu Koroma interview">
                 <header class="bulletin-card__header">
                   <h3>What is it like to be asleep?</h3>
                   <p class="bulletin-card__people">Matthieu Koroma, recorded by Daniel Friedman; edited by Lena Coutrot, Daniel Friedman and Matthieu Koroma</p>
@@ -939,7 +998,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf" target="_blank" rel="noopener">Read PDF</a>
                 </div>
               </article>
-<article id="bulletin-gonzalez-interdisciplinary" class="bulletin-card" data-tags="issue-06 juan-gonzalez psychedelics">
+<article id="bulletin-gonzalez-interdisciplinary" class="bulletin-card" data-tags="issue-06 juan-gonzalez psychedelics" data-audio-src="/media/audio/bulletin/an-interdisciplinary-journey-into-consciousness-research-juan-gonzalez.mp3" data-audio-label="Audio for Juan Gonzalez interview">
                 <header class="bulletin-card__header">
                   <h3>An interdisciplinary journey into consciousness research</h3>
                   <p class="bulletin-card__people">Juan Gonzalez, interviewed by Matthieu Koroma</p>
@@ -1063,7 +1122,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<article id="bulletin-olson-yaden-therapeutic-effects" class="bulletin-card" data-tags="issue-05 david-olson david-yaden psychedelics">
+<article id="bulletin-olson-yaden-therapeutic-effects" class="bulletin-card" data-tags="issue-05 david-olson david-yaden psychedelics" data-audio-src="/media/audio/bulletin/subjective-effects-of-psychedelics-olson-yaden.mp3" data-audio-label="Audio for David Olson and David Yaden interview">
                 <header class="bulletin-card__header">
                   <h3 id="bulletin05-olsonyadeninterview">Are the Subjective Effects of Psychedelics Necessary for Their Enduring Therapeutic Effects?</h3>
                   <p class="bulletin-card__people">David E. Olson and David B. Yaden, hosted by George Fejer</p>
@@ -2119,6 +2178,57 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     }
   }
 
+  function mp3DownloadName(card) {
+    var title = nodeText(card.querySelector('h3')) || 'ALIUS Bulletin audio';
+    return slug(title) + '.mp3';
+  }
+
+  function enhanceAudioPlayers() {
+    cards.forEach(function(card) {
+      if (card.querySelector('.bulletin-card__audio')) return;
+
+      var src = card.getAttribute('data-audio-src') || '';
+      var title = nodeText(card.querySelector('h3'));
+      var label = card.getAttribute('data-audio-label') || 'Audio for ' + title;
+      var audioRow = document.createElement('div');
+      audioRow.className = 'bulletin-card__audio' + (src ? '' : ' bulletin-card__audio--pending');
+      audioRow.setAttribute('aria-label', label);
+
+      if (src) {
+        var audio = document.createElement('audio');
+        audio.controls = true;
+        audio.preload = 'metadata';
+        audio.setAttribute('aria-label', label);
+
+        var source = document.createElement('source');
+        source.src = src;
+        source.type = 'audio/mpeg';
+        audio.appendChild(source);
+
+        var download = document.createElement('a');
+        download.className = 'bulletin-card__audio-download';
+        download.href = src;
+        download.download = mp3DownloadName(card);
+        download.textContent = 'Download MP3';
+
+        audioRow.appendChild(audio);
+        audioRow.appendChild(download);
+      } else {
+        var status = document.createElement('span');
+        status.className = 'bulletin-card__audio-status';
+        status.textContent = 'Audio pending';
+        audioRow.appendChild(status);
+      }
+
+      var links = card.querySelector('.bulletin-card__links');
+      if (links) {
+        card.insertBefore(audioRow, links);
+      } else {
+        card.appendChild(audioRow);
+      }
+    });
+  }
+
   function enhanceCitationTools() {
     cards.forEach(function(card) {
       var links = card.querySelector('.bulletin-card__links');
@@ -2211,6 +2321,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
   }
 
   enhanceOrcidLinks();
+  enhanceAudioPlayers();
   enhanceCitationTools();
 
   Array.prototype.slice.call(document.querySelectorAll('.bulletin-issue__embed')).forEach(function(details) {
