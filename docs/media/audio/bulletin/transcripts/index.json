@@ -1,0 +1,200 @@
+{
+  "bulletin-froese-irruption": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-froese-irruption.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-froese-irruption.txt",
+    "unit_count": 8,
+    "source_interview_id": "Issue07/Froese_Koroma"
+  },
+  "bulletin-gonzalez-interdisciplinary": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-gonzalez-interdisciplinary.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-gonzalez-interdisciplinary.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue06/Gonzalez_Koroma"
+  },
+  "bulletin-sapolsky-free-will": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-sapolsky-free-will.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-sapolsky-free-will.txt",
+    "unit_count": 13,
+    "source_interview_id": "Issue06/Sapolsky_Mikhailova_Friedman"
+  },
+  "bulletin-doss-cinco-sins": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-doss-cinco-sins.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-doss-cinco-sins.txt",
+    "unit_count": 14,
+    "source_interview_id": "Issue06/Doss_Fejer"
+  },
+  "bulletin-skipper-language": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-skipper-language.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-skipper-language.txt",
+    "unit_count": 19,
+    "source_interview_id": "Issue06/Skipper_Roseman_Koroma_Fejer"
+  },
+  "bulletin-canna-seligman-culture": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-canna-seligman-culture.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-canna-seligman-culture.txt",
+    "unit_count": 6,
+    "source_interview_id": "Issue05/Canna_Seligman_Koroma"
+  },
+  "bulletin-chadha-indian-philosophy": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-chadha-indian-philosophy.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-chadha-indian-philosophy.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue05/Chadha_Aviles_Koroma"
+  },
+  "bulletin-olson-yaden-therapeutic-effects": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-olson-yaden-therapeutic-effects.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-olson-yaden-therapeutic-effects.txt",
+    "unit_count": 10,
+    "source_interview_id": "Issue05/Olson_Yaden_Fejer"
+  },
+  "bulletin-schmidt-phenomenoconnectomics": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-schmidt-phenomenoconnectomics.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-schmidt-phenomenoconnectomics.txt",
+    "unit_count": 9,
+    "source_interview_id": "Issue05/Schmidt_Fejer"
+  },
+  "bulletin-baird-lucid-dreaming": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-baird-lucid-dreaming.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-baird-lucid-dreaming.txt",
+    "unit_count": 8,
+    "source_interview_id": "Issue04/Baird_Koroma"
+  },
+  "bulletin-carter-dimensions": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-carter-dimensions.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-carter-dimensions.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue04/Carter_Preller"
+  },
+  "bulletin-gosseries-disorders": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-gosseries-disorders.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-gosseries-disorders.txt",
+    "unit_count": 9,
+    "source_interview_id": "Issue04/Gosseries_Martial"
+  },
+  "bulletin-hanks-decision-making": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-hanks-decision-making.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-hanks-decision-making.txt",
+    "unit_count": 7,
+    "source_interview_id": "Issue04/Hanks_Mikhailova_Friedman"
+  },
+  "bulletin-lenggenhager-bodily-self": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-lenggenhager-bodily-self.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-lenggenhager-bodily-self.txt",
+    "unit_count": 16,
+    "source_interview_id": "Issue04/Lenggenhager_Ho_Milliere"
+  },
+  "bulletin-vignemont-body-self": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-vignemont-body-self.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-vignemont-body-self.txt",
+    "unit_count": 16,
+    "source_interview_id": "Issue04/Vignemont_Milliere_Serrahima"
+  },
+  "bulletin-bayne-natural-phenomenon": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-bayne-natural-phenomenon.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-bayne-natural-phenomenon.txt",
+    "unit_count": 10,
+    "source_interview_id": "Issue03/Bayne_Bucci_Koroma"
+  },
+  "bulletin-dennett-explained": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-dennett-explained.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-dennett-explained.txt",
+    "unit_count": 17,
+    "source_interview_id": "Issue03/Dennett_Fleig-Goldstein_Friedman"
+  },
+  "bulletin-dienes-hypnosis-meditation": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-dienes-hypnosis-meditation.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-dienes-hypnosis-meditation.txt",
+    "unit_count": 4,
+    "source_interview_id": "Issue03/Dienes_Martin"
+  },
+  "bulletin-preller-sociality": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-preller-sociality.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-preller-sociality.txt",
+    "unit_count": 9,
+    "source_interview_id": "Issue03/Preller_Dumas"
+  },
+  "bulletin-winkelman-neuroanthropology": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-winkelman-neuroanthropology.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-winkelman-neuroanthropology.txt",
+    "unit_count": 21,
+    "source_interview_id": "Issue03/Winkelman_Fortier"
+  },
+  "bulletin-fox-spontaneous-thinking": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-fox-spontaneous-thinking.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-fox-spontaneous-thinking.txt",
+    "unit_count": 11,
+    "source_interview_id": "Issue02/Fox_Koroma"
+  },
+  "bulletin-friston-woodlice": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-friston-woodlice.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-friston-woodlice.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue02/Friston_Fortier_Friedman"
+  },
+  "bulletin-metzinger-self-models": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-metzinger-self-models.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-metzinger-self-models.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue02/Metzinger_Limanowski_Milliere"
+  },
+  "bulletin-david-nichols-pharmacology": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-david-nichols-pharmacology.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-david-nichols-pharmacology.txt",
+    "unit_count": 19,
+    "source_interview_id": "Issue02/Nichols_Roseman_Timmermann"
+  },
+  "bulletin-oregan-sensorimotor": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-oregan-sensorimotor.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-oregan-sensorimotor.txt",
+    "unit_count": 9,
+    "source_interview_id": "Issue02/ORegan_Erickson-Davis"
+  },
+  "bulletin-ratcliffe-hallucinations": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-ratcliffe-hallucinations.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-ratcliffe-hallucinations.txt",
+    "unit_count": 5,
+    "source_interview_id": "Issue02/Ratcliffe_Frerejouan"
+  },
+  "bulletin-taves-religious-experience": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-taves-religious-experience.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-taves-religious-experience.txt",
+    "unit_count": 10,
+    "source_interview_id": "Issue02/Taves_Fortier_Canna"
+  },
+  "bulletin-carhart-harris-psychedelics": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-carhart-harris-psychedelics.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-carhart-harris-psychedelics.txt",
+    "unit_count": 19,
+    "source_interview_id": "Issue01/Carhart-Harris_Fortier_Milliere"
+  },
+  "bulletin-hohwy-conscious-modes": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-hohwy-conscious-modes.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-hohwy-conscious-modes.txt",
+    "unit_count": 10,
+    "source_interview_id": "Issue01/Hohwy_Koroma"
+  },
+  "bulletin-luhrmann-anthropology-mind": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-luhrmann-anthropology-mind.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-luhrmann-anthropology-mind.txt",
+    "unit_count": 6,
+    "source_interview_id": "Issue01/Luhrmann_Fortier"
+  },
+  "bulletin-mccarthy-jones-voice-hearing": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-mccarthy-jones-voice-hearing.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-mccarthy-jones-voice-hearing.txt",
+    "unit_count": 5,
+    "source_interview_id": "Issue01/McCarthy-Jones_Frerejouan"
+  },
+  "bulletin-seligman-dissociative": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-seligman-dissociative.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-seligman-dissociative.txt",
+    "unit_count": 5,
+    "source_interview_id": "Issue01/Seligman_Halloy"
+  },
+  "bulletin-windt-dreams": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-windt-dreams.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-windt-dreams.txt",
+    "unit_count": 8,
+    "source_interview_id": "Issue01/Windt_Bucci_Milliere"
+  }
+}
