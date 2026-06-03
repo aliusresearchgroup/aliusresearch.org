@@ -76,80 +76,177 @@
       "answer": "It is tempting to think of modes of consciousness as different overall ways of minimizing prediction error in a brain in a certain situation. That is, the brain may minimize prediction error at different rates, and may realize the same rate of prediction error minimization in different ways, and the overall rate of prediction error minimization may be reflected in the current mode. This perspective would matter because it ties different modes together under one theoretical umbrella, having the potential to explain why such different states, when explained in terms of content and functionality dimensions, all have in common that they are modes of consciousness. Of course, with this comes a rather speculative notion that the state of consciousness is determined by the overall rate of prediction error minimization: if you minimize too little, or too much, at any given time and relative to a model, then you lose consciousness. Don’t ask me to justify this theory just yet though!"
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue01/Hohwy_Koroma/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue01/Hohwy_Koroma/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue01/Hohwy_Koroma/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue01/Hohwy_Koroma/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 10,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 120000,
-      "duration_ms": 120000,
-      "title": "Q&A 001: Could you first explain how you have come in your academic career to adopt a..."
+      "end_ms": 136894,
+      "duration_ms": 136894,
+      "title": "Q&A 001: Could you first explain how you have come in your academic career to adopt a st..."
     },
     {
       "unit": 2,
-      "start_ms": 120900,
-      "end_ms": 181800,
-      "duration_ms": 60900,
-      "title": "Q&A 002: Could you please describe briefly the concept of a \"mode of consciousness\" and how..."
+      "start_ms": 136894,
+      "end_ms": 216300,
+      "duration_ms": 79406,
+      "title": "Q&A 002: Could you please describe briefly the concept of a “mode of consciousness” and..."
     },
     {
       "unit": 3,
-      "start_ms": 182700,
-      "end_ms": 243275,
-      "duration_ms": 60575,
-      "title": "Q&A 003: You describe modes of consciousness as global states of consciousness being..."
+      "start_ms": 216300,
+      "end_ms": 292832,
+      "duration_ms": 76532,
+      "title": "Q&A 003: You describe modes of consciousness as global states of consciousness being mut..."
     },
     {
       "unit": 4,
-      "start_ms": 244175,
-      "end_ms": 315250,
-      "duration_ms": 71075,
+      "start_ms": 292832,
+      "end_ms": 388406,
+      "duration_ms": 95574,
       "title": "Q&A 004: Following the previous question, functionally, it appears that for example some..."
     },
     {
       "unit": 5,
-      "start_ms": 316150,
-      "end_ms": 431125,
-      "duration_ms": 114975,
-      "title": "Q&A 005: You describe a criterion for defining modes as \"something to be like in, from a..."
+      "start_ms": 388406,
+      "end_ms": 526738,
+      "duration_ms": 138332,
+      "title": "Q&A 005: You describe a criterion for defining modes as “something to be like in, from a..."
     },
     {
       "unit": 6,
-      "start_ms": 432025,
-      "end_ms": 472550,
-      "duration_ms": 40525,
-      "title": "Q&A 006: How would a multidimensional account tackle the apparition of entirely new..."
+      "start_ms": 526738,
+      "end_ms": 575962,
+      "duration_ms": 49224,
+      "title": "Q&A 006: How would a multidimensional account tackle the apparition of entirely new abil..."
     },
     {
       "unit": 7,
-      "start_ms": 473450,
-      "end_ms": 519275,
-      "duration_ms": 45825,
-      "title": "Q&A 007: Following the previous question, I wonder then if all conscious states share the..."
+      "start_ms": 575962,
+      "end_ms": 629857,
+      "duration_ms": 53895,
+      "title": "Q&A 007: Following the previous question, I wonder then if all conscious states share th..."
     },
     {
       "unit": 8,
-      "start_ms": 520175,
-      "end_ms": 601425,
-      "duration_ms": 81250,
-      "title": "Q&A 008: The diversity of modes suggests that consciousness could be realized in a multiple..."
+      "start_ms": 629857,
+      "end_ms": 716808,
+      "duration_ms": 86951,
+      "title": "Q&A 008: The diversity of modes suggests that consciousness could be realized in a multi..."
     },
     {
       "unit": 9,
-      "start_ms": 602325,
-      "end_ms": 664350,
-      "duration_ms": 62025,
-      "title": "Q&A 009: Do you think that a multidimensional account of consciousness would benefit from..."
+      "start_ms": 716808,
+      "end_ms": 788310,
+      "duration_ms": 71502,
+      "title": "Q&A 009: Do you think that a multidimensional account of consciousness would benefit fro..."
     },
     {
       "unit": 10,
-      "start_ms": 665250,
-      "end_ms": 741075,
-      "duration_ms": 75825,
-      "title": "Q&A 010: The frameworks of Predictive Coding and Bayesianism have been successful in..."
+      "start_ms": 788310,
+      "end_ms": 872746,
+      "duration_ms": 84436,
+      "title": "Q&A 010: The frameworks of Predictive Coding and Bayesianism have been successful in exp..."
     }
-  ]
+  ],
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue01/Hohwy_Koroma/interview_manifest.json",
+  "audio_duration_seconds": 872.746,
+  "audio_sha256": "F57C3D0E4A5AFF8667DDD956B67B383607765FB4B328310A19E30008E562E4F6",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128013,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": "engaged",
+  "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.744",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    }
+  ],
+  "asr_spotcheck_result": "passed",
+  "audio_chapters_url": "/media/audio/bulletin/voice-clone/Issue01/Hohwy_Koroma/interview_chapters.json",
+  "source_engine": "F5TTS_v1_Base"
 }
