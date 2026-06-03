@@ -1,0 +1,3042 @@
+{
+  "bulletin-froese-irruption": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-froese-irruption.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-froese-irruption.txt",
+    "unit_count": 8,
+    "source_interview_id": "Issue07/Froese_Koroma",
+    "audio": "/media/audio/bulletin/kokoro/Issue07/Froese_Koroma/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue07/Froese_Koroma/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 8,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 73800,
+        "duration_ms": 73800,
+        "title": "Q&A 001: With your team, the Embodied Cognitive Science Unit at the Okinawa Institute of..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 74700,
+        "end_ms": 188125,
+        "duration_ms": 113425,
+        "title": "Q&A 002: You recently introduced the irruption theory as a principled account of motivated..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 189025,
+        "end_ms": 290975,
+        "duration_ms": 101950,
+        "title": "Q&A 003: What could distinguish consciousness from other natural processes?"
+      },
+      {
+        "unit": 4,
+        "start_ms": 291875,
+        "end_ms": 483600,
+        "duration_ms": 191725,
+        "title": "Q&A 004: What would a signature of consciousness in the material world look like according..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 484500,
+        "end_ms": 570700,
+        "duration_ms": 86200,
+        "title": "Q&A 005: Bjorn Brembs is a researcher at Freie Universitt Berlin that works on free will in..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 571600,
+        "end_ms": 677050,
+        "duration_ms": 105450,
+        "title": "Q&A 006: Could we be able to capture moments when consciousness and the mind would make a..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 677950,
+        "end_ms": 748175,
+        "duration_ms": 70225,
+        "title": "Q&A 007: Can the study of altered states of consciousness be informative about the..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 749075,
+        "end_ms": 809650,
+        "duration_ms": 60575,
+        "title": "Q&A 008: Can this interplay between agency and consciousness as conceptualized in the..."
+      }
+    ]
+  },
+  "bulletin-changeux-molecular-social": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-changeux-molecular-social.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-changeux-molecular-social.txt",
+    "unit_count": 13,
+    "source_interview_id": "Issue07/Changeux_Dumas",
+    "audio": "/media/audio/bulletin/kokoro/Issue07/Changeux_Dumas/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue07/Changeux_Dumas/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 13,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 133400,
+        "duration_ms": 133400,
+        "title": "Q&A 001: Your work has significantly influenced our understanding of the neural..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 134300,
+        "end_ms": 272125,
+        "duration_ms": 137825,
+        "title": "Q&A 002: Throughout your career, what discoveries or insights have most altered your own..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 273025,
+        "end_ms": 368625,
+        "duration_ms": 95600,
+        "title": "Q&A 003: In your opinion, how do psychoactive substances modulate neuronal networks, and..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 369525,
+        "end_ms": 565175,
+        "duration_ms": 195650,
+        "title": "Q&A 004: Could you elaborate on the neurobiological mechanisms that you believe are most..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 566075,
+        "end_ms": 729475,
+        "duration_ms": 163400,
+        "title": "Q&A 005: Considering your extensive research in neuropharmacology, what ethical..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 730375,
+        "end_ms": 846525,
+        "duration_ms": 116150,
+        "title": "Q&A 006: In light of your collaboration with artists and your work on the neural mechanisms..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 847425,
+        "end_ms": 990100,
+        "duration_ms": 142675,
+        "title": "Q&A 007: Generative neural networks have been increasingly used in artistic production...."
+      },
+      {
+        "unit": 8,
+        "start_ms": 991000,
+        "end_ms": 1105150,
+        "duration_ms": 114150,
+        "title": "Q&A 008: How do you perceive the role of artificial intelligence and machine learning in..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1106050,
+        "end_ms": 1185375,
+        "duration_ms": 79325,
+        "title": "Q&A 009: In light of your groundbreaking work on the neural foundations of individual..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 1186275,
+        "end_ms": 1217275,
+        "duration_ms": 31000,
+        "title": "Q&A 010: Considering this social dimension, does the idea of collective consciousness..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 1218175,
+        "end_ms": 1297100,
+        "duration_ms": 78925,
+        "title": "Q&A 011: What do you think are the most promising areas for future research in altered..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 1298000,
+        "end_ms": 1445075,
+        "duration_ms": 147075,
+        "title": "Q&A 012: You have often advocated for interdisciplinary approaches in neuroscience. How do..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 1445975,
+        "end_ms": 1507425,
+        "duration_ms": 61450,
+        "title": "Q&A 013: What advice would you give to young scientists embarking on research in the..."
+      }
+    ]
+  },
+  "bulletin-gonzalez-interdisciplinary": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-gonzalez-interdisciplinary.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-gonzalez-interdisciplinary.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue06/Gonzalez_Koroma",
+    "audio": "/media/audio/bulletin/kokoro/Issue06/Gonzalez_Koroma/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue06/Gonzalez_Koroma/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 12,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 251925,
+        "duration_ms": 251925,
+        "title": "Q&A 001: Thanks a lot Juan for accep ting this interview together. I would like first to..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 252825,
+        "end_ms": 378450,
+        "duration_ms": 125625,
+        "title": "Q&A 002: So do you think that some of the early objec tives of ALIUS, for instance, to..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 379350,
+        "end_ms": 605150,
+        "duration_ms": 225800,
+        "title": "Q&A 003: The idea behind ALIUS is indeed to open the study of modified states of..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 606050,
+        "end_ms": 791375,
+        "duration_ms": 185325,
+        "title": "Q&A 004: I think that it is one of the ambi tions of Mar tin and other people of ALIUS to..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 792275,
+        "end_ms": 904475,
+        "duration_ms": 112200,
+        "title": "Q&A 005: Jumping back to this idea that we enter language-games, I wanted to discuss about..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 905375,
+        "end_ms": 963125,
+        "duration_ms": 57750,
+        "title": "Q&A 006: How can psychedelics then inform on the neurobiological and sociological..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 964025,
+        "end_ms": 1234400,
+        "duration_ms": 270375,
+        "title": "Q&A 007: ALIUS has always had the posi tion to stay away from the legal aspects of modified..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1235300,
+        "end_ms": 1347200,
+        "duration_ms": 111900,
+        "title": "Q&A 008: Do you think then that more connec tions between consciousness science and other..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1348100,
+        "end_ms": 1503675,
+        "duration_ms": 155575,
+        "title": "Q&A 009: Do you think that there are some methodological aspects here that are specific to..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 1504575,
+        "end_ms": 1555800,
+        "duration_ms": 51225,
+        "title": "Q&A 010: What about the notion of sentience?"
+      },
+      {
+        "unit": 11,
+        "start_ms": 1556700,
+        "end_ms": 1637550,
+        "duration_ms": 80850,
+        "title": "Q&A 011: There is another case of conceptual confusion that I am curious about. When we..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 1638450,
+        "end_ms": 1735250,
+        "duration_ms": 96800,
+        "title": "Q&A 012: Do you think interdisciplinarity is especially important for a research topic like..."
+      }
+    ]
+  },
+  "bulletin-sapolsky-free-will": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-sapolsky-free-will.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-sapolsky-free-will.txt",
+    "unit_count": 13,
+    "source_interview_id": "Issue06/Sapolsky_Mikhailova_Friedman",
+    "audio": "/media/audio/bulletin/kokoro/Issue06/Sapolsky_Mikhailova_Friedman/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue06/Sapolsky_Mikhailova_Friedman/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 13,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 187450,
+        "duration_ms": 187450,
+        "title": "Q&A 001: In your career you have worked across areas: doing empirical field and laboratory..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 188350,
+        "end_ms": 308000,
+        "duration_ms": 119650,
+        "title": "Q&A 002: Soon you will be publishing a new book, Determined: The Science of Life Without..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 308900,
+        "end_ms": 374450,
+        "duration_ms": 65550,
+        "title": "Q&A 003: What does free will feel like? Or, what would/could it feel like?"
+      },
+      {
+        "unit": 4,
+        "start_ms": 375350,
+        "end_ms": 405300,
+        "duration_ms": 29950,
+        "title": "Q&A 004: Why do people many of them quite honestly feel that they have free will?"
+      },
+      {
+        "unit": 5,
+        "start_ms": 406200,
+        "end_ms": 504650,
+        "duration_ms": 98450,
+        "title": "Q&A 005: The cognitive stances we take can be associated with real differences in personal..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 505550,
+        "end_ms": 555000,
+        "duration_ms": 49450,
+        "title": "Q&A 006: In work such as the 1971 book Beyond Freedom and Dignity and Walden Two, B.F...."
+      },
+      {
+        "unit": 7,
+        "start_ms": 555900,
+        "end_ms": 609000,
+        "duration_ms": 53100,
+        "title": "Q&A 007: What generates the conscious flow of aware experiences that we have? In addressing..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 609900,
+        "end_ms": 769975,
+        "duration_ms": 160075,
+        "title": "Q&A 008: In a 2004 article \"The Frontal Cortex and the Criminal Justice System\", you..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 770875,
+        "end_ms": 816225,
+        "duration_ms": 45350,
+        "title": "Q&A 009: In the same 2004 article, you explored some of the ways in which neuroscience and..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 817125,
+        "end_ms": 889475,
+        "duration_ms": 72350,
+        "title": "Q&A 010: Beyond the areas of law and justice: what does education look like in a world..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 890375,
+        "end_ms": 933900,
+        "duration_ms": 43525,
+        "title": "Q&A 011: Struggles with mental health, sense-making, and cognitive deterioration are..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 934800,
+        "end_ms": 971525,
+        "duration_ms": 36725,
+        "title": "Q&A 012: After Determined, What are the immediate next steps, and deeper directions, for..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 972425,
+        "end_ms": 1044300,
+        "duration_ms": 71875,
+        "title": "Q&A 013: The scientific landscape is changing for researchers in all positions, reflecting..."
+      }
+    ]
+  },
+  "bulletin-doss-cinco-sins": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-doss-cinco-sins.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-doss-cinco-sins.txt",
+    "unit_count": 14,
+    "source_interview_id": "Issue06/Doss_Fejer",
+    "audio": "/media/audio/bulletin/kokoro/Issue06/Doss_Fejer/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue06/Doss_Fejer/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 14,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 58075,
+        "duration_ms": 58075,
+        "title": "Q&A 001: Hello Manoj, thank you for taking the time to do this interview. I wanted to use..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 58975,
+        "end_ms": 247450,
+        "duration_ms": 188475,
+        "title": "Q&A 002: Can you give an example of the type of research questions that motivate you in..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 248350,
+        "end_ms": 412225,
+        "duration_ms": 163875,
+        "title": "Q&A 003: Is there something particularly insightful about using drug interventions in the..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 413125,
+        "end_ms": 675425,
+        "duration_ms": 262300,
+        "title": "Q&A 004: Thank you for sharing this history. Following up on my previous question, could..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 676325,
+        "end_ms": 808450,
+        "duration_ms": 132125,
+        "title": "Q&A 005: Could we entertain the opposite idea, the possibility that having personal..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 809350,
+        "end_ms": 1008575,
+        "duration_ms": 199225,
+        "title": "Q&A 006: For many people, the value of their psychedelic experiences lies more in the deep..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 1009475,
+        "end_ms": 1199725,
+        "duration_ms": 190250,
+        "title": "Q&A 007: What is your take on more ambitious frameworks like the relaxed beliefs under..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1200625,
+        "end_ms": 1491675,
+        "duration_ms": 291050,
+        "title": "Q&A 008: Before the REBUS model was introduced, Vollenweider and Geyer had already proposed..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1492575,
+        "end_ms": 1656200,
+        "duration_ms": 163625,
+        "title": "Q&A 009: Can you outline your main critique of studies aiming to establish a link between..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 1657100,
+        "end_ms": 1764825,
+        "duration_ms": 107725,
+        "title": "Q&A 010: Has the enthusiasm for the Default Mode Network, DMN, in psychedelic research..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 1765725,
+        "end_ms": 1948275,
+        "duration_ms": 182550,
+        "title": "Q&A 011: How do you respond to the argument that resting-state assessments provide a more..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 1949175,
+        "end_ms": 1997575,
+        "duration_ms": 48400,
+        "title": "Q&A 012: How do you view the use of experience sampling methods during resting-state to..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 1998475,
+        "end_ms": 2109550,
+        "duration_ms": 111075,
+        "title": "Q&A 013: Your critique of psychedelic research appears to focus on skepticism towards..."
+      },
+      {
+        "unit": 14,
+        "start_ms": 2110450,
+        "end_ms": 2461350,
+        "duration_ms": 350900,
+        "title": "Q&A 014: I will aim to provide a diplomatic answer to that question. Although I largely..."
+      }
+    ]
+  },
+  "bulletin-skipper-language": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-skipper-language.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-skipper-language.txt",
+    "unit_count": 19,
+    "source_interview_id": "Issue06/Skipper_Roseman_Koroma_Fejer",
+    "audio": "/media/audio/bulletin/kokoro/Issue06/Skipper_Roseman_Koroma_Fejer/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue06/Skipper_Roseman_Koroma_Fejer/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 19,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 282000,
+        "duration_ms": 282000,
+        "title": "Q&A 001: Hello Jeremy. As a specialist in the neurobiology of language, your research..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 282900,
+        "end_ms": 322425,
+        "duration_ms": 39525,
+        "title": "Q&A 002: I heard a rumor that you used to give talks barefoot. Is that true?"
+      },
+      {
+        "unit": 3,
+        "start_ms": 323325,
+        "end_ms": 409825,
+        "duration_ms": 86500,
+        "title": "Q&A 003: Has that weirdness manifested in your research and work as a scientist as well?"
+      },
+      {
+        "unit": 4,
+        "start_ms": 410725,
+        "end_ms": 686475,
+        "duration_ms": 275750,
+        "title": "Q&A 004: What findings did you make from the perspective of context dependency of language..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 687375,
+        "end_ms": 822250,
+        "duration_ms": 134875,
+        "title": "Q&A 005: If that is the case, then how do we know what these networks' functions are?"
+      },
+      {
+        "unit": 6,
+        "start_ms": 823150,
+        "end_ms": 1037800,
+        "duration_ms": 214650,
+        "title": "Q&A 006: What about language lateralization? Can it be tested reliably, for instance with fMRI?"
+      },
+      {
+        "unit": 7,
+        "start_ms": 1038700,
+        "end_ms": 1167875,
+        "duration_ms": 129175,
+        "title": "Q&A 007: Are you planning to test those ideas of laterality with Wada tests and psychedelics?"
+      },
+      {
+        "unit": 8,
+        "start_ms": 1168775,
+        "end_ms": 1436350,
+        "duration_ms": 267575,
+        "title": "Q&A 008: How has the perspective on the relationship between language and consciousness..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1437250,
+        "end_ms": 1461825,
+        "duration_ms": 24575,
+        "title": "Q&A 009: There were mirror self-recognition tests conducted on feral people?"
+      },
+      {
+        "unit": 10,
+        "start_ms": 1462725,
+        "end_ms": 1683550,
+        "duration_ms": 220825,
+        "title": "Q&A 010: So then, even if you, let's say, do something that reduces your language, you're..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 1684450,
+        "end_ms": 1790850,
+        "duration_ms": 106400,
+        "title": "Q&A 011: What is your understanding of inner speech and how does it relate to both..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 1791750,
+        "end_ms": 1837275,
+        "duration_ms": 45525,
+        "title": "Q&A 012: How do you see the difference between the narrative self and the images associated..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 1838175,
+        "end_ms": 1977800,
+        "duration_ms": 139625,
+        "title": "Q&A 013: What are the objectives of your research and how do you conceptualize the..."
+      },
+      {
+        "unit": 14,
+        "start_ms": 1978700,
+        "end_ms": 2108350,
+        "duration_ms": 129650,
+        "title": "Q&A 014: You drew a lot of compelling parallels between aphasia and the psychedelic..."
+      },
+      {
+        "unit": 15,
+        "start_ms": 2109250,
+        "end_ms": 2183975,
+        "duration_ms": 74725,
+        "title": "Q&A 015: Your understanding of language is this kind of complex dependency. Some..."
+      },
+      {
+        "unit": 16,
+        "start_ms": 2184875,
+        "end_ms": 2249825,
+        "duration_ms": 64950,
+        "title": "Q&A 016: Do you think that people under psychedelics experience a specific type of..."
+      },
+      {
+        "unit": 17,
+        "start_ms": 2250725,
+        "end_ms": 2357425,
+        "duration_ms": 106700,
+        "title": "Q&A 017: Let's talk about ineffability. There are a lot of times in a psychedelic..."
+      },
+      {
+        "unit": 18,
+        "start_ms": 2358325,
+        "end_ms": 2557975,
+        "duration_ms": 199650,
+        "title": "Q&A 018: We spoke about the effects of psychedelics on language in terms of disability, now..."
+      },
+      {
+        "unit": 19,
+        "start_ms": 2558875,
+        "end_ms": 2699775,
+        "duration_ms": 140900,
+        "title": "Q&A 019: Anne Taves discusses ascription and attribution as key processes in understanding..."
+      }
+    ]
+  },
+  "bulletin-canna-seligman-culture": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-canna-seligman-culture.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-canna-seligman-culture.txt",
+    "unit_count": 6,
+    "source_interview_id": "Issue05/Canna_Seligman_Koroma",
+    "audio": "/media/audio/bulletin/kokoro/Issue05/Canna_Seligman_Koroma/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue05/Canna_Seligman_Koroma/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 6,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 193400,
+        "duration_ms": 193400,
+        "title": "Q&A 001: Dr. Maddalena Canna is a Postdoctoral researcher at Northwestern University and..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 194300,
+        "end_ms": 513500,
+        "duration_ms": 319200,
+        "title": "Q&A 002: In your collaboration, you propose to explore how body-mind relationships are..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 514400,
+        "end_ms": 883125,
+        "duration_ms": 368725,
+        "title": "Q&A 003: You argued that, in the case of Alice, her symptoms could arise from an enhanced..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 884025,
+        "end_ms": 1178600,
+        "duration_ms": 294575,
+        "title": "Q&A 004: You introduce the notion of \"self-scape\" to describe the set of possibilities that..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 1179500,
+        "end_ms": 1442650,
+        "duration_ms": 263150,
+        "title": "Q&A 005: You argued that \"although the three dimensions that we presented, the embodiment..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 1443550,
+        "end_ms": 1857200,
+        "duration_ms": 413650,
+        "title": "Q&A 006: The stigma surrounding mental diseases and its internalization by patients plays a..."
+      }
+    ]
+  },
+  "bulletin-chadha-indian-philosophy": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-chadha-indian-philosophy.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-chadha-indian-philosophy.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue05/Chadha_Aviles_Koroma",
+    "audio": "/media/audio/bulletin/kokoro/Issue05/Chadha_Aviles_Koroma/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue05/Chadha_Aviles_Koroma/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 12,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 49200,
+        "duration_ms": 49200,
+        "title": "Q&A 001: You are an Associate Professor in Philosophy at Monash University. In your..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 50100,
+        "end_ms": 141650,
+        "duration_ms": 91550,
+        "title": "Q&A 002: An important concern for a lot of traditions in Indian philosophy, both Astika and..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 142550,
+        "end_ms": 219150,
+        "duration_ms": 76600,
+        "title": "Q&A 003: Since the 90's there has been a rising interest in the neuroscience of..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 220050,
+        "end_ms": 338100,
+        "duration_ms": 118050,
+        "title": "Q&A 004: A lot of people would agree with the claim that phenomenology makes life worth..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 339000,
+        "end_ms": 423200,
+        "duration_ms": 84200,
+        "title": "Q&A 005: Current debates on consciousness tackle the possibility that consciousness is an..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 424100,
+        "end_ms": 510750,
+        "duration_ms": 86650,
+        "title": "Q&A 006: One of the most important doctrines in the Upanishads and the Advaita Vedanta is..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 511650,
+        "end_ms": 661125,
+        "duration_ms": 149475,
+        "title": "Q&A 007: You recently explained how Abhidharma Buddhism had a panprotopsychist account of..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 662025,
+        "end_ms": 726250,
+        "duration_ms": 64225,
+        "title": "Q&A 008: Both neuroscientists and philosophers recognize the role of introspection and..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 727150,
+        "end_ms": 860275,
+        "duration_ms": 133125,
+        "title": "Q&A 009: The practice of meditation, dhyana, is pervasive among the Indian philosophical..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 861175,
+        "end_ms": 950625,
+        "duration_ms": 89450,
+        "title": "Q&A 010: In the Buddhist traditions, the notion of no-self has both metaphysical and..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 951525,
+        "end_ms": 1037625,
+        "duration_ms": 86100,
+        "title": "Q&A 011: The Abhidharma -Buddhist metaphysics of persons has some important similarities to..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 1038525,
+        "end_ms": 1096325,
+        "duration_ms": 57800,
+        "title": "Q&A 012: ALIUS is most interested in the diversity of consciousness. This involves both..."
+      }
+    ]
+  },
+  "bulletin-olson-yaden-therapeutic-effects": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-olson-yaden-therapeutic-effects.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-olson-yaden-therapeutic-effects.txt",
+    "unit_count": 10,
+    "source_interview_id": "Issue05/Olson_Yaden_Fejer",
+    "audio": "/media/audio/bulletin/kokoro/Issue05/Olson_Yaden_Fejer/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue05/Olson_Yaden_Fejer/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 10,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 162525,
+        "duration_ms": 162525,
+        "title": "Q&A 001: Although you are addressing two sides of the same coin, your back-to-back..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 163425,
+        "end_ms": 315475,
+        "duration_ms": 152050,
+        "title": "Q&A 002: Would you treat these two phenomena of 'the subjective' and 'the neurobiological'..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 316375,
+        "end_ms": 480650,
+        "duration_ms": 164275,
+        "title": "Q&A 003: One aspect of the article that many people in the psychedelic community appraised..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 481550,
+        "end_ms": 634450,
+        "duration_ms": 152900,
+        "title": "Q&A 004: From a clinical standpoint, there are certainly some patients for whom the..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 635350,
+        "end_ms": 773800,
+        "duration_ms": 138450,
+        "title": "Q&A 005: Do you think that psychedelics should be implemented as a first-line treatment for..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 774700,
+        "end_ms": 1019775,
+        "duration_ms": 245075,
+        "title": "Q&A 006: A major criticism regarding the therapeutic benefits attributed to the subjective..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 1020675,
+        "end_ms": 1190175,
+        "duration_ms": 169500,
+        "title": "Q&A 007: It is also interesting to note that the antidepressant efficacy of ketamine has a..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1191075,
+        "end_ms": 1276550,
+        "duration_ms": 85475,
+        "title": "Q&A 008: Psychedelics strongly rely on what has been termed the meaning response, which..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1277450,
+        "end_ms": 1384400,
+        "duration_ms": 106950,
+        "title": "Q&A 009: Do you think that microdosing, that is, using psychedelics on an intermittent..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 1385300,
+        "end_ms": 1492725,
+        "duration_ms": 107425,
+        "title": "Q&A 010: Thank you very much for your time. Do you have any concluding remarks?"
+      }
+    ]
+  },
+  "bulletin-schmidt-phenomenoconnectomics": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-schmidt-phenomenoconnectomics.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-schmidt-phenomenoconnectomics.txt",
+    "unit_count": 9,
+    "source_interview_id": "Issue05/Schmidt_Fejer",
+    "audio": "/media/audio/bulletin/kokoro/Issue05/Schmidt_Fejer/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue05/Schmidt_Fejer/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 9,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 236900,
+        "duration_ms": 236900,
+        "title": "Q&A 001: The Altered States Database is by far the most ambitious attempt to systematically..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 237800,
+        "end_ms": 283325,
+        "duration_ms": 45525,
+        "title": "Q&A 002: It must have been a lot of effort to compile this database! Are you still actively..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 284225,
+        "end_ms": 344175,
+        "duration_ms": 59950,
+        "title": "Q&A 003: Befitting of the lengthy effort, you designated this paradigm with the lengthy..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 345075,
+        "end_ms": 596475,
+        "duration_ms": 251400,
+        "title": "Q&A 004: What are the main advantages of using pharmacological versus non pharmacological..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 597375,
+        "end_ms": 775600,
+        "duration_ms": 178225,
+        "title": "Q&A 005: Your previous work investigated ASCs via the Ganzfeld induction method. This is a..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 776500,
+        "end_ms": 953075,
+        "duration_ms": 176575,
+        "title": "Q&A 006: From a conceptual standpoint, what do you think about the construct validity of..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 953975,
+        "end_ms": 1150550,
+        "duration_ms": 196575,
+        "title": "Q&A 007: A key assumption of your approach, as well as Dittrich's, is that ASCs have..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1151450,
+        "end_ms": 1340725,
+        "duration_ms": 189275,
+        "title": "Q&A 008: The utility of the database also seems dependent on the amount of data covering..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1341625,
+        "end_ms": 1396000,
+        "duration_ms": 54375,
+        "title": "Q&A 009: Could you reflect on some of the negative risks of psychedelics and why the..."
+      }
+    ]
+  },
+  "bulletin-baird-lucid-dreaming": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-baird-lucid-dreaming.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-baird-lucid-dreaming.txt",
+    "unit_count": 8,
+    "source_interview_id": "Issue04/Baird_Koroma",
+    "audio": "/media/audio/bulletin/kokoro/Issue04/Baird_Koroma/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue04/Baird_Koroma/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 8,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 97675,
+        "duration_ms": 97675,
+        "title": "Q&A 001: You hold a PhD in cognitive neuroscience and currently are a postdoctoral research..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 98575,
+        "end_ms": 291000,
+        "duration_ms": 192425,
+        "title": "Q&A 002: Dreaming and mind wandering have been proposed to rely on similar mechanisms to..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 291900,
+        "end_ms": 470125,
+        "duration_ms": 178225,
+        "title": "Q&A 003: Lucid dreaming is defined as a kind of dream during which dreamers are aware that..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 471025,
+        "end_ms": 583175,
+        "duration_ms": 112150,
+        "title": "Q&A 004: Extending the approach of LaBerge, several labs around the world recently..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 584075,
+        "end_ms": 806350,
+        "duration_ms": 222275,
+        "title": "Q&A 005: Lucid dreaming differs from dreaming in terms of metacognition, the cognitive..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 807250,
+        "end_ms": 942550,
+        "duration_ms": 135300,
+        "title": "Q&A 006: For inexperienced lucid dreamers, dream reports reveal that it is difficult to..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 943450,
+        "end_ms": 1127100,
+        "duration_ms": 183650,
+        "title": "Q&A 007: Sleep represents an interesting case for consciousness research since it consists..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1128000,
+        "end_ms": 1324400,
+        "duration_ms": 196400,
+        "title": "Q&A 008: On a final note, mind-wandering has been reported for accounting about 50% of our..."
+      }
+    ]
+  },
+  "bulletin-carter-dimensions": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-carter-dimensions.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-carter-dimensions.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue04/Carter_Preller",
+    "audio": "/media/audio/bulletin/kokoro/Issue04/Carter_Preller/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue04/Carter_Preller/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 12,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 56400,
+        "duration_ms": 56400,
+        "title": "Q&A 001: You are a psychologist and neuroscientist. How did you get interested in studying..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 57300,
+        "end_ms": 157175,
+        "duration_ms": 99875,
+        "title": "Q&A 002: A lot of your work is focusing on visual perception. What can we learn from the..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 158075,
+        "end_ms": 200025,
+        "duration_ms": 41950,
+        "title": "Q&A 003: to 2004, you worked in Zurich and conducted experiments with psilocybin. Why did..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 200925,
+        "end_ms": 241750,
+        "duration_ms": 40825,
+        "title": "Q&A 004: What did you learn from studying psychedelics?"
+      },
+      {
+        "unit": 5,
+        "start_ms": 242650,
+        "end_ms": 324475,
+        "duration_ms": 81825,
+        "title": "Q&A 005: Psychedelics are currently being tested in the treatment of various psychiatric..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 325375,
+        "end_ms": 403700,
+        "duration_ms": 78325,
+        "title": "Q&A 006: Your recent article received a lot of attention. Here, you argue against..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 404600,
+        "end_ms": 466350,
+        "duration_ms": 61750,
+        "title": "Q&A 007: In your article, you therefore argue that the psychedelic state cannot be..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 467250,
+        "end_ms": 538500,
+        "duration_ms": 71250,
+        "title": "Q&A 008: Do you think that a state in which consciousness is increased on all dimensions..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 539400,
+        "end_ms": 608550,
+        "duration_ms": 69150,
+        "title": "Q&A 009: On your webpage, one of the questions you are asking is \"What are the factors that..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 609450,
+        "end_ms": 662800,
+        "duration_ms": 53350,
+        "title": "Q&A 010: In another recent article you ask a different but somewhat related question: \"What..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 663700,
+        "end_ms": 686400,
+        "duration_ms": 22700,
+        "title": "Q&A 011: Speaking of the future, in which direction does the field need to move to make..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 687300,
+        "end_ms": 743550,
+        "duration_ms": 56250,
+        "title": "Q&A 012: Do you have a recommendation for young researchers who want to study consciousness?"
+      }
+    ]
+  },
+  "bulletin-gosseries-disorders": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-gosseries-disorders.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-gosseries-disorders.txt",
+    "unit_count": 9,
+    "source_interview_id": "Issue04/Gosseries_Martial",
+    "audio": "/media/audio/bulletin/kokoro/Issue04/Gosseries_Martial/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue04/Gosseries_Martial/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 9,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 173425,
+        "duration_ms": 173425,
+        "title": "Q&A 001: You are well known for your impressive work on disorders of consciousness, DOC,..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 174325,
+        "end_ms": 489575,
+        "duration_ms": 315250,
+        "title": "Q&A 002: Recently, you published a review in 'The Lancet Neurology' highlighting the rarity..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 490475,
+        "end_ms": 648050,
+        "duration_ms": 157575,
+        "title": "Q&A 003: Scott and Carhart-Harris published a paper discussing the potential capacity of..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 648950,
+        "end_ms": 717800,
+        "duration_ms": 68850,
+        "title": "Q&A 004: Since then, have you heard some of your colleagues from the DOC field discussing..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 718700,
+        "end_ms": 929025,
+        "duration_ms": 210325,
+        "title": "Q&A 005: What do you think about it now? Do you think the neurocognitive mechanisms..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 929925,
+        "end_ms": 1089525,
+        "duration_ms": 159600,
+        "title": "Q&A 006: While there is currently no effective treatment, there are some promising..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 1090425,
+        "end_ms": 1195650,
+        "duration_ms": 105225,
+        "title": "Q&A 007: According to you, what are the two most important challenges inherent in the..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1196550,
+        "end_ms": 1239175,
+        "duration_ms": 42625,
+        "title": "Q&A 008: At the University Hospital of Lige, you are in frequent contact with the families..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1240075,
+        "end_ms": 1356400,
+        "duration_ms": 116325,
+        "title": "Q&A 009: Next to your interest in DOC, you have recently published an article about..."
+      }
+    ]
+  },
+  "bulletin-hanks-decision-making": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-hanks-decision-making.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-hanks-decision-making.txt",
+    "unit_count": 7,
+    "source_interview_id": "Issue04/Hanks_Mikhailova_Friedman",
+    "audio": "/media/audio/bulletin/kokoro/Issue04/Hanks_Mikhailova_Friedman/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue04/Hanks_Mikhailova_Friedman/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 7,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 120775,
+        "duration_ms": 120775,
+        "title": "Q&A 001: To quote your book chapter from 'Neurobiology of Decision Making': \"Thus looking..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 121675,
+        "end_ms": 343025,
+        "duration_ms": 221350,
+        "title": "Q&A 002: What neural events might distinguish the awareness of a decision from ones made..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 343925,
+        "end_ms": 550200,
+        "duration_ms": 206275,
+        "title": "Q&A 003: Your work on the speed vs. accuracy trade-off in the brains of macaques was..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 551100,
+        "end_ms": 730650,
+        "duration_ms": 179550,
+        "title": "Q&A 004: finessing the trade-off between false-positives and false-negatives. The article..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 731550,
+        "end_ms": 831550,
+        "duration_ms": 100000,
+        "title": "Q&A 005: Although it would stand to reason that the dynamics of the environment dictate the..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 832450,
+        "end_ms": 1003450,
+        "duration_ms": 171000,
+        "title": "Q&A 006: Disease states can influence evidence accumulation, resulting in too much or too..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 1004350,
+        "end_ms": 1146775,
+        "duration_ms": 142425,
+        "title": "Q&A 007: What is the minimal number of neurons required to 'make a decision'? More..."
+      }
+    ]
+  },
+  "bulletin-lenggenhager-bodily-self": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-lenggenhager-bodily-self.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-lenggenhager-bodily-self.txt",
+    "unit_count": 16,
+    "source_interview_id": "Issue04/Lenggenhager_Ho_Milliere",
+    "audio": "/media/audio/bulletin/kokoro/Issue04/Lenggenhager_Ho_Milliere/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue04/Lenggenhager_Ho_Milliere/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 16,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 109925,
+        "duration_ms": 109925,
+        "title": "Q&A 001: What sparked your interest in bodily self-consciousness? What types of questions..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 110825,
+        "end_ms": 198850,
+        "duration_ms": 88025,
+        "title": "Q&A 002: There are many disorders of bodily self-consciousness. Is there a specific..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 199750,
+        "end_ms": 301950,
+        "duration_ms": 102200,
+        "title": "Q&A 003: you published the first experimental study investigating the so-called full-body..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 302850,
+        "end_ms": 418650,
+        "duration_ms": 115800,
+        "title": "Q&A 004: \"Unfortunately, the question of whether or not there are full-body illusions is..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 419550,
+        "end_ms": 739650,
+        "duration_ms": 320100,
+        "title": "Q&A 005: The rubber hand illusion represents the pioneering and most widely used..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 740550,
+        "end_ms": 842325,
+        "duration_ms": 101775,
+        "title": "Q&A 006: To follow up on the points above, the rubber hand illusion is classically..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 843225,
+        "end_ms": 1041550,
+        "duration_ms": 198325,
+        "title": "Q&A 007: a, \"the feeling from where 'I' experience the world around me\"., b, \"the point..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1042450,
+        "end_ms": 1231400,
+        "duration_ms": 188950,
+        "title": "Q&A 008: The first notion seems equivalent to one of the two notions of 1PP discussed in..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1232300,
+        "end_ms": 1355700,
+        "duration_ms": 123400,
+        "title": "Q&A 009: Although the topic surrounding the self-awareness of animals remains beset with a..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 1356600,
+        "end_ms": 1465900,
+        "duration_ms": 109300,
+        "title": "Q&A 010: however, one may retain a sense of agency, self-location, and first-person..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 1466800,
+        "end_ms": 1570475,
+        "duration_ms": 103675,
+        "title": "Q&A 011: remove before the sense of, bodily, self-consciousness is lost? Along these lines,..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 1571375,
+        "end_ms": 1704650,
+        "duration_ms": 133275,
+        "title": "Q&A 012: Several clinical trials using psychedelic substances have evinced impressive and..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 1705550,
+        "end_ms": 1834625,
+        "duration_ms": 129075,
+        "title": "Q&A 013: With a potentially increasing recognition of embodiment in the convergence of..."
+      },
+      {
+        "unit": 14,
+        "start_ms": 1835525,
+        "end_ms": 1984250,
+        "duration_ms": 148725,
+        "title": "Q&A 014: There are a number of technical specifications of virtual reality systems that..."
+      },
+      {
+        "unit": 15,
+        "start_ms": 1985150,
+        "end_ms": 2053325,
+        "duration_ms": 68175,
+        "title": "Q&A 015: If ethics, technology, and finances were no concern, what would be your dream..."
+      },
+      {
+        "unit": 16,
+        "start_ms": 2054225,
+        "end_ms": 2097450,
+        "duration_ms": 43225,
+        "title": "Q&A 016: With the rapid advancement of technology, what types of questions do you..."
+      }
+    ]
+  },
+  "bulletin-vignemont-body-self": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-vignemont-body-self.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-vignemont-body-self.txt",
+    "unit_count": 16,
+    "source_interview_id": "Issue04/Vignemont_Milliere_Serrahima",
+    "audio": "/media/audio/bulletin/kokoro/Issue04/Vignemont_Milliere_Serrahima/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue04/Vignemont_Milliere_Serrahima/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 16,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 101425,
+        "duration_ms": 101425,
+        "title": "Q&A 001: as their own. What motivated you to work on bodily awareness, and on bodily..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 102325,
+        "end_ms": 290650,
+        "duration_ms": 188325,
+        "title": "Q&A 002: Philosophers' concerns about self-consciousness have classically covered further..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 291550,
+        "end_ms": 492000,
+        "duration_ms": 200450,
+        "title": "Q&A 003: One of the main distinctive features of your approach is its substantive reliance..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 492900,
+        "end_ms": 589925,
+        "duration_ms": 97025,
+        "title": "Q&A 004: And the other way around: in your experience of collaboration with neuroscientists..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 590825,
+        "end_ms": 873325,
+        "duration_ms": 282500,
+        "title": "Q&A 005: phenomenology in the asynchronous condition. If this hypothesis is true, then the..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 874225,
+        "end_ms": 1033500,
+        "duration_ms": 159275,
+        "title": "Q&A 006: in the affected limb have a different determinate phenomenology from healthy..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 1034400,
+        "end_ms": 1152600,
+        "duration_ms": 118200,
+        "title": "Q&A 007: found a substantial relationship between trait hypnotisability and both implicit,..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1153500,
+        "end_ms": 1392800,
+        "duration_ms": 239300,
+        "title": "Q&A 008: front of oneself, you suggest that one's visual experience represent the tree as..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1393700,
+        "end_ms": 1549350,
+        "duration_ms": 155650,
+        "title": "Q&A 009: To understand the pull of this objection, it might be helpful to say something..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 1550250,
+        "end_ms": 1743175,
+        "duration_ms": 192925,
+        "title": "Q&A 010: In the debate over the existence of a phenomenology of bodily ownership, at least..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 1744075,
+        "end_ms": 1831425,
+        "duration_ms": 87350,
+        "title": "Q&A 011: In your view, pain and touch play complementary roles in the development of the..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 1832325,
+        "end_ms": 1972375,
+        "duration_ms": 140050,
+        "title": "Q&A 012: Your description of how touch contributes to bodily ownership follows Mike..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 1973275,
+        "end_ms": 2114225,
+        "duration_ms": 140950,
+        "title": "Q&A 013: In your paper \"The first person in pain\", you write the following: \"I would like..."
+      },
+      {
+        "unit": 14,
+        "start_ms": 2115125,
+        "end_ms": 2268675,
+        "duration_ms": 153550,
+        "title": "Q&A 014: One topic you have worked extensively on is the nature and cognitive underpinnings..."
+      },
+      {
+        "unit": 15,
+        "start_ms": 2269575,
+        "end_ms": 2399250,
+        "duration_ms": 129675,
+        "title": "Q&A 015: In a recent talk at the cole Normale Suprieure, entitled \"Keeping the world at..."
+      },
+      {
+        "unit": 16,
+        "start_ms": 2400150,
+        "end_ms": 2499125,
+        "duration_ms": 98975,
+        "title": "Q&A 016: What do you think will be hot topics in the philosophical and empirical literature..."
+      }
+    ]
+  },
+  "bulletin-bayne-natural-phenomenon": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-bayne-natural-phenomenon.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-bayne-natural-phenomenon.txt",
+    "unit_count": 10,
+    "source_interview_id": "Issue03/Bayne_Bucci_Koroma",
+    "audio": "/media/audio/bulletin/kokoro/Issue03/Bayne_Bucci_Koroma/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue03/Bayne_Bucci_Koroma/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 10,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 102100,
+        "duration_ms": 102100,
+        "title": "Q&A 001: Consciousness remains one of the most puzzling phenomena for both philosophers and..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 103000,
+        "end_ms": 229725,
+        "duration_ms": 126725,
+        "title": "Q&A 002: In \"Modes of Consciousness\", modes of consciousness are defined as global states..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 230625,
+        "end_ms": 373825,
+        "duration_ms": 143200,
+        "title": "Q&A 003: You proposed multi-dimensional modeling as a tool for the study of consciousness..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 374725,
+        "end_ms": 483400,
+        "duration_ms": 108675,
+        "title": "Q&A 004: In a recent article, you argued that the scope of conscious phenomena covered by..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 484300,
+        "end_ms": 637275,
+        "duration_ms": 152975,
+        "title": "Q&A 005: In a recent article, you argued against the characterization of psychedelic states..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 638175,
+        "end_ms": 699750,
+        "duration_ms": 61575,
+        "title": "Q&A 006: Your article on psychedelics fits within the growing trend of research that has..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 700650,
+        "end_ms": 758225,
+        "duration_ms": 57575,
+        "title": "Q&A 007: Some recent theoretical papers focused on empirical studies suggest that through..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 759125,
+        "end_ms": 856650,
+        "duration_ms": 97525,
+        "title": "Q&A 008: The multiple metaphysical options on the nature of consciousness discussed in..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 857550,
+        "end_ms": 950700,
+        "duration_ms": 93150,
+        "title": "Q&A 009: Different strategies in consciousness science can be distinguished according to..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 951600,
+        "end_ms": 1031950,
+        "duration_ms": 80350,
+        "title": "Q&A 010: You developed a substantial body of work on consciousness that identifies key..."
+      }
+    ]
+  },
+  "bulletin-dennett-explained": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-dennett-explained.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-dennett-explained.txt",
+    "unit_count": 17,
+    "source_interview_id": "Issue03/Dennett_Fleig-Goldstein_Friedman",
+    "audio": "/media/audio/bulletin/kokoro/Issue03/Dennett_Fleig-Goldstein_Friedman/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue03/Dennett_Fleig-Goldstein_Friedman/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 17,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 84625,
+        "duration_ms": 84625,
+        "title": "Q&A 001: Your published works, and interviews, span volumes and fields, conveying complex..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 85525,
+        "end_ms": 145675,
+        "duration_ms": 60150,
+        "title": "Q&A 002: If you were to \"start it all over\" as a young person with the same mindset in..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 146575,
+        "end_ms": 171250,
+        "duration_ms": 24675,
+        "title": "Q&A 003: Second, today, what do you see as the biggest disagreement that you have with..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 172150,
+        "end_ms": 224400,
+        "duration_ms": 52250,
+        "title": "Q&A 004: In what ways do you feel you changed Quine's mind throughout his career?"
+      },
+      {
+        "unit": 5,
+        "start_ms": 225300,
+        "end_ms": 354425,
+        "duration_ms": 129125,
+        "title": "Q&A 005: Your early career was characterized by the fact that you took the time to learn..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 355325,
+        "end_ms": 433875,
+        "duration_ms": 78550,
+        "title": "Q&A 006: Second, a perennial question in philosophy of science is whether or not..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 434775,
+        "end_ms": 585700,
+        "duration_ms": 150925,
+        "title": "Q&A 007: Recently Carhart-Harris and Friston integrated psychiatry with predictive..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 586600,
+        "end_ms": 611650,
+        "duration_ms": 25050,
+        "title": "Q&A 008: Has the intellectual deficit spending of the psychoanalysts been paid off to some..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 612550,
+        "end_ms": 693575,
+        "duration_ms": 81025,
+        "title": "Q&A 009: Consider content in the brain that has not achieved much cerebral celebrity, but..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 694475,
+        "end_ms": 717800,
+        "duration_ms": 23325,
+        "title": "Q&A 010: Neurological recording/stimulation devices and human-computer interfaces are..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 718700,
+        "end_ms": 820750,
+        "duration_ms": 102050,
+        "title": "Q&A 011: If you could design your dream empirical experiment in order to test some aspect..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 821650,
+        "end_ms": 942050,
+        "duration_ms": 120400,
+        "title": "Q&A 012: The idea of \"affordances\", the idea that organism's perceive possible interactions..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 942950,
+        "end_ms": 1174925,
+        "duration_ms": 231975,
+        "title": "Q&A 013: If philosophers of mind discuss psychedelics, which they rarely do, they often..."
+      },
+      {
+        "unit": 14,
+        "start_ms": 1175825,
+        "end_ms": 1351800,
+        "duration_ms": 175975,
+        "title": "Q&A 014: Since psychedelics were made illegal in 1966, much of psychedelic research has..."
+      },
+      {
+        "unit": 15,
+        "start_ms": 1352700,
+        "end_ms": 1536300,
+        "duration_ms": 183600,
+        "title": "Q&A 015: You have said that we should teach children about religion, and in fact all of the..."
+      },
+      {
+        "unit": 16,
+        "start_ms": 1537200,
+        "end_ms": 1657350,
+        "duration_ms": 120150,
+        "title": "Q&A 016: What would you like your stance on Plato to be remembered as? Or, what did Plato..."
+      },
+      {
+        "unit": 17,
+        "start_ms": 1658250,
+        "end_ms": 1727650,
+        "duration_ms": 69400,
+        "title": "Q&A 017: Genomic and paleological analyses suggest that New World monkeys split off from..."
+      }
+    ]
+  },
+  "bulletin-dienes-hypnosis-meditation": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-dienes-hypnosis-meditation.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-dienes-hypnosis-meditation.txt",
+    "unit_count": 4,
+    "source_interview_id": "Issue03/Dienes_Martin",
+    "audio": "/media/audio/bulletin/kokoro/Issue03/Dienes_Martin/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue03/Dienes_Martin/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 4,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 275675,
+        "duration_ms": 275675,
+        "title": "Q&A 001: Why are hypnosis and mindfulness interesting topics for the study of consciousness?"
+      },
+      {
+        "unit": 2,
+        "start_ms": 276575,
+        "end_ms": 550700,
+        "duration_ms": 274125,
+        "title": "Q&A 002: Do you think that the notion of altered state of consciousness is a useful notion..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 551600,
+        "end_ms": 797275,
+        "duration_ms": 245675,
+        "title": "Q&A 003: Do we have an idea of the neurocognitive mechanisms sustaining the action of..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 798175,
+        "end_ms": 984250,
+        "duration_ms": 186075,
+        "title": "Q&A 004: Hypnosis is a well-established method as a psychotherapeutic and analgesic method,..."
+      }
+    ]
+  },
+  "bulletin-preller-sociality": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-preller-sociality.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-preller-sociality.txt",
+    "unit_count": 9,
+    "source_interview_id": "Issue03/Preller_Dumas",
+    "audio": "/media/audio/bulletin/kokoro/Issue03/Preller_Dumas/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue03/Preller_Dumas/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 9,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 60875,
+        "duration_ms": 60875,
+        "title": "Q&A 001: Can you introduce yourself and explain what brought you to psychedelic research?"
+      },
+      {
+        "unit": 2,
+        "start_ms": 61775,
+        "end_ms": 195900,
+        "duration_ms": 134125,
+        "title": "Q&A 002: What can psychedelic research bring to our understanding of the basic mechanisms..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 196800,
+        "end_ms": 338375,
+        "duration_ms": 141575,
+        "title": "Q&A 003: How can we better operationalize translational efforts in psychiatry?"
+      },
+      {
+        "unit": 4,
+        "start_ms": 339275,
+        "end_ms": 400275,
+        "duration_ms": 61000,
+        "title": "Q&A 004: Both social neuroscience and psychedelic research are facing methodological..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 401175,
+        "end_ms": 468775,
+        "duration_ms": 67600,
+        "title": "Q&A 005: Right now, it seems like some people as well as funding agencies think that..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 469675,
+        "end_ms": 576075,
+        "duration_ms": 106400,
+        "title": "Q&A 006: There is a current debate between the teams of Vollenweider and Carhart-Harris..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 576975,
+        "end_ms": 591475,
+        "duration_ms": 14500,
+        "title": "Q&A 007: Which theoretical frameworks are you the most following on the topic of consciousness?"
+      },
+      {
+        "unit": 8,
+        "start_ms": 592375,
+        "end_ms": 735150,
+        "duration_ms": 142775,
+        "title": "Q&A 008: This is a very reasonable and pragmatic perspective! You recently published a..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 736050,
+        "end_ms": 763275,
+        "duration_ms": 27225,
+        "title": "Q&A 009: What could be the most important challenges for future research?"
+      }
+    ]
+  },
+  "bulletin-winkelman-neuroanthropology": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-winkelman-neuroanthropology.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-winkelman-neuroanthropology.txt",
+    "unit_count": 21,
+    "source_interview_id": "Issue03/Winkelman_Fortier",
+    "audio": "/media/audio/bulletin/kokoro/Issue03/Winkelman_Fortier/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue03/Winkelman_Fortier/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 21,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 80075,
+        "duration_ms": 80075,
+        "title": "Q&A 001: Your work is very multidisciplinary and spans several fields. What was your..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 80975,
+        "end_ms": 376100,
+        "duration_ms": 295125,
+        "title": "Q&A 002: Most of your research work tackles topics in neuroanthropology. Importantly, the..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 377000,
+        "end_ms": 666950,
+        "duration_ms": 289950,
+        "title": "Q&A 003: A good example of your biogenetic structuralist take on various cultural phenomena..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 667850,
+        "end_ms": 882700,
+        "duration_ms": 214850,
+        "title": "Q&A 004: According to you, shamanic concepts such as the belief in a \"traveling soul\" or in..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 883600,
+        "end_ms": 1262950,
+        "duration_ms": 379350,
+        "title": "Q&A 005: When you discuss the belief in soul flight the output of the modules you are..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 1263850,
+        "end_ms": 1574950,
+        "duration_ms": 311100,
+        "title": "Q&A 006: It is not entirely clear to me what the explanatory gain is to resort to psycho..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 1575850,
+        "end_ms": 1816675,
+        "duration_ms": 240825,
+        "title": "Q&A 007: If cultural phenomena studied by anthropologists, for example, animistic and..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1817575,
+        "end_ms": 2141325,
+        "duration_ms": 323750,
+        "title": "Q&A 008: You have been a pioneer in using databases to address big anthropological..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 2142225,
+        "end_ms": 2538400,
+        "duration_ms": 396175,
+        "title": "Q&A 009: The Cognitive Science of Religion is one of the most ambitious programs of..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 2539300,
+        "end_ms": 2840200,
+        "duration_ms": 300900,
+        "title": "Q&A 010: In your work, you often argue that religious practices and institutions are deeply..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 2841100,
+        "end_ms": 3166050,
+        "duration_ms": 324950,
+        "title": "Q&A 011: It is not entirely clear to me whether you endorse a pluralist or unified account..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 3166950,
+        "end_ms": 3332275,
+        "duration_ms": 165325,
+        "title": "Q&A 012: Before going further, it might be useful to dwell a bit longer on your definition..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 3333175,
+        "end_ms": 3622100,
+        "duration_ms": 288925,
+        "title": "Q&A 013: It seems that the remarks just made about the dreaming mode of consciousness could..."
+      },
+      {
+        "unit": 14,
+        "start_ms": 3623000,
+        "end_ms": 4382800,
+        "duration_ms": 759800,
+        "title": "Q&A 014: The reason why you call the integrative mode of consciousness integrative is that..."
+      },
+      {
+        "unit": 15,
+        "start_ms": 4383700,
+        "end_ms": 4632100,
+        "duration_ms": 248400,
+        "title": "Q&A 015: Regardless of the question of knowing which electrophysiological rhythm underlies..."
+      },
+      {
+        "unit": 16,
+        "start_ms": 4633000,
+        "end_ms": 4769250,
+        "duration_ms": 136250,
+        "title": "Q&A 016: There is arguably another reason for thinking that psychedelics are not genuine..."
+      },
+      {
+        "unit": 17,
+        "start_ms": 4770150,
+        "end_ms": 5043175,
+        "duration_ms": 273025,
+        "title": "Q&A 017: You have endorsed a strong perennialist approach in your work on the contents of..."
+      },
+      {
+        "unit": 18,
+        "start_ms": 5044075,
+        "end_ms": 5863150,
+        "duration_ms": 819075,
+        "title": "Q&A 018: Let me now turn to the second question: what is the actual evidence for..."
+      },
+      {
+        "unit": 19,
+        "start_ms": 5864050,
+        "end_ms": 5951675,
+        "duration_ms": 87625,
+        "title": "Q&A 019: Much of your research conducted in the last two decades was dedicated to the study..."
+      },
+      {
+        "unit": 20,
+        "start_ms": 5952575,
+        "end_ms": 6381475,
+        "duration_ms": 428900,
+        "title": "Q&A 020: It is often assumed that hallucinogenic use is very ancient and widespread cross..."
+      },
+      {
+        "unit": 21,
+        "start_ms": 6382375,
+        "end_ms": 6482350,
+        "duration_ms": 99975,
+        "title": "Q&A 021: Some scientists study altered states of consciousness in a purely theoretical..."
+      }
+    ]
+  },
+  "bulletin-fox-spontaneous-thinking": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-fox-spontaneous-thinking.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-fox-spontaneous-thinking.txt",
+    "unit_count": 11,
+    "source_interview_id": "Issue02/Fox_Koroma",
+    "audio": "/media/audio/bulletin/kokoro/Issue02/Fox_Koroma/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue02/Fox_Koroma/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 11,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 58125,
+        "duration_ms": 58125,
+        "title": "Q&A 001: What has triggered your scientific interest in the study of mind-wandering and..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 59025,
+        "end_ms": 143950,
+        "duration_ms": 84925,
+        "title": "Q&A 002: Mind-wandering has been the focus of recent research with a diversity of..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 144850,
+        "end_ms": 256775,
+        "duration_ms": 111925,
+        "title": "Q&A 003: Is mind-wandering necessarily a conscious phenomenon or can there be a..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 257675,
+        "end_ms": 340125,
+        "duration_ms": 82450,
+        "title": "Q&A 004: If you consider mind-wandering as a conscious phenomenon, would you consider..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 341025,
+        "end_ms": 464900,
+        "duration_ms": 123875,
+        "title": "Q&A 005: According to work from you and your colleagues, the difference between..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 465800,
+        "end_ms": 598100,
+        "duration_ms": 132300,
+        "title": "Q&A 006: In a recent article that you co-authored, mind-wandering is characterized within..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 599000,
+        "end_ms": 747600,
+        "duration_ms": 148600,
+        "title": "Q&A 007: Mindfulness meditation is a practice based on the careful observation of the train..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 748500,
+        "end_ms": 929350,
+        "duration_ms": 180850,
+        "title": "Q&A 008: Since mind-wandering typically consists in a drift of task-focused cognition..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 930250,
+        "end_ms": 1117950,
+        "duration_ms": 187700,
+        "title": "Q&A 009: How is the study of mind-wandering informative regarding clinical conditions like..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 1118850,
+        "end_ms": 1273250,
+        "duration_ms": 154400,
+        "title": "Q&A 010: Because mind-wandering represents a spontaneous cognitive phenomenon unrelated to..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 1274150,
+        "end_ms": 1308775,
+        "duration_ms": 34625,
+        "title": "Q&A 011: Where do you see the study of mind-wandering evolving in the coming years?"
+      }
+    ]
+  },
+  "bulletin-friston-woodlice": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-friston-woodlice.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-friston-woodlice.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue02/Friston_Fortier_Friedman",
+    "audio": "/media/audio/bulletin/kokoro/Issue02/Friston_Fortier_Friedman/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue02/Friston_Fortier_Friedman/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 12,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 184300,
+        "duration_ms": 184300,
+        "title": "Q&A 001: You are well known for being the founder of the free energy principle, a wide..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 185200,
+        "end_ms": 855475,
+        "duration_ms": 670275,
+        "title": "Q&A 002: The Bayesian brain hypothesis, predictive coding and the free energy principle are..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 856375,
+        "end_ms": 1112075,
+        "duration_ms": 255700,
+        "title": "Q&A 003: David Marr famously proposed to distinguish between three levels of analysis: the..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 1112975,
+        "end_ms": 1519575,
+        "duration_ms": 406600,
+        "title": "Q&A 004: Within the predictive framework, cognitive processes and consciousness are..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 1520475,
+        "end_ms": 1721350,
+        "duration_ms": 200875,
+        "title": "Q&A 005: The previous question naturally leads us to explore the link between computational..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 1722250,
+        "end_ms": 1972225,
+        "duration_ms": 249975,
+        "title": "Q&A 006: More broadly, this raises the question as to how the mind/brain should be parsed...."
+      },
+      {
+        "unit": 7,
+        "start_ms": 1973125,
+        "end_ms": 2077575,
+        "duration_ms": 104450,
+        "title": "Q&A 007: If, as the free energy principle states, living organisms aim at minimizing..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 2078475,
+        "end_ms": 2242725,
+        "duration_ms": 164250,
+        "title": "Q&A 008: Some authors have suggested that the predictive coding framework dissolves the..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 2243625,
+        "end_ms": 2496225,
+        "duration_ms": 252600,
+        "title": "Q&A 009: Philosophers interested in predictive coding and in the free energy principle have..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 2497125,
+        "end_ms": 2774200,
+        "duration_ms": 277075,
+        "title": "Q&A 010: Many proposals have been made to model the neurocomputational mechanisms of..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 2775100,
+        "end_ms": 2946475,
+        "duration_ms": 171375,
+        "title": "Q&A 011: If we understand it correctly, the disconnection hypothesis that you embrace..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 2947375,
+        "end_ms": 3279025,
+        "duration_ms": 331650,
+        "title": "Q&A 012: Regardless of the distinctions among the free energy, predictive coding, and..."
+      }
+    ]
+  },
+  "bulletin-metzinger-self-models": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-metzinger-self-models.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-metzinger-self-models.txt",
+    "unit_count": 12,
+    "source_interview_id": "Issue02/Metzinger_Limanowski_Milliere",
+    "audio": "/media/audio/bulletin/kokoro/Issue02/Metzinger_Limanowski_Milliere/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue02/Metzinger_Limanowski_Milliere/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 12,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 17025,
+        "duration_ms": 17025,
+        "title": "Q&A 001: Hello Thomas. Are you a self right now?"
+      },
+      {
+        "unit": 2,
+        "start_ms": 17925,
+        "end_ms": 414650,
+        "duration_ms": 396725,
+        "title": "Q&A 002: In Consciousness Explained, Dan Dennett has famously criticized what he calls..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 415550,
+        "end_ms": 951075,
+        "duration_ms": 535525,
+        "title": "Q&A 003: In Being No One, you argue that the folk psychological view of selfhood is..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 951975,
+        "end_ms": 1323175,
+        "duration_ms": 371200,
+        "title": "Q&A 004: A key concept in your Self-Model Theory of Subjectivity, SMT, is the notion of..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 1324075,
+        "end_ms": 1543775,
+        "duration_ms": 219700,
+        "title": "Q&A 005: You have recently edited an open access volumes that are largely drawing on the so..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 1544675,
+        "end_ms": 1747725,
+        "duration_ms": 203050,
+        "title": "Q&A 006: You have devoted much of your time to ethical problems implied by cultural or..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 1748625,
+        "end_ms": 1986375,
+        "duration_ms": 237750,
+        "title": "Q&A 007: In more recent work, you have refined your previous account of MPS, introducing..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1987275,
+        "end_ms": 2354275,
+        "duration_ms": 367000,
+        "title": "Q&A 008: Likewise, the notion of maximal UI raises a couple of questions. By your..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 2355175,
+        "end_ms": 2535900,
+        "duration_ms": 180725,
+        "title": "Q&A 009: In Being no one, you argue that there are two ways in which a conscious system..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 2536800,
+        "end_ms": 2759950,
+        "duration_ms": 223150,
+        "title": "Q&A 010: To add to the previous question, several authors, philosophers and scientists..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 2760850,
+        "end_ms": 2865350,
+        "duration_ms": 104500,
+        "title": "Q&A 011: On a related note, you have raised skeptical concerns regarding reports of alleged..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 2866250,
+        "end_ms": 3039175,
+        "duration_ms": 172925,
+        "title": "Q&A 012: You have argued that \"first-person data do not exist\", because there is no..."
+      }
+    ]
+  },
+  "bulletin-david-nichols-pharmacology": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-david-nichols-pharmacology.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-david-nichols-pharmacology.txt",
+    "unit_count": 19,
+    "source_interview_id": "Issue02/Nichols_Roseman_Timmermann",
+    "audio": "/media/audio/bulletin/kokoro/Issue02/Nichols_Roseman_Timmermann/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue02/Nichols_Roseman_Timmermann/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 19,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 73750,
+        "duration_ms": 73750,
+        "title": "Q&A 001: The relationship between the pharmacology of psychedelics and their effects on..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 74650,
+        "end_ms": 179300,
+        "duration_ms": 104650,
+        "title": "Q&A 002: Tryptamines and some phenethylamines are both serotonin 2A agonists and classic..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 180200,
+        "end_ms": 249750,
+        "duration_ms": 69550,
+        "title": "Q&A 003: You are an expert in designing new analogues for different psychedelics. Could you..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 250650,
+        "end_ms": 315050,
+        "duration_ms": 64400,
+        "title": "Q&A 004: What is the most selective serotonin 2A agonist? What is the subjective experience..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 315950,
+        "end_ms": 584700,
+        "duration_ms": 268750,
+        "title": "Q&A 005: In a recent study that you were involved in, you demonstrated that the serotonin..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 585600,
+        "end_ms": 643725,
+        "duration_ms": 58125,
+        "title": "Q&A 006: In the same work, you showed that ergotamine, a non-psychedelic 5-HT2A agonist,..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 644625,
+        "end_ms": 725525,
+        "duration_ms": 80900,
+        "title": "Q&A 007: In terms of structure-activity relationship, early ideas suggest that certain..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 726425,
+        "end_ms": 801475,
+        "duration_ms": 75050,
+        "title": "Q&A 008: Besides classic psychedelics, 5-HT2A agonists, there are other drugs that can..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 802375,
+        "end_ms": 855775,
+        "duration_ms": 53400,
+        "title": "Q&A 009: In a recent talk you gave at Breaking Convention you argued that endogenous..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 856675,
+        "end_ms": 896625,
+        "duration_ms": 39950,
+        "title": "Q&A 010: It has also been proposed that DMT may have a neuro-protective function in life..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 897525,
+        "end_ms": 964750,
+        "duration_ms": 67225,
+        "title": "Q&A 011: The function of the serotonin system has remained an elusive subject. You have..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 965650,
+        "end_ms": 1027875,
+        "duration_ms": 62225,
+        "title": "Q&A 012: We are experiencing the so called psychedelic renaissance. A renaissance which..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 1028775,
+        "end_ms": 1114825,
+        "duration_ms": 86050,
+        "title": "Q&A 013: What important knowledge about psychedelic is lacking? And when do you think we..."
+      },
+      {
+        "unit": 14,
+        "start_ms": 1115725,
+        "end_ms": 1169575,
+        "duration_ms": 53850,
+        "title": "Q&A 014: Science can be quite confusing, as many labs show contradicting results which are..."
+      },
+      {
+        "unit": 15,
+        "start_ms": 1170475,
+        "end_ms": 1261050,
+        "duration_ms": 90575,
+        "title": "Q&A 015: The field of psychedelic research is noticeable for its interdisciplinary nature...."
+      },
+      {
+        "unit": 16,
+        "start_ms": 1261950,
+        "end_ms": 1309350,
+        "duration_ms": 47400,
+        "title": "Q&A 016: Psychotomimetic is a term that was applied in psychedelic research when..."
+      },
+      {
+        "unit": 17,
+        "start_ms": 1310250,
+        "end_ms": 1384025,
+        "duration_ms": 73775,
+        "title": "Q&A 017: Microdosing has become quite fashionable in the past few years. It is quite..."
+      },
+      {
+        "unit": 18,
+        "start_ms": 1384925,
+        "end_ms": 1478125,
+        "duration_ms": 93200,
+        "title": "Q&A 018: In the 1997 MAPS bulletin you wrote \"If you do psychedelic research, and that is..."
+      },
+      {
+        "unit": 19,
+        "start_ms": 1479025,
+        "end_ms": 1523925,
+        "duration_ms": 44900,
+        "title": "Q&A 019: What are your hopes and concerns about mainstreaming psychedelics?"
+      }
+    ]
+  },
+  "bulletin-oregan-sensorimotor": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-oregan-sensorimotor.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-oregan-sensorimotor.txt",
+    "unit_count": 9,
+    "source_interview_id": "Issue02/ORegan_Erickson-Davis",
+    "audio": "/media/audio/bulletin/kokoro/Issue02/ORegan_Erickson-Davis/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue02/ORegan_Erickson-Davis/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 9,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 332950,
+        "duration_ms": 332950,
+        "title": "Q&A 001: You are primarily interested in the \"what it's like\" aspect of sensory experience...."
+      },
+      {
+        "unit": 2,
+        "start_ms": 333850,
+        "end_ms": 390900,
+        "duration_ms": 57050,
+        "title": "Q&A 002: What motivated you to think about these issues, and what was your training up..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 391800,
+        "end_ms": 519800,
+        "duration_ms": 128000,
+        "title": "Q&A 003: Many aspects of your theory resonate with other approaches that fall under the..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 520700,
+        "end_ms": 599525,
+        "duration_ms": 78825,
+        "title": "Q&A 004: In your theory, phenomenological inquiry takes on an entirely tractable tone. As..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 600425,
+        "end_ms": 709700,
+        "duration_ms": 109275,
+        "title": "Q&A 005: As you discuss in your book, the consequence of assuming that experience derives..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 710600,
+        "end_ms": 786175,
+        "duration_ms": 75575,
+        "title": "Q&A 006: You have said you believe that it is possible to build a robot that \"feels\". Does..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 787075,
+        "end_ms": 855350,
+        "duration_ms": 68275,
+        "title": "Q&A 007: You have also said, in conversation, that you think that our societal focus on..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 856250,
+        "end_ms": 1002000,
+        "duration_ms": 145750,
+        "title": "Q&A 008: How can sensorimotor theory be applied to \"alternative\" states if consciousness,..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1002900,
+        "end_ms": 1035050,
+        "duration_ms": 32150,
+        "title": "Q&A 009: What are you spending most of your time thinking about these days, and what's next..."
+      }
+    ]
+  },
+  "bulletin-ratcliffe-hallucinations": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-ratcliffe-hallucinations.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-ratcliffe-hallucinations.txt",
+    "unit_count": 5,
+    "source_interview_id": "Issue02/Ratcliffe_Frerejouan",
+    "audio": "/media/audio/bulletin/kokoro/Issue02/Ratcliffe_Frerejouan/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue02/Ratcliffe_Frerejouan/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 5,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 177950,
+        "duration_ms": 177950,
+        "title": "Q&A 001: Hallucinations, and in particular \"Auditory Verbal Hallucinations\", AVHs, have..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 178850,
+        "end_ms": 485950,
+        "duration_ms": 307100,
+        "title": "Q&A 002: The experiences you describe are presented as \"real hallucinations\", in contrast..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 486850,
+        "end_ms": 1227225,
+        "duration_ms": 740375,
+        "title": "Q&A 003: In your last book you often refer to authors such as Louis Sass, Josef Parnas and..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 1228125,
+        "end_ms": 1356375,
+        "duration_ms": 128250,
+        "title": "Q&A 004: There is a long-running debate in psychiatric literature concerning the nature of..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 1357275,
+        "end_ms": 1507900,
+        "duration_ms": 150625,
+        "title": "Q&A 005: Beyond your interest in hallucinatory states, you insist on the fact that an..."
+      }
+    ]
+  },
+  "bulletin-taves-religious-experience": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-taves-religious-experience.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-taves-religious-experience.txt",
+    "unit_count": 10,
+    "source_interview_id": "Issue02/Taves_Fortier_Canna",
+    "audio": "/media/audio/bulletin/kokoro/Issue02/Taves_Fortier_Canna/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue02/Taves_Fortier_Canna/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 10,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 287200,
+        "duration_ms": 287200,
+        "title": "Q&A 001: You have proposed to conceive of religion as special paths to a goal. If we look..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 288100,
+        "end_ms": 441600,
+        "duration_ms": 153500,
+        "title": "Q&A 002: You argue that enhanced vividness of sensory content causes people to take what..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 442500,
+        "end_ms": 918250,
+        "duration_ms": 475750,
+        "title": "Q&A 003: One possible worry is that the BBA and the PCF are in fact incompatible. Indeed,..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 919150,
+        "end_ms": 1216000,
+        "duration_ms": 296850,
+        "title": "Q&A 004: The above distinction between two types of \"interpretation\" or \"top-down..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 1216900,
+        "end_ms": 1352650,
+        "duration_ms": 135750,
+        "title": "Q&A 005: ? bottom-up processing? \"religious\" in virtue of, top-down processing top-down..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 1353550,
+        "end_ms": 1417725,
+        "duration_ms": 64175,
+        "title": "Q&A 006: Yes, but if compelling evidence was to support the existence of invariant..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 1418625,
+        "end_ms": 1574350,
+        "duration_ms": 155725,
+        "title": "Q&A 007: You have suggested that events triggering disruption of the ordinary sense of..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 1575250,
+        "end_ms": 1681425,
+        "duration_ms": 106175,
+        "title": "Q&A 008: On a more methodological note, you have championed a highly directive method for..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 1682325,
+        "end_ms": 1771050,
+        "duration_ms": 88725,
+        "title": "Q&A 009: You have suggested that some cognitive impairments make a subject more prone to..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 1771950,
+        "end_ms": 1913650,
+        "duration_ms": 141700,
+        "title": "Q&A 010: While some scholars, classical or contemporary, argue that religion originates in..."
+      }
+    ]
+  },
+  "bulletin-carhart-harris-psychedelics": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-carhart-harris-psychedelics.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-carhart-harris-psychedelics.txt",
+    "unit_count": 19,
+    "source_interview_id": "Issue01/Carhart-Harris_Fortier_Milliere",
+    "audio": "/media/audio/bulletin/kokoro/Issue01/Carhart-Harris_Fortier_Milliere/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue01/Carhart-Harris_Fortier_Milliere/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 19,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 128375,
+        "duration_ms": 128375,
+        "title": "Q&A 001: What got you interested in the topic of psychedelics?"
+      },
+      {
+        "unit": 2,
+        "start_ms": 129275,
+        "end_ms": 145325,
+        "duration_ms": 16050,
+        "title": "Q&A 002: Sceptics might nonetheless argue that the two domains are not mutually enriching...."
+      },
+      {
+        "unit": 3,
+        "start_ms": 146225,
+        "end_ms": 341250,
+        "duration_ms": 195025,
+        "title": "Q&A 003: In the same line of skepticism, do you agree that only neuroscience, owing to its..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 342150,
+        "end_ms": 396225,
+        "duration_ms": 54075,
+        "title": "Q&A 004: How do you think psychedelics research can contribute to the search for the neural..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 397125,
+        "end_ms": 492925,
+        "duration_ms": 95800,
+        "title": "Q&A 005: What is your general view on the topic of consciousness?"
+      },
+      {
+        "unit": 6,
+        "start_ms": 493825,
+        "end_ms": 556975,
+        "duration_ms": 63150,
+        "title": "Q&A 006: Do you endorse any of the following approaches to consciousness: a topological..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 557875,
+        "end_ms": 574125,
+        "duration_ms": 16250,
+        "title": "Q&A 007: How do you interpret the seeming discrepancy between Vollenweider et al.'s study..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 575025,
+        "end_ms": 600475,
+        "duration_ms": 25450,
+        "title": "Q&A 008: In addition to the recording technique, do you think that the mode of..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 601375,
+        "end_ms": 657575,
+        "duration_ms": 56200,
+        "title": "Q&A 009: On a related note, what are the potential limitations of fMRI imaging to study..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 658475,
+        "end_ms": 706550,
+        "duration_ms": 48075,
+        "title": "Q&A 010: Psychedelics researchers have emphasized the importance of set and setting, that..."
+      },
+      {
+        "unit": 11,
+        "start_ms": 707450,
+        "end_ms": 746275,
+        "duration_ms": 38825,
+        "title": "Q&A 011: What are the difficulties of gathering reliable data about the subjective effects..."
+      },
+      {
+        "unit": 12,
+        "start_ms": 747175,
+        "end_ms": 858200,
+        "duration_ms": 111025,
+        "title": "Q&A 012: In order to chart the neurophenomenology of psychedelic experience, the..."
+      },
+      {
+        "unit": 13,
+        "start_ms": 859100,
+        "end_ms": 1078225,
+        "duration_ms": 219125,
+        "title": "Q&A 013: You have investigated a phenomenon known as drug-induced ego dissolution, DIED,..."
+      },
+      {
+        "unit": 14,
+        "start_ms": 1079125,
+        "end_ms": 1184200,
+        "duration_ms": 105075,
+        "title": "Q&A 014: The DMN is usually associated with mind-wandering, self-reflection and..."
+      },
+      {
+        "unit": 15,
+        "start_ms": 1185100,
+        "end_ms": 1208175,
+        "duration_ms": 23075,
+        "title": "Q&A 015: Do you think that it can still be maintained that the loss of a clear dichotomy..."
+      },
+      {
+        "unit": 16,
+        "start_ms": 1209075,
+        "end_ms": 1247400,
+        "duration_ms": 38325,
+        "title": "Q&A 016: On a more methodological note, there has been some intense debate as to whether..."
+      },
+      {
+        "unit": 17,
+        "start_ms": 1248300,
+        "end_ms": 1323675,
+        "duration_ms": 75375,
+        "title": "Q&A 017: Don't you think that there are cases in which entropy can vary independently of..."
+      },
+      {
+        "unit": 18,
+        "start_ms": 1324575,
+        "end_ms": 1516125,
+        "duration_ms": 191550,
+        "title": "Q&A 018: In your work, you have occasionally pondered upon what your findings suggest as to..."
+      },
+      {
+        "unit": 19,
+        "start_ms": 1517025,
+        "end_ms": 1529100,
+        "duration_ms": 12075,
+        "title": "Q&A 019: In your opinion, what are the next steps for psychedelics research?"
+      }
+    ]
+  },
+  "bulletin-hohwy-conscious-modes": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-hohwy-conscious-modes.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-hohwy-conscious-modes.txt",
+    "unit_count": 10,
+    "source_interview_id": "Issue01/Hohwy_Koroma",
+    "audio": "/media/audio/bulletin/kokoro/Issue01/Hohwy_Koroma/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue01/Hohwy_Koroma/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 10,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 120000,
+        "duration_ms": 120000,
+        "title": "Q&A 001: Could you first explain how you have come in your academic career to adopt a..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 120900,
+        "end_ms": 181800,
+        "duration_ms": 60900,
+        "title": "Q&A 002: Could you please describe briefly the concept of a \"mode of consciousness\" and how..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 182700,
+        "end_ms": 243275,
+        "duration_ms": 60575,
+        "title": "Q&A 003: You describe modes of consciousness as global states of consciousness being..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 244175,
+        "end_ms": 315250,
+        "duration_ms": 71075,
+        "title": "Q&A 004: Following the previous question, functionally, it appears that for example some..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 316150,
+        "end_ms": 431125,
+        "duration_ms": 114975,
+        "title": "Q&A 005: You describe a criterion for defining modes as \"something to be like in, from a..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 432025,
+        "end_ms": 472550,
+        "duration_ms": 40525,
+        "title": "Q&A 006: How would a multidimensional account tackle the apparition of entirely new..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 473450,
+        "end_ms": 519275,
+        "duration_ms": 45825,
+        "title": "Q&A 007: Following the previous question, I wonder then if all conscious states share the..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 520175,
+        "end_ms": 601425,
+        "duration_ms": 81250,
+        "title": "Q&A 008: The diversity of modes suggests that consciousness could be realized in a multiple..."
+      },
+      {
+        "unit": 9,
+        "start_ms": 602325,
+        "end_ms": 664350,
+        "duration_ms": 62025,
+        "title": "Q&A 009: Do you think that a multidimensional account of consciousness would benefit from..."
+      },
+      {
+        "unit": 10,
+        "start_ms": 665250,
+        "end_ms": 741075,
+        "duration_ms": 75825,
+        "title": "Q&A 010: The frameworks of Predictive Coding and Bayesianism have been successful in..."
+      }
+    ]
+  },
+  "bulletin-luhrmann-anthropology-mind": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-luhrmann-anthropology-mind.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-luhrmann-anthropology-mind.txt",
+    "unit_count": 6,
+    "source_interview_id": "Issue01/Luhrmann_Fortier",
+    "audio": "/media/audio/bulletin/kokoro/Issue01/Luhrmann_Fortier/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue01/Luhrmann_Fortier/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 6,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 137800,
+        "duration_ms": 137800,
+        "title": "Q&A 001: To begin, could you please tell us a few words as to how you position yourself..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 138700,
+        "end_ms": 320275,
+        "duration_ms": 181575,
+        "title": "Q&A 002: While studying magicians in contemporary England or evangelicals in the US, it..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 321175,
+        "end_ms": 986050,
+        "duration_ms": 664875,
+        "title": "Q&A 003: In your work, you are especially interested in understanding the mechanisms..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 986950,
+        "end_ms": 1255375,
+        "duration_ms": 268425,
+        "title": "Q&A 004: In your research, you have demonstrated that the shift from imagination to..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 1256275,
+        "end_ms": 1690450,
+        "duration_ms": 434175,
+        "title": "Q&A 005: The question of cognitive penetrability has sparked much discussions. In your own..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 1691350,
+        "end_ms": 1961525,
+        "duration_ms": 270175,
+        "title": "Q&A 006: One of your present interests deals with participation, sensuous..."
+      }
+    ]
+  },
+  "bulletin-mccarthy-jones-voice-hearing": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-mccarthy-jones-voice-hearing.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-mccarthy-jones-voice-hearing.txt",
+    "unit_count": 5,
+    "source_interview_id": "Issue01/McCarthy-Jones_Frerejouan",
+    "audio": "/media/audio/bulletin/kokoro/Issue01/McCarthy-Jones_Frerejouan/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue01/McCarthy-Jones_Frerejouan/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 5,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 186575,
+        "duration_ms": 186575,
+        "title": "Q&A 001: First of all, you usually define your object of study as \"voice-hearing\" rather..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 187475,
+        "end_ms": 398375,
+        "duration_ms": 210900,
+        "title": "Q&A 002: This phenomenon of voice-hearing has given birth to many different psychological..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 399275,
+        "end_ms": 780225,
+        "duration_ms": 380950,
+        "title": "Q&A 003: Your main work on \"voice-hearing\" includes a historical perspective, which is..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 781125,
+        "end_ms": 940525,
+        "duration_ms": 159400,
+        "title": "Q&A 004: As you just said, it's necessary to reflect on the role of distal causes, such as..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 941425,
+        "end_ms": 1080075,
+        "duration_ms": 138650,
+        "title": "Q&A 005: Finally, your work is clearly guided by an ethical goal, as shown by your interest..."
+      }
+    ]
+  },
+  "bulletin-seligman-dissociative": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-seligman-dissociative.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-seligman-dissociative.txt",
+    "unit_count": 5,
+    "source_interview_id": "Issue01/Seligman_Halloy",
+    "audio": "/media/audio/bulletin/kokoro/Issue01/Seligman_Halloy/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue01/Seligman_Halloy/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 5,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 186825,
+        "duration_ms": 186825,
+        "title": "Q&A 001: For many anthropologists today, the Western category 'altered states of..."
+      },
+      {
+        "unit": 2,
+        "start_ms": 187725,
+        "end_ms": 400525,
+        "duration_ms": 212800,
+        "title": "Q&A 002: You have spent many years studying possession in an Afro-Brazilian possession cult..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 401425,
+        "end_ms": 566975,
+        "duration_ms": 165550,
+        "title": "Q&A 003: Why do we need anthropologists to study ASC? To what extent are ASC such as..."
+      },
+      {
+        "unit": 4,
+        "start_ms": 567875,
+        "end_ms": 739350,
+        "duration_ms": 171475,
+        "title": "Q&A 004: What are the costs and benefits of incorporating psychological and..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 740250,
+        "end_ms": 1004750,
+        "duration_ms": 264500,
+        "title": "Q&A 005: For many decades, eminent scholars and psychiatrists have associated possession..."
+      }
+    ]
+  },
+  "bulletin-windt-dreams": {
+    "src": "/media/audio/bulletin/transcripts/bulletin-windt-dreams.json",
+    "download": "/media/audio/bulletin/transcripts/bulletin-windt-dreams.txt",
+    "unit_count": 8,
+    "source_interview_id": "Issue01/Windt_Bucci_Milliere",
+    "audio": "/media/audio/bulletin/kokoro/Issue01/Windt_Bucci_Milliere/interview.mp3",
+    "audio_download": "/media/audio/bulletin/kokoro/Issue01/Windt_Bucci_Milliere/interview.mp3",
+    "audio_source": "kokoro-transcript",
+    "audio_chapter_count": 8,
+    "audio_chapters": [
+      {
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 458625,
+        "duration_ms": 458625,
+        "title": "Q&A 001: How did you become interested in the topic of dreaming?"
+      },
+      {
+        "unit": 2,
+        "start_ms": 459525,
+        "end_ms": 835900,
+        "duration_ms": 376375,
+        "title": "Q&A 002: How do you think the general conception of dreaming has changed over the course of..."
+      },
+      {
+        "unit": 3,
+        "start_ms": 836800,
+        "end_ms": 1225500,
+        "duration_ms": 388700,
+        "title": "Q&A 003: What are the trending topics in dream research at the moment?"
+      },
+      {
+        "unit": 4,
+        "start_ms": 1226400,
+        "end_ms": 1576900,
+        "duration_ms": 350500,
+        "title": "Q&A 004: In your opinion, is dreaming an altered state of consciousness? If so, what..."
+      },
+      {
+        "unit": 5,
+        "start_ms": 1577800,
+        "end_ms": 2307625,
+        "duration_ms": 729825,
+        "title": "Q&A 005: What are the main methods used in dream research to gather data about the first..."
+      },
+      {
+        "unit": 6,
+        "start_ms": 2308525,
+        "end_ms": 2942650,
+        "duration_ms": 634125,
+        "title": "Q&A 006: In your recent book, you argue for dreaming as a \"weakly embodied state\", against..."
+      },
+      {
+        "unit": 7,
+        "start_ms": 2943550,
+        "end_ms": 3384925,
+        "duration_ms": 441375,
+        "title": "Q&A 007: You advocate the Immersive Spatiotemporal Hallucination, ISTH, model of dreaming,..."
+      },
+      {
+        "unit": 8,
+        "start_ms": 3385825,
+        "end_ms": 3744425,
+        "duration_ms": 358600,
+        "title": "Q&A 008: What, in your opinion, are the most important challenges for future research?"
+      }
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+[
+  {
+    "unit": 1,
+    "start_ms": 0,
+    "end_ms": 282000,
+    "duration_ms": 282000,
+    "title": "Q&A 001: Hello Jeremy. As a specialist in the neurobiology of language, your research..."
+  },
+  {
+    "unit": 2,
+    "start_ms": 282900,
+    "end_ms": 322425,
+    "duration_ms": 39525,
+    "title": "Q&A 002: I heard a rumor that you used to give talks barefoot. Is that true?"
+  },
+  {
+    "unit": 3,
+    "start_ms": 323325,
+    "end_ms": 409825,
+    "duration_ms": 86500,
+    "title": "Q&A 003: Has that weirdness manifested in your research and work as a scientist as well?"
+  },
+  {
+    "unit": 4,
+    "start_ms": 410725,
+    "end_ms": 686475,
+    "duration_ms": 275750,
+    "title": "Q&A 004: What findings did you make from the perspective of context dependency of language..."
+  },
+  {
+    "unit": 5,
+    "start_ms": 687375,
+    "end_ms": 822250,
+    "duration_ms": 134875,
+    "title": "Q&A 005: If that is the case, then how do we know what these networks' functions are?"
+  },
+  {
+    "unit": 6,
+    "start_ms": 823150,
+    "end_ms": 1037800,
+    "duration_ms": 214650,
+    "title": "Q&A 006: What about language lateralization? Can it be tested reliably, for instance with fMRI?"
+  },
+  {
+    "unit": 7,
+    "start_ms": 1038700,
+    "end_ms": 1167875,
+    "duration_ms": 129175,
+    "title": "Q&A 007: Are you planning to test those ideas of laterality with Wada tests and psychedelics?"
+  },
+  {
+    "unit": 8,
+    "start_ms": 1168775,
+    "end_ms": 1436350,
+    "duration_ms": 267575,
+    "title": "Q&A 008: How has the perspective on the relationship between language and consciousness..."
+  },
+  {
+    "unit": 9,
+    "start_ms": 1437250,
+    "end_ms": 1461825,
+    "duration_ms": 24575,
+    "title": "Q&A 009: There were mirror self-recognition tests conducted on feral people?"
+  },
+  {
+    "unit": 10,
+    "start_ms": 1462725,
+    "end_ms": 1683550,
+    "duration_ms": 220825,
+    "title": "Q&A 010: So then, even if you, let's say, do something that reduces your language, you're..."
+  },
+  {
+    "unit": 11,
+    "start_ms": 1684450,
+    "end_ms": 1790850,
+    "duration_ms": 106400,
+    "title": "Q&A 011: What is your understanding of inner speech and how does it relate to both..."
+  },
+  {
+    "unit": 12,
+    "start_ms": 1791750,
+    "end_ms": 1837275,
+    "duration_ms": 45525,
+    "title": "Q&A 012: How do you see the difference between the narrative self and the images associated..."
+  },
+  {
+    "unit": 13,
+    "start_ms": 1838175,
+    "end_ms": 1977800,
+    "duration_ms": 139625,
+    "title": "Q&A 013: What are the objectives of your research and how do you conceptualize the..."
+  },
+  {
+    "unit": 14,
+    "start_ms": 1978700,
+    "end_ms": 2108350,
+    "duration_ms": 129650,
+    "title": "Q&A 014: You drew a lot of compelling parallels between aphasia and the psychedelic..."
+  },
+  {
+    "unit": 15,
+    "start_ms": 2109250,
+    "end_ms": 2183975,
+    "duration_ms": 74725,
+    "title": "Q&A 015: Your understanding of language is this kind of complex dependency. Some..."
+  },
+  {
+    "unit": 16,
+    "start_ms": 2184875,
+    "end_ms": 2249825,
+    "duration_ms": 64950,
+    "title": "Q&A 016: Do you think that people under psychedelics experience a specific type of..."
+  },
+  {
+    "unit": 17,
+    "start_ms": 2250725,
+    "end_ms": 2357425,
+    "duration_ms": 106700,
+    "title": "Q&A 017: Let's talk about ineffability. There are a lot of times in a psychedelic..."
+  },
+  {
+    "unit": 18,
+    "start_ms": 2358325,
+    "end_ms": 2557975,
+    "duration_ms": 199650,
+    "title": "Q&A 018: We spoke about the effects of psychedelics on language in terms of disability, now..."
+  },
+  {
+    "unit": 19,
+    "start_ms": 2558875,
+    "end_ms": 2699775,
+    "duration_ms": 140900,
+    "title": "Q&A 019: Anne Taves discusses ascription and attribution as key processes in understanding..."
+  }
+]
