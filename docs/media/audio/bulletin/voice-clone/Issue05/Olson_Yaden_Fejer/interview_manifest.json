@@ -1,0 +1,50 @@
+{
+  "interview_id": "Issue05/Olson_Yaden_Fejer",
+  "interview_slug": "Issue05_Olson_Yaden_Fejer",
+  "audio": "/media/audio/bulletin/voice-clone/Issue05/Olson_Yaden_Fejer/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue05/Olson_Yaden_Fejer/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "duration_seconds": 1801.051,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128005,
+  "sha256": "B0416DB99750FFC0EE7CA6D94BA78D2A13EEF0E8D6FC14F0D6B9107A3F686757",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "transcript": "Although you are addressing two sides of the same coin you're back to back publications\r\nare primarily aimed at questioning whether the subjective effects play a causal role within\r\nthe therapeutic process, or whether it can be regarded as an epiphenomenon that accompanies\r\ntherapeutic outcomes, but not a principal mechanism.\r\nThe first question is related to the subject matter of dualism, and whether the comparison\r\nbetween neuroplasticity alone versus neuroplasticity plus subjective experience implies that\r\nthere is a dichotomous relationship between subjectivity and the neurobiological substrate.\r\nHow do you define the subjective experience?\r\nIn terms of its biological function and embeddedness within a neurobiological substrate,\r\nwhat is its relationship to neuroplasticity?\r\nAre these pitted against each other within your scientific framework in a manner\r\nthat implicitly endorses dualism?\r\nI would like to take this one first.\r\nIf you don't mind, David, I think both of us agree on so much, and this particular topic\r\nof dualism was definitely something that we agreed on from the get-goes.\r\nMy co-author Roland Griffiths, and I talked quite a-",
+    "checks": [
+      "no_spoken_speaker_labels_in_first60",
+      "question_answer_handoff_present",
+      "no_alius_spelling_issue_in_sample"
+    ]
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "george_fejer",
+      "speaker_name": "George Fejer",
+      "source_url": "https://www.youtube.com/watch?v=Qm-lmC-xYCI",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "david_e_olson",
+      "speaker_name": "David E. Olson",
+      "source_url": "https://www.youtube.com/watch?v=3wmfVcvZn_0",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "david_b_yaden",
+      "speaker_name": "David B. Yaden",
+      "source_url": "https://www.youtube.com/watch?v=XMQ9eUFj97U",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    }
+  ]
+}
