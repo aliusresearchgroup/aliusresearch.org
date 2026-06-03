@@ -1,7 +1,7 @@
 {
   "card_id": "bulletin-chadha-indian-philosophy",
   "source_project": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin",
-  "source_script": "AI-agents/generate_interview_audio_kokoro.py",
+  "source_script": "AudioTranscription/scripts/render_interview.py + export_render_to_website.py",
   "source_interview_id": "Issue05/Chadha_Aviles_Koroma",
   "unit_count": 12,
   "units": [
@@ -90,94 +90,207 @@
       "answer": "One of the most important challenges is to draw the attention of mainstream philosophers of mind and consciousness to pay serious attention to the classical Indian tradition and what it has to offer. There is not just the language barrier but also the misconception that Indian philosophy is mostly mystical mumbo-jumbo. Correcting that misconception is a hard task. So my approach has been trying to publish in mainstream journals rather than specialist Indian philosophy journals so that these materials have a chance of broader uptake. It is hard, but I think it is worth doing."
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue05/Chadha_Aviles_Koroma/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue05/Chadha_Aviles_Koroma/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue05/Chadha_Aviles_Koroma/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue05/Chadha_Aviles_Koroma/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 12,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 49200,
-      "duration_ms": 49200,
-      "title": "Q&A 001: You are an Associate Professor in Philosophy at Monash University. In your..."
+      "end_ms": 60377,
+      "duration_ms": 60377,
+      "title": "Q&A 001: You are an Associate Professor in Philosophy at Monash University. In your rese..."
     },
     {
       "unit": 2,
-      "start_ms": 50100,
-      "end_ms": 141650,
-      "duration_ms": 91550,
-      "title": "Q&A 002: An important concern for a lot of traditions in Indian philosophy, both Astika and..."
+      "start_ms": 60377,
+      "end_ms": 163682,
+      "duration_ms": 103305,
+      "title": "Q&A 002: An important concern for a lot of traditions in Indian philosophy, both Astika..."
     },
     {
       "unit": 3,
-      "start_ms": 142550,
-      "end_ms": 219150,
-      "duration_ms": 76600,
-      "title": "Q&A 003: Since the 90's there has been a rising interest in the neuroscience of..."
+      "start_ms": 163682,
+      "end_ms": 243952,
+      "duration_ms": 80270,
+      "title": "Q&A 003: Since the 90’s there has been a rising interest in the neuroscience of consciou..."
     },
     {
       "unit": 4,
-      "start_ms": 220050,
-      "end_ms": 338100,
-      "duration_ms": 118050,
+      "start_ms": 243952,
+      "end_ms": 366103,
+      "duration_ms": 122151,
       "title": "Q&A 004: A lot of people would agree with the claim that phenomenology makes life worth..."
     },
     {
       "unit": 5,
-      "start_ms": 339000,
-      "end_ms": 423200,
-      "duration_ms": 84200,
-      "title": "Q&A 005: Current debates on consciousness tackle the possibility that consciousness is an..."
+      "start_ms": 366103,
+      "end_ms": 455796,
+      "duration_ms": 89693,
+      "title": "Q&A 005: Current debates on consciousness tackle the possibility that consciousness is a..."
     },
     {
       "unit": 6,
-      "start_ms": 424100,
-      "end_ms": 510750,
-      "duration_ms": 86650,
-      "title": "Q&A 006: One of the most important doctrines in the Upanishads and the Advaita Vedanta is..."
+      "start_ms": 455796,
+      "end_ms": 540953,
+      "duration_ms": 85157,
+      "title": "Q&A 006: One of the most important doctrines in the Upanishads and the Advaita Vedanta i..."
     },
     {
       "unit": 7,
-      "start_ms": 511650,
-      "end_ms": 661125,
-      "duration_ms": 149475,
-      "title": "Q&A 007: You recently explained how Abhidharma Buddhism had a panprotopsychist account of..."
+      "start_ms": 540953,
+      "end_ms": 686138,
+      "duration_ms": 145185,
+      "title": "Q&A 007: You recently explained how Abhidharma Buddhism had a panprotopsychist account o..."
     },
     {
       "unit": 8,
-      "start_ms": 662025,
-      "end_ms": 726250,
-      "duration_ms": 64225,
-      "title": "Q&A 008: Both neuroscientists and philosophers recognize the role of introspection and..."
+      "start_ms": 686138,
+      "end_ms": 747911,
+      "duration_ms": 61773,
+      "title": "Q&A 008: Both neuroscientists and philosophers recognize the role of introspection and f..."
     },
     {
       "unit": 9,
-      "start_ms": 727150,
-      "end_ms": 860275,
-      "duration_ms": 133125,
+      "start_ms": 747911,
+      "end_ms": 875995,
+      "duration_ms": 128084,
       "title": "Q&A 009: The practice of meditation, dhyana, is pervasive among the Indian philosophical..."
     },
     {
       "unit": 10,
-      "start_ms": 861175,
-      "end_ms": 950625,
-      "duration_ms": 89450,
-      "title": "Q&A 010: In the Buddhist traditions, the notion of no-self has both metaphysical and..."
+      "start_ms": 875995,
+      "end_ms": 974413,
+      "duration_ms": 98418,
+      "title": "Q&A 010: In the Buddhist traditions, the notion of no-self has both metaphysical and pra..."
     },
     {
       "unit": 11,
-      "start_ms": 951525,
-      "end_ms": 1037625,
-      "duration_ms": 86100,
-      "title": "Q&A 011: The Abhidharma -Buddhist metaphysics of persons has some important similarities to..."
+      "start_ms": 974413,
+      "end_ms": 1056778,
+      "duration_ms": 82365,
+      "title": "Q&A 011: The Abhidharma -Buddhist metaphysics of persons has some important similarities..."
     },
     {
       "unit": 12,
-      "start_ms": 1038525,
-      "end_ms": 1096325,
-      "duration_ms": 57800,
+      "start_ms": 1056778,
+      "end_ms": 1120296,
+      "duration_ms": 63518,
       "title": "Q&A 012: ALIUS is most interested in the diversity of consciousness. This involves both..."
     }
-  ]
+  ],
+  "audio_duration_seconds": 1120.296,
+  "audio_sha256": "0BB950DD82D5C2322A27936BBAD7ED73C500800551F5D430C5811410791A4C55",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128008,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": "engaged",
+  "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 11,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 12,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    }
+  ],
+  "asr_spotcheck_result": "passed",
+  "source_engine": "F5TTS_v1_Base",
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue05/Chadha_Aviles_Koroma/interview_manifest.json",
+  "audio_chapters_url": "/media/audio/bulletin/voice-clone/Issue05/Chadha_Aviles_Koroma/interview_chapters.json"
 }
