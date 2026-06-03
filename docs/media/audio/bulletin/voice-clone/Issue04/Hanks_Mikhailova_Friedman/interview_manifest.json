@@ -4,22 +4,87 @@
   "audio": "/media/audio/bulletin/voice-clone/Issue04/Hanks_Mikhailova_Friedman/interview.mp3",
   "chapters": "/media/audio/bulletin/voice-clone/Issue04/Hanks_Mikhailova_Friedman/interview_chapters.json",
   "engine": "F5TTS_v1_Base",
-  "delivery_preset": null,
-  "final_filter_chain": null,
-  "pronunciation_protocol": null,
-  "duration_seconds": 1309.005,
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.98",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "alexandra_mikhailova",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "alexandra_mikhailova",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "alexandra_mikhailova",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "alexandra_mikhailova",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    }
+  ],
+  "duration_seconds": 1273.83,
   "codec": "mp3",
   "sample_rate_hz": 24000,
   "channels": 1,
-  "bit_rate_bps": 128007,
-  "sha256": "502A2E218DAB3FF28316357C43226D9B50DC9DA611691D94C5865C77E1C77A31",
+  "bit_rate_bps": 128009,
+  "sha256": "EBC253267284E5C550E16D18B12ACEDC135F2A38296161BB1D02EAB04E6452EE",
   "asr_spotcheck": {
     "result": "passed",
-    "sample": "first60",
-    "model": "whisper_tiny.en",
-    "audio": "AudioTranscription/work/verification/Issue04_Hanks_Mikhailova_Friedman/first60_full.wav",
-    "transcript": "AudioTranscription/work/verification/Issue04_Hanks_Mikhailova_Friedman/first60_full.txt",
-    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue04_Hanks_Mikhailova_Friedman/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue04_Hanks_Mikhailova_Friedman/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "routing_check": "passed_manifest_round_robin_alexandra_daniel_questions_timothy_answers",
+    "pace_check": "passed_after_final_tempo_0.98_estimated_163.2_wpm",
+    "pronunciation_check": "not_applicable_first60_no_ALIUS_occurrence",
+    "notes": "ASR follows the intended opening question and does not detect spoken speaker labels. Final tempo was adjusted to 0.98 to keep pace in target range.",
+    "excerpt": "To quote your book, chapter from neurobiology of decision making, thus looking for the right\nquestions is just another kind of decision.\nThis quote resonates with folks saying such as the answer is in the question and also\nwith computational perspectives on decision making that highlight the role of beliefs\nabout prior beliefs in controlling how evidential stimuli play a role in decision making.\nAs a scientist, how did you come to study decision making?\nWhat decision making rules or heuristics were helpful for you during your development\nas a professional and researcher?"
   },
   "voice_profiles": [
     {
@@ -34,7 +99,14 @@
       "speaker_name": "Timothy Hanks",
       "source_url": "https://www.youtube.com/watch?v=qWN1a5i23R4",
       "reference_review_status": "asr_spotcheck_passed",
-      "profile_gate": "pass"
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "daniel_a_friedman",
+      "speaker_name": "Daniel A. Friedman",
+      "source_url": "https://www.youtube.com/watch?v=yHnm-zMqLvY",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
     }
   ]
 }

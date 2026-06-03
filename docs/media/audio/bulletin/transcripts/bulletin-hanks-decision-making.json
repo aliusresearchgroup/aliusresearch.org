@@ -1,7 +1,7 @@
 {
   "card_id": "bulletin-hanks-decision-making",
   "source_project": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin",
-  "source_script": "AI-agents/generate_interview_audio_kokoro.py",
+  "source_script": "AudioTranscription/scripts/render_interview.py + export_render_to_website.py",
   "source_interview_id": "Issue04/Hanks_Mikhailova_Friedman",
   "unit_count": 7,
   "units": [
@@ -55,59 +55,132 @@
       "answer": "I take an inclusive view on what it means to “make a decision”, but with the caveat that there are important differences among the class of processes considered as such. Under this view, a single neuron is certainly capable of making a decision, but without the same range of complexity as a large network of neurons. Likewise, while neurons and neural networks participate in a variety of types of decision making, they do not do so in a necessarily 78 unique way. Non-neural cell types, computers, etc. may also participate in similar types of decision making, but this needs to be considered on a case by-case basis. For instance, we can describe accumulating information to a threshold over a flexible timescale from milliseconds to minutes as a specific type of decision making. Human brains can do this, but it is not known what minimal architecture of brain tissue is needed to accomplish it. Computers can easily be programmed to do it, but it becomes more challenging as we expand the domain that we are considering to more complex types of decision making. It would also be interesting to know the capacity of other systems like bacteria. Intriguingly, for this example, there are suggestions that non-neuronal cells could play a role. In particular, the glial cells, non neuronal cells of the nervous system that actually outnumber neurons, known as astrocytes have been shown to accumulate information over 10s of seconds for decision making in zebrafish, with some indications of flexibility in that timescale. In that circuit, the astrocytes seem to work in concert with neurons by accumulating evidence from neural input over a longer timescale and then influencing other neurons. I believe one of the keys for studying decision making in any setting is striving for a clear description of what type of decision process one is studying. This is one of the more important benefits of using a computational approach because it gives a framework for rigorous description. This has a parallel to the discussions above about free will. Rather than asking, “Is X making a decision?”, I think it is better to ask, “In what way is X making a decision?” Reflexive movements may still be considered decisions in some sense, but they are very different types of decisions than those involving reflective deliberation. They invoke different forms of computation and different complexity of neural circuit processing."
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue04/Hanks_Mikhailova_Friedman/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue04/Hanks_Mikhailova_Friedman/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue04/Hanks_Mikhailova_Friedman/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue04/Hanks_Mikhailova_Friedman/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 7,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 120775,
-      "duration_ms": 120775,
-      "title": "Q&A 001: To quote your book chapter from 'Neurobiology of Decision Making': \"Thus looking..."
+      "end_ms": 144168,
+      "duration_ms": 144168,
+      "title": "Q&A 001: To quote your book chapter from ‘Neurobiology of Decision Making’: “Thus lookin..."
     },
     {
       "unit": 2,
-      "start_ms": 121675,
-      "end_ms": 343025,
-      "duration_ms": 221350,
+      "start_ms": 144168,
+      "end_ms": 399422,
+      "duration_ms": 255254,
       "title": "Q&A 002: What neural events might distinguish the awareness of a decision from ones made..."
     },
     {
       "unit": 3,
-      "start_ms": 343925,
-      "end_ms": 550200,
-      "duration_ms": 206275,
-      "title": "Q&A 003: Your work on the speed vs. accuracy trade-off in the brains of macaques was..."
+      "start_ms": 399422,
+      "end_ms": 628557,
+      "duration_ms": 229135,
+      "title": "Q&A 003: Your work on the speed vs. accuracy trade-off in the brains of macaques was tes..."
     },
     {
       "unit": 4,
-      "start_ms": 551100,
-      "end_ms": 730650,
-      "duration_ms": 179550,
-      "title": "Q&A 004: finessing the trade-off between false-positives and false-negatives. The article..."
+      "start_ms": 628557,
+      "end_ms": 829487,
+      "duration_ms": 200930,
+      "title": "Q&A 004: finessing the trade-off between false-positives and false-negatives. The articl..."
     },
     {
       "unit": 5,
-      "start_ms": 731550,
-      "end_ms": 831550,
-      "duration_ms": 100000,
-      "title": "Q&A 005: Although it would stand to reason that the dynamics of the environment dictate the..."
+      "start_ms": 829487,
+      "end_ms": 925251,
+      "duration_ms": 95764,
+      "title": "Q&A 005: Although it would stand to reason that the dynamics of the environment dictate..."
     },
     {
       "unit": 6,
-      "start_ms": 832450,
-      "end_ms": 1003450,
-      "duration_ms": 171000,
-      "title": "Q&A 006: Disease states can influence evidence accumulation, resulting in too much or too..."
+      "start_ms": 925251,
+      "end_ms": 1107375,
+      "duration_ms": 182124,
+      "title": "Q&A 006: Disease states can influence evidence accumulation, resulting in too much or to..."
     },
     {
       "unit": 7,
-      "start_ms": 1004350,
-      "end_ms": 1146775,
-      "duration_ms": 142425,
-      "title": "Q&A 007: What is the minimal number of neurons required to 'make a decision'? More..."
+      "start_ms": 1107375,
+      "end_ms": 1273830,
+      "duration_ms": 166455,
+      "title": "Q&A 007: What is the minimal number of neurons required to ‘make a decision’? More gener..."
     }
-  ]
+  ],
+  "audio_duration_seconds": 1273.83,
+  "audio_sha256": "EBC253267284E5C550E16D18B12ACEDC135F2A38296161BB1D02EAB04E6452EE",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128009,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": "engaged",
+  "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.98",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "alexandra_mikhailova",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "alexandra_mikhailova",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "alexandra_mikhailova",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "alexandra_mikhailova",
+      "answer_voice": "timothy_hanks",
+      "answer_voice_segments": [
+        "timothy_hanks"
+      ]
+    }
+  ],
+  "asr_spotcheck_result": "passed",
+  "source_engine": "F5TTS_v1_Base",
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue04/Hanks_Mikhailova_Friedman/interview_manifest.json",
+  "audio_chapters_url": "/media/audio/bulletin/voice-clone/Issue04/Hanks_Mikhailova_Friedman/interview_chapters.json"
 }
