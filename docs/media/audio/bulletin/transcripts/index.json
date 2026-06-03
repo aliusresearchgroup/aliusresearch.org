@@ -1015,7 +1015,8 @@
           "monima_chadha"
         ]
       }
-    ]
+    ],
+    "audio_manifest": "/media/audio/bulletin/voice-clone/Issue05/Chadha_Aviles_Koroma/interview_manifest.json"
   },
   "bulletin-olson-yaden-therapeutic-effects": {
     "src": "/media/audio/bulletin/transcripts/bulletin-olson-yaden-therapeutic-effects.json",
