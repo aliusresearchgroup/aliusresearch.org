@@ -41,45 +41,101 @@
       "answer": "Scientific research should contribute to the lives of voice-hearers in whatever way people who hear voices want it to. A recent study I was involved with found that people hearing voices had one of two basic stances towards recovery. The first was “turning away”. Here, people generally noticed a turning point when they were prescribed medication that helped. This group tended to accept a medical model of the experience, viewed their voices as being symptoms of an illness, and had a strong sense of wanting to put the experience behind them and get on with their lives. For people who want to view their voice-hearing in this way, scientific research into the psychopharmacological treatment of voice-hearing, such as research into new anti-inflammatory and re-myelinating interventions, and new forms of biological treatment such as neurostimulation and neurofeedback, building on basic biological research into the experience, may be of value. We also found another group of people whose recovery stories involved a “turning toward” approach. This group were characterised by a tendency to turn to face problems, to actively engage with voices, to be curious about what voice-hearing meant, to test their beliefs about voices, and to change their relationships with voices. Here, scientific research needs to focus on the meaning of the voice-hearing experience in the context of the hearer’s life, the relation the hearer has with their voice, and how/if tools such as the Maastricht Interview for Voice Hearing can be effective. There needs to be a lot more of this type of research funded. We are lucky to live in a time when there is a great deal of wonderful collaborative research being undertaken across the world between people with and without lived experience of voices, each bringing specific skills to the table, shaping the questions asked, and deciding on the outcomes desired. Just to name a few, this includes work on the Maastricht Interview being led by people who hear voices themselves; the Hearing the Voice project based in Durham in the UK; work into peer delivered interventions by Neil Thomas and his collaborators in Australia; and the multifaceted work of Nev Jones in the USA. It takes many voices to understand a voice, and I think we are finally getting somewhere together."
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue01/McCarthy-Jones_Frerejouan/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue01/McCarthy-Jones_Frerejouan/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue01/McCarthy-Jones_Frerejouan/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue01/McCarthy-Jones_Frerejouan/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 5,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 186575,
-      "duration_ms": 186575,
-      "title": "Q&A 001: First of all, you usually define your object of study as \"voice-hearing\" rather..."
+      "end_ms": 210807,
+      "duration_ms": 210807,
+      "title": "Q&A 001: First of all, you usually define your object of study as “voice-hearing” rather..."
     },
     {
       "unit": 2,
-      "start_ms": 187475,
-      "end_ms": 398375,
-      "duration_ms": 210900,
-      "title": "Q&A 002: This phenomenon of voice-hearing has given birth to many different psychological..."
+      "start_ms": 210807,
+      "end_ms": 451428,
+      "duration_ms": 240621,
+      "title": "Q&A 002: This phenomenon of voice-hearing has given birth to many different psychologica..."
     },
     {
       "unit": 3,
-      "start_ms": 399275,
-      "end_ms": 780225,
-      "duration_ms": 380950,
-      "title": "Q&A 003: Your main work on \"voice-hearing\" includes a historical perspective, which is..."
+      "start_ms": 451428,
+      "end_ms": 869183,
+      "duration_ms": 417755,
+      "title": "Q&A 003: Your main work on “voice-hearing” includes a historical perspective, which is r..."
     },
     {
       "unit": 4,
-      "start_ms": 781125,
-      "end_ms": 940525,
-      "duration_ms": 159400,
-      "title": "Q&A 004: As you just said, it's necessary to reflect on the role of distal causes, such as..."
+      "start_ms": 869183,
+      "end_ms": 1046317,
+      "duration_ms": 177134,
+      "title": "Q&A 004: As you just said, it’s necessary to reflect on the role of distal causes, such..."
     },
     {
       "unit": 5,
-      "start_ms": 941425,
-      "end_ms": 1080075,
-      "duration_ms": 138650,
-      "title": "Q&A 005: Finally, your work is clearly guided by an ethical goal, as shown by your interest..."
+      "start_ms": 1046317,
+      "end_ms": 1199599,
+      "duration_ms": 153282,
+      "title": "Q&A 005: Finally, your work is clearly guided by an ethical goal, as shown by your inter..."
     }
-  ]
+  ],
+  "audio_duration_seconds": 1199.599,
+  "audio_sha256": "802D106C78EB00BBB2649B92DF5D89517621EEBD6DDF6E9E8DB51DB96639910D",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128009,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue01/McCarthy-Jones_Frerejouan/interview_manifest.json",
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": null,
+  "tts_final_filter_chain": null,
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    }
+  ],
+  "asr_spotcheck_result": "passed",
+  "src": "/media/audio/bulletin/transcripts/bulletin-mccarthy-jones-voice-hearing.json"
 }

@@ -69,73 +69,161 @@
       "answer": "Great question and the short answer is yes, definitively. With my colleague Dr. Audrey Vanhaudenhuyse and others, we started investigating the effects of trance at the phenomenological and neurophysiological level over a year ago. There are certainly commonalities between trance and psychedelics. Some trance experts report anecdotally that trance is like psychedelic without the ingestion of drugs. Here is an excerpt of a trance experience related by Corine Sombrun who was trained in Mongolia and who came to our laboratory: “I saw a little ant and then I was this ant. I climbed in a tree and I fell from it. After, I had visions of insects and big lizards. I experienced a transformation again, with the feeling of becoming something else, like an iguana. Then my tongue started to come out with the sensation of a turtle’s tongue. After, there were the hisses of snakes, I went through all the reptiles. I had a feeling of joy, I wanted to laugh., Then it was pure joy, total happiness and a huge expansion of my perception of self”. Regarding the neurophysiological mechanisms, we have conducted an EEG study on a group of trance experts and the analyses are underway. As in psychedelics, we expect to measure elevated brain activity and complexity, along with an augmented consciousness phenomenology. 62 Another link to make is between trance, psychedelic and near-death experience, NDE, as some features of NDE seem to be common, such as the feeling of extrasensory perception and ineffability. The ultimate nature of consciousness is still full of mysteries but it is evident that deepening our knowledge of all the possible states of consciousness can only increase our understanding of the human mind and brain. I think trance studies will open a new window of research possibilities, and maybe one day we will be able to use it to cure coma."
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue04/Gosseries_Martial/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue04/Gosseries_Martial/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue04/Gosseries_Martial/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue04/Gosseries_Martial/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 9,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 173425,
-      "duration_ms": 173425,
+      "end_ms": 191245,
+      "duration_ms": 191245,
       "title": "Q&A 001: You are well known for your impressive work on disorders of consciousness, DOC,..."
     },
     {
       "unit": 2,
-      "start_ms": 174325,
-      "end_ms": 489575,
-      "duration_ms": 315250,
-      "title": "Q&A 002: Recently, you published a review in 'The Lancet Neurology' highlighting the rarity..."
+      "start_ms": 191245,
+      "end_ms": 506972,
+      "duration_ms": 315727,
+      "title": "Q&A 002: Recently, you published a review in ‘The Lancet Neurology’ highlighting the rar..."
     },
     {
       "unit": 3,
-      "start_ms": 490475,
-      "end_ms": 648050,
-      "duration_ms": 157575,
+      "start_ms": 506972,
+      "end_ms": 661706,
+      "duration_ms": 154734,
       "title": "Q&A 003: Scott and Carhart-Harris published a paper discussing the potential capacity of..."
     },
     {
       "unit": 4,
-      "start_ms": 648950,
-      "end_ms": 717800,
-      "duration_ms": 68850,
-      "title": "Q&A 004: Since then, have you heard some of your colleagues from the DOC field discussing..."
+      "start_ms": 661706,
+      "end_ms": 737508,
+      "duration_ms": 75802,
+      "title": "Q&A 004: Since then, have you heard some of your colleagues from the DOC field discussin..."
     },
     {
       "unit": 5,
-      "start_ms": 718700,
-      "end_ms": 929025,
-      "duration_ms": 210325,
-      "title": "Q&A 005: What do you think about it now? Do you think the neurocognitive mechanisms..."
+      "start_ms": 737508,
+      "end_ms": 950311,
+      "duration_ms": 212803,
+      "title": "Q&A 005: What do you think about it now? Do you think the neurocognitive mechanisms sust..."
     },
     {
       "unit": 6,
-      "start_ms": 929925,
-      "end_ms": 1089525,
-      "duration_ms": 159600,
-      "title": "Q&A 006: While there is currently no effective treatment, there are some promising..."
+      "start_ms": 950311,
+      "end_ms": 1099830,
+      "duration_ms": 149519,
+      "title": "Q&A 006: While there is currently no effective treatment, there are some promising appro..."
     },
     {
       "unit": 7,
-      "start_ms": 1090425,
-      "end_ms": 1195650,
-      "duration_ms": 105225,
-      "title": "Q&A 007: According to you, what are the two most important challenges inherent in the..."
+      "start_ms": 1099830,
+      "end_ms": 1213186,
+      "duration_ms": 113356,
+      "title": "Q&A 007: According to you, what are the two most important challenges inherent in the te..."
     },
     {
       "unit": 8,
-      "start_ms": 1196550,
-      "end_ms": 1239175,
-      "duration_ms": 42625,
-      "title": "Q&A 008: At the University Hospital of Lige, you are in frequent contact with the families..."
+      "start_ms": 1213186,
+      "end_ms": 1265691,
+      "duration_ms": 52505,
+      "title": "Q&A 008: At the University Hospital of Liège, you are in frequent contact with the famil..."
     },
     {
       "unit": 9,
-      "start_ms": 1240075,
-      "end_ms": 1356400,
-      "duration_ms": 116325,
-      "title": "Q&A 009: Next to your interest in DOC, you have recently published an article about..."
+      "start_ms": 1265691,
+      "end_ms": 1394694,
+      "duration_ms": 129003,
+      "title": "Q&A 009: Next to your interest in DOC, you have recently published an article about cogn..."
     }
-  ]
+  ],
+  "audio_duration_seconds": 1394.694,
+  "audio_sha256": "DC8F7FDCEAF77E765E8AD76CE2D3E0CD0FF94A1F55E755B8363814603FDAE50F",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128008,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue04/Gosseries_Martial/interview_manifest.json",
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": null,
+  "tts_final_filter_chain": "loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "charlotte_martial",
+      "answer_voice": "olivia_gosseries",
+      "answer_voice_segments": [
+        "olivia_gosseries"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "charlotte_martial",
+      "answer_voice": "olivia_gosseries",
+      "answer_voice_segments": [
+        "olivia_gosseries"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "charlotte_martial",
+      "answer_voice": "olivia_gosseries",
+      "answer_voice_segments": [
+        "olivia_gosseries"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "charlotte_martial",
+      "answer_voice": "olivia_gosseries",
+      "answer_voice_segments": [
+        "olivia_gosseries"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "charlotte_martial",
+      "answer_voice": "olivia_gosseries",
+      "answer_voice_segments": [
+        "olivia_gosseries"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "charlotte_martial",
+      "answer_voice": "olivia_gosseries",
+      "answer_voice_segments": [
+        "olivia_gosseries"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "charlotte_martial",
+      "answer_voice": "olivia_gosseries",
+      "answer_voice_segments": [
+        "olivia_gosseries"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "charlotte_martial",
+      "answer_voice": "olivia_gosseries",
+      "answer_voice_segments": [
+        "olivia_gosseries"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "charlotte_martial",
+      "answer_voice": "olivia_gosseries",
+      "answer_voice_segments": [
+        "olivia_gosseries"
+      ]
+    }
+  ],
+  "asr_spotcheck_result": "passed",
+  "src": "/media/audio/bulletin/transcripts/bulletin-gosseries-disorders.json"
 }

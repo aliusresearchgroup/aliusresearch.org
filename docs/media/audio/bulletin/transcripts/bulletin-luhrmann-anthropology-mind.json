@@ -48,52 +48,116 @@
       "answer": "I do think that researchers could learn something from Levy-Bruhl: I think he is describing a state of being in the world which is far more common, and far more important to religion, than we often realize. Levy-Bruhl saw that what it is to be religious is to experience the world as responsive and full of meaning. In How Natives Think, Levy-Bruhl argued that the distinctive feature of the “primitive” mind was that such primitives experienced themselves as participating in the external world, and the external world as participating in their minds and bodies. Levy-Bruhl called such an orientation “mystical” and he described it as governed by “the law of participation” in which objects are “both themselves and other than themselves.” At the end of his life, in the posthumous Notebooks, Levy-Bruhl abandoned the claim that so-called primitive minds were fundamentally different from those of Europeans. He abandoned the term ‘prelogical’ and began to write of participation as common to all people, different modes of thought rather than different minds. The mystical mode of thought was both affective and conceptual, and had those features which he had attributed to participation all along: independence from ordinary space and time, logical contradictions, an object is both here and there, identity between objects and their arbitrary features, like hair cuttings and the person from whom they came, “the feeling of a contact, most often unforeseen, with a reality other than the reality given in the surrounding milieu.” He thought that the mystical mode intermixed with everyday thought continually in our minds. For him, the puzzle became, “How does it happen that these “mental habits” make themselves felt in certain circumstances and not in others?“ I believe that what the absorption scale captures is an interest in feeling sensorially engaged with a responsive world, and that this interest facilitates a sense that the world is alive, aware, intelligent, interested, that it contains, in short, an invisible other. In recent years, I have been developing an alternate scale to the Tellegen absorption scale. Here are some new items that strongly correlate with the absorption scale: “Sometimes the world seems intensely present to me” “When I walk through a forest, I like to think that the trees are murmuring words of wisdom for me” “I have the distinct sense of a wise watchful presence” “When I hear the wave lap against the shore, I sometimes think of how much those waves might know”"
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue01/Luhrmann_Fortier/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue01/Luhrmann_Fortier/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue01/Luhrmann_Fortier/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue01/Luhrmann_Fortier/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 6,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 137800,
-      "duration_ms": 137800,
+      "end_ms": 106945,
+      "duration_ms": 106945,
       "title": "Q&A 001: To begin, could you please tell us a few words as to how you position yourself..."
     },
     {
       "unit": 2,
-      "start_ms": 138700,
-      "end_ms": 320275,
-      "duration_ms": 181575,
+      "start_ms": 106945,
+      "end_ms": 242992,
+      "duration_ms": 136047,
       "title": "Q&A 002: While studying magicians in contemporary England or evangelicals in the US, it..."
     },
     {
       "unit": 3,
-      "start_ms": 321175,
-      "end_ms": 986050,
-      "duration_ms": 664875,
-      "title": "Q&A 003: In your work, you are especially interested in understanding the mechanisms..."
+      "start_ms": 242992,
+      "end_ms": 762077,
+      "duration_ms": 519085,
+      "title": "Q&A 003: In your work, you are especially interested in understanding the mechanisms thr..."
     },
     {
       "unit": 4,
-      "start_ms": 986950,
-      "end_ms": 1255375,
-      "duration_ms": 268425,
-      "title": "Q&A 004: In your research, you have demonstrated that the shift from imagination to..."
+      "start_ms": 762077,
+      "end_ms": 958871,
+      "duration_ms": 196794,
+      "title": "Q&A 004: In your research, you have demonstrated that the shift from imagination to perc..."
     },
     {
       "unit": 5,
-      "start_ms": 1256275,
-      "end_ms": 1690450,
-      "duration_ms": 434175,
-      "title": "Q&A 005: The question of cognitive penetrability has sparked much discussions. In your own..."
+      "start_ms": 958871,
+      "end_ms": 1251334,
+      "duration_ms": 292463,
+      "title": "Q&A 005: The question of cognitive penetrability has sparked much discussions. In your o..."
     },
     {
       "unit": 6,
-      "start_ms": 1691350,
-      "end_ms": 1961525,
-      "duration_ms": 270175,
-      "title": "Q&A 006: One of your present interests deals with participation, sensuous..."
+      "start_ms": 1251334,
+      "end_ms": 1443035,
+      "duration_ms": 191701,
+      "title": "Q&A 006: One of your present interests deals with participation, sensuous being-in-the-w..."
     }
-  ]
+  ],
+  "audio_duration_seconds": 1443.035,
+  "audio_sha256": "D87622B6672CD33CF3702B644CC1EF78619ADD9D244C723D65D656577FCE74DF",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128007,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue01/Luhrmann_Fortier/interview_manifest.json",
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": null,
+  "tts_final_filter_chain": null,
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    }
+  ],
+  "asr_spotcheck_result": "passed",
+  "src": "/media/audio/bulletin/transcripts/bulletin-luhrmann-anthropology-mind.json"
 }
