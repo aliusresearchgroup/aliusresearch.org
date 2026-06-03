@@ -891,69 +891,69 @@
       {
         "unit": 1,
         "start_ms": 0,
-        "end_ms": 221917,
-        "duration_ms": 221917,
+        "end_ms": 197682,
+        "duration_ms": 197682,
         "title": "Q&A 001: The Altered States Database is by far the most ambitious attempt to systematica..."
       },
       {
         "unit": 2,
-        "start_ms": 221917,
-        "end_ms": 278159,
-        "duration_ms": 56242,
+        "start_ms": 197682,
+        "end_ms": 247782,
+        "duration_ms": 50100,
         "title": "Q&A 002: It must have been a lot of effort to compile this database! Are you still activ..."
       },
       {
         "unit": 3,
-        "start_ms": 278159,
-        "end_ms": 340838,
-        "duration_ms": 62679,
+        "start_ms": 247782,
+        "end_ms": 303616,
+        "duration_ms": 55834,
         "title": "Q&A 003: Befitting of the lengthy effort, you designated this paradigm with the lengthy..."
       },
       {
         "unit": 4,
-        "start_ms": 340838,
-        "end_ms": 583422,
-        "duration_ms": 242584,
+        "start_ms": 303616,
+        "end_ms": 519708,
+        "duration_ms": 216092,
         "title": "Q&A 004: What are the main advantages of using pharmacological versus non pharmacologica..."
       },
       {
         "unit": 5,
-        "start_ms": 583422,
-        "end_ms": 744355,
-        "duration_ms": 160933,
+        "start_ms": 519708,
+        "end_ms": 663065,
+        "duration_ms": 143357,
         "title": "Q&A 005: Your previous work investigated ASCs via the Ganzfeld induction method. This is..."
       },
       {
         "unit": 6,
-        "start_ms": 744355,
-        "end_ms": 920872,
-        "duration_ms": 176517,
+        "start_ms": 663065,
+        "end_ms": 820305,
+        "duration_ms": 157240,
         "title": "Q&A 006: From a conceptual standpoint, what do you think about the construct validity of..."
       },
       {
         "unit": 7,
-        "start_ms": 920872,
-        "end_ms": 1112636,
-        "duration_ms": 191764,
+        "start_ms": 820305,
+        "end_ms": 991127,
+        "duration_ms": 170822,
         "title": "Q&A 007: A key assumption of your approach, as well as Dittrich\u2019s, is that ASCs have cer..."
       },
       {
         "unit": 8,
-        "start_ms": 1112636,
-        "end_ms": 1314225,
-        "duration_ms": 201589,
+        "start_ms": 991127,
+        "end_ms": 1170701,
+        "duration_ms": 179574,
         "title": "Q&A 008: The utility of the database also seems dependent on the amount of data covering..."
       },
       {
         "unit": 9,
-        "start_ms": 1314225,
-        "end_ms": 1378259,
-        "duration_ms": 64034,
+        "start_ms": 1170701,
+        "end_ms": 1227742,
+        "duration_ms": 57041,
         "title": "Q&A 009: Could you reflect on some of the negative risks of psychedelics and why the cur..."
       }
     ],
-    "audio_duration_seconds": 1378.259,
-    "audio_sha256": "F57E2C8B6A0B43D6A341CCFD95114BAFC592FAA06D3606239CCC962703AF8CFE",
+    "audio_duration_seconds": 1227.742,
+    "audio_sha256": "27FC570834F2253E2A746759EC24A40935B4D8E4BC9B4B5248AF58E8D5F9D5D4",
     "audio_codec": "mp3",
     "audio_bit_rate_bps": 128008,
     "audio_sample_rate_hz": 24000,
