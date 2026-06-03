@@ -2490,43 +2490,79 @@
       {
         "unit": 1,
         "start_ms": 0,
-        "end_ms": 198211,
-        "duration_ms": 198211,
+        "end_ms": 264280,
+        "duration_ms": 264280,
         "title": "Q&A 001: Why are hypnosis and mindfulness interesting topics for the study of consciousn..."
       },
       {
         "unit": 2,
-        "start_ms": 198211,
-        "end_ms": 405003,
-        "duration_ms": 206792,
+        "start_ms": 264280,
+        "end_ms": 540000,
+        "duration_ms": 275720,
         "title": "Q&A 002: Do you think that the notion of altered state of consciousness is a useful noti..."
       },
       {
         "unit": 3,
-        "start_ms": 405003,
-        "end_ms": 564030,
-        "duration_ms": 159027,
+        "start_ms": 540000,
+        "end_ms": 752034,
+        "duration_ms": 212034,
         "title": "Q&A 003: Do we have an idea of the neurocognitive mechanisms sustaining the action of hy..."
       },
       {
         "unit": 4,
-        "start_ms": 564030,
-        "end_ms": 695599,
-        "duration_ms": 131569,
+        "start_ms": 752034,
+        "end_ms": 927458,
+        "duration_ms": 175424,
         "title": "Q&A 004: Hypnosis is a well-established method as a psychotherapeutic and analgesic meth..."
       }
     ],
-    "audio_duration_seconds": 695.599,
-    "audio_sha256": "E89CA8DE54D3E7060E843C3D1B8AB37ADEE65CF0CEF4D405C3F1CE71E62336E2",
+    "audio_duration_seconds": 927.458,
+    "audio_sha256": "0D28B38270F4D26304B9E685328950DBAE3B5099582ABA92D430E7F7EA20D51C",
     "audio_codec": "mp3",
-    "audio_bit_rate_bps": 128016,
+    "audio_bit_rate_bps": 128013,
     "audio_sample_rate_hz": 24000,
     "audio_channels": 1,
     "tts_engine": "F5TTS_v1_Base",
-    "tts_delivery_preset": null,
-    "tts_final_filter_chain": null,
-    "pronunciation_protocol": null,
-    "asr_spotcheck_result": "passed"
+    "tts_delivery_preset": "engaged",
+    "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.75",
+    "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+    "asr_spotcheck_result": "passed",
+    "audio_manifest": "/media/audio/bulletin/voice-clone/Issue03/Dienes_Martin/interview_manifest.json",
+    "question_voice_policy": "qa_header_or_plan_default",
+    "unit_voice_routing": [
+      {
+        "unit": 1,
+        "question_voice": "jean_remi_martin",
+        "answer_voice": "zoltan_dienes",
+        "answer_voice_segments": [
+          "zoltan_dienes"
+        ]
+      },
+      {
+        "unit": 2,
+        "question_voice": "jean_remi_martin",
+        "answer_voice": "zoltan_dienes",
+        "answer_voice_segments": [
+          "zoltan_dienes"
+        ]
+      },
+      {
+        "unit": 3,
+        "question_voice": "jean_remi_martin",
+        "answer_voice": "zoltan_dienes",
+        "answer_voice_segments": [
+          "zoltan_dienes"
+        ]
+      },
+      {
+        "unit": 4,
+        "question_voice": "jean_remi_martin",
+        "answer_voice": "zoltan_dienes",
+        "answer_voice_segments": [
+          "zoltan_dienes"
+        ]
+      }
+    ]
   },
   "bulletin-preller-sociality": {
     "src": "/media/audio/bulletin/transcripts/bulletin-preller-sociality.json",

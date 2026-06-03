@@ -34,38 +34,86 @@
       "answer": "Both hypnosis and mindfulness can be used to deal with pain. Both are psychological therapies, involving regulation of attention and attitudes. But that doesn’t mean they affect pain processing by the same underlying mechanisms. With a hypnotic analgesia suggestion, a counterfactual is considered: For example, the arm is like a block of wood and so doesn’t feel the pain inflicted on it. Conversely, in mindfulness, one holds the pain in awareness, trying to see it as it is: One sees the body state as it is, the unpleasant feeling as it is, the overall state of the mind as it is, and puts it all in context. Despite the different approach at the psychological level, in outcome both hypnosis and mindfulness can lead to important reductions in both sensory and affective pain. The similar outcome may be produced by common or different mechanisms. A possible common mechanism is expectation. As postulated by Irving Kirsch, maybe hypnotic response is directly produced by a response expectancy, just as placebo analgesia is directly produced by the expectation of pain relief. Expectations are rarely if ever shown to be equivalent between mindfulness and active control interventions; maybe expectation is at work here too. This explanation of the effectiveness of hypnosis and mindfulness in reducing pain is so simple it should be given considerable prior plausibility. There is a striking and curious fact to consider, however: When placebo analgesia is based on verbal suggestion, without prior conditioning to a particular class of active analgesics, blocking opioid pathways with Naloxone substantially reduces, and perhaps completely removes, placebo analgesia. On the other hand, Naloxone leaves hypnotic analgesia substantially in place, perhaps doesn’t touch it at all. So the underlying mechanism for hypnotic analgesia appears not to be opioid based, quite unlike placebo analgesia. The evidence for mindfulness is not yet clear, but is consistent with an expectation-component based on opioids and something else. According to a metacognitive theory of hypnosis, hypnotic analgesia may involve strategies such as may be used in cognitive behavioural therapy, CBT but without being aware of engaging in strategies. Mindfulness involves the opposite strategies. Proper work disentangling the different pain pathways, the opioid and others, by differentially blocking them in the case of placebo, hypnosis, mindfulness and CBT is needed. Gyorgy Moga in my lab has started doing just that. So we will hopefully find out the extent to which hypnosis and mindfulness have the same or different psychophysiological mechanisms."
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue03/Dienes_Martin/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue03/Dienes_Martin/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue03/Dienes_Martin/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue03/Dienes_Martin/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 4,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 275675,
-      "duration_ms": 275675,
-      "title": "Q&A 001: Why are hypnosis and mindfulness interesting topics for the study of consciousness?"
+      "end_ms": 264280,
+      "duration_ms": 264280,
+      "title": "Q&A 001: Why are hypnosis and mindfulness interesting topics for the study of consciousn..."
     },
     {
       "unit": 2,
-      "start_ms": 276575,
-      "end_ms": 550700,
-      "duration_ms": 274125,
-      "title": "Q&A 002: Do you think that the notion of altered state of consciousness is a useful notion..."
+      "start_ms": 264280,
+      "end_ms": 540000,
+      "duration_ms": 275720,
+      "title": "Q&A 002: Do you think that the notion of altered state of consciousness is a useful noti..."
     },
     {
       "unit": 3,
-      "start_ms": 551600,
-      "end_ms": 797275,
-      "duration_ms": 245675,
-      "title": "Q&A 003: Do we have an idea of the neurocognitive mechanisms sustaining the action of..."
+      "start_ms": 540000,
+      "end_ms": 752034,
+      "duration_ms": 212034,
+      "title": "Q&A 003: Do we have an idea of the neurocognitive mechanisms sustaining the action of hy..."
     },
     {
       "unit": 4,
-      "start_ms": 798175,
-      "end_ms": 984250,
-      "duration_ms": 186075,
-      "title": "Q&A 004: Hypnosis is a well-established method as a psychotherapeutic and analgesic method,..."
+      "start_ms": 752034,
+      "end_ms": 927458,
+      "duration_ms": 175424,
+      "title": "Q&A 004: Hypnosis is a well-established method as a psychotherapeutic and analgesic meth..."
     }
-  ]
+  ],
+  "audio_duration_seconds": 927.458,
+  "audio_sha256": "0D28B38270F4D26304B9E685328950DBAE3B5099582ABA92D430E7F7EA20D51C",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128013,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue03/Dienes_Martin/interview_manifest.json",
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": "engaged",
+  "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.75",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "jean_remi_martin",
+      "answer_voice": "zoltan_dienes",
+      "answer_voice_segments": [
+        "zoltan_dienes"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "jean_remi_martin",
+      "answer_voice": "zoltan_dienes",
+      "answer_voice_segments": [
+        "zoltan_dienes"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "jean_remi_martin",
+      "answer_voice": "zoltan_dienes",
+      "answer_voice_segments": [
+        "zoltan_dienes"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "jean_remi_martin",
+      "answer_voice": "zoltan_dienes",
+      "answer_voice_segments": [
+        "zoltan_dienes"
+      ]
+    }
+  ],
+  "asr_spotcheck_result": "passed",
+  "src": "/media/audio/bulletin/transcripts/bulletin-dienes-hypnosis-meditation.json"
 }
