@@ -3591,7 +3591,8 @@
         ]
       }
     ],
-    "asr_spotcheck_result": "passed"
+    "asr_spotcheck_result": "passed",
+    "audio_manifest": "/media/audio/bulletin/voice-clone/Issue02/ORegan_Erickson-Davis/interview_manifest.json"
   },
   "bulletin-ratcliffe-hallucinations": {
     "src": "/media/audio/bulletin/transcripts/bulletin-ratcliffe-hallucinations.json",
