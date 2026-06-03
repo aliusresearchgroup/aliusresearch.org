@@ -2193,7 +2193,8 @@
           "tim_bayne"
         ]
       }
-    ]
+    ],
+    "audio_manifest": "/media/audio/bulletin/voice-clone/Issue03/Bayne_Bucci_Koroma/interview_manifest.json"
   },
   "bulletin-dennett-explained": {
     "src": "/media/audio/bulletin/transcripts/bulletin-dennett-explained.json",
