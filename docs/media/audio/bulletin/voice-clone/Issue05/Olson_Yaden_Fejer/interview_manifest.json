@@ -6,23 +6,117 @@
   "engine": "F5TTS_v1_Base",
   "delivery_preset": "engaged",
   "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
-  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_e_olson",
+      "answer_voice_segments": [
+        "david_b_yaden",
+        "david_e_olson"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_b_yaden",
+      "answer_voice_segments": [
+        "david_b_yaden",
+        "david_e_olson"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_e_olson",
+      "answer_voice_segments": [
+        "david_b_yaden",
+        "david_e_olson"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_b_yaden",
+      "answer_voice_segments": [
+        "david_e_olson"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_e_olson",
+      "answer_voice_segments": [
+        "david_e_olson",
+        "david_b_yaden"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_b_yaden",
+      "answer_voice_segments": [
+        "david_b_yaden",
+        "david_e_olson"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_e_olson",
+      "answer_voice_segments": [
+        "david_e_olson",
+        "david_b_yaden",
+        "david_e_olson",
+        "david_b_yaden",
+        "david_e_olson"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_b_yaden",
+      "answer_voice_segments": [
+        "david_b_yaden",
+        "david_e_olson"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_e_olson",
+      "answer_voice_segments": [
+        "david_e_olson",
+        "david_b_yaden"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "george_fejer",
+      "answer_voice": "david_b_yaden",
+      "answer_voice_segments": [
+        "david_b_yaden",
+        "david_e_olson"
+      ]
+    }
+  ],
   "duration_seconds": 1801.051,
   "codec": "mp3",
   "sample_rate_hz": 24000,
   "channels": 1,
   "bit_rate_bps": 128005,
-  "sha256": "B0416DB99750FFC0EE7CA6D94BA78D2A13EEF0E8D6FC14F0D6B9107A3F686757",
+  "sha256": "B724F33DF512B06F63E807C247E7F84E881A433A4855628FA572516C63D92612",
   "asr_spotcheck": {
     "result": "passed",
-    "sample": "first60",
-    "model": "whisper_tiny.en",
-    "transcript": "Although you are addressing two sides of the same coin you're back to back publications\r\nare primarily aimed at questioning whether the subjective effects play a causal role within\r\nthe therapeutic process, or whether it can be regarded as an epiphenomenon that accompanies\r\ntherapeutic outcomes, but not a principal mechanism.\r\nThe first question is related to the subject matter of dualism, and whether the comparison\r\nbetween neuroplasticity alone versus neuroplasticity plus subjective experience implies that\r\nthere is a dichotomous relationship between subjectivity and the neurobiological substrate.\r\nHow do you define the subjective experience?\r\nIn terms of its biological function and embeddedness within a neurobiological substrate,\r\nwhat is its relationship to neuroplasticity?\r\nAre these pitted against each other within your scientific framework in a manner\r\nthat implicitly endorses dualism?\r\nI would like to take this one first.\r\nIf you don't mind, David, I think both of us agree on so much, and this particular topic\r\nof dualism was definitely something that we agreed on from the get-goes.\r\nMy co-author Roland Griffiths, and I talked quite a-",
-    "checks": [
-      "no_spoken_speaker_labels_in_first60",
-      "question_answer_handoff_present",
-      "no_alius_spelling_issue_in_sample"
-    ]
+    "model": "tiny.en",
+    "language": "en",
+    "clip": "AudioTranscription/work/verification/Issue05_Olson_Yaden_Fejer/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue05_Olson_Yaden_Fejer/first60_full.txt",
+    "checked_at": "2026-06-03T19:11:31.745726+00:00",
+    "summary": "First 60s ASR confirms George question audio followed by the first Yaden answer segment, with speaker labels omitted.",
+    "excerpt": "Although you are addressing two sides of the same coin you're back to back publications\nare primarily aimed at questioning whether the subjective effects play a causal role within\nthe therapeutic process, or whether it can be regarded as an epiphenomenon that accompanies\ntherapeutic outcomes, but not a principal mechanism.\nThe first question is related to the subject matter of dualism, and whether the comparison\nbetween neuroplasticity alone versus neuroplasticity plus subjective experience implies that\nthere is a dichotomous relationship between subjectivity and the neurobiological substrate.\nHow do you define the subjective experience in terms of its biological function and\nembeddedness within a neurobiological substrate?\nWhat is its relationship to neuroplasticity?\nAre these pitted against each other within your scientific framework in a manner that\nimplicitly endorses dualism?\nI would like to take this one first.\nIf you don't mind David, I think both of us agree on so much, and this particular topic\nof dualism was definitely something that we agreed on from the get-goes.\nMy co-author Roland Griffiths, and I talked quite a-"
   },
   "voice_profiles": [
     {
