@@ -1,0 +1,40 @@
+{
+  "interview_id": "Issue05/Schmidt_Fejer",
+  "interview_slug": "Issue05_Schmidt_Fejer",
+  "audio": "/media/audio/bulletin/voice-clone/Issue05/Schmidt_Fejer/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue05/Schmidt_Fejer/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "duration_seconds": 1378.259,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128008,
+  "sha256": "F57E2C8B6A0B43D6A341CCFD95114BAFC592FAA06D3606239CCC962703AF8CFE",
+  "asr_spotcheck": {
+    "result": "passed",
+    "scope": "first_60_seconds",
+    "tool": "openai-whisper base local",
+    "audio": "AudioTranscription/work/Issue05_Schmidt_Fejer/asr_first60.wav",
+    "transcript_excerpt": "The altered states database is by far the most ambitious attempt to systematically catalog psychometric data on both pharmacologically and non-pharmacologically induced altered states of consciousness up to date. How did you become interested in altered states of consciousness, ASC, and what was your motivation to embark on this project? I am passionate about contributing to the empirical work investigating the neural correlates of human consciousness, NCC.",
+    "notes": "Spot check matches qa_001 opening question and answer content; no reference prompt leakage detected."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "george_fejer",
+      "speaker_name": "George Fejer",
+      "source_url": "https://www.youtube.com/watch?v=CymtPvJDYW0",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "timo_torsten_schmidt",
+      "speaker_name": "Timo Torsten Schmidt",
+      "source_url": "https://www.youtube.com/watch?v=F6OC4GOoPD4",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "interview_id": "Issue01/Seligman_Halloy",
+  "interview_slug": "Issue01_Seligman_Halloy",
+  "audio": "/media/audio/bulletin/voice-clone/Issue01/Seligman_Halloy/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue01/Seligman_Halloy/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": null,
+  "final_filter_chain": null,
+  "pronunciation_protocol": null,
+  "duration_seconds": 569.956,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128021,
+  "sha256": "519DEAE24A77D2455AD382C37A5A118AF8899768C5FA12F883020A4C93C5AFFC",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue01_Seligman_Halloy/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue01_Seligman_Halloy/first60_full.txt",
+    "notes": "Fresh v5 Arnaud render: first-minute ASR follows the intended opening and shows no obvious French reference prompt-tail leakage."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "arnaud_halloy",
+      "speaker_name": "Arnaud Halloy",
+      "source_url": "https://www.canal-u.tv/chaines/mshs-sud-est/jecis-journees-d-etudes-cognition-information-et-societe-2023/l-hypothese-des",
+      "reference_review_status": "asr_spotcheck_passed_f5_smoke_passed_needs_full_render_review",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "rebecca_seligman",
+      "speaker_name": "Rebecca Seligman",
+      "source_url": "https://www.youtube.com/watch?v=wfrKnnuTF2c",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    }
+  ]
+}

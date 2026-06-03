@@ -1,0 +1,40 @@
+{
+  "interview_id": "Issue04/Carter_Preller",
+  "interview_slug": "Issue04_Carter_Preller",
+  "audio": "/media/audio/bulletin/voice-clone/Issue04/Carter_Preller/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue04/Carter_Preller/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": null,
+  "final_filter_chain": null,
+  "pronunciation_protocol": null,
+  "duration_seconds": 1114.439,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128008,
+  "sha256": "8F05FB42BB73488ABDE4CEA2022002951AE22CF4C35DA5148DD7E080FE30BE47",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue04_Carter_Preller/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue04_Carter_Preller/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "katrin_preller",
+      "speaker_name": "Katrin Preller",
+      "source_url": "https://www.youtube.com/watch?v=t9KMDg_ZGyg",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "olivia_carter",
+      "speaker_name": "Olivia Carter",
+      "source_url": "https://www.youtube.com/watch?v=s-Y_9oxxBj8",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "interview_id": "Issue05/Canna_Seligman_Koroma",
+  "interview_slug": "Issue05_Canna_Seligman_Koroma",
+  "audio": "/media/audio/bulletin/voice-clone/Issue05/Canna_Seligman_Koroma/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue05/Canna_Seligman_Koroma/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": null,
+  "final_filter_chain": null,
+  "pronunciation_protocol": null,
+  "duration_seconds": 1659.855,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128006,
+  "sha256": "3C89EC56D2942A5B29BA2FA67B9AF1DA669A1E686ADDDD4E65C70FE8721677CB",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue05_Canna_Seligman_Koroma/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue05_Canna_Seligman_Koroma/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "maddalena_canna",
+      "speaker_name": "Maddalena Canna",
+      "source_url": "https://www.youtube.com/watch?v=_GkB6Uz-pV0",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    }
+  ]
+}
