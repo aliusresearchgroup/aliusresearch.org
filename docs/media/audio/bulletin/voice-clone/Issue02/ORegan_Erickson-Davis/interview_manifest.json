@@ -1,0 +1,120 @@
+{
+  "interview_id": "Issue02/ORegan_Erickson-Davis",
+  "interview_slug": "Issue02_ORegan_Erickson-Davis",
+  "audio": "/media/audio/bulletin/voice-clone/Issue02/ORegan_Erickson-Davis/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue02/ORegan_Erickson-Davis/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "cordelia_erickson_davis",
+      "answer_voice": "kevin_oregan",
+      "answer_voice_segments": [
+        "kevin_oregan"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "cordelia_erickson_davis",
+      "answer_voice": "kevin_oregan",
+      "answer_voice_segments": [
+        "kevin_oregan"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "cordelia_erickson_davis",
+      "answer_voice": "kevin_oregan",
+      "answer_voice_segments": [
+        "kevin_oregan"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "cordelia_erickson_davis",
+      "answer_voice": "kevin_oregan",
+      "answer_voice_segments": [
+        "kevin_oregan"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "cordelia_erickson_davis",
+      "answer_voice": "kevin_oregan",
+      "answer_voice_segments": [
+        "kevin_oregan"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "cordelia_erickson_davis",
+      "answer_voice": "kevin_oregan",
+      "answer_voice_segments": [
+        "kevin_oregan"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "cordelia_erickson_davis",
+      "answer_voice": "kevin_oregan",
+      "answer_voice_segments": [
+        "kevin_oregan"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "cordelia_erickson_davis",
+      "answer_voice": "kevin_oregan",
+      "answer_voice_segments": [
+        "kevin_oregan"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "cordelia_erickson_davis",
+      "answer_voice": "kevin_oregan",
+      "answer_voice_segments": [
+        "kevin_oregan"
+      ]
+    }
+  ],
+  "duration_seconds": 1211.767,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128009,
+  "sha256": "706AB9FFD6275A82EAA5CBDFB5B5F8EF7767D5E7EA84AA6DBB005EEA21959665",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue02_ORegan_Erickson-Davis/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue02_ORegan_Erickson-Davis/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "routing_check": "passed_manifest_single_interviewer_cordelia_questions_kevin_answers",
+    "pronunciation_check": "not_applicable_first60_no_ALIUS_occurrence",
+    "notes": "ASR follows intended opening question; tiny ASR mishears sensorimotor but no spoken speaker labels are detected.",
+    "excerpt": "You are primarily interested in the, what it's like, aspect of sensory experience.\nTo address it, you've developed what is called the, Sinceora Motor Theory, of consciousness,\nwhich holds perception to be a law, governed mode of encounter with the environment.\nThese laws are abstracted from the Sinceora Motor contingencies of the animal in relation\nwith the environment.\nBoth the contingencies fixed by the perceiver's visual apparatus, as well as those fixed\nby the character of objects.\nThese processes of Sinceora Motor interaction are distinct from perceptual consciousness,\nhowever, which you divide into, perceptual awareness.\nOn one hand, or, transitive perceptual consciousness, which is the exercise of one's practical\nknowledge of these Sinceora Motor contingencies, and general perceptual consciousness.\nOn the other, which is the capacity to become aware, do I have that right?\nWould yo"
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "cordelia_erickson_davis",
+      "speaker_name": "Cordelia Erickson-Davis",
+      "source_url": "",
+      "reference_review_status": "kokoro_fallback_generated_not_real_voice_clone",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "kevin_oregan",
+      "speaker_name": "Kevin O'Regan",
+      "source_url": "https://www.youtube.com/watch?v=8c-qbGgEAEI",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    }
+  ]
+}
