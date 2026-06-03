@@ -1,7 +1,7 @@
 {
   "card_id": "bulletin-canna-seligman-culture",
   "source_project": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin",
-  "source_script": "AI-agents/generate_interview_audio_kokoro.py",
+  "source_script": "AudioTranscription/scripts/render_interview.py + export_render_to_website.py",
   "source_interview_id": "Issue05/Canna_Seligman_Koroma",
   "unit_count": 6,
   "units": [
@@ -48,52 +48,66 @@
       "answer": "Anthropological research is action, at many levels. First of all, ethnography, which is the staple of anthropological methodology, is a method based on establishing a qualitative, in-depth exchange with our participants. Maddalena Canna likes to say that, as anthropologists, we don’t study people, we study with people. When we conduct our usual 2-3-hour long sessions of dialogue with the participants, also called the one-on-one in-depth interviews, many things happen. Some participants may experience their symptoms, for example, functional paralysis and blindness, during the interview, monitor them with the researcher in real time, and sometimes identify meaningful connections to what is being discussed in the interview. This is just an example of how qualitative methodology is generative by itself. This verbal and somatic dialogue not only fosters self-reflexivity in the participants, but also offers the empathy and participatory care that many patients can’t find in the current healthcare system. In this sense, we aim at offering a first, immediate response to the current quality-of-care-crisis described by many patients, who feel that the healthcare system is more and more compartmentalized and dehumanized. Providing the participant with a context for expressing their distress in their own words and being recognized for the specificity of their experience can impact on further coping, if not healing. During her ethnography of seizures related to demonic possession in Nicaragua, Maddalena Canna used drawing as a means to establish a non-verbal dialogue with sufferers. Many of them experienced the processes of drawing their demons as a healthy expulsion of pathogenic meanings, a form of assisted self healing practice. Even if we won’t go as far as considering ethnographic dialogue as a healing process in and of itself, we do consider that the process of recognition intrinsic in qualitative research is likely to have a positive impact on the overall wellbeing of the participants. Also, our methodology includes a practice of self-journaling, providing each participant with a digital platform to monitor symptoms and comment on them in real-time through a phone application. This provides an additional occasion for a participatory analysis of what daily living with FND entails. Our participants are extremely well-informed and aware of the scientific literature, as well as aware of the social representations and misrepresentations circulating on FND. FND are still a mostly unknown and frequently misrecognized condition. Participants/patients are eager to work on furthering awareness and global education about FND, by contributing not as objects, but as active participants of our study. In the long term, trends are emerging in the treatment of FND towards a multi-disciplinary approach, bringing together not only psychologists and neurologists, but also social scientists and workers, towards increasingly integrated care, Bael and al., in press. Our project is a pioneer in this direction, as it is the first federal project on FND lead by social scientists in the US. In addition, we strongly believe that anthropological knowledge can be translational, allowing it to be applied in different kinds of practice. While translation can be challenging, one of things that we excel at in anthropology is understanding the different stakes and stakeholders, social and political dynamics in different contexts. This kind of insight can help us translate the findings of this work on FND in terms that will be meaningful to clinicians. In so doing, we hope to pave the way for a more multi-faceted, multi-disciplinary approach to treatment and care for people living with FND."
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue05/Canna_Seligman_Koroma/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue05/Canna_Seligman_Koroma/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue05/Canna_Seligman_Koroma/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue05/Canna_Seligman_Koroma/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 6,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 193400,
-      "duration_ms": 193400,
+      "end_ms": 169650,
+      "duration_ms": 169650,
       "title": "Q&A 001: Dr. Maddalena Canna is a Postdoctoral researcher at Northwestern University and..."
     },
     {
       "unit": 2,
-      "start_ms": 194300,
-      "end_ms": 513500,
-      "duration_ms": 319200,
-      "title": "Q&A 002: In your collaboration, you propose to explore how body-mind relationships are..."
+      "start_ms": 169650,
+      "end_ms": 405171,
+      "duration_ms": 235521,
+      "title": "Q&A 002: In your collaboration, you propose to explore how body-mind relationships are s..."
     },
     {
       "unit": 3,
-      "start_ms": 514400,
-      "end_ms": 883125,
-      "duration_ms": 368725,
-      "title": "Q&A 003: You argued that, in the case of Alice, her symptoms could arise from an enhanced..."
+      "start_ms": 405171,
+      "end_ms": 766917,
+      "duration_ms": 361746,
+      "title": "Q&A 003: You argued that, in the case of Alice, her symptoms could arise from an enhance..."
     },
     {
       "unit": 4,
-      "start_ms": 884025,
-      "end_ms": 1178600,
-      "duration_ms": 294575,
-      "title": "Q&A 004: You introduce the notion of \"self-scape\" to describe the set of possibilities that..."
+      "start_ms": 766917,
+      "end_ms": 964903,
+      "duration_ms": 197986,
+      "title": "Q&A 004: You introduce the notion of “self-scape” to describe the set of possibilities t..."
     },
     {
       "unit": 5,
-      "start_ms": 1179500,
-      "end_ms": 1442650,
-      "duration_ms": 263150,
-      "title": "Q&A 005: You argued that \"although the three dimensions that we presented, the embodiment..."
+      "start_ms": 964903,
+      "end_ms": 1219561,
+      "duration_ms": 254658,
+      "title": "Q&A 005: You argued that “although the three dimensions that we presented, the embodimen..."
     },
     {
       "unit": 6,
-      "start_ms": 1443550,
-      "end_ms": 1857200,
-      "duration_ms": 413650,
-      "title": "Q&A 006: The stigma surrounding mental diseases and its internalization by patients plays a..."
+      "start_ms": 1219561,
+      "end_ms": 1493723,
+      "duration_ms": 274162,
+      "title": "Q&A 006: The stigma surrounding mental diseases and its internalization by patients play..."
     }
-  ]
+  ],
+  "audio_duration_seconds": 1493.723,
+  "audio_sha256": "69CEA01688EAC28F1BAB63C8152C0C2690A63B828A3FCC35E7BF60087436734C",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128007,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": "engaged",
+  "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "asr_spotcheck_result": "passed",
+  "source_engine": "F5TTS_v1_Base",
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue05/Canna_Seligman_Koroma/interview_manifest.json",
+  "audio_chapters_url": "/media/audio/bulletin/voice-clone/Issue05/Canna_Seligman_Koroma/interview_chapters.json"
 }

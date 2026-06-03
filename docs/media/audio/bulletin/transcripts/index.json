@@ -648,56 +648,56 @@
       {
         "unit": 1,
         "start_ms": 0,
-        "end_ms": 188518,
-        "duration_ms": 188518,
+        "end_ms": 169650,
+        "duration_ms": 169650,
         "title": "Q&A 001: Dr. Maddalena Canna is a Postdoctoral researcher at Northwestern University and..."
       },
       {
         "unit": 2,
-        "start_ms": 188518,
-        "end_ms": 450234,
-        "duration_ms": 261716,
+        "start_ms": 169650,
+        "end_ms": 405171,
+        "duration_ms": 235521,
         "title": "Q&A 002: In your collaboration, you propose to explore how body-mind relationships are s..."
       },
       {
         "unit": 3,
-        "start_ms": 450234,
-        "end_ms": 852214,
-        "duration_ms": 401980,
+        "start_ms": 405171,
+        "end_ms": 766917,
+        "duration_ms": 361746,
         "title": "Q&A 003: You argued that, in the case of Alice, her symptoms could arise from an enhance..."
       },
       {
         "unit": 4,
-        "start_ms": 852214,
-        "end_ms": 1072220,
-        "duration_ms": 220006,
+        "start_ms": 766917,
+        "end_ms": 964903,
+        "duration_ms": 197986,
         "title": "Q&A 004: You introduce the notion of \u201cself-scape\u201d to describe the set of possibilities t..."
       },
       {
         "unit": 5,
-        "start_ms": 1072220,
-        "end_ms": 1355201,
-        "duration_ms": 282981,
+        "start_ms": 964903,
+        "end_ms": 1219561,
+        "duration_ms": 254658,
         "title": "Q&A 005: You argued that \u201calthough the three dimensions that we presented, the embodimen..."
       },
       {
         "unit": 6,
-        "start_ms": 1355201,
-        "end_ms": 1659855,
-        "duration_ms": 304654,
+        "start_ms": 1219561,
+        "end_ms": 1493723,
+        "duration_ms": 274162,
         "title": "Q&A 006: The stigma surrounding mental diseases and its internalization by patients play..."
       }
     ],
-    "audio_duration_seconds": 1659.855,
-    "audio_sha256": "3C89EC56D2942A5B29BA2FA67B9AF1DA669A1E686ADDDD4E65C70FE8721677CB",
+    "audio_duration_seconds": 1493.723,
+    "audio_sha256": "69CEA01688EAC28F1BAB63C8152C0C2690A63B828A3FCC35E7BF60087436734C",
     "audio_codec": "mp3",
-    "audio_bit_rate_bps": 128006,
+    "audio_bit_rate_bps": 128007,
     "audio_sample_rate_hz": 24000,
     "audio_channels": 1,
     "tts_engine": "F5TTS_v1_Base",
-    "tts_delivery_preset": null,
-    "tts_final_filter_chain": null,
-    "pronunciation_protocol": null,
+    "tts_delivery_preset": "engaged",
+    "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
     "asr_spotcheck_result": "passed"
   },
   "bulletin-chadha-indian-philosophy": {
