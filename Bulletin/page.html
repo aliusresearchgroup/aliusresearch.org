@@ -151,160 +151,6 @@ body.wsite-page-bulletin #wsite-content .wsite-multicol-col {
 }
 </style>
 <style>
-/* Consolidated-page design: minimalist section dividers + fixed bottom nav */
-/* DOI fragment links should land directly on the entry title, not animate. */
-html { scroll-behavior: auto !important; }
-
-/* Keep section dividers clean */
-body.wsite-page-team .wsite-section-wrap,
-body.wsite-page-bulletin .wsite-section-wrap,
-body.wsite-page-events .wsite-section-wrap,
-body.wsite-page-membership .wsite-section-wrap {
-  scroll-margin-top: 16px;
-  scroll-margin-bottom: 100px;
-}
-
-/* Anchor targets (hidden offset spans sit above dividers) */
-.tab-anchor,
-.team-anchor {
-  position: relative;
-  top: -16px;
-  visibility: hidden;
-  pointer-events: none;
-  display: block;
-  height: 0;
-}
-
-/* Page bottom breathing room so last section isn't hidden under the fixed nav */
-body.wsite-page-team #wsite-content,
-body.wsite-page-bulletin #wsite-content,
-body.wsite-page-events #wsite-content,
-body.wsite-page-membership #wsite-content {
-  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
-}
-
-/* Fixed bottom section navigation */
-.section-nav {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  margin: 0;
-  padding: 0.55rem calc(0.75rem + env(safe-area-inset-right, 0px))
-           calc(0.55rem + env(safe-area-inset-bottom, 0px))
-           calc(0.75rem + env(safe-area-inset-left, 0px));
-  background: rgba(249, 249, 249, 0.94);
-  backdrop-filter: blur(10px) saturate(1.1);
-  -webkit-backdrop-filter: blur(10px) saturate(1.1);
-  border-top: 1px solid rgba(66, 81, 76, 0.18);
-  box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.05);
-  -webkit-tap-highlight-color: transparent;
-}
-
-.section-nav ol {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow-x: auto;
-  overflow-y: hidden;
-  /* Horizontal scroll snap (browsers that don't support just scroll freely) */
-  scroll-snap-type: x proximity;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.section-nav ol::-webkit-scrollbar { display: none; }
-
-.section-nav li {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-}
-
-.section-nav {
-  /* Overridden by pretext-nav-fit.js to the largest size that fits */
-  --section-nav-font-size: 12px;
-}
-.section-nav a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 40px;
-  padding: 0.45rem 0.85rem;
-  border-radius: 999px;
-  color: #42514c;
-  text-decoration: none;
-  white-space: nowrap;
-  font-family: 'Raleway', sans-serif;
-  font-size: var(--section-nav-font-size, 12px);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: background 160ms ease, color 160ms ease,
-              font-size 200ms ease;
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-/* When everything fits, disable horizontal scroll so flex can center perfectly */
-.section-nav:not(.is-overflow) ol { overflow-x: visible; }
-.section-nav a:hover,
-.section-nav a:focus,
-.section-nav a.is-active {
-  background: rgba(123, 140, 137, 0.18);
-  color: #2a3330;
-  outline: none;
-}
-
-/* Narrow-screen tuning (pretext-nav-fit.js handles font-size â€” only tune padding/gap here) */
-@media (max-width: 640px) {
-  .section-nav { padding-top: 0.45rem; padding-bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)); }
-  .section-nav ol { gap: 0.2rem; padding: 0 0.25rem; }
-  .section-nav.is-overflow ol { justify-content: flex-start; }
-  .section-nav a { padding: 0.4rem 0.7rem; letter-spacing: 0.06em; }
-}
-@media (max-width: 380px) {
-  .section-nav a { padding: 0.35rem 0.6rem; }
-}
-
-/* Avatar styling (team page) - kept here for a single-source-of-truth */
-body.wsite-page-team .team-avatar {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 0.8rem;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #e8ece9;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  flex-shrink: 0;
-}
-body.wsite-page-team .team-avatar img,
-body.wsite-page-team .team-avatar picture {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
-  display: block;
-  border-radius: 50%;
-  max-width: none !important;
-}
-@media (max-width: 640px) {
-  body.wsite-page-team .team-avatar { width: 140px; height: 140px; }
-}
-
-/* Reduce visual noise on section dividers */
-body.wsite-page-team .styled-hr,
-body.wsite-page-bulletin .styled-hr,
-body.wsite-page-events .styled-hr,
-body.wsite-page-membership .styled-hr {
-  border: 0;
-  border-top: 1px solid rgba(66, 81, 76, 0.15);
-  max-width: 320px;
-  margin: 10px auto 0;
-}
-</style>
-<style>
 /* Site refresh â€” palette lock (A13) + reading-column (A14) */
 .wsite-page-bulletin #wsite-content h2,
 .wsite-page-bulletin #wsite-content h2 *,
@@ -675,6 +521,122 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__copy .bulletin-card__key
 body.wsite-page-bulletin #wsite-content .bulletin-card__copy .bulletin-card__keywords strong {
   color: #1a4d2e;
 }
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio {
+  align-items: center;
+  background: #f8faf8;
+  border: 1px solid #dbe4dc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+  max-width: 720px;
+  padding: 12px;
+  width: 100%;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-source {
+  display: none;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-player {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-player__transport {
+  align-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto minmax(160px, 1fr) auto;
+  width: 100%;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-player__button,
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-skip {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #b8c9b4;
+  border-radius: 6px;
+  color: #3f6f25;
+  cursor: pointer;
+  display: inline-flex;
+  font: 700 12.5px/1 Raleway, Arial, sans-serif;
+  justify-content: center;
+  min-height: 34px;
+  min-width: 58px;
+  padding: 0 11px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-player__button:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-player__button:focus,
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-skip:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-skip:focus {
+  background: #edf4ea;
+  color: #2f5e1e;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-player__button:disabled,
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-skip:disabled {
+  background: #f8faf8;
+  border-color: #d5dfd6;
+  color: #8c9891;
+  cursor: not-allowed;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-player__progress {
+  accent-color: #4f7f2f;
+  cursor: pointer;
+  height: 26px;
+  min-width: 0;
+  width: 100%;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-player__progress:disabled {
+  cursor: wait;
+  opacity: 0.58;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-player__time {
+  color: #65706a;
+  font: 700 12.5px/1.35 Raleway, Arial, sans-serif;
+  min-width: 92px;
+  text-align: right;
+  white-space: nowrap;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-download,
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-status {
+  align-items: center;
+  border: 1px solid #b8c9b4;
+  border-radius: 6px;
+  color: #3f6f25;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font: 700 12.5px/1 Raleway, Arial, sans-serif;
+  justify-content: center;
+  justify-self: start;
+  min-height: 34px;
+  padding: 0 10px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-download:hover,
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-download:focus {
+  background: #edf4ea;
+  color: #2f5e1e;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-status {
+  background: #fff;
+  border-color: #d5dfd6;
+  color: #65706a;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-controls {
+  align-items: center;
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio-chapter {
+  color: #65706a;
+  font: 700 12.5px/1.35 Raleway, Arial, sans-serif;
+  margin-left: auto;
+}
+body.wsite-page-bulletin #wsite-content .bulletin-card__audio--pending {
+  background: #fbfcfb;
+}
 body.wsite-page-bulletin #wsite-content .bulletin-card__links {
   display: flex;
   flex-wrap: wrap;
@@ -862,6 +824,41 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
   body.wsite-page-bulletin #wsite-content .bulletin-issue__embed iframe { height: 420px; }
   body.wsite-page-bulletin #wsite-content .bulletin-card__copy { padding: 14px 15px 16px; }
   body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe { min-height: 190px; }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio {
+    align-items: stretch;
+    display: grid;
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-player__transport {
+    grid-template-columns: minmax(88px, auto) minmax(0, 1fr);
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-player__button,
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio-skip {
+    min-height: 42px;
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-player__progress {
+    height: 34px;
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-player__time {
+    grid-column: 1 / -1;
+    min-width: 0;
+    text-align: left;
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio-skip {
+    width: 100%;
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio-download,
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio-status {
+    width: max-content;
+  }
+  body.wsite-page-bulletin #wsite-content .bulletin-card__audio-chapter {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    width: 100%;
+  }
 }
 </style>
 </head>
@@ -903,13 +900,12 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     <div class="wsite-section-content">
       <div class="container">
         <div class="wsite-section-elements">
-          <nav class="alius-anchor-nav bulletin-anchor-nav-disabled" hidden aria-hidden="true"></nav>
           <main class="bulletin-index" aria-label="ALIUS Bulletin index">
-            <header class="bulletin-index__intro">
+            <header id="bulletin-overview" class="bulletin-index__intro">
               <p>The <strong class="bulletin-brand">ALIUS Bulletin</strong> is an annual open-access publication of the ALIUS research group, an international and interdisciplinary collective whose Latin name reflects its commitment to the systematic study of the diversity of consciousness. The Bulletin presents current research on non-ordinary and understudied conscious states, traditionally classified as altered states of consciousness, across neuroscience, psychology, philosophy of mind, psychiatry, and anthropology, with an emphasis on empirical work and a naturalistic orientation that distances such states from parapsychological and pseudoscientific framings. Its interviews have covered psychedelics, the default-mode network, ego dissolution, the free-energy principle, predictive processing, voice-hearing, dissociation, dreaming, mind-wandering, hypnosis, meditation, near-death experiences, the mind-body divide, weightlessness, free will, and irruption theory, alongside methodological discussions on phenomenology and the comparative study of altered states. The Bulletin presents this work in the words of the researchers themselves, aiming to make rigorous inquiry on non-ordinary states accessible to a wider audience.</p>
               <p><a class="bulletin-issue__link" href="/bulletin/instructions-guidelines/">Bulletin Writing Instructions | Guidelines</a></p>
             </header>
-            <div class="bulletin-controls" role="group" aria-label="Filter bulletin entries">
+            <div id="bulletin-filters" class="bulletin-controls" role="group" aria-label="Filter bulletin entries">
               <div class="bulletin-control-row bulletin-control-row--primary">
                 <button type="button" class="bulletin-filter bulletin-filter--all is-active" data-filter="*" aria-pressed="true">All <span class="bulletin-filter__count">41</span></button>
                 <section class="bulletin-filter-group" aria-label="Issues">
@@ -987,14 +983,14 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
               </div>
             </div>
             <p class="bulletin-result-count" aria-live="polite"><span id="bulletin-visible-count">41</span> entries shown</p>
-            <div class="bulletin-list">
+            <div id="bulletin-list" class="bulletin-list">
               <section class="bulletin-issue" data-issue="issue-07">
                 <details class="bulletin-issue__embed">
                   <summary><span class="bulletin-issue__summary-title">Issue 7</span><span class="bulletin-issue__summary-meta">2 entries - full issue PDF</span></summary>
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-full.pdf#view=FitH" title="ALIUS Bulletin Issue 7 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
-<article id="bulletin-froese-irruption" class="bulletin-card" data-tags="issue-07 tom-froese psychedelics">
+<article id="bulletin-froese-irruption" class="bulletin-card" data-tags="issue-07 tom-froese psychedelics" data-audio-src="/media/audio/bulletin/kokoro/Issue07/Froese_Koroma/interview.mp3" data-audio-label="Audio for Tom Froese interview">
                 <header class="bulletin-card__header">
                   <h3>The irruption theory: How mind and matter meet along the route to consciousness</h3>
                   <p class="bulletin-card__people">Tom Froese, interviewed by Matthieu Koroma</p>
@@ -1012,7 +1008,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<article id="bulletin-changeux-molecular-social" class="bulletin-card" data-tags="issue-07 jean-pierre-changeux psychedelics">
+<article id="bulletin-changeux-molecular-social" class="bulletin-card" data-tags="issue-07 jean-pierre-changeux psychedelics" data-audio-src="/media/audio/bulletin/kokoro/Issue07/Changeux_Dumas/interview.mp3" data-audio-label="Audio for Jean-Pierre Changeux interview">
                 <header class="bulletin-card__header">
                   <h3>Consciousness: from molecular to social scales</h3>
                   <p class="bulletin-card__people">Jean-Pierre Changeux, interviewed by Guillaume Dumas</p>
@@ -1038,7 +1034,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <iframe data-pdf-src="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-full.pdf#view=FitH" title="ALIUS Bulletin Issue 6 PDF" loading="lazy"></iframe>
                 </details>
                 <div class="bulletin-issue__items">
-<article id="bulletin-ciaunica-early-sensory-life" class="bulletin-card" data-tags="issue-06 anna-ciaunica body-shifts">
+<article id="bulletin-ciaunica-early-sensory-life" class="bulletin-card" data-tags="issue-06 anna-ciaunica body-shifts" data-audio-src="/media/audio/bulletin/what-is-it-like-to-be-in-early-sensory-life-anna-ciaunica.mp3" data-audio-label="Audio for Anna Ciaunica interview">
                 <header class="bulletin-card__header">
                   <h3>What is it like to be in early sensory life?</h3>
                   <p class="bulletin-card__people">Anna Ciaunica, recorded by Daniel Friedman; edited by Lena Coutrot, Daniel Friedman and Matthieu Koroma</p>
@@ -1054,7 +1050,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-ciaunica-what-is-like-to-be-in-early-sensory-life.pdf" target="_blank" rel="noopener">Read PDF</a>
                 </div>
               </article>
-<article id="bulletin-jillings-weightlessness" class="bulletin-card" data-tags="issue-06 steven-jillings body-shifts">
+<article id="bulletin-jillings-weightlessness" class="bulletin-card" data-tags="issue-06 steven-jillings body-shifts" data-audio-src="/media/audio/bulletin/what-is-it-like-to-be-in-weightlessness-steven-jillings.mp3" data-audio-label="Audio for Steven Jillings interview">
                 <header class="bulletin-card__header">
                   <h3>What is it like to be in weightlessness?</h3>
                   <p class="bulletin-card__people">Steven Jillings, recorded by Daniel Friedman; edited by Lena Coutrot, Daniel Friedman and Matthieu Koroma</p>
@@ -1074,7 +1070,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightlessness.pdf" target="_blank" rel="noopener">Read PDF</a>
                 </div>
               </article>
-<article id="bulletin-koroma-asleep" class="bulletin-card" data-tags="issue-06 matthieu-koroma sleep">
+<article id="bulletin-koroma-asleep" class="bulletin-card" data-tags="issue-06 matthieu-koroma sleep" data-audio-src="/media/audio/bulletin/what-is-it-like-to-be-asleep-matthieu-koroma.mp3" data-audio-label="Audio for Matthieu Koroma interview">
                 <header class="bulletin-card__header">
                   <h3>What is it like to be asleep?</h3>
                   <p class="bulletin-card__people">Matthieu Koroma, recorded by Daniel Friedman; edited by Lena Coutrot, Daniel Friedman and Matthieu Koroma</p>
@@ -1094,7 +1090,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <a href="/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf" target="_blank" rel="noopener">Read PDF</a>
                 </div>
               </article>
-<article id="bulletin-gonzalez-interdisciplinary" class="bulletin-card" data-tags="issue-06 juan-gonzalez psychedelics">
+<article id="bulletin-gonzalez-interdisciplinary" class="bulletin-card" data-tags="issue-06 juan-gonzalez psychedelics" data-audio-src="/media/audio/bulletin/kokoro/Issue06/Gonzalez_Koroma/interview.mp3" data-audio-label="Audio for Juan Gonzalez interview">
                 <header class="bulletin-card__header">
                   <h3>An interdisciplinary journey into consciousness research</h3>
                   <p class="bulletin-card__people">Juan Gonzalez, interviewed by Matthieu Koroma</p>
@@ -1218,7 +1214,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                 </div>
 
               </article>
-<article id="bulletin-olson-yaden-therapeutic-effects" class="bulletin-card" data-tags="issue-05 david-olson david-yaden psychedelics">
+<article id="bulletin-olson-yaden-therapeutic-effects" class="bulletin-card" data-tags="issue-05 david-olson david-yaden psychedelics" data-audio-src="/media/audio/bulletin/kokoro/Issue05/Olson_Yaden_Fejer/interview.mp3" data-audio-label="Audio for David Olson and David Yaden interview">
                 <header class="bulletin-card__header">
                   <h3 id="bulletin05-olsonyadeninterview">Are the Subjective Effects of Psychedelics Necessary for Their Enduring Therapeutic Effects?</h3>
                   <p class="bulletin-card__people">David E. Olson and David B. Yaden, hosted by George Fejer</p>
@@ -1238,7 +1234,7 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
                   <a href="/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf" target="_blank" rel="noopener">Read PDF</a>
                 </div>
               </article>
-<article id="bulletin-schmidt-phenomenoconnectomics" class="bulletin-card" data-tags="issue-05 timo-torsten-schmidt">
+<article id="bulletin-schmidt-phenomenoconnectomics" class="bulletin-card" data-tags="issue-05 timo-torsten-schmidt" data-audio-src="/media/audio/bulletin/kokoro/Issue05/Schmidt_Fejer/interview.mp3" data-audio-label="Audio for Timo Torsten Schmidt interview">
                 <header class="bulletin-card__header">
                   <h3 id="bulletin05-schmidtinterview">Phenomenoconnectomics and the Neural Correlates of Altered Consciousness</h3>
                   <p class="bulletin-card__people">Timo Torsten Schmidt, interviewed by George Fejer</p>
@@ -2274,6 +2270,303 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
     }
   }
 
+  function mp3DownloadName(card) {
+    var title = nodeText(card.querySelector('h3')) || 'ALIUS Bulletin audio';
+    return slug(title) + '.mp3';
+  }
+
+  function normalizeChapters(chapters) {
+    if (!chapters || !chapters.length) return [];
+    return chapters.map(function(chapter) {
+      return {
+        unit: Number(chapter.unit) || 0,
+        startMs: Number(chapter.start_ms) || 0,
+        endMs: Number(chapter.end_ms) || 0,
+        title: String(chapter.title || '')
+      };
+    }).filter(function(chapter) {
+      return chapter.unit > 0 && chapter.endMs > chapter.startMs;
+    }).sort(function(a, b) {
+      return a.startMs - b.startMs;
+    });
+  }
+
+  function audioInfoForCard(card, index) {
+    var info = index && index[card.id] ? index[card.id] : null;
+    var src = (info && info.audio) || card.getAttribute('data-audio-src') || '';
+    if (!src) return null;
+    return {
+      src: src,
+      download: (info && info.audio_download) || src,
+      chapters: normalizeChapters(info && info.audio_chapters),
+      label: card.getAttribute('data-audio-label') || 'Audio for ' + nodeText(card.querySelector('h3')),
+      source: (info && info.audio_source) || ''
+    };
+  }
+
+  function chapterIndexForTime(audio, chapters) {
+    var currentMs = audio.currentTime * 1000;
+    var active = 0;
+    chapters.forEach(function(chapter, index) {
+      if (currentMs >= chapter.startMs - 150) active = index;
+    });
+    return active;
+  }
+
+  function chapterStatusText(index, total) {
+    var value = String(index + 1);
+    while (value.length < 3) value = '0' + value;
+    return 'Q&A ' + value + ' / ' + total;
+  }
+
+  function seekToChapter(audio, chapters, index) {
+    var bounded = Math.max(0, Math.min(chapters.length - 1, index));
+    var targetTime = chapters[bounded].startMs / 1000;
+    function setTime() {
+      audio.currentTime = targetTime;
+    }
+    if (audio.readyState === 0) {
+      audio.addEventListener('loadedmetadata', setTime, { once: true });
+      audio.load();
+    } else {
+      setTime();
+    }
+    if (!audio.paused) {
+      var play = audio.play();
+      if (play && play.catch) play.catch(function() {});
+    }
+  }
+
+  function isFiniteDuration(audio) {
+    return Number.isFinite(audio.duration) && audio.duration > 0;
+  }
+
+  function formatAudioTime(seconds) {
+    if (!Number.isFinite(seconds) || seconds < 0) return '--:--';
+    var total = Math.floor(seconds);
+    var hours = Math.floor(total / 3600);
+    var minutes = Math.floor((total % 3600) / 60);
+    var secs = String(total % 60);
+    if (secs.length < 2) secs = '0' + secs;
+    if (hours > 0) {
+      var hourMinutes = String(minutes);
+      if (hourMinutes.length < 2) hourMinutes = '0' + hourMinutes;
+      return hours + ':' + hourMinutes + ':' + secs;
+    }
+    return minutes + ':' + secs;
+  }
+
+  function pauseOtherBulletinAudio(currentAudio) {
+    Array.prototype.slice.call(document.querySelectorAll('.bulletin-card__audio-source')).forEach(function(audio) {
+      if (audio !== currentAudio && !audio.paused) audio.pause();
+    });
+  }
+
+  function updateProgressForTime(progress, audio, time) {
+    if (!isFiniteDuration(audio)) {
+      progress.value = '0';
+      return;
+    }
+    var ratio = Math.max(0, Math.min(1, time / audio.duration));
+    progress.value = String(Math.round(ratio * 1000));
+  }
+
+  function seekToProgress(audio, progress) {
+    if (!isFiniteDuration(audio)) return;
+    var targetTime = audio.duration * (Number(progress.value) / 1000);
+    function setTime() {
+      audio.currentTime = Math.max(0, Math.min(audio.duration, targetTime));
+    }
+    if (audio.readyState === 0) {
+      audio.addEventListener('loadedmetadata', setTime, { once: true });
+      audio.load();
+    } else {
+      setTime();
+    }
+  }
+
+  function addAudioPlayerControls(audioRow, audio, info) {
+    var player = document.createElement('div');
+    player.className = 'bulletin-player';
+
+    var transport = document.createElement('div');
+    transport.className = 'bulletin-player__transport';
+
+    var toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'bulletin-player__button';
+    toggle.textContent = 'Play';
+    toggle.setAttribute('aria-label', 'Play ' + info.label);
+
+    var progress = document.createElement('input');
+    progress.type = 'range';
+    progress.className = 'bulletin-player__progress';
+    progress.min = '0';
+    progress.max = '1000';
+    progress.step = '1';
+    progress.value = '0';
+    progress.disabled = true;
+    progress.setAttribute('aria-label', 'Seek through ' + info.label);
+
+    var time = document.createElement('span');
+    time.className = 'bulletin-player__time';
+    time.textContent = '0:00 / 0:00';
+
+    function syncControls() {
+      var ready = isFiniteDuration(audio);
+      progress.disabled = !ready;
+      toggle.textContent = audio.paused ? 'Play' : 'Pause';
+      toggle.setAttribute('aria-label', (audio.paused ? 'Play ' : 'Pause ') + info.label);
+      updateProgressForTime(progress, audio, audio.currentTime);
+      time.textContent = formatAudioTime(audio.currentTime) + ' / ' + formatAudioTime(ready ? audio.duration : NaN);
+    }
+
+    toggle.addEventListener('click', function() {
+      if (audio.paused) {
+        pauseOtherBulletinAudio(audio);
+        var play = audio.play();
+        if (play && play.catch) play.catch(function() {});
+      } else {
+        audio.pause();
+      }
+      syncControls();
+    });
+
+    progress.addEventListener('input', function() {
+      seekToProgress(audio, progress);
+      syncControls();
+    });
+    progress.addEventListener('change', function() {
+      seekToProgress(audio, progress);
+      syncControls();
+    });
+
+    audio.addEventListener('loadedmetadata', syncControls);
+    audio.addEventListener('durationchange', syncControls);
+    audio.addEventListener('timeupdate', syncControls);
+    audio.addEventListener('seeked', syncControls);
+    audio.addEventListener('play', function() {
+      pauseOtherBulletinAudio(audio);
+      syncControls();
+    });
+    audio.addEventListener('pause', syncControls);
+    audio.addEventListener('ended', syncControls);
+    syncControls();
+
+    transport.appendChild(toggle);
+    transport.appendChild(progress);
+    transport.appendChild(time);
+    player.appendChild(transport);
+    audioRow.appendChild(player);
+  }
+
+  function addAudioChapterControls(audioRow, audio, chapters) {
+    if (!chapters.length) return;
+
+    var controls = document.createElement('div');
+    controls.className = 'bulletin-card__audio-controls';
+
+    var back = document.createElement('button');
+    back.type = 'button';
+    back.className = 'bulletin-card__audio-skip';
+    back.textContent = 'Back Q&A';
+    back.setAttribute('aria-label', 'Back one Q&A');
+    back.title = 'Back one Q&A';
+
+    var next = document.createElement('button');
+    next.type = 'button';
+    next.className = 'bulletin-card__audio-skip';
+    next.textContent = 'Next Q&A';
+    next.setAttribute('aria-label', 'Next Q&A');
+    next.title = 'Next Q&A';
+
+    var status = document.createElement('span');
+    status.className = 'bulletin-card__audio-chapter';
+
+    function sync() {
+      var index = chapterIndexForTime(audio, chapters);
+      back.disabled = index === 0 && audio.currentTime * 1000 <= chapters[0].startMs + 3500;
+      next.disabled = index >= chapters.length - 1;
+      status.textContent = chapterStatusText(index, chapters.length);
+    }
+
+    back.addEventListener('click', function() {
+      var index = chapterIndexForTime(audio, chapters);
+      var elapsedInChapter = audio.currentTime * 1000 - chapters[index].startMs;
+      seekToChapter(audio, chapters, elapsedInChapter > 3500 ? index : index - 1);
+      sync();
+    });
+
+    next.addEventListener('click', function() {
+      seekToChapter(audio, chapters, chapterIndexForTime(audio, chapters) + 1);
+      sync();
+    });
+
+    audio.addEventListener('loadedmetadata', sync);
+    audio.addEventListener('timeupdate', sync);
+    audio.addEventListener('seeked', sync);
+    audio.addEventListener('ended', sync);
+    sync();
+
+    controls.appendChild(back);
+    controls.appendChild(next);
+    controls.appendChild(status);
+    audioRow.appendChild(controls);
+  }
+
+  function enhanceAudioPlayers(index) {
+    cards.forEach(function(card) {
+      if (card.querySelector('.bulletin-card__audio')) return;
+
+      var info = audioInfoForCard(card, index || {});
+      if (!info) return;
+
+      var audioRow = document.createElement('div');
+      audioRow.className = 'bulletin-card__audio';
+      audioRow.setAttribute('aria-label', info.label);
+
+      var audio = document.createElement('audio');
+      audio.className = 'bulletin-card__audio-source';
+      audio.preload = 'metadata';
+      audio.setAttribute('aria-label', info.label);
+
+      var source = document.createElement('source');
+      source.src = info.src;
+      source.type = 'audio/mpeg';
+      audio.appendChild(source);
+
+      var download = document.createElement('a');
+      download.className = 'bulletin-card__audio-download';
+      download.href = info.download;
+      download.download = mp3DownloadName(card);
+      download.textContent = 'Download MP3';
+
+      audioRow.appendChild(audio);
+      addAudioPlayerControls(audioRow, audio, info);
+      audioRow.appendChild(download);
+      addAudioChapterControls(audioRow, audio, info.chapters);
+
+      var links = card.querySelector('.bulletin-card__links');
+      if (links) {
+        card.insertBefore(audioRow, links);
+      } else {
+        card.appendChild(audioRow);
+      }
+    });
+  }
+
+  function loadBulletinTranscriptIndex() {
+    if (!window.fetch) return;
+    return fetch('/media/audio/bulletin/transcripts/index.json', { cache: 'no-cache' })
+      .then(function(response) {
+        if (!response.ok) throw new Error('Transcript index request failed');
+        return response.json();
+      })
+      .catch(function() {
+        return {};
+      });
+  }
+
   function enhanceCitationTools() {
     cards.forEach(function(card) {
       var links = card.querySelector('.bulletin-card__links');
@@ -2367,6 +2660,13 @@ body.wsite-page-bulletin #wsite-content .bulletin-card__media iframe {
 
 
   enhanceOrcidLinks();
+  if (window.fetch) {
+    loadBulletinTranscriptIndex().then(function(index) {
+      enhanceAudioPlayers(index);
+    });
+  } else {
+    enhanceAudioPlayers({});
+  }
   enhanceCitationTools();
 
   Array.prototype.slice.call(document.querySelectorAll('.bulletin-issue__embed')).forEach(function(details) {
