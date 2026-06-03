@@ -3351,70 +3351,137 @@
       {
         "unit": 1,
         "start_ms": 0,
-        "end_ms": 569707,
-        "duration_ms": 569707,
+        "end_ms": 569422,
+        "duration_ms": 569422,
         "title": "Q&A 001: How did you become interested in the topic of dreaming?"
       },
       {
         "unit": 2,
-        "start_ms": 569707,
-        "end_ms": 993016,
-        "duration_ms": 423309,
+        "start_ms": 569422,
+        "end_ms": 992518,
+        "duration_ms": 423096,
         "title": "Q&A 002: How do you think the general conception of dreaming has changed over the course..."
       },
       {
         "unit": 3,
-        "start_ms": 993016,
-        "end_ms": 1400011,
-        "duration_ms": 406995,
+        "start_ms": 992518,
+        "end_ms": 1399309,
+        "duration_ms": 406791,
         "title": "Q&A 003: What are the trending topics in dream research at the moment?"
       },
       {
         "unit": 4,
-        "start_ms": 1400011,
-        "end_ms": 1773518,
-        "duration_ms": 373507,
+        "start_ms": 1399309,
+        "end_ms": 1772629,
+        "duration_ms": 373320,
         "title": "Q&A 004: In your opinion, is dreaming an altered state of consciousness? If so, what def..."
       },
       {
         "unit": 5,
-        "start_ms": 1773518,
-        "end_ms": 2591372,
-        "duration_ms": 817854,
+        "start_ms": 1772629,
+        "end_ms": 2590073,
+        "duration_ms": 817444,
         "title": "Q&A 005: What are the main methods used in dream research to gather data about the first..."
       },
       {
         "unit": 6,
-        "start_ms": 2591372,
-        "end_ms": 3272702,
-        "duration_ms": 681330,
+        "start_ms": 2590073,
+        "end_ms": 3271062,
+        "duration_ms": 680989,
         "title": "Q&A 006: In your recent book, you argue for dreaming as a \u201cweakly embodied state\u201d, again..."
       },
       {
         "unit": 7,
-        "start_ms": 3272702,
-        "end_ms": 3763843,
-        "duration_ms": 491141,
+        "start_ms": 3271062,
+        "end_ms": 3761957,
+        "duration_ms": 490895,
         "title": "Q&A 007: You advocate the Immersive Spatiotemporal Hallucination, ISTH, model of dreamin..."
       },
       {
         "unit": 8,
-        "start_ms": 3763843,
-        "end_ms": 4150660,
-        "duration_ms": 386817,
+        "start_ms": 3761957,
+        "end_ms": 4148580,
+        "duration_ms": 386623,
         "title": "Q&A 008: What, in your opinion, are the most important challenges for future research?"
       }
     ],
-    "audio_duration_seconds": 4150.66,
-    "audio_sha256": "B420A14E8F63267F322A6DDA3C8A1281906945D678F0E778CE56362CD1FCAB14",
+    "audio_duration_seconds": 4148.58,
+    "audio_sha256": "685E18683C4128093F4DE8E738256F64CAF8B2D85D1A69416CD3302C08F9D8B9",
     "audio_codec": "mp3",
     "audio_bit_rate_bps": 128002,
     "audio_sample_rate_hz": 24000,
     "audio_channels": 1,
     "tts_engine": "F5TTS_v1_Base",
-    "tts_delivery_preset": null,
-    "tts_final_filter_chain": null,
-    "pronunciation_protocol": null,
-    "asr_spotcheck_result": "passed"
+    "tts_delivery_preset": "engaged",
+    "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+    "asr_spotcheck_result": "passed",
+    "question_voice_policy": "round_robin_interviewers_by_unit",
+    "unit_voice_routing": [
+      {
+        "unit": 1,
+        "question_voice": "alessio_bucci",
+        "answer_voice": "jennifer_windt",
+        "answer_voice_segments": [
+          "jennifer_windt"
+        ]
+      },
+      {
+        "unit": 2,
+        "question_voice": "raphael_milliere",
+        "answer_voice": "jennifer_windt",
+        "answer_voice_segments": [
+          "jennifer_windt"
+        ]
+      },
+      {
+        "unit": 3,
+        "question_voice": "alessio_bucci",
+        "answer_voice": "jennifer_windt",
+        "answer_voice_segments": [
+          "jennifer_windt"
+        ]
+      },
+      {
+        "unit": 4,
+        "question_voice": "raphael_milliere",
+        "answer_voice": "jennifer_windt",
+        "answer_voice_segments": [
+          "jennifer_windt"
+        ]
+      },
+      {
+        "unit": 5,
+        "question_voice": "alessio_bucci",
+        "answer_voice": "jennifer_windt",
+        "answer_voice_segments": [
+          "jennifer_windt"
+        ]
+      },
+      {
+        "unit": 6,
+        "question_voice": "raphael_milliere",
+        "answer_voice": "jennifer_windt",
+        "answer_voice_segments": [
+          "jennifer_windt"
+        ]
+      },
+      {
+        "unit": 7,
+        "question_voice": "alessio_bucci",
+        "answer_voice": "jennifer_windt",
+        "answer_voice_segments": [
+          "jennifer_windt"
+        ]
+      },
+      {
+        "unit": 8,
+        "question_voice": "raphael_milliere",
+        "answer_voice": "jennifer_windt",
+        "answer_voice_segments": [
+          "jennifer_windt"
+        ]
+      }
+    ]
   }
 }
