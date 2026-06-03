@@ -76,80 +76,91 @@
       "answer": "D.B. Yaden: Well, I just want to thank you for inviting us and thank you, David, for inviting Roland Griffiths and me to write this companion article it was really a lot of fun to think about this topic and fun to discuss it. My closing thought is that I think there is a lot of creativity that is required in this space, as well as a lot of rigorous testing. And so the kind of work on creating these new compounds that David Olson and his lab are doing is really inspiring and absolutely necessary. There will be individuals who cannot have subjective experiences for various reasons, but I think by and large, we need to remember that the evidence so far has been on psychedelics that do produce subjective effects and that these experiences can be among the most meaningful in one’s entire life. So we want to be careful about removing these for reasons such as cost. D.E. Olson: I would also like to thank you all for the discussion and emphasize that it was a lot of fun writing this with David Yaden and Roland Griffiths. What I really want to emphasize is the uniqueness of the community that really cares about psychedelics. We have a lot of really smart, thoughtful people trying to work on this problem, which I think is really critical. And while our two papers might seem like they are at odds with one another, after this conversation it should be clear that we mostly agree on everything. The thing that we definitely all agree on is that we need to do everything in our power to treat as many patients as we can. Neuropsychiatric disorders affect an enormous number of people and are some of the leading causes of disability worldwide. I think we are all aligned on trying to do whatever we can to bring relief to patients. That is why we do this work. So hopefully, there are going to be a lot more of these interesting conversations where we can figure out the best way to make the world a better place."
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue05/Olson_Yaden_Fejer/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue05/Olson_Yaden_Fejer/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue05/Olson_Yaden_Fejer/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue05/Olson_Yaden_Fejer/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 10,
   "audio_chapters": [
     {
-      "unit": 1,
-      "start_ms": 0,
-      "end_ms": 162525,
-      "duration_ms": 162525,
-      "title": "Q&A 001: Although you are addressing two sides of the same coin, your back-to-back..."
+        "unit": 1,
+        "start_ms": 0,
+        "end_ms": 205537,
+        "duration_ms": 205537,
+        "title": "Q&A 001: Although you are addressing two sides of the same coin, your back-to-back publi..."
     },
     {
-      "unit": 2,
-      "start_ms": 163425,
-      "end_ms": 315475,
-      "duration_ms": 152050,
-      "title": "Q&A 002: Would you treat these two phenomena of 'the subjective' and 'the neurobiological'..."
+        "unit": 2,
+        "start_ms": 205537,
+        "end_ms": 390222,
+        "duration_ms": 184685,
+        "title": "Q&A 002: Would you treat these two phenomena of ‘the subjective’ and ‘the neurobiologica..."
     },
     {
-      "unit": 3,
-      "start_ms": 316375,
-      "end_ms": 480650,
-      "duration_ms": 164275,
-      "title": "Q&A 003: One aspect of the article that many people in the psychedelic community appraised..."
+        "unit": 3,
+        "start_ms": 390222,
+        "end_ms": 585705,
+        "duration_ms": 195483,
+        "title": "Q&A 003: One aspect of the article that many people in the psychedelic community apprais..."
     },
     {
-      "unit": 4,
-      "start_ms": 481550,
-      "end_ms": 634450,
-      "duration_ms": 152900,
-      "title": "Q&A 004: From a clinical standpoint, there are certainly some patients for whom the..."
+        "unit": 4,
+        "start_ms": 585705,
+        "end_ms": 759964,
+        "duration_ms": 174259,
+        "title": "Q&A 004: From a clinical standpoint, there are certainly some patients for whom the subj..."
     },
     {
-      "unit": 5,
-      "start_ms": 635350,
-      "end_ms": 773800,
-      "duration_ms": 138450,
-      "title": "Q&A 005: Do you think that psychedelics should be implemented as a first-line treatment for..."
+        "unit": 5,
+        "start_ms": 759964,
+        "end_ms": 935712,
+        "duration_ms": 175748,
+        "title": "Q&A 005: Do you think that psychedelics should be implemented as a first-line treatment..."
     },
     {
-      "unit": 6,
-      "start_ms": 774700,
-      "end_ms": 1019775,
-      "duration_ms": 245075,
-      "title": "Q&A 006: A major criticism regarding the therapeutic benefits attributed to the subjective..."
+        "unit": 6,
+        "start_ms": 935712,
+        "end_ms": 1212368,
+        "duration_ms": 276656,
+        "title": "Q&A 006: A major criticism regarding the therapeutic benefits attributed to the subjecti..."
     },
     {
-      "unit": 7,
-      "start_ms": 1020675,
-      "end_ms": 1190175,
-      "duration_ms": 169500,
-      "title": "Q&A 007: It is also interesting to note that the antidepressant efficacy of ketamine has a..."
+        "unit": 7,
+        "start_ms": 1212368,
+        "end_ms": 1418649,
+        "duration_ms": 206281,
+        "title": "Q&A 007: It is also interesting to note that the antidepressant efficacy of ketamine has..."
     },
     {
-      "unit": 8,
-      "start_ms": 1191075,
-      "end_ms": 1276550,
-      "duration_ms": 85475,
-      "title": "Q&A 008: Psychedelics strongly rely on what has been termed the meaning response, which..."
+        "unit": 8,
+        "start_ms": 1418649,
+        "end_ms": 1522162,
+        "duration_ms": 103513,
+        "title": "Q&A 008: Psychedelics strongly rely on what has been termed the meaning response, which..."
     },
     {
-      "unit": 9,
-      "start_ms": 1277450,
-      "end_ms": 1384400,
-      "duration_ms": 106950,
-      "title": "Q&A 009: Do you think that microdosing, that is, using psychedelics on an intermittent..."
+        "unit": 9,
+        "start_ms": 1522162,
+        "end_ms": 1653601,
+        "duration_ms": 131439,
+        "title": "Q&A 009: Do you think that microdosing, that is, using psychedelics on an intermittent s..."
     },
     {
-      "unit": 10,
-      "start_ms": 1385300,
-      "end_ms": 1492725,
-      "duration_ms": 107425,
-      "title": "Q&A 010: Thank you very much for your time. Do you have any concluding remarks?"
+        "unit": 10,
+        "start_ms": 1653601,
+        "end_ms": 1801051,
+        "duration_ms": 147450,
+        "title": "Q&A 010: Thank you very much for your time. Do you have any concluding remarks?"
     }
-  ]
+],
+  "audio_duration_seconds": 1801.051,
+  "audio_sha256": "B0416DB99750FFC0EE7CA6D94BA78D2A13EEF0E8D6FC14F0D6B9107A3F686757",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128005,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": "engaged",
+  "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "asr_spotcheck_result": "passed"
 }
