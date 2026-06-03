@@ -4,22 +4,110 @@
   "audio": "/media/audio/bulletin/voice-clone/Issue03/Bayne_Bucci_Koroma/interview.mp3",
   "chapters": "/media/audio/bulletin/voice-clone/Issue03/Bayne_Bucci_Koroma/interview_chapters.json",
   "engine": "F5TTS_v1_Base",
-  "delivery_preset": null,
-  "final_filter_chain": null,
-  "pronunciation_protocol": null,
-  "duration_seconds": 1123.399,
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.97",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    }
+  ],
+  "duration_seconds": 1138.694,
   "codec": "mp3",
   "sample_rate_hz": 24000,
   "channels": 1,
-  "bit_rate_bps": 128010,
-  "sha256": "C0006158880BA87D88E7B177197D050DB5BE661665F4F6E5DA5C38BFF51C9F4B",
+  "bit_rate_bps": 128009,
+  "sha256": "A76BCD36E9052C1251F3415B9225CD4DAC6E4AC7DE56B6A820A83EB389541AEA",
   "asr_spotcheck": {
     "result": "passed",
-    "sample": "first60",
-    "model": "whisper_tiny.en",
-    "audio": "AudioTranscription/work/verification/Issue03_Bayne_Bucci_Koroma/first60_full.wav",
-    "transcript": "AudioTranscription/work/verification/Issue03_Bayne_Bucci_Koroma/first60_full.txt",
-    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue03_Bayne_Bucci_Koroma/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue03_Bayne_Bucci_Koroma/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "routing_check": "passed_manifest_round_robin_alessio_matthieu_questions_tim_answers",
+    "pronunciation_check": "not_applicable_first60_no_ALIUS_occurrence",
+    "notes": "ASR follows intended opening question and Tim Bayne answer; no spoken speaker labels detected.",
+    "excerpt": "Consciousness remains one of the most puzzling phenomena for both philosophers and scientists\ncould you explain what triggered your interest in this topic?\nWhat are the questions about consciousness you have been addressing with your research?\nDo you think that there are questions about consciousness that cannot be answered?\nMy initial interest in consciousness focused on the unity of consciousness.\nI was struck by the fact that philosophers have traditionally regarded unity as one of the central features of consciousness\nwhereas many consciousness scientists and a significant number of philosophers\nseem to assume that consciousness is anything but unified.\nI began to wonder whether those who were pro unity had the same conception of the unity of consciousness\nas those who were against it and the more I read on the topic, the more convinced I became\nthat there were many conceptions of th"
   },
   "voice_profiles": [
     {
@@ -27,14 +115,21 @@
       "speaker_name": "Alessio Bucci",
       "source_url": "https://www.youtube.com/watch?v=f_5MoCn8rXA",
       "reference_review_status": "asr_spotcheck_passed",
-      "profile_gate": "pass"
+      "profile_gate": "warn"
     },
     {
       "speaker_slug": "tim_bayne",
       "speaker_name": "Tim Bayne",
       "source_url": "https://www.youtube.com/watch?v=2XfADVXGxps",
       "reference_review_status": "asr_spotcheck_passed",
-      "profile_gate": "pass"
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "warn"
     }
   ]
 }
