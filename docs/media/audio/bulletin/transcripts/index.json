@@ -2455,96 +2455,207 @@
     "download": "/media/audio/bulletin/transcripts/bulletin-friston-woodlice.txt",
     "unit_count": 12,
     "source_interview_id": "Issue02/Friston_Fortier_Friedman",
-    "audio": "/media/audio/bulletin/kokoro/Issue02/Friston_Fortier_Friedman/interview.mp3",
-    "audio_download": "/media/audio/bulletin/kokoro/Issue02/Friston_Fortier_Friedman/interview.mp3",
-    "audio_source": "kokoro-transcript",
+    "audio": "/media/audio/bulletin/voice-clone/Issue02/Friston_Fortier_Friedman/interview.mp3",
+    "audio_download": "/media/audio/bulletin/voice-clone/Issue02/Friston_Fortier_Friedman/interview.mp3",
+    "audio_source": "f5-voice-clone-engaged",
     "audio_chapter_count": 12,
     "audio_chapters": [
       {
         "unit": 1,
         "start_ms": 0,
-        "end_ms": 184300,
-        "duration_ms": 184300,
-        "title": "Q&A 001: You are well known for being the founder of the free energy principle, a wide..."
+        "end_ms": 212192,
+        "duration_ms": 212192,
+        "title": "Q&A 001: You are well known for being the founder of the free energy principle, a wide r..."
       },
       {
         "unit": 2,
-        "start_ms": 185200,
-        "end_ms": 855475,
-        "duration_ms": 670275,
-        "title": "Q&A 002: The Bayesian brain hypothesis, predictive coding and the free energy principle are..."
+        "start_ms": 212192,
+        "end_ms": 949304,
+        "duration_ms": 737112,
+        "title": "Q&A 002: The Bayesian brain hypothesis, predictive coding and the free energy principle..."
       },
       {
         "unit": 3,
-        "start_ms": 856375,
-        "end_ms": 1112075,
-        "duration_ms": 255700,
-        "title": "Q&A 003: David Marr famously proposed to distinguish between three levels of analysis: the..."
+        "start_ms": 949304,
+        "end_ms": 1222064,
+        "duration_ms": 272760,
+        "title": "Q&A 003: David Marr famously proposed to distinguish between three levels of analysis: t..."
       },
       {
         "unit": 4,
-        "start_ms": 1112975,
-        "end_ms": 1519575,
-        "duration_ms": 406600,
-        "title": "Q&A 004: Within the predictive framework, cognitive processes and consciousness are..."
+        "start_ms": 1222064,
+        "end_ms": 1660458,
+        "duration_ms": 438394,
+        "title": "Q&A 004: Within the predictive framework, cognitive processes and consciousness are conc..."
       },
       {
         "unit": 5,
-        "start_ms": 1520475,
-        "end_ms": 1721350,
-        "duration_ms": 200875,
-        "title": "Q&A 005: The previous question naturally leads us to explore the link between computational..."
+        "start_ms": 1660458,
+        "end_ms": 1873062,
+        "duration_ms": 212604,
+        "title": "Q&A 005: The previous question naturally leads us to explore the link between computatio..."
       },
       {
         "unit": 6,
-        "start_ms": 1722250,
-        "end_ms": 1972225,
-        "duration_ms": 249975,
-        "title": "Q&A 006: More broadly, this raises the question as to how the mind/brain should be parsed...."
+        "start_ms": 1873062,
+        "end_ms": 2115332,
+        "duration_ms": 242270,
+        "title": "Q&A 006: More broadly, this raises the question as to how the mind/brain should be parse..."
       },
       {
         "unit": 7,
-        "start_ms": 1973125,
-        "end_ms": 2077575,
-        "duration_ms": 104450,
-        "title": "Q&A 007: If, as the free energy principle states, living organisms aim at minimizing..."
+        "start_ms": 2115332,
+        "end_ms": 2231111,
+        "duration_ms": 115779,
+        "title": "Q&A 007: If, as the free energy principle states, living organisms aim at minimizing ent..."
       },
       {
         "unit": 8,
-        "start_ms": 2078475,
-        "end_ms": 2242725,
-        "duration_ms": 164250,
+        "start_ms": 2231111,
+        "end_ms": 2408281,
+        "duration_ms": 177170,
         "title": "Q&A 008: Some authors have suggested that the predictive coding framework dissolves the..."
       },
       {
         "unit": 9,
-        "start_ms": 2243625,
-        "end_ms": 2496225,
-        "duration_ms": 252600,
-        "title": "Q&A 009: Philosophers interested in predictive coding and in the free energy principle have..."
+        "start_ms": 2408281,
+        "end_ms": 2685162,
+        "duration_ms": 276881,
+        "title": "Q&A 009: Philosophers interested in predictive coding and in the free energy principle h..."
       },
       {
         "unit": 10,
-        "start_ms": 2497125,
-        "end_ms": 2774200,
-        "duration_ms": 277075,
-        "title": "Q&A 010: Many proposals have been made to model the neurocomputational mechanisms of..."
+        "start_ms": 2685162,
+        "end_ms": 2979759,
+        "duration_ms": 294597,
+        "title": "Q&A 010: Many proposals have been made to model the neurocomputational mechanisms of sev..."
       },
       {
         "unit": 11,
-        "start_ms": 2775100,
-        "end_ms": 2946475,
-        "duration_ms": 171375,
-        "title": "Q&A 011: If we understand it correctly, the disconnection hypothesis that you embrace..."
+        "start_ms": 2979759,
+        "end_ms": 3142097,
+        "duration_ms": 162338,
+        "title": "Q&A 011: If we understand it correctly, the disconnection hypothesis that you embrace st..."
       },
       {
         "unit": 12,
-        "start_ms": 2947375,
-        "end_ms": 3279025,
-        "duration_ms": 331650,
-        "title": "Q&A 012: Regardless of the distinctions among the free energy, predictive coding, and..."
+        "start_ms": 3142097,
+        "end_ms": 3523219,
+        "duration_ms": 381122,
+        "title": "Q&A 012: Regardless of the distinctions among the free energy, predictive coding, and Ba..."
       }
-    ]
+    ],
+    "audio_duration_seconds": 3523.219,
+    "audio_sha256": "3FC8810929064630C7504C3F61DB0624ECE25508AEE8EA9C7C27EC2BE5F77943",
+    "audio_codec": "mp3",
+    "audio_bit_rate_bps": 128002,
+    "audio_sample_rate_hz": 24000,
+    "audio_channels": 1,
+    "tts_engine": "F5TTS_v1_Base",
+    "tts_delivery_preset": "engaged",
+    "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=1.5",
+    "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+    "question_voice_policy": "round_robin_interviewers_by_unit",
+    "unit_voice_routing": [
+      {
+        "unit": 1,
+        "question_voice": "martin_fortier",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 2,
+        "question_voice": "daniel_a_friedman",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 3,
+        "question_voice": "martin_fortier",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 4,
+        "question_voice": "daniel_a_friedman",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 5,
+        "question_voice": "martin_fortier",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 6,
+        "question_voice": "daniel_a_friedman",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 7,
+        "question_voice": "martin_fortier",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 8,
+        "question_voice": "daniel_a_friedman",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 9,
+        "question_voice": "martin_fortier",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 10,
+        "question_voice": "daniel_a_friedman",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 11,
+        "question_voice": "martin_fortier",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      },
+      {
+        "unit": 12,
+        "question_voice": "daniel_a_friedman",
+        "answer_voice": "karl_friston",
+        "answer_voice_segments": [
+          "karl_friston"
+        ]
+      }
+    ],
+    "asr_spotcheck_result": "passed",
+    "audio_manifest": "/media/audio/bulletin/voice-clone/Issue02/Friston_Fortier_Friedman/interview_manifest.json"
   },
   "bulletin-metzinger-self-models": {
     "src": "/media/audio/bulletin/transcripts/bulletin-metzinger-self-models.json",
