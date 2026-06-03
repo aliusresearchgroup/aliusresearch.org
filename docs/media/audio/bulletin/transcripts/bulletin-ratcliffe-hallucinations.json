@@ -41,45 +41,101 @@
       "answer": "I continue to work on existential feeling, interpersonal experience, and the modal structure of intentionality. In conjunction with this, I still write on the phenomenology of depression and I will probably have a bit more to say about hallucinations too. I may also end up getting dragged further into debates concerning the existence and nature of minimal self. I don’t want to, but it’s proving irresistible, like a really nasty itch that you have to scratch, even though you know that doing so will only make it worse. My next major project is likely to be on the nature of “grief”, something that is complicated, multi-faceted, highly variable, poorly understood, and philosophically neglected. This will complement my work on depression, as the issue of when and how grief should be distinguished from depression remains unresolved. It will similarly complement my work on hallucination, given that “bereavement hallucinations”, including “voices”, are commonplace but again poorly understood. The topic of grief also fits in with my wider interest in emotions, feelings, and interpersonal relations. One of the things I want to do is explore in depth the many ways in which experience, thought, and activity are interpersonally regulated, something that is rendered particularly salient by bereavement. But what I’m most excited about here is the prospect of opening up a new area of social cognition research. To date, work on interpersonal experience, understanding, and interaction in philosophy and cognitive science has focused exclusively on our relations with the living. Yet, as the “continuing bonds” literature has convincingly shown, grief does not simply conclude at some point with “letting go” of the deceased, ceasing to relate to her. Rather, people retain various different types of connection with the dead, connections that can continue to play important roles in their lives. I’d like to widen social cognition research to accommodate these relations in all their diversity, including their cultural diversity, and also to address how our relations with the living and the dead interact with each other. After that, I might try to tackle the topic of temporal experience, something that I’ve been working towards for a while now but still feel thoroughly intimidated by."
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue02/Ratcliffe_Frerejouan/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue02/Ratcliffe_Frerejouan/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue02/Ratcliffe_Frerejouan/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue02/Ratcliffe_Frerejouan/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 5,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 177950,
-      "duration_ms": 177950,
-      "title": "Q&A 001: Hallucinations, and in particular \"Auditory Verbal Hallucinations\", AVHs, have..."
+      "end_ms": 202966,
+      "duration_ms": 202966,
+      "title": "Q&A 001: Hallucinations, and in particular “Auditory Verbal Hallucinations”, AVHs, have..."
     },
     {
       "unit": 2,
-      "start_ms": 178850,
-      "end_ms": 485950,
-      "duration_ms": 307100,
-      "title": "Q&A 002: The experiences you describe are presented as \"real hallucinations\", in contrast..."
+      "start_ms": 202966,
+      "end_ms": 556618,
+      "duration_ms": 353652,
+      "title": "Q&A 002: The experiences you describe are presented as “real hallucinations”, in contras..."
     },
     {
       "unit": 3,
-      "start_ms": 486850,
-      "end_ms": 1227225,
-      "duration_ms": 740375,
-      "title": "Q&A 003: In your last book you often refer to authors such as Louis Sass, Josef Parnas and..."
+      "start_ms": 556618,
+      "end_ms": 1368866,
+      "duration_ms": 812248,
+      "title": "Q&A 003: In your last book you often refer to authors such as Louis Sass, Josef Parnas a..."
     },
     {
       "unit": 4,
-      "start_ms": 1228125,
-      "end_ms": 1356375,
-      "duration_ms": 128250,
-      "title": "Q&A 004: There is a long-running debate in psychiatric literature concerning the nature of..."
+      "start_ms": 1368866,
+      "end_ms": 1519552,
+      "duration_ms": 150686,
+      "title": "Q&A 004: There is a long-running debate in psychiatric literature concerning the nature..."
     },
     {
       "unit": 5,
-      "start_ms": 1357275,
-      "end_ms": 1507900,
-      "duration_ms": 150625,
-      "title": "Q&A 005: Beyond your interest in hallucinatory states, you insist on the fact that an..."
+      "start_ms": 1519552,
+      "end_ms": 1702529,
+      "duration_ms": 182977,
+      "title": "Q&A 005: Beyond your interest in hallucinatory states, you insist on the fact that an an..."
     }
-  ]
+  ],
+  "audio_duration_seconds": 1702.529,
+  "audio_sha256": "0855ECE402412DB19D77F704FB59B41F37D7E299FCD4D3C83158DC4FC6FB119D",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128006,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue02/Ratcliffe_Frerejouan/interview_manifest.json",
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": null,
+  "tts_final_filter_chain": null,
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    }
+  ],
+  "asr_spotcheck_result": "passed",
+  "src": "/media/audio/bulletin/transcripts/bulletin-ratcliffe-hallucinations.json"
 }

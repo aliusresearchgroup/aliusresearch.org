@@ -6,7 +6,50 @@
   "engine": "F5TTS_v1_Base",
   "delivery_preset": null,
   "final_filter_chain": null,
-  "pronunciation_protocol": null,
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "matthew_ratcliffe",
+      "answer_voice_segments": [
+        "matthew_ratcliffe"
+      ]
+    }
+  ],
   "duration_seconds": 1702.529,
   "codec": "mp3",
   "sample_rate_hz": 24000,
