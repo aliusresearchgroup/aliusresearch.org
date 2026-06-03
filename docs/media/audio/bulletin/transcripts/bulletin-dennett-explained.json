@@ -125,129 +125,281 @@
       "answer": "I’d guess that some band, s, of monkeys in Africa got swept out to sea on some floating vegetation and made it all the way across the South Atlantic to South America, or the Caribbean. That seems to be the favored hunch among the experts, but who knows what will turn up to settle the matter? You express doubt that this would be possible, but I don’t see why. How tight was the genetic bottleneck through which New World monkeys had to pass? I don’t know, and the articles I’ve skimmed don’t discuss it, but I would think this bottleneck would leave a trace after 30-40 million years, discoverable via bioinformatics today."
     }
   ],
-  "audio": "/media/audio/bulletin/kokoro/Issue03/Dennett_Fleig-Goldstein_Friedman/interview.mp3",
-  "audio_download": "/media/audio/bulletin/kokoro/Issue03/Dennett_Fleig-Goldstein_Friedman/interview.mp3",
-  "audio_source": "kokoro-transcript",
+  "audio": "/media/audio/bulletin/voice-clone/Issue03/Dennett_Fleig-Goldstein_Friedman/interview.mp3",
+  "audio_download": "/media/audio/bulletin/voice-clone/Issue03/Dennett_Fleig-Goldstein_Friedman/interview.mp3",
+  "audio_source": "f5-voice-clone-engaged",
   "audio_chapter_count": 17,
   "audio_chapters": [
     {
       "unit": 1,
       "start_ms": 0,
-      "end_ms": 84625,
-      "duration_ms": 84625,
-      "title": "Q&A 001: Your published works, and interviews, span volumes and fields, conveying complex..."
+      "end_ms": 96458,
+      "duration_ms": 96458,
+      "title": "Q&A 001: Your published works, and interviews, span volumes and fields, conveying comple..."
     },
     {
       "unit": 2,
-      "start_ms": 85525,
-      "end_ms": 145675,
-      "duration_ms": 60150,
-      "title": "Q&A 002: If you were to \"start it all over\" as a young person with the same mindset in..."
+      "start_ms": 96458,
+      "end_ms": 162709,
+      "duration_ms": 66251,
+      "title": "Q&A 002: If you were to \"start it all over\" as a young person with the same mindset in 2..."
     },
     {
       "unit": 3,
-      "start_ms": 146575,
-      "end_ms": 171250,
-      "duration_ms": 24675,
-      "title": "Q&A 003: Second, today, what do you see as the biggest disagreement that you have with..."
+      "start_ms": 162709,
+      "end_ms": 189827,
+      "duration_ms": 27118,
+      "title": "Q&A 003: Second, today, what do you see as the biggest disagreement that you have with Q..."
     },
     {
       "unit": 4,
-      "start_ms": 172150,
-      "end_ms": 224400,
-      "duration_ms": 52250,
+      "start_ms": 189827,
+      "end_ms": 243034,
+      "duration_ms": 53207,
       "title": "Q&A 004: In what ways do you feel you changed Quine's mind throughout his career?"
     },
     {
       "unit": 5,
-      "start_ms": 225300,
-      "end_ms": 354425,
-      "duration_ms": 129125,
+      "start_ms": 243034,
+      "end_ms": 376565,
+      "duration_ms": 133531,
       "title": "Q&A 005: Your early career was characterized by the fact that you took the time to learn..."
     },
     {
       "unit": 6,
-      "start_ms": 355325,
-      "end_ms": 433875,
-      "duration_ms": 78550,
-      "title": "Q&A 006: Second, a perennial question in philosophy of science is whether or not..."
+      "start_ms": 376565,
+      "end_ms": 448651,
+      "duration_ms": 72086,
+      "title": "Q&A 006: Second, a perennial question in philosophy of science is whether or not philoso..."
     },
     {
       "unit": 7,
-      "start_ms": 434775,
-      "end_ms": 585700,
-      "duration_ms": 150925,
-      "title": "Q&A 007: Recently Carhart-Harris and Friston integrated psychiatry with predictive..."
+      "start_ms": 448651,
+      "end_ms": 591451,
+      "duration_ms": 142800,
+      "title": "Q&A 007: Recently Carhart-Harris and Friston integrated psychiatry with predictive proce..."
     },
     {
       "unit": 8,
-      "start_ms": 586600,
-      "end_ms": 611650,
-      "duration_ms": 25050,
-      "title": "Q&A 008: Has the intellectual deficit spending of the psychoanalysts been paid off to some..."
+      "start_ms": 591451,
+      "end_ms": 625435,
+      "duration_ms": 33984,
+      "title": "Q&A 008: Has the intellectual deficit spending of the psychoanalysts been paid off to so..."
     },
     {
       "unit": 9,
-      "start_ms": 612550,
-      "end_ms": 693575,
-      "duration_ms": 81025,
-      "title": "Q&A 009: Consider content in the brain that has not achieved much cerebral celebrity, but..."
+      "start_ms": 625435,
+      "end_ms": 708505,
+      "duration_ms": 83070,
+      "title": "Q&A 009: Consider content in the brain that has not achieved much cerebral celebrity, bu..."
     },
     {
       "unit": 10,
-      "start_ms": 694475,
-      "end_ms": 717800,
-      "duration_ms": 23325,
-      "title": "Q&A 010: Neurological recording/stimulation devices and human-computer interfaces are..."
+      "start_ms": 708505,
+      "end_ms": 736997,
+      "duration_ms": 28492,
+      "title": "Q&A 010: Neurological recording/stimulation devices and human-computer interfaces are pr..."
     },
     {
       "unit": 11,
-      "start_ms": 718700,
-      "end_ms": 820750,
-      "duration_ms": 102050,
-      "title": "Q&A 011: If you could design your dream empirical experiment in order to test some aspect..."
+      "start_ms": 736997,
+      "end_ms": 844783,
+      "duration_ms": 107786,
+      "title": "Q&A 011: If you could design your dream empirical experiment in order to test some aspec..."
     },
     {
       "unit": 12,
-      "start_ms": 821650,
-      "end_ms": 942050,
-      "duration_ms": 120400,
-      "title": "Q&A 012: The idea of \"affordances\", the idea that organism's perceive possible interactions..."
+      "start_ms": 844783,
+      "end_ms": 958748,
+      "duration_ms": 113965,
+      "title": "Q&A 012: The idea of \"affordances\", the idea that organism's perceive possible interacti..."
     },
     {
       "unit": 13,
-      "start_ms": 942950,
-      "end_ms": 1174925,
-      "duration_ms": 231975,
+      "start_ms": 958748,
+      "end_ms": 1201439,
+      "duration_ms": 242691,
       "title": "Q&A 013: If philosophers of mind discuss psychedelics, which they rarely do, they often..."
     },
     {
       "unit": 14,
-      "start_ms": 1175825,
-      "end_ms": 1351800,
-      "duration_ms": 175975,
+      "start_ms": 1201439,
+      "end_ms": 1357626,
+      "duration_ms": 156187,
       "title": "Q&A 014: Since psychedelics were made illegal in 1966, much of psychedelic research has..."
     },
     {
       "unit": 15,
-      "start_ms": 1352700,
-      "end_ms": 1536300,
-      "duration_ms": 183600,
-      "title": "Q&A 015: You have said that we should teach children about religion, and in fact all of the..."
+      "start_ms": 1357626,
+      "end_ms": 1522394,
+      "duration_ms": 164768,
+      "title": "Q&A 015: You have said that we should teach children about religion, and in fact all of..."
     },
     {
       "unit": 16,
-      "start_ms": 1537200,
-      "end_ms": 1657350,
-      "duration_ms": 120150,
-      "title": "Q&A 016: What would you like your stance on Plato to be remembered as? Or, what did Plato..."
+      "start_ms": 1522394,
+      "end_ms": 1632583,
+      "duration_ms": 110189,
+      "title": "Q&A 016: What would you like your stance on Plato to be remembered as? Or, what did Plat..."
     },
     {
       "unit": 17,
-      "start_ms": 1658250,
-      "end_ms": 1727650,
-      "duration_ms": 69400,
+      "start_ms": 1632583,
+      "end_ms": 1711535,
+      "duration_ms": 78952,
       "title": "Q&A 017: Genomic and paleological analyses suggest that New World monkeys split off from..."
     }
-  ]
+  ],
+  "audio_duration_seconds": 1711.535,
+  "audio_sha256": "F14F06BB01F5D30BEB1F64613F59B8DB559E1A113C352A54C2AAA98F27B4EC14",
+  "audio_codec": "mp3",
+  "audio_bit_rate_bps": 128005,
+  "audio_sample_rate_hz": 24000,
+  "audio_channels": 1,
+  "audio_manifest": "/media/audio/bulletin/voice-clone/Issue03/Dennett_Fleig-Goldstein_Friedman/interview_manifest.json",
+  "tts_engine": "F5TTS_v1_Base",
+  "tts_delivery_preset": "engaged",
+  "tts_final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "brittany_fleig_goldstein",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "brittany_fleig_goldstein",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "brittany_fleig_goldstein",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "brittany_fleig_goldstein",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "brittany_fleig_goldstein",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 11,
+      "question_voice": "brittany_fleig_goldstein",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 12,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 13,
+      "question_voice": "brittany_fleig_goldstein",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 14,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 15,
+      "question_voice": "brittany_fleig_goldstein",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 16,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    },
+    {
+      "unit": 17,
+      "question_voice": "brittany_fleig_goldstein",
+      "answer_voice": "daniel_dennett",
+      "answer_voice_segments": [
+        "daniel_dennett"
+      ]
+    }
+  ],
+  "asr_spotcheck_result": "passed",
+  "src": "/media/audio/bulletin/transcripts/bulletin-dennett-explained.json"
 }
