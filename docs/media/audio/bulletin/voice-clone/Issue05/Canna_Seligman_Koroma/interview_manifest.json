@@ -6,7 +6,58 @@
   "engine": "F5TTS_v1_Base",
   "delivery_preset": "engaged",
   "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
-  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "maddalena_canna",
+      "answer_voice_segments": [
+        "maddalena_canna"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "maddalena_canna",
+      "answer_voice_segments": [
+        "maddalena_canna"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "maddalena_canna",
+      "answer_voice_segments": [
+        "maddalena_canna"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    }
+  ],
   "duration_seconds": 1493.723,
   "codec": "mp3",
   "sample_rate_hz": 24000,
