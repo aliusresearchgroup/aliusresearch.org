@@ -1769,7 +1769,8 @@
           "timothy_hanks"
         ]
       }
-    ]
+    ],
+    "audio_manifest": "/media/audio/bulletin/voice-clone/Issue04/Hanks_Mikhailova_Friedman/interview_manifest.json"
   },
   "bulletin-lenggenhager-bodily-self": {
     "src": "/media/audio/bulletin/transcripts/bulletin-lenggenhager-bodily-self.json",
