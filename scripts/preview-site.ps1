@@ -167,18 +167,67 @@ try {
                 continue
             }
 
-            $response.StatusCode = 200
-            $response.ContentType = Get-MimeType -Path $targetFull
-
             $fileInfo = Get-Item -LiteralPath $targetFull
-            $response.ContentLength64 = $fileInfo.Length
+            $fileLength = [int64]$fileInfo.Length
+            $rangeHeader = [string]$request.Headers["Range"]
+            $rangeStart = [int64]0
+            $rangeEnd = [int64]($fileLength - 1)
+            $isPartial = $false
 
-            Write-Host ("200 {0}" -f $request.Url.AbsolutePath)
+            if (-not [string]::IsNullOrWhiteSpace($rangeHeader)) {
+                if ($rangeHeader -match '^bytes=(\d*)-(\d*)$') {
+                    $startText = $Matches[1]
+                    $endText = $Matches[2]
+
+                    if ([string]::IsNullOrWhiteSpace($startText) -and -not [string]::IsNullOrWhiteSpace($endText)) {
+                        $suffixLength = [int64]$endText
+                        if ($suffixLength -gt 0) {
+                            $rangeStart = [Math]::Max([int64]0, $fileLength - $suffixLength)
+                        }
+                    }
+                    elseif (-not [string]::IsNullOrWhiteSpace($startText)) {
+                        $rangeStart = [int64]$startText
+                        if (-not [string]::IsNullOrWhiteSpace($endText)) {
+                            $rangeEnd = [Math]::Min([int64]$endText, $fileLength - 1)
+                        }
+                    }
+
+                    if ($rangeStart -lt 0 -or $rangeStart -ge $fileLength -or $rangeEnd -lt $rangeStart) {
+                        $response.StatusCode = 416
+                        $response.Headers["Content-Range"] = "bytes */$fileLength"
+                        $response.OutputStream.Close()
+                        Write-Host ("416 {0}" -f $request.Url.AbsolutePath)
+                        continue
+                    }
+                    $isPartial = $true
+                }
+            }
+
+            $response.StatusCode = if ($isPartial) { 206 } else { 200 }
+            $response.ContentType = Get-MimeType -Path $targetFull
+            $response.Headers["Accept-Ranges"] = "bytes"
+            if ($isPartial) {
+                $response.Headers["Content-Range"] = "bytes $rangeStart-$rangeEnd/$fileLength"
+            }
+            $response.ContentLength64 = $rangeEnd - $rangeStart + 1
+
+            Write-Host ("{0} {1}" -f $response.StatusCode, $request.Url.AbsolutePath)
 
             if ($request.HttpMethod -ne "HEAD") {
                 $stream = [IO.File]::OpenRead($targetFull)
                 try {
-                    $stream.CopyTo($response.OutputStream)
+                    if ($rangeStart -gt 0) {
+                        [void]$stream.Seek($rangeStart, [IO.SeekOrigin]::Begin)
+                    }
+                    $buffer = New-Object byte[] 65536
+                    $remaining = $rangeEnd - $rangeStart + 1
+                    while ($remaining -gt 0) {
+                        $toRead = [int][Math]::Min($buffer.Length, $remaining)
+                        $read = $stream.Read($buffer, 0, $toRead)
+                        if ($read -le 0) { break }
+                        $response.OutputStream.Write($buffer, 0, $read)
+                        $remaining -= $read
+                    }
                 }
                 finally {
                     $stream.Dispose()
