@@ -1,0 +1,88 @@
+{
+  "interview_id": "Issue01/Seligman_Halloy",
+  "interview_slug": "Issue01_Seligman_Halloy",
+  "audio": "/media/audio/bulletin/voice-clone/Issue01/Seligman_Halloy/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue01/Seligman_Halloy/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.776",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "arnaud_halloy",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "arnaud_halloy",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "arnaud_halloy",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "arnaud_halloy",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "arnaud_halloy",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    }
+  ],
+  "duration_seconds": 734.467,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128013,
+  "sha256": "381703812CF39F11DD65DF556B722EEE3ED4509B8F303C5D5ADCBA01E8A34226",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue01_Seligman_Halloy/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue01_Seligman_Halloy/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "pronunciation_check": "not_applicable_no_alius_token_in_source_or_first_minute_spotcheck",
+    "notes": "First-minute ASR follows the intended opening and shows no spoken speaker labels. ASC is transcribed as A-C, which is the source acronym context and not an ALIUS spelling issue.",
+    "excerpt": "For many anthropologists today, the Western category altered states of consciousness\nA-C is still haunted by the ghost of pathologization.\nSome of them have instead proposed the use of culture, specific concepts such as symptomatic\nconsciousness, or autonomous imagination or shamanic state of consciousness.\nThey believe these terms will be more in sync with experiential ground of possession,\nbut at the same time are more difficult to export as a general analytical category.\nIn these two attitudes, where would you drag your own epistemological concept?\nThe problem with the term or category A-C is that it assumes a normative state that is widely\nshared and from which certain states can be marked as alterations.\nThe unmarked normative state that is implied as a self-conscious, reflexive form of awareness\nthat is highly valued in Euro-American cultures.\nOf course, this state may not be the default state for all individuals in all places\nat all."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "arnaud_halloy",
+      "speaker_name": "Arnaud Halloy",
+      "source_url": "https://www.canal-u.tv/chaines/mshs-sud-est/jecis-journees-d-etudes-cognition-information-et-societe-2023/l-hypothese-des",
+      "reference_review_status": "asr_spotcheck_passed_f5_smoke_passed_needs_full_render_review",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "rebecca_seligman",
+      "speaker_name": "Rebecca Seligman",
+      "source_url": "https://www.youtube.com/watch?v=wfrKnnuTF2c",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    }
+  ]
+}

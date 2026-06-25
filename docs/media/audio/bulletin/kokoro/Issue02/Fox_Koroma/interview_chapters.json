@@ -2,78 +2,78 @@
   {
     "unit": 1,
     "start_ms": 0,
-    "end_ms": 58125,
-    "duration_ms": 58125,
+    "end_ms": 56082,
+    "duration_ms": 56082,
     "title": "Q&A 001: What has triggered your scientific interest in the study of mind-wandering and..."
   },
   {
     "unit": 2,
-    "start_ms": 59025,
-    "end_ms": 143950,
-    "duration_ms": 84925,
+    "start_ms": 56950,
+    "end_ms": 138890,
+    "duration_ms": 81940,
     "title": "Q&A 002: Mind-wandering has been the focus of recent research with a diversity of..."
   },
   {
     "unit": 3,
-    "start_ms": 144850,
-    "end_ms": 256775,
-    "duration_ms": 111925,
+    "start_ms": 139758,
+    "end_ms": 247749,
+    "duration_ms": 107991,
     "title": "Q&A 003: Is mind-wandering necessarily a conscious phenomenon or can there be a..."
   },
   {
     "unit": 4,
-    "start_ms": 257675,
-    "end_ms": 340125,
-    "duration_ms": 82450,
+    "start_ms": 248617,
+    "end_ms": 328169,
+    "duration_ms": 79552,
     "title": "Q&A 004: If you consider mind-wandering as a conscious phenomenon, would you consider..."
   },
   {
     "unit": 5,
-    "start_ms": 341025,
-    "end_ms": 464900,
-    "duration_ms": 123875,
+    "start_ms": 329037,
+    "end_ms": 448558,
+    "duration_ms": 119521,
     "title": "Q&A 005: According to work from you and your colleagues, the difference between..."
   },
   {
     "unit": 6,
-    "start_ms": 465800,
-    "end_ms": 598100,
-    "duration_ms": 132300,
+    "start_ms": 449426,
+    "end_ms": 577076,
+    "duration_ms": 127650,
     "title": "Q&A 006: In a recent article that you co-authored, mind-wandering is characterized within..."
   },
   {
     "unit": 7,
-    "start_ms": 599000,
-    "end_ms": 747600,
-    "duration_ms": 148600,
+    "start_ms": 577944,
+    "end_ms": 721320,
+    "duration_ms": 143376,
     "title": "Q&A 007: Mindfulness meditation is a practice based on the careful observation of the train..."
   },
   {
     "unit": 8,
-    "start_ms": 748500,
-    "end_ms": 929350,
-    "duration_ms": 180850,
+    "start_ms": 722189,
+    "end_ms": 896682,
+    "duration_ms": 174493,
     "title": "Q&A 008: Since mind-wandering typically consists in a drift of task-focused cognition..."
   },
   {
     "unit": 9,
-    "start_ms": 930250,
-    "end_ms": 1117950,
-    "duration_ms": 187700,
+    "start_ms": 897550,
+    "end_ms": 1078652,
+    "duration_ms": 181102,
     "title": "Q&A 009: How is the study of mind-wandering informative regarding clinical conditions like..."
   },
   {
     "unit": 10,
-    "start_ms": 1118850,
-    "end_ms": 1273250,
-    "duration_ms": 154400,
+    "start_ms": 1079520,
+    "end_ms": 1228493,
+    "duration_ms": 148973,
     "title": "Q&A 010: Because mind-wandering represents a spontaneous cognitive phenomenon unrelated to..."
   },
   {
     "unit": 11,
-    "start_ms": 1274150,
-    "end_ms": 1308775,
-    "duration_ms": 34625,
+    "start_ms": 1229361,
+    "end_ms": 1262769,
+    "duration_ms": 33408,
     "title": "Q&A 011: Where do you see the study of mind-wandering evolving in the coming years?"
   }
 ]

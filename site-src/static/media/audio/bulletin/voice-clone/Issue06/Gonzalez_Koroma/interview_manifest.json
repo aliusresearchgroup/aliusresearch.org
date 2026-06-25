@@ -1,0 +1,141 @@
+{
+  "interview_id": "Issue06/Gonzalez_Koroma",
+  "interview_slug": "Issue06_Gonzalez_Koroma",
+  "audio": "/media/audio/bulletin/voice-clone/Issue06/Gonzalez_Koroma/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue06/Gonzalez_Koroma/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 11,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    },
+    {
+      "unit": 12,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    }
+  ],
+  "duration_seconds": 2326.216,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128004,
+  "sha256": "2516984CDEF6F43F189D9E92D252C778EB675D88B583069919F61A58DAC871C4",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "tiny.en",
+    "language": "en",
+    "clip": "AudioTranscription/work/verification/Issue06_Gonzalez_Koroma/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue06_Gonzalez_Koroma/first60_full.txt",
+    "checked_at": "2026-06-03T18:40:13.2055925Z",
+    "summary": "First 60s ASR confirms question/answer continuity, Juan opening-name pronunciation, and ALIUS spoken as a word.",
+    "excerpt": "Thanks a lot, Juan, for accepting this interview together.\r\nI would like first to come back to the history of Alias.\r\nWhen does it date back to, and how did it begin?\r\nFirst, I want to thank you, Matthew, for this opportunity to express myself and to Alias as well.\r\nI would say Alias dates back to 2006.\r\nAt that time, I was having my sabbatical year in Paris and was invited by Jeremy Docick at the\r\nE. Coles Houghs, E-Tubes and Sciences Socials, ESS, to deliver a series of seminars there for the 2005-2006\r\nschool year.\r\nThe seminars delved into the subject of hallucinations in the context of philosophy and cognitive\r\nscience during which I met Alexandra Lehman, a young and brilliant researcher who attended those\r\nseminars and who was very interested in the subject.\r\nWe had a good chemistry since the beginning and kept in touch."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "juan_gonzalez",
+      "speaker_name": "Juan Gonzalez",
+      "source_url": "",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    }
+  ]
+}

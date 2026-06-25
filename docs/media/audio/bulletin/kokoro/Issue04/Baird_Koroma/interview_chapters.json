@@ -2,57 +2,57 @@
   {
     "unit": 1,
     "start_ms": 0,
-    "end_ms": 97675,
-    "duration_ms": 97675,
+    "end_ms": 107461,
+    "duration_ms": 107461,
     "title": "Q&A 001: You hold a PhD in cognitive neuroscience and currently are a postdoctoral research..."
   },
   {
     "unit": 2,
-    "start_ms": 98575,
-    "end_ms": 291000,
-    "duration_ms": 192425,
+    "start_ms": 108451,
+    "end_ms": 320155,
+    "duration_ms": 211704,
     "title": "Q&A 002: Dreaming and mind wandering have been proposed to rely on similar mechanisms to..."
   },
   {
     "unit": 3,
-    "start_ms": 291900,
-    "end_ms": 470125,
-    "duration_ms": 178225,
+    "start_ms": 321145,
+    "end_ms": 517227,
+    "duration_ms": 196082,
     "title": "Q&A 003: Lucid dreaming is defined as a kind of dream during which dreamers are aware that..."
   },
   {
     "unit": 4,
-    "start_ms": 471025,
-    "end_ms": 583175,
-    "duration_ms": 112150,
+    "start_ms": 518217,
+    "end_ms": 641603,
+    "duration_ms": 123386,
     "title": "Q&A 004: Extending the approach of LaBerge, several labs around the world recently..."
   },
   {
     "unit": 5,
-    "start_ms": 584075,
-    "end_ms": 806350,
-    "duration_ms": 222275,
+    "start_ms": 642593,
+    "end_ms": 887138,
+    "duration_ms": 244545,
     "title": "Q&A 005: Lucid dreaming differs from dreaming in terms of metacognition, the cognitive..."
   },
   {
     "unit": 6,
-    "start_ms": 807250,
-    "end_ms": 942550,
-    "duration_ms": 135300,
+    "start_ms": 888128,
+    "end_ms": 1036984,
+    "duration_ms": 148856,
     "title": "Q&A 006: For inexperienced lucid dreamers, dream reports reveal that it is difficult to..."
   },
   {
     "unit": 7,
-    "start_ms": 943450,
-    "end_ms": 1127100,
-    "duration_ms": 183650,
+    "start_ms": 1037974,
+    "end_ms": 1240024,
+    "duration_ms": 202050,
     "title": "Q&A 007: Sleep represents an interesting case for consciousness research since it consists..."
   },
   {
     "unit": 8,
-    "start_ms": 1128000,
-    "end_ms": 1324400,
-    "duration_ms": 196400,
+    "start_ms": 1241014,
+    "end_ms": 1457091,
+    "duration_ms": 216077,
     "title": "Q&A 008: On a final note, mind-wandering has been reported for accounting about 50% of our..."
   }
 ]

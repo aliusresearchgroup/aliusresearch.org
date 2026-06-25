@@ -2,50 +2,50 @@
   {
     "unit": 1,
     "start_ms": 0,
-    "end_ms": 120775,
-    "duration_ms": 120775,
+    "end_ms": 137861,
+    "duration_ms": 137861,
     "title": "Q&A 001: To quote your book chapter from 'Neurobiology of Decision Making': \"Thus looking..."
   },
   {
     "unit": 2,
-    "start_ms": 121675,
-    "end_ms": 343025,
-    "duration_ms": 221350,
+    "start_ms": 138888,
+    "end_ms": 391551,
+    "duration_ms": 252663,
     "title": "Q&A 002: What neural events might distinguish the awareness of a decision from ones made..."
   },
   {
     "unit": 3,
-    "start_ms": 343925,
-    "end_ms": 550200,
-    "duration_ms": 206275,
+    "start_ms": 392579,
+    "end_ms": 628035,
+    "duration_ms": 235456,
     "title": "Q&A 003: Your work on the speed vs. accuracy trade-off in the brains of macaques was..."
   },
   {
     "unit": 4,
-    "start_ms": 551100,
-    "end_ms": 730650,
-    "duration_ms": 179550,
+    "start_ms": 629062,
+    "end_ms": 834012,
+    "duration_ms": 204950,
     "title": "Q&A 004: finessing the trade-off between false-positives and false-negatives. The article..."
   },
   {
     "unit": 5,
-    "start_ms": 731550,
-    "end_ms": 831550,
-    "duration_ms": 100000,
+    "start_ms": 835040,
+    "end_ms": 949186,
+    "duration_ms": 114146,
     "title": "Q&A 005: Although it would stand to reason that the dynamics of the environment dictate the..."
   },
   {
     "unit": 6,
-    "start_ms": 832450,
-    "end_ms": 1003450,
-    "duration_ms": 171000,
+    "start_ms": 950214,
+    "end_ms": 1145404,
+    "duration_ms": 195190,
     "title": "Q&A 006: Disease states can influence evidence accumulation, resulting in too much or too..."
   },
   {
     "unit": 7,
-    "start_ms": 1004350,
-    "end_ms": 1146775,
-    "duration_ms": 142425,
+    "start_ms": 1146432,
+    "end_ms": 1309005,
+    "duration_ms": 162573,
     "title": "Q&A 007: What is the minimal number of neurons required to 'make a decision'? More..."
   }
 ]

@@ -1,0 +1,40 @@
+{
+  "interview_id": "Issue04/Baird_Koroma",
+  "interview_slug": "Issue04_Baird_Koroma",
+  "audio": "/media/audio/bulletin/kokoro/Issue04/Baird_Koroma/interview.mp3",
+  "chapters": "/media/audio/bulletin/kokoro/Issue04/Baird_Koroma/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": null,
+  "final_filter_chain": null,
+  "pronunciation_protocol": null,
+  "duration_seconds": 1457.091,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128008,
+  "sha256": "4647558367EFCC3AB27A8875B92E268070804F4C28E04B35B90354EEFD149B2E",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue04_Baird_Koroma/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue04_Baird_Koroma/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "benjamin_baird",
+      "speaker_name": "Benjamin Baird",
+      "source_url": "https://www.youtube.com/watch?v=uDYBXj_wv78",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    }
+  ]
+}

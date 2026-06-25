@@ -1,0 +1,102 @@
+{
+  "interview_id": "Issue05/Canna_Seligman_Koroma",
+  "interview_slug": "Issue05_Canna_Seligman_Koroma",
+  "audio": "/media/audio/bulletin/voice-clone/Issue05/Canna_Seligman_Koroma/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue05/Canna_Seligman_Koroma/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "maddalena_canna",
+      "answer_voice_segments": [
+        "maddalena_canna"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "maddalena_canna",
+      "answer_voice_segments": [
+        "maddalena_canna"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "maddalena_canna",
+      "answer_voice_segments": [
+        "maddalena_canna"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    }
+  ],
+  "duration_seconds": 1493.723,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128007,
+  "sha256": "69CEA01688EAC28F1BAB63C8152C0C2690A63B828A3FCC35E7BF60087436734C",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue05_Canna_Seligman_Koroma/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue05_Canna_Seligman_Koroma/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "pronunciation_check": "passed_no_letter_spelling_for_ALIUS_detected_asr_heard_lowercase_pronunciation_as_Elias",
+    "notes": "ASR did not detect spoken speaker labels. The lowercase alius pronunciation was recognized as Elias, not as A L I U S spelling.",
+    "excerpt": "Dr. Madelina Kanna is a postdoctoral researcher at Northwestern University and Dr. Rebecca\nSeligman is an associate professor of anthropology at Northwestern University.\nYou are both part of the Elias Research Group devoted to fostering interdisciplinary research\nabout the diversity of consciousness.\nWhat types of consciousness phenomena have you been primarily interested in?\nCould you illustrate how transcultural research has helped you better understand some aspects\nof consciousness?\nWe both conducted our PhD research on spirit possession, Madelina Kanna on demonic\npossession in Nicaragua, and Rebecca Seligman on religious possession in Brazilian,\nKingdom LA.\nSpirit possession has been frequently exoticized as something exclusively bounded to\nlocalized systems of beliefs.\nAlso, it has been medicalized and conflated with a wide array of psychiatric constructs\nfrom hysteria to conversion"
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "maddalena_canna",
+      "speaker_name": "Maddalena Canna",
+      "source_url": "https://www.youtube.com/watch?v=_GkB6Uz-pV0",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "rebecca_seligman",
+      "speaker_name": "Rebecca Seligman",
+      "source_url": "https://www.youtube.com/watch?v=wfrKnnuTF2c",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    }
+  ]
+}

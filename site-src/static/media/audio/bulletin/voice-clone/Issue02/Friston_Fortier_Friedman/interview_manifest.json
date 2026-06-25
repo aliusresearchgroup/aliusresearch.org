@@ -1,0 +1,150 @@
+{
+  "interview_id": "Issue02/Friston_Fortier_Friedman",
+  "interview_slug": "Issue02_Friston_Fortier_Friedman",
+  "audio": "/media/audio/bulletin/voice-clone/Issue02/Friston_Fortier_Friedman/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue02/Friston_Fortier_Friedman/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=1.5",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "martin_fortier",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "martin_fortier",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "martin_fortier",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "martin_fortier",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "martin_fortier",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 11,
+      "question_voice": "martin_fortier",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    },
+    {
+      "unit": 12,
+      "question_voice": "daniel_a_friedman",
+      "answer_voice": "karl_friston",
+      "answer_voice_segments": [
+        "karl_friston"
+      ]
+    }
+  ],
+  "duration_seconds": 3523.219,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128002,
+  "sha256": "3FC8810929064630C7504C3F61DB0624ECE25508AEE8EA9C7C27EC2BE5F77943",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue02_Friston_Fortier_Friedman/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue02_Friston_Fortier_Friedman/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "routing_check": "passed_manifest_round_robin_martin_daniel_questions_karl_answers",
+    "pronunciation_check": "not_applicable_first60_no_ALIUS_occurrence",
+    "human_listening_check": "asr_first60_passed_pending_full_human_listening"
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "martin_fortier",
+      "speaker_name": "Martin Fortier",
+      "source_url": "https://www.youtube.com/watch?v=_irgS0b1q1c",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "karl_friston",
+      "speaker_name": "Karl Friston",
+      "source_url": "https://www.youtube.com/watch?v=NwzuibY5kUs",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "daniel_a_friedman",
+      "speaker_name": "Daniel A. Friedman",
+      "source_url": "https://www.youtube.com/watch?v=yHnm-zMqLvY",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "interview_id": "Issue01/Hohwy_Koroma",
+  "interview_slug": "Issue01_Hohwy_Koroma",
+  "audio": "/media/audio/bulletin/voice-clone/Issue01/Hohwy_Koroma/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue01/Hohwy_Koroma/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.744",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "jakob_hohwy",
+      "answer_voice_segments": [
+        "jakob_hohwy"
+      ]
+    }
+  ],
+  "duration_seconds": 872.746,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128013,
+  "sha256": "F57C3D0E4A5AFF8667DDD956B67B383607765FB4B328310A19E30008E562E4F6",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue01_Hohwy_Koroma/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue01_Hohwy_Koroma/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "pronunciation_check": "not_applicable_no_alius_token_in_source_or_first_minute_spotcheck",
+    "notes": "First-minute ASR follows the intended opening and shows no spoken speaker labels; tiny.en mishears a few technical/proper words but preserves the Q&A content.",
+    "excerpt": "Could you first explain how you have come in your academic career to adopt a strong\nemployee-oriented philosophy?\nWhat triggered your interest in the study of the variety of conscious states?\nIt is hard to say what actually drives a particular career path.\nLots of coincidences I suspect, like most young philosophers back in the 1990s, I did\nnot have much interest in or understanding of empirical science.\nI saw myself as engaged in a priori conceptual analysis.\nMost of my research was in philosophy of language, but I got to share an office with\nIron Gold who had done serious work in psychopathology and gold introduced me to theories\nof delusion formation and thereby the cognitive neuroscience.\nIt immediately appealed to me and I think that deep down I must always have known that\nthe philosophical problems that I wrestled with in fact do relate to science.\nIn other words, these philosophical problems can't be addressed."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "jakob_hohwy",
+      "speaker_name": "Jakob Hohwy",
+      "source_url": "https://www.youtube.com/watch?v=rW3zKigrTD0",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "warn"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "unit": 1,
+    "start_ms": 0,
+    "end_ms": 91867,
+    "duration_ms": 91867,
+    "title": "Q&A 001: You are a psychologist and neuroscientist. How did you get interested in studyi..."
+  },
+  {
+    "unit": 2,
+    "start_ms": 91867,
+    "end_ms": 236356,
+    "duration_ms": 144489,
+    "title": "Q&A 002: A lot of your work is focusing on visual perception. What can we learn from the..."
+  },
+  {
+    "unit": 3,
+    "start_ms": 236356,
+    "end_ms": 302357,
+    "duration_ms": 66001,
+    "title": "Q&A 003: to 2004, you worked in Zurich and conducted experiments with psilocybin. Why di..."
+  },
+  {
+    "unit": 4,
+    "start_ms": 302357,
+    "end_ms": 360331,
+    "duration_ms": 57974,
+    "title": "Q&A 004: What did you learn from studying psychedelics?"
+  },
+  {
+    "unit": 5,
+    "start_ms": 360331,
+    "end_ms": 482968,
+    "duration_ms": 122637,
+    "title": "Q&A 005: Psychedelics are currently being tested in the treatment of various psychiatric..."
+  },
+  {
+    "unit": 6,
+    "start_ms": 482968,
+    "end_ms": 600254,
+    "duration_ms": 117286,
+    "title": "Q&A 006: Your recent article received a lot of attention. Here, you argue against unidim..."
+  },
+  {
+    "unit": 7,
+    "start_ms": 600254,
+    "end_ms": 694350,
+    "duration_ms": 94096,
+    "title": "Q&A 007: In your article, you therefore argue that the psychedelic state cannot be descr..."
+  },
+  {
+    "unit": 8,
+    "start_ms": 694350,
+    "end_ms": 804501,
+    "duration_ms": 110151,
+    "title": "Q&A 008: Do you think that a state in which consciousness is increased on all dimensions..."
+  },
+  {
+    "unit": 9,
+    "start_ms": 804501,
+    "end_ms": 909746,
+    "duration_ms": 105245,
+    "title": "Q&A 009: On your webpage, one of the questions you are asking is \u201cWhat are the factors t..."
+  },
+  {
+    "unit": 10,
+    "start_ms": 909746,
+    "end_ms": 988680,
+    "duration_ms": 78934,
+    "title": "Q&A 010: In another recent article you ask a different but somewhat related question: \u201cW..."
+  },
+  {
+    "unit": 11,
+    "start_ms": 988680,
+    "end_ms": 1028370,
+    "duration_ms": 39690,
+    "title": "Q&A 011: Speaking of the future, in which direction does the field need to move to make..."
+  },
+  {
+    "unit": 12,
+    "start_ms": 1028370,
+    "end_ms": 1114439,
+    "duration_ms": 86069,
+    "title": "Q&A 012: Do you have a recommendation for young researchers who want to study consciousn..."
+  }
+]

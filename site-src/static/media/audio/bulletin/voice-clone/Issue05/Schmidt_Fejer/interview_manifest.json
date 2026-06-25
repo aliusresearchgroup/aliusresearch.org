@@ -1,0 +1,117 @@
+{
+  "interview_id": "Issue05/Schmidt_Fejer",
+  "interview_slug": "Issue05_Schmidt_Fejer",
+  "audio": "/media/audio/bulletin/voice-clone/Issue05/Schmidt_Fejer/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue05/Schmidt_Fejer/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.8",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "george_fejer",
+      "answer_voice": "timo_torsten_schmidt",
+      "answer_voice_segments": [
+        "timo_torsten_schmidt"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "george_fejer",
+      "answer_voice": "timo_torsten_schmidt",
+      "answer_voice_segments": [
+        "timo_torsten_schmidt"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "george_fejer",
+      "answer_voice": "timo_torsten_schmidt",
+      "answer_voice_segments": [
+        "timo_torsten_schmidt"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "george_fejer",
+      "answer_voice": "timo_torsten_schmidt",
+      "answer_voice_segments": [
+        "timo_torsten_schmidt"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "george_fejer",
+      "answer_voice": "timo_torsten_schmidt",
+      "answer_voice_segments": [
+        "timo_torsten_schmidt"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "george_fejer",
+      "answer_voice": "timo_torsten_schmidt",
+      "answer_voice_segments": [
+        "timo_torsten_schmidt"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "george_fejer",
+      "answer_voice": "timo_torsten_schmidt",
+      "answer_voice_segments": [
+        "timo_torsten_schmidt"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "george_fejer",
+      "answer_voice": "timo_torsten_schmidt",
+      "answer_voice_segments": [
+        "timo_torsten_schmidt"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "george_fejer",
+      "answer_voice": "timo_torsten_schmidt",
+      "answer_voice_segments": [
+        "timo_torsten_schmidt"
+      ]
+    }
+  ],
+  "duration_seconds": 1534.658,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128008,
+  "sha256": "83F00E0B96166E9AABC4305DC04360CDEAFDBE39B86805ABC707347BAA18F204",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "tiny.en",
+    "language": "en",
+    "clip": "AudioTranscription/work/verification/Issue05_Schmidt_Fejer/first120_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue05_Schmidt_Fejer/first120_full.txt",
+    "checked_at": "2026-06-03T20:23:42.457777+00:00",
+    "summary": "First 120s ASR confirms George question audio followed by the Timo Torsten Schmidt answer, with speaker labels omitted.",
+    "excerpt": "The altered state's databases by far the most ambitious attempt to systematically catalog\npsychometric data on both pharmacologically and non-pharmacologically-induced altered states\nof consciousness up to date.\nHow did you become interested in altered states of consciousness, A.S.C., and what was\nyour motivation to embark on this project?\nI am passionate about contributing to the empirical work investigating the neural correlates\nof human consciousness, N.C.C.\nThe idea of compiling the database was born at a time when I discovered the existing literature\nabout the diverse methods of inducing A.S.C.'s and their effects.\nI felt that it might have been a missed chance in the history of science, that after\nthe discovery psychedelics were not used further to elucidate the relevant neuronal mechanisms\nthat correlate with their effects on consciousness.\nI felt such drugs would be a great experimental tool for consciousness research.\nThis is because they allow induction of a substantial deviation from normal conscious functioning\nfor a short amount of time healthy people and their use was reported to be mostly safe under\ncontrolled laboratory conditions.\nI therefore thought that such induced deviations from average conscious experiences could\nbe used as experimental tools with multiple advantages over studying A.S.C.'s that\noccur in psychopathologies.\nLet's take the example of hallucinations.\nSuch phenomena typically do not occur spontaneously in healthy study participants.\nTherefore, it is not possible to directly compare a normal, non-halucinating state with\na hallucinating state.\nOf course, there are some patients who suffer from hallucinations, such as during psychosis.\nHowever, it is very challenging to study the neuronal correlates of hallucinations in such\npatient groups as their brains might have already undergone substantial long-term changes,\nincluding structural alterations.\nAn on-off within subject design-readed possibilities."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "george_fejer",
+      "speaker_name": "George Fejer",
+      "source_url": "https://www.youtube.com/watch?v=Qm-lmC-xYCI",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "timo_torsten_schmidt",
+      "speaker_name": "Timo Torsten Schmidt",
+      "source_url": "https://www.youtube.com/watch?v=F6OC4GOoPD4",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    }
+  ]
+}

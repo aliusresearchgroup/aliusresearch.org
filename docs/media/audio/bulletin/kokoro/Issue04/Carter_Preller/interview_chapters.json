@@ -2,85 +2,85 @@
   {
     "unit": 1,
     "start_ms": 0,
-    "end_ms": 56400,
-    "duration_ms": 56400,
+    "end_ms": 84533,
+    "duration_ms": 84533,
     "title": "Q&A 001: You are a psychologist and neuroscientist. How did you get interested in studying..."
   },
   {
     "unit": 2,
-    "start_ms": 57300,
-    "end_ms": 157175,
-    "duration_ms": 99875,
+    "start_ms": 85882,
+    "end_ms": 235575,
+    "duration_ms": 149693,
     "title": "Q&A 002: A lot of your work is focusing on visual perception. What can we learn from the..."
   },
   {
     "unit": 3,
-    "start_ms": 158075,
-    "end_ms": 200025,
-    "duration_ms": 41950,
+    "start_ms": 236924,
+    "end_ms": 299799,
+    "duration_ms": 62875,
     "title": "Q&A 003: to 2004, you worked in Zurich and conducted experiments with psilocybin. Why did..."
   },
   {
     "unit": 4,
-    "start_ms": 200925,
-    "end_ms": 241750,
-    "duration_ms": 40825,
+    "start_ms": 301148,
+    "end_ms": 362337,
+    "duration_ms": 61189,
     "title": "Q&A 004: What did you learn from studying psychedelics?"
   },
   {
     "unit": 5,
-    "start_ms": 242650,
-    "end_ms": 324475,
-    "duration_ms": 81825,
+    "start_ms": 363686,
+    "end_ms": 486326,
+    "duration_ms": 122640,
     "title": "Q&A 005: Psychedelics are currently being tested in the treatment of various psychiatric..."
   },
   {
     "unit": 6,
-    "start_ms": 325375,
-    "end_ms": 403700,
-    "duration_ms": 78325,
+    "start_ms": 487675,
+    "end_ms": 605069,
+    "duration_ms": 117394,
     "title": "Q&A 006: Your recent article received a lot of attention. Here, you argue against..."
   },
   {
     "unit": 7,
-    "start_ms": 404600,
-    "end_ms": 466350,
-    "duration_ms": 61750,
+    "start_ms": 606418,
+    "end_ms": 698969,
+    "duration_ms": 92551,
     "title": "Q&A 007: In your article, you therefore argue that the psychedelic state cannot be..."
   },
   {
     "unit": 8,
-    "start_ms": 467250,
-    "end_ms": 538500,
-    "duration_ms": 71250,
+    "start_ms": 700318,
+    "end_ms": 807108,
+    "duration_ms": 106790,
     "title": "Q&A 008: Do you think that a state in which consciousness is increased on all dimensions..."
   },
   {
     "unit": 9,
-    "start_ms": 539400,
-    "end_ms": 608550,
-    "duration_ms": 69150,
+    "start_ms": 808457,
+    "end_ms": 912100,
+    "duration_ms": 103643,
     "title": "Q&A 009: On your webpage, one of the questions you are asking is \"What are the factors that..."
   },
   {
     "unit": 10,
-    "start_ms": 609450,
-    "end_ms": 662800,
-    "duration_ms": 53350,
+    "start_ms": 913449,
+    "end_ms": 993410,
+    "duration_ms": 79961,
     "title": "Q&A 010: In another recent article you ask a different but somewhat related question: \"What..."
   },
   {
     "unit": 11,
-    "start_ms": 663700,
-    "end_ms": 686400,
-    "duration_ms": 22700,
+    "start_ms": 994759,
+    "end_ms": 1028782,
+    "duration_ms": 34023,
     "title": "Q&A 011: Speaking of the future, in which direction does the field need to move to make..."
   },
   {
     "unit": 12,
-    "start_ms": 687300,
-    "end_ms": 743550,
-    "duration_ms": 56250,
+    "start_ms": 1030131,
+    "end_ms": 1114439,
+    "duration_ms": 84308,
     "title": "Q&A 012: Do you have a recommendation for young researchers who want to study consciousness?"
   }
 ]

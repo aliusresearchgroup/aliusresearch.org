@@ -1,0 +1,83 @@
+{
+  "interview_id": "Issue01/McCarthy-Jones_Frerejouan",
+  "interview_slug": "Issue01_McCarthy-Jones_Frerejouan",
+  "audio": "/media/audio/bulletin/voice-clone/Issue01/McCarthy-Jones_Frerejouan/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue01/McCarthy-Jones_Frerejouan/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": null,
+  "final_filter_chain": null,
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    }
+  ],
+  "duration_seconds": 1199.599,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128009,
+  "sha256": "802D106C78EB00BBB2649B92DF5D89517621EEBD6DDF6E9E8DB51DB96639910D",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue01_McCarthy-Jones_Frerejouan/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue01_McCarthy-Jones_Frerejouan/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "mathieu_frerejouan",
+      "speaker_name": "Mathieu Frerejouan",
+      "source_url": "https://www.youtube.com/watch?v=YBsR4MVpT4I",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "simon_mccarthy_jones",
+      "speaker_name": "Simon McCarthy-Jones",
+      "source_url": "https://www.youtube.com/watch?v=Oj6T-PuYWuk",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "pass"
+    }
+  ]
+}

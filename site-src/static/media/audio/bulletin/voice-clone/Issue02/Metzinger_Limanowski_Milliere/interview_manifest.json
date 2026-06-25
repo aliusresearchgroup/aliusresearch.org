@@ -1,0 +1,150 @@
+{
+  "interview_id": "Issue02/Metzinger_Limanowski_Milliere",
+  "interview_slug": "Issue02_Metzinger_Limanowski_Milliere",
+  "audio": "/media/audio/bulletin/voice-clone/Issue02/Metzinger_Limanowski_Milliere/interview.mp3",
+  "chapters": "/media/audio/bulletin/voice-clone/Issue02/Metzinger_Limanowski_Milliere/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": "engaged",
+  "final_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms.",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "jakub_limanowski",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "jakub_limanowski",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "jakub_limanowski",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "jakub_limanowski",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "jakub_limanowski",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 11,
+      "question_voice": "jakub_limanowski",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    },
+    {
+      "unit": 12,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "thomas_metzinger",
+      "answer_voice_segments": [
+        "thomas_metzinger"
+      ]
+    }
+  ],
+  "duration_seconds": 3219.382,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128003,
+  "sha256": "7768A3E69990B87C1989CA69881CDD4C9118BE25A120B63277040199D48B74EC",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue02_Metzinger_Limanowski_Milliere/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue02_Metzinger_Limanowski_Milliere/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "routing_check": "passed_manifest_round_robin_jakub_raphael_questions_thomas_answers",
+    "pronunciation_check": "not_applicable_first60_no_ALIUS_occurrence",
+    "human_listening_check": "asr_first60_passed_pending_full_human_listening"
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "jakub_limanowski",
+      "speaker_name": "Jakub Limanowski",
+      "source_url": "https://verein-radio98eins.de/wp-content/uploads/2024/07/E31_Biologische%20Psychologie_Podcast.mp3",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "thomas_metzinger",
+      "speaker_name": "Thomas Metzinger",
+      "source_url": "https://www.youtube.com/watch?v=4vXBcXtcXK4",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "raphael_milliere",
+      "speaker_name": "Raphael Milliere",
+      "source_url": "https://www.youtube.com/watch?v=Q3MCTZ1P_J0",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "warn"
+    }
+  ]
+}

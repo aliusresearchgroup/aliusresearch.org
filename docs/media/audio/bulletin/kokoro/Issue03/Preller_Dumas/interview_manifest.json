@@ -1,0 +1,40 @@
+{
+  "interview_id": "Issue03/Preller_Dumas",
+  "interview_slug": "Issue03_Preller_Dumas",
+  "audio": "/media/audio/bulletin/kokoro/Issue03/Preller_Dumas/interview.mp3",
+  "chapters": "/media/audio/bulletin/kokoro/Issue03/Preller_Dumas/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": null,
+  "final_filter_chain": null,
+  "pronunciation_protocol": null,
+  "duration_seconds": 1119.117,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128008,
+  "sha256": "E5189EE070FB82A593DDEA489D79A35BE7AB89A55D2DA04EB1D5C026CB8A6769",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue03_Preller_Dumas/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue03_Preller_Dumas/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "guillaume_dumas",
+      "speaker_name": "Guillaume Dumas",
+      "source_url": "https://www.youtube.com/watch?v=bZdhwsRoz54",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "katrin_preller",
+      "speaker_name": "Katrin Preller",
+      "source_url": "https://www.youtube.com/watch?v=t9KMDg_ZGyg",
+      "reference_review_status": "asr_spotcheck_passed",
+      "profile_gate": "pass"
+    }
+  ]
+}

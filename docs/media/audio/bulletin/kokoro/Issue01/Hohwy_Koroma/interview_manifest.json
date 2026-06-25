@@ -1,0 +1,40 @@
+{
+  "interview_id": "Issue01/Hohwy_Koroma",
+  "interview_slug": "Issue01_Hohwy_Koroma",
+  "audio": "/media/audio/bulletin/kokoro/Issue01/Hohwy_Koroma/interview.mp3",
+  "chapters": "/media/audio/bulletin/kokoro/Issue01/Hohwy_Koroma/interview_chapters.json",
+  "engine": "F5TTS_v1_Base",
+  "delivery_preset": null,
+  "final_filter_chain": null,
+  "pronunciation_protocol": null,
+  "duration_seconds": 649.33,
+  "codec": "mp3",
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "bit_rate_bps": 128017,
+  "sha256": "4BBDCB005D697948396C5E6BB26C58BA75399B89F8C075663D4723D7293D5F2C",
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue01_Hohwy_Koroma/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue01_Hohwy_Koroma/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "voice_profiles": [
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "jakob_hohwy",
+      "speaker_name": "Jakob Hohwy",
+      "source_url": "https://www.youtube.com/watch?v=rW3zKigrTD0",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "profile_gate": "pass"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "unit": 1,
+    "start_ms": 0,
+    "end_ms": 106945,
+    "duration_ms": 106945,
+    "title": "Q&A 001: To begin, could you please tell us a few words as to how you position yourself..."
+  },
+  {
+    "unit": 2,
+    "start_ms": 106945,
+    "end_ms": 242992,
+    "duration_ms": 136047,
+    "title": "Q&A 002: While studying magicians in contemporary England or evangelicals in the US, it..."
+  },
+  {
+    "unit": 3,
+    "start_ms": 242992,
+    "end_ms": 762077,
+    "duration_ms": 519085,
+    "title": "Q&A 003: In your work, you are especially interested in understanding the mechanisms thr..."
+  },
+  {
+    "unit": 4,
+    "start_ms": 762077,
+    "end_ms": 958871,
+    "duration_ms": 196794,
+    "title": "Q&A 004: In your research, you have demonstrated that the shift from imagination to perc..."
+  },
+  {
+    "unit": 5,
+    "start_ms": 958871,
+    "end_ms": 1251334,
+    "duration_ms": 292463,
+    "title": "Q&A 005: The question of cognitive penetrability has sparked much discussions. In your o..."
+  },
+  {
+    "unit": 6,
+    "start_ms": 1251334,
+    "end_ms": 1443035,
+    "duration_ms": 191701,
+    "title": "Q&A 006: One of your present interests deals with participation, sensuous being-in-the-w..."
+  }
+]
