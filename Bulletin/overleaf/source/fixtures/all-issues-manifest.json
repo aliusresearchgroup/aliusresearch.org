@@ -1,0 +1,164 @@
+{
+  "pieces": [
+    {
+      "name": "martial",
+      "main_tex": "fixtures/pieces/martial.tex",
+      "content_dir": "content/pieces/martial",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-debate-near-death-experiences-in-the-public-debate-a-scientific-perspective.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "canna-seligman",
+      "main_tex": "fixtures/pieces/canna-seligman.tex",
+      "content_dir": "content/pieces/canna-seligman",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "chadha",
+      "main_tex": "fixtures/pieces/chadha.tex",
+      "content_dir": "content/pieces/chadha",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of-transformative-experiences.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "olson-yaden",
+      "main_tex": "fixtures/pieces/olson-yaden.tex",
+      "content_dir": "content/pieces/olson-yaden",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "schmidt",
+      "main_tex": "fixtures/pieces/schmidt.tex",
+      "content_dir": "content/pieces/schmidt",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-database-for-consciousness.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "gonzalez",
+      "main_tex": "fixtures/pieces/gonzalez.tex",
+      "content_dir": "content/pieces/gonzalez",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-research.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "sleep",
+      "main_tex": "fixtures/pieces/sleep.tex",
+      "content_dir": "content/pieces/sleep",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "froese",
+      "main_tex": "fixtures/pieces/froese.tex",
+      "content_dir": "content/pieces/froese",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    }
+  ],
+  "issues": [
+    {
+      "name": "issue-01",
+      "main_tex": "fixtures/issues/issue-01.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "source-indexed"
+    },
+    {
+      "name": "issue-02",
+      "main_tex": "fixtures/issues/issue-02.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "source-indexed"
+    },
+    {
+      "name": "issue-03",
+      "main_tex": "fixtures/issues/issue-03.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "source-indexed"
+    },
+    {
+      "name": "issue-04",
+      "main_tex": "fixtures/issues/issue-04.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "source-indexed"
+    },
+    {
+      "name": "issue-05",
+      "main_tex": "fixtures/issues/issue-05.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "issue-06",
+      "main_tex": "fixtures/issues/issue-06.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-full.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "partial"
+    },
+    {
+      "name": "issue-07",
+      "main_tex": "fixtures/issues/issue-07.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-full.pdf",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "partial"
+    }
+  ]
+}

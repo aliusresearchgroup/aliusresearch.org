@@ -233,10 +233,10 @@
               width: 100%;
             }
 
-            body.wsite-page-journal-club .journal-speaker {
+            body.wsite-page-journal-club .journal-page .journal-speaker {
               margin-top: 8px;
-              color: var(--journal-muted);
-              font: 500 14px/1.45 Raleway, Arial, sans-serif;
+              color: var(--journal-green);
+              font: 700 14px/1.45 Raleway, Arial, sans-serif;
             }
 
             body.wsite-page-journal-club .journal-tags {
@@ -352,36 +352,36 @@
           </style>
 
           <main class="journal-page" aria-label="ALIUS video lecture recordings">
-            <div class="journal-controls" role="group" aria-label="Filter video lectures">
+            <div id="journal-filters" class="journal-controls" role="group" aria-label="Filter video lectures">
               <div class="journal-control-row">
-                <button type="button" class="journal-filter journal-filter--all is-active" data-filter="*">All <span class="journal-filter__count">15</span></button>
+                <button type="button" class="journal-filter journal-filter--all is-active" data-filter="*">All <span class="journal-filter__count">16</span></button>
               </div>
               <section class="journal-filter-group" aria-label="Topics">
                 <h2>Topics</h2>
                 <div class="journal-filters">
-                  <button type="button" class="journal-filter" data-filter="psychedelics">Psychedelics <span class="journal-filter__count">10</span></button>
-              <button type="button" class="journal-filter" data-filter="neuroscience">Neuroscience <span class="journal-filter__count">11</span></button>
+                  <button type="button" class="journal-filter" data-filter="psychedelics">Psychedelics <span class="journal-filter__count">11</span></button>
+              <button type="button" class="journal-filter" data-filter="neuroscience">Neuroscience <span class="journal-filter__count">12</span></button>
               <button type="button" class="journal-filter" data-filter="methods">Methods <span class="journal-filter__count">6</span></button>
-              <button type="button" class="journal-filter" data-filter="phenomenology">Phenomenology <span class="journal-filter__count">7</span></button>
+              <button type="button" class="journal-filter" data-filter="phenomenology">Phenomenology <span class="journal-filter__count">8</span></button>
               <button type="button" class="journal-filter" data-filter="therapy">Therapy <span class="journal-filter__count">3</span></button>
               <button type="button" class="journal-filter" data-filter="mental-health">Mental health <span class="journal-filter__count">2</span></button>
               <button type="button" class="journal-filter" data-filter="sleep">Sleep <span class="journal-filter__count">1</span></button>
               <button type="button" class="journal-filter" data-filter="self">Self <span class="journal-filter__count">3</span></button>
               <button type="button" class="journal-filter" data-filter="body">Body <span class="journal-filter__count">2</span></button>
-              <button type="button" class="journal-filter" data-filter="pharmacology">Pharmacology <span class="journal-filter__count">4</span></button>
+              <button type="button" class="journal-filter" data-filter="pharmacology">Pharmacology <span class="journal-filter__count">5</span></button>
               <button type="button" class="journal-filter" data-filter="meditation">Meditation <span class="journal-filter__count">2</span></button>
               <button type="button" class="journal-filter" data-filter="computation">Computation <span class="journal-filter__count">2</span></button>
               <button type="button" class="journal-filter" data-filter="cognition">Cognition <span class="journal-filter__count">2</span></button>
               <button type="button" class="journal-filter" data-filter="dmt">DMT <span class="journal-filter__count">1</span></button>
               <button type="button" class="journal-filter" data-filter="policy">Policy <span class="journal-filter__count">1</span></button>
               <button type="button" class="journal-filter" data-filter="naturalistic">Naturalistic <span class="journal-filter__count">1</span></button>
-              <button type="button" class="journal-filter" data-filter="anthropology">Anthropology <span class="journal-filter__count">2</span></button>
+              <button type="button" class="journal-filter" data-filter="anthropology">Anthropology <span class="journal-filter__count">3</span></button>
               <button type="button" class="journal-filter" data-filter="classification">Classification <span class="journal-filter__count">1</span></button>
                 </div>
               </section>
             </div>
 
-            <div class="journal-list">
+            <div id="journal-list" class="journal-list">
               <article id="journal-koroma" class="journal-talk" data-tags="sleep body neuroscience">
                 <header class="journal-talk__header">
                   <h2>Cardiac responses to sounds: insights on the embodiment of sleep functions</h2>
@@ -891,6 +891,51 @@
                   </section>
                   <section class="journal-copy-block" aria-labelledby="bio-fortier">
                     <h3 id="bio-fortier">Speaker biography</h3>
+                    <p>
+                      Martin E. Fortier was affiliated with the Institut Jean Nicod, Department of Cognitive Studies, ENS,
+                      Paris, and the Department of Philosophy and Social Sciences, EHESS, Paris. His work brought
+                      anthropology, philosophy, and cognitive science into conversation around hallucinogenic experience and
+                      altered states of consciousness.
+                    </p>
+                  </section>
+                </div>
+              </article>
+
+              <article id="journal-fortier-sense-reality-hallucinogens" class="journal-talk" data-tags="psychedelics anthropology phenomenology neuroscience pharmacology">
+                <header class="journal-talk__header">
+                  <h2>How the sense of reality and religious systems are uniquely shaped by serotoninergic and anticholinergic hallucinogens</h2>
+                  <p class="journal-speaker">Martin E. Fortier &middot; Dec 9, 2017</p>
+                  <p class="journal-tags" aria-label="Topic descriptors"><span>Psychedelics</span><span>Anthropology</span><span>Phenomenology</span><span>Neuroscience</span><span>Pharmacology</span></p>
+                </header>
+                <div class="journal-copy">
+                  <div class="journal-video-wrap">
+                    <div class="journal-video">
+                    <iframe
+                      src="https://www.youtube.com/embed/1ogsts1wbOw"
+                      title="How the sense of reality and religious systems are uniquely shaped by serotoninergic and anticholinergic hallucinogens - Martin Fortier"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  </div>
+                  <section class="journal-copy-block" aria-labelledby="abstract-fortier-sense-reality-hallucinogens">
+                    <h3 id="abstract-fortier-sense-reality-hallucinogens">Abstract</h3>
+                    <p>
+                      This lecture compares serotoninergic psychedelics and anticholinergic deliriants as two pharmacological
+                      routes to hallucination, arguing that they produce different relations between hallucination, insight,
+                      and ordinary reality. Fortier criticizes monitoring models of hallucination, revisits double bookkeeping,
+                      and proposes that psychedelic experience often preserves discrimination between ordinary and visionary
+                      realities, whereas anticholinergic experience tends toward face-value incorporation of hallucinations
+                      into the perceived world. The talk then develops a plural account of the sense of reality, distinguishing
+                      neurocognitive contributions linked to sensorimotor coupling, affective salience, selfhood, and critical
+                      evaluation. In its final anthropological part, it argues that hallucinogens do not originate religion as
+                      such, but can shape ritual forms through their pharmacological effects on memory, social setting, and
+                      experiential content.
+                    </p>
+                  </section>
+                  <section class="journal-copy-block" aria-labelledby="bio-fortier-sense-reality-hallucinogens">
+                    <h3 id="bio-fortier-sense-reality-hallucinogens">Speaker biography</h3>
                     <p>
                       Martin E. Fortier was affiliated with the Institut Jean Nicod, Department of Cognitive Studies, ENS,
                       Paris, and the Department of Philosophy and Social Sciences, EHESS, Paris. His work brought

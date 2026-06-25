@@ -1,0 +1,93 @@
+[
+  {
+    "unit": 1,
+    "start_ms": 0,
+    "end_ms": 133400,
+    "duration_ms": 133400,
+    "title": "Q&A 001: Your work has significantly influenced our understanding of the neural..."
+  },
+  {
+    "unit": 2,
+    "start_ms": 134300,
+    "end_ms": 272125,
+    "duration_ms": 137825,
+    "title": "Q&A 002: Throughout your career, what discoveries or insights have most altered your own..."
+  },
+  {
+    "unit": 3,
+    "start_ms": 273025,
+    "end_ms": 368625,
+    "duration_ms": 95600,
+    "title": "Q&A 003: In your opinion, how do psychoactive substances modulate neuronal networks, and..."
+  },
+  {
+    "unit": 4,
+    "start_ms": 369525,
+    "end_ms": 565175,
+    "duration_ms": 195650,
+    "title": "Q&A 004: Could you elaborate on the neurobiological mechanisms that you believe are most..."
+  },
+  {
+    "unit": 5,
+    "start_ms": 566075,
+    "end_ms": 729475,
+    "duration_ms": 163400,
+    "title": "Q&A 005: Considering your extensive research in neuropharmacology, what ethical..."
+  },
+  {
+    "unit": 6,
+    "start_ms": 730375,
+    "end_ms": 846525,
+    "duration_ms": 116150,
+    "title": "Q&A 006: In light of your collaboration with artists and your work on the neural mechanisms..."
+  },
+  {
+    "unit": 7,
+    "start_ms": 847425,
+    "end_ms": 990100,
+    "duration_ms": 142675,
+    "title": "Q&A 007: Generative neural networks have been increasingly used in artistic production...."
+  },
+  {
+    "unit": 8,
+    "start_ms": 991000,
+    "end_ms": 1105150,
+    "duration_ms": 114150,
+    "title": "Q&A 008: How do you perceive the role of artificial intelligence and machine learning in..."
+  },
+  {
+    "unit": 9,
+    "start_ms": 1106050,
+    "end_ms": 1185375,
+    "duration_ms": 79325,
+    "title": "Q&A 009: In light of your groundbreaking work on the neural foundations of individual..."
+  },
+  {
+    "unit": 10,
+    "start_ms": 1186275,
+    "end_ms": 1217275,
+    "duration_ms": 31000,
+    "title": "Q&A 010: Considering this social dimension, does the idea of collective consciousness..."
+  },
+  {
+    "unit": 11,
+    "start_ms": 1218175,
+    "end_ms": 1297100,
+    "duration_ms": 78925,
+    "title": "Q&A 011: What do you think are the most promising areas for future research in altered..."
+  },
+  {
+    "unit": 12,
+    "start_ms": 1298000,
+    "end_ms": 1445075,
+    "duration_ms": 147075,
+    "title": "Q&A 012: You have often advocated for interdisciplinary approaches in neuroscience. How do..."
+  },
+  {
+    "unit": 13,
+    "start_ms": 1445975,
+    "end_ms": 1507425,
+    "duration_ms": 61450,
+    "title": "Q&A 013: What advice would you give to young scientists embarking on research in the..."
+  }
+]

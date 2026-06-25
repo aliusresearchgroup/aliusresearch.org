@@ -1,0 +1,64 @@
+{
+  "name": "issue-03",
+  "issue_number": "3",
+  "year": "2019",
+  "status": "source-indexed",
+  "source_page": "site-src/content/bulletin/issues/bulletin-03/body.html",
+  "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf",
+  "cover": {
+    "mode": "generated",
+    "editors": "Martin Fortier, Matthieu Koroma \\& Rojwan Lemoine (eds.)",
+    "date_line": "AUGUST 2019",
+    "website": "aliusresearch.org",
+    "tagline": "exploring the diversity of consciousness",
+    "subjects": [
+      "TIM BAYNE",
+      "DANIEL DENNETT",
+      "ZOLTAN DIENES",
+      "KATRIN PRELLER",
+      "MICHAEL WINKELMAN"
+    ]
+  },
+  "pieces": [
+    {
+      "slug": "bayne",
+      "piece_type": "interview",
+      "title": "How to study consciousness as a natural phenomenon",
+      "source_page": "site-src/content/bulletin/interviews/bulletin03-bayneinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-bayne-how-to-study-consciousness-as-a-natural-phenomenon.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "dennett",
+      "piece_type": "interview",
+      "title": "Explained",
+      "source_page": "site-src/content/bulletin/interviews/bulletin03-dennettinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-dennett-explained.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "dienes",
+      "piece_type": "interview",
+      "title": "Role of hypnosis and meditation in consciousness research",
+      "source_page": "site-src/content/bulletin/interviews/bulletin03-dienesinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-dienes-role-of-hypnosis-and-meditation-in-consciousness-research.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "preller",
+      "piece_type": "interview",
+      "title": "Psychedelics and sociality",
+      "source_page": "site-src/content/bulletin/interviews/bulletin03-prellerinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-preller-psychedelics-and-sociality-probing-the-diversity-of-cognition-beyond.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "winkelman",
+      "piece_type": "interview",
+      "title": "Evolutionary neuroanthropology of consciousness",
+      "source_page": "site-src/content/bulletin/interviews/bulletin03-winkelmaninterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf",
+      "status": "source-indexed"
+    }
+  ]
+}

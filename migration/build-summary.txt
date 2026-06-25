@@ -1,7 +1,7 @@
-Generated UTC: 2026-04-21T20:28:59.7799768Z
+Generated UTC: 2026-06-03T00:24:51.1080878Z
 Docs output: C:\Users\cogpsy-vrlab\Documents\GitHub\aliusresearch.org\docs
-Canonical pages written: 145
+Canonical pages written: 21
 Static root copied: C:\Users\cogpsy-vrlab\Documents\GitHub\aliusresearch.org\site-src\static
-Redirect stubs: 144
+Redirect stubs: 201
 GitHub Pages project base path: (none)
 GitHub Pages custom domain: aliusresearch.org

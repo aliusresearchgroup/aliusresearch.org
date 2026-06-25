@@ -801,6 +801,11 @@ body.wsite-page-events .event-card__image {
   background: #eef3ed;
 }
 
+body.wsite-page-events .event-card__image--contain {
+  padding: 22px;
+  object-fit: contain;
+}
+
 body.wsite-page-events .event-card__body {
   display: grid;
   gap: 14px;
@@ -866,6 +871,29 @@ body.wsite-page-events .event-detail-page {
 
 body.wsite-page-events .event-detail-page .event-section:first-of-type {
   margin-top: 0;
+}
+
+body.wsite-page-events .event-venue-photo {
+  width: min(760px, 100%);
+  margin: 26px auto 0;
+}
+
+body.wsite-page-events .event-venue-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--events-line);
+  border-radius: 8px;
+  background: var(--events-wash);
+}
+
+body.wsite-page-events .event-venue-photo figcaption {
+  margin-top: 8px;
+  color: var(--events-muted);
+  font-family: Raleway, sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: center;
 }
 
 @media (max-width: 720px) {

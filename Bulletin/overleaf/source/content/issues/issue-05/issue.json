@@ -1,0 +1,73 @@
+{
+  "name": "issue-05",
+  "issue_number": "5",
+  "year": "2021",
+  "status": "reconstructed",
+  "source_page": "site-src/content/bulletin/issues/bulletin-05/body.html",
+  "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf",
+  "cover_asset": "assets/covers/coverbulletin5-orig.jpg",
+  "cover": {
+    "mode": "generated",
+    "editors": "George Fejer, Daniel Friedman \\& Matthieu Koroma (eds.)",
+    "date_line": "DECEMBER 2021",
+    "website": "aliusresearch.org",
+    "tagline": "exploring the diversity of consciousness",
+    "subjects": [
+      "CHARLOTTE MARTIAL",
+      "MADDALENA CANNA",
+      "REBECCA SELIGMAN",
+      "MONIMA CHADHA",
+      "DAVID OLSON",
+      "DAVID YADEN",
+      "TIMO SCHMIDT"
+    ]
+  },
+  "frontmatter": "content/issues/issue-05/frontmatter.tex",
+  "pieces": [
+    {
+      "slug": "martial",
+      "piece_type": "commentary",
+      "title": "Near-death experiences in the public debate",
+      "source_page": "site-src/content/bulletin/interviews/bulletin05-martial/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-debate-near-death-experiences-in-the-public-debate-a-scientific-perspective.pdf",
+      "content_dir": "content/pieces/martial",
+      "status": "reconstructed"
+    },
+    {
+      "slug": "canna-seligman",
+      "piece_type": "interview",
+      "title": "How culture breaks down the mind-body divide",
+      "source_page": "site-src/content/bulletin/interviews/bulletin05-cannaseligmaninterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.pdf",
+      "content_dir": "content/pieces/canna-seligman",
+      "status": "reconstructed"
+    },
+    {
+      "slug": "chadha",
+      "piece_type": "interview",
+      "title": "Indian philosophy and the value of transformative experiences",
+      "source_page": "site-src/content/bulletin/interviews/bulletin05-chadhainterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of-transformative-experiences.pdf",
+      "content_dir": "content/pieces/chadha",
+      "status": "reconstructed"
+    },
+    {
+      "slug": "olson-yaden",
+      "piece_type": "conversation",
+      "title": "Are the subjective effects of psychedelics necessary for their enduring therapeutic effects?",
+      "source_page": "site-src/content/bulletin/interviews/bulletin05-olsonyadeninterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf",
+      "content_dir": "content/pieces/olson-yaden",
+      "status": "reconstructed"
+    },
+    {
+      "slug": "schmidt",
+      "piece_type": "interview",
+      "title": "Phenomenoconnectomics and the Altered States Database for Consciousness Research",
+      "source_page": "site-src/content/bulletin/interviews/bulletin05-schmidtinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-database-for-consciousness.pdf",
+      "content_dir": "content/pieces/schmidt",
+      "status": "reconstructed"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 Each member becomes a simple card with:
   - Photo (circular avatar, top)
   - Name (h3, bold but not oversized)
-  - Affiliation/role (small muted line, optional)
+  - Coordinator label only when applicable
   - Bio paragraph (normal body text)
   - Icon row with links (LinkedIn, ResearchGate, Scholar, site, email)
 
@@ -16,6 +16,7 @@ Uncodixify principles applied:
   - Monochrome icons at 18px, subtle hover
 """
 import json
+import html
 import re
 from pathlib import Path
 from urllib.parse import urlparse
@@ -72,10 +73,77 @@ EXTRA_MEMBERS = [
             "neurophenomenological analysis, and generative AI to reconstruct "
             "subjective experiences across altered states of consciousness."
         ),
-        "links": [],
-        "email": None,
+        "links": [
+            {"href": "https://www.linkedin.com/in/france-lerner-52939a66", "text": "LinkedIn"},
+            {"href": "https://www.francelerner.com", "text": "Website"},
+            {"href": "https://orcid.org/0009-0000-1283-6612", "text": "ORCID iD"},
+        ],
+        "email": "lerner.france@gmail.com",
     },
 ]
+
+def profile_key(name: str) -> str:
+    plain = html.unescape(re.sub(r"<[^>]+>", "", name or ""))
+    return re.sub(r"[^a-z0-9]+", "", plain.lower())
+
+# ORCID iDs already curated elsewhere in this repo for ALIUS Bulletin people.
+# The builder applies them only to matching team cards, and preserves explicit
+# ORCID links if a card source already supplies one later.
+ORCID_IDS = {
+    "Alessio Bucci": "0000-0002-8594-5972",
+    "Anna Ciaunica": "0000-0002-2708-8319",
+    "Arnaud Halloy": "0009-0004-1515-4667",
+    "Charlotte Martial": "0000-0001-6291-3460",
+    "Chris Timmermann": "0000-0002-2281-377X",
+    "Christopher Timmermann": "0000-0002-2281-377X",
+    "Cordelia Erickson-Davis": "0000-0001-7694-820X",
+    "Edvard Aviles": "0000-0002-3936-8959",
+    "George Fejer": "0000-0002-4904-5504",
+    "Guillaume Dumas": "0000-0002-2253-1844",
+    "Katrin H. Preller": "0000-0003-0413-7672",
+    "Katrin Preller": "0000-0003-0413-7672",
+    "Leor Roseman": "0000-0001-9990-6029",
+    "Maddalena Canna": "0000-0002-7506-5875",
+    "Martin E. Fortier": "0000-0003-3282-8120",
+    "Martin Fortier": "0000-0003-3282-8120",
+    "Matthieu Koroma": "0000-0003-2269-7841",
+    "Raphael Milliere": "0000-0001-6965-6073",
+    "Raphaël Millière": "0000-0001-6965-6073",
+    "Rebecca Seligman": "0000-0002-9402-0322",
+    "Timo Torsten Schmidt": "0000-0003-1612-1301",
+    "Tom Froese": "0000-0002-9899-5274",
+}
+
+ORCID_BY_KEY = {
+    profile_key(name): orcid
+    for name, orcid in ORCID_IDS.items()
+}
+
+# Curated Google Scholar profiles for team cards whose source pages do not
+# already include a Scholar link.
+GOOGLE_SCHOLAR_PROFILES = {
+    "Alexandre Billon": "https://scholar.google.com/citations?user=Bknm2JwAAAAJ&hl=en",
+    "Anna Ciaunica": "https://scholar.google.com/citations?user=ZUMz7EAAAAAJ&hl=en",
+    "Charlotte Martial": "https://scholar.google.com/citations?user=aP8tsFAAAAAJ&hl=en",
+    "Chris Timmermann": "https://scholar.google.com/citations?user=ezYk7h0AAAAJ&hl=en",
+    "Christopher Timmermann": "https://scholar.google.com/citations?user=ezYk7h0AAAAJ&hl=en",
+    "Cyril Costines": "https://scholar.google.com/citations?user=-HSadLYAAAAJ&hl=en",
+    "Cyriel Costines": "https://scholar.google.com/citations?user=-HSadLYAAAAJ&hl=en",
+    "Guillaume Dumas": "https://scholar.google.com/citations?user=TakXk9MAAAAJ&hl=en",
+    "Mar Estarellas": "https://scholar.google.com/citations?user=Myjep6cAAAAJ&hl=en",
+    "Matthew Sacchet": "https://scholar.google.com/citations?user=ckejHQkAAAAJ&hl=en",
+    "Raphael Milliere": "https://scholar.google.com/citations?user=_2kiRH0AAAAJ&hl=en",
+    "Raphaël Millière": "https://scholar.google.com/citations?user=_2kiRH0AAAAJ&hl=en",
+    "Romy Lorenz": "https://scholar.google.com/citations?user=i8KWsMkAAAAJ&hl=en",
+    "Timo Torsten Schmidt": "https://scholar.google.com/citations?user=o5IBmAQAAAAJ&hl=en",
+    "Tom Froese": "https://scholar.google.com/citations?user=uKd8pmUAAAAJ&hl=en",
+    "Audrey Mazancieux": "https://scholar.google.com/citations?user=0-VPCwQAAAAJ&hl=en",
+}
+
+GOOGLE_SCHOLAR_BY_KEY = {
+    profile_key(name): url
+    for name, url in GOOGLE_SCHOLAR_PROFILES.items()
+}
 
 # ---- tag taxonomy ----
 
@@ -300,7 +368,7 @@ ICON_DEFS = {
     "researchgate":("ResearchGate",   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3v14H7zM14 5h3v14h-3zM7 11h10v2H7z"/></svg>'),
     "scholar":     ("Google Scholar", '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>'),
     "academia":    ("Academia",       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>'),
-    "orcid":       ("ORCID",          '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="bold">iD</text></svg>'),
+    "orcid":       ("ORCID iD",       '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="bold">iD</text></svg>'),
     "twitter":     ("Twitter / X",    '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22l-7.5 8.6L23 21h-6.8l-5.3-6.9L4.8 21H1.7l8-9.2L1 3h7l4.8 6.3zM17.7 19.2h1.9L6.4 4.7H4.3z"/></svg>'),
     "github":      ("GitHub",         '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.5-.3-5.2-1.3-5.2-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>'),
     "site":        ("Website",        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>'),
@@ -333,6 +401,24 @@ def slug_name(name: str) -> str:
     return f"member-{s}" if s else "member"
 
 
+def portrait_asset_slug(src: str) -> str:
+    s = re.sub(r"[^a-z0-9]+", "-", (src or "").lower()).strip("-")
+    return s[:80]
+
+
+def optimized_portrait_urls(src: str) -> tuple[str, str] | None:
+    """Return webp/jpg URLs for pre-cropped team portraits when available."""
+    if not src or not src.lstrip("/").startswith("media/images/"):
+        return None
+    stem = portrait_asset_slug(src)
+    rel = Path("media") / "team-portraits"
+    webp = REPO / "docs" / rel / f"{stem}.webp"
+    jpg = REPO / "docs" / rel / f"{stem}.jpg"
+    if not (webp.exists() and jpg.exists()):
+        return None
+    return (f"/media/team-portraits/{stem}.webp", f"/media/team-portraits/{stem}.jpg")
+
+
 def obfuscate_email(email: str) -> str:
     """Produce 'user [at] domain [dot] tld' form for scraper-hostile display."""
     if "@" not in email:
@@ -352,6 +438,13 @@ def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False
     for l in m.get("links") or []:
         t = classify_link(l["href"])
         link_by_type.setdefault(t, l["href"])
+    key = profile_key(name)
+    orcid = ORCID_BY_KEY.get(key)
+    if orcid:
+        link_by_type.setdefault("orcid", f"https://orcid.org/{orcid}")
+    scholar = GOOGLE_SCHOLAR_BY_KEY.get(key)
+    if scholar:
+        link_by_type.setdefault("scholar", scholar)
 
     icons_html = ""
     for key in ("linkedin", "twitter", "scholar", "researchgate", "orcid", "academia", "github", "site", "pdf"):
@@ -377,14 +470,25 @@ def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False
 
     img_html = ''
     if img:
-        img_html = f'<div class="team-card__avatar"><img src="{img}" alt="{name}" loading="lazy" decoding="async"></div>'
+        optimized = optimized_portrait_urls(img)
+        if optimized:
+            webp_url, jpg_url = optimized
+            img_html = (
+                f'<div class="team-card__avatar"><picture>'
+                f'<source srcset="{webp_url}" type="image/webp">'
+                f'<img src="{jpg_url}" alt="{name}" loading="lazy" decoding="async" width="400" height="400">'
+                f'</picture></div>'
+            )
+        else:
+            img_html = f'<div class="team-card__avatar"><img src="{img}" alt="{name}" loading="lazy" decoding="async"></div>'
 
     coord_class = ' team-card--coord' if is_coordinator else ''
     role_html = (
-        '<p class="team-card__role">Team Coordinator</p>'
+        '<div class="team-card__role">Team Coordinator</div>'
         if is_coordinator else
-        '<p class="team-card__role team-card__role--muted">Research Member</p>'
+        ''
     )
+    role_line = f"\n  {role_html}" if role_html else ""
 
     # Tag attribute so the filter can match without text parsing
     tag_list = tags_for_bio(bio, name, is_coordinator, is_memoriam)
@@ -393,9 +497,8 @@ def render_card(m: dict, is_coordinator: bool = False, is_memoriam: bool = False
 
     return f'''<article class="team-card{coord_class}" id="{slug}"{tags_attr}>
   {img_html}
-  <h3 class="team-card__name">{name}</h3>
-  {role_html}
-  <p class="team-card__bio">{bio}</p>
+  <div class="team-card__name" role="heading" aria-level="3">{name}</div>{role_line}
+  <div class="team-card__bio">{bio}</div>
   <div class="team-card__links">{icons_html}</div>
 </article>'''
 
@@ -558,6 +661,16 @@ CSS = """<style>
 
 body.wsite-page-team #wsite-content {
   padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (max-width: 992px) {
+  body.wsite-page-team:not(.menu-open) .navmobile-wrapper {
+    pointer-events: none;
+  }
+
+  body.wsite-page-team.menu-open .navmobile-wrapper {
+    pointer-events: auto;
+  }
 }
 
 /* One font stack for the entire page: Raleway, with system-font fallback */
@@ -765,11 +878,11 @@ body.wsite-page-team .memoriam__subhead {
 body.wsite-page-team .memoriam__col p {
   font-size: 15px !important;
   line-height: 1.72 !important;
-  color: #2a3330 !important;
+  color: #2a3330;
   margin: 0 0 14px !important;
   text-align: justify !important;
   text-align-last: left !important;
-  font-weight: 400 !important;
+  font-weight: 400;
 }
 body.wsite-page-team .memoriam__video,
 body.wsite-page-team .memoriam__pdf {
@@ -936,30 +1049,34 @@ body.wsite-page-team .team-section-heading h2 {
    boxes visibly resize in unison. */
 body.wsite-page-team .team-grid {
   --team-motion-duration: 860ms;
+  --team-dormant-row-size: 160px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  grid-auto-rows: var(--team-card-base-size, 236px);
-  gap: 16px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-auto-rows: var(--team-card-base-size, var(--team-dormant-row-size));
+  gap: 12px;
+  max-width: 1360px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 18px 24px 24px;
   overflow: visible;
   transition: grid-template-columns var(--team-motion-duration) cubic-bezier(0.22, 0.61, 0.36, 1),
               grid-template-rows var(--team-motion-duration) cubic-bezier(0.22, 0.61, 0.36, 1);
   will-change: grid-template-columns, grid-template-rows;
 }
 body.wsite-page-team .team-grid--accordion-mode {
-  grid-auto-rows: minmax(var(--team-card-base-size, 220px), auto);
+  grid-auto-rows: minmax(var(--team-card-base-size, var(--team-dormant-row-size)), auto);
 }
 @media (max-width: 1024px) {
   body.wsite-page-team .team-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
 }
 @media (max-width: 700px) {
   body.wsite-page-team .team-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+}
+@media (max-width: 560px) {
+  body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 420px) {
   body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
@@ -973,56 +1090,61 @@ body.wsite-page-team .team-grid--accordion-mode {
    #ffffff  — white (background)
 */
 
-/* Card (viscereality pattern: left-accent colored border) */
+/* Card: neutral at rest, topic-accented on interaction. */
 body.wsite-page-team .team-card {
+  --team-accent: #3d8b3d;
+  --team-accent-rgb: 61, 139, 61;
+  --team-accent-soft: rgba(61, 139, 61, 0.07);
   background: #ffffff;
-  border: 1px solid rgba(26, 77, 46, 0.12);
-  border-left: 3px solid #3d8b3d;  /* leaf-green left accent */
+  border: 1px solid rgba(31, 40, 38, 0.12);
+  border-left: 3px solid rgba(31, 40, 38, 0.12);
   border-radius: 8px;
-  padding: 18px 14px 12px;
+  padding: 10px 12px 9px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   height: 100%;             /* fills its grid cell — borders snap at row/col edges */
-  min-height: var(--team-card-base-size, 236px);
+  min-height: var(--team-card-base-size, var(--team-dormant-row-size));
   overflow: hidden;
   box-sizing: border-box;
   transition: opacity 240ms ease,
               filter 240ms ease,
+              background 240ms ease,
               border-color 240ms ease,
               box-shadow 240ms ease;
   text-shadow: 0 0 2px rgba(26, 77, 46, 0.02);
 }
-body.wsite-page-team .team-card--coord {
-  border-left-color: #8fbf4d;  /* brighter leaf green for coordinators */
-  border-left-width: 4px;
-}
-body.wsite-page-team .team-card:hover {
-  border-color: rgba(26, 77, 46, 0.25);
-  border-left-color: #3d8b3d;
-  box-shadow: 0 6px 22px -6px rgba(26, 77, 46, 0.25), 0 0 0 1px rgba(61, 139, 61, 0.1);
+body.wsite-page-team .team-card:hover,
+body.wsite-page-team .team-card:focus-visible {
+  border-color: rgba(var(--team-accent-rgb, 61, 139, 61), 0.32);
+  border-left-color: rgba(var(--team-accent-rgb, 61, 139, 61), 0.5);
+  box-shadow: 0 6px 22px -8px rgba(var(--team-accent-rgb, 61, 139, 61), 0.22),
+              0 0 0 1px rgba(var(--team-accent-rgb, 61, 139, 61), 0.1);
   transform: none;
-}
-body.wsite-page-team .team-card--coord:hover {
-  border-left-color: #8fbf4d;
-  box-shadow: 0 6px 22px -6px rgba(143, 191, 77, 0.4), 0 0 0 1px rgba(143, 191, 77, 0.2);
+  outline: none;
 }
 
 body.wsite-page-team .team-card__avatar {
-  width: 84px;
-  height: 84px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;           /* don't let the flex column compress us */
   aspect-ratio: 1 / 1;      /* belt-and-braces: stay perfectly square */
   border-radius: 50%;
   overflow: hidden;
   background: #f2f4f3;
-  margin-bottom: 12px;
-  /* Ring matches card accent (leaf green) */
-  box-shadow: 0 0 0 3px #3d8b3d, 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 7px;
+  box-shadow: 0 0 0 2px rgba(31, 40, 38, 0.14), 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: width var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              height var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              margin var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
+              box-shadow 240ms ease,
+              background 240ms ease;
 }
-body.wsite-page-team .team-card--coord .team-card__avatar {
-  box-shadow: 0 0 0 3px #8fbf4d, 0 2px 6px rgba(0, 0, 0, 0.08);
+body.wsite-page-team .team-card:hover .team-card__avatar,
+body.wsite-page-team .team-card:focus-visible .team-card__avatar {
+  box-shadow: 0 0 0 3px rgba(var(--team-accent-rgb, 61, 139, 61), 0.24),
+              0 3px 9px rgba(0, 0, 0, 0.09);
 }
 body.wsite-page-team .team-card__avatar img {
   width: 100%;
@@ -1033,68 +1155,80 @@ body.wsite-page-team .team-card__avatar img {
   max-width: none !important;
   border-radius: 50%;
 }
+body.wsite-page-team .team-card__avatar picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 body.wsite-page-team .team-card__name {
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  color: #0f1a11 !important;
-  margin: 0 0 4px !important;
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-  line-height: 1.3 !important;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f1a11;
+  margin: 0 0 3px;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.25;
 }
 body.wsite-page-team .team-card__role {
-  font-size: 11.5px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  color: #3d8b3d !important;
-  margin: 0 0 8px !important;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6b7571;
+  margin: 0 0 4px;
 }
 body.wsite-page-team .team-card--coord .team-card__role {
-  color: #6b9b1f !important;
+  color: #6b7571;
 }
 body.wsite-page-team .team-card__role--muted {
-  color: #6b7571 !important;
+  color: #6b7571;
 }
 
-/* Specificity note: Weebly declares `#wsite-content p { font-size:16px !important }`
-   at spec (1,0,1) — we prefix our rules with #wsite-content to match that ID
-   selector and add the type qualifier (`p.team-card__bio`) for clean override.
+/* Card internals use scoped component classes, not Weebly paragraph/heading
+   elements, so the profile UI can stay independent from inherited editor
+   typography. */
 
-   Motion design: `font-size` stays CONSTANT at its natural value for each
-   element. The VISUAL growth/shrink is driven entirely by the card's
-   `transform: scale()` — so the text and the card scale as one single
-   transform operation and are mechanically in lockstep (no compounding of
-   two independent animations). Text REVEAL in the dormant → expanded
-   transition uses `max-height` + `opacity` on the same 2400ms curve so
-   the content fades in as the box grows. */
-
-body.wsite-page-team #wsite-content p.team-card__bio {
-  font-size: 14px !important;          /* constant — scales WITH the card */
-  line-height: 1.55 !important;
+body.wsite-page-team .team-card__bio {
+  font-size: 14px;
+  line-height: 1.55;
   color: #2a3330 !important;
   font-weight: 400 !important;
   overflow: hidden;
   text-align: left;
   width: 100%;
+  box-sizing: border-box;
+  border-left: 3px solid transparent;
+  border-radius: 0 6px 6px 0;
+  background: transparent;
+  padding: 0 0 0 12px;
   /* Dormant: collapsed + invisible */
   max-height: 0;
-  margin: 0 !important;
+  margin: 0;
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transition: max-height var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
               margin var(--team-motion-duration, 860ms) cubic-bezier(0.22, 0.61, 0.36, 1),
-              opacity 240ms ease 80ms;
+              opacity 240ms ease var(--team-bio-reveal-delay, 120ms),
+              background 240ms ease,
+              border-color 240ms ease,
+              visibility 0s linear var(--team-motion-duration, 860ms);
 }
-body.wsite-page-team #wsite-content .team-card--expanded p.team-card__bio {
+body.wsite-page-team .team-card--expanded .team-card__bio {
   max-height: var(--expanded-bio-height, 30em);
-  margin: 16px 0 0 !important;
+  margin: 16px 0 0;
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  background: var(--team-accent-soft, rgba(61, 139, 61, 0.07));
+  border-left-color: var(--team-accent, #3d8b3d);
+  transition-delay: 0s, 0s, var(--team-bio-reveal-delay, 120ms), 0s, 0s, 0s;
 }
 
 /* Name + role — same technique; hidden in dormant, revealed with bio. */
-body.wsite-page-team #wsite-content h3.team-card__name,
-body.wsite-page-team #wsite-content p.team-card__role {
+body.wsite-page-team .team-card__name,
+body.wsite-page-team .team-card__role {
   max-height: none;
   opacity: 1;
   overflow: visible;
@@ -1105,14 +1239,14 @@ body.wsite-page-team #wsite-content p.team-card__role {
 /* Natural font sizes stay at their declared values (15px for name,
    11.5px for role) — those class selectors are defined earlier in this
    CSS block and continue to apply. */
-body.wsite-page-team #wsite-content .team-card--expanded h3.team-card__name {
+body.wsite-page-team .team-card--expanded .team-card__name {
   max-height: 3em;
-  margin: 0 0 4px !important;
+  margin: 0 0 4px;
   opacity: 1;
 }
-body.wsite-page-team #wsite-content .team-card--expanded p.team-card__role {
+body.wsite-page-team .team-card--expanded .team-card__role {
   max-height: 2em;
-  margin: 0 0 12px !important;
+  margin: 0 0 12px;
   opacity: 1;
 }
 
@@ -1122,7 +1256,7 @@ body.wsite-page-team .team-card__links {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: auto;
-  padding-top: 4px;
+  padding-top: 5px;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   width: 100%;
 }
@@ -1131,8 +1265,8 @@ body.wsite-page-team .team-card__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   color: #6b7571;
@@ -1194,6 +1328,13 @@ body.wsite-page-team .team-card__icon--pdf:hover {
 body.wsite-page-team .team-card__icon--email:hover {
   border-color: rgba(92, 120, 114, 0.7);
   color: #5c7872;
+}
+body.wsite-page-team .team-card--expanded .team-card__icon:hover,
+body.wsite-page-team .team-card--expanded .team-card__icon:focus-visible {
+  border-color: rgba(var(--team-accent-rgb, 61, 139, 61), 0.72);
+  color: var(--team-accent, #3d8b3d);
+  background: rgba(var(--team-accent-rgb, 61, 139, 61), 0.08);
+  box-shadow: 0 0 0 3px rgba(var(--team-accent-rgb, 61, 139, 61), 0.14);
 }
 
 /* Email hover-reveal tooltip (anti-scraper: no mailto, no raw address in href) */
@@ -1300,7 +1441,7 @@ body.wsite-page-team .team-card {
 }
 @media (max-width: 420px) {
   body.wsite-page-team .team-grid { grid-template-columns: 1fr; }
-  body.wsite-page-team .team-card { padding: 18px; }
+  body.wsite-page-team .team-card { padding: 12px; }
 }
 
 /* Hide the original Weebly section-wraps on this page — the grid is our render path */
@@ -1384,9 +1525,22 @@ body.wsite-page-team .team-card--expanded {
   z-index: 10;
   overflow: hidden;
   transform: none;
-  border-color: rgba(26, 77, 46, 0.45);
-  box-shadow: 0 10px 28px -16px rgba(26, 77, 46, 0.28),
-              0 0 0 1px rgba(61, 139, 61, 0.2);
+  background: var(--team-accent-soft, rgba(61, 139, 61, 0.07));
+  border-color: rgba(var(--team-accent-rgb, 61, 139, 61), 0.46);
+  border-left-color: var(--team-accent, #3d8b3d);
+  box-shadow: 0 14px 32px -18px rgba(var(--team-accent-rgb, 61, 139, 61), 0.34),
+              0 0 0 1px rgba(var(--team-accent-rgb, 61, 139, 61), 0.16);
+}
+body.wsite-page-team .team-card--expanded .team-card__avatar {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 12px;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(var(--team-accent-rgb, 61, 139, 61), 0.42),
+              0 8px 18px rgba(0, 0, 0, 0.12);
+}
+body.wsite-page-team .team-card--expanded .team-card__role {
+  color: var(--team-accent, #3d8b3d) !important;
 }
 body.wsite-page-team .team-grid--accordion-mode .team-card--expanded {
   height: auto;
@@ -1408,7 +1562,8 @@ body.wsite-page-team .team-grid--has-expanded .team-card:not(.team-card--expande
 @media (prefers-reduced-motion: reduce) {
   body.wsite-page-team .team-grid,
   body.wsite-page-team .team-card,
-  body.wsite-page-team #wsite-content p.team-card__bio {
+  body.wsite-page-team .team-card__avatar,
+  body.wsite-page-team .team-card__bio {
     transition: none !important;
   }
 }

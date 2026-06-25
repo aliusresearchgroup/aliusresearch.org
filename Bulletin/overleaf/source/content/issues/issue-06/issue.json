@@ -1,0 +1,84 @@
+{
+  "name": "issue-06",
+  "issue_number": "6",
+  "year": "2023",
+  "status": "partial",
+  "source_page": "site-src/content/bulletin/issues/bulletin-06/body.html",
+  "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-full.pdf",
+  "cover_asset": "assets/covers/coveralius6-final3-1.png",
+  "cover": {
+    "mode": "generated",
+    "editors": "Alessio Bucci, Lena Coutrot, George Fejer, Daniel Friedman \\& Matthieu Koroma (eds.)",
+    "date_line": "APRIL 2024",
+    "website": "aliusresearch.org",
+    "tagline": "exploring the diversity of consciousness",
+    "subjects": [
+      "ANNA CIAUNICA",
+      "MANOJ DOSS",
+      "JUAN GONZALEZ",
+      "STEVEN JILLINGS",
+      "MATTHIEU KOROMA",
+      "ROBERT SAPOLSKY",
+      "JEREMY SKIPPER"
+    ]
+  },
+  "pieces": [
+    {
+      "slug": "ciaunica",
+      "piece_type": "podcast",
+      "title": "What is it like to be in early sensory life?",
+      "source_page": "site-src/content/bulletin/interviews/bulletin06-ciaunica-podcast/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-ciaunica-what-is-like-to-be-in-early-sensory-life.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "doss",
+      "piece_type": "commentary",
+      "title": "On the Cinco Sins of Psychedelic Research",
+      "source_page": "site-src/content/bulletin/interviews/bulletin06-dossinterview-532533/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "gonzalez",
+      "piece_type": "interview",
+      "title": "An interdisciplinary journey into consciousness research",
+      "source_page": "site-src/content/bulletin/interviews/bulletin06-gonzalez-interview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-research.pdf",
+      "content_dir": "content/pieces/gonzalez",
+      "status": "reconstructed"
+    },
+    {
+      "slug": "jillings",
+      "piece_type": "podcast",
+      "title": "What is it like to be in weightlessness?",
+      "source_page": "site-src/content/bulletin/interviews/bulletin06-jillings-podcast/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightlessness.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "sleep",
+      "piece_type": "podcast",
+      "title": "What is it like to be asleep?",
+      "source_page": "site-src/content/bulletin/interviews/bulletin06-koroma-podcast/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf",
+      "content_dir": "content/pieces/sleep",
+      "status": "reconstructed"
+    },
+    {
+      "slug": "sapolsky",
+      "piece_type": "interview",
+      "title": "On free will, or the lack thereof",
+      "source_page": "site-src/content/bulletin/interviews/bulletin06-sapolskyinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "skipper",
+      "piece_type": "interview",
+      "title": "The intimacy of psychedelics, language, and consciousness",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-06/alius-bulletin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf",
+      "status": "source-indexed"
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 This is a running list of repo-wide instructions that future AI agents must preserve when editing this site.
 
+For detailed site formatting and responsive layout standards, also read `for AI agents/SITE_FORMATTING_STANDARDS.md` before changing public pages.
+
 ## Site Header And Navigation
 
 - Every public-facing page must keep the standard ALIUS site shell unless the user explicitly requests an exception.
@@ -15,5 +17,7 @@ This is a running list of repo-wide instructions that future AI agents must pres
 ## Deployment
 
 - After making website changes, push the committed changes to GitHub so the website deployment can update.
+- The main live website is deployed from the `current-deployment` branch. Unless the user explicitly says otherwise, finished public website edits should be committed and pushed to `current-deployment`.
+- After pushing, check that the GitHub Pages deployment for `current-deployment` succeeds and verify the relevant public URL, not just the raw GitHub file.
 - Do not leave finished site edits only in the local working tree unless the user explicitly asks not to push.
 - Commit and push only the files relevant to the requested change; preserve unrelated staged, unstaged, or untracked user work.

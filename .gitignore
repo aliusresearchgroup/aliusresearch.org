@@ -20,3 +20,38 @@ site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/Montserrat/*.
 site-src/static/assets/vendor/editmysite/cdn2.editmysite.com/fonts/EB_Garamond/*.ttf
 internal_documents/
 longpath_scan.cs
+
+# Local media/render scratch artifacts
+tmp/
+tmp_logo_frames/
+tmp_sprout_frames/
+output/**/frames/
+output/**/__pycache__/
+output/**/*.log
+output/**/*.pid
+output/doi-check/
+output/logo-finalization/
+output/pdf/
+output/playwright/
+output/site-formatting-qa/
+
+# Local media tooling payloads
+tools/arnndn-models/
+tools/deepfilter/
+tools/models/
+tools/realesrgan-ncnn-vulkan-*.zip
+tools/realesrgan-ncnn-vulkan.exe
+tools/vcomp140*.dll
+tools/input*.jpg
+tools/onepiece_demo.mp4
+Nur_Logo_Loop_02.gif
+__pycache__/
+*.py[cod]
+
+# Generated Bulletin/Overleaf package outputs
+Bulletin/overleaf/alius-bulletin-overleaf-project/
+Bulletin/overleaf/alius-bulletin-overleaf-project.zip
+Bulletin/overleaf/generated-interview-outputs/
+Bulletin/overleaf/package-build/
+Bulletin/overleaf/package-validation/
+Bulletin/overleaf/quickstart-build*/

@@ -1,0 +1,90 @@
+{
+  "name": "issue-02",
+  "issue_number": "2",
+  "year": "2018",
+  "status": "source-indexed",
+  "source_page": "site-src/content/bulletin/issues/bulletin-02/body.html",
+  "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-full.pdf",
+  "cover": {
+    "mode": "generated",
+    "editors": "Martin Fortier, Matthieu Koroma \\& Rapha\\\"el Milli\\`ere (eds.)",
+    "date_line": "2018",
+    "website": "aliusresearch.org",
+    "tagline": "exploring the diversity of consciousness",
+    "subjects": [
+      "KARL FRISTON",
+      "KIERAN FOX",
+      "THOMAS METZINGER",
+      "DAVID NICHOLS",
+      "KEVIN O'REGAN",
+      "MATTHEW RATCLIFFE",
+      "ANN TAVES"
+    ]
+  },
+  "pieces": [
+    {
+      "slug": "friston-biography",
+      "piece_type": "biography",
+      "title": "Am I autistic? An intellectual autobiography",
+      "source_page": "site-src/content/bulletin/interviews/bulletin02-fristonbiography/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-biography-am-i-autistic-an-intellectual-autobiography.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "fox",
+      "piece_type": "interview",
+      "title": "Wandering along the spectrum of spontaneous thinking",
+      "source_page": "site-src/content/bulletin/interviews/bulletin02-foxinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "friston",
+      "piece_type": "interview",
+      "title": "Of woodlice and men",
+      "source_page": "site-src/content/bulletin/interviews/bulletin02-fristoninterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "metzinger",
+      "piece_type": "interview",
+      "title": "Splendor and misery of self-models",
+      "source_page": "site-src/content/bulletin/interviews/bulletin02-metzingerinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "nichols",
+      "piece_type": "interview",
+      "title": "Psychedelics from pharmacology to phenomenology",
+      "source_page": "site-src/content/bulletin/interviews/bulletin02-nicholsinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-nichols-psychedelics-from-pharmacology-to-phenomenology.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "oregan",
+      "piece_type": "interview",
+      "title": "On the feel of things",
+      "source_page": "site-src/content/bulletin/interviews/bulletin02-oreganinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-o-regan-on-the-feel-of-things-the-sensorimotor-theory-of-consciousness.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "ratcliffe",
+      "piece_type": "interview",
+      "title": "Verbal hallucinations, intentionality, and interpersonal experience",
+      "source_page": "site-src/content/bulletin/interviews/bulletin02-ratcliffeinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-intentionality-and-interpersonal-experience.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "taves",
+      "piece_type": "interview",
+      "title": "Conceptual, anthropological, and cognitive issues surrounding religious experience",
+      "source_page": "site-src/content/bulletin/interviews/bulletin02-tavesinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-religious.pdf",
+      "status": "source-indexed"
+    }
+  ]
+}

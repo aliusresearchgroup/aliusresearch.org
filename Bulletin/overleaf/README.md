@@ -8,7 +8,8 @@ section of the repository.
 - `source/`
   Canonical LaTeX reconstruction and standardization workflow. This is where
   the structured Bulletin issue and piece sources, fixtures, class file,
-  reference documents, and validation scripts live.
+  reference documents, issue registry for all published bulletins, and
+  validation scripts live.
 - `export/`
   Editor-facing Overleaf package material, including the uploadable template
   zip and the compact Overleaf project folder.

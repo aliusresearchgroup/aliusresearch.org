@@ -1,0 +1,8 @@
+% Optional editor-facing annotations for ALIUS Bulletin reconstruction.
+% Call \AliusShowRuleAnnotations before inputting this file to render notes in the PDF.
+
+\AliusRuleAnnotation{Use semantic body macros only. Questions belong in \string\AliusQuestion, answers in \string\AliusAnswer or \string\AliusSpeakerAnswer, pull quotes in \string\AliusPullQuote, and references in \string\AliusReferenceEntry.}
+\AliusRuleAnnotation{Keep each reconstructed interview attached to its issue metadata: issue number, year, running title, citation block, contributor block, and footer URL must come from the piece meta file.}
+\AliusRuleAnnotation{Treat the published PDF as the visual reference. After each meaningful edit, compile with LuaLaTeX, rasterize candidate and reference pages, and inspect candidate, reference, and diff images for color, spacing, typography, page count, and footer/header fidelity.}
+\AliusRuleAnnotation{Keep shared assets in assets/fonts, assets/covers, and assets/reference-docs. Issue folders should contain assembly metadata and issue-specific front matter only.}
+\AliusRuleAnnotation{Do not hand-style local paragraphs to force visual matches until the semantic template has been adjusted first. Local overrides are acceptable only when they document a real issue-specific exception.}

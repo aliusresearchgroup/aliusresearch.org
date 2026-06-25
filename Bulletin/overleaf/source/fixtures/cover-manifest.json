@@ -1,0 +1,82 @@
+{
+  "covers": [
+    {
+      "name": "issue-01-cover",
+      "main_tex": "fixtures/covers/issue-01-cover.tex",
+      "reference_pdf": "",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "issue-02-cover",
+      "main_tex": "fixtures/covers/issue-02-cover.tex",
+      "reference_pdf": "",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "issue-03-cover",
+      "main_tex": "fixtures/covers/issue-03-cover.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-03/alius-bulletin-issue-03-full.pdf",
+      "reference_page": 1,
+      "max_pages": 1,
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "issue-04-cover",
+      "main_tex": "fixtures/covers/issue-04-cover.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf",
+      "reference_page": 1,
+      "max_pages": 1,
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "issue-05-cover",
+      "main_tex": "fixtures/covers/issue-05-cover.tex",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-05/alius-bulletin-issue-05-full.pdf",
+      "reference_page": 1,
+      "max_pages": 1,
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "issue-06-cover",
+      "main_tex": "fixtures/covers/issue-06-cover.tex",
+      "reference_pdf": "",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    },
+    {
+      "name": "issue-07-cover",
+      "main_tex": "fixtures/covers/issue-07-cover.tex",
+      "reference_pdf": "",
+      "required_fonts": [
+        "Lato",
+        "CormorantGaramond"
+      ],
+      "status": "reconstructed"
+    }
+  ],
+  "pieces": [],
+  "issues": []
+}

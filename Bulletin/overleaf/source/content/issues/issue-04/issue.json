@@ -1,0 +1,91 @@
+{
+  "name": "issue-04",
+  "issue_number": "4",
+  "year": "2020",
+  "status": "source-indexed",
+  "source_page": "site-src/content/bulletin/issues/bulletin-04/body.html",
+  "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-full.pdf",
+  "cover": {
+    "mode": "generated",
+    "editors": "Martin Fortier, Daniel Friedman, Matthieu Koroma \\& Rapha\\\"el Milli\\`ere (eds.)",
+    "date_line": "DECEMBER 2020",
+    "website": "aliusresearch.org",
+    "tagline": "exploring the diversity of consciousness",
+    "subjects": [
+      "CHARLES NICHOLS",
+      "DAVID NICHOLS",
+      "BENJAMIN BAIRD",
+      "OLIVIA CARTER",
+      "OLIVIA GOSSERIES",
+      "TIMOTHY HANKS",
+      "BIGNA LENGGENHAGER",
+      "FREDERIQUE DE VIGNEMONT"
+    ]
+  },
+  "pieces": [
+    {
+      "slug": "baird",
+      "piece_type": "interview",
+      "title": "Internally generated conscious activity",
+      "source_page": "site-src/content/bulletin/interviews/bulletin04-bairdinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-baird-internally-generated-conscious-activity-reflections-upon-lucid-dreaming.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "carter",
+      "piece_type": "interview",
+      "title": "Dimensions of consciousness",
+      "source_page": "site-src/content/bulletin/interviews/bulletin04-carterinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-carter-dimensions-of-consciousness-from-perceptual-illusions-to-psychedelics.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "gosseries",
+      "piece_type": "interview",
+      "title": "Use of psychedelics in the treatment of disorders of consciousness",
+      "source_page": "site-src/content/bulletin/interviews/bulletin04-gosseriesinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-treatment-of-disorders-of-consciousness.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "hanks",
+      "piece_type": "interview",
+      "title": "Neuroscience of decision-making",
+      "source_page": "site-src/content/bulletin/interviews/bulletin04-hanksinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-hanks-neuroscience-of-decision-making.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "lenggenhager",
+      "piece_type": "interview",
+      "title": "Bodily boundaries and beyond",
+      "source_page": "site-src/content/bulletin/interviews/bulletin04-lenggenhagerinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-lenggenhager-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "nichols-nichols",
+      "piece_type": "interview",
+      "title": "DMT in the mammalian brain",
+      "source_page": "site-src/content/bulletin/interviews/bulletin04-nicholsinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-nichols-and-nichols-dmt-in-the-mammalian-brain-a-critical-appraisal.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "martin-tribute",
+      "piece_type": "tribute",
+      "title": "Tribute to Martin Fortier",
+      "source_page": "site-src/content/bulletin/interviews/bulletin04-martintribute/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "vignemont",
+      "piece_type": "interview",
+      "title": "Body meets self",
+      "source_page": "site-src/content/bulletin/interviews/bulletin04-vignemontinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf",
+      "status": "source-indexed"
+    }
+  ]
+}

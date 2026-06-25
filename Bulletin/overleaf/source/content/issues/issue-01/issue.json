@@ -1,0 +1,73 @@
+{
+  "name": "issue-01",
+  "issue_number": "1",
+  "year": "2017",
+  "status": "source-indexed",
+  "source_page": "site-src/content/bulletin/issues/bulletin-01/body.html",
+  "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-full.pdf",
+  "cover": {
+    "mode": "generated",
+    "editors": "Martin Fortier, Rojwan Lemoine \\& Rapha\\\"el Milli\\`ere (eds.)",
+    "date_line": "2017",
+    "website": "aliusresearch.org",
+    "tagline": "exploring the diversity of consciousness",
+    "subjects": [
+      "ROBIN CARHART-HARRIS",
+      "JAKOB HOHWY",
+      "TANYA LUHRMANN",
+      "SIMON MCCARTHY-JONES",
+      "REBECCA SELIGMAN",
+      "JENNIFER WINDT"
+    ]
+  },
+  "pieces": [
+    {
+      "slug": "carhart-harris",
+      "piece_type": "interview",
+      "title": "Consciousness and psychedelics",
+      "source_page": "site-src/content/bulletin/interviews/bulletin01-carhartharrisinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "hohwy",
+      "piece_type": "interview",
+      "title": "On different ways of being conscious",
+      "source_page": "site-src/content/bulletin/interviews/bulletin01-hohwyinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-hohwy-on-different-ways-of-being-conscious-modes-of-consciousness-and-the.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "luhrmann",
+      "piece_type": "interview",
+      "title": "Anthropology of mind",
+      "source_page": "site-src/content/bulletin/interviews/bulletin01-luhrmanninterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "mccarthy-jones",
+      "piece_type": "interview",
+      "title": "The phenomenon of voice hearing",
+      "source_page": "site-src/content/bulletin/interviews/bulletin01-mccarthyjonesinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-mccarthy-jones-phenomenon-of-voice-hearing-an-interdisciplinary-approach.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "seligman",
+      "piece_type": "interview",
+      "title": "Towards a biocultural approach to dissociative consciousness",
+      "source_page": "site-src/content/bulletin/interviews/bulletin01-seligmaninterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-seligman-towards-a-biocultural-approach-to-dissociative-consciousness.pdf",
+      "status": "source-indexed"
+    },
+    {
+      "slug": "windt",
+      "piece_type": "interview",
+      "title": "Relocating dreams on the conceptual map",
+      "source_page": "site-src/content/bulletin/interviews/bulletin01-windtinterview/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf",
+      "status": "source-indexed"
+    }
+  ]
+}

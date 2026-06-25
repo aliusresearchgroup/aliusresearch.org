@@ -1,0 +1,58 @@
+[
+  {
+    "unit": 1,
+    "start_ms": 0,
+    "end_ms": 97675,
+    "duration_ms": 97675,
+    "title": "Q&A 001: You hold a PhD in cognitive neuroscience and currently are a postdoctoral research..."
+  },
+  {
+    "unit": 2,
+    "start_ms": 98575,
+    "end_ms": 291000,
+    "duration_ms": 192425,
+    "title": "Q&A 002: Dreaming and mind wandering have been proposed to rely on similar mechanisms to..."
+  },
+  {
+    "unit": 3,
+    "start_ms": 291900,
+    "end_ms": 470125,
+    "duration_ms": 178225,
+    "title": "Q&A 003: Lucid dreaming is defined as a kind of dream during which dreamers are aware that..."
+  },
+  {
+    "unit": 4,
+    "start_ms": 471025,
+    "end_ms": 583175,
+    "duration_ms": 112150,
+    "title": "Q&A 004: Extending the approach of LaBerge, several labs around the world recently..."
+  },
+  {
+    "unit": 5,
+    "start_ms": 584075,
+    "end_ms": 806350,
+    "duration_ms": 222275,
+    "title": "Q&A 005: Lucid dreaming differs from dreaming in terms of metacognition, the cognitive..."
+  },
+  {
+    "unit": 6,
+    "start_ms": 807250,
+    "end_ms": 942550,
+    "duration_ms": 135300,
+    "title": "Q&A 006: For inexperienced lucid dreamers, dream reports reveal that it is difficult to..."
+  },
+  {
+    "unit": 7,
+    "start_ms": 943450,
+    "end_ms": 1127100,
+    "duration_ms": 183650,
+    "title": "Q&A 007: Sleep represents an interesting case for consciousness research since it consists..."
+  },
+  {
+    "unit": 8,
+    "start_ms": 1128000,
+    "end_ms": 1324400,
+    "duration_ms": 196400,
+    "title": "Q&A 008: On a final note, mind-wandering has been reported for accounting about 50% of our..."
+  }
+]

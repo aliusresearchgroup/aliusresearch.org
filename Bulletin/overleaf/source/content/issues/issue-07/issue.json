@@ -1,0 +1,40 @@
+{
+  "name": "issue-07",
+  "issue_number": "7",
+  "year": "2024",
+  "status": "partial",
+  "source_page": "site-src/content/bulletin/issues/bulletin-07/body.html",
+  "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-full.pdf",
+  "cover_asset": "assets/covers/coveralius7-orig.png",
+  "cover": {
+    "mode": "generated",
+    "editors": "George Fejer, Larry Fort \\& Matthieu Koroma (eds.)",
+    "date_line": "in progress",
+    "website": "aliusresearch.org",
+    "tagline": "exploring the diversity of consciousness",
+    "subjects": [
+      "JEAN-PIERRE",
+      "CHANGEUX",
+      "TOM FROESE"
+    ]
+  },
+  "pieces": [
+    {
+      "slug": "froese",
+      "piece_type": "interview",
+      "title": "The irruption theory: How mind and matter meet along the route to consciousness",
+      "source_page": "site-src/content/pages/froese/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf",
+      "content_dir": "content/pieces/froese",
+      "status": "reconstructed"
+    },
+    {
+      "slug": "changeux",
+      "piece_type": "interview",
+      "title": "Consciousness: from molecular to social scales",
+      "source_page": "site-src/content/pages/changeux/body.html",
+      "reference_pdf": "docs/library/pdfs/alius-bulletin/issue-07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf",
+      "status": "source-indexed"
+    }
+  ]
+}

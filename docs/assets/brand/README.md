@@ -9,5 +9,5 @@ This public folder keeps only the current website logo assets. Historical SVG va
 
 Repository-only SVG archives:
 
-- `../../../archive/20260520/logo-svg-archive/`: historical SVG logo variants removed from public website access on 2026-05-20.
-- `../../../archive/20260519/generated-brand-assets/alius-logo-animated-vector-final-water-mould-out-of-phase-sway-20260519.svg`: archived copy of the final preferred SVG.
+- `../../../../archive/20260520/logo-svg-archive/`: historical SVG logo variants removed from public website access on 2026-05-20.
+- `../../../../archive/20260519/generated-brand-assets/alius-logo-animated-vector-final-water-mould-out-of-phase-sway-20260519.svg`: archived copy of the final preferred SVG.
