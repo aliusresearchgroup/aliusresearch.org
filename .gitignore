@@ -34,6 +34,7 @@ output/logo-finalization/
 output/pdf/
 output/playwright/
 output/site-formatting-qa/
+output/youtube-martin-fortier/
 
 # Local media tooling payloads
 tools/arnndn-models/
