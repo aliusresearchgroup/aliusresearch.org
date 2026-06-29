@@ -187,8 +187,8 @@ async function run() {
 
   const failures = results.flatMap((result) => {
     const problems = [];
-    if (result.metrics.talkCount !== 13) problems.push("expected 13 talk sections");
-    if (result.metrics.iframeCount !== 13) problems.push("expected 13 video embeds");
+    if (result.metrics.talkCount !== 14) problems.push("expected 14 talk sections");
+    if (result.metrics.iframeCount !== 14) problems.push("expected 14 video embeds");
     if (result.metrics.nonLogoImages !== 0) problems.push("unexpected non-logo images");
     if (result.metrics.accordionLike !== 0) problems.push("accordion/dropdown elements remain");
     if (result.metrics.headingOverflow !== 0) problems.push("heading overflow");

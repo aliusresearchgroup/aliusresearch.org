@@ -164,13 +164,14 @@ function initFilters() {
 
   function apply() {
     const showAll = active.size === 0;
+    const selected = Array.from(active);
     filters.forEach((button) => {
       const filter = button.getAttribute('data-filter');
       button.classList.toggle('is-active', showAll ? filter === '*' : active.has(filter));
     });
     cards.forEach((card) => {
       const tags = (card.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
-      const match = showAll || tags.some((tag) => active.has(tag));
+      const match = showAll || selected.every((tag) => tags.includes(tag));
       card.classList.toggle('is-filtered-out', !match);
       if (!match && card === expandedCard) collapse();
     });

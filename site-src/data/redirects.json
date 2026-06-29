@@ -1,947 +1,1847 @@
 [
     {
-        "from": "/1.html",
-        "to": "/archive/misc/1/",
-        "type": "legacy-html-page"
+        "from":  "/1.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/2.html",
-        "to": "/archive/misc/2/",
-        "type": "legacy-html-page"
+        "from":  "/2.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/7.html",
-        "to": "/archive/misc/7/",
-        "type": "legacy-html-page"
+        "from":  "/7.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/8.html",
-        "to": "/archive/misc/8/",
-        "type": "legacy-html-page"
+        "from":  "/8.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/about.html",
-        "to": "/about/",
-        "type": "legacy-html-page"
+        "from":  "/about.html",
+        "to":  "/about/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/active-roles.html",
-        "to": "/membership/",
-        "type": "legacy-html-page"
+        "from":  "/about/team/team-222796",
+        "to":  "/team/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/alpha-waves.html",
-        "to": "/pages/alpha-waves/",
-        "type": "legacy-html-page"
+        "from":  "/about/team/team-222796/",
+        "to":  "/team/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/anima.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/about/team/team-955042",
+        "to":  "/team/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/application-late.html",
-        "to": "/events/application-late/",
-        "type": "legacy-html-page"
+        "from":  "/about/team/team-955042/",
+        "to":  "/team/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/attendees.html",
-        "to": "/events/",
-        "type": "legacy-html-page"
+        "from":  "/active-roles.html",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/become-a-member.html",
-        "to": "/community/become-a-member/",
-        "type": "legacy-html-page"
+        "from":  "/alpha-waves.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bicycle-day-workshop.html",
-        "to": "/events/bicycle-day-workshop/",
-        "type": "legacy-html-page"
+        "from":  "/anima.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/blog.html",
-        "to": "/pages/blog/",
-        "type": "legacy-html-page"
+        "from":  "/application-late.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/blog-v1.html",
-        "to": "/pages/blog-v1/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/1",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/1/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin01.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/2",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin01-carhartharrisinterview.html",
-        "to": "/bulletin/interviews/bulletin01-carhartharrisinterview/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/2/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin01-hohwyinterview.html",
-        "to": "/bulletin/interviews/bulletin01-hohwyinterview/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/7",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin01-luhrmanninterview.html",
-        "to": "/bulletin/interviews/bulletin01-luhrmanninterview/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/7/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin01-mccarthyjonesinterview.html",
-        "to": "/bulletin/interviews/bulletin01-mccarthyjonesinterview/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/8",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin01-seligmaninterview.html",
-        "to": "/bulletin/interviews/bulletin01-seligmaninterview/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/8/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin01-windtinterview.html",
-        "to": "/bulletin/interviews/bulletin01-windtinterview/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/oldcode",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/archive/misc/oldcode/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02-foxinterview.html",
-        "to": "/bulletin/interviews/bulletin02-foxinterview/",
-        "type": "legacy-html-page"
+        "from":  "/articles/interviews/interviews",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02-fristonbiography.html",
-        "to": "/bulletin/interviews/bulletin02-fristonbiography/",
-        "type": "legacy-html-page"
+        "from":  "/articles/interviews/interviews/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02-fristoninterview.html",
-        "to": "/bulletin/interviews/bulletin02-fristoninterview/",
-        "type": "legacy-html-page"
+        "from":  "/articles/interviews/interviews-543677",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02-metzingerinterview.html",
-        "to": "/bulletin/interviews/bulletin02-metzingerinterview/",
-        "type": "legacy-html-page"
+        "from":  "/articles/interviews/interviews-543677/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02-nicholsinterview.html",
-        "to": "/bulletin/interviews/bulletin02-nicholsinterview/",
-        "type": "legacy-html-page"
+        "from":  "/articles/interviews/interviews-543677-730818",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02-oreganinterview.html",
-        "to": "/bulletin/interviews/bulletin02-oreganinterview/",
-        "type": "legacy-html-page"
+        "from":  "/articles/interviews/interviews-543677-730818/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02-ratcliffeinterview.html",
-        "to": "/bulletin/interviews/bulletin02-ratcliffeinterview/",
-        "type": "legacy-html-page"
+        "from":  "/articles/interviews/interviews-785795-961587",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02-ratcliffeinterview-496999-868603-823482-372692.html",
-        "to": "/bulletin/interviews/bulletin02-ratcliffeinterview/",
-        "type": "legacy-html-page"
+        "from":  "/articles/interviews/interviews-785795-961587/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin02-tavesinterview.html",
-        "to": "/bulletin/interviews/bulletin02-tavesinterview/",
-        "type": "legacy-html-page"
+        "from":  "/attendees.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin03.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/become-a-member.html",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin03-bayneinterview.html",
-        "to": "/bulletin/interviews/bulletin03-bayneinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bicycle-day-workshop.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin03-dennettinterview.html",
-        "to": "/bulletin/interviews/bulletin03-dennettinterview/",
-        "type": "legacy-html-page"
+        "from":  "/blog.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin03-dienesinterview.html",
-        "to": "/bulletin/interviews/bulletin03-dienesinterview/",
-        "type": "legacy-html-page"
+        "from":  "/blog-v1.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin03-prellerinterview.html",
-        "to": "/bulletin/interviews/bulletin03-prellerinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin03-winkelmaninterview.html",
-        "to": "/bulletin/interviews/bulletin03-winkelmaninterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-carhartharrisinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin04.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-carhartharrisinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin04-bairdinterview.html",
-        "to": "/bulletin/interviews/bulletin04-bairdinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-hohwyinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin04-carterinterview.html",
-        "to": "/bulletin/interviews/bulletin04-carterinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-hohwyinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin04-gosseriesinterview.html",
-        "to": "/bulletin/interviews/bulletin04-gosseriesinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-luhrmanninterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin04-hanksinterview.html",
-        "to": "/bulletin/interviews/bulletin04-hanksinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-luhrmanninterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin04-lenggenhagerinterview.html",
-        "to": "/bulletin/interviews/bulletin04-lenggenhagerinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-mccarthyjonesinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin04-martintribute.html",
-        "to": "/bulletin/interviews/bulletin04-martintribute/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-mccarthyjonesinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin04-nicholsinterview.html",
-        "to": "/bulletin/interviews/bulletin04-nicholsinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-seligmaninterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin04-vignemontinterview.html",
-        "to": "/bulletin/interviews/bulletin04-vignemontinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-seligmaninterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin05.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-windtinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin05-cannaseligmaninterview.html",
-        "to": "/bulletin/interviews/bulletin05-cannaseligmaninterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin01-windtinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin05-chadhainterview.html",
-        "to": "/bulletin/interviews/bulletin05-chadhainterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-foxinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin05-martial.html",
-        "to": "/bulletin/interviews/bulletin05-martial/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-foxinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin05-olsonyadeninterview.html",
-        "to": "/bulletin/interviews/bulletin05-olsonyadeninterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-fristonbiography",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin05-schmidtinterview.html",
-        "to": "/bulletin/interviews/bulletin05-schmidtinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-fristonbiography/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin06.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-fristoninterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin06-ciaunica-podcast.html",
-        "to": "/bulletin/interviews/bulletin06-ciaunica-podcast/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-fristoninterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin06-dossinterview-532533.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-metzingerinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin06-gonzalez-interview.html",
-        "to": "/bulletin/interviews/bulletin06-gonzalez-interview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-metzingerinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin06-gonzalez-interview-193094.html",
-        "to": "/bulletin/interviews/bulletin06-gonzalez-interview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-nicholsinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin06-jillings-podcast.html",
-        "to": "/bulletin/interviews/bulletin06-jillings-podcast/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-nicholsinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin06-koroma-podcast.html",
-        "to": "/bulletin/interviews/bulletin06-koroma-podcast/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-oreganinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin06-koroma-podcast-348367.html",
-        "to": "/bulletin/interviews/bulletin06-koroma-podcast/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-oreganinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin06-sapolskyinterview.html",
-        "to": "/bulletin/interviews/bulletin06-sapolskyinterview/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-ratcliffeinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/bulletin07.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-ratcliffeinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/cardiac_sleep.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-tavesinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/changeux.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin02-tavesinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/cincosins.html",
-        "to": "/pages/cincosins/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-bayneinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/classification-schemes.html",
-        "to": "/pages/classification-schemes/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-bayneinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/commentaries.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-dennettinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/commentaries2.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-dennettinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/cultural-shaping-of-consciousness.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-dienesinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/depersonalisation.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-dienesinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/episodes.html",
-        "to": "/media/episodes/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-prellerinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/events.html",
-        "to": "/events/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-prellerinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/francelerner.html",
-        "to": "/pages/francelerner/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-winkelmaninterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/froese.html",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin03-winkelmaninterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/images-visionnaires.html",
-        "to": "/media/images-visionnaires/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-bairdinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/interviews.html",
-        "to": "/articles/interviews/interviews/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-bairdinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/interviews-543677.html",
-        "to": "/articles/interviews/interviews-543677/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-carterinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/interviews-543677-730818.html",
-        "to": "/articles/interviews/interviews-543677-730818/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-carterinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/interviews-785795-961587.html",
-        "to": "/articles/interviews/interviews-785795-961587/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-gosseriesinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/jeanremy-martin-01.html",
-        "to": "/pages/jeanremy-martin-01/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-gosseriesinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/jeanremy-martin-intro.html",
-        "to": "/pages/jeanremy-martin-intro/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-hanksinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/journal-club.html",
-        "to": "/journal-club/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-hanksinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/journal-club-228113.html",
-        "to": "/journal-club/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-lenggenhagerinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/journalclub-868968.html",
-        "to": "/journal-club/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-lenggenhagerinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/journal-club-995321.html",
-        "to": "/journal-club/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-martintribute",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/journee-etudes-martin-fortier.html",
-        "to": "/pages/journee-etudes-martin-fortier/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-martintribute/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/link-page.html",
-        "to": "/pages/link-page/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-nicholsinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/mapping-dmt.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-nicholsinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/martial-nde-commentary.html",
-        "to": "/pages/martial-nde-commentary/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-vignemontinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/martinfortier.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin04-vignemontinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/media.html",
-        "to": "/media/media/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-cannaseligmaninterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/meditation-psychedelics-self.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-cannaseligmaninterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/members1.html",
-        "to": "/community/members1/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-chadhainterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/membership-renewal.html",
-        "to": "/community/membership-renewal/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-chadhainterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/membership-renewal-178580.html",
-        "to": "/membership/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-martial",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/membership-renewal-894351.html",
-        "to": "/membership/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-martial/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/music.html",
-        "to": "/events/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-olsonyadeninterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/newsletter.html",
-        "to": "/community/newsletter/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-olsonyadeninterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/nichols-nichols-endogenous-dmt.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-schmidtinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/oldcode.html",
-        "to": "/archive/misc/oldcode/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin05-schmidtinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/peripersonal.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-ciaunica-podcast",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/physiopheno.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-ciaunica-podcast/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/pics.html",
-        "to": "/media/pics/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-gonzalez-interview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/podcast.html",
-        "to": "/media/podcast/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-gonzalez-interview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/polona-pozeg-01.html",
-        "to": "/pages/polona-pozeg-01/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-jillings-podcast",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/polona-pozeg-intro.html",
-        "to": "/pages/polona-pozeg-intro/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-jillings-podcast/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/projects.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-koroma-podcast",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/psychedelic-pharmacology.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-koroma-podcast/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/psychedelics-challenging-experiences.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-sapolskyinterview",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/psychedelics-extrended-difficulties.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/interviews/bulletin06-sapolskyinterview/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/psychedelic-therapy.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-01",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/qualius.html",
-        "to": "/events/#assc-satellite",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-01/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/qualius-program.html",
-        "to": "/events/#program",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-02",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/research.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-02/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/research1.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-03",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/researcher-members.html",
-        "to": "/community/researcher-members/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-03/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/seeing-in-the-dark.html",
-        "to": "/pages/seeing-in-the-dark/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-04",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/self-other.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-04/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/skipper.html",
-        "to": "/pages/skipper/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-05",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/somatic-cultures-ad-consciousness.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-05/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/symposium.html",
-        "to": "/events/symposium/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-06",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/tagliazucchi_effects_psychedelics.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-06/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/team.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-07",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/team-222796.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin/issues/bulletin-07/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/team-639772.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin01.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/team-743740.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin01-carhartharrisinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/team-814948.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin01-hohwyinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/team-912849.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin01-luhrmanninterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/team-955042.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin01-mccarthyjonesinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/team-955042-710461.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin01-seligmaninterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/teamtemplate-956529.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin01-windtinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/teamtest.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/teamtest1.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02-foxinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/teamtest2.html",
-        "to": "/team/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02-fristonbiography.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/torus.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02-fristoninterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/track1-600953.html",
-        "to": "/media/track1-600953/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02-metzingerinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/trauma_under_psychedelics.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02-nicholsinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/travel-information.html",
-        "to": "/events/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02-oreganinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/tulpamancy-522105.html",
-        "to": "/pages/tulpamancy-522105/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02-ratcliffeinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/viscereality.html",
-        "to": "/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02-ratcliffeinterview-496999-868603-823482-372692.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/voix-et-visions.html",
-        "to": "/pages/voix-et-visions/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin02-tavesinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/workshop-2017.html",
-        "to": "/events/workshops/workshop-2017/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin03.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/workshop-2018.html",
-        "to": "/events/workshops/workshop-2018/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin03-bayneinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin/issues/bulletin-01/",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin03-dennettinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin/issues/bulletin-02/",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin03-dienesinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin/issues/bulletin-03/",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin03-prellerinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin/issues/bulletin-04/",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin03-winkelmaninterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin/issues/bulletin-05/",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin04.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin/issues/bulletin-06/",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin04-bairdinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/bulletin/issues/bulletin-07/",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin04-carterinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/pages/froese/",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin04-gosseriesinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/pages/changeux/",
-        "to": "/bulletin/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin04-hanksinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/events/events/",
-        "to": "/events/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin04-lenggenhagerinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/events/attendees/",
-        "to": "/events/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin04-martintribute.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/events/travel-information/",
-        "to": "/events/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin04-nicholsinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/qualius/",
-        "to": "/events/#assc-satellite",
-        "type": "legacy-html-page"
+        "from":  "/bulletin04-vignemontinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/qualius-program/",
-        "to": "/events/#program",
-        "type": "legacy-html-page"
+        "from":  "/bulletin05.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/media/music/",
-        "to": "/events/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin05-cannaseligmaninterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/community/membership-renewal-894351/",
-        "to": "/membership/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin05-chadhainterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/community/membership-renewal-178580/",
-        "to": "/membership/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin05-martial.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/pages/active-roles/",
-        "to": "/membership/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin05-olsonyadeninterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/events/journal-club/",
-        "to": "/journal-club/",
-        "type": "legacy-html-page"
+        "from":  "/bulletin05-schmidtinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/team/martinfortier",
-        "to": "/team/#martinfortier",
-        "type": "anchor-shortcut"
+        "from":  "/bulletin06.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/team/martinfortier/",
-        "to": "/team/#martinfortier",
-        "type": "anchor-shortcut"
+        "from":  "/bulletin06-ciaunica-podcast.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/bulletin06-dossinterview-532533.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/research1/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/bulletin06-gonzalez-interview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/bulletin06-gonzalez-interview-193094.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/anima/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/bulletin06-jillings-podcast.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/cardiac_sleep/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/bulletin06-koroma-podcast.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/commentaries/commentaries/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/bulletin06-koroma-podcast-348367.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/commentaries/commentaries2/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/bulletin06-sapolskyinterview.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/cultural-shaping-of-consciousness/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/bulletin07.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/depersonalisation/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/cardiac_sleep.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/mapping-dmt/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/changeux.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/meditation-psychedelics-self/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/cincosins.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/nichols-nichols-endogenous-dmt/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/classification-schemes.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/peripersonal/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/commentaries.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/physiopheno/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/commentaries2.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/psychedelic-pharmacology/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/become-a-member",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/research/projects/psychedelics-challenging-experiences/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/become-a-member/",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/research/projects/psychedelics-extrended-difficulties/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/members1",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/research/projects/psychedelic-therapy/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/members1/",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/research/projects/self-other/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/membership-renewal",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/research/projects/somatic-cultures-ad-consciousness/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/membership-renewal/",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/research/projects/tagliazucchi_effects_psychedelics/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/membership-renewal-178580/",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/torus/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/membership-renewal-894351/",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
     },
     {
-        "from": "/research/projects/trauma_under_psychedelics/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/newsletter",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
     },
     {
-        "from": "/research/projects/viscereality/",
-        "to": "/",
-        "type": "archived-research-canonical"
+        "from":  "/community/newsletter/",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/community/researcher-members",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/community/researcher-members/",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/cultural-shaping-of-consciousness.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/depersonalisation.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/episodes.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/events.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/events/application-late",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/application-late/",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/attendees",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/attendees/",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/bicycle-day-workshop",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/bicycle-day-workshop/",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/events/",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/events/journal-club",
+        "to":  "/journal-club/",
+        "type":  "canonical-alias"
+    },
+    {
+        "from":  "/events/journal-club/",
+        "to":  "/journal-club/",
+        "type":  "canonical-alias"
+    },
+    {
+        "from":  "/events/symposium",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/symposium/",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/travel-information",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/travel-information/",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/workshops/workshop-2017",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/workshops/workshop-2017/",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/workshops/workshop-2018",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/events/workshops/workshop-2018/",
+        "to":  "/events/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/francelerner.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/froese.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/images-visionnaires.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/index.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/interviews.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/interviews-543677.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/interviews-543677-730818.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/interviews-785795-961587.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/jeanremy-martin-01.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/jeanremy-martin-intro.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/journal-club.html",
+        "to":  "/journal-club/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/journal-club-228113.html",
+        "to":  "/journal-club/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/journalclub-868968.html",
+        "to":  "/journal-club/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/journal-club-995321.html",
+        "to":  "/journal-club/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/journee-etudes-martin-fortier.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/link-page.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/mapping-dmt.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/martial-nde-commentary.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/martinfortier.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/media.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/media/episodes",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/episodes/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/images-visionnaires",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/images-visionnaires/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/media",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/media/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/music",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/music/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/pics",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/pics/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/podcast",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/podcast/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/track1-600953",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/media/track1-600953/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/meditation-psychedelics-self.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/members1.html",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/membership.html",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/membership-renewal.html",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/membership-renewal-178580.html",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/membership-renewal-894351.html",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/music.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/newsletter.html",
+        "to":  "/newsletter/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/nichols-nichols-endogenous-dmt.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/oldcode.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/pages/active-roles",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/active-roles/",
+        "to":  "/membership/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/alpha-waves",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/alpha-waves/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/blog",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/blog/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/blog-v1",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/blog-v1/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/changeux",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/changeux/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/cincosins",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/cincosins/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/classification-schemes",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/classification-schemes/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/francelerner",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/francelerner/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/froese",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/froese/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/jeanremy-martin-01",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/jeanremy-martin-01/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/jeanremy-martin-intro",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/jeanremy-martin-intro/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/journee-etudes-martin-fortier",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/journee-etudes-martin-fortier/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/link-page",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/link-page/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/martial-nde-commentary",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/martial-nde-commentary/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/martinfortier",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/martinfortier/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/polona-pozeg-01",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/polona-pozeg-01/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/polona-pozeg-intro",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/polona-pozeg-intro/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/seeing-in-the-dark",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/seeing-in-the-dark/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/skipper",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/skipper/",
+        "to":  "/bulletin/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/tulpamancy-522105",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/tulpamancy-522105/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/voix-et-visions",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/pages/voix-et-visions/",
+        "to":  "/",
+        "type":  "legacy-canonical-page"
+    },
+    {
+        "from":  "/peripersonal.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/physiopheno.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/pics.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/podcast.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/polona-pozeg-01.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/polona-pozeg-intro.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/projects.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/psychedelic-pharmacology.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/psychedelics-challenging-experiences.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/psychedelics-extrended-difficulties.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/psychedelic-therapy.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/qualius.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/qualius-program.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/research.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/research/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/commentaries/commentaries/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/commentaries/commentaries2/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/anima/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/cardiac_sleep/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/cultural-shaping-of-consciousness/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/depersonalisation/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/mapping-dmt/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/meditation-psychedelics-self/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/nichols-nichols-endogenous-dmt/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/peripersonal/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/physiopheno/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/psychedelic-pharmacology/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/psychedelics-challenging-experiences/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/psychedelics-extrended-difficulties/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/psychedelic-therapy/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/qualius/",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/research/projects/qualius-program/",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/research/projects/self-other/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/somatic-cultures-ad-consciousness/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/tagliazucchi_effects_psychedelics/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/torus/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/trauma_under_psychedelics/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/projects/viscereality/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research/research1/",
+        "to":  "/",
+        "type":  "archived-research-canonical"
+    },
+    {
+        "from":  "/research1.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/researcher-members.html",
+        "to":  "/membership/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/seeing-in-the-dark.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/self-other.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/skipper.html",
+        "to":  "/bulletin/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/somatic-cultures-ad-consciousness.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/symposium.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/tagliazucchi_effects_psychedelics.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/team.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/team/martinfortier",
+        "to":  "/",
+        "type":  "anchor-shortcut"
+    },
+    {
+        "from":  "/team/martinfortier/",
+        "to":  "/",
+        "type":  "anchor-shortcut"
+    },
+    {
+        "from":  "/team-222796.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/team-639772.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/team-743740.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/team-814948.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/team-912849.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/team-955042.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/team-955042-710461.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/teamtemplate-956529.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/teamtest.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/teamtest1.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/teamtest2.html",
+        "to":  "/team/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/torus.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/track1-600953.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/trauma_under_psychedelics.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/travel-information.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/tulpamancy-522105.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/viscereality.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/voix-et-visions.html",
+        "to":  "/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/workshop-2017.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
+    },
+    {
+        "from":  "/workshop-2018.html",
+        "to":  "/events/",
+        "type":  "legacy-html-page"
     }
 ]
